@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-19T04:38:18.566766+00:00",
+  "passed": true,
+  "preparation_only": true,
+  "specification": {
+    "scope": "One new finite-domain structural reduction from saved546 exact endpoints, not another bound propagation pass or solver retry.",
+    "theorem": "Let B=[L,U] be saved546 exact rational unconditional endpoints. Define l64=min{finite binary64 v:v>=L},u64=max{finite binary64 v:v<=U}. Replace ALL singleton rows by coordinate bounds[l64,u64],retain all other546 rows,cost,E,RHS. For finite binary64 vectors,original516 feasibility iff new feasibility,using inherited517/547 proofs. Over real vectors the new polytope is an inner subset,NOT generally equal to the original real LP. No statement about equality of tolerance-feasible sets,real optima or original dual certificates.",
+    "derivation": "For |q|=n/d>0 find e=floor(log2(n/d)) by integer bit lengths and exact comparison;k=max(-1074,e-52). Divide n/d by2^k using integers; choose floor or ceil quotient,reverse direction for negative q. Encode the integer significand and exponent directly into IEEE binary64 bits; carry at2^53 exactly. Zero canonical+0 but both signed-zero candidate encodings remain mathematically feasible. No nearest-float guess,nextafter,bisection or candidate adjustment.",
+    "reuse": "Load immutable546 endpoints/owners and reduced matrix plus547 proof byhash. NEVER reconstruct endpoints,tighten/propagate bounds,rerun mixed-row supports or517/547 proof. Remove only exact singleton rows;constants/mixed rows unchanged. All78791 coordinates retained. Both consistency signs/frozen units and all original criteria remain imposed through explicit mixed rows and source-implied bounds.",
+    "audit": "Independent553 imports no producer. It uses adjacent IEEE bit encodings to prove lower predecessor<L<=lower64 and upper64<=U<upper successor for EVERY endpoint. Exact positive-conic bound support proves every removed singleton row. It checks original finite bounds,new domain/row IDs/CSR/RHS/cost/E copies and inheritedproof hashes. No LP or synthetic fixture.",
+    "limits": "No robot direction,scalar/torque lift,finite path encoding,model/root/map/physics. No universal float lift: if l64>u64 the interval has no finite binary64 member and preparation rejects; no old1/3fixture repeated. No speed/conditioning/feasibility gain from storage counts. No numerical residual amplification or original KKT guarantee.",
+    "future": "All returned native+scalar solver coordinates must stay bitwise unchanged. FULL new/546/516/FULL490 primal/equality/bound/KKT gates remain. Rounded bound multipliers would need an explicit original-premise dual lift plus full original stationarity/gap; a stronger real bound is NOT automatically an original-real dual certificate. Any changedstate/trust/ACTUALceiling needs fresh valid assembly/proofs;no illustrative witnessceiling reuse. No complete554 numerical algorithm/wrapper/budget exists.",
+    "budgets": {
+      "preparation_wall_s": 240,
+      "independent_audit_wall_s": 240,
+      "address_space_GiB": 40,
+      "peak_memory_measured": false,
+      "checks_between_operations": true,
+      "LP_budget_unchanged_s": 45
+    },
+    "references": [
+      "https://docs.python.org/3.12/library/struct.html#format-characters",
+      "https://docs.python.org/3.12/library/stdtypes.html#float.as_integer_ratio"
+    ],
+    "physical_admission": false
+  },
+  "systems": {
+    "primary": {
+      "source_shape": [
+        402487,
+        78791
+      ],
+      "source_nonzeros": 2049085,
+      "new_shape": [
+        205586,
+        78791
+      ],
+      "new_nonzeros": 1852184,
+      "singleton_rows_absorbed": 196901,
+      "constants_retained": 0,
+      "mixed_rows_retained": 205586,
+      "endpoint_encodings": 157582,
+      "strict_inward_endpoint_changes": 155984,
+      "exact_endpoints_unchanged": 1598,
+      "maximum_exact_inward_shift": "8715389614789009/4907128838989301969839544336384",
+      "largest_shift_fraction_bits": 127,
+      "native_variables_removed": 0,
+      "scalar_variables_removed": 0,
+      "finite_binary64_feasible_set_equal": true,
+      "real_polytope_inner_subset": true,
+      "real_polytope_equivalence_claimed": false,
+      "tolerance_feasible_set_equivalence_claimed": false,
+      "source_endpoint_proof_inherited": true,
+      "new_endpoint_construction": false,
+      "new_mixed_support_tests": 0,
+      "new_matrix_coefficients": false,
+      "new_candidate": false
+    },
+    "witness": {
+      "source_shape": [
+        568283,
+        78791
+      ],
+      "source_nonzeros": 2236454,
+      "new_shape": [
+        371383,
+        78791
+      ],
+      "new_nonzeros": 2039554,
+      "singleton_rows_absorbed": 196900,
+      "constants_retained": 0,
+      "mixed_rows_retained": 371383,
+      "endpoint_encodings": 157582,
+      "strict_inward_endpoint_changes": 155983,
+      "exact_endpoints_unchanged": 1599,
+      "maximum_exact_inward_shift": "8715389614789009/4907128838989301969839544336384",
+      "largest_shift_fraction_bits": 127,
+      "native_variables_removed": 0,
+      "scalar_variables_removed": 0,
+      "finite_binary64_feasible_set_equal": true,
+      "real_polytope_inner_subset": true,
+      "real_polytope_equivalence_claimed": false,
+      "tolerance_feasible_set_equivalence_claimed": false,
+      "source_endpoint_proof_inherited": true,
+      "new_endpoint_construction": false,
+      "new_mixed_support_tests": 0,
+      "new_matrix_coefficients": false,
+      "new_candidate": false
+    }
+  },
+  "elapsed_s": 3.697453725966625,
+  "lp_calls": 0,
+  "small_examples": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "new_solver": false,
+  "new_candidate": false,
+  "physical_admission": false,
+  "old_calculations_repeated": false
+}
