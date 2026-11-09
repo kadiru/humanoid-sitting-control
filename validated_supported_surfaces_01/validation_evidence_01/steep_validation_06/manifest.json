@@ -1,0 +1,33 @@
+{
+  "args": {
+    "output": "/data/humanoid-sitting-perception/supported_surfaces_01/steep_validation_06",
+    "bank": "/data/humanoid-sitting-perception/supported_surfaces_01/steep_candidates_06",
+    "seconds": 24.0,
+    "settle": 4.0,
+    "depth_check": false,
+    "seed": 54101,
+    "livestream": -1,
+    "xr": false,
+    "device": "cuda:0",
+    "visualizer": null,
+    "verbose": false,
+    "info": false,
+    "experience": "",
+    "deterministic": false,
+    "kit_args": "--/renderer/activeGpu=1,--/renderer/multiGpu/enabled=false",
+    "anim_recording_enabled": false,
+    "anim_recording_start_time": 0,
+    "anim_recording_stop_time": 10,
+    "device_explicit": true,
+    "mode": "fixed",
+    "enable_cameras": false
+  },
+  "sources": {
+    "/home/kadir/humanoid-sitting/IsaacLab/../scripts/run_supported_postures.py": "a906a72c600f4334f1cd5b276ab7fa24ad365c5ae95284df9274424ef5dd6e7a",
+    "/home/kadir/humanoid-sitting/scripts/run_resting_posture.py": "2579e9c98a9cd7fbde8665acd542255fe0736f684b0c1d2d2f768b05a6b2fc21",
+    "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/supported_surface.py": "a1276790d20ee524e054c5a3b1bc2b5a98c68b67039ad3d1bec29bd61bb5c29e",
+    "/home/kadir/humanoid-sitting/runs/g1_kinematics_geometry_04/model.json": "fe29aa3c0b8da033c35b8abc1c40ae93b0706e8186f9163ad56d8e31c4d07690"
+  },
+  "dt": 0.02,
+  "label_contract": "oriented plane normals/foot floor; pelvis/thigh or rear torso support; unchanged physical limits"
+}
