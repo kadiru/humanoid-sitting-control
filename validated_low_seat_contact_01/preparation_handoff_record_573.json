@@ -1,0 +1,327 @@
+{
+  "utc": "2026-10-19T08:22:58.088362+00:00",
+  "scope": "Preserve572/573 exact zero-face preparation; sealed569 and actual path unchanged.",
+  "preparation_only": true,
+  "new_closure": false,
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_569.json",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "coupled_support_evidence_preservation_571.json",
+      "files": 12745,
+      "passed": true
+    },
+    {
+      "manifest": "coupled_support_supplemental_571.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 12790,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/zero_face_evidence_preservation_573.json",
+  "manifest_sha256": "9e25ceb574cd4015aa391567ae33c9dc479db53221ae4e5a6d4620c8730b4027",
+  "workers": [],
+  "actual_exits": {
+    "zero_face_compile_exit_572.json": {
+      "actual_exit": 0,
+      "tool_chunk": "d04ef3",
+      "source_copy_actual_exit": 0,
+      "source_copy_tool_chunk": "674684",
+      "utc": "2026-10-19T08:12:04.694681+00:00",
+      "files": [
+        "low_seat_zero_face_572.py",
+        "prepare_low_seat_zero_face_572.py",
+        "freeze_low_seat_zero_face_572.py",
+        "audit_low_seat_zero_face_573.py"
+      ]
+    },
+    "zero_face_freeze_exit_572.json": {
+      "actual_exit": 0,
+      "tool_chunk": "8bd59f",
+      "session_id": 98195,
+      "utc": "2026-10-19T08:13:51.394582+00:00"
+    },
+    "zero_face_preparation_exit_572.json": {
+      "actual_exit": 0,
+      "tool_chunk": "f08a2a",
+      "session_id": 87041,
+      "utc": "2026-10-19T08:14:25.622848+00:00"
+    },
+    "zero_face_audit_exit_573.json": {
+      "actual_exit": 0,
+      "tool_chunk": "3f4163",
+      "session_id": 27352,
+      "utc": "2026-10-19T08:15:49.814666+00:00"
+    },
+    "zero_face_index_exit_573.json": {
+      "actual_exit": 0,
+      "tool_chunk": "57e09a",
+      "utc": "2026-10-19T08:16:23.105034+00:00"
+    },
+    "zero_face_preservation_compile_exit_573.json": {
+      "actual_exit": 0,
+      "tool_chunk": "287faf",
+      "session_id": null,
+      "utc": "2026-10-19T08:14:25.622935+00:00"
+    }
+  },
+  "preparation": {
+    "utc": "2026-10-19T08:13:52.597098+00:00",
+    "passed": true,
+    "preparation_only": true,
+    "specification": {
+      "scope": "NEW sufficient-witness construction on the ORIGINAL PRIMARY objective-zero face. Exact structural preparation only. No numerical algorithm, LP, robot primal point, actual state, or interior-witness construction is executed.",
+      "rationale": "The original primary cost is exactly t with original lower bound t>=0. Therefore any EXACT original-feasible point with t=0 attains the known lower bound. Search this specific exposed face directly, using hard linearized mechanics equalities instead of two-sided epigraph inequalities. This changes the search problem materially: it is a potentially empty proper subset, NOT an equivalent reformulation of the whole original LP or a claim that its optimum is zero.",
+      "distinction": "Not another basis/row-group/definition/dual rename or20-row pruning retry. The new mathematical restriction is t=0, and ALL68250 relaxed mechanics pairs become exact affine equalities on that face. No496 inverse/residual substitution, no15-root, no558 definition variables, no552 inward bounds, no522 torque elimination, no538 scalar elimination, and no old internal/rejected vector. All78791 native-plus-scalar coordinates remain original.",
+      "source": "Immutable570 PRIMARY subset, with571/547/517 implications inherited byhash. Native opposite-coefficient identities of all68250 consistency pairs are inherited from559 after exact546-source/hash/ID identity, not re-proved. Saved558/559 decisions include both10921 low-degree and57329 lifted pairs. No558 extension matrices are used. Actual472 INITIAL X/Y/J plus490 canonical auxiliary/exact drops remain unchanged.",
+      "equations": "Keep every non-consistency570 inequality literally, with original cost t and original bounds. Append scalar equality t=0. For pair C_i*x-t<=b_i and -C_i*x-t<=-b_i replace BOTH inequalities by C_i*x=b_i, using copied stored native coefficients and the original positive RHS (not zeroing it). Keep all1366 original zero equality rows/RHS. NewE is nonzero. No variable added/removed, no native/scalar coordinate substitution or reconstruction.",
+      "exact_face_theorem": "Given inherited opposite native coefficients, NEW exact checks require both original scalar coefficients=-1 and opposite RHS. At t=0 the two inequalities are equivalent to C_i*x=b_i. Conversely a face equality plus t=0 restores BOTH original signed inequalities. Thus the new feasible set is exactly the original real feasible set INTERSECT {t=0}, after inherited570/546/516 implications. This is not equality with the original whole feasible set. No existence, attainment, rank, consistency or feasibility claim.",
+      "finite": "No new coordinates or coefficient products/divisions/rounding are introduced: coefficients are copied or scalar entries omitted under explicit t=0. Exact feasible binary64 points of the original ZERO FACE are preserved, including either signed scalar zero. No tolerance-feasible-set equivalence claimed. A future returned78791-vector stays bitwise unchanged; scalar must already equal zero. Never set/round/clip/repair/normalize it after the solver.",
+      "analytic_dual": "Construct ONE NEW analytic original lower-bound dual: ALL inequality and equality duals zero, ALL upper duals zero, lower_t=1 and other lower duals zero. Original cost=e_t and lower_t bound0 imply c+A.T*y+E.T*nu+upper-lower=0 and dual objective0 EXACTLY. This is a genuine dual-feasible lower-bound vector only, NOT a primal-dual pair, primal witness, feasibility proof or full KKT evaluation. Its signed gap with any original primal w is w_t. The same dual is valid for the zero-face problem with new equality duals zero.",
+      "numerical_future": "A future bounded primary face solver must require finite successful returned ORIGINAL coordinates, already-zero t, and independent FULLface/570/546/516/FULL490 inequality/equality/bound checks and required stationarity/absolute-gap<=1e-9 inside unchanged1e-7. The analytic dual may be used unchanged; backend marginals are not a substitute for full original primal checks. Numerical KKT does not establish exact feasibility/optimality or objective-error<=1e-9. No returned primal vector is evaluated in this preparation.",
+      "failure": "Failure, infeasibility, no finite witness, uncertified point or deadline of a future zero-face attempt terminates that construction. It does NOT establish original LP or physical infeasibility, and does not authorize a sequence of nonzero epigraph faces, changed bounds/tolerances or restarted old solvers.",
+      "whole_path": "Primary NEVER mapped. The SAME complete original direction must supply modeled phi, ACTUAL(mu+theta)/2 interior ceiling and prediction. Only then may a separately frozen actual interior LP and exact unscaled interval eta>0 precede immutable490 finite encoding; newX fresh mechanics/J and all signed/unit/normal/hover/geometry/filter/runtime/PPO gates. The old illustrative witness ceiling is not used. Changed actual state/trust requires valid fresh original assembly/input proofs inside unchanged45s total from parent preparation origin.",
+      "audit": "Independent573 imports no producer/optimizer. Inherit559 native pair proofs by bound hashes; independently check NEW scalar/RHS face identities, native equality copies, all retained inequality/cost/domain/oldE/ID copies, and every analytic-dual sign/zero/coefficient identity and dual value. No endpoint/old implication/old signed native pair proof or candidate/model replay.",
+      "resources": "ONE primary-only preparation and ONE independent audit, each240s total from before scientific imports,40GiB address-space cap, deadline checks between operations, peak unmeasured. Symbolic preparation only, not45s LP extension. No reference-witness zero-eta face: eta has a different objective and this theorem is specific to the primary epigraph.",
+      "limits": "Fewer inequalities and more equalities do not establish speed, conditioning or a successful future solve. Exact face restriction may be infeasible even when original primary has positive feasible objective. All physical/controller criteria unchanged; no physical admission, motion, effort or PPO gain.",
+      "numerical_solver_exists": false,
+      "primal_witness_exists": false,
+      "physical_admission": false
+    },
+    "primary": {
+      "source_inequality_shape": [
+        402467,
+        78791
+      ],
+      "source_inequality_nonzeros": 2049025,
+      "face_inequality_shape": [
+        265967,
+        78791
+      ],
+      "face_inequality_nonzeros": 414193,
+      "face_equality_shape": [
+        69617,
+        78791
+      ],
+      "face_equality_nonzeros": 749167,
+      "original_equality_rows": 1366,
+      "inherited_opposite_native_pairs": 68250,
+      "new_scalar_coefficient_checks": 136500,
+      "new_opposite_RHS_checks": 68250,
+      "new_native_equality_coefficients_copied": 749166,
+      "inequalities_replaced_by_equalities": 136500,
+      "new_affine_consistency_equalities": 68250,
+      "new_scalar_zero_equalities": 1,
+      "net_stored_nonzeros_removed": 885665,
+      "original_variables_retained": 78791,
+      "variables_added": 0,
+      "variables_removed": 0,
+      "analytic_lower_bound_dual_vectors": 1,
+      "original_cost_bounds_unchanged": true,
+      "exact_zero_face_equivalence": true,
+      "whole_original_feasible_set_equivalence": false,
+      "zero_face_feasibility_known": false,
+      "original_optimum_zero_established": false,
+      "native_opposite_pair_proofs_repeated": 0,
+      "old_proofs_repeated": 0
+    },
+    "elapsed_s": 0.7145825239131227,
+    "numerical_lp_calls": 0,
+    "linear_system_solves": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "primal_vectors_constructed": 0,
+    "analytic_lower_bound_dual_vectors": 1,
+    "full_primal_dual_KKT_evaluations": 0,
+    "physical_admission": false,
+    "new_solver": false,
+    "new_candidate": false
+  },
+  "independent_audit": {
+    "utc": "2026-10-19T08:14:27.532726+00:00",
+    "passed": true,
+    "arithmetic_passed": true,
+    "preparation_only": true,
+    "primary": {
+      "source_inequality_shape": [
+        402467,
+        78791
+      ],
+      "source_inequality_nonzeros": 2049025,
+      "face_inequality_shape": [
+        265967,
+        78791
+      ],
+      "face_inequality_nonzeros": 414193,
+      "face_equality_shape": [
+        69617,
+        78791
+      ],
+      "face_equality_nonzeros": 749167,
+      "original_equality_rows": 1366,
+      "inherited_opposite_native_pairs": 68250,
+      "new_scalar_coefficient_checks": 136500,
+      "new_opposite_RHS_checks": 68250,
+      "new_native_equality_coefficients_copied": 749166,
+      "inequalities_replaced_by_equalities": 136500,
+      "new_affine_consistency_equalities": 68250,
+      "new_scalar_zero_equalities": 1,
+      "net_stored_nonzeros_removed": 885665,
+      "original_variables_retained": 78791,
+      "variables_added": 0,
+      "variables_removed": 0,
+      "analytic_lower_bound_dual_vectors": 1,
+      "original_cost_bounds_unchanged": true,
+      "exact_zero_face_equivalence": true,
+      "whole_original_feasible_set_equivalence": false,
+      "zero_face_feasibility_known": false,
+      "original_optimum_zero_established": false,
+      "native_opposite_pair_proofs_repeated": 0,
+      "old_proofs_repeated": 0
+    },
+    "new_exact_analytic_dual_coordinate_identities": 78791,
+    "new_finite_bound_dual_products": 2,
+    "analytic_dual_value": "0",
+    "exact_copy_error": 0,
+    "elapsed_s": 1.3936503370059654,
+    "producer_import": false,
+    "numerical_optimizer_calls": 0,
+    "linear_system_solves": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physics_ticks": 0,
+    "primal_vectors_constructed_or_evaluated": 0,
+    "full_primal_dual_KKT_evaluations": 0,
+    "physical_admission": false,
+    "execution_recovery": false,
+    "old_proofs_replayed": false,
+    "scope": "Exact zero-face identity/copy audit plus one analytic lower-bound dual certificate. No primal feasibility, optimum-zero, rank, convergence or physical claim."
+  },
+  "local_verification": {
+    "utc": "2026-10-19T08:16:23.196823+00:00",
+    "original_manifests": [
+      {
+        "folder": "zero_face_preparation_572",
+        "entries": 12,
+        "manifest_sha256": "31379d2ffc6bbf32771e7c596ba5ab4dab0ba29e16c6010c9b153a4518febf1f",
+        "all_hashes_verified": true
+      },
+      {
+        "folder": "zero_face_audit_573",
+        "entries": 5,
+        "manifest_sha256": "60b3c2ebba01e0f6ed99ce7663db6b433b1006fa8d8e70642433e0cc95670bc2",
+        "all_hashes_verified": true
+      }
+    ],
+    "total_entries": 17,
+    "all_hashes_verified": true,
+    "scientific_replay": false,
+    "new_html_report": false,
+    "video_rerendered": false,
+    "current_reviewed_report": "progress_report_568/findings.html"
+  },
+  "saved_scope": {
+    "utc": "2026-10-19T08:15:50.398322+00:00",
+    "scope": "Saved-only objective-zero face and analytic lower-bound-dual preparation index. No numerical solver, primal witness or actual-state calculation.",
+    "primary": {
+      "source_inequality_shape": [
+        402467,
+        78791
+      ],
+      "source_inequality_nonzeros": 2049025,
+      "face_inequality_shape": [
+        265967,
+        78791
+      ],
+      "face_inequality_nonzeros": 414193,
+      "face_equality_shape": [
+        69617,
+        78791
+      ],
+      "face_equality_nonzeros": 749167,
+      "original_equality_rows": 1366,
+      "inherited_opposite_native_pairs": 68250,
+      "new_scalar_coefficient_checks": 136500,
+      "new_opposite_RHS_checks": 68250,
+      "new_native_equality_coefficients_copied": 749166,
+      "inequalities_replaced_by_equalities": 136500,
+      "new_affine_consistency_equalities": 68250,
+      "new_scalar_zero_equalities": 1,
+      "net_stored_nonzeros_removed": 885665,
+      "original_variables_retained": 78791,
+      "variables_added": 0,
+      "variables_removed": 0,
+      "analytic_lower_bound_dual_vectors": 1,
+      "original_cost_bounds_unchanged": true,
+      "exact_zero_face_equivalence": true,
+      "whole_original_feasible_set_equivalence": false,
+      "zero_face_feasibility_known": false,
+      "original_optimum_zero_established": false,
+      "native_opposite_pair_proofs_repeated": 0,
+      "old_proofs_repeated": 0
+    },
+    "new_exact_analytic_dual_coordinate_identities": 78791,
+    "new_finite_bound_dual_products": 2,
+    "preparation_elapsed_s": 0.7145825239131227,
+    "audit_elapsed_s": 1.3936503370059654,
+    "arithmetic_passed": true,
+    "preparation_only": true,
+    "new_closure": false,
+    "last_sealed_closure": "closure_record_569.json",
+    "physical_admission": false,
+    "numerical_lp_calls": 0,
+    "linear_system_solves": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "primal_vectors_constructed": 0,
+    "analytic_lower_bound_dual_vectors": 1,
+    "full_primal_dual_KKT_evaluations": 0,
+    "zero_face_feasibility_known": false,
+    "original_optimum_zero_established": false,
+    "whole_original_feasible_set_equivalence": false,
+    "old_proofs_replayed": false,
+    "execution_recovery": false,
+    "new_solver_exists": false,
+    "new_candidate": false,
+    "new_actual_path": false,
+    "protected_clean": 64,
+    "unresolved_cases": 8,
+    "repair_complete": false,
+    "task_complete": false,
+    "automation_status": "ACTIVE",
+    "current_reviewed_report": "progress_report_568/findings.html",
+    "video": "all_attempts_video_307/all_attempts.mp4",
+    "video_rerendered": false
+  },
+  "completed_scientific_calculations_repeated": false,
+  "scientific_execution_recovery": false,
+  "new_complete_numerical_algorithm": false,
+  "new_solver_exists": false,
+  "new_complete_path": false,
+  "numerical_lp_calls": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "primal_vectors_constructed": 0,
+  "analytic_lower_bound_dual_vectors": 1,
+  "zero_face_feasibility_known": false,
+  "original_optimum_zero_established": false,
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}
