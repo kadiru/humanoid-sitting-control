@@ -1,0 +1,53 @@
+{
+  "utc": "2026-10-17T05:18:26.837167+00:00",
+  "phase": "audit_completed_candidate_rejected",
+  "audit_completed": true,
+  "overall_audit_passed": false,
+  "physical_admission_passed": false,
+  "exact_preservation_gate_passed": false,
+  "input_action_reward_and_planner_checks_passed": true,
+  "candidate": {
+    "count": 24,
+    "stable": 16,
+    "clean": 14,
+    "slipping": 6,
+    "unwanted_contacts": 8,
+    "physical_failures": 8,
+    "margin_warnings": 16,
+    "full_duration": true
+  },
+  "best_probe": {
+    "count": 24,
+    "stable": 22,
+    "clean": 14,
+    "slipping": 10,
+    "unwanted_contacts": 2,
+    "physical_failures": 2,
+    "margin_warnings": 21,
+    "full_duration": true
+  },
+  "added_physical_cases": [
+    0,
+    1,
+    6,
+    7,
+    10,
+    11
+  ],
+  "remaining_target_cases": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    7,
+    10,
+    11
+  ],
+  "no_physics_rerun_for_audit": true,
+  "original_failed_status_preserved": "status_joint_path_17.json",
+  "audit": "joint_path_17/independent_joint_path_audit_v4_17.json",
+  "recovery": "joint_path_audit_recovery_17/recovery.json",
+  "main_training_started": false,
+  "fresh_holdout_started": false
+}
