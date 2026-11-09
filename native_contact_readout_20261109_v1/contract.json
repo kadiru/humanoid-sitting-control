@@ -1,0 +1,29 @@
+{
+  "authorization": "Latest human requests fixing native ankle readings; this is one finite mechanism-isolation fixture, not a rerun of the rejected robot trajectory or a solver-parameter experiment.",
+  "target": "Determine whether the same native position/velocity discrepancy occurs with only a loaded driven revolute joint, independent of our robot code, camera, observer and policy.",
+  "initialization": "Two newly authored fixed-base2kg links,0.55m length,hinge0.5m high,0.6radinitialangle. Identical geometry,drive,inertia,gravity. Fixture0free;fixture1hasfloor. Sleepdisabled on both to avoid active-articulation remapping as a confound.",
+  "equations": "One Y-axis revolute DOF. Native motor target decreases toward0 with .1filter and .003rad/20ms ceiling. Read native q,qd each5ms. Compare position range and native velocity integral overfinal5s. These diagnostic finite differences never feed a robot controller or quiet gate.",
+  "frozen_physics": "TGS,8position/4velocityiterations,externalforces everyiteration enabled,stabilizationFalse,contact-lastFalse,jointfriction0,driveKp160/Kd4,maxeffort40,linkmaterial.5/.5,floor.8/.6,gravity9.81,dt.005. No productionphysics changed.",
+  "test": "Reproduction supported only if loaded fixture stays within1e-4rad range overfinal5s while absolute mean native velocity exceeds.05rad/s and differs from its net position change rate by>.05rad/s. Freefixture is a mechanism comparator; output all values. No posthoc parameter search if negative.",
+  "failure": "Any API/model error or no discrepancy closes this fixed fixture; preserve output, no robot launch or automatic physics-parameter sweep.",
+  "resources": {
+    "GPU": "4090 only",
+    "GPU_workers": 1,
+    "fixtures": 2,
+    "active_physics_steps": 2000,
+    "control_ticks": 500,
+    "wall_s": 900,
+    "max_temperature_C": 85,
+    "min_root_free_GB": 20,
+    "max_queue_s": 60,
+    "output_MiB": 10,
+    "arithmetic_postprocess_s": 45,
+    "physical_retries": 0,
+    "PPO": 0
+  },
+  "independent_source_review": {
+    "method": "Separate API/source review and exact fixture geometry/units check. Initial0.6rad rotation keeps lower corner abovefloor; valid\u00b190degjointlimits. Same native channels; no existing robot-state reset or control source imported.",
+    "passed": true,
+    "reviewer": "singleowner separate review, no second agent"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "utc": "2026-11-09T06:40:24.771508+00:00",
+  "state": "FIXTURE_INITIAL_STATE_ASSERTION_FAILED_BEFORE_RECORDING",
+  "outcome": "The default native joint coordinate was about0.0061rad instead of requested0.6rad. Fixture definition lacked explicit native initial-state assignment. No meaningful contact-isolation result.",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab/isaaclab/app/sim_launcher.py\", line 645, in launch_simulation\n    yield physics_cfg\n  File \"/home/kadir/humanoid-sitting/experiments/native_contact_readout_20261109_v1/reproduce.py\", line 71, in main\n    q0=art.get_dof_positions().clone();assert torch.max(abs(q0-.6)).item()<1e-4,q0\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: tensor([[0.0162],\n        [0.0061]], device='cuda:0')\n",
+  "owner": {
+    "state": "STOPPED_NO_RETRY",
+    "pid": 2706663,
+    "utc": "2026-11-09T06:36:17.592752+00:00",
+    "wall_s": 4.421399332990404,
+    "recurring": false,
+    "error": "RuntimeError(('CHILD_FAILED_NO_RETRY', 'trial', 1))"
+  },
+  "process": {
+    "returncode": 1,
+    "wall_s": 4.055585932044778
+  },
+  "new_robot_trials": 0,
+  "new_PPO_updates": 0,
+  "explicit_recording_steps": 0,
+  "initialization_native_physics_steps": "not captured in v1; not claimed zero",
+  "correction": "v2 separately authors initial joint state and uses native q=.6,qd=0 initialization; all fixture physical parameters and test thresholds retained.",
+  "artifacts": {
+    "results/trial.log": "b084ea20222b8609bbee60f5f53dfc33dab3b4c4c4bc309d3cea022d45d6cb72",
+    "results/command.json": "9c01faa77313e41cdddb58e965de20623343cf5642a958396f7c296254b58931",
+    "results/trial_process.json": "935e68185685a58cf43f13d346a32f7502f1cdbc9ba0a6517252725ca9671f34",
+    "results/owner_status.json": "4077df398fbdd633f4edc50d85b9dd2606f2a8f91f6d5f7467bfbcfa024f92c8",
+    "results/fixture/fixture.usda": "1efd7405def62cf86a686f15afb0fcc76c03f4f7c826b8e7479d584fc8c23210"
+  }
+}

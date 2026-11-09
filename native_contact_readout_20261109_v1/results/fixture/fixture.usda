@@ -1,0 +1,221 @@
+#usda 1.0
+(
+    endTimeCode = 100
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    startTimeCode = 0
+    timeCodesPerSecond = 60
+    upAxis = "Z"
+)
+
+def PhysicsScene "physicsScene" (
+    prepend apiSchemas = ["PhysxSceneAPI", "MaterialBindingAPI"]
+)
+{
+    rel material:binding:physics = </physicsScene/defaultMaterial> (
+        bindMaterialAs = "strongerThanDescendants"
+    )
+    vector3f physics:gravityDirection = (0, 0, -1)
+    float physics:gravityMagnitude = 9.81
+    float physxScene:bounceThreshold = 0.5
+    uniform token physxScene:broadphaseType = "GPU"
+    bool physxScene:enableCCD = 0
+    bool physxScene:enableEnhancedDeterminism = 0
+    bool physxScene:enableExternalForcesEveryIteration = 1
+    bool physxScene:enableGPUDynamics = 1
+    bool physxScene:enableSceneQuerySupport = 0
+    bool physxScene:enableStabilization = 0
+    float physxScene:frictionCorrelationDistance = 0.025
+    float physxScene:frictionOffsetThreshold = 0.04
+    uint physxScene:gpuCollisionStackSize = 67108864
+    uint physxScene:gpuFoundLostAggregatePairsCapacity = 33554432
+    uint physxScene:gpuFoundLostPairsCapacity = 2097152
+    uint physxScene:gpuHeapCapacity = 67108864
+    uint physxScene:gpuMaxNumPartitions = 8
+    uint physxScene:gpuMaxParticleContacts = 1048576
+    uint physxScene:gpuMaxRigidContactCount = 8388608
+    uint physxScene:gpuMaxRigidPatchCount = 163840
+    int physxScene:gpuMaxSoftBodyContacts = 1048576
+    uint64 physxScene:gpuTempBufferCapacity = 16777216
+    uint physxScene:gpuTotalAggregatePairsCapacity = 2097152
+    string physxScene:launcherType = "isaaclab_physx.app:KitLauncher"
+    uniform uint physxScene:maxPositionIterationCount = 255
+    uniform uint physxScene:maxVelocityIterationCount = 255
+    uniform uint physxScene:minPositionIterationCount = 1
+    uniform uint physxScene:minVelocityIterationCount = 0
+    bool physxScene:solveArticulationContactLast = 0
+    uniform token physxScene:solverType = "TGS"
+    uint physxScene:timeStepsPerSecond = 200
+
+    def Material "defaultMaterial" (
+        prepend apiSchemas = ["PhysicsMaterialAPI"]
+    )
+    {
+        float physics:dynamicFriction = 0.5
+        float physics:restitution = 0
+        float physics:staticFriction = 0.5
+    }
+}
+
+def "World"
+{
+    def Material "FloorMaterial" (
+        prepend apiSchemas = ["PhysicsMaterialAPI"]
+    )
+    {
+        float physics:dynamicFriction = 0.6
+        float physics:restitution = 0
+        float physics:staticFriction = 0.8
+    }
+
+    def Material "LinkMaterial" (
+        prepend apiSchemas = ["PhysicsMaterialAPI"]
+    )
+    {
+        float physics:dynamicFriction = 0.5
+        float physics:restitution = 0
+        float physics:staticFriction = 0.5
+    }
+
+    def Xform "Probe_0"
+    {
+        def Xform "Base" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysicsArticulationRootAPI", "PhysxArticulationAPI"]
+        )
+        {
+            float physics:mass = 1
+            bool physxArticulation:enabledSelfCollisions = 0
+            float physxArticulation:sleepThreshold = 0
+            int physxArticulation:solverPositionIterationCount = 8
+            int physxArticulation:solverVelocityIterationCount = 4
+            double3 xformOp:translate = (0, 0, 0.5)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+
+        def PhysicsFixedJoint "Fixed"
+        {
+            rel physics:body1 = </World/Probe_0/Base>
+            point3f physics:localPos0 = (0, 0, 0.5)
+        }
+
+        def Xform "Link" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysxRigidBodyAPI"]
+        )
+        {
+            point3f physics:centerOfMass = (0, 0, -0.275)
+            float3 physics:diagonalInertia = (0.050683334, 0.050683334, 0.00053333334)
+            float physics:mass = 2
+            float physxRigidBody:angularDamping = 0
+            float physxRigidBody:linearDamping = 0
+            quatf xformOp:orient = (0.9553365, 0, 0.29552022, 0)
+            double3 xformOp:translate = (0, 0, 0.5)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+
+            def Cube "Shape" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+            )
+            {
+                rel material:binding:physics = </World/LinkMaterial>
+                double size = 1
+                float3 xformOp:scale = (0.04, 0.04, 0.55)
+                double3 xformOp:translate = (0, 0, -0.275)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+            }
+        }
+
+        def PhysicsRevoluteJoint "Hinge" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 4
+            float drive:angular:physics:maxForce = 40
+            float drive:angular:physics:stiffness = 160
+            float drive:angular:physics:targetPosition = 34.37747
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            uniform token physics:axis = "Y"
+            rel physics:body0 = </World/Probe_0/Base>
+            rel physics:body1 = </World/Probe_0/Link>
+            float physics:lowerLimit = -90
+            float physics:upperLimit = 90
+            float physxJoint:jointFriction = 0
+        }
+    }
+
+    def Xform "Probe_1"
+    {
+        def Xform "Base" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysicsArticulationRootAPI", "PhysxArticulationAPI"]
+        )
+        {
+            float physics:mass = 1
+            bool physxArticulation:enabledSelfCollisions = 0
+            float physxArticulation:sleepThreshold = 0
+            int physxArticulation:solverPositionIterationCount = 8
+            int physxArticulation:solverVelocityIterationCount = 4
+            double3 xformOp:translate = (2, 0, 0.5)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+
+        def PhysicsFixedJoint "Fixed"
+        {
+            rel physics:body1 = </World/Probe_1/Base>
+            point3f physics:localPos0 = (2, 0, 0.5)
+        }
+
+        def Xform "Link" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysxRigidBodyAPI"]
+        )
+        {
+            point3f physics:centerOfMass = (0, 0, -0.275)
+            float3 physics:diagonalInertia = (0.050683334, 0.050683334, 0.00053333334)
+            float physics:mass = 2
+            float physxRigidBody:angularDamping = 0
+            float physxRigidBody:linearDamping = 0
+            quatf xformOp:orient = (0.9553365, 0, 0.29552022, 0)
+            double3 xformOp:translate = (2, 0, 0.5)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+
+            def Cube "Shape" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+            )
+            {
+                rel material:binding:physics = </World/LinkMaterial>
+                double size = 1
+                float3 xformOp:scale = (0.04, 0.04, 0.55)
+                double3 xformOp:translate = (0, 0, -0.275)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+            }
+        }
+
+        def PhysicsRevoluteJoint "Hinge" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 4
+            float drive:angular:physics:maxForce = 40
+            float drive:angular:physics:stiffness = 160
+            float drive:angular:physics:targetPosition = 34.37747
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            uniform token physics:axis = "Y"
+            rel physics:body0 = </World/Probe_1/Base>
+            rel physics:body1 = </World/Probe_1/Link>
+            float physics:lowerLimit = -90
+            float physics:upperLimit = 90
+            float physxJoint:jointFriction = 0
+        }
+
+        def Cube "Floor" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            rel material:binding:physics = </World/FloorMaterial>
+            double size = 1
+            float3 xformOp:scale = (1, 1, 0.02)
+            double3 xformOp:translate = (2, 0, -0.01)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        }
+    }
+}
+
