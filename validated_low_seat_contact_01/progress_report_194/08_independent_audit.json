@@ -1,0 +1,253 @@
+{
+  "utc": "2026-10-17T14:19:01.838786+00:00",
+  "diagnostic_checks_passed": false,
+  "exact_prefix_replay": false,
+  "physical_admission": false,
+  "repair_complete": false,
+  "accounting": {
+    "elapsed_s": 13.0,
+    "physics_substeps": 2600,
+    "physics_dt": 0.005,
+    "active_ticks": 15600,
+    "initial_settling_excluded": 600,
+    "indexed_warmup": 0,
+    "complete20s_episodes": 0,
+    "optimizer_updates": 0,
+    "fresh_holdout": false,
+    "recording_control_use": false,
+    "substep_records": 1001,
+    "scene_update_callbacks": 2600
+  },
+  "source_hashes_unchanged": true,
+  "prefix_trace": {
+    "t": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "body": {
+      "exact": false,
+      "changed": 81312,
+      "max_finite_difference": 0.00059528648853302
+    },
+    "q": {
+      "exact": false,
+      "changed": 9770,
+      "max_finite_difference": 0.001212000846862793
+    },
+    "command": {
+      "exact": false,
+      "changed": 1583,
+      "max_finite_difference": 0.0008491277694702148
+    },
+    "geometry": {
+      "exact": false,
+      "changed": 2946,
+      "max_finite_difference": 0.010538339614868164
+    },
+    "reference": {
+      "exact": false,
+      "changed": 1614,
+      "max_finite_difference": 0.0017337799072265625
+    },
+    "torque": {
+      "exact": false,
+      "changed": 42123,
+      "max_finite_difference": 1.229836344718933
+    }
+  },
+  "prefix_ticks": {
+    "t": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "force": {
+      "exact": false,
+      "changed": 12060,
+      "max_finite_difference": 60.53205469250679
+    },
+    "slip": {
+      "exact": false,
+      "changed": 9406,
+      "max_finite_difference": 0.04597798842587508
+    },
+    "normal": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "weight": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "wrong": {
+      "exact": false,
+      "changed": 13,
+      "max_finite_difference": 24.023141860961914
+    },
+    "no_slip": {
+      "exact": false,
+      "changed": 3,
+      "max_finite_difference": 1.0
+    },
+    "traction": {
+      "exact": false,
+      "changed": 11,
+      "max_finite_difference": 1.0
+    },
+    "failure": {
+      "exact": false,
+      "changed": 2,
+      "max_finite_difference": 1.0
+    },
+    "legal": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "permitted": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "inside": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "rest_patch": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "total_squared_torque_Nm2": {
+      "exact": false,
+      "changed": 5999,
+      "max_finite_difference": 79.5804443359375
+    },
+    "unexpected_body_normal": {
+      "exact": false,
+      "changed": 4035,
+      "max_finite_difference": 25.300506591796875
+    },
+    "contact_position": {
+      "exact": false,
+      "changed": 10922,
+      "max_finite_difference": 0.10155677795410156
+    }
+  },
+  "exact_starts": {
+    "startup.npz": {
+      "root": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "q": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "command": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "geometry": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "observation": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      }
+    },
+    "traction_startup.npz": {
+      "policy": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "reference": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "learn": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      }
+    },
+    "bridge_startup.npz": {
+      "policy": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "learn": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "reference": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      }
+    }
+  },
+  "actual414": {
+    "exact": false,
+    "changed": 145953,
+    "max_finite_difference": 0.040986835956573486
+  },
+  "substep_trace": {
+    "q": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "body": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "command": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "torque": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    }
+  },
+  "substep_raw_checks": 4016,
+  "all_substep_raw_exact": true,
+  "fixed_fingers": 14,
+  "actual_parent_cpu_action_max_error": 1.7881393432617188e-07,
+  "parent_tolerances": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "actuator_types": {
+    "legs": "ImplicitActuator",
+    "feet": "ImplicitActuator",
+    "arms": "ImplicitActuator"
+  },
+  "effort_semantics": "Implicit actuator applied_torque is approximate PD effort telemetry, not an independent solver joint-effort measurement. Original reward/criteria remain unchanged.",
+  "interpretation": "Diagnostic replay only. No new20s success, PPO or holdout. Actual5ms joint states can now be compared with20ms settling readings; no sensor substitutions or guard changes.",
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_substep_v2_190.py": "e1849bfdc159a2e29e02a07a9ae79d1893264f089c567b74fe44586c0fef319d",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/substep_diagnostic_189/diagnostic_protocol.json": "421a588b167741e5a19b630adeb56014be4408234c5aed0f225f2dfbda5a5e3d",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/substep_diagnostic_189/substep_states.npz": "709d723941549aba712e91465708c803f877cc2bb86282fd0928aeb53db655ed",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/substep_diagnostic_189/actual_sensor_frames.npz": "6f02f47ff9b5c5407efffb832229097bb31c7c04d76662966994fbbeeca78130",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/substep_diagnostic_189/actuator_metadata.json": "3c40b6bbea84e429bf60a0cf7bccd11e0a1e51e36ef9c1bcd105e1ec8474585b"
+  }
+}
