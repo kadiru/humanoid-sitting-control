@@ -1,0 +1,40 @@
+{
+  "utc": "2026-11-08T22:50:19.499024+00:00",
+  "authorization": "Continue the two reliable-cycle restart; no new automation.",
+  "constructions": [
+    {
+      "source": "/Users/kadir/humanoid-sitting-control/rest_cycle_reachable_setup_20261108_v1",
+      "outcome": "/Users/kadir/humanoid-sitting-control/rest_cycle_reachable_setup_20261108_v1/outcome.json",
+      "wall_s": 4.172111876978306
+    },
+    {
+      "source": "/Users/kadir/humanoid-sitting-control/rest_cycle_foot_curve_20261108_v1",
+      "outcome": "/Users/kadir/humanoid-sitting-control/rest_cycle_foot_curve_20261108_v1/outcome.json",
+      "wall_s": 1.6670145580137614
+    }
+  ],
+  "counts": {
+    "new_model_constructions": 2,
+    "accepted_paths": 0,
+    "GPU_launches": 0,
+    "physics_steps": 0,
+    "new_demonstrations": 0,
+    "complete_cycles": 0,
+    "PPO_updates": 0,
+    "new_full72_checks": 0,
+    "physical_repairs": 0
+  },
+  "measured_scientific_worker_wall_s": 5.8391264349920675,
+  "accounting_scope": "Worker wall includes imports,input hashes,construction and attempted audits; excludes source authoring/read-only inspection and SSH transfer. Each terminated within its unchanged45s cap. NoGPU/PPO/physics work.",
+  "review": "First actuator-only witness reached but numerical values were not persisted before path failure; do not replay to recover them. Second solver termination is not admission: its stricter frozen residual gate failed. No relaxed gate or retimed failed path.",
+  "next_candidate": {
+    "kind": "separate compatible higher flat support fixture",
+    "premise": "A50cm-high support requires less vertical descent than the original39cm coffee table and may avoid the ankle boundary; this is a hypothesis, not a demonstrated repair.",
+    "physical_and_visual_geometry_must_match": true,
+    "existing_benchmark_unchanged": true,
+    "launch_ready": false
+  },
+  "remaining": "Fresh camera/reset and collision checks, admissible approach, genuine support/load qualification and return-to-stand, sitting+upright lean from3starts; then200demos/PPO/all72. No complete cycle exists.",
+  "worker_check": "/Users/kadir/humanoid-sitting-control/rest_cycle_foot_curve_20261108_v1/worker_check.json",
+  "recurring_automation": false
+}
