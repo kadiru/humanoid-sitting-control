@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "scope": "Separate source audit; original model state only, no delegated agent",
+  "checks": [
+    "Row names follow geometry_rows,mechanical_rows and endpoint_rows exact concatenation order with length assertion.",
+    "Only fresh original-input analytic seed is evaluated; rejected endpoint is not loaded.",
+    "Independent central differences evaluate assembled foot-support,command and readiness rows, not prior primitive checks.",
+    "No optimizer function is called; Jacobian SVD is a numerical conditioning diagnostic, not exact rank proof.",
+    "45s total watchdog and noGPU visibility retained; cannot trigger motion/PPO."
+  ]
+}
