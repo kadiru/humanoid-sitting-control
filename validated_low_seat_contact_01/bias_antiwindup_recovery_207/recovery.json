@@ -1,0 +1,7 @@
+{
+  "reason": "Genuine new-controller anti-windup bug caught before physics. Comparing unbounded float64 wanted with float32 output mistook quantization for authority clipping. With1.35deg synthetic bias it stopped at+/-.000706858rad after5accepted/595blocked ticks despite .06rad authority and .014844rad output. v2 computes authority clipping against float64 clipped wanted BEFORE quantization; all cap/gains/filter/rate/guards and exact replay assertions unchanged.",
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "original_failed_output": "/data/humanoid-sitting-perception/low_seat_contact_01/bias_feedback_checks_v2_207",
+  "conditional209_not_run": true
+}

@@ -1,0 +1,68 @@
+{
+  "utc": "2026-10-17T15:14:12.751425+00:00",
+  "passed": true,
+  "recorded_input_rows": 3800,
+  "zero_integral_outside_hover_exact_rows": 1740,
+  "counterfactual_not_physics": true,
+  "modes": [
+    {
+      "mode": "negative_bias",
+      "integral_rad": -0.03,
+      "accepted_ticks": 584,
+      "antiwindup_ticks": 16,
+      "stale_state_frozen": true
+    },
+    {
+      "mode": "positive_bias",
+      "integral_rad": 0.03,
+      "accepted_ticks": 584,
+      "antiwindup_ticks": 16,
+      "stale_state_frozen": true
+    },
+    {
+      "mode": "large_error",
+      "integral_rad": 0.0,
+      "accepted_ticks": 0,
+      "antiwindup_ticks": 0,
+      "stale_state_frozen": true
+    },
+    {
+      "mode": "stale",
+      "integral_rad": 0.0,
+      "accepted_ticks": 0,
+      "antiwindup_ticks": 0,
+      "stale_state_frozen": true
+    },
+    {
+      "mode": "unloaded",
+      "integral_rad": 0.0,
+      "accepted_ticks": 0,
+      "antiwindup_ticks": 0,
+      "stale_state_frozen": true
+    },
+    {
+      "mode": "fast_gyro",
+      "integral_rad": 0.0,
+      "accepted_ticks": 0,
+      "antiwindup_ticks": 0,
+      "stale_state_frozen": true
+    },
+    {
+      "mode": "authority_saturation",
+      "integral_rad": -0.0001413716694115407,
+      "accepted_ticks": 1,
+      "antiwindup_ticks": 599,
+      "stale_state_frozen": true
+    }
+  ],
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/check_low_seat_bias_v3_207.py": "be624a029b0f8265c9b533aaf5059c4a43deb11ce784155c4fcc350b70cd10bc",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_bias_feedback_v2_207.py": "8e32b484addcf8629f924f28e26dc826a1df550e80c33948ee6fcc5edbbcd37d",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_balance_feedback_160.py": "6f2fec374997e83593fa08f512d1c8a69ac21827019eb1a0e49ca3bb80d771d1",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/touchdown_probe_178/candidate/balance_feedback_161.json": "1d7c370a9e944245c4efe58e28fa5126ce119fa908af6f0bac5b510b0080a779",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/touchdown_probe_178/candidate/fixed_plans_132.json": "1736ec0028e765fa3098490fc0751a778606decffd95ae081b69fbe6c7889a66"
+  }
+}
