@@ -1,0 +1,89 @@
+{
+  "utc": "2026-10-18T23:44:43.266847+00:00",
+  "scope": "Saved-only completed524/525 scope, no new model/matrix/projection/LP/map calculations.",
+  "stages": [
+    {
+      "major": 0,
+      "role": "primary",
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "candidate": false,
+      "success": false,
+      "iterations": 19,
+      "crossover_iterations": 0,
+      "elapsed_s": 45.24886950303335,
+      "actual_lp_call": true,
+      "worker_actual_exit": 0,
+      "worker_wall_timeout": false,
+      "worker_elapsed_s": 45.51674366206862,
+      "method": "highs-ipm",
+      "projection": {
+        "role": "primary",
+        "inherited": true,
+        "full_rows": 652529,
+        "source_rows": 452522,
+        "full_columns": 78791,
+        "source_shape": [
+          452522,
+          78791
+        ],
+        "source_nnz": 2235285,
+        "shape": [
+          408842,
+          56951
+        ],
+        "nnz": 2147925,
+        "eliminated_columns": 21840,
+        "copied_rows": 365162,
+        "pair_rows": 87360,
+        "kept_pairs": 43680,
+        "constant_tautologies": 21840,
+        "bound_implied_pairs": 21840,
+        "generated_coefficients": 487890,
+        "proof": {
+          "inherited": true,
+          "implication_manifest_sha256": "168af0a3de212172b275b6a665d7d48259cb8fe2a091ec9996752a9fd4ab61b4",
+          "projection_manifest_sha256": "7c6f7f65b3a349710c3fa39c734188cb7c7183406fd52e5254f5d6ff76840aaa",
+          "prior_proofs_repeated": false
+        }
+      },
+      "projected_candidate": false,
+      "backsubstitution_attempted": false,
+      "terminal_failure": true
+    }
+  ],
+  "actual_scipy_linprog_calls": 1,
+  "worker_actual_exits": [
+    0
+  ],
+  "worker_wall_cap_hits": 0,
+  "returned_reduced_vectors": 0,
+  "backsubstitution_attempts": 0,
+  "original_direction_reconstructions": 0,
+  "complete_certified_witnesses": 0,
+  "finite_maps": 0,
+  "actual_trials": 0,
+  "accepted": 0,
+  "actual_X_exact472": true,
+  "actual_Y_exact472": true,
+  "actual_J_exact472": true,
+  "auxiliary_features_exact490": true,
+  "auxiliary_Y_exact_actual_Y": false,
+  "inherited_projection_systems": 1,
+  "new_projection_systems": 0,
+  "new_quotient_proof_rows": 0,
+  "new_projection_pairs": 0,
+  "original_initial_exit": {
+    "actual_exit": 1,
+    "observed_chunk": "a5c131",
+    "session_id": 89254,
+    "utc": "2026-10-18T23:42:14.406548+00:00",
+    "scope": "Original524 failed missing516 original/equality.npz after one full initial assembly, before any source copy/projection/LP call. Saved files preserved."
+  },
+  "staged_recovery": true,
+  "initial_full_assembly_repeated": false,
+  "original_saved_files": 12,
+  "prior_examples_and_proofs_repeated": false,
+  "physical_admission": false,
+  "task_complete": false
+}
