@@ -1,0 +1,2930 @@
+{
+  "passed": true,
+  "construction_only": true,
+  "synthetic_optimizer_updates": 16,
+  "accepted_actor_steps": 60,
+  "policy_changed_all16_updates": true,
+  "nominal_motion_independent_of_current_pose_and_prior_command": true,
+  "action_filter_rate_and_margin_preserved": true,
+  "no_physical_success_claim": true,
+  "source_hashes": {
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/test_construction.py": "a76befedc6cc6f293eb22443d2749549a05ab6e289345da359faa7faacfacec8",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/prepare.py": "831974b4ef0f99e5c2170ea44852057b7849a918b5dfd83c20cedb6c5b09eabf",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/common.py": "60894f7650dbb1982c1dc3fc5de28dc674fc0b386953ef9f8cf64ff625e81bc5",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/rewards.py": "079f269b5cac1faa270fd1c6e92d807b12c8c5ab0a9e83a0ad61a701d6ae97cb",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/run_training.py": "6f674e3ac0ae6078f0bb5a4efc2c6ee1552b417ad73429133ad2e03f19d22c25",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/policy.py": "404c3d70fdc82b6a9224993b2b8ca87d4a10f8a74d9fc5bed8a364c278c7d1f6",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/validate_rewards.py": "35723ed06faacd35d86b444a065e5917359b221b0478d129115be84120a134f4",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/environment.py": "1c0bfdf6c6fe40c6cc81b2dc52424b84556df66b957b4e355c060eaaac5eb231"
+  },
+  "metrics": [
+    {
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "policy_loss": -0.0829329565167427,
+      "ppo_surrogate_loss": -0.0829429179430008,
+      "imitation_loss": 9.962315380107611e-05,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.018126217648386955,
+      "value_mse": 0.9648835062980652,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.01772690936923027,
+          "initial_objective": -1.862645149230957e-09,
+          "kl": 0.16227832436561584,
+          "imitation": 0.0008994433446787298,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 0,
+          "scale": 0.5,
+          "objective": -0.04540327563881874,
+          "initial_objective": -1.862645149230957e-09,
+          "kl": 0.040569551289081573,
+          "imitation": 0.00022486083616968244,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 0,
+          "scale": 0.25,
+          "objective": -0.04227566346526146,
+          "initial_objective": -1.862645149230957e-09,
+          "kl": 0.010142396204173565,
+          "imitation": 5.621520904242061e-05,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.04712250828742981,
+          "initial_objective": -0.04227566346526146,
+          "kl": 0.09785100817680359,
+          "imitation": 0.0005362352821975946,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.06296438723802567,
+          "initial_objective": -0.04227566346526146,
+          "kl": 0.037522342056035995,
+          "imitation": 0.00020599908020813018,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.25,
+          "objective": -0.06156642362475395,
+          "initial_objective": -0.04227566346526146,
+          "kl": 0.019676487892866135,
+          "imitation": 0.00010832351836143062,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.07355458289384842,
+          "initial_objective": -0.06156642362475395,
+          "kl": 0.060797929763793945,
+          "imitation": 0.0003343788266647607,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.08097101747989655,
+          "initial_objective": -0.06156642362475395,
+          "kl": 0.02967917174100876,
+          "imitation": 0.00016307820624206215,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.07635563611984253,
+          "initial_objective": -0.06156642362475395,
+          "kl": 0.021975379437208176,
+          "imitation": 0.00012077615974703804,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.125,
+          "objective": -0.07068034261465073,
+          "initial_objective": -0.06156642362475395,
+          "kl": 0.02014228142797947,
+          "imitation": 0.00011077331873821095,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.0625,
+          "objective": -0.06655872613191605,
+          "initial_objective": -0.06156642362475395,
+          "kl": 0.0197374876588583,
+          "imitation": 0.00010859857138711959,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.0703902393579483,
+          "initial_objective": -0.06655872613191605,
+          "kl": 0.05696304142475128,
+          "imitation": 0.00031322072027251124,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.08632361143827438,
+          "initial_objective": -0.06655872613191605,
+          "kl": 0.02396877110004425,
+          "imitation": 0.0001317150454269722,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.0829329565167427,
+          "initial_objective": -0.06655872613191605,
+          "kl": 0.018126217648386955,
+          "imitation": 9.962315380107611e-05,
+          "rejected_by": []
+        }
+      ],
+      "rejection_counts": {
+        "kl": 10,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "policy_loss": -0.08927319943904877,
+      "ppo_surrogate_loss": -0.0892966240644455,
+      "imitation_loss": 0.00023426311963703483,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.019202860072255135,
+      "value_mse": 1.015092134475708,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.0514264740049839,
+          "initial_objective": 9.767517440195661e-06,
+          "kl": 0.050643160939216614,
+          "imitation": 0.0003907517238985747,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 0,
+          "scale": 0.5,
+          "objective": -0.05038270726799965,
+          "initial_objective": 9.767517440195661e-06,
+          "kl": 0.01287167053669691,
+          "imitation": 0.0001769272203091532,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.07944062352180481,
+          "initial_objective": -0.05038270726799965,
+          "kl": 0.062258169054985046,
+          "imitation": 0.00047354650450870395,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.0751524344086647,
+          "initial_objective": -0.05038270726799965,
+          "kl": 0.03137294948101044,
+          "imitation": 0.00029151703347451985,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.25,
+          "objective": -0.06678987294435501,
+          "initial_objective": -0.05038270726799965,
+          "kl": 0.020549429580569267,
+          "imitation": 0.00022566237021237612,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.125,
+          "objective": -0.05981891602277756,
+          "initial_objective": -0.05038270726799965,
+          "kl": 0.016314169391989708,
+          "imitation": 0.00019913833239115775,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.09132842719554901,
+          "initial_objective": -0.05981891602277756,
+          "kl": 0.05348437651991844,
+          "imitation": 0.0004427125386428088,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.08776897937059402,
+          "initial_objective": -0.05981891602277756,
+          "kl": 0.027775706723332405,
+          "imitation": 0.00028247927548363805,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.07868054509162903,
+          "initial_objective": -0.05981891602277756,
+          "kl": 0.020228909328579903,
+          "imitation": 0.00023101278929971159,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.125,
+          "objective": -0.07063612341880798,
+          "initial_objective": -0.05981891602277756,
+          "kl": 0.01781306229531765,
+          "imitation": 0.00021260316134430468,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.09446163475513458,
+          "initial_objective": -0.07063612341880798,
+          "kl": 0.05184783786535263,
+          "imitation": 0.0004514878964982927,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.09687116742134094,
+          "initial_objective": -0.07063612341880798,
+          "kl": 0.02541402354836464,
+          "imitation": 0.00028169553843326867,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.08927319943904877,
+          "initial_objective": -0.07063612341880798,
+          "kl": 0.019202860072255135,
+          "imitation": 0.00023426311963703483,
+          "rejected_by": []
+        }
+      ],
+      "rejection_counts": {
+        "kl": 9,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "policy_loss": -0.08955343067646027,
+      "ppo_surrogate_loss": -0.08959979563951492,
+      "imitation_loss": 0.00046363574801944196,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.018581772223114967,
+      "value_mse": 0.9762990474700928,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.057512104511260986,
+          "initial_objective": 2.34735562116839e-05,
+          "kl": 0.030152887105941772,
+          "imitation": 0.0005239574238657951,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 0,
+          "scale": 0.5,
+          "objective": -0.04670315235853195,
+          "initial_objective": 2.34735562116839e-05,
+          "kl": 0.007628156803548336,
+          "imitation": 0.00033894323860295117,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.07935859262943268,
+          "initial_objective": -0.04670315235853195,
+          "kl": 0.04540890455245972,
+          "imitation": 0.0006573802093043923,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.07238131016492844,
+          "initial_objective": -0.04670315235853195,
+          "kl": 0.02211870439350605,
+          "imitation": 0.0004739801515825093,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.25,
+          "objective": -0.06325340270996094,
+          "initial_objective": -0.04670315235853195,
+          "kl": 0.013764156959950924,
+          "imitation": 0.00040036748396232724,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.10133476555347443,
+          "initial_objective": -0.06325340270996094,
+          "kl": 0.04169818386435509,
+          "imitation": 0.0006548939854837954,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.09115169197320938,
+          "initial_objective": -0.06325340270996094,
+          "kl": 0.023734668269753456,
+          "imitation": 0.0005056848167441785,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.08047252148389816,
+          "initial_objective": -0.06325340270996094,
+          "kl": 0.017744965851306915,
+          "imitation": 0.00044751138193532825,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.11084240674972534,
+          "initial_objective": -0.08047252148389816,
+          "kl": 0.044039420783519745,
+          "imitation": 0.0006830808706581593,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.10631944984197617,
+          "initial_objective": -0.08047252148389816,
+          "kl": 0.025320477783679962,
+          "imitation": 0.0005350011051632464,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.09663455188274384,
+          "initial_objective": -0.08047252148389816,
+          "kl": 0.02012563683092594,
+          "imitation": 0.00048360510845668614,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.125,
+          "objective": -0.08955343067646027,
+          "initial_objective": -0.08047252148389816,
+          "kl": 0.018581772223114967,
+          "imitation": 0.00046363574801944196,
+          "rejected_by": []
+        }
+      ],
+      "rejection_counts": {
+        "kl": 8,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "policy_loss": -0.08617569506168365,
+      "ppo_surrogate_loss": -0.08624906092882156,
+      "imitation_loss": 0.0007336886483244598,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.01976923458278179,
+      "value_mse": 0.9097938537597656,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.07130492478609085,
+          "initial_objective": 4.648280082619749e-05,
+          "kl": 0.02144528552889824,
+          "imitation": 0.0007232003263197839,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 0,
+          "scale": 0.5,
+          "objective": -0.05132513865828514,
+          "initial_objective": 4.648280082619749e-05,
+          "kl": 0.005382032599300146,
+          "imitation": 0.0005637609865516424,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.08643781393766403,
+          "initial_objective": -0.05132513865828514,
+          "kl": 0.04159802943468094,
+          "imitation": 0.0009143126662820578,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.07934417575597763,
+          "initial_objective": -0.05132513865828514,
+          "kl": 0.019007641822099686,
+          "imitation": 0.0007136855274438858,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.10974298417568207,
+          "initial_objective": -0.07934417575597763,
+          "kl": 0.04753495380282402,
+          "imitation": 0.0010362521279603243,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.10088341683149338,
+          "initial_objective": -0.07934417575597763,
+          "kl": 0.030167074874043465,
+          "imitation": 0.0008575585088692605,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.09219101071357727,
+          "initial_objective": -0.07934417575597763,
+          "kl": 0.023815248161554337,
+          "imitation": 0.0007812904077582061,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.125,
+          "objective": -0.08643066138029099,
+          "initial_objective": -0.07934417575597763,
+          "kl": 0.021218830719590187,
+          "imitation": 0.0007464076043106616,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.0625,
+          "objective": -0.08307383954524994,
+          "initial_objective": -0.07934417575597763,
+          "kl": 0.020065169781446457,
+          "imitation": 0.0007297768606804311,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.03125,
+          "objective": -0.08125396817922592,
+          "initial_objective": -0.07934417575597763,
+          "kl": 0.01952437125146389,
+          "imitation": 0.0007216637022793293,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.11437103152275085,
+          "initial_objective": -0.08125396817922592,
+          "kl": 0.042434874922037125,
+          "imitation": 0.001019500894472003,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.10849684476852417,
+          "initial_objective": -0.08125396817922592,
+          "kl": 0.025925619527697563,
+          "imitation": 0.0008425267296843231,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.09813249111175537,
+          "initial_objective": -0.08125396817922592,
+          "kl": 0.021456945687532425,
+          "imitation": 0.0007750549702905118,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.125,
+          "objective": -0.09054408222436905,
+          "initial_objective": -0.08125396817922592,
+          "kl": 0.0201730839908123,
+          "imitation": 0.0007465959643013775,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0625,
+          "objective": -0.08617569506168365,
+          "initial_objective": -0.08125396817922592,
+          "kl": 0.01976923458278179,
+          "imitation": 0.0007336886483244598,
+          "rejected_by": []
+        }
+      ],
+      "rejection_counts": {
+        "kl": 11,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "policy_loss": -0.09204550832509995,
+      "ppo_surrogate_loss": -0.09215223044157028,
+      "imitation_loss": 0.0010672002099454403,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.01909995824098587,
+      "value_mse": 0.9862349033355713,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.07913263887166977,
+          "initial_objective": 7.31682448531501e-05,
+          "kl": 0.022367648780345917,
+          "imitation": 0.0010675296653062105,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 0,
+          "scale": 0.5,
+          "objective": -0.05881781876087189,
+          "initial_objective": 7.31682448531501e-05,
+          "kl": 0.005598196294158697,
+          "imitation": 0.0008686971850693226,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.08753664046525955,
+          "initial_objective": -0.05881781876087189,
+          "kl": 0.04670538753271103,
+          "imitation": 0.0013195833889767528,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.08367468416690826,
+          "initial_objective": -0.05881781876087189,
+          "kl": 0.021017851307988167,
+          "imitation": 0.0010656833183020353,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.25,
+          "objective": -0.07574575394392014,
+          "initial_objective": -0.05881781876087189,
+          "kl": 0.012026886455714703,
+          "imitation": 0.0009600900229997933,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.10212497413158417,
+          "initial_objective": -0.07574575394392014,
+          "kl": 0.04747055470943451,
+          "imitation": 0.0013742331648245454,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.0959305688738823,
+          "initial_objective": -0.07574575394392014,
+          "kl": 0.026157904416322708,
+          "imitation": 0.0011474596103653312,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.08841153234243393,
+          "initial_objective": -0.07574575394392014,
+          "kl": 0.01820014975965023,
+          "imitation": 0.0010488779516890645,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.11617089062929153,
+          "initial_objective": -0.08841153234243393,
+          "kl": 0.04474375396966934,
+          "imitation": 0.0014072619378566742,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.10880810767412186,
+          "initial_objective": -0.08841153234243393,
+          "kl": 0.028210926800966263,
+          "imitation": 0.0012105617206543684,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.10092367976903915,
+          "initial_objective": -0.08841153234243393,
+          "kl": 0.02239971049129963,
+          "imitation": 0.0011253919219598174,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.125,
+          "objective": -0.09529200196266174,
+          "initial_objective": -0.08841153234243393,
+          "kl": 0.020099610090255737,
+          "imitation": 0.0010860589100047946,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0625,
+          "objective": -0.09204550832509995,
+          "initial_objective": -0.08841153234243393,
+          "kl": 0.01909995824098587,
+          "imitation": 0.0010672002099454403,
+          "rejected_by": []
+        }
+      ],
+      "rejection_counts": {
+        "kl": 9,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "policy_loss": -0.1066061332821846,
+      "ppo_surrogate_loss": -0.10676179826259613,
+      "imitation_loss": 0.0015566544607281685,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.01977120153605938,
+      "value_mse": 1.009458065032959,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.0877503827214241,
+          "initial_objective": 0.00010653890058165416,
+          "kl": 0.014458616264164448,
+          "imitation": 0.0014393561286851764,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.11453889310359955,
+          "initial_objective": -0.0877503827214241,
+          "kl": 0.04027292877435684,
+          "imitation": 0.0018346160650253296,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.10665124654769897,
+          "initial_objective": -0.0877503827214241,
+          "kl": 0.025002330541610718,
+          "imitation": 0.0016235344810411334,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.25,
+          "objective": -0.09911587089300156,
+          "initial_objective": -0.0877503827214241,
+          "kl": 0.01914704404771328,
+          "imitation": 0.0015281228115782142,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.12678027153015137,
+          "initial_objective": -0.09911587089300156,
+          "kl": 0.04016699269413948,
+          "imitation": 0.001860530930571258,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.11866077780723572,
+          "initial_objective": -0.09911587089300156,
+          "kl": 0.02639111690223217,
+          "imitation": 0.0016758189303800464,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.11092159152030945,
+          "initial_objective": -0.09911587089300156,
+          "kl": 0.021959468722343445,
+          "imitation": 0.0015973811969161034,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.125,
+          "objective": -0.1057097539305687,
+          "initial_objective": -0.09911587089300156,
+          "kl": 0.020351724699139595,
+          "imitation": 0.0015616094460710883,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.0625,
+          "objective": -0.10259870439767838,
+          "initial_objective": -0.09911587089300156,
+          "kl": 0.019699085503816605,
+          "imitation": 0.001544581144116819,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.12459403276443481,
+          "initial_objective": -0.10259870439767838,
+          "kl": 0.04274902120232582,
+          "imitation": 0.0018602285999804735,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.12348619848489761,
+          "initial_objective": -0.10259870439767838,
+          "kl": 0.02536984533071518,
+          "imitation": 0.0016696630045771599,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.11598456650972366,
+          "initial_objective": -0.10259870439767838,
+          "kl": 0.021077502518892288,
+          "imitation": 0.0015989721287041903,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.125,
+          "objective": -0.11013314127922058,
+          "initial_objective": -0.10259870439767838,
+          "kl": 0.020024890080094337,
+          "imitation": 0.001569743501022458,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0625,
+          "objective": -0.1066061332821846,
+          "initial_objective": -0.10259870439767838,
+          "kl": 0.01977120153605938,
+          "imitation": 0.0015566544607281685,
+          "rejected_by": []
+        }
+      ],
+      "rejection_counts": {
+        "kl": 10,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "policy_loss": -0.0871368870139122,
+      "ppo_surrogate_loss": -0.0873277485370636,
+      "imitation_loss": 0.0019086479442194104,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.01998995989561081,
+      "value_mse": 1.0887105464935303,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.07876968383789062,
+          "initial_objective": 0.00015513251128140837,
+          "kl": 0.022792328149080276,
+          "imitation": 0.0018967710202559829,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 0,
+          "scale": 0.5,
+          "objective": -0.058885183185338974,
+          "initial_objective": 0.00015513251128140837,
+          "kl": 0.005669146776199341,
+          "imitation": 0.0016917039174586535,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.0906953290104866,
+          "initial_objective": -0.058885183185338974,
+          "kl": 0.04292256012558937,
+          "imitation": 0.002157310489565134,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.08548431098461151,
+          "initial_objective": -0.058885183185338974,
+          "kl": 0.019765742123126984,
+          "imitation": 0.0018986284267157316,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.1149296686053276,
+          "initial_objective": -0.08548431098461151,
+          "kl": 0.04863526672124863,
+          "imitation": 0.002397895557805896,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.10523996502161026,
+          "initial_objective": -0.08548431098461151,
+          "kl": 0.03167257085442543,
+          "imitation": 0.0021334595512598753,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.09706684947013855,
+          "initial_objective": -0.08548431098461151,
+          "kl": 0.025096610188484192,
+          "imitation": 0.00201239506714046,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.125,
+          "objective": -0.09186048060655594,
+          "initial_objective": -0.08548431098461151,
+          "kl": 0.022276699542999268,
+          "imitation": 0.0019546058028936386,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.0625,
+          "objective": -0.08881162852048874,
+          "initial_objective": -0.08548431098461151,
+          "kl": 0.020982712507247925,
+          "imitation": 0.0019263915019109845,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.03125,
+          "objective": -0.08717355877161026,
+          "initial_objective": -0.08548431098461151,
+          "kl": 0.020364630967378616,
+          "imitation": 0.001912453561089933,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.015625,
+          "objective": -0.08633903414011002,
+          "initial_objective": -0.08548431098461151,
+          "kl": 0.020062800496816635,
+          "imitation": 0.0019055269658565521,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.0078125,
+          "objective": -0.08591467887163162,
+          "initial_objective": -0.08548431098461151,
+          "kl": 0.019913697615265846,
+          "imitation": 0.0019020739709958434,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.1263892948627472,
+          "initial_objective": -0.08591467887163162,
+          "kl": 0.03832932189106941,
+          "imitation": 0.002399684628471732,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.11442019045352936,
+          "initial_objective": -0.08591467887163162,
+          "kl": 0.025650903582572937,
+          "imitation": 0.0021311722230166197,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.10265443474054337,
+          "initial_objective": -0.08591467887163162,
+          "kl": 0.02192770317196846,
+          "imitation": 0.0020117671228945255,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.125,
+          "objective": -0.0950259193778038,
+          "initial_objective": -0.08591467887163162,
+          "kl": 0.020708665251731873,
+          "imitation": 0.001955715473741293,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0625,
+          "objective": -0.0907001718878746,
+          "initial_objective": -0.08591467887163162,
+          "kl": 0.020258324220776558,
+          "imitation": 0.0019285946618765593,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.03125,
+          "objective": -0.08833608031272888,
+          "initial_objective": -0.08591467887163162,
+          "kl": 0.0200728140771389,
+          "imitation": 0.0019152594031766057,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.015625,
+          "objective": -0.0871368870139122,
+          "initial_objective": -0.08591467887163162,
+          "kl": 0.01998995989561081,
+          "imitation": 0.0019086479442194104,
+          "rejected_by": []
+        }
+      ],
+      "rejection_counts": {
+        "kl": 15,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "policy_loss": -0.12214736640453339,
+      "ppo_surrogate_loss": -0.12241581827402115,
+      "imitation_loss": 0.0026844895910471678,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.01969010941684246,
+      "value_mse": 1.083560585975647,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.0938178151845932,
+          "initial_objective": 0.00019025067740585655,
+          "kl": 0.012436220422387123,
+          "imitation": 0.0024194272700697184,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.12718118727207184,
+          "initial_objective": -0.0938178151845932,
+          "kl": 0.03774060681462288,
+          "imitation": 0.0030243440996855497,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.11669066548347473,
+          "initial_objective": -0.0938178151845932,
+          "kl": 0.022794317454099655,
+          "imitation": 0.0027081812731921673,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.25,
+          "objective": -0.10731019079685211,
+          "initial_objective": -0.0938178151845932,
+          "kl": 0.017052609473466873,
+          "imitation": 0.0025604385882616043,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.13663068413734436,
+          "initial_objective": -0.10731019079685211,
+          "kl": 0.041092753410339355,
+          "imitation": 0.0031446614302694798,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.12899930775165558,
+          "initial_objective": -0.10731019079685211,
+          "kl": 0.02574284002184868,
+          "imitation": 0.0028331687208265066,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.12058670073747635,
+          "initial_objective": -0.10731019079685211,
+          "kl": 0.020578542724251747,
+          "imitation": 0.0026920319069176912,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.125,
+          "objective": -0.11468842625617981,
+          "initial_objective": -0.10731019079685211,
+          "kl": 0.018612399697303772,
+          "imitation": 0.0026250514201819897,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.1362055093050003,
+          "initial_objective": -0.11468842625617981,
+          "kl": 0.04605865851044655,
+          "imitation": 0.0032078672666102648,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.13460132479667664,
+          "initial_objective": -0.11468842625617981,
+          "kl": 0.026928165927529335,
+          "imitation": 0.002885637804865837,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.1278252899646759,
+          "initial_objective": -0.11468842625617981,
+          "kl": 0.021432874724268913,
+          "imitation": 0.00274772010743618,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.125,
+          "objective": -0.12214736640453339,
+          "initial_objective": -0.11468842625617981,
+          "kl": 0.01969010941684246,
+          "imitation": 0.0026844895910471678,
+          "rejected_by": []
+        }
+      ],
+      "rejection_counts": {
+        "kl": 8,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 2,
+      "critic_steps": 4,
+      "policy_loss": -0.09086938202381134,
+      "ppo_surrogate_loss": -0.09120405465364456,
+      "imitation_loss": 0.003346757497638464,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.01993219554424286,
+      "value_mse": 1.0587126016616821,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.09038015455007553,
+          "initial_objective": 0.00027024358860217035,
+          "kl": 0.019751694053411484,
+          "imitation": 0.0033412915654480457,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.1203213632106781,
+          "initial_objective": -0.09038015455007553,
+          "kl": 0.05468526482582092,
+          "imitation": 0.004113517701625824,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.1111377403140068,
+          "initial_objective": -0.09038015455007553,
+          "kl": 0.03420250117778778,
+          "imitation": 0.003708931151777506,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.25,
+          "objective": -0.10296851396560669,
+          "initial_objective": -0.09038015455007553,
+          "kl": 0.026235774159431458,
+          "imitation": 0.003520563244819641,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.125,
+          "objective": -0.09738302230834961,
+          "initial_objective": -0.09038015455007553,
+          "kl": 0.022809967398643494,
+          "imitation": 0.003429798875004053,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.0625,
+          "objective": -0.09407824277877808,
+          "initial_objective": -0.09038015455007553,
+          "kl": 0.021235140040516853,
+          "imitation": 0.0033852639608085155,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.03125,
+          "objective": -0.09229789674282074,
+          "initial_objective": -0.09038015455007553,
+          "kl": 0.020482052117586136,
+          "imitation": 0.0033632079139351845,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.015625,
+          "objective": -0.09135359525680542,
+          "initial_objective": -0.09038015455007553,
+          "kl": 0.020114067941904068,
+          "imitation": 0.003352232277393341,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.0078125,
+          "objective": -0.09086938202381134,
+          "initial_objective": -0.09038015455007553,
+          "kl": 0.01993219554424286,
+          "imitation": 0.003346757497638464,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.1295839548110962,
+          "initial_objective": -0.09086938202381134,
+          "kl": 0.045947641134262085,
+          "imitation": 0.004099533427506685,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.11954539269208908,
+          "initial_objective": -0.09086938202381134,
+          "kl": 0.028745878487825394,
+          "imitation": 0.0036983108147978783,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.1087363064289093,
+          "initial_objective": -0.09086938202381134,
+          "kl": 0.02330872416496277,
+          "imitation": 0.0035164246801286936,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.125,
+          "objective": -0.10085693746805191,
+          "initial_objective": -0.09086938202381134,
+          "kl": 0.02136509120464325,
+          "imitation": 0.0034300757106393576,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.0625,
+          "objective": -0.09617216885089874,
+          "initial_objective": -0.09086938202381134,
+          "kl": 0.020585089921951294,
+          "imitation": 0.003388039767742157,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.03125,
+          "objective": -0.09360232949256897,
+          "initial_objective": -0.09086938202381134,
+          "kl": 0.02024279534816742,
+          "imitation": 0.003367304103448987,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.015625,
+          "objective": -0.09226430207490921,
+          "initial_objective": -0.09086938202381134,
+          "kl": 0.020083507522940636,
+          "imitation": 0.0033570074010640383,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.0078125,
+          "objective": -0.09157469868659973,
+          "initial_objective": -0.09086938202381134,
+          "kl": 0.02000683918595314,
+          "imitation": 0.003351876512169838,
+          "rejected_by": [
+            "kl"
+          ]
+        }
+      ],
+      "rejection_counts": {
+        "kl": 15,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "policy_loss": -0.12355394661426544,
+      "ppo_surrogate_loss": -0.12399998307228088,
+      "imitation_loss": 0.004460377153009176,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.019921215251088142,
+      "value_mse": 0.9767281413078308,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.10116054862737656,
+          "initial_objective": 0.0003361664421390742,
+          "kl": 0.012480335310101509,
+          "imitation": 0.0041445111855864525,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.13296052813529968,
+          "initial_objective": -0.10116054862737656,
+          "kl": 0.04042557254433632,
+          "imitation": 0.005000016186386347,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.12374429404735565,
+          "initial_objective": -0.10116054862737656,
+          "kl": 0.02378278411924839,
+          "imitation": 0.00455548195168376,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.25,
+          "objective": -0.11465802043676376,
+          "initial_objective": -0.10116054862737656,
+          "kl": 0.017478350549936295,
+          "imitation": 0.004345880355685949,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.13769163191318512,
+          "initial_objective": -0.11465802043676376,
+          "kl": 0.047912731766700745,
+          "imitation": 0.005175410304218531,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.133013516664505,
+          "initial_objective": -0.11465802043676376,
+          "kl": 0.028676962479948997,
+          "imitation": 0.00473701162263751,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.1269083023071289,
+          "initial_objective": -0.11465802043676376,
+          "kl": 0.02209443598985672,
+          "imitation": 0.004535651300102472,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.125,
+          "objective": -0.12165670096874237,
+          "initial_objective": -0.11465802043676376,
+          "kl": 0.01954321749508381,
+          "imitation": 0.004439331125468016,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.13349813222885132,
+          "initial_objective": -0.12165670096874237,
+          "kl": 0.05611075460910797,
+          "imitation": 0.005249165464192629,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.13617992401123047,
+          "initial_objective": -0.12165670096874237,
+          "kl": 0.031422149389982224,
+          "imitation": 0.004808590281754732,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.13217347860336304,
+          "initial_objective": -0.12165670096874237,
+          "kl": 0.0239173024892807,
+          "imitation": 0.0046152337454259396,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.125,
+          "objective": -0.12815254926681519,
+          "initial_objective": -0.12165670096874237,
+          "kl": 0.02134334295988083,
+          "imitation": 0.0045251245610415936,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0625,
+          "objective": -0.12527287006378174,
+          "initial_objective": -0.12165670096874237,
+          "kl": 0.02034713141620159,
+          "imitation": 0.004481690935790539,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.03125,
+          "objective": -0.12355394661426544,
+          "initial_objective": -0.12165670096874237,
+          "kl": 0.019921215251088142,
+          "imitation": 0.004460377153009176,
+          "rejected_by": []
+        }
+      ],
+      "rejection_counts": {
+        "kl": 10,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 3,
+      "critic_steps": 4,
+      "policy_loss": -0.10262440145015717,
+      "ppo_surrogate_loss": -0.10315083712339401,
+      "imitation_loss": 0.005264350213110447,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.019867604598402977,
+      "value_mse": 1.013132095336914,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.09154608100652695,
+          "initial_objective": 0.0004381486214697361,
+          "kl": 0.02591697871685028,
+          "imitation": 0.005249369889497757,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 0,
+          "scale": 0.5,
+          "objective": -0.0671137124300003,
+          "initial_objective": 0.0004381486214697361,
+          "kl": 0.006382035557180643,
+          "imitation": 0.004778158850967884,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.10455315560102463,
+          "initial_objective": -0.0671137124300003,
+          "kl": 0.050105467438697815,
+          "imitation": 0.00582481874153018,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.09758862107992172,
+          "initial_objective": -0.0671137124300003,
+          "kl": 0.022749295458197594,
+          "imitation": 0.005269188433885574,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.25,
+          "objective": -0.08728734403848648,
+          "initial_objective": -0.0671137124300003,
+          "kl": 0.013221806846559048,
+          "imitation": 0.0050157601945102215,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.1192077025771141,
+          "initial_objective": -0.08728734403848648,
+          "kl": 0.05207260325551033,
+          "imitation": 0.00608628336340189,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.11113478243350983,
+          "initial_objective": -0.08728734403848648,
+          "kl": 0.028528479859232903,
+          "imitation": 0.0055254683829844,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.10262440145015717,
+          "initial_objective": -0.08728734403848648,
+          "kl": 0.019867604598402977,
+          "imitation": 0.005264350213110447,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.13016727566719055,
+          "initial_objective": -0.10262440145015717,
+          "kl": 0.05426114425063133,
+          "imitation": 0.006317114923149347,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.12351935356855392,
+          "initial_objective": -0.10262440145015717,
+          "kl": 0.03265494108200073,
+          "imitation": 0.005763565190136433,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.11563815176486969,
+          "initial_objective": -0.10262440145015717,
+          "kl": 0.02518254891037941,
+          "imitation": 0.005507297348231077,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.125,
+          "objective": -0.11000305414199829,
+          "initial_objective": -0.10262440145015717,
+          "kl": 0.022258298471570015,
+          "imitation": 0.005384174641221762,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0625,
+          "objective": -0.10656507313251495,
+          "initial_objective": -0.10262440145015717,
+          "kl": 0.020996607840061188,
+          "imitation": 0.00532385241240263,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.03125,
+          "objective": -0.10468127578496933,
+          "initial_objective": -0.10262440145015717,
+          "kl": 0.020415538921952248,
+          "imitation": 0.005293998401612043,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.015625,
+          "objective": -0.10367067903280258,
+          "initial_objective": -0.10262440145015717,
+          "kl": 0.020137466490268707,
+          "imitation": 0.005279148928821087,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0078125,
+          "objective": -0.10315320640802383,
+          "initial_objective": -0.10262440145015717,
+          "kl": 0.020001519471406937,
+          "imitation": 0.005271743051707745,
+          "rejected_by": [
+            "kl"
+          ]
+        }
+      ],
+      "rejection_counts": {
+        "kl": 13,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "policy_loss": -0.12063323706388474,
+      "ppo_surrogate_loss": -0.1213020533323288,
+      "imitation_loss": 0.006688165944069624,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.019870419055223465,
+      "value_mse": 1.0266685485839844,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.10329471528530121,
+          "initial_objective": 0.0005310526466928422,
+          "kl": 0.015465669333934784,
+          "imitation": 0.0064400252886116505,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.13509579002857208,
+          "initial_objective": -0.10329471528530121,
+          "kl": 0.04907935857772827,
+          "imitation": 0.007599206175655127,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.12589536607265472,
+          "initial_objective": -0.10329471528530121,
+          "kl": 0.0290246419608593,
+          "imitation": 0.0069984691217541695,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.25,
+          "objective": -0.1168217808008194,
+          "initial_objective": -0.10329471528530121,
+          "kl": 0.021452970802783966,
+          "imitation": 0.0067140692844986916,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.125,
+          "objective": -0.11070385575294495,
+          "initial_objective": -0.10329471528530121,
+          "kl": 0.018263718113303185,
+          "imitation": 0.006575766485184431,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.13809770345687866,
+          "initial_objective": -0.11070385575294495,
+          "kl": 0.052097387611866,
+          "imitation": 0.007643313612788916,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.1342296451330185,
+          "initial_objective": -0.11070385575294495,
+          "kl": 0.03018052875995636,
+          "imitation": 0.0070796143263578415,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.12634970247745514,
+          "initial_objective": -0.11070385575294495,
+          "kl": 0.02300172671675682,
+          "imitation": 0.006820368580520153,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.125,
+          "objective": -0.1195385679602623,
+          "initial_objective": -0.11070385575294495,
+          "kl": 0.020331287756562233,
+          "imitation": 0.006696256808936596,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.0625,
+          "objective": -0.1153385266661644,
+          "initial_objective": -0.11070385575294495,
+          "kl": 0.019222645089030266,
+          "imitation": 0.006635561585426331,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.13089372217655182,
+          "initial_objective": -0.1153385266661644,
+          "kl": 0.06095350533723831,
+          "imitation": 0.007654293905943632,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.13524796068668365,
+          "initial_objective": -0.1153385266661644,
+          "kl": 0.03161735087633133,
+          "imitation": 0.00709714787080884,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.1310369372367859,
+          "initial_objective": -0.1153385266661644,
+          "kl": 0.02334795519709587,
+          "imitation": 0.006854651961475611,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.125,
+          "objective": -0.1250419318675995,
+          "initial_objective": -0.1153385266661644,
+          "kl": 0.020772913470864296,
+          "imitation": 0.0067422110587358475,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0625,
+          "objective": -0.12063323706388474,
+          "initial_objective": -0.1153385266661644,
+          "kl": 0.019870419055223465,
+          "imitation": 0.006688165944069624,
+          "rejected_by": []
+        }
+      ],
+      "rejection_counts": {
+        "kl": 11,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "policy_loss": -0.1002848744392395,
+      "ppo_surrogate_loss": -0.10105645656585693,
+      "imitation_loss": 0.0077158063650131226,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.019655976444482803,
+      "value_mse": 1.0522125959396362,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.08848365396261215,
+          "initial_objective": 0.0006730175809934735,
+          "kl": 0.03214438259601593,
+          "imitation": 0.007800044491887093,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 0,
+          "scale": 0.5,
+          "objective": -0.06775867938995361,
+          "initial_objective": 0.0006730175809934735,
+          "kl": 0.00791173055768013,
+          "imitation": 0.007217810954898596,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.10626953095197678,
+          "initial_objective": -0.06775867938995361,
+          "kl": 0.057709548622369766,
+          "imitation": 0.008499802090227604,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.09866440296173096,
+          "initial_objective": -0.06775867938995361,
+          "kl": 0.02668316662311554,
+          "imitation": 0.007821343839168549,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.25,
+          "objective": -0.08809379488229752,
+          "initial_objective": -0.06775867938995361,
+          "kl": 0.01579902321100235,
+          "imitation": 0.007510400377213955,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.12339071929454803,
+          "initial_objective": -0.08809379488229752,
+          "kl": 0.058492571115493774,
+          "imitation": 0.008914962410926819,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.11460846662521362,
+          "initial_objective": -0.08809379488229752,
+          "kl": 0.03252881020307541,
+          "imitation": 0.008182009682059288,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.10488960891962051,
+          "initial_objective": -0.08809379488229752,
+          "kl": 0.023037955164909363,
+          "imitation": 0.007838699966669083,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.125,
+          "objective": -0.09752373397350311,
+          "initial_objective": -0.08809379488229752,
+          "kl": 0.019140509888529778,
+          "imitation": 0.0076726945117115974,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.13059023022651672,
+          "initial_objective": -0.09752373397350311,
+          "kl": 0.05648425593972206,
+          "imitation": 0.009190541692078114,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.12485311180353165,
+          "initial_objective": -0.09752373397350311,
+          "kl": 0.03233906999230385,
+          "imitation": 0.008395394310355186,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.11520273983478546,
+          "initial_objective": -0.09752373397350311,
+          "kl": 0.024408701807260513,
+          "imitation": 0.00802520476281643,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.125,
+          "objective": -0.10767554491758347,
+          "initial_objective": -0.09752373397350311,
+          "kl": 0.021446436643600464,
+          "imitation": 0.007846767082810402,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0625,
+          "objective": -0.1029263511300087,
+          "initial_objective": -0.09752373397350311,
+          "kl": 0.020211979746818542,
+          "imitation": 0.007759188301861286,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.03125,
+          "objective": -0.1002848744392395,
+          "initial_objective": -0.09752373397350311,
+          "kl": 0.019655976444482803,
+          "imitation": 0.0077158063650131226,
+          "rejected_by": []
+        }
+      ],
+      "rejection_counts": {
+        "kl": 11,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 3,
+      "critic_steps": 4,
+      "policy_loss": -0.10847405344247818,
+      "ppo_surrogate_loss": -0.10939676314592361,
+      "imitation_loss": 0.009227102622389793,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.019969049841165543,
+      "value_mse": 0.9927049279212952,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.1033274382352829,
+          "initial_objective": 0.0007710821810178459,
+          "kl": 0.021253246814012527,
+          "imitation": 0.009237134829163551,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 0,
+          "scale": 0.5,
+          "objective": -0.07402670383453369,
+          "initial_objective": 0.0007710821810178459,
+          "kl": 0.00521297100931406,
+          "imitation": 0.008437789976596832,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.11734031140804291,
+          "initial_objective": -0.07402670383453369,
+          "kl": 0.0446350984275341,
+          "imitation": 0.010064099915325642,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.10799124091863632,
+          "initial_objective": -0.07402670383453369,
+          "kl": 0.019790243357419968,
+          "imitation": 0.009216543287038803,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.1370278149843216,
+          "initial_objective": -0.10799124091863632,
+          "kl": 0.05783373862504959,
+          "imitation": 0.010667150840163231,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.12878769636154175,
+          "initial_objective": -0.10799124091863632,
+          "kl": 0.0349181666970253,
+          "imitation": 0.009916510432958603,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.1206217035651207,
+          "initial_objective": -0.10799124091863632,
+          "kl": 0.02640949934720993,
+          "imitation": 0.00956034753471613,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.125,
+          "objective": -0.11502782255411148,
+          "initial_objective": -0.10799124091863632,
+          "kl": 0.0228672344237566,
+          "imitation": 0.009386919438838959,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.0625,
+          "objective": -0.11170316487550735,
+          "initial_objective": -0.10799124091863632,
+          "kl": 0.021271008998155594,
+          "imitation": 0.009301351383328438,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.03125,
+          "objective": -0.10988501459360123,
+          "initial_objective": -0.10799124091863632,
+          "kl": 0.020516233518719673,
+          "imitation": 0.00925885234028101,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.015625,
+          "objective": -0.10894673317670822,
+          "initial_objective": -0.10799124091863632,
+          "kl": 0.020149633288383484,
+          "imitation": 0.009237674064934254,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.0078125,
+          "objective": -0.10847405344247818,
+          "initial_objective": -0.10799124091863632,
+          "kl": 0.019969049841165543,
+          "imitation": 0.009227102622389793,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.14003898203372955,
+          "initial_objective": -0.10847405344247818,
+          "kl": 0.054234206676483154,
+          "imitation": 0.010483704507350922,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.1340547800064087,
+          "initial_objective": -0.10847405344247818,
+          "kl": 0.030954033136367798,
+          "imitation": 0.00982038676738739,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.12513822317123413,
+          "initial_objective": -0.10847405344247818,
+          "kl": 0.023979682475328445,
+          "imitation": 0.009515276178717613,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.125,
+          "objective": -0.11787057667970657,
+          "initial_objective": -0.10847405344247818,
+          "kl": 0.021610677242279053,
+          "imitation": 0.009369106963276863,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0625,
+          "objective": -0.11348821967840195,
+          "initial_objective": -0.10847405344247818,
+          "kl": 0.020699741318821907,
+          "imitation": 0.009297587908804417,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.03125,
+          "objective": -0.1110498458147049,
+          "initial_objective": -0.10847405344247818,
+          "kl": 0.02031194604933262,
+          "imitation": 0.00926221627742052,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.015625,
+          "objective": -0.10977282375097275,
+          "initial_objective": -0.10847405344247818,
+          "kl": 0.0201349388808012,
+          "imitation": 0.009244627319276333,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0078125,
+          "objective": -0.10912396013736725,
+          "initial_objective": -0.10847405344247818,
+          "kl": 0.02005055919289589,
+          "imitation": 0.009235857054591179,
+          "rejected_by": [
+            "kl"
+          ]
+        }
+      ],
+      "rejection_counts": {
+        "kl": 17,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "policy_loss": -0.12569169700145721,
+      "ppo_surrogate_loss": -0.12678609788417816,
+      "imitation_loss": 0.010944045148789883,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.019984977319836617,
+      "value_mse": 1.0590565204620361,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.11637315899133682,
+          "initial_objective": 0.0009219237836077809,
+          "kl": 0.016482148319482803,
+          "imitation": 0.010703402571380138,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.1455281674861908,
+          "initial_objective": -0.11637315899133682,
+          "kl": 0.055213477462530136,
+          "imitation": 0.012420615181326866,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.1374903917312622,
+          "initial_objective": -0.11637315899133682,
+          "kl": 0.03184087947010994,
+          "imitation": 0.011533237062394619,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.25,
+          "objective": -0.12961997091770172,
+          "initial_objective": -0.11637315899133682,
+          "kl": 0.02318570949137211,
+          "imitation": 0.01111127994954586,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.125,
+          "objective": -0.12390055507421494,
+          "initial_objective": -0.11637315899133682,
+          "kl": 0.019593197852373123,
+          "imitation": 0.010905600152909756,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.14439713954925537,
+          "initial_objective": -0.12390055507421494,
+          "kl": 0.06426285207271576,
+          "imitation": 0.012715849094092846,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.14308449625968933,
+          "initial_objective": -0.12390055507421494,
+          "kl": 0.03521605208516121,
+          "imitation": 0.011766227893531322,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.136793315410614,
+          "initial_objective": -0.12390055507421494,
+          "kl": 0.02577575482428074,
+          "imitation": 0.011325071565806866,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.125,
+          "objective": -0.13143306970596313,
+          "initial_objective": -0.12390055507421494,
+          "kl": 0.022283295169472694,
+          "imitation": 0.01111266016960144,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.0625,
+          "objective": -0.12805423140525818,
+          "initial_objective": -0.12390055507421494,
+          "kl": 0.020838744938373566,
+          "imitation": 0.01100846566259861,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.03125,
+          "objective": -0.12610425055027008,
+          "initial_objective": -0.12390055507421494,
+          "kl": 0.020191149786114693,
+          "imitation": 0.010956867597997189,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.015625,
+          "objective": -0.12502306699752808,
+          "initial_objective": -0.12390055507421494,
+          "kl": 0.019885962828993797,
+          "imitation": 0.010931192897260189,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.13310687243938446,
+          "initial_objective": -0.12502306699752808,
+          "kl": 0.07586947083473206,
+          "imitation": 0.012846734374761581,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.14182819426059723,
+          "initial_objective": -0.12502306699752808,
+          "kl": 0.0367470346391201,
+          "imitation": 0.01181959081441164,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.13868984580039978,
+          "initial_objective": -0.12502306699752808,
+          "kl": 0.02561737596988678,
+          "imitation": 0.011358516290783882,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.125,
+          "objective": -0.13344311714172363,
+          "initial_objective": -0.12502306699752808,
+          "kl": 0.02208709344267845,
+          "imitation": 0.011140694841742516,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0625,
+          "objective": -0.12973220646381378,
+          "initial_objective": -0.12502306699752808,
+          "kl": 0.02082170359790325,
+          "imitation": 0.011034908704459667,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.03125,
+          "objective": -0.12753349542617798,
+          "initial_objective": -0.12502306699752808,
+          "kl": 0.020312782377004623,
+          "imitation": 0.010982794687151909,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.015625,
+          "objective": -0.12633411586284637,
+          "initial_objective": -0.12502306699752808,
+          "kl": 0.020089149475097656,
+          "imitation": 0.010956929065287113,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0078125,
+          "objective": -0.12569169700145721,
+          "initial_objective": -0.12502306699752808,
+          "kl": 0.019984977319836617,
+          "imitation": 0.010944045148789883,
+          "rejected_by": []
+        }
+      ],
+      "rejection_counts": {
+        "kl": 16,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    },
+    {
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "policy_loss": -0.08905237913131714,
+      "ppo_surrogate_loss": -0.0902734100818634,
+      "imitation_loss": 0.012210276909172535,
+      "imitation_coefficient": 0.1,
+      "measured_kl": 0.019996119663119316,
+      "value_mse": 1.0126380920410156,
+      "candidate_tests": [
+        {
+          "epoch": 0,
+          "scale": 1.0,
+          "objective": -0.07846596837043762,
+          "initial_objective": 0.001084661460481584,
+          "kl": 0.04098846763372421,
+          "imitation": 0.01272216159850359,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 0,
+          "scale": 0.5,
+          "objective": -0.0694323405623436,
+          "initial_objective": 0.001084661460481584,
+          "kl": 0.010035666637122631,
+          "imitation": 0.011719994246959686,
+          "rejected_by": []
+        },
+        {
+          "epoch": 1,
+          "scale": 1.0,
+          "objective": -0.0993943139910698,
+          "initial_objective": -0.0694323405623436,
+          "kl": 0.06926699727773666,
+          "imitation": 0.0136669697239995,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.5,
+          "objective": -0.0952165424823761,
+          "initial_objective": -0.0694323405623436,
+          "kl": 0.03241690620779991,
+          "imitation": 0.012647136114537716,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 1,
+          "scale": 0.25,
+          "objective": -0.08673947304487228,
+          "initial_objective": -0.0694323405623436,
+          "kl": 0.01946418546140194,
+          "imitation": 0.012172241695225239,
+          "rejected_by": []
+        },
+        {
+          "epoch": 2,
+          "scale": 1.0,
+          "objective": -0.1221356987953186,
+          "initial_objective": -0.08673947304487228,
+          "kl": 0.06966608762741089,
+          "imitation": 0.01398711372166872,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.5,
+          "objective": -0.1129985973238945,
+          "initial_objective": -0.08673947304487228,
+          "kl": 0.038700707256793976,
+          "imitation": 0.013042395934462547,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.25,
+          "objective": -0.10347916930913925,
+          "initial_objective": -0.08673947304487228,
+          "kl": 0.027659820392727852,
+          "imitation": 0.01259823702275753,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.125,
+          "objective": -0.09646888077259064,
+          "initial_objective": -0.08673947304487228,
+          "kl": 0.023211678490042686,
+          "imitation": 0.012382998131215572,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.0625,
+          "objective": -0.09191596508026123,
+          "initial_objective": -0.08673947304487228,
+          "kl": 0.021250998601317406,
+          "imitation": 0.01227706391364336,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.03125,
+          "objective": -0.08944792300462723,
+          "initial_objective": -0.08673947304487228,
+          "kl": 0.020335933193564415,
+          "imitation": 0.012224514968693256,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 2,
+          "scale": 0.015625,
+          "objective": -0.08813203126192093,
+          "initial_objective": -0.08673947304487228,
+          "kl": 0.01989467442035675,
+          "imitation": 0.012198342941701412,
+          "rejected_by": []
+        },
+        {
+          "epoch": 3,
+          "scale": 1.0,
+          "objective": -0.12907975912094116,
+          "initial_objective": -0.08813203126192093,
+          "kl": 0.06386294215917587,
+          "imitation": 0.013909571804106236,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.5,
+          "objective": -0.12198414653539658,
+          "initial_objective": -0.08813203126192093,
+          "kl": 0.033883512020111084,
+          "imitation": 0.013006707653403282,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.25,
+          "objective": -0.10971201211214066,
+          "initial_objective": -0.08813203126192093,
+          "kl": 0.024962538853287697,
+          "imitation": 0.012591103091835976,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.125,
+          "objective": -0.1010243371129036,
+          "initial_objective": -0.08813203126192093,
+          "kl": 0.02195585146546364,
+          "imitation": 0.012391915544867516,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0625,
+          "objective": -0.09502831846475601,
+          "initial_objective": -0.08813203126192093,
+          "kl": 0.020808152854442596,
+          "imitation": 0.012294434010982513,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.03125,
+          "objective": -0.09169182181358337,
+          "initial_objective": -0.08813203126192093,
+          "kl": 0.02032230980694294,
+          "imitation": 0.012246214784681797,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.015625,
+          "objective": -0.08995608985424042,
+          "initial_objective": -0.08813203126192093,
+          "kl": 0.020101189613342285,
+          "imitation": 0.012222236953675747,
+          "rejected_by": [
+            "kl"
+          ]
+        },
+        {
+          "epoch": 3,
+          "scale": 0.0078125,
+          "objective": -0.08905237913131714,
+          "initial_objective": -0.08813203126192093,
+          "kl": 0.019996119663119316,
+          "imitation": 0.012210276909172535,
+          "rejected_by": []
+        }
+      ],
+      "rejection_counts": {
+        "kl": 16,
+        "objective": 0,
+        "nonfinite": 0
+      },
+      "hard_imitation_ceiling": false
+    }
+  ]
+}

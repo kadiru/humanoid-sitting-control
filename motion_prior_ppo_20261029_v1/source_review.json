@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "review": "Single-owner separate static audit plus source inspection; no additional agent.",
+  "unchanged_independent_physical_predicates": true,
+  "unchanged_action_decoder": true,
+  "unchanged_live_physical_step_and_success_prefix": true,
+  "new_reward_uses_bounded_potential_with_zero_terminal": true,
+  "hard_imitation_ceiling_removed": true,
+  "no_privileged_state_or_case_identity_in_motion_selection": true,
+  "library_limits": "64 demonstrated initial sensor signatures; near-duplicate signatures can have different recorded motions. Full-rollout and selection evidence required; no new-object generalization claimed.",
+  "new_gpu_launches_serial_and4090only": true,
+  "physical_success_requires_actual_audited_rollouts": true,
+  "source_hashes": {
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/test_construction.py": "a76befedc6cc6f293eb22443d2749549a05ab6e289345da359faa7faacfacec8",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/prepare.py": "831974b4ef0f99e5c2170ea44852057b7849a918b5dfd83c20cedb6c5b09eabf",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/owner.py": "e3a708e71895be936a4a5334079e1515fc71ea7bcd2e572cf68f407cfd41eb10",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/common.py": "60894f7650dbb1982c1dc3fc5de28dc674fc0b386953ef9f8cf64ff625e81bc5",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/rewards.py": "079f269b5cac1faa270fd1c6e92d807b12c8c5ab0a9e83a0ad61a701d6ae97cb",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/render_depth.py": "1393d2fe6b98807b2051f9fe9de456731796e63a26da0595fd6f3522b9762a91",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/run_training.py": "6f674e3ac0ae6078f0bb5a4efc2c6ee1552b417ad73429133ad2e03f19d22c25",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/policy.py": "404c3d70fdc82b6a9224993b2b8ca87d4a10f8a74d9fc5bed8a364c278c7d1f6",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/validate_rewards.py": "35723ed06faacd35d86b444a065e5917359b221b0478d129115be84120a134f4",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/source_review.py": "700dbc70eae2b7ea66ba6d3650d6f1b6d9d344f94c45456cc2ae5fc89760efe6",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/body_support_probe.py": "dd78d313fa76554e3a29bab88452b9a5ddaf325684d31b4b8509b6d755192482",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/environment.py": "1c0bfdf6c6fe40c6cc81b2dc52424b84556df66b957b4e355c060eaaac5eb231",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit_support.py": "844791139dd77fb36288ab0d4e24dfb3f281cb4734c31dfc1fb94698445a51d4",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/depth_check.py": "b52e38e95b9a04c02d39ae9ab15a11ffc3b7d9d207a288d5ae302d02a9db624b"
+  }
+}
