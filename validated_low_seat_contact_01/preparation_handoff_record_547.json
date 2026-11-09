@@ -1,0 +1,370 @@
+{
+  "utc": "2026-10-19T03:46:51.144114+00:00",
+  "scope": "Preserve546/547 preparation only; sealed545 and actual path remain unchanged.",
+  "preparation_only": true,
+  "new_closure": false,
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_545.json",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_545.json",
+      "files": 12118,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_545.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 12167,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/box_support_evidence_preservation_547.json",
+  "manifest_sha256": "b61f3bf8193856189400b12530a98f89361594dc724be8aa729795680400a53d",
+  "workers": [],
+  "actual_exits": {
+    "box_support_compile_exit_546.json": {
+      "actual_exit": 0,
+      "observation": "9aed62",
+      "utc": "2026-10-19T03:41:39.687320+00:00",
+      "scope": "four new546/547 sources compiled; no scientific execution"
+    },
+    "box_support_freeze_exit_546.json": {
+      "actual_exit": 0,
+      "observation": "777828",
+      "session": 29433,
+      "utc": "2026-10-19T03:43:02.079313+00:00"
+    },
+    "box_support_preparation_exit_546.json": {
+      "utc": "2026-10-19T03:43:31.918884+00:00",
+      "actual_exit": 0,
+      "observation": "498b2c",
+      "session": 47210
+    },
+    "box_support_audit_exit_547.json": {
+      "actual_exit": 0,
+      "observation": "283272",
+      "session": 53002,
+      "utc": "2026-10-19T03:44:10.922869+00:00"
+    },
+    "box_support_index_exit_547.json": {
+      "actual_exit": 0,
+      "observation": "c710d8",
+      "utc": "2026-10-19T03:44:41.949081+00:00",
+      "scope": "saved-result indexing only"
+    },
+    "box_support_preservation_compile_exit_547.json": {
+      "utc": "2026-10-19T03:43:31.918971+00:00",
+      "actual_exit": 0,
+      "observation": "9cece8",
+      "scope": "saved-only index and preservation writer compiled"
+    }
+  },
+  "preparation": {
+    "utc": "2026-10-19T03:43:18.272446+00:00",
+    "passed": true,
+    "preparation_only": true,
+    "specification": {
+      "scope": "NEW one-pass exact multirow box-support implication on immutable516 ORIGINAL representative LPs, including their original scalar. All78791 columns retained. Preparation only, no optimizer/candidate/path.",
+      "distinction": "Unlike516 positive-ray grouping or536 command-forest paths, a mixed target row is dominated by a positive conic combination of independent native-coordinate bound premises. No ray regrouping, graph/path, coordinate substitution, epigraph removal, torque elimination or changed solver parameter.",
+      "initialization": "Use only saved original matrix/RHS/cost/bounds/E and original-row IDs. Inherit517 implication provenance by hashes. No old internal/rejected/accepted solver vectors, model/J/root or initial assembly.",
+      "antecedents": "Keep EVERY source row with <=1 stored nonzero explicitly. Each singleton a*x_j<=b supplies exact bound b/a, with its original sign; original finite variable bounds also supply premises. For each side choose the tightest exact endpoint, ties retain the first premise (direct bound before ascending source row). Do not propagate bounds using mixed rows.",
+      "theorem": "For a mixed row a.x<=b and each nonzero a_j, use U_j for a_j>0 and L_j for a_j<0. If every endpoint exists and M=sum a_j*endpoint_j<=b EXACTLY, the row follows. Its conic certificate uses positive a_j/p_j times the chosen singleton p_j*x_j<=q_j, or |a_j| times the signed direct variable bound. The resulting coefficients equal a exactly and RHS equals M. All premises remain explicit; no circular implication.",
+      "converse": "The reduced system is a subset of the source with identical cost/bounds/equalities; implication certificates restore every removed inequality, so the exact-real feasible set and objective are identical over STORED binary64 source coefficients. Native/scalar coordinates need no reconstruction. This does not assert equivalence of floating solver residuals, or any522 rounded projection.",
+      "arithmetic": "Fractions of all stored binary64 coefficients/RHS/endpoints; no tolerances, coefficient thresholds, rounding, row scaling or box expansion. Keep constants/singletons without re-proving old tautologies. Every mixed row gets one decision: exact implied, exact box support insufficient, or missing endpoint untested. Save exact slack for every tested row including negative decisions.",
+      "resource": "ONE preparation of TWO reference systems, each row visited once for bound extraction and once for support. ONE independent audit. Each program has240s wall checks between rows,40GiB address space. No LP iterations, old45s LP deadline extension, small fixtures or adaptive retries. A resource/input failure is terminal; partial artifacts are not certified reductions.",
+      "audit": "Independent code imports no producer. Validate every selected endpoint against its premise and tightness against all unary premises, then construct exact positive conic RHS/coefficients separately for ALL mixed-row decisions. Verify retained CSR/RHS/IDs and unchanged domain/cost/E. No optimizer or repeated517 proof.",
+      "future": "Any future solver needs a complete frozen wrapper/resources/auditor. All returned78791 coordinates unchanged and FULLsource/FULL490 numerical checks at unchanged thresholds before exact original interval eta>0/immutable490 finite encoding. Actual primary defines actual interior ceiling; reference witness ceiling stays illustrative. Changed state/trust/actual ceiling needs fresh valid original assembly/provenance and new implication certificates.",
+      "limits": "No feasibility, convergence, conditioning, deadline-cause, speed, physical support or effort claim. Negative box tests prove only this sufficient implication fails, not global nonredundancy. All physical/filter/runtime/72retention/PPO gates unchanged.",
+      "physical_admission": false,
+      "new_solver": false,
+      "new_candidate": false
+    },
+    "systems": {
+      "primary": {
+        "source_shape": [
+          452522,
+          78791
+        ],
+        "source_nonzeros": 2235285,
+        "reduced_shape": [
+          402487,
+          78791
+        ],
+        "reduced_nonzeros": 2049085,
+        "unary_premises_retained": 196901,
+        "constant_rows_retained": 0,
+        "finite_endpoints": 157582,
+        "selected_row_endpoints": 157580,
+        "selected_direct_endpoints": 2,
+        "mixed_rows_tested": 255621,
+        "proved_removed_rows": 50035,
+        "negative_box_support_tests": 205586,
+        "missing_endpoint_untested": 0,
+        "exact_support_terms": 2038384,
+        "largest_saved_fraction_bits": 1208,
+        "minimum_exact_slack": "-263888173127551839930352523982835088954305046412471785/268848280160375409911457135842143842418087165952",
+        "maximum_exact_slack": "14794715936033301208487240614894344754125915173145/2117543017323921791639647859639431792030646272",
+        "all_premise_rows_retained": true,
+        "native_variables_removed": 0,
+        "scalar_variables_removed": 0,
+        "source_coefficients_changed": false
+      },
+      "witness": {
+        "source_shape": [
+          618101,
+          78791
+        ],
+        "source_nonzeros": 2380700,
+        "reduced_shape": [
+          568283,
+          78791
+        ],
+        "reduced_nonzeros": 2236454,
+        "unary_premises_retained": 196900,
+        "constant_rows_retained": 0,
+        "finite_endpoints": 157582,
+        "selected_row_endpoints": 157580,
+        "selected_direct_endpoints": 2,
+        "mixed_rows_tested": 421201,
+        "proved_removed_rows": 49818,
+        "negative_box_support_tests": 371383,
+        "missing_endpoint_untested": 0,
+        "exact_support_terms": 2183800,
+        "largest_saved_fraction_bits": 1174,
+        "minimum_exact_slack": "-1055552586093985761711182356932206025013126044602380859/1075393120641501639645828543368575369672348663808",
+        "maximum_exact_slack": "14794925478871774582129526692936616714181347478297/2117543017323921791639647859639431792030646272",
+        "all_premise_rows_retained": true,
+        "native_variables_removed": 0,
+        "scalar_variables_removed": 0,
+        "source_coefficients_changed": false
+      }
+    },
+    "elapsed_s": 15.60912236594595,
+    "lp_calls": 0,
+    "small_examples": 0,
+    "linear_solves": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "new_solver": false,
+    "new_candidate": false,
+    "physical_admission": false
+  },
+  "independent_audit": {
+    "utc": "2026-10-19T03:43:56.029891+00:00",
+    "passed": true,
+    "scope": "Independent positive-conic coefficient/RHS certificates and ALL negative decisions; no producer import.",
+    "systems": {
+      "primary": {
+        "source_rows": 452522,
+        "retained_rows": 402487,
+        "source_nonzeros": 2235285,
+        "retained_nonzeros": 2049085,
+        "positive_conic_certificates": 50035,
+        "negative_sufficient_tests": 205586,
+        "missing_endpoint_untested": 0,
+        "exact_conic_coefficient_products": 2038384,
+        "finite_bound_premises": 157582,
+        "all_unary_premises_explicit": true,
+        "all_decisions_verified": true,
+        "retained_coefficient_rhs_copy_errors": 0,
+        "cost_bounds_equalities_unchanged": true,
+        "variables_removed": 0
+      },
+      "witness": {
+        "source_rows": 618101,
+        "retained_rows": 568283,
+        "source_nonzeros": 2380700,
+        "retained_nonzeros": 2236454,
+        "positive_conic_certificates": 49818,
+        "negative_sufficient_tests": 371383,
+        "missing_endpoint_untested": 0,
+        "exact_conic_coefficient_products": 2183800,
+        "finite_bound_premises": 157582,
+        "all_unary_premises_explicit": true,
+        "all_decisions_verified": true,
+        "retained_coefficient_rhs_copy_errors": 0,
+        "cost_bounds_equalities_unchanged": true,
+        "variables_removed": 0
+      }
+    },
+    "elapsed_s": 23.547020219964907,
+    "prior517_proof_inherited_not_repeated": true,
+    "production_imported": false,
+    "lp_calls": 0,
+    "small_examples": 0,
+    "linear_solves": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "new_solver": false,
+    "new_candidate": false,
+    "physical_admission": false,
+    "limits": "Exact-real source redundancy only. Negative tests are not nonredundancy/infeasibility certificates. No numerical witness, performance claim or actual-model/physical admission."
+  },
+  "local_verification": {
+    "utc": "2026-10-19T03:44:56.125227+00:00",
+    "original_manifests": [
+      {
+        "manifest": "box_support_preparation_546/SHA256.json",
+        "entries": 19,
+        "passed": true
+      },
+      {
+        "manifest": "box_support_audit_547/SHA256.json",
+        "entries": 3,
+        "passed": true
+      }
+    ],
+    "all_hashes_verified": true,
+    "entries": 22,
+    "scope": "Byte hashes of original546/547 manifests only; no row proof, matrix arithmetic, graph, metric, LP, model or audit replay",
+    "new_html": false,
+    "new_video": false
+  },
+  "saved_scope": {
+    "utc": "2026-10-19T03:44:11.432438+00:00",
+    "scope": "Saved-only exact box-support preparation index; no arithmetic or solver replay.",
+    "systems": {
+      "primary": {
+        "source_shape": [
+          452522,
+          78791
+        ],
+        "source_nonzeros": 2235285,
+        "reduced_shape": [
+          402487,
+          78791
+        ],
+        "reduced_nonzeros": 2049085,
+        "unary_premises_retained": 196901,
+        "constant_rows_retained": 0,
+        "finite_endpoints": 157582,
+        "selected_row_endpoints": 157580,
+        "selected_direct_endpoints": 2,
+        "mixed_rows_tested": 255621,
+        "proved_removed_rows": 50035,
+        "negative_box_support_tests": 205586,
+        "missing_endpoint_untested": 0,
+        "exact_support_terms": 2038384,
+        "largest_saved_fraction_bits": 1208,
+        "minimum_exact_slack": "-263888173127551839930352523982835088954305046412471785/268848280160375409911457135842143842418087165952",
+        "maximum_exact_slack": "14794715936033301208487240614894344754125915173145/2117543017323921791639647859639431792030646272",
+        "all_premise_rows_retained": true,
+        "native_variables_removed": 0,
+        "scalar_variables_removed": 0,
+        "source_coefficients_changed": false
+      },
+      "witness": {
+        "source_shape": [
+          618101,
+          78791
+        ],
+        "source_nonzeros": 2380700,
+        "reduced_shape": [
+          568283,
+          78791
+        ],
+        "reduced_nonzeros": 2236454,
+        "unary_premises_retained": 196900,
+        "constant_rows_retained": 0,
+        "finite_endpoints": 157582,
+        "selected_row_endpoints": 157580,
+        "selected_direct_endpoints": 2,
+        "mixed_rows_tested": 421201,
+        "proved_removed_rows": 49818,
+        "negative_box_support_tests": 371383,
+        "missing_endpoint_untested": 0,
+        "exact_support_terms": 2183800,
+        "largest_saved_fraction_bits": 1174,
+        "minimum_exact_slack": "-1055552586093985761711182356932206025013126044602380859/1075393120641501639645828543368575369672348663808",
+        "maximum_exact_slack": "14794925478871774582129526692936616714181347478297/2117543017323921791639647859639431792030646272",
+        "all_premise_rows_retained": true,
+        "native_variables_removed": 0,
+        "scalar_variables_removed": 0,
+        "source_coefficients_changed": false
+      }
+    },
+    "audit_systems": {
+      "primary": {
+        "source_rows": 452522,
+        "retained_rows": 402487,
+        "source_nonzeros": 2235285,
+        "retained_nonzeros": 2049085,
+        "positive_conic_certificates": 50035,
+        "negative_sufficient_tests": 205586,
+        "missing_endpoint_untested": 0,
+        "exact_conic_coefficient_products": 2038384,
+        "finite_bound_premises": 157582,
+        "all_unary_premises_explicit": true,
+        "all_decisions_verified": true,
+        "retained_coefficient_rhs_copy_errors": 0,
+        "cost_bounds_equalities_unchanged": true,
+        "variables_removed": 0
+      },
+      "witness": {
+        "source_rows": 618101,
+        "retained_rows": 568283,
+        "source_nonzeros": 2380700,
+        "retained_nonzeros": 2236454,
+        "positive_conic_certificates": 49818,
+        "negative_sufficient_tests": 371383,
+        "missing_endpoint_untested": 0,
+        "exact_conic_coefficient_products": 2183800,
+        "finite_bound_premises": 157582,
+        "all_unary_premises_explicit": true,
+        "all_decisions_verified": true,
+        "retained_coefficient_rhs_copy_errors": 0,
+        "cost_bounds_equalities_unchanged": true,
+        "variables_removed": 0
+      }
+    },
+    "new_exact_box_systems": 2,
+    "new_mixed_rows_tested": 676822,
+    "new_proved_removed_rows": 99853,
+    "new_negative_box_support_tests": 576969,
+    "missing_endpoint_untested": 0,
+    "new_exact_support_terms": 4222184,
+    "native_variables_removed": 0,
+    "scalar_variables_removed": 0,
+    "old_scientific_calculations_repeated": false,
+    "lp_calls": 0,
+    "small_examples": 0,
+    "linear_solves": 0,
+    "gram_factors": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "new_solver": false,
+    "new_whole_path_wrapper": false,
+    "new_robot_candidate": false,
+    "new_actual_path": false,
+    "physical_admission": false,
+    "task_complete": false,
+    "limits": "Only exact-real implications of unchanged source inequalities. All unary premises retained; no row scaling, coordinate or box change. No numerical-solver performance or feasibility evidence; old542 timed-out internals remain unusable."
+  },
+  "old_scientific_calculations_repeated": false,
+  "execution_recovery": false,
+  "new_complete_numerical_algorithm": false,
+  "new_solver_exists": false,
+  "new_complete_path": false,
+  "lp_calls": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}
