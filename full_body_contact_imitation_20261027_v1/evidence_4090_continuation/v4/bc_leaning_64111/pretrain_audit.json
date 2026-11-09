@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "seed": 64111,
+  "steps": 2000,
+  "batch_size": 1024,
+  "initial": {
+    "mse": 0.021779032424092293,
+    "moving_mse": 0.13910983502864838,
+    "moving_channels": 14128
+  },
+  "final": {
+    "mse": 0.00025376013945788145,
+    "moving_mse": 0.000984444166533649,
+    "moving_channels": 14128
+  },
+  "training_cases": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    16
+  ],
+  "validation_cases": [
+    0,
+    5,
+    10,
+    17
+  ],
+  "validation_is_development_only": true,
+  "positive_cases": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    16,
+    17
+  ],
+  "fresh_holdout_used": false,
+  "bank_sha256": "96136f7732eca050bc590fc7eb7538eee189536d0e3d440e5ebd992e18f2264c",
+  "checkpoint_sha256": "0027b6ef32c9f2c4d38c78746a77b61dd55067689bd35ebd6a276f601ff970a6"
+}

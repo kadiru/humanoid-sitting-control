@@ -1,0 +1,123 @@
+{
+  "utc": "2026-10-28T02:57:31.414446+00:00",
+  "status": "IMPLEMENTED_AND_QUEUED_WAITING_FOR_COMPARISON",
+  "owner_pid": 122717,
+  "remote_source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1",
+  "remote_output": "/data/humanoid-sitting-perception/low_seat_contact_01/full_body_contact_imitation_v1",
+  "cpu_tests_passed": true,
+  "saved_72_trajectory_reward_components_passed": true,
+  "full_rate_demo_and_simulator_validation": "PENDING_AFTER_COMPARISON",
+  "new_simulator_processes_started": 0,
+  "new_ppo_updates": 0,
+  "synthetic_cpu_weight_update_verified": true,
+  "main_training": {
+    "updates_per_seed_task": 256,
+    "seeds": [
+      64111,
+      64117
+    ],
+    "tasks": [
+      "sitting",
+      "rear_trunk_leaning"
+    ],
+    "same_trainer_separate_policies": true
+  },
+  "evaluation": {
+    "sitting_cases": 72,
+    "leaning_cases": 18,
+    "full_standing_start_seconds": 20,
+    "checkpoints": [
+      0,
+      128,
+      256
+    ],
+    "success_criteria_unchanged": true,
+    "holdout_opened": false,
+    "automatic_promotion": false
+  },
+  "existing_comparison": {
+    "owner_pid": 77324,
+    "gpu0_python_pid": 114096,
+    "gpu1_python_pid": 117131,
+    "unchanged": true,
+    "latest_completed_results": [
+      {
+        "arm": "revised",
+        "seed": 63117,
+        "updates": 64,
+        "clean": 64,
+        "stable": 70,
+        "slipping": 8,
+        "lost_protected": [
+          [
+            "known_recent",
+            20
+          ],
+          [
+            "known_recent",
+            21
+          ]
+        ],
+        "repaired_old_failures": [
+          [
+            "known_transfer",
+            4
+          ],
+          [
+            "known_transfer",
+            5
+          ]
+        ]
+      },
+      {
+        "arm": "revised",
+        "seed": 63111,
+        "updates": 128,
+        "clean": 62,
+        "stable": 70,
+        "slipping": 10,
+        "lost_protected": [
+          [
+            "known_old",
+            22
+          ],
+          [
+            "known_old",
+            23
+          ],
+          [
+            "known_recent",
+            22
+          ],
+          [
+            "known_recent",
+            23
+          ]
+        ],
+        "repaired_old_failures": [
+          [
+            "known_transfer",
+            4
+          ],
+          [
+            "known_transfer",
+            5
+          ]
+        ]
+      }
+    ]
+  },
+  "accepted_baseline": "Best09 still64/72. Two original failure cases have succeeded in unpromoted revised-reward evaluations, accompanied by regressions; no accepted regression-free repair.",
+  "protocol": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_v1/protocol.json",
+  "source_review": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_v1/source_review.json",
+  "cpu_tests": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_v1/cpu_tests.json",
+  "freeze": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_v1/freeze.json",
+  "launch_receipt": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/queue_receipt.json",
+  "verified_queue_status": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/queue_status_at_launch.json",
+  "local_remote_source_bindings_checked": 25,
+  "recurring_automation": "Remains deleted; this is one finite dependency process",
+  "paper_summaries": {
+    "PhysHSI": "Teach natural scene interactions using example movements plus task rewards.",
+    "WoCoCo": "Learn whole-body skills through a sequence of contacts; does not require demonstrations."
+  }
+}

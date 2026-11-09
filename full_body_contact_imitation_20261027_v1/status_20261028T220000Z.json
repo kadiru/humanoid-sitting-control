@@ -1,0 +1,312 @@
+{
+  "utc": "2026-10-28T22:00:00.845252+00:00",
+  "status": "MAIN_PPO_RUNNING_4090_WEIGHTS_VERIFIED",
+  "owner_pid": 373085,
+  "remote_source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_step_v5",
+  "remote_output": "/home/kadir/humanoid-sitting/outputs/full_body_contact_imitation_v5",
+  "recorder_fix": "Recorder hook deferred until first public control decision after concrete constructor; all three real sitting captures saved1000samples each.",
+  "demonstration_reset_cloning_reward_checks": {
+    "sitting": {
+      "reset_passed": true,
+      "valid_by_stage": [
+        72,
+        64,
+        64,
+        64
+      ],
+      "reward_audit_passed": true,
+      "teacher_clean": 64,
+      "teacher_stable": 70,
+      "cloning_seeds_passed": [
+        64111,
+        64117
+      ]
+    },
+    "leaning": {
+      "reset_passed": true,
+      "valid_by_stage": [
+        18,
+        16,
+        16,
+        16
+      ],
+      "reward_audit_passed": true,
+      "teacher_clean": 16,
+      "teacher_stable": 18,
+      "cloning_seeds_passed": [
+        64111,
+        64117
+      ]
+    }
+  },
+  "teacher_sitting_matches_all64_protected_identities": true,
+  "main_run": "sitting_seed64111",
+  "main_updates_observed": 2,
+  "main_first_update_weight_audit": {
+    "gpu": 0,
+    "passed": true,
+    "checkpoint": "first_update.pt",
+    "changes_l2": {
+      "actor": 0.01675897041389261,
+      "critic": 0.2778230918005652
+    },
+    "updates": 1,
+    "actor_steps": 4,
+    "critic_steps": 4,
+    "checkpoint_sha256": "c79cbbf9a69dd016b427f343f1b83ca413d014e6c98655691e1724ea1f2d688e"
+  },
+  "smoke_runs": {
+    "sitting": {
+      "passed": true,
+      "checkpoint": "final.pt",
+      "changes_l2": {
+        "actor": 0.03817096232822024,
+        "critic": 0.5071231613037438
+      },
+      "updates": 2,
+      "actor_steps": 8,
+      "critic_steps": 8,
+      "checkpoint_sha256": "6e83516b6800a247bfddad8a9a7b22632c99fb8dea37943beb64ea2030e354c3"
+    },
+    "leaning": {
+      "passed": true,
+      "checkpoint": "final.pt",
+      "changes_l2": {
+        "actor": 0.04553980032214835,
+        "critic": 0.49056469769975974
+      },
+      "updates": 2,
+      "actor_steps": 8,
+      "critic_steps": 8,
+      "checkpoint_sha256": "5c2d44bcbd3df5d9b17348e964fd34200bf84ca7c33d09120a65ea13d9e5c6f0"
+    }
+  },
+  "optimizer_correction": {
+    "reason": "First cloned-policy Adam proposal exceeded existing KL guard:0.35151392221450806>0.02; actor restored and smoke stopped, critic took4steps.",
+    "proposal": "Same Adam1e-4 gradient proposal; test parameter interpolation at alpha=1,1/2,...,1/128, first finite candidate with KL<=0.02 and nonincreasing clipped surrogate loss accepted; otherwise restore parameters AND Adam state and stop epoch.",
+    "candidate_cap_per_epoch": 8,
+    "maximum_candidate_tests_per_update": 32,
+    "kl_guard": 0.02,
+    "objective_loss_guard": "candidate_loss<=preproposal_loss; no tolerance relaxation",
+    "accepted_adam_state": "One proposed gradient/moment update retained once; alpha changes effective step size only. If no candidate accepted, restore optimizer state.",
+    "no_parameter_sweep": true,
+    "prior_smoke_preserved": true,
+    "reward_action_physical_gates_changed": false
+  },
+  "prior_failure": "v4smoke: first actor proposal KL0.35151392221450806 exceeded0.02 and was rolled back; actor0steps,critic4steps. Original failure preserved. Diagnosed bounded-step continuationv5; no guard relaxation.",
+  "starting_policy_evaluation": {
+    "seed": 64111,
+    "ppo_updates": 0,
+    "clean": 0,
+    "stable": 0,
+    "cases": 72,
+    "repairs": [],
+    "regressions": [
+      "known_old/0",
+      "known_old/1",
+      "known_old/10",
+      "known_old/11",
+      "known_old/12",
+      "known_old/13",
+      "known_old/14",
+      "known_old/15",
+      "known_old/16",
+      "known_old/17",
+      "known_old/18",
+      "known_old/19",
+      "known_old/2",
+      "known_old/20",
+      "known_old/21",
+      "known_old/22",
+      "known_old/23",
+      "known_old/3",
+      "known_old/8",
+      "known_old/9",
+      "known_recent/0",
+      "known_recent/1",
+      "known_recent/10",
+      "known_recent/11",
+      "known_recent/12",
+      "known_recent/13",
+      "known_recent/14",
+      "known_recent/15",
+      "known_recent/16",
+      "known_recent/17",
+      "known_recent/18",
+      "known_recent/19",
+      "known_recent/2",
+      "known_recent/20",
+      "known_recent/21",
+      "known_recent/22",
+      "known_recent/23",
+      "known_recent/3",
+      "known_recent/6",
+      "known_recent/7",
+      "known_recent/8",
+      "known_recent/9",
+      "known_transfer/0",
+      "known_transfer/1",
+      "known_transfer/10",
+      "known_transfer/11",
+      "known_transfer/12",
+      "known_transfer/13",
+      "known_transfer/14",
+      "known_transfer/15",
+      "known_transfer/16",
+      "known_transfer/17",
+      "known_transfer/18",
+      "known_transfer/19",
+      "known_transfer/2",
+      "known_transfer/20",
+      "known_transfer/21",
+      "known_transfer/22",
+      "known_transfer/23",
+      "known_transfer/3",
+      "known_transfer/6",
+      "known_transfer/7",
+      "known_transfer/8",
+      "known_transfer/9"
+    ],
+    "classification": "Demonstration-cloned policy full20s standing rollout BEFORE main PPO; not promoted"
+  },
+  "queued_training": {
+    "gpu": 0,
+    "seeds": [
+      64111,
+      64117
+    ],
+    "tasks": [
+      "sitting",
+      "leaning"
+    ],
+    "updates_per_task_seed": 256,
+    "sequential": true
+  },
+  "future_evaluation": {
+    "full_standing_seconds": 20,
+    "sitting_cases": 72,
+    "leaning_cases": 18,
+    "main_update_milestones": [
+      128,
+      256
+    ],
+    "criteria_unchanged": true
+  },
+  "accepted_baseline": "best0964/72; all8original failures unresolved; accepted repairs0",
+  "physical_repair_claimed": false,
+  "accepted_policy_changed": false,
+  "fresh_holdout_opened": false,
+  "recurring_automation": false,
+  "latest_worker_snapshot": {
+    "utc": "2026-10-28T22:00:00Z",
+    "status": {
+      "state": "training_and_evaluating",
+      "pid": 373085,
+      "active": {
+        "0": {
+          "pid": 381632,
+          "label": "train_sitting_64111"
+        }
+      },
+      "completed": [
+        "inherited_passed_v4_validation",
+        "smoke_sitting",
+        "smoke_leaning",
+        "eval_sitting_64111_000",
+        "eval_sitting_64111_000_audit"
+      ],
+      "failures": [],
+      "seconds": 496.2337656021118,
+      "training_started": true,
+      "comparison_untouched": true,
+      "recurring_automation": false,
+      "physical_repair_claimed": false
+    },
+    "logs": {
+      "train_sitting_64111": ", \"complete_episodes\": 0, \"curriculum_slot\": 3}\n{\"actor_steps\": 4, \"rejected_kl_steps\": 0, \"critic_steps\": 4, \"value_mse\": 39.31528091430664, \"policy_loss\": -0.015232507139444351, \"measured_kl\": 0.017984531819820404, \"candidate_tests\": 5, \"accepted_step_scales\": [1.0, 1.0, 1.0, 0.5], \"update\": 7, \"mean_rollout_reward\": -0.012494191527366638, \"live_samples\": 1848, \"seconds\": 127.85621174200787, \"active_transitions\": 32256, \"warmup_transitions\": 3600, \"complete_episodes\": 0, \"curriculum_slot\": 3}\n"
+    },
+    "gpus": "0, NVIDIA GeForce RTX 4090, 18 %, 54, 4810 MiB, 88.97 W\n1, NVIDIA GeForce RTX 4070, 34 %, 45, 3724 MiB, 52.89 W\n",
+    "gpu_processes": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 381637, /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python\nGPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 360903, /workspace/venvs/isaacteleop/bin/python\nGPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 361050, /isaac-sim/kit/python/bin/python3\n",
+    "gates": {
+      "smoke_sitting_verified.json": {
+        "gpu": 0,
+        "passed": true,
+        "checkpoint": "first_update.pt",
+        "changes_l2": {
+          "actor": 0.01675897041389261,
+          "critic": 0.2778230918005652
+        },
+        "updates": 1,
+        "actor_steps": 4,
+        "critic_steps": 4,
+        "checkpoint_sha256": "c79cbbf9a69dd016b427f343f1b83ca413d014e6c98655691e1724ea1f2d688e"
+      },
+      "smoke_leaning_verified.json": {
+        "gpu": 0,
+        "passed": true,
+        "checkpoint": "first_update.pt",
+        "changes_l2": {
+          "actor": 0.03253195749466118,
+          "critic": 0.27711121015065904
+        },
+        "updates": 1,
+        "actor_steps": 4,
+        "critic_steps": 4,
+        "checkpoint_sha256": "f38416c4150d6d6da6ea21cc8da5711e564bc4c6402c7dede13226a1b2355e23"
+      },
+      "eval_sitting_64111_000_gpu_verified.json": {
+        "gpu": 0,
+        "pid": 375518,
+        "uuid": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4"
+      },
+      "train_sitting_64111_gpu_verified.json": {
+        "gpu": 0,
+        "pid": 381632,
+        "uuid": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4"
+      },
+      "train_sitting_64111_verified.json": {
+        "gpu": 0,
+        "passed": true,
+        "checkpoint": "first_update.pt",
+        "changes_l2": {
+          "actor": 0.01675897041389261,
+          "critic": 0.2778230918005652
+        },
+        "updates": 1,
+        "actor_steps": 4,
+        "critic_steps": 4,
+        "checkpoint_sha256": "c79cbbf9a69dd016b427f343f1b83ca413d014e6c98655691e1724ea1f2d688e"
+      }
+    },
+    "dataset": null,
+    "validation": {}
+  },
+  "evidence": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/evidence_4090_continuation/manifest.json",
+  "source_review": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_4090_step_v5/source_review.json",
+  "freeze": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_4090_step_v5/freeze.json",
+  "total_resource_accounting": {
+    "teacher_capture_control_transitions": 92250,
+    "reset_validation_control_transitions": 9000,
+    "teacher_replay_control_transitions": 92250,
+    "evaluation_control_transitions": 553500,
+    "main_active_control_transitions": 2949120,
+    "main_warmup_control_transitions_cap": 576000,
+    "smoke_active_control_transitions": 11520,
+    "smoke_warmup_control_transitions_cap": 288000,
+    "physics_substeps_per_control": 4,
+    "behavior_cloning_minibatch_samples": 8192000,
+    "rendering": "Camera every10control steps plus each reset; no added physics; all wall/storage accounted",
+    "cpu_audits": "600s per evaluation/weight audit,900s dataset,1800s per cloning job, all included in48h execution cap",
+    "initial_raw_reset_steps": "1000 initial physics steps per process;32 aggregate processes including failures",
+    "total_control_transitions_cap": 4696698,
+    "simulator_processes": 32,
+    "per_process_initialization_physics_cap": 1000,
+    "total_env_physics_transitions_cap": 21090792,
+    "prior_failed_capture_control_transitions_cap": 116850,
+    "output_accounting": "16GiB total across v1,v2,v3,v4,v5 outputs",
+    "failed_ppo_smoke_control_transitions": 8208,
+    "prior_failed_actor_updates": 0,
+    "prior_critic_steps": 4
+  },
+  "original_execution_deadline_unix": 1793364525.027288
+}

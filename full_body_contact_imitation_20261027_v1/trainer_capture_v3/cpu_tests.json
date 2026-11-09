@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "tests": [
+    "23 independent channels; integrated motion exceeds old residual box; rate and position bounds",
+    "physical/horizon termination cuts both bootstrap and GAE",
+    "independent reward replay; slip severity; legal hold/effort gates; phase schedule; conservative clean-return dominance",
+    "PPO actor/critic and Adam update; rejected KL restores optimizer and weights",
+    "independent full-trial criteria: early slip fails clean; forbidden contact stays latched",
+    "handoff refuses incomplete or stopped comparison"
+  ],
+  "simulator_steps": 0,
+  "training_dataset_used": false,
+  "clean_episode_reward_lower_bound": 299.6,
+  "failed_episode_reward_upper_bound": 184.0
+}

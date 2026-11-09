@@ -1,0 +1,69 @@
+"""Static independent review of recorder and scheduling changes; no simulator."""
+import ast
+from pathlib import Path
+from common import read,write,sha,ROOT
+
+HERE=Path(__file__).resolve().parent
+OLD=ROOT/'experiments/full_body_contact_trainer_capture_v3'
+
+
+def node(path,name):
+    return next(n for n in ast.walk(ast.parse(path.read_text())) if isinstance(n,ast.FunctionDef) and n.name==name)
+
+
+def main():
+    unchanged=['common.py','policy.py','environment.py','rewards.py','pretrain.py',
+               'run_training.py','audit.py','build_dataset.py','test_cpu.py','validate_saved.py',
+               'cpu_tests.json','saved_reward_component_validation.json','protected_sitting_cases.json']
+    for name in unchanged:assert sha(HERE/name)==sha(OLD/name),name
+    # Every statement of the old capture body is retained; only when it runs changes.
+    old=node(OLD/'capture_teacher.py','initialize');new=node(HERE/'capture_teacher.py','attach')
+    assert [ast.dump(n) for n in old.body[1:]]==[ast.dump(n) for n in new.body]
+    for name in ['save_capture','save_before_close']:
+        assert ast.dump(node(HERE/'capture_teacher.py',name))==ast.dump(node(OLD/'capture_teacher.py',name))
+    tests=read(HERE/'attachment_tests.json');assert tests['passed'] and tests['sitting_samples']==1000
+    s=(HERE/'launch_after_comparison.py').read_text()
+    assert 'ThreadPoolExecutor' not in s and 'paired(' not in s
+    assert 'run_supported_gpu1_parallel_v1.sh' not in s
+    assert s.count("assert gpu == 0, '4090_ONLY'")==2
+    assert "if i != 0:continue" in s
+    assert s.count("'--id='+UUIDS[0]")==2
+    for stage in ['prepare','smoke','train']:
+        n=node(HERE/'launch_after_comparison.py',stage)
+        assert ast.dump(n.body[0])==ast.dump(ast.parse('gpu=0').body[0])
+    p=read(HERE/'protocol.json');oldp=read(OLD/'protocol.json')
+    for key in ['seeds','main_updates_per_seed_task','rollout_steps','ppo_epochs','ppo_clip',
+                'actor_learning_rate','critic_learning_rate','latent_std','discount','gae_lambda',
+                'kl_reject','actor','action','initialization','demonstration_admission','curriculum',
+                'evaluation','execution_deadline_unix','training_child_seconds','validation_child_seconds',
+                'max_output_bytes','min_free_bytes','min_available_memory_bytes','max_owned_rss_bytes']:
+        assert p[key]==oldp[key],key
+    r=p['resource_accounting'];assert r['simulator_processes']==26+5
+    assert r['total_control_transitions_cap']==4571640+92250+24*1025
+    assert r['total_env_physics_transitions_cap']==4*r['total_control_transitions_cap']+31*72*1000
+    reuse=read(HERE/'leaning_reuse.json')
+    for name,h in reuse['files'].items():assert sha(Path(reuse['source'])/name)==h
+    m=read(Path(reuse['source'])/'demonstration_capture.json');assert m['samples']==1000 and m['saved_before_simulator_close']
+    # Review all concrete constructors in the frozen teacher import closure.
+    inventory=read(OLD/'input_inventory.json');constructors=[]
+    for f in inventory['imported_scripts']:
+        if '/scripts/run_' not in f:continue
+        for n in ast.walk(ast.parse(Path(f).read_text())):
+            if not isinstance(n,ast.FunctionDef) or n.name!='__init__':continue
+            for c in ast.walk(n):
+                if isinstance(c,ast.Call) and isinstance(c.func,ast.Attribute) and c.func.attr=='step':
+                    assert not (isinstance(c.func.value,ast.Name) and c.func.value.id in ['self','env']),f
+            constructors.append(f)
+    review=dict(passed=True,classification='Source and CPU regression audit; not simulator validation or learning evidence',
+      root_cause='ProgressiveEnv.__init__ restores raw.step in finally, overwriting base-installed recorder',
+      correction='Attach at first public decision after concrete initialization; all capture math identical',
+      unchanged_hashes={name:sha(HERE/name) for name in unchanged},
+      checked_constructor_files=sorted(set(constructors)),gpu=0,other_gpu_untouched=True,
+      preserved_valid_capture=reuse,physical_criteria_unchanged=True,simulator_validation_complete=False,
+      source_files={p.name:sha(p) for p in HERE.glob('*.py')},automatic_retries=0,
+      total_resource_accounting=p['resource_accounting'])
+    write(HERE/'source_review.json',review)
+    print(dict(passed=True,unchanged_modules=len(unchanged),constructor_files=len(set(constructors)),gpu=0))
+
+
+if __name__=='__main__':main()
