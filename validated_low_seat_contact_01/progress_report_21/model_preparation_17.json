@@ -1,0 +1,288 @@
+{
+  "passed": true,
+  "scope": "Six targeted development trials pass nominal model checks; eight-second prefix explicitly replaces ten-second prefix ONLY for these selected approaches. All physical outcomes pending; 36cm/+20deg not repaired.",
+  "source_transforms": [
+    {
+      "old": "low_seat_contact_controller.py",
+      "new": "low_seat_contact_duration_17.py",
+      "old_sha256": "b14886026d552e098f296a362f404bc616ba33daf99de3bee6e1eac21e2fe5c2",
+      "new_sha256": "4916a09b7b7517f248dde82c7180b51b42c6b6f36206b2ef4f75e03ebb90abd6",
+      "replacements": [
+        [
+          "elapsed / 5 * 24",
+          "elapsed / float(getattr(self, \"repair_duration\", [5.]*self.num_envs)[i]) * 24"
+        ],
+        [
+          "*24/5*(u<24)",
+          "*24/float(getattr(self, \"repair_duration\", [5.]*self.num_envs)[i])*(u<24)"
+        ]
+      ]
+    },
+    {
+      "old": "low_seat_load_controller.py",
+      "new": "low_seat_load_duration_17.py",
+      "old_sha256": "510b8644cdb99a3910e1a2f4bdb7f941dcb6a3d3ddb70af0b2092397ed605dcf",
+      "new_sha256": "29ec385b502d8f86de446e2c4e9717ba6bc6564c87809cce82dc6d9a67de5dee",
+      "replacements": [
+        [
+          "import low_seat_contact_controller as landing",
+          "import low_seat_contact_duration_17 as landing"
+        ],
+        [
+          "elapsed/5*24",
+          "elapsed/float(getattr(self, \"repair_duration\", [5.]*self.num_envs)[i])*24"
+        ]
+      ]
+    },
+    {
+      "old": "low_seat_normal_timing_controller.py",
+      "new": "low_seat_normal_duration_17.py",
+      "old_sha256": "de292246267592ac2bcd32fd7f4369e6ae6b8f011252408258b7ca18aca27795",
+      "new_sha256": "b43d0631270ac8d842ab591598f224a2afb8de895e91fed51969b804aa809847",
+      "replacements": [
+        [
+          "import low_seat_load_controller as load",
+          "import low_seat_load_duration_17 as load"
+        ]
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "case": 0,
+      "selected": true,
+      "measured_height_m": 0.3597322243059443,
+      "measured_slope_deg": 15.028388652854725,
+      "screen": {
+        "peak_nominal_rate_rad_s": 0.14851339161396027,
+        "minimum_clearance_m": 0.0064953415118837645,
+        "minimum_gap_m": 0.0010004344748203997,
+        "minimum_near_patch_margin_m": 0.07910685531692621,
+        "endpoint_patch_margin_m": 0.08768633623584318,
+        "minimum_no_seat_cop_margin_m": 0.006894545861044321,
+        "max_foot_position_error_m": 0.00046157986126831865,
+        "max_foot_rotation_error_rad": 1.546157646579726e-06,
+        "goal_ik_error": 1.114260446597488e-11
+      },
+      "first_command_exact": true,
+      "nonleg_reference_fixed": true,
+      "resampled_nominal_rate_rad_s": 0.148514062166214
+    },
+    {
+      "case": 1,
+      "selected": true,
+      "measured_height_m": 0.3597318849596446,
+      "measured_slope_deg": 15.028393986934223,
+      "screen": {
+        "peak_nominal_rate_rad_s": 0.148513525724411,
+        "minimum_clearance_m": 0.006493178159550115,
+        "minimum_gap_m": 0.0010004327324028006,
+        "minimum_near_patch_margin_m": 0.07910688530332144,
+        "endpoint_patch_margin_m": 0.08768632117722064,
+        "minimum_no_seat_cop_margin_m": 0.006894155389149857,
+        "max_foot_position_error_m": 0.0004657270516883892,
+        "max_foot_rotation_error_rad": 1.8820543509826653e-06,
+        "goal_ik_error": 1.1145053237540037e-11
+      },
+      "first_command_exact": true,
+      "nonleg_reference_fixed": true,
+      "resampled_nominal_rate_rad_s": 0.148514062166214
+    },
+    {
+      "case": 2,
+      "selected": false,
+      "measured_height_m": 0.3595906646814365,
+      "measured_slope_deg": 19.997670133203137
+    },
+    {
+      "case": 3,
+      "selected": false,
+      "measured_height_m": 0.3595899507520841,
+      "measured_slope_deg": 19.997669722748196
+    },
+    {
+      "case": 4,
+      "selected": false,
+      "measured_height_m": 0.36977799284912105,
+      "measured_slope_deg": 11.298992444347174
+    },
+    {
+      "case": 5,
+      "selected": false,
+      "measured_height_m": 0.3697793576597128,
+      "measured_slope_deg": 11.299002357411913
+    },
+    {
+      "case": 6,
+      "selected": true,
+      "measured_height_m": 0.36965229171365344,
+      "measured_slope_deg": 16.26900526718967,
+      "screen": {
+        "peak_nominal_rate_rad_s": 0.14539407193660736,
+        "minimum_clearance_m": 0.006342927283699189,
+        "minimum_gap_m": 0.0010004427939847016,
+        "minimum_near_patch_margin_m": 0.07807762668032311,
+        "endpoint_patch_margin_m": 0.086852110037485,
+        "minimum_no_seat_cop_margin_m": 0.006873920629247764,
+        "max_foot_position_error_m": 0.0004363141231675216,
+        "max_foot_rotation_error_rad": 1.7789778519215158e-06,
+        "goal_ik_error": 5.427675803407573e-13
+      },
+      "first_command_exact": true,
+      "nonleg_reference_fixed": true,
+      "resampled_nominal_rate_rad_s": 0.14539432525634766
+    },
+    {
+      "case": 7,
+      "selected": true,
+      "measured_height_m": 0.3696511989225154,
+      "measured_slope_deg": 16.269025935629177,
+      "screen": {
+        "peak_nominal_rate_rad_s": 0.14539432525634766,
+        "minimum_clearance_m": 0.006341641039460602,
+        "minimum_gap_m": 0.0010004426259889732,
+        "minimum_near_patch_margin_m": 0.0780780579860359,
+        "endpoint_patch_margin_m": 0.08685208865101604,
+        "minimum_no_seat_cop_margin_m": 0.0068761506118705865,
+        "max_foot_position_error_m": 0.00043871559014672695,
+        "max_foot_rotation_error_rad": 1.5743665251623867e-06,
+        "goal_ik_error": 5.425501311406631e-13
+      },
+      "first_command_exact": true,
+      "nonleg_reference_fixed": true,
+      "resampled_nominal_rate_rad_s": 0.1453947275876999
+    },
+    {
+      "case": 8,
+      "selected": false,
+      "measured_height_m": 0.36477347926636294,
+      "measured_slope_deg": 12.542520678468895
+    },
+    {
+      "case": 9,
+      "selected": false,
+      "measured_height_m": 0.3647729975758851,
+      "measured_slope_deg": 12.542537968168414
+    },
+    {
+      "case": 10,
+      "selected": true,
+      "measured_height_m": 0.36464179610551717,
+      "measured_slope_deg": 17.51225537872077,
+      "screen": {
+        "peak_nominal_rate_rad_s": 0.14932003617286682,
+        "minimum_clearance_m": 0.005035535144537621,
+        "minimum_gap_m": 0.0010004151447034482,
+        "minimum_near_patch_margin_m": 0.08017152887444784,
+        "endpoint_patch_margin_m": 0.08782485787308242,
+        "minimum_no_seat_cop_margin_m": 0.0068938764939021555,
+        "max_foot_position_error_m": 0.0004714895876703187,
+        "max_foot_rotation_error_rad": 1.9371292102065396e-06,
+        "goal_ik_error": 2.4007085261258615e-11
+      },
+      "first_command_exact": true,
+      "nonleg_reference_fixed": true,
+      "resampled_nominal_rate_rad_s": 0.14932005107402802
+    },
+    {
+      "case": 11,
+      "selected": true,
+      "measured_height_m": 0.3646417381573076,
+      "measured_slope_deg": 17.512285283212606,
+      "screen": {
+        "peak_nominal_rate_rad_s": 0.14932014048099518,
+        "minimum_clearance_m": 0.005032800954521208,
+        "minimum_gap_m": 0.0010004138055612621,
+        "minimum_near_patch_margin_m": 0.08017145470243286,
+        "endpoint_patch_margin_m": 0.08782480645512755,
+        "minimum_no_seat_cop_margin_m": 0.006893338470857657,
+        "max_foot_position_error_m": 0.0004767858316377442,
+        "max_foot_rotation_error_rad": 1.0972743639375995e-06,
+        "goal_ik_error": 2.3981155013717445e-11
+      },
+      "first_command_exact": true,
+      "nonleg_reference_fixed": true,
+      "resampled_nominal_rate_rad_s": 0.14932087063789368
+    },
+    {
+      "case": 12,
+      "selected": false,
+      "measured_height_m": 0.399404815703609,
+      "measured_slope_deg": 19.990720465542193
+    },
+    {
+      "case": 13,
+      "selected": false,
+      "measured_height_m": 0.3994049994719878,
+      "measured_slope_deg": 19.990705363769003
+    },
+    {
+      "case": 14,
+      "selected": false,
+      "measured_height_m": 0.35998306243907086,
+      "measured_slope_deg": 5.086970301033768
+    },
+    {
+      "case": 15,
+      "selected": false,
+      "measured_height_m": 0.3599830590629256,
+      "measured_slope_deg": 5.086971731914472
+    },
+    {
+      "case": 16,
+      "selected": false,
+      "measured_height_m": 0.38480859893803776,
+      "measured_slope_deg": 7.570657237101221
+    },
+    {
+      "case": 17,
+      "selected": false,
+      "measured_height_m": 0.38480828987586035,
+      "measured_slope_deg": 7.570653274014053
+    },
+    {
+      "case": 18,
+      "selected": false,
+      "measured_height_m": 0.42467593739215437,
+      "measured_slope_deg": 12.555766620668672
+    },
+    {
+      "case": 19,
+      "selected": false,
+      "measured_height_m": 0.4246755436014783,
+      "measured_slope_deg": 12.555811441149812
+    },
+    {
+      "case": 20,
+      "selected": false,
+      "measured_height_m": 0.4396007530365168,
+      "measured_slope_deg": 15.04438362216567
+    },
+    {
+      "case": 21,
+      "selected": false,
+      "measured_height_m": 0.43960201047455993,
+      "measured_slope_deg": 15.044345735381482
+    },
+    {
+      "case": 22,
+      "selected": false,
+      "measured_height_m": 0.3997122308579385,
+      "measured_slope_deg": 10.058307754816537
+    },
+    {
+      "case": 23,
+      "selected": false,
+      "measured_height_m": 0.3997135395036433,
+      "measured_slope_deg": 10.058233581168349
+    }
+  ],
+  "physical_trials": 0,
+  "optimizer_updates": 0,
+  "fresh_holdout": false,
+  "inputs": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/trace.npz": "c380356202f31c64d5667f48bd2f8d13d3391c6f751dd19db2dc002101d020d2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/static_inertial_model.json": "92d77b993ef80d78af0440a1066af421555aff2794f14ff37f3df3d09669c801"
+  },
+  "source_sha256": "48b2436d8402b5411a016e24bf813b7ca7e5d173de7c8c05dcdf4d72238513b9"
+}
