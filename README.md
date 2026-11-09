@@ -64,7 +64,19 @@ simulation, CI workflow, or recurring automation.
 
 ## Commit practice
 
-Commit each substantive code change together with its bounded validation and
-outcome receipt. Keep unsuccessful outcomes intact. Push each completed commit
-before starting the next logical change. Do not add credentials, environments,
-bulk trajectories, or generated solver matrices to ordinary Git history.
+Commit and push at meaningful, validated milestones: a bug fixed, a technical
+obstacle resolved, or a feature ready. Group the related edits into one commit;
+do not commit each attempt, intermediate step, or saved record. This supersedes
+the earlier practice of committing and pushing every individual change.
+
+Stage changed source files explicitly, together with necessary tests and runtime
+configuration. Include documentation only when needed to use the changed code.
+Keep routine research notes, status reports, outcome receipts, logs, videos,
+generated results, and failed-attempt evidence locally; preserving evidence does
+not require uploading it to GitHub. Summarize validation in the commit message
+instead of adding a receipt. Do not use blanket staging for this workspace.
+
+Use no more than ten meaningful commits per active workday, usually fewer; this
+is a ceiling, not a target. Do not create more reconstructed record-by-record
+history. Do not add credentials, environments, bulk trajectories, or generated
+solver matrices to ordinary Git history.

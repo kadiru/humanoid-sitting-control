@@ -26,6 +26,27 @@ class Components(unittest.TestCase):
     def test_stale_edge_cannot_release(self):
         a=self.base(np.array([[.02,0,.02]]));a['geometry_age']=.22
         self.assertIsNone(separation(**a)['load_upper_bw'])
+    def test_unknown_camera_age_cannot_assert_zero_load(self):
+        for age in (np.nan, np.inf, -np.inf):
+            with self.subTest(age=age):
+                a=self.base(np.array([[.02,0,.02]]));a['geometry_age']=age
+                result=separation(**a)
+                self.assertEqual(result['state'],'unknown')
+                self.assertIsNone(result['load_upper_bw'])
+    def test_empty_collider_cannot_certify_release(self):
+        a=self.base(np.array([[.02,0,.02]]))
+        a['vertices']['pelvis']=np.empty((0,3))
+        self.assertIsNone(separation(**a)['load_upper_bw'])
+    def test_malformed_plane_cannot_certify_release(self):
+        for field in ('plane_normal','plane_center'):
+            with self.subTest(field=field):
+                a=self.base(np.array([[.02,0,.02]]));a[field]=[0.,0.]
+                self.assertIsNone(separation(**a)['load_upper_bw'])
+    def test_original_age_boundary_is_inclusive(self):
+        a=self.base(np.array([[.02,0,.02]]));a['geometry_age']=.21
+        self.assertEqual(separation(**a)['state'],'geometrically_separated')
+        a['geometry_age']=np.nextafter(.21,np.inf)
+        self.assertIsNone(separation(**a)['load_upper_bw'])
     def test_buffer_is_strict(self):
         a=self.base(np.array([[.009,0,.009]]))
         self.assertIsNone(separation(**a)['load_upper_bw'])

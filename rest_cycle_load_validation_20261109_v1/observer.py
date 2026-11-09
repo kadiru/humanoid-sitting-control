@@ -52,12 +52,27 @@ class SpatialLoadObserver:
         return np.asarray(rows), np.asarray(grav)
 
     def estimate(self, q, torque, gravity):
+        q = np.asarray(q, dtype=float)
+        torque = np.asarray(torque, dtype=float)
+        gravity = np.asarray(gravity, dtype=float)
+        # Unknown measurements are not a solved wrench. In particular, numpy
+        # can solve a finite matrix with a NaN right-hand side without raising.
+        unknown = (None, np.full(2, np.inf), np.full((2, 6, 6), np.nan),
+                   np.full((2, 6), np.nan))
+        if (q.shape != (len(self.model.names),) or torque.shape != q.shape or
+            gravity.shape != (3,) or not np.isfinite(q).all() or
+            not np.isfinite(torque).all() or not np.isfinite(gravity).all() or
+            not np.isfinite(np.linalg.norm(gravity)) or np.linalg.norm(gravity) == 0):
+            return unknown
         jac, grav = self.equations(q, gravity)
         indices = [[self.model.names.index(n) for n in names] for names in self.sides]
-        rhs = grav - np.asarray(torque)[indices]
+        rhs = grav - torque[indices]
+        if not np.isfinite(jac).all() or not np.isfinite(rhs).all():
+            return None, unknown[1], jac, rhs
         conditions = np.array([np.linalg.cond(a) for a in jac])
         if not np.isfinite(conditions).all() or conditions.max() >= 200:
             return None, conditions, jac, rhs
         foot = np.stack([np.linalg.solve(a, b) for a, b in zip(jac, rhs)])
         rest = np.array([0., 0., self.weight]) - foot[:, :3].sum(0)
-        return np.r_[rest, foot.ravel()], conditions, jac, rhs
+        value = np.r_[rest, foot.ravel()]
+        return (value if np.isfinite(value).all() else None), conditions, jac, rhs
