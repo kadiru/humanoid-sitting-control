@@ -1,0 +1,155 @@
+{
+  "utc": "2026-10-19T02:13:32.224917+00:00",
+  "passed": true,
+  "scope": "Independent source-row, scalar-dual and exact proximal-KKT audit. No production import/solve.",
+  "systems": {
+    "primary": {
+      "rows_verified": 452522,
+      "hard_rows": 211989,
+      "coupled_residuals": 240533,
+      "native_directions": 78790,
+      "native_coefficients_verified": 1994752,
+      "scalar_signs_verified": 240533,
+      "coefficient_copy_errors": 0,
+      "rhs_copy_errors": 0,
+      "native_bounds_cost_equalities_exact": true,
+      "equality_rows": 1366,
+      "lower_v": "0",
+      "upper_v": "1",
+      "all_rows_retained_in_functional_form": true,
+      "proof_517_inherited_not_repeated": true
+    },
+    "witness": {
+      "rows_verified": 618101,
+      "hard_rows": 452041,
+      "coupled_residuals": 166060,
+      "native_directions": 78790,
+      "native_coefficients_verified": 2214640,
+      "scalar_signs_verified": 166060,
+      "coefficient_copy_errors": 0,
+      "rhs_copy_errors": 0,
+      "native_bounds_cost_equalities_exact": true,
+      "equality_rows": 1366,
+      "lower_v": "-1/2",
+      "upper_v": "0",
+      "all_rows_retained_in_functional_form": true,
+      "proof_517_inherited_not_repeated": true
+    }
+  },
+  "new_small_proximal_kkt_checks": [
+    {
+      "name": "primary_inactive",
+      "exact_kkt": true,
+      "strict_convexity_unique_minimizer": true,
+      "mass": "1/4",
+      "threshold": "0",
+      "zero_bound_derivatives": [
+        "0",
+        "0",
+        "1"
+      ],
+      "objective": "1/2",
+      "optimizer_calls": 0
+    },
+    {
+      "name": "primary_simplex",
+      "exact_kkt": true,
+      "strict_convexity_unique_minimizer": true,
+      "mass": "1",
+      "threshold": "1/3",
+      "zero_bound_derivatives": [
+        "0",
+        "0",
+        "1/3"
+      ],
+      "objective": "1/6",
+      "optimizer_calls": 0
+    },
+    {
+      "name": "primary_upper",
+      "exact_kkt": true,
+      "strict_convexity_unique_minimizer": true,
+      "mass": "3",
+      "threshold": "1",
+      "zero_bound_derivatives": [
+        "0",
+        "0",
+        "3/2"
+      ],
+      "objective": "13/4",
+      "optimizer_calls": 0
+    },
+    {
+      "name": "witness_nonuniform",
+      "exact_kkt": true,
+      "strict_convexity_unique_minimizer": true,
+      "mass": "1",
+      "threshold": "1/6",
+      "zero_bound_derivatives": [
+        "0",
+        "0",
+        "1/4"
+      ],
+      "objective": "25/96",
+      "optimizer_calls": 0
+    },
+    {
+      "name": "boundary_mass_one",
+      "exact_kkt": true,
+      "strict_convexity_unique_minimizer": true,
+      "mass": "1",
+      "threshold": "0",
+      "zero_bound_derivatives": [
+        "0",
+        "0",
+        "1"
+      ],
+      "objective": "1/2",
+      "optimizer_calls": 0
+    },
+    {
+      "name": "zero_output",
+      "exact_kkt": true,
+      "strict_convexity_unique_minimizer": true,
+      "mass": "0",
+      "threshold": "0",
+      "zero_bound_derivatives": [
+        "1",
+        "2",
+        "0"
+      ],
+      "objective": "5/2",
+      "optimizer_calls": 0
+    }
+  ],
+  "new_small_fenchel_dual_checks": [
+    {
+      "name": "lower",
+      "exact_primal_conjugate_fenchel_equality": true,
+      "original_scalar_stationarity_and_complementarity": true
+    },
+    {
+      "name": "interior",
+      "exact_primal_conjugate_fenchel_equality": true,
+      "original_scalar_stationarity_and_complementarity": true
+    },
+    {
+      "name": "upper_witness",
+      "exact_primal_conjugate_fenchel_equality": true,
+      "original_scalar_stationarity_and_complementarity": true
+    }
+  ],
+  "prior_517_proof_inherited": true,
+  "production_imported": false,
+  "old_fixture_repeated": false,
+  "full_size_proximal_updates": 0,
+  "lp_calls": 0,
+  "linear_solves": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "new_solver": false,
+  "new_candidate": false,
+  "physical_admission": false,
+  "limits": "Source specialization/copies and six local exact proximal minimizers/three Fenchel-lift identities verified. General conjugacy derives from explicit supremum, not sampled physical states. No numerical whole-path method, convergence rate, feasibility or speed result."
+}
