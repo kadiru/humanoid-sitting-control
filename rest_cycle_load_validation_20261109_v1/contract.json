@@ -1,0 +1,40 @@
+{
+  "authorization": "Current user: validate load sensing then3 sit-hold-stand starts,4090only,unchanged actions/physical criteria.",
+  "scope": "One saved-data spatial-wrench validation, no GPU, no control deployment",
+  "mechanism": "Retain all6 leg wrench components and actual native motor-axis efforts; earlier sagittal projection discarded lateral/torsional coupling and used approximatePD telemetry. A passed linear solve alone is not load sensing.",
+  "inputs": [
+    "outputs/rest_cycle_wide_camera_20261108_v1/sit_coffee_wide/trajectory.npz",
+    "outputs/rest_cycle_wide_camera_20261108_v1/sit_coffee_wide/substeps.npz",
+    "outputs/rest_cycle_wide_camera_20261108_v1/sit_coffee_wide/frame_0.npz"
+  ],
+  "initialization": "No learned parameters, fitting, bias correction, rejected point or optimizer;999 temporally aligned recorded samples.",
+  "equations": "Perleg: J^T w = g(q)-tau_motor; 6rotational joint equations; w=(Fx,Fy,Fz,Mx,My,Mz) atfoot. Frest=(0,0,mg)-Fleft-Fright. Gravityfromsame-stateIMU. FullspatialFK andall descendant masses.",
+  "test": "Existing2%BW forceaccuracy; nofalse loaded/unloaded/interval misses with>=90%coverage onloaded/unloaded samples. Originalrawqd<=.05 andgyroY<=.02. Unknown remainsunknown. Model failures are terminal; noretry.",
+  "independent_audit": "Finite-difference gravitational virtualwork and6D foot Jacobian atfixedsamples0,500,998; independent classification/counts. No producer import.",
+  "limitations": [
+    "Quasistatic only",
+    "Legcontactsabovefeet invalidateassumption",
+    "No general sensorerrorcertificate",
+    "No loaded current-narrow-fixture or return validation",
+    "Not hardwarevalidation"
+  ],
+  "resources": {
+    "total_CPU_wall_each_s": 45,
+    "CPU_cores": 1,
+    "AS_GiB": 40,
+    "maximum_samples": 999,
+    "linear_systems": 1998,
+    "unknowns_each": 6,
+    "output_limit_MiB": 20,
+    "GPU_launches": 0,
+    "simsteps": 0,
+    "PPO_updates": 0,
+    "retries": 0
+  },
+  "source_review": {
+    "owner": "single executionowner, separate explicit equation audit",
+    "passed": true,
+    "reason": "Only sensor q, measuredmotor effort, IMU enter prediction; labels restrictedtoaudit. Originalrawvelocitygate preserved."
+  },
+  "official_sensor_reference": "https://docs.isaacsim.omniverse.nvidia.com/latest/sensors/isaacsim_sensors_physics_articulation_force.html"
+}

@@ -1,0 +1,56 @@
+{
+  "passed": false,
+  "tests": {
+    "original_physical_pass": false,
+    "qualified_final_hold": false,
+    "final5s_load_accuracy": true,
+    "no_false_contact": true,
+    "no_interval_misses": true,
+    "complete_path": true
+  },
+  "physical": {
+    "integrity_pass": true,
+    "admitted": false,
+    "classification": "FAILED_ATTEMPT",
+    "variant": {
+      "id": "sit_modern_coffee_table_01_center_normal_landing",
+      "asset": "modern_coffee_table_01",
+      "case": "narrow_support_050",
+      "title": "Coffee table",
+      "task": "sitting",
+      "intent": "top",
+      "x": 0.0,
+      "y": 0.0,
+      "yaw_deg": 0.0,
+      "teacher": "preserved_best09_sitting",
+      "closer_m": 0.004423433378870294
+    },
+    "full20s": true,
+    "physical_clean": false,
+    "final_hold_s": 10.86,
+    "minimum_final_intended_load_bw": 0.5488713979721069,
+    "slip_ticks": 1,
+    "illegal_ticks": 0,
+    "warm_failure": false,
+    "mesh_mapping_validated": true,
+    "first_failure_s": null,
+    "max_command_increment_rad": 0.002978384494781494,
+    "files": {
+      "trajectory.npz": "ed45990246088319109ddc7f4ff1eb69331ad3643be4b19b85bcb875ff0a9892"
+    },
+    "independent_auditor_sha256": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b"
+  },
+  "loaded_qualified_final250": 0,
+  "raw_quiet_final250": 0,
+  "final5s_load_mean_error_bw": 2.3016485561996092e-05,
+  "final5s_load_max_error_bw": 0.00010896814222205453,
+  "mean_final5s_sensor_load_bw": 0.54898003086836,
+  "mean_final5s_label_load_bw": 0.5489820837974548,
+  "false_loaded": 0,
+  "interval_misses": 0,
+  "elapsed_seconds": 0.5852723330026492,
+  "complete_cycle": false,
+  "stand_up_validated": false,
+  "PPO_updates": 0,
+  "meaning": "Only a passing result permits proceeding to current sensor-driven return validation; never a three-start completion claim."
+}

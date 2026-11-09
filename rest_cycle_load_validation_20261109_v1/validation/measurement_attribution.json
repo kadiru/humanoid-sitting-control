@@ -1,0 +1,58 @@
+{
+  "comparison": "Only torque source changes; spatial Jacobians, q, IMU, labels unchanged",
+  "final5s_old_approximate_PD_mean_error_bw": 0.018212575558048977,
+  "final5s_native_motor_axis_mean_error_bw": 4.9193507372825795e-05,
+  "whole_record_old_mean_error_bw": 0.028961518731498034,
+  "whole_record_native_mean_error_bw": 0.003807803688097302,
+  "narrow_standing": {
+    "samples": 50,
+    "quiet_samples": 50,
+    "longest_raw_quiet_controls": 50,
+    "required_consecutive_quiet_controls": 25,
+    "passes_raw_joint_quiet_prerequisite": true,
+    "largest_velocity_channels": [
+      {
+        "joint": "right_ankle_roll_joint",
+        "maximum_raw_speed_rad_s": 0.005893528461456299,
+        "measured_position_change_rad": 3.301131073385477e-06,
+        "raw_velocity_integral_rad": -0.005420843604952097
+      },
+      {
+        "joint": "right_ankle_pitch_joint",
+        "maximum_raw_speed_rad_s": 0.0041592661291360855,
+        "measured_position_change_rad": 3.159046173095703e-06,
+        "raw_velocity_integral_rad": -0.003710100892931223
+      },
+      {
+        "joint": "right_hip_roll_joint",
+        "maximum_raw_speed_rad_s": 0.003985625691711903,
+        "measured_position_change_rad": -3.7626305129379034e-06,
+        "raw_velocity_integral_rad": 0.003761144122108817
+      },
+      {
+        "joint": "right_hip_pitch_joint",
+        "maximum_raw_speed_rad_s": 0.0034682457335293293,
+        "measured_position_change_rad": 1.430511474609375e-06,
+        "raw_velocity_integral_rad": 0.003298248164355755
+      },
+      {
+        "joint": "right_hip_yaw_joint",
+        "maximum_raw_speed_rad_s": 0.003301180899143219,
+        "measured_position_change_rad": 1.4141842257231474e-06,
+        "raw_velocity_integral_rad": 0.003169664414599538
+      },
+      {
+        "joint": "right_knee_joint",
+        "maximum_raw_speed_rad_s": 0.0025168643333017826,
+        "measured_position_change_rad": 8.314847946166992e-06,
+        "raw_velocity_integral_rad": -0.0023094050120562315
+      }
+    ]
+  },
+  "velocity_values_not_replaced": true,
+  "no_threshold_changes": true,
+  "attribution_scope": "Supports a torque-source correction on this saved sit; does not explain underlying native velocity inconsistency or validate loaded narrow-fixture control.",
+  "simulation_steps": 0,
+  "PPO_updates": 0,
+  "elapsed_seconds": 0.4791107049677521
+}

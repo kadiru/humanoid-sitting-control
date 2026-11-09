@@ -1,0 +1,34 @@
+{
+  "authorization": "User explicitly requests load-sensing validation then3 sit5s-hold-stand starts,4090only,unchanged actions and criteria.",
+  "purpose": "One bounded geometric load-calibration trial on the already admitted measured narrow-support path. Not a sensor-qualified fullcycle or PPO; no return commands.",
+  "novelty": "New actual narrow fixture and current-input full path with quiet arms and complete hip clearance; new fullspatial measured-motor-axis loadobserver in shadow. Not an oldphysicalattempt retry.",
+  "initialization": "Accepted narrow fixture standing bank,seed66302,25warmupcontrols. Allstate/reset/currentdepth and fixedpath independently checked before any sitting command.",
+  "control": "25consecutive originalrawquiet samples before starting. Follow acceptedforward commands through originalfilter/rate/margins; pause oninvalidcurrentcamera. Native torque estimate in shadow only; no contact truth or timer qualifies stages. Originalenvironmentlatchedsafetyunchanged.",
+  "failure": "No3cyclelaunch unless independent originalphysical and currentloadedmeasurement qualification pass. Rejectonfirstfailedrun, no physical retry/thresholdchange.",
+  "resources": {
+    "GPU": "4090 UUID GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4",
+    "GPU_workers": 1,
+    "CPU_currentaudit_total_s": 45,
+    "CPU_postaudit_total_s": 45,
+    "CPU_AS_GiB": 40,
+    "CPU_audit_cores": 1,
+    "GPU_child_wall_s": 900,
+    "maximum_temperature_C": 85,
+    "minimum_root_free_GB": 20,
+    "maximum_queue_wait_s": 7200,
+    "warmup_controls": 25,
+    "active_controls": 1000,
+    "initialization_physics_cap": 1000,
+    "activephysics_steps": 4100,
+    "output_budget_MiB": 300,
+    "physical_retries": 0,
+    "PPO": 0
+  },
+  "independent_source_review": {
+    "passed": true,
+    "owner": "singleowner separate source review and independentlyimplemented current-input and postrun auditors",
+    "premotion": "Currentcamera depthagainstactualmesh; currentobservedv3polygon; fullfeet/balance/torque/patch/fullmesh/action/timing gates onnewinitialstate",
+    "postmotion": "Unchanged originalfull20s final5s all-tickcriteria plus2%BW forceaccuracy andrawvelocity qualification, no output promotion byprocess exit"
+  },
+  "source_fix": "Earlier offlineauditfailedonlyNumPybool JSONserialization. Newv2auditpassed; originalfailure preserved. Predictor notrerun."
+}
