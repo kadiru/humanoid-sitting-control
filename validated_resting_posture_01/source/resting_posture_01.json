@@ -1,0 +1,85 @@
+{
+  "name": "resting_posture_01",
+  "status": "objective_prototype_only_no_simulator_adapter_or_training_yet",
+  "question": "Can a feedback policy maintain stable seated or leaning support with less whole-body motor effort across feasible surface geometries?",
+  "method": {
+    "learner": "PPO, first with sensor history and joint-position targets under existing actuator limits",
+    "motion_ownership": "Trainable joint targets; no frozen timed sitting generator in the control path",
+    "initialization": "Physically settled supported states captured from valid trajectories, then perturbed without penetrations",
+    "optional_teacher": "Constrained static posture/contact-force optimization for feasible reset examples, initialization and a model-based comparison; do not delay the first horizontal seated baseline for this solver",
+    "why_not_only_imitation": "Existing demonstrations need not be the lowest-effort postures; imitation can initialize, task reward should improve them",
+    "why_not_vla": "No language interpretation is needed for this first contact and balance skill",
+    "ground_truth": "Reset construction and training reward/evaluation labels only; no privileged actor or estimator input; critic sensor-only in the first study"
+  },
+  "success_definition": {
+    "task": "Remain supported on an intended pelvis, thigh or approved back patch, with feet allowed to bear load; stable useful torso orientation, no slipping, forbidden contacts, limit violation or fall",
+    "effort": "All-joint mean squared torque divided by declared joint reference ratings, plus per-joint/leg/torso reports; prefer continuous ratings when available",
+    "energy_limitation": "Torque-based effort is a proxy, not measured electrical energy. Mechanical power alone is inadequate for stationary holding. Do not invent current, resistance or thermal parameters.",
+    "leaning": "Support is measured along the observed surface normal; no requirement for the surface to lift 75 percent of body weight or for the feet to unload",
+    "constraints_before_economy": "Lower effort counts as an improvement only when full-duration support, slip and perturbation performance are retained",
+    "minimum_claim": "Lower-effort robust posture among tested policies; no claim of a global minimum"
+  },
+  "curriculum": [
+    {
+      "stage": "horizontal_supported_hold",
+      "candidate_height_m": [0.25, 0.30, 0.35, 0.40],
+      "surface": "Wide rigid horizontal support; feasibility-checked heights and randomized supported initial poses",
+      "goal": "Learn to remain seated, adjust posture and reduce whole-body holding effort; no standing-to-sitting requirement yet"
+    },
+    {
+      "stage": "inclined_supported_hold",
+      "candidate_pitch_deg": [-15, 0, 15, 30],
+      "goal": "Retain physical support and traction as normal direction changes; use the same full 3D geometry/contact contract"
+    },
+    {
+      "stage": "steep_supported_lean",
+      "candidate_pitch_deg": [45, 60, 75, 90],
+      "goal": "Use suitable hip/back contacts with feet on the floor; test friction, allowed contact patches and full force/moment balance"
+    },
+    {
+      "stage": "approach_to_rest",
+      "goal": "Progressively initialize farther from contact, ultimately connect standing/approach to the learned resting behavior"
+    }
+  ],
+  "feasibility": "Candidate heights and angles are proposals, not certified reachable states. Test collision clearance, joint margin, friction, force/moment balance and dynamic settling. Log every rejected candidate separately; report both reset coverage and hold success.",
+  "pilot_design": {
+    "status": "Proposed after simulator smoke validation and current capped-impact comparison; not queued",
+    "stage": "horizontal_supported_hold",
+    "seeds": [52911, 52917],
+    "arms": ["stable_support_only", "same_stable_support_plus_whole_body_effort"],
+    "matched_initial_weights": true,
+    "matched_resets_and_disturbances": true,
+    "initial_budget_per_run": {"updates": 128, "steps_per_update": 64, "num_envs": 16, "transitions": 131072},
+    "budget_limitation": "A bounded pilot, not enough evidence of convergence or general sitting/leaning skill; profile throughput before fixing later budgets",
+    "baselines": ["Same valid initial posture held by fixed PD joint targets", "PPO stable-support-only arm", "Optional optimized posture plus feedback, once implemented"],
+    "evaluation": "Same held-out height/start combinations and disturbance schedules for both seeds/arms; full 20-second holds and separate 60-second confirmation on finalists, no success-by-early-reset",
+    "metrics": ["full-duration survival and supported hold", "slip and forbidden contacts", "all-joint normalized torque squared", "all-joint and leg/torso torque RMS", "peak joint effort and sustained near-limit time", "absolute mechanical work reported separately", "normal/vertical support and foot load", "perturbation recovery", "sensor availability", "valid reset coverage"],
+    "comparison_rule": "Report every attempt, same-case paired effort on common successes, and failures separately. A lower-effort policy with worse stability is a tradeoff, not a win. Keep both training seeds."
+  },
+  "actor_contract": {
+    "inputs": ["encoder positions and velocities", "IMU gravity and angular velocity", "available torque/contact estimates", "previous commands and short history", "depth-derived local support plane, bounded patch, relative body pose, validity and age"],
+    "forbidden_inputs": ["simulator root pose", "simulator contact force truth", "hidden surface pose/friction", "reset metadata", "privileged success flags"],
+    "normal_convention": "Unit surface normal oriented from the surface toward the robot; preserve full orientation and local patch bounds",
+    "contact_policy": "Feet on floor plus identified pelvis/thigh/back support patches; hands/arms are outside the initial scope"
+  },
+  "implementation_audit": [
+    {"file": "sitting_task/src/humanoid_sitting/tasks/furniture.py", "finding": "reset_seats places yaw-only level surfaces; a new full-orientation fixture adapter is needed"},
+    {"file": "sitting_task/src/humanoid_sitting/tasks/mdp.py", "finding": "support_fraction uses positive world-Z normal force on pelvis/thigh contacts; inappropriate as the sole leaning support metric"},
+    {"file": "sitting_task/src/humanoid_sitting/shared_frame.py", "finding": "horizontal_planes filters abs(normal_z) > 0.96; support association also assumes near-parallel floor/seat planes"},
+    {"file": "sitting_task/src/humanoid_sitting/support_landing_geometry.py", "finding": "initial seat anchor is horizontal and association contains two-degree normal gates; steep surfaces are not currently tracked"},
+    {"file": "scripts/train_support_rl.py", "finding": "standing resets, pelvis height above level seat and small corrections to a frozen timed generator are unsuitable for a general resting task"}
+  ],
+  "implemented_this_turn": ["Isolated orientation-aware resting reward/metrics prototype", "CPU behavioral tests including inclined and vertical contact examples"],
+  "still_required_before_training": [
+    "Capture and dynamically validate complete seated reset states; do not infer omitted root/joint velocities from sparse pose archives",
+    "Wire total contact forces including tangential friction, allowed patches and slip into reward/evaluation labels, verify their signs and units",
+    "Separate runtime sensor observations from reset/reward truth and provide full trainable joint targets",
+    "Run fixed-PD baseline and deterministic perturbed-hold smoke cases, inspect trajectories and contact labels",
+    "For incline stages, implement full surface pose spawning and observed oblique-plane association before enabling that stage"
+  ],
+  "preservation": "All existing controllers/checkpoints and the active support_capped_impact_01 study remain unchanged. This specification does not start or schedule training.",
+  "references": [
+    {"url": "https://arxiv.org/abs/2312.16465", "use": "Primary evidence for optimization-based multi-contact force/posture control on a position-controlled humanoid; not evidence for this G1 resting task"},
+    {"url": "https://arxiv.org/abs/2602.06445", "use": "Primary example of constrained RL for energy-related objectives in humanoid walking; supports considering explicit constraints, not a guarantee for resting"}
+  ]
+}

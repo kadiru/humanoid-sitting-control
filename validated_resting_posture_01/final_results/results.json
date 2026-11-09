@@ -1,0 +1,2382 @@
+{
+  "protocol": {
+    "scope": "Maintain supported rest on level rigid surfaces; no approach/sit transition or leaning claim",
+    "seeds": [
+      52911,
+      52917
+    ],
+    "arms": [
+      "stability",
+      "effort"
+    ],
+    "updates": 128,
+    "steps_per_update": 64,
+    "num_envs": 16,
+    "transitions_per_run": 131072,
+    "total_transitions": 524288,
+    "training_heights_m": [
+      0.25,
+      0.3,
+      0.35,
+      0.4
+    ],
+    "heldout_heights_m": [
+      0.275,
+      0.325,
+      0.375
+    ],
+    "effort_reference": 0.005249470561742783,
+    "calibration": "/data/humanoid-sitting-perception/resting_fixed_dev01/results.json",
+    "reward": "2 per qualifying second; effort arm subtracts E/(E+reference) per qualifying second; -5 once on physical failure",
+    "E": "mean over ALL joints of (applied torque / existing peak effort limit)^2; not electrical energy",
+    "gamma": 0.998,
+    "lam": 0.97,
+    "learning_rate": 0.0001,
+    "epochs": 3,
+    "minibatches": 4,
+    "entropy": 0.001,
+    "initial_std": 0.15,
+    "action": "23 joint-target increments capped 0.01 rad per 20ms; joint/effort limits retained; no timed nominal controller",
+    "reset": "Full root/joint position and velocity plus held command; .5s ordinary-tick settling with zero reward during resets; warmup transitions separately counted",
+    "runtime": "324 sensor-only channels: three frames of q,qd,torque,gravity,gyro,previous command and observed local plane; same critic inputs",
+    "evaluation": "28 unique held-out starts:16 at training heights and12 at intermediate heights; plus same12 with +/-0.06m/s base-velocity impulse at5s;20s per trial; all four final models and fixed PD",
+    "success": "no latched failure,>=95% qualifying rest ticks, final2s continuously qualifying; integer counters",
+    "startup_parity_absolute_tolerance": 1e-06,
+    "limitations": [
+      "Two training seeds; perturbation cases repeat the intermediate-height placements",
+      "Ideal simulated encoder/IMU/torque equivalents; depth is measured, no runtime simulator geometry",
+      "Finite rigid floor blocks permit measured friction; top z=0, materials .8/.6; no inclined or compliant surfaces",
+      "Highest initial posture has light seat support and substantial foot load; report load alongside effort"
+    ],
+    "no_automatic_promotion": true
+  },
+  "budgets": [
+    {
+      "seed": 52911,
+      "arm": "stability",
+      "actor_max_change": 0.03948685899376869,
+      "updates": 128,
+      "transitions": 131072,
+      "finite": true,
+      "active_transitions": 110310,
+      "warmup_transitions": 20762,
+      "unfinished_episode_steps": [
+        0,
+        74,
+        10,
+        83,
+        11,
+        40,
+        242,
+        88,
+        105,
+        581,
+        66,
+        156,
+        260,
+        234,
+        229,
+        216
+      ]
+    },
+    {
+      "seed": 52911,
+      "arm": "effort",
+      "actor_max_change": 0.03521840646862984,
+      "updates": 128,
+      "transitions": 131072,
+      "finite": true,
+      "active_transitions": 107611,
+      "warmup_transitions": 23461,
+      "unfinished_episode_steps": [
+        0,
+        28,
+        8,
+        0,
+        3,
+        48,
+        0,
+        0,
+        24,
+        129,
+        436,
+        95,
+        29,
+        147,
+        249,
+        458
+      ]
+    },
+    {
+      "seed": 52917,
+      "arm": "stability",
+      "actor_max_change": 0.03406018763780594,
+      "updates": 128,
+      "transitions": 131072,
+      "finite": true,
+      "active_transitions": 108943,
+      "warmup_transitions": 22129,
+      "unfinished_episode_steps": [
+        0,
+        0,
+        24,
+        0,
+        371,
+        81,
+        0,
+        89,
+        16,
+        310,
+        139,
+        66,
+        88,
+        399,
+        298,
+        254
+      ]
+    },
+    {
+      "seed": 52917,
+      "arm": "effort",
+      "actor_max_change": 0.03486943989992142,
+      "updates": 128,
+      "transitions": 131072,
+      "finite": true,
+      "active_transitions": 109797,
+      "warmup_transitions": 21275,
+      "unfinished_episode_steps": [
+        0,
+        0,
+        0,
+        4,
+        165,
+        68,
+        103,
+        193,
+        207,
+        250,
+        613,
+        51,
+        107,
+        60,
+        0,
+        7
+      ]
+    }
+  ],
+  "parity": [
+    {
+      "run": "starts_52911_stability",
+      "max_startup_error": 0.0,
+      "matched_disturbances": true
+    },
+    {
+      "run": "heights_52911_stability",
+      "max_startup_error": 0.0,
+      "matched_disturbances": true
+    },
+    {
+      "run": "impulse_52911_stability",
+      "max_startup_error": 0.0,
+      "matched_disturbances": true
+    },
+    {
+      "run": "starts_52911_effort",
+      "max_startup_error": 0.0,
+      "matched_disturbances": true
+    },
+    {
+      "run": "heights_52911_effort",
+      "max_startup_error": 0.0,
+      "matched_disturbances": true
+    },
+    {
+      "run": "impulse_52911_effort",
+      "max_startup_error": 0.0,
+      "matched_disturbances": true
+    },
+    {
+      "run": "starts_52917_stability",
+      "max_startup_error": 0.0,
+      "matched_disturbances": true
+    },
+    {
+      "run": "heights_52917_stability",
+      "max_startup_error": 0.0,
+      "matched_disturbances": true
+    },
+    {
+      "run": "impulse_52917_stability",
+      "max_startup_error": 0.0,
+      "matched_disturbances": true
+    },
+    {
+      "run": "starts_52917_effort",
+      "max_startup_error": 0.0,
+      "matched_disturbances": true
+    },
+    {
+      "run": "heights_52917_effort",
+      "max_startup_error": 0.0,
+      "matched_disturbances": true
+    },
+    {
+      "run": "impulse_52917_effort",
+      "max_startup_error": 0.0,
+      "matched_disturbances": true
+    }
+  ],
+  "comparisons": [
+    {
+      "seed": 52911,
+      "bank": "starts",
+      "fixed": {
+        "successes": 16,
+        "total": 16,
+        "mean_good_fraction": 1.0,
+        "successful_whole_body_rms_Nm": 4.01920230102539,
+        "successful_effort_proxy": 0.005267988407984377,
+        "force_max_N": 297.2620849609375,
+        "failures": {
+          "fall": 0,
+          "forbidden": 0,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "stability": {
+        "successes": 0,
+        "total": 16,
+        "mean_good_fraction": 0.14881250000000001,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 298.49761962890625,
+        "failures": {
+          "fall": 0,
+          "forbidden": 9,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 7
+        }
+      },
+      "effort": {
+        "successes": 0,
+        "total": 16,
+        "mean_good_fraction": 0.5013125,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 299.3169250488281,
+        "failures": {
+          "fall": 0,
+          "forbidden": 4,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 12
+        }
+      },
+      "effort_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 16,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "stability_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 16,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "effort_vs_stability": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 0,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      }
+    },
+    {
+      "seed": 52911,
+      "bank": "heights",
+      "fixed": {
+        "successes": 12,
+        "total": 12,
+        "mean_good_fraction": 1.0,
+        "successful_whole_body_rms_Nm": 4.098828430175781,
+        "successful_effort_proxy": 0.005849381012221177,
+        "force_max_N": 292.5032958984375,
+        "failures": {
+          "fall": 0,
+          "forbidden": 0,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "stability": {
+        "successes": 0,
+        "total": 12,
+        "mean_good_fraction": 0.15108333333333335,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 293.5772399902344,
+        "failures": {
+          "fall": 0,
+          "forbidden": 2,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 12
+        }
+      },
+      "effort": {
+        "successes": 0,
+        "total": 12,
+        "mean_good_fraction": 0.5330833333333335,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 294.78656005859375,
+        "failures": {
+          "fall": 0,
+          "forbidden": 4,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 8
+        }
+      },
+      "effort_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 12,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "stability_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 12,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "effort_vs_stability": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 0,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      }
+    },
+    {
+      "seed": 52911,
+      "bank": "impulse",
+      "fixed": {
+        "successes": 12,
+        "total": 12,
+        "mean_good_fraction": 0.9994166666666667,
+        "successful_whole_body_rms_Nm": 4.093252382473222,
+        "successful_effort_proxy": 0.0058298200256559456,
+        "force_max_N": 313.904296875,
+        "failures": {
+          "fall": 0,
+          "forbidden": 0,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "stability": {
+        "successes": 0,
+        "total": 12,
+        "mean_good_fraction": 0.1801666666666667,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 293.5772399902344,
+        "failures": {
+          "fall": 0,
+          "forbidden": 4,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 12
+        }
+      },
+      "effort": {
+        "successes": 0,
+        "total": 12,
+        "mean_good_fraction": 0.5383333333333332,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 294.78656005859375,
+        "failures": {
+          "fall": 0,
+          "forbidden": 4,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 8
+        }
+      },
+      "effort_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 12,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "stability_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 12,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "effort_vs_stability": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 0,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      }
+    },
+    {
+      "seed": 52911,
+      "bank": "unperturbed_all",
+      "fixed": {
+        "successes": 28,
+        "total": 28,
+        "mean_good_fraction": 1.0,
+        "successful_whole_body_rms_Nm": 4.053327784946986,
+        "successful_effort_proxy": 0.005517156666943005,
+        "force_max_N": 297.2620849609375,
+        "failures": {
+          "fall": 0,
+          "forbidden": 0,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "stability": {
+        "successes": 0,
+        "total": 28,
+        "mean_good_fraction": 0.14978571428571433,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 298.49761962890625,
+        "failures": {
+          "fall": 0,
+          "forbidden": 11,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 19
+        }
+      },
+      "effort": {
+        "successes": 0,
+        "total": 28,
+        "mean_good_fraction": 0.5149285714285714,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 299.3169250488281,
+        "failures": {
+          "fall": 0,
+          "forbidden": 8,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 20
+        }
+      },
+      "effort_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 28,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "stability_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 28,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "effort_vs_stability": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 0,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      }
+    },
+    {
+      "seed": 52911,
+      "bank": "all_conditions",
+      "fixed": {
+        "successes": 40,
+        "total": 40,
+        "mean_good_fraction": 0.9998249999999999,
+        "successful_whole_body_rms_Nm": 4.065305164204856,
+        "successful_effort_proxy": 0.005610955674556887,
+        "force_max_N": 313.904296875,
+        "failures": {
+          "fall": 0,
+          "forbidden": 0,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "stability": {
+        "successes": 0,
+        "total": 40,
+        "mean_good_fraction": 0.15889999999999999,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 298.49761962890625,
+        "failures": {
+          "fall": 0,
+          "forbidden": 15,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 31
+        }
+      },
+      "effort": {
+        "successes": 0,
+        "total": 40,
+        "mean_good_fraction": 0.52195,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 299.3169250488281,
+        "failures": {
+          "fall": 0,
+          "forbidden": 12,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 28
+        }
+      },
+      "effort_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 40,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "stability_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 40,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "effort_vs_stability": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 0,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      }
+    },
+    {
+      "seed": 52917,
+      "bank": "starts",
+      "fixed": {
+        "successes": 16,
+        "total": 16,
+        "mean_good_fraction": 1.0,
+        "successful_whole_body_rms_Nm": 4.01920230102539,
+        "successful_effort_proxy": 0.005267988407984377,
+        "force_max_N": 297.2620849609375,
+        "failures": {
+          "fall": 0,
+          "forbidden": 0,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "stability": {
+        "successes": 0,
+        "total": 16,
+        "mean_good_fraction": 0.080625,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 477.84442138671875,
+        "failures": {
+          "fall": 0,
+          "forbidden": 16,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "effort": {
+        "successes": 0,
+        "total": 16,
+        "mean_good_fraction": 0.3021875,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 397.18438720703125,
+        "failures": {
+          "fall": 0,
+          "forbidden": 16,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "effort_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 16,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "stability_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 16,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "effort_vs_stability": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 0,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      }
+    },
+    {
+      "seed": 52917,
+      "bank": "heights",
+      "fixed": {
+        "successes": 12,
+        "total": 12,
+        "mean_good_fraction": 1.0,
+        "successful_whole_body_rms_Nm": 4.098828430175781,
+        "successful_effort_proxy": 0.005849381012221177,
+        "force_max_N": 292.5032958984375,
+        "failures": {
+          "fall": 0,
+          "forbidden": 0,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "stability": {
+        "successes": 0,
+        "total": 12,
+        "mean_good_fraction": 0.09958333333333334,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 339.1158447265625,
+        "failures": {
+          "fall": 0,
+          "forbidden": 12,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "effort": {
+        "successes": 0,
+        "total": 12,
+        "mean_good_fraction": 0.3771666666666667,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 294.25335693359375,
+        "failures": {
+          "fall": 0,
+          "forbidden": 12,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "effort_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 12,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "stability_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 12,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "effort_vs_stability": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 0,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      }
+    },
+    {
+      "seed": 52917,
+      "bank": "impulse",
+      "fixed": {
+        "successes": 12,
+        "total": 12,
+        "mean_good_fraction": 0.9994166666666667,
+        "successful_whole_body_rms_Nm": 4.093252382473222,
+        "successful_effort_proxy": 0.0058298200256559456,
+        "force_max_N": 313.904296875,
+        "failures": {
+          "fall": 0,
+          "forbidden": 0,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "stability": {
+        "successes": 0,
+        "total": 12,
+        "mean_good_fraction": 0.11566666666666665,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 349.4286193847656,
+        "failures": {
+          "fall": 0,
+          "forbidden": 12,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "effort": {
+        "successes": 0,
+        "total": 12,
+        "mean_good_fraction": 0.3758333333333333,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 294.25335693359375,
+        "failures": {
+          "fall": 0,
+          "forbidden": 12,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "effort_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 12,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "stability_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 12,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "effort_vs_stability": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 0,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      }
+    },
+    {
+      "seed": 52917,
+      "bank": "unperturbed_all",
+      "fixed": {
+        "successes": 28,
+        "total": 28,
+        "mean_good_fraction": 1.0,
+        "successful_whole_body_rms_Nm": 4.053327784946986,
+        "successful_effort_proxy": 0.005517156666943005,
+        "force_max_N": 297.2620849609375,
+        "failures": {
+          "fall": 0,
+          "forbidden": 0,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "stability": {
+        "successes": 0,
+        "total": 28,
+        "mean_good_fraction": 0.08875,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 477.84442138671875,
+        "failures": {
+          "fall": 0,
+          "forbidden": 28,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "effort": {
+        "successes": 0,
+        "total": 28,
+        "mean_good_fraction": 0.3343214285714286,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 397.18438720703125,
+        "failures": {
+          "fall": 0,
+          "forbidden": 28,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "effort_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 28,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "stability_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 28,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "effort_vs_stability": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 0,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      }
+    },
+    {
+      "seed": 52917,
+      "bank": "all_conditions",
+      "fixed": {
+        "successes": 40,
+        "total": 40,
+        "mean_good_fraction": 0.9998249999999999,
+        "successful_whole_body_rms_Nm": 4.065305164204856,
+        "successful_effort_proxy": 0.005610955674556887,
+        "force_max_N": 313.904296875,
+        "failures": {
+          "fall": 0,
+          "forbidden": 0,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "stability": {
+        "successes": 0,
+        "total": 40,
+        "mean_good_fraction": 0.09682500000000001,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 477.84442138671875,
+        "failures": {
+          "fall": 0,
+          "forbidden": 40,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "effort": {
+        "successes": 0,
+        "total": 40,
+        "mean_good_fraction": 0.34677499999999994,
+        "successful_whole_body_rms_Nm": null,
+        "successful_effort_proxy": null,
+        "force_max_N": 397.18438720703125,
+        "failures": {
+          "fall": 0,
+          "forbidden": 40,
+          "torque": 0,
+          "impact": 0,
+          "joint_limit": 0
+        }
+      },
+      "effort_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 40,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "stability_vs_fixed": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 40,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      },
+      "effort_vs_stability": {
+        "common_successes": 0,
+        "gained": 0,
+        "lost": 0,
+        "normalized_torque_squared": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "all_joint_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "leg_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "torso_arm_hand_rms_Nm": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        },
+        "foot_load_bw": {
+          "reference": null,
+          "candidate": null,
+          "percent_change": null
+        }
+      }
+    }
+  ],
+  "by_height": [
+    {
+      "seed": 52911,
+      "arm": "fixed",
+      "height_m": 0.25,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 2.9386056518554686,
+      "successful_effort_proxy": 0.0001382932886481285,
+      "force_max_N": 297.2620849609375,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "fixed",
+      "height_m": 0.275,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 2.926631103515625,
+      "successful_effort_proxy": 0.00022095928341150285,
+      "force_max_N": 292.5032958984375,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "fixed",
+      "height_m": 0.3,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 3.009546813964844,
+      "successful_effort_proxy": 0.0006775415688753129,
+      "force_max_N": 268.5655212402344,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "fixed",
+      "height_m": 0.325,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 3.4276464233398434,
+      "successful_effort_proxy": 0.0018177020847797395,
+      "force_max_N": 236.77288818359375,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "fixed",
+      "height_m": 0.35,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 3.8070848388671874,
+      "successful_effort_proxy": 0.002994715213775635,
+      "force_max_N": 216.6617889404297,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "fixed",
+      "height_m": 0.375,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 5.942207763671875,
+      "successful_effort_proxy": 0.015509481668472292,
+      "force_max_N": 43.795719146728516,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "fixed",
+      "height_m": 0.4,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 6.321571899414062,
+      "successful_effort_proxy": 0.01726140356063843,
+      "force_max_N": 25.31220245361328,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "stability",
+      "height_m": 0.25,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.07575,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 298.49761962890625,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "stability",
+      "height_m": 0.275,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.124,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 293.5772399902344,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 4
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "stability",
+      "height_m": 0.3,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.158,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 269.4690856933594,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "stability",
+      "height_m": 0.325,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.2485,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 237.6298828125,
+      "failures": {
+        "fall": 0,
+        "forbidden": 2,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 4
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "stability",
+      "height_m": 0.35,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.25125,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 217.25949096679688,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 4
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "stability",
+      "height_m": 0.375,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.08075,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 162.10145568847656,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 4
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "stability",
+      "height_m": 0.4,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.11025,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 151.3175811767578,
+      "failures": {
+        "fall": 0,
+        "forbidden": 1,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 3
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "effort",
+      "height_m": 0.25,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.6132500000000001,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 299.3169250488281,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 4
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "effort",
+      "height_m": 0.275,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.67125,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 294.78656005859375,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 4
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "effort",
+      "height_m": 0.3,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.6495,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 270.45428466796875,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 4
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "effort",
+      "height_m": 0.325,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.63375,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 238.9676055908203,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 4
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "effort",
+      "height_m": 0.35,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.5515,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 218.90623474121094,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 4
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "effort",
+      "height_m": 0.375,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.29425,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 75.36185455322266,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52911,
+      "arm": "effort",
+      "height_m": 0.4,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.191,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 67.14077758789062,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "fixed",
+      "height_m": 0.25,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 2.9386056518554686,
+      "successful_effort_proxy": 0.0001382932886481285,
+      "force_max_N": 297.2620849609375,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "fixed",
+      "height_m": 0.275,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 2.926631103515625,
+      "successful_effort_proxy": 0.00022095928341150285,
+      "force_max_N": 292.5032958984375,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "fixed",
+      "height_m": 0.3,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 3.009546813964844,
+      "successful_effort_proxy": 0.0006775415688753129,
+      "force_max_N": 268.5655212402344,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "fixed",
+      "height_m": 0.325,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 3.4276464233398434,
+      "successful_effort_proxy": 0.0018177020847797395,
+      "force_max_N": 236.77288818359375,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "fixed",
+      "height_m": 0.35,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 3.8070848388671874,
+      "successful_effort_proxy": 0.002994715213775635,
+      "force_max_N": 216.6617889404297,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "fixed",
+      "height_m": 0.375,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 5.942207763671875,
+      "successful_effort_proxy": 0.015509481668472292,
+      "force_max_N": 43.795719146728516,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "fixed",
+      "height_m": 0.4,
+      "successes": 4,
+      "total": 4,
+      "mean_good_fraction": 1.0,
+      "successful_whole_body_rms_Nm": 6.321571899414062,
+      "successful_effort_proxy": 0.01726140356063843,
+      "force_max_N": 25.31220245361328,
+      "failures": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "stability",
+      "height_m": 0.25,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.0695,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 296.86083984375,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "stability",
+      "height_m": 0.275,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.15200000000000002,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 292.09796142578125,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "stability",
+      "height_m": 0.3,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.13025,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 268.1160583496094,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "stability",
+      "height_m": 0.325,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.12175,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 236.29676818847656,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "stability",
+      "height_m": 0.35,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.1045,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 228.15072631835938,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "stability",
+      "height_m": 0.375,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.025,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 339.1158447265625,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "stability",
+      "height_m": 0.4,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.01825,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 477.84442138671875,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "effort",
+      "height_m": 0.25,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.12225,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 299.7080993652344,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "effort",
+      "height_m": 0.275,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.25275000000000003,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 294.25335693359375,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "effort",
+      "height_m": 0.3,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.33425,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 269.9375915527344,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "effort",
+      "height_m": 0.325,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.4345,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 291.1399230957031,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "effort",
+      "height_m": 0.35,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.36874999999999997,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 397.18438720703125,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "effort",
+      "height_m": 0.375,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.44425000000000003,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 153.46238708496094,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    },
+    {
+      "seed": 52917,
+      "arm": "effort",
+      "height_m": 0.4,
+      "successes": 0,
+      "total": 4,
+      "mean_good_fraction": 0.3835,
+      "successful_whole_body_rms_Nm": null,
+      "successful_effort_proxy": null,
+      "force_max_N": 152.10223388671875,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      }
+    }
+  ],
+  "source_hashes_verified": true,
+  "initial_arm_weights_equal": true,
+  "caution": "40 conditions per policy use28 unique captured states;12 states repeat with perturbations. Two training seeds are not broad statistical evidence. Effort comparisons are conditional on shared successes."
+}

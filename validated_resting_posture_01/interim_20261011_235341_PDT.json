@@ -1,0 +1,171 @@
+{
+  "checked_utc": "2026-10-12T06:53:41.114127+00:00",
+  "partial": true,
+  "status": {
+    "phase": "running",
+    "utc": "2026-10-12T06:50:56.265051+00:00",
+    "job": "train_52911_effort",
+    "completed": [
+      "unit_tests",
+      "reset_probe",
+      "heldout_starts_bank",
+      "heldout_heights_bank",
+      "fixed_starts",
+      "fixed_heights",
+      "fixed_impulse",
+      "train_52911_stability",
+      "starts_52911_stability",
+      "heights_52911_stability",
+      "impulse_52911_stability"
+    ]
+  },
+  "training": {
+    "train_52911_stability": {
+      "update": 128,
+      "transitions": 131072,
+      "seconds": 766.6582206449821,
+      "active_transitions": 110310,
+      "warmup_transitions": 20762,
+      "losses": {
+        "value": 0.49769945939381915,
+        "surrogate": -0.005492851758996646,
+        "entropy": -10.927637338638306
+      },
+      "completed": 831,
+      "successes": 0
+    },
+    "train_52911_effort": {
+      "update": 25,
+      "transitions": 25600,
+      "seconds": 150.6005965420045,
+      "active_transitions": 21576,
+      "warmup_transitions": 4024,
+      "losses": {
+        "value": 0.32151073465744656,
+        "surrogate": -0.0047407861178119974,
+        "entropy": -10.976173162460327
+      },
+      "completed": 163,
+      "successes": 0
+    }
+  },
+  "banks": [
+    {
+      "bank": "starts",
+      "total": 16,
+      "fixed_success": 16,
+      "stability_success": 0,
+      "common_successes": 0,
+      "startup_error": 0.0,
+      "fixed_commands_constant": true,
+      "failures": {
+        "fall": 0,
+        "forbidden": 9,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 7
+      }
+    },
+    {
+      "bank": "heights",
+      "total": 12,
+      "fixed_success": 12,
+      "stability_success": 0,
+      "common_successes": 0,
+      "startup_error": 0.0,
+      "fixed_commands_constant": true,
+      "failures": {
+        "fall": 0,
+        "forbidden": 2,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 12
+      }
+    },
+    {
+      "bank": "impulse",
+      "total": 12,
+      "fixed_success": 12,
+      "stability_success": 0,
+      "common_successes": 0,
+      "startup_error": 0.0,
+      "fixed_commands_constant": true,
+      "failures": {
+        "fall": 0,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 12
+      }
+    }
+  ],
+  "by_height": [
+    {
+      "height_cm": 25.0,
+      "n": 4,
+      "fixed_success": 4,
+      "stability_success": 0,
+      "fixed_mean_instantaneous_all_joint_rms_Nm": 2.9386056518554686,
+      "fixed_foot_load_bw": 0.061657222747802734,
+      "candidate_mean_qualifying_fraction": 0.07575
+    },
+    {
+      "height_cm": 27.500000000000004,
+      "n": 4,
+      "fixed_success": 4,
+      "stability_success": 0,
+      "fixed_mean_instantaneous_all_joint_rms_Nm": 2.926631103515625,
+      "fixed_foot_load_bw": 0.08293919372558593,
+      "candidate_mean_qualifying_fraction": 0.124
+    },
+    {
+      "height_cm": 30.0,
+      "n": 4,
+      "fixed_success": 4,
+      "stability_success": 0,
+      "fixed_mean_instantaneous_all_joint_rms_Nm": 3.009546813964844,
+      "fixed_foot_load_bw": 0.15504278945922853,
+      "candidate_mean_qualifying_fraction": 0.158
+    },
+    {
+      "height_cm": 32.5,
+      "n": 4,
+      "fixed_success": 4,
+      "stability_success": 0,
+      "fixed_mean_instantaneous_all_joint_rms_Nm": 3.4276464233398434,
+      "fixed_foot_load_bw": 0.2560508346557617,
+      "candidate_mean_qualifying_fraction": 0.2485
+    },
+    {
+      "height_cm": 35.0,
+      "n": 4,
+      "fixed_success": 4,
+      "stability_success": 0,
+      "fixed_mean_instantaneous_all_joint_rms_Nm": 3.8070848388671874,
+      "fixed_foot_load_bw": 0.3274963684082031,
+      "candidate_mean_qualifying_fraction": 0.25125
+    },
+    {
+      "height_cm": 37.5,
+      "n": 4,
+      "fixed_success": 4,
+      "stability_success": 0,
+      "fixed_mean_instantaneous_all_joint_rms_Nm": 5.942207763671875,
+      "fixed_foot_load_bw": 0.864696517944336,
+      "candidate_mean_qualifying_fraction": 0.08075
+    },
+    {
+      "height_cm": 40.0,
+      "n": 4,
+      "fixed_success": 4,
+      "stability_success": 0,
+      "fixed_mean_instantaneous_all_joint_rms_Nm": 6.321571899414062,
+      "fixed_foot_load_bw": 0.9208520812988281,
+      "candidate_mean_qualifying_fraction": 0.11025
+    }
+  ],
+  "source_hashes_verified": 34,
+  "seed52911_initial_arm_weights_equal": true,
+  "conclusion": "First stability-only seed has no full-duration successes; no valid paired effort saving can be claimed. Effort-trained policy has no completed evaluations yet.",
+  "limitations": "One completed stability-only learner. 40 conditions are 28 unique reset states plus12 repeated under impulse. No falls recorded, but joint-margin and forbidden-contact failures. Torque proxy is not electrical energy. Training definitions unchanged."
+}
