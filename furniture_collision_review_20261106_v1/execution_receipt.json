@@ -1,0 +1,561 @@
+{
+  "utc": "2026-11-07T01:07:15.606887+00:00",
+  "state": "TWO_FULL_LCOUCH_TRIALS_FAILED_STOOL_UNRESOLVED_NO_PPO",
+  "human_authorization": "Fix stool and L-couch from saved data; continue20demos/PPO/all72when4090free; unchanged action limits/success criteria.",
+  "actual_progress": [
+    "Corrected camera contact-plane association for the faceted L-couch; changed saved-data support construction, not the furniture mesh/material.",
+    "Rejected translated old camera clouds after actual new resets exposed13-63mmfront-edge loss.",
+    "Derived and tested54degree simulated rear-camera mounting angle instead of45degrees; initial depth-to-mesh and full collision/timing checks passed.",
+    "Executed and independently audited two complete20s L-couchrollouts on4090only. Both failed. No successfuldemonstration claimed.",
+    "Fixed NumPy audit JSON serialization; stopped repeated implementation failures; all aborted starts preserved."
+  ],
+  "stool": {
+    "resolved": false,
+    "observed_surface_expanded_points": 888,
+    "prior_selected_points": 456,
+    "changed_model": "Curved top represented by actual camera surface triangles; legal proximal-thigh support and45degreeobjectorientation considered.",
+    "outcome": "Two actualposeconstructions failed unchanged balance/patchinset. A physically bounded closer-placement construction hit its existingLPcountcap; no retry or limitincrease. No stool physics."
+  },
+  "observations": {
+    "initial_camera_fix_not_full_path_fix": true,
+    "observer_all_depth_candidate_rejected": "Saved-frame test recovered0of6lostpatchframes. Pointsactually leavecameraimage/areoccluded; no softwarePASSclaimed.",
+    "contact_mapping": "Later mixedfacets/seams make aggregatecontactmappingambiguous. Zero validatedload must notbe described aszero physicalcontact. Earlier loadedslip independentlyfailsbothtrials."
+  },
+  "physical": {
+    "new_complete_rollouts": 2,
+    "new_successful_demos": 0,
+    "final_hold_s": [
+      0.0,
+      0.0
+    ],
+    "new_PPO_updates": 0,
+    "new_72case_checks": 0,
+    "baseline_clean": "64/72",
+    "accepted_old_failure_repairs": 0,
+    "fresh_holdout": "closed"
+  },
+  "resource_accounting": {
+    "offline_constructions": [
+      {
+        "source": "/home/kadir/humanoid-sitting/experiments/furniture_collision_repair_20261106_v4/seat_models/receipt.json",
+        "sha256": "0a0210eb22f206dd5df5c105dee449632f0f028a6428ff937eafc9bed4fcd552",
+        "cold_cases": 2,
+        "model_admitted": 0,
+        "total_seconds": 8.502234593004687,
+        "physics_steps": 0
+      },
+      {
+        "source": "/home/kadir/humanoid-sitting/experiments/furniture_collision_repair_20261106_v5/seat_models/receipt.json",
+        "sha256": "44706acb7ff07030363449b210952f6f5ec3e10f0f8a60bbe01cf40d7894a8e6",
+        "cold_cases": 4,
+        "model_admitted": 2,
+        "total_seconds": 16.9463536030089,
+        "physics_steps": 0
+      },
+      {
+        "source": "/home/kadir/humanoid-sitting/experiments/furniture_collision_repair_20261106_v6/seat_models/receipt.json",
+        "sha256": "2764ecc56612fd9a1ced50c82f085e5be87ee2ad4096e09abd4b66ee2078ed7b",
+        "cold_cases": 2,
+        "model_admitted": 0,
+        "total_seconds": 0.28579975001048297,
+        "physics_steps": 0
+      },
+      {
+        "source": "/home/kadir/humanoid-sitting/experiments/furniture_collision_repair_20261106_v7/seat_models/receipt.json",
+        "sha256": "4716454a15ea4ef47a6727d9e052e47633793b8b35b9a292d6e30b141cfc6cb3",
+        "cold_cases": 2,
+        "model_admitted": 0,
+        "total_seconds": 0.2686246230005054,
+        "physics_steps": 0
+      },
+      {
+        "source": "/home/kadir/humanoid-sitting/experiments/furniture_collision_repair_20261106_v8/seat_models/receipt.json",
+        "sha256": "78f191d7473f4eb23552be44268015f9152d182bc685d137dd8884e07d7d98ac",
+        "cold_cases": 2,
+        "model_admitted": 0,
+        "total_seconds": 1.1863149069977226,
+        "physics_steps": 0
+      },
+      {
+        "source": "/home/kadir/humanoid-sitting/experiments/furniture_stool_placement_20261106_v1/seat_models/receipt.json",
+        "sha256": "c8617c3a3790a6bd7c939a6d59eda4217ed3ab0eac7d0c5c8024cfd1ceb43f03",
+        "cold_cases": 2,
+        "model_admitted": 0,
+        "total_seconds": 6.030244419991504,
+        "physics_steps": 0
+      },
+      {
+        "source": "/home/kadir/humanoid-sitting/experiments/furniture_fresh_view_construction_20261106_v1/models/receipt.json",
+        "sha256": "e7bb4bcf1e12fcfad9becbfaf2db6c9e7361d31c70b9e8faf0aae9c268a07601",
+        "cold_cases": 8,
+        "model_admitted": 0,
+        "total_seconds": 55.60444085599738,
+        "physics_steps": 0
+      }
+    ],
+    "full_trials_active_controls": 2000,
+    "full_trials_warmup_controls": 50,
+    "full_trials_physics_substeps": 8200,
+    "completed_pre_motion_reset_physics_substeps": 800,
+    "interrupted_initialization_substeps": "unknown0..100; not claimed zero",
+    "prior_generic_disk_guard_stop": "no launches",
+    "disk_reclamation": "Sparse allocation attempt preserved46historicalhashes but recoveredno usefulspace.",
+    "finite_demo_storage": "256MiBperjobcap plus10GiBfree reserve; previous20GBgenericguard replaced by bounded batch accounting. Control/physicalgates unaffected.",
+    "original16howner_deadline_retained": true,
+    "recurring_automation": false,
+    "active_own_scientific_workers": 0,
+    "initial_saved_patch_arithmetic": {
+      "source": "/Users/kadir/humanoid-sitting-control/furniture_collision_repair_20261106_v4/patch_arithmetic.json",
+      "seconds": 0.8718413969909307,
+      "cases": 4,
+      "optimization_solves": 0,
+      "physics_steps": 0
+    },
+    "limits": "Allcaseconstruction+audit caps45s unchanged; LPcount-capfailure preserved. Tool/read-only/source preparation/rendering overhead is outside these scientific construction timings and is not represented as a solver runtime."
+  },
+  "pre_motion_starts": [
+    {
+      "case": "sit_modern_coffee_table_01_center_normal_landing",
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_load_repair_20261106_v3/calibration_demos/sit_modern_coffee_table_01_center_normal_landing",
+      "active_controls": 0,
+      "warmup_controls": 25,
+      "physics_substeps": 100,
+      "completed": false
+    },
+    {
+      "case": "sit_modern_coffee_table_01_angled_normal_landing",
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_load_repair_20261106_v3/calibration_demos/sit_modern_coffee_table_01_angled_normal_landing",
+      "active_controls": 0,
+      "warmup_controls": 25,
+      "physics_substeps": 100,
+      "completed": false
+    },
+    {
+      "case": "sit_myd1WSucAz_angled_normal_landing",
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_load_repair_20261106_v3/calibration_demos/sit_myd1WSucAz_angled_normal_landing",
+      "accounting": "Interrupted during initialization; no active-control trajectory; exact warmupcount unavailable,0..100substeps",
+      "completed": false
+    },
+    {
+      "case": "sit_myd1WSucAz_center_normal_landing",
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_collision_collection_20261106_v2/calibration_demos/sit_myd1WSucAz_center_normal_landing",
+      "active_controls": 0,
+      "warmup_controls": 25,
+      "physics_substeps": 100,
+      "completed": false
+    },
+    {
+      "case": "sit_6MoOyPtetL_center_normal_landing",
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_collision_collection_20261106_v2/calibration_demos/sit_6MoOyPtetL_center_normal_landing",
+      "active_controls": 0,
+      "warmup_controls": 25,
+      "physics_substeps": 100,
+      "completed": false
+    },
+    {
+      "case": "sit_6MoOyPtetL_angled_normal_landing",
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_collision_collection_20261106_v2/calibration_demos/sit_6MoOyPtetL_angled_normal_landing",
+      "active_controls": 0,
+      "warmup_controls": 25,
+      "physics_substeps": 100,
+      "completed": false
+    },
+    {
+      "case": "sit_1kwsjhpY84_angled_local_patch_normal_landing",
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_collision_collection_20261106_v2/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing",
+      "active_controls": 0,
+      "warmup_controls": 25,
+      "physics_substeps": 100,
+      "completed": false
+    },
+    {
+      "case": "sit_1kwsjhpY84_center_local_patch_normal_landing",
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_collision_collection_20261106_v2/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing",
+      "active_controls": 0,
+      "warmup_controls": 25,
+      "physics_substeps": 100,
+      "completed": false
+    },
+    {
+      "case": "sit_myd1WSucAz_angled_normal_landing",
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_collision_collection_20261106_v2/calibration_demos/sit_myd1WSucAz_angled_normal_landing",
+      "active_controls": 0,
+      "warmup_controls": 25,
+      "physics_substeps": 100,
+      "completed": false
+    }
+  ],
+  "trials": [
+    {
+      "case": "sit_1kwsjhpY84_angled_local_patch_normal_landing",
+      "physical_audit": {
+        "integrity_pass": true,
+        "admitted": false,
+        "classification": "FAILED_ATTEMPT",
+        "variant": {
+          "id": "sit_1kwsjhpY84_angled_local_patch_normal_landing",
+          "asset": "1kwsjhpY84",
+          "case": "1kwsjhpY84_seat",
+          "title": "L-shaped couch",
+          "task": "sitting",
+          "intent": "seat",
+          "x": 0.015,
+          "y": 0.6674,
+          "yaw_deg": 3.0,
+          "teacher": "preserved_best09_sitting",
+          "placement_reason": "Align with the front chaise cushion instead of the unreachable recessed corner; chosen from asset geometry before simulation.",
+          "closer_m": 0.11644949071726914,
+          "world_y_shift_m": 0.025,
+          "object_yaw_change_deg": 0.0
+        },
+        "full20s": true,
+        "physical_clean": false,
+        "final_hold_s": 0.0,
+        "minimum_final_intended_load_bw": 0.0,
+        "slip_ticks": 17,
+        "illegal_ticks": 241,
+        "warm_failure": false,
+        "mesh_mapping_validated": false,
+        "first_failure_s": 15.200000000000001,
+        "max_command_increment_rad": 0.003000020980834961,
+        "files": {
+          "trajectory.npz": "24117f3460657aefb4a3647bb8e09e303b5b3f641872e76b2c19dbf3ee99a6fa"
+        },
+        "independent_auditor_sha256": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b"
+      },
+      "camera_depth_audit": {
+        "frame": 0,
+        "input_sha256": "96619f9e21d26445837b757b6518ca47567b74476a7472e5716d53b1e92c9b09",
+        "projected_pixels": 884,
+        "matching_pixels": 839,
+        "occluded_pixels": 45,
+        "mismatch_pixels": 0,
+        "geometry_pass": true,
+        "visible_target_pixels": 440,
+        "target_observable": true,
+        "depth_p99_m": 4.202993626156726e-07,
+        "selected_point_count": 260,
+        "selected_target_fraction": 1.0,
+        "selected_max_mesh_distance_m": 2.2797608962637582e-07,
+        "original_plane_gate": true,
+        "normal_error_deg": 0.9521811586481632,
+        "offset_error_m": 0.005624391295386055
+      },
+      "model_audit": {
+        "geometry": {
+          "passed": true,
+          "tests": {
+            "bilateral_feet_fixed": true,
+            "balance_in_foot_support": true,
+            "hover_clearance": true,
+            "contact_patch_observed_interior": true,
+            "command_margin_unchanged": true,
+            "initial_command_exact": true,
+            "time_for_original_hold": true
+          },
+          "max_foot_error": 0.000202838115541871,
+          "min_command_margin": 0.25999997307436695,
+          "min_patch_inset": 0.023604743559259095,
+          "com_range": [
+            -0.05027189158832738,
+            0.04514998984862813
+          ],
+          "earliest_settled_seconds": 13.71865560587422,
+          "missing_before_physics": [
+            "full observed-obstacle clearance",
+            "final landing/load controller",
+            "live quiet-state gate"
+          ],
+          "simulation_admitted": false,
+          "physical_success": false
+        },
+        "commands": {
+          "passed": true,
+          "tests": {
+            "discrete_filter_exact": true,
+            "original_rate_limit": true,
+            "desired_command_margin": true,
+            "normal_approach": true,
+            "feet_fixed": true,
+            "landing_command_rate": true,
+            "original_hold_time_reserved": true
+          },
+          "maximum_increment_rad": 0.002999970000000296,
+          "minimum_desired_margin_rad": 0.25999997307436695,
+          "normal_path_tangent_drift_m": 0.0002491235566810624,
+          "nominal_latest_settled_s": 12.700000000000001,
+          "final_model_gap_m": -0.002995861353453144,
+          "actual_quiet_gate_may_delay": true,
+          "missing_before_physics": [
+            "full collision clearance",
+            "live sensor controller and reset checks"
+          ],
+          "simulation_admitted": false,
+          "physical_success": false
+        },
+        "collision": {
+          "passed": true,
+          "sampled_poses": 189,
+          "triangle_tests": 392,
+          "forbidden_or_early_clearance_intersections": [],
+          "forbidden_or_early_clearance_intersection_count": 0,
+          "expected_target_approaches": 38,
+          "clearance_buffer_m": 0.006,
+          "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+          "simulation_success": false,
+          "accelerator": "cKDTree exact AABB + signed halfspace rejection/interior; original clip on boundary",
+          "fast_exclusions": 350,
+          "fast_inside": 0,
+          "slow_clips": 42
+        },
+        "seconds": 8.89099019599962
+      },
+      "first_invalid_camera_control_s": 5.9,
+      "hover_start_s": 8.700000000000001,
+      "normal_landing_started": false,
+      "longest_pre_failure_quiet_run_ignoring_camera_and_gyro": 0,
+      "minimum_max_joint_speed_in_hover": 0.22394919395446777,
+      "patch_visibility": [
+        {
+          "t_s": 7.0,
+          "initial_patch_points": 260,
+          "in_image": 16,
+          "visible": 0,
+          "occluded": 16,
+          "vertical_pixel_bounds": [
+            95.873995477441,
+            123.72484203184106
+          ]
+        },
+        {
+          "t_s": 13.0,
+          "initial_patch_points": 260,
+          "in_image": 0,
+          "visible": 0,
+          "occluded": 0,
+          "vertical_pixel_bounds": [
+            103.16804903033841,
+            137.17616457641196
+          ]
+        }
+      ],
+      "first_mapping_invalid_physics_clock_s": 15.700000000000001,
+      "primary_limit": "Both ankle-roll joints kept moving before contact;25currentquiet gate never opened. Selectedpatch also leaves/occludesimage. Loadedslip occurs before later seam-mappingambiguity.",
+      "files": {
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/frame_1000.json": "601c9f5a58c8b1227d1f36692bedbc1827276414d774dae58cbacec40662a6a0",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/manifest.json": "36f64a272f2950d5c4174eda77615bdbc02031c21e1ebea769e1420324f02559",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/frame_1000.npz": "0f9a7309533f464860eee137897ee5fd78f1c5160eb9ffbbcabd31dd6ee7b31b",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/episodes.jsonl": "a29ba405c045ad28f87e9f14ad57b00e309852d7d0f40672b65113e1f2a285ea",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/camera_depth_admission.json": "0e7db32101396c7ad9e02af5d02aefa7bd6876e3da74d3f39a758b3ce4c92631",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/frame_650.json": "357974332bc678f0d77b43ad1d59a58689579f65e3c584ee76990dcc33b8cfcc",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/complete.json": "cd863dac61ec1f4f351e4e896bd5ce42c8a63fd553771ca0aa609bb40440d4f1",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/frame_350.npz": "f18f9052feae7f377af81f6b247a2e8dd8c3c8425c3b8c50f24cf12b8ae9b81e",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/construction_input_freeze.json": "e5cde7785045fa5ae076d49ed9cb8dd9d2ec2ec39767841d614f0e0cfccc6942",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/frame_650.npz": "400336a9293dc291acd5fc3638dbb91b91989e7cbdd46269ada75c32217efaf3",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/trajectory.npz": "24117f3460657aefb4a3647bb8e09e303b5b3f641872e76b2c19dbf3ee99a6fa",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/fresh_geometry_admission.json": "ce18cdba2eeefc4eb323e1e2209da32a915ba1d3b39fed32c16d8848d45522a2",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/contact_mapping.json": "329ead696207a882cac29b98fe8147a79a505560ba065ace3ffffe96456b374d",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/frame_0.npz": "96619f9e21d26445837b757b6518ca47567b74476a7472e5716d53b1e92c9b09",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/sensor_audit.json": "302ecf159108bb106b09d082bbd953640e74558733151112f10912fe840b1a36",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/independent_audit.json": "823a3d0709ad8d94956b9d5422219600546138f18c9e61ae444675f2839380ab",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/frame_350.json": "f6168e0c03e4ea401f4d6bab452dba84873e6da1d28b75d64ea206eee041ded3",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/plan.json": "2124cdc1f43ae298f152c861e65aac9b1382fd6de6956e68fd9e13368b60154b",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/controller_signals.json": "9b02b285cf19d1f585cafc4a34471502016af96d9bd0882e46d50a60fe5ab7c9",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/results.json": "9e0eedac336b87fb7350911c83fe49102768a8b86d2aa4b7f9629333cebe4842",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/frame_0.json": "6069fe6ce632e5888094008ff981bda4c15358c99d2dd8481096d122575ef246",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/construction_inputs.npz": "25c80a24268c69ee249416e55dc6415df99a8b82647e3e5575cfe3b592171107",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+      },
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing"
+    },
+    {
+      "case": "sit_1kwsjhpY84_center_local_patch_normal_landing",
+      "physical_audit": {
+        "integrity_pass": true,
+        "admitted": false,
+        "classification": "FAILED_ATTEMPT",
+        "variant": {
+          "id": "sit_1kwsjhpY84_center_local_patch_normal_landing",
+          "asset": "1kwsjhpY84",
+          "case": "1kwsjhpY84_seat",
+          "title": "L-shaped couch",
+          "task": "sitting",
+          "intent": "seat",
+          "x": 0.0,
+          "y": 0.6374,
+          "yaw_deg": 0.0,
+          "teacher": "preserved_best09_sitting",
+          "placement_reason": "Align with the front chaise cushion instead of the unreachable recessed corner; chosen from asset geometry before simulation.",
+          "closer_m": 0.1093483933843926,
+          "world_y_shift_m": 0.055,
+          "object_yaw_change_deg": 0.0
+        },
+        "full20s": true,
+        "physical_clean": false,
+        "final_hold_s": 0.0,
+        "minimum_final_intended_load_bw": 0.0,
+        "slip_ticks": 18,
+        "illegal_ticks": 380,
+        "warm_failure": false,
+        "mesh_mapping_validated": false,
+        "first_failure_s": 12.42,
+        "max_command_increment_rad": 0.003000020980834961,
+        "files": {
+          "trajectory.npz": "3862f6043df60ef6a4fa93547f8c245609970aa5d21776c32396789a69c92530"
+        },
+        "independent_auditor_sha256": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b"
+      },
+      "camera_depth_audit": {
+        "frame": 0,
+        "input_sha256": "c3bbbcc61242d0d88deff069f2b01f10b879b7d99854211581182f6432716e38",
+        "projected_pixels": 870,
+        "matching_pixels": 827,
+        "occluded_pixels": 43,
+        "mismatch_pixels": 0,
+        "geometry_pass": true,
+        "visible_target_pixels": 428,
+        "target_observable": true,
+        "depth_p99_m": 3.470787469384009e-07,
+        "selected_point_count": 279,
+        "selected_target_fraction": 1.0,
+        "selected_max_mesh_distance_m": 2.1119149321535677e-07,
+        "original_plane_gate": true,
+        "normal_error_deg": 1.8353519303112236,
+        "offset_error_m": 0.0058587883982811895
+      },
+      "model_audit": {
+        "geometry": {
+          "passed": true,
+          "tests": {
+            "bilateral_feet_fixed": true,
+            "balance_in_foot_support": true,
+            "hover_clearance": true,
+            "contact_patch_observed_interior": true,
+            "command_margin_unchanged": true,
+            "initial_command_exact": true,
+            "time_for_original_hold": true
+          },
+          "max_foot_error": 0.00019125818313359534,
+          "min_command_margin": 0.25999997307436695,
+          "min_patch_inset": 0.02463789594825236,
+          "com_range": [
+            -0.05027219936873773,
+            0.04514991493842348
+          ],
+          "earliest_settled_seconds": 13.549249689862398,
+          "missing_before_physics": [
+            "full observed-obstacle clearance",
+            "final landing/load controller",
+            "live quiet-state gate"
+          ],
+          "simulation_admitted": false,
+          "physical_success": false
+        },
+        "commands": {
+          "passed": true,
+          "tests": {
+            "discrete_filter_exact": true,
+            "original_rate_limit": true,
+            "desired_command_margin": true,
+            "normal_approach": true,
+            "feet_fixed": true,
+            "landing_command_rate": true,
+            "original_hold_time_reserved": true
+          },
+          "maximum_increment_rad": 0.002999970000000296,
+          "minimum_desired_margin_rad": 0.25999997307436695,
+          "normal_path_tangent_drift_m": 0.00047999866395284055,
+          "nominal_latest_settled_s": 12.56,
+          "final_model_gap_m": -0.0027022254810953883,
+          "actual_quiet_gate_may_delay": true,
+          "missing_before_physics": [
+            "full collision clearance",
+            "live sensor controller and reset checks"
+          ],
+          "simulation_admitted": false,
+          "physical_success": false
+        },
+        "collision": {
+          "passed": true,
+          "sampled_poses": 189,
+          "triangle_tests": 431,
+          "forbidden_or_early_clearance_intersections": [],
+          "forbidden_or_early_clearance_intersection_count": 0,
+          "expected_target_approaches": 50,
+          "clearance_buffer_m": 0.006,
+          "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+          "simulation_success": false,
+          "accelerator": "cKDTree exact AABB + signed halfspace rejection/interior; original clip on boundary",
+          "fast_exclusions": 379,
+          "fast_inside": 0,
+          "slow_clips": 52
+        },
+        "seconds": 8.781490973997279
+      },
+      "first_invalid_camera_control_s": 6.1000000000000005,
+      "hover_start_s": 8.56,
+      "normal_landing_started": false,
+      "longest_pre_failure_quiet_run_ignoring_camera_and_gyro": 0,
+      "minimum_max_joint_speed_in_hover": 0.24523763358592987,
+      "patch_visibility": [
+        {
+          "t_s": 7.0,
+          "initial_patch_points": 279,
+          "in_image": 15,
+          "visible": 0,
+          "occluded": 15,
+          "vertical_pixel_bounds": [
+            94.88708194918885,
+            124.41452740181421
+          ]
+        },
+        {
+          "t_s": 13.0,
+          "initial_patch_points": 279,
+          "in_image": 0,
+          "visible": 0,
+          "occluded": 0,
+          "vertical_pixel_bounds": [
+            110.55800432991236,
+            152.519179869535
+          ]
+        }
+      ],
+      "first_mapping_invalid_physics_clock_s": 12.92,
+      "primary_limit": "Both ankle-roll joints kept moving before contact;25currentquiet gate never opened. Selectedpatch also leaves/occludesimage. Loadedslip occurs before later seam-mappingambiguity.",
+      "files": {
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/frame_1000.json": "445ba206bca089cb4c2ce23ee36a318525c840b3199a45d6b07f4454c207c603",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/manifest.json": "e8283a3cc0fcf2e34431b810d51b0331363844cf9d3d3ae4b29e55f2cfad9ce5",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/frame_1000.npz": "f33c26aed9735af5e29a4a77065f08c9c30f99f539d97e33f68bf7bd2773abd0",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/episodes.jsonl": "8194b430e02d6a713706d9a9818ad6693d32de56e4c7287d64d9cabebf009ca1",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/camera_depth_admission.json": "ab737ea854e806beebbc38c512ca4e0872b51cec31cf573612dd59dbd4c6196f",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/frame_650.json": "1971e1dd888128205ce55991c46216fd1d5b9014a252020da26ec90ae5809d13",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/complete.json": "784b5a00302645ad188da34e33b2cb4a43faba4ffc7a90c7328fd223b8892f7b",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/frame_350.npz": "ed097fff36aa5d13d00c189f0b4a6e3fddc4a3efbb41a0a1607e349bbd07edba",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/construction_input_freeze.json": "dd629d501382d42d8d6751869a212065c08b04dbe06348ffd046e3f29c788b39",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/frame_650.npz": "e86124063d575c4dfbf2eb02075685a2744279e535321b22e322bd213e76b4ba",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/trajectory.npz": "3862f6043df60ef6a4fa93547f8c245609970aa5d21776c32396789a69c92530",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/fresh_geometry_admission.json": "e70ec8a74fa651c07a476afe26ee16f4b144c7b46eaf91ebfce573ce6a336865",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/contact_mapping.json": "5b0065702ae9944d89ea416752b4de2dd32c900ccdcb9ebd33bfea46d4e2ff17",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/frame_0.npz": "c3bbbcc61242d0d88deff069f2b01f10b879b7d99854211581182f6432716e38",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/sensor_audit.json": "812c6c9360b44e7d31ef5182652fd56913de1ca54ca18d604f8fd494be2040d6",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/independent_audit.json": "5ba81aaae5afe3b34d60000139ab0af9e9e57bb25cd96b6b648528e83fb52b43",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/frame_350.json": "77e0df99937a1e4bc9f9f3240a5ca608cf41cb859f098f6a5a5c8794f395cda7",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/plan.json": "27038529aa18b50eb691c8c957fc7d1b9101775619c812a743236e08c3989e3a",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/controller_signals.json": "3ceba30315984e7c0325cd4d3b91018350842ee4e249b613361438f13b718f25",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/results.json": "17c726949070349729aa3b74885059e52074650be8744112085b433fc1637819",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/frame_0.json": "18d2fcb20a58bfaa9f66f90dae45e0842a7a6d8f6329ec5f6ca9c34bf67d6519",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/construction_inputs.npz": "163597b2c1392aa2336f2d2bd68036e37e640ab47fdd68ce5cc26eac06f2d616",
+        "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+      },
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing"
+    }
+  ],
+  "gpu_snapshot": "0, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 0 %, 44, 16 MiB\n1, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 89 %, 57, 5047 MiB\n",
+  "gpu_workers": "1154954, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 4840 MiB\n",
+  "GPU4070": "AIWorker untouched",
+  "next_work": "Do not retry these paths or claimcollisionPASSasrepair. Construct a posture/controller that stabilizes bilateral ankle roll under unchanged gains/actionbounds and maintains fresh observation of an associated surface throughoutapproach; independent dynamic/visibility witness required. Stool also needs an admissible concrete collision/contact placement within existing resourcecaps. Then collect10clean sitting+10cleanleaning on5objects,validateforcecoverage/imitation,run4090PPOandall72andvideo. No runnablePPOqueueexists yet.",
+  "video": "/Users/kadir/humanoid-sitting-control/furniture_collision_review_20261106_v1/l_couch_two_full_trials.mp4",
+  "video_manifest": "/Users/kadir/humanoid-sitting-control/furniture_collision_review_20261106_v1/video_manifest.json",
+  "software_status": "The all-current-depth tracking proposal was tested and rejected: zero lost-frame recoveries. It is not deployed."
+}

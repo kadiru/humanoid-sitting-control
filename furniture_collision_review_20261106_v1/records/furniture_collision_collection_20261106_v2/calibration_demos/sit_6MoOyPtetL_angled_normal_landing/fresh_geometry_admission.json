@@ -1,0 +1,53 @@
+{
+  "geometry": {
+    "passed": false,
+    "tests": {
+      "bilateral_feet_fixed": true,
+      "balance_in_foot_support": true,
+      "hover_clearance": false,
+      "contact_patch_observed_interior": false,
+      "command_margin_unchanged": true,
+      "initial_command_exact": true,
+      "time_for_original_hold": false
+    },
+    "max_foot_error": 0.0002031984851216014,
+    "min_command_margin": 0.25999997307436695,
+    "min_patch_inset": -0.02943522634248491,
+    "com_range": [
+      -0.05027202861108563,
+      0.045150006809640306
+    ],
+    "earliest_settled_seconds": 14.84735652106006,
+    "missing_before_physics": [
+      "full observed-obstacle clearance",
+      "final landing/load controller",
+      "live quiet-state gate"
+    ],
+    "simulation_admitted": false,
+    "physical_success": false
+  },
+  "commands": {
+    "passed": true,
+    "tests": {
+      "discrete_filter_exact": true,
+      "original_rate_limit": true,
+      "desired_command_margin": true,
+      "normal_approach": true,
+      "feet_fixed": true,
+      "landing_command_rate": true,
+      "original_hold_time_reserved": true
+    },
+    "maximum_increment_rad": 0.002999970000000296,
+    "minimum_desired_margin_rad": 0.25999997307436695,
+    "normal_path_tangent_drift_m": 0.000518040964220212,
+    "nominal_latest_settled_s": 13.64,
+    "final_model_gap_m": -0.005437087177414812,
+    "actual_quiet_gate_may_delay": true,
+    "missing_before_physics": [
+      "full collision clearance",
+      "live sensor controller and reset checks"
+    ],
+    "simulation_admitted": false,
+    "physical_success": false
+  }
+}

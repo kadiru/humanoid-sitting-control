@@ -1,0 +1,31 @@
+{
+  "passed": false,
+  "tests": {
+    "bilateral_feet_fixed": true,
+    "balance_in_foot_support": true,
+    "hover_clearance": true,
+    "contact_patch_observed_interior": true,
+    "command_margin_unchanged": true,
+    "initial_command_exact": true,
+    "time_for_original_hold": false
+  },
+  "max_foot_error": 0.0010730897335515092,
+  "min_command_margin": 0.25999997307436695,
+  "min_patch_inset": 0.034246951506638756,
+  "com_range": [
+    -0.05183913633019471,
+    0.045150006809640306
+  ],
+  "earliest_settled_seconds": 28.02646830727811,
+  "missing_before_physics": [
+    "full observed-obstacle clearance",
+    "final landing/load controller",
+    "live quiet-state gate"
+  ],
+  "simulation_admitted": false,
+  "physical_success": false,
+  "source_sha256": "980741f7393cb61e410be755d6f4a4ea318291e4235cc830211e4d33241b6441",
+  "solver_calls": 0,
+  "reason_for_report_completion": "Original audit result used NumPy booleans unsupported by JSON writer; saved path remains unchanged.",
+  "seconds": 0.07693920499878004
+}

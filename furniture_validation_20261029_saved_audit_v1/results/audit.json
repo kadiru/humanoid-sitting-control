@@ -1,0 +1,363 @@
+{
+  "passed": true,
+  "scope": "Saved low-load probe arithmetic and physical outcome audit; no simulation replay. Each recorded mechanical outcome is independently recomputed. Contact region labels are inspected as saved, not a new geometric mapping algorithm.",
+  "frames": 16800,
+  "explanation": "Original audit regrouped float32 normal/friction subtraction after conversion to float64. This audit reproduces the logged dtype and subtraction order with the original arithmetic tolerance, and independently checks float64 force balance against the unchanged 1 N physical limit.",
+  "maximum_logged_vs_float64_residual_difference_N": 0.0001551560996584702,
+  "mechanical_passes": 42,
+  "surface_presses": 42,
+  "empty_space_controls": 14,
+  "target_mapping_passes": 30,
+  "fully_validated_layouts": [
+    "6MoOyPtetL_seat",
+    "6MoOyPtetL_seat_oblique",
+    "6MoOyPtetL_arm",
+    "myd1WSucAz_arm",
+    "myd1WSucAz_rear_back",
+    "wooden_table_02_top",
+    "wooden_table_02_top_oblique"
+  ],
+  "checks": [
+    {
+      "case": "6MoOyPtetL_seat",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 4.2981299925873064e-07,
+      "mean_normal_force_N": 10.000007001641462
+    },
+    {
+      "case": "6MoOyPtetL_seat_oblique",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 5.513757714642554e-07,
+      "mean_normal_force_N": 10.000004727676115
+    },
+    {
+      "case": "6MoOyPtetL_arm",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 5.024017738449033e-07,
+      "mean_normal_force_N": 10.000000573956
+    },
+    {
+      "case": "6MoOyPtetL_rear_back",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 1.2084921503334445e-10,
+      "mean_normal_force_N": 10.000001907348494
+    },
+    {
+      "case": "myd1WSucAz_seat",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 2.930490704468045e-13,
+      "mean_normal_force_N": 10.000005722045886
+    },
+    {
+      "case": "myd1WSucAz_seat_oblique",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 1.0989497107464281e-13,
+      "mean_normal_force_N": 10.000005722045886
+    },
+    {
+      "case": "myd1WSucAz_arm",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 0.0,
+      "mean_normal_force_N": 9.999990463256824
+    },
+    {
+      "case": "myd1WSucAz_rear_back",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 5.351749778740618e-07,
+      "mean_normal_force_N": 10.000000055157999
+    },
+    {
+      "case": "wooden_stool_01_top",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 4.577663021777286e-07,
+      "mean_normal_force_N": 9.999966317406685
+    },
+    {
+      "case": "wooden_stool_01_top_oblique",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 3.930005109074281e-07,
+      "mean_normal_force_N": 9.999985266406265
+    },
+    {
+      "case": "modern_coffee_table_01_top",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 0.0,
+      "mean_normal_force_N": 9.999998092651367
+    },
+    {
+      "case": "modern_coffee_table_01_top_oblique",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 0.0,
+      "mean_normal_force_N": 9.999998092651367
+    },
+    {
+      "case": "wooden_table_02_top",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 5.3660334146289474e-11,
+      "mean_normal_force_N": 9.999990463256774
+    },
+    {
+      "case": "wooden_table_02_top_oblique",
+      "round": 0,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 3.4762909043876616e-13,
+      "mean_normal_force_N": 9.999990463256772
+    },
+    {
+      "case": "6MoOyPtetL_seat",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 5.666420340073467e-07,
+      "mean_normal_force_N": 10.000003493615385
+    },
+    {
+      "case": "6MoOyPtetL_seat_oblique",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 1.6710247718397415e-07,
+      "mean_normal_force_N": 9.999992510245365
+    },
+    {
+      "case": "6MoOyPtetL_arm",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 6.374644420369629e-07,
+      "mean_normal_force_N": 9.99998662372207
+    },
+    {
+      "case": "6MoOyPtetL_rear_back",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": false,
+      "median_force_balance_error_N": 4.907925097726364e-07,
+      "mean_normal_force_N": 10.000053280430622
+    },
+    {
+      "case": "myd1WSucAz_seat",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": false,
+      "median_force_balance_error_N": 5.098999601244557e-07,
+      "mean_normal_force_N": 9.964850898443675
+    },
+    {
+      "case": "myd1WSucAz_seat_oblique",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": false,
+      "median_force_balance_error_N": 4.6260882508710306e-07,
+      "mean_normal_force_N": 9.967099192285616
+    },
+    {
+      "case": "myd1WSucAz_arm",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 2.8970565226914114e-07,
+      "mean_normal_force_N": 10.000109225401625
+    },
+    {
+      "case": "myd1WSucAz_rear_back",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 2.9074308248357315e-07,
+      "mean_normal_force_N": 10.00000410265443
+    },
+    {
+      "case": "wooden_stool_01_top",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": false,
+      "median_force_balance_error_N": 3.101105913545421e-07,
+      "mean_normal_force_N": 10.000041410290905
+    },
+    {
+      "case": "wooden_stool_01_top_oblique",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": false,
+      "median_force_balance_error_N": 2.9677243792881967e-07,
+      "mean_normal_force_N": 10.000070702430559
+    },
+    {
+      "case": "modern_coffee_table_01_top",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": false,
+      "median_force_balance_error_N": 2.086162567138672e-07,
+      "mean_normal_force_N": 9.99999713897705
+    },
+    {
+      "case": "modern_coffee_table_01_top_oblique",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": false,
+      "median_force_balance_error_N": 2.086162567138672e-07,
+      "mean_normal_force_N": 9.99999713897705
+    },
+    {
+      "case": "wooden_table_02_top",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 2.2203385804778036e-11,
+      "mean_normal_force_N": 9.999990463320653
+    },
+    {
+      "case": "wooden_table_02_top_oblique",
+      "round": 1,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 1.7892166936875695e-10,
+      "mean_normal_force_N": 9.999990463249281
+    },
+    {
+      "case": "6MoOyPtetL_seat",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 1.1175272516110994e-07,
+      "mean_normal_force_N": 10.000001653839956
+    },
+    {
+      "case": "6MoOyPtetL_seat_oblique",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 5.081026931413348e-07,
+      "mean_normal_force_N": 9.999998680781843
+    },
+    {
+      "case": "6MoOyPtetL_arm",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 2.9628269147206477e-07,
+      "mean_normal_force_N": 10.000001839996784
+    },
+    {
+      "case": "6MoOyPtetL_rear_back",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": false,
+      "median_force_balance_error_N": 6.572383680320908e-07,
+      "mean_normal_force_N": 10.000005839861183
+    },
+    {
+      "case": "myd1WSucAz_seat",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 1.7334281937269735e-07,
+      "mean_normal_force_N": 9.999989303838264
+    },
+    {
+      "case": "myd1WSucAz_seat_oblique",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 4.486078055073025e-07,
+      "mean_normal_force_N": 10.000051514260113
+    },
+    {
+      "case": "myd1WSucAz_arm",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 0.0,
+      "mean_normal_force_N": 9.999990463256824
+    },
+    {
+      "case": "myd1WSucAz_rear_back",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 2.3298062919092633e-07,
+      "mean_normal_force_N": 10.00000463214091
+    },
+    {
+      "case": "wooden_stool_01_top",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": false,
+      "median_force_balance_error_N": 1.5209543687611996e-07,
+      "mean_normal_force_N": 9.999993464746504
+    },
+    {
+      "case": "wooden_stool_01_top_oblique",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": false,
+      "median_force_balance_error_N": 7.680415964712718e-07,
+      "mean_normal_force_N": 10.000002630225604
+    },
+    {
+      "case": "modern_coffee_table_01_top",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": false,
+      "median_force_balance_error_N": 2.086162567138672e-07,
+      "mean_normal_force_N": 9.99999713897705
+    },
+    {
+      "case": "modern_coffee_table_01_top_oblique",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": false,
+      "median_force_balance_error_N": 0.0,
+      "mean_normal_force_N": 9.999998092651367
+    },
+    {
+      "case": "wooden_table_02_top",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 3.37202845851227e-11,
+      "mean_normal_force_N": 9.999990463239996
+    },
+    {
+      "case": "wooden_table_02_top_oblique",
+      "round": 2,
+      "mechanical": true,
+      "target_mapping": true,
+      "median_force_balance_error_N": 1.2485556802466042e-10,
+      "mean_normal_force_N": 9.99999046324002
+    }
+  ],
+  "whole_robot_success_claimed": false,
+  "inputs": {
+    "measurements.json": "d80196826d0d9b1682ba0997c2fdc95d73cb5531d2cb38a450a72b62bb422cd0",
+    "result.json": "4da45b120215d42b7afc7ccb8226e584190257b487e11310381c1186ddee1f88"
+  }
+}

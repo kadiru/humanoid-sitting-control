@@ -1,0 +1,142 @@
+{
+  "utc": "2026-11-06T22:01:48.387281+00:00",
+  "authorization": "Find and fix false load readings; continue20demonstrations,4090PPO,andall72checks; unchanged action limits/physical success criteria; no questions.",
+  "state": "SOFTWARE_CONFIDENCE_FIX_VALIDATED_SIX_FULL_ROLLOUTS_QUEUED",
+  "root_cause_evidence": "/Users/kadir/humanoid-sitting-control/furniture_load_repair_20261106_v3/root_cause_evidence.json",
+  "software_regression": "/Users/kadir/humanoid-sitting-control/furniture_load_repair_20261106_v3/regression.json",
+  "false_contact_lower_bound_triggers": {
+    "before": 14,
+    "after": 0,
+    "correctly_unknown": 14
+  },
+  "estimator_furniture_wide_admitted": false,
+  "estimator_remaining_gate": "Original force-error,positive-recall and five-object loaded coverage requirements remain unmet. Domain abstention is not accuracy or physical repair.",
+  "changes": [
+    "Reject stale,invalid,and out-of-training-envelope predictions; unknown cannot authorize unloading or contact search.",
+    "Use a sensor-only bounded normal-landing controller for collecting missing load data; estimated force cannot affect these actions.",
+    "Choose observed interior contact targets and arm references; independently audit timing,commands,and entire mesh path.",
+    "Accelerate exact collision audit without changing6mmclearance;24full-equivalence fixtures and200dense-mesh candidate comparisons passed.",
+    "Choose intended contact body from requested task,not trajectory filename; known saved passing/failing results unchanged."
+  ],
+  "source_and_input_freeze": "/Users/kadir/humanoid-sitting-control/furniture_load_repair_20261106_v3/calibration_freeze.json",
+  "quiet_gate_audit": "/Users/kadir/humanoid-sitting-control/furniture_load_repair_20261106_v3/landing_software_audit.json",
+  "rollout_audit_regression": "/Users/kadir/humanoid-sitting-control/furniture_load_repair_20261106_v3/rollout_software_validation.json",
+  "queued_full_rollouts": [
+    {
+      "name": "sit_modern_coffee_table_01_angled_normal_landing",
+      "source_case": "sit_modern_coffee_table_01_angled",
+      "model_directory": "/home/kadir/humanoid-sitting/experiments/furniture_load_repair_20261106_v3/seat_models",
+      "closer_m": 0.05
+    },
+    {
+      "name": "sit_modern_coffee_table_01_center_normal_landing",
+      "source_case": "sit_modern_coffee_table_01_center",
+      "model_directory": "/home/kadir/humanoid-sitting/experiments/furniture_load_repair_20261106_v3/seat_models",
+      "closer_m": 0.05
+    },
+    {
+      "name": "sit_myd1WSucAz_angled_normal_landing",
+      "source_case": "sit_myd1WSucAz_angled",
+      "model_directory": "/home/kadir/humanoid-sitting/experiments/furniture_load_repair_20261106_v3/seat_models",
+      "closer_m": 0.05
+    },
+    {
+      "name": "sit_myd1WSucAz_center_normal_landing",
+      "source_case": "sit_myd1WSucAz_center",
+      "model_directory": "/home/kadir/humanoid-sitting/experiments/furniture_load_repair_20261106_v3/seat_models",
+      "closer_m": 0.05
+    },
+    {
+      "name": "sit_6MoOyPtetL_angled_normal_landing",
+      "source_case": "sit_6MoOyPtetL_angled",
+      "model_directory": "/home/kadir/humanoid-sitting/experiments/furniture_load_repair_20261106_v3/seat_models_placement",
+      "closer_m": 0.11644978563131438
+    },
+    {
+      "name": "sit_6MoOyPtetL_center_normal_landing",
+      "source_case": "sit_6MoOyPtetL_center",
+      "model_directory": "/home/kadir/humanoid-sitting/experiments/furniture_load_repair_20261106_v3/seat_models_placement",
+      "closer_m": 0.10934892194538018
+    }
+  ],
+  "execution_snapshot": {
+    "utc": "2026-11-06T21:59:07.729809+00:00",
+    "owner": {
+      "state": "WAITING_FOR_4090",
+      "owner_pid": 1581376,
+      "wall_s": 465.130414654006,
+      "completed": [],
+      "reason": "cooperative lock held",
+      "next_case": "sit_modern_coffee_table_01_angled_normal_landing",
+      "scientific_launches": 0
+    },
+    "owner_process": "1581376       07:54 Ss   /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python -u /home/kadir/humanoid-sitting/experiments/furniture_load_repair_20261106_v3/calibration_owner.py",
+    "gpu": "0, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, NVIDIA GeForce RTX 4090, 1 %, 46, 6170 MiB\n1, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, NVIDIA GeForce RTX 4070, 90 %, 63, 5037 MiB",
+    "gpu_workers": "1336144, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, /workspace/venv/bin/python\n1154954, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, /isaac-sim/kit/python/bin/python3"
+  },
+  "finite_owner_limits": {
+    "total_wall_seconds": 57600,
+    "max_rollouts": 6,
+    "active_controls_each": 1000,
+    "warmup_controls_each": 25,
+    "seconds_each": 900,
+    "retries": 0,
+    "GPU": "4090 only"
+  },
+  "model_construction_resource_accounting": [
+    {
+      "result_directory": "/Users/kadir/humanoid-sitting-control/furniture_load_repair_20261106_v3/seat_models",
+      "attempted_paths": 10,
+      "model_admitted": 4,
+      "seconds": 61.16571729998395,
+      "physics_steps": 0
+    },
+    {
+      "result_directory": "/Users/kadir/humanoid-sitting-control/furniture_load_repair_20261106_v3/seat_models_placement",
+      "attempted_paths": 6,
+      "model_admitted": 2,
+      "seconds": 133.0944258270174,
+      "physics_steps": 0
+    },
+    {
+      "result_directory": "/Users/kadir/humanoid-sitting-control/furniture_load_repair_20261106_v3/seat_models_stool",
+      "attempted_paths": 2,
+      "model_admitted": 0,
+      "seconds": 90.00056218499958,
+      "physics_steps": 0
+    },
+    {
+      "result_directory": "/Users/kadir/humanoid-sitting-control/furniture_load_repair_20261106_v3/seat_models_stool_fast",
+      "attempted_paths": 2,
+      "model_admitted": 0,
+      "seconds": 22.051589730006526,
+      "physics_steps": 0
+    }
+  ],
+  "mistargeted_attempt_correction": "The two90-second-total Minkowski placement runs targeted the wrong bottleneck. The original LP placements had completed; full-path clearance was slow. The exact audit accelerator completed both stool audits in22.05s total, revealing real hip-housing intersections. No stool path admitted.",
+  "remaining_seat_failures": {
+    "L_couch": "early pelvis/cushion intersections and some hip-housing clearance violations",
+    "stool": "hip-housing intersections;6062center and6122angled sampled intersections"
+  },
+  "physical": {
+    "new_rollouts_started_at_snapshot": 0,
+    "new_successful_demos": 0,
+    "new_PPO_updates": 0,
+    "new_full72_checks": 0,
+    "protected_baseline_clean": 64,
+    "protected_baseline_cases": 72,
+    "accepted_repairs": 0,
+    "remaining_original_failures": 8
+  },
+  "next_work": [
+    "Read actual calibration_owner/status.json and saved outputs; do not duplicate the waiting owner.",
+    "Audit all completed full rollouts; preserve failures and camera/contact data. Validate new load coverage before using estimates for actions.",
+    "Complete10successfulsitting and10successfulleaning examples acrossatleast5objects; remaining collision-rejected surfaces need a substantive geometric correction,not replay of their failed paths.",
+    "After corpus and estimator gates pass,continue authorized4090PPO with corrected imitation/action distribution,verify actual optimizer changes,then independently evaluateall72cases and produce video."
+  ],
+  "PPO_autostart": false,
+  "recurring_automation": false,
+  "unchanged_action_limits": true,
+  "unchanged_success_criteria": true,
+  "no_physical_success_claim": true
+}

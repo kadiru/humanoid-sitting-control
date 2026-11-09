@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "id": "myd1WSucAz_seat",
+  "complete_trials": 1,
+  "duration_s": 20,
+  "raw_clean": false,
+  "contact_mapping_validated": false,
+  "clean": null,
+  "physical_failures": [
+    false,
+    true,
+    false,
+    false,
+    false
+  ],
+  "failure_types": [
+    "forbidden contact"
+  ],
+  "final_hold_s": 0.0,
+  "slip_ticks": 4,
+  "illegal_ticks": 482,
+  "first_recorded_failure_s": 10.38,
+  "warm_failure": false,
+  "max_consecutive_intended_load_before_failure_s": 0.0,
+  "action_limits_changed": false,
+  "success_thresholds_changed": false,
+  "trajectory_sha256": "9dcea4bca2fd3857c555326a1fbaeb2dbfe24d1adad525bfc759dbad8dac80f2",
+  "inputs": {
+    "trajectory.npz": "9dcea4bca2fd3857c555326a1fbaeb2dbfe24d1adad525bfc759dbad8dac80f2",
+    "results.json": "b454231e97a3689969e7e97c7be13e014cd029647d3c8b8270824bd05f1bbebb",
+    "manifest.json": "fec39beff0c20c34ebf0ae24fda73d6f49c47dddab08b3e859cdfcf1f802ba5f",
+    "contact_mapping.json": "bfe36336ccb914ec0ca06e8f82fafc2b64b241c9f9cb1d002970151dc6977bfd",
+    "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+  },
+  "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+  "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+  "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+}

@@ -1,0 +1,37 @@
+{
+  "authorization": "November6 user explicitly requests fixing/validating load estimator,20demonstrations across5furniture objects,4090PPO,unchanged action limits/physical criteria,all72/video. This step only learns an auxiliary estimator from saved data.",
+  "construction": "Three fixed neural regressors estimate surface-normal and two tangent components of the SAME saved contact-report signal used by the unchanged evaluator. This is a sensor-to-report calibration, not an assertion of exact Newtonian or hardware force.",
+  "premises": "333causal channels:3frames of encoders,encoder velocities,approximate torque telemetry,projected gravity,gyro,previous command,and observed camera geometry. No clock,case ID,world pose,contact truth,task ID,or initial signature reaches the regressor. Simulator pose and forces are LABEL-ONLY.",
+  "causality": "history[t] predicts previous interval contact[t-1] in the measured current surface frame; first sample omitted. Joint positions must match recorded pre-step state. Pelvis body ordering independently verified before launch.",
+  "initialization": {
+    "seeds": [
+      66201,
+      66202,
+      66203
+    ],
+    "network": "333-128ELU-128ELU-3; final layer zero",
+    "normalization": "training-only mean/std;std floor.01; input clamp10",
+    "optimizer": "AdamW lr3e-4,weight_decay1e-5",
+    "loss": "SmoothL1 beta.02; gradient norm1",
+    "steps_per_member": 2560,
+    "epochs": 80,
+    "draws_per_epoch": 16384,
+    "batch_size": 512,
+    "sampling": "uniform total weight per training episode,5x weighting for |normal load|>.01BW"
+  },
+  "split": "Explicit inputs.json; complete episodes never split across train/calibration/test. Five furniture angled/right starts test-only; original72 modulo6 split; prior armchair seven training,two calibration,two test. Fresh24holdout untouched.",
+  "uncertainty": "Calibration99th-percentile excess absolute error plus3ensemble standard deviations; empirical bound only, not a universal guarantee.",
+  "validation": "Every test start must pass MAE<=.02BW,p99<=.05BW,final250MAE<=.02BW,zero false contact lower-bound triggers,loaded recall>=90%; require positive examples for each of5objects. No test-driven checkpoint selection or tuning.",
+  "finite_return": "One prepare,one fixed fit of3members,one independent audit. Failed gate blocks use; no hyperparameter retry or scientific launch.",
+  "resources": {
+    "CPU_threads": 2,
+    "maximum_total_seconds": 1080,
+    "fit_seconds": 900,
+    "RAM_bytes": 4000000000,
+    "disk_bytes": 1000000000,
+    "GPU": false,
+    "physics_steps": 0,
+    "PPO_updates": 0
+  },
+  "future_admission": "Even a PASS only validates estimator against saved contact reports. Fresh complete-rollout demos and recovery/retention checks still required before PPO."
+}

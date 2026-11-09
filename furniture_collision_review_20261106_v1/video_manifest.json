@@ -1,0 +1,39 @@
+{
+  "path": "/home/kadir/humanoid-sitting/outputs/furniture_collision_review_20261106_v1/l_couch_two_full_trials.mp4",
+  "sha256": "77b11dae4ffa58b25252e5ff91ebf2fe58c5958c08f92616487723092504e5cf",
+  "duration_s": 26,
+  "frames": 650,
+  "width": 1920,
+  "height": 1080,
+  "fps": 25,
+  "playback_speed": 1,
+  "source": "saved full20s physical poses, no resimulation",
+  "physical_trials": 2,
+  "successful_demos": 0,
+  "rows": [
+    {
+      "id": "sit_1kwsjhpY84_center",
+      "task": "sitting",
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing",
+      "full20s": true,
+      "passed": false,
+      "final_hold_s": 0.0,
+      "first_failure_s": 12.42
+    },
+    {
+      "id": "sit_1kwsjhpY84_angled",
+      "task": "sitting",
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing",
+      "full20s": true,
+      "passed": false,
+      "final_hold_s": 0.0,
+      "first_failure_s": 15.200000000000001
+    }
+  ],
+  "source_files": {
+    "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/trajectory.npz": "3862f6043df60ef6a4fa93547f8c245609970aa5d21776c32396789a69c92530",
+    "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/trajectory.npz": "24117f3460657aefb4a3647bb8e09e303b5b3f641872e76b2c19dbf3ee99a6fa"
+  },
+  "renderer_sha256": "0f0a68f1cdbfd9b363d10462a26171f92ef2c575b73010a6fb6c27ec6c4a04d5",
+  "GPU": false
+}

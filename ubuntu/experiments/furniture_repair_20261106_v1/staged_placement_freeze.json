@@ -1,0 +1,39 @@
+{
+  "utc": "2026-11-06T07:15:25.568632+00:00",
+  "files": {
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/saved_findings.json": "779b68c40324119cca6964e7b6b5dcaa77565ef2f098623337996af09c7d2176",
+    "/home/kadir/humanoid-sitting/runs/g1_kinematics_geometry_04/model.json": "fe29aa3c0b8da033c35b8abc1c40ae93b0706e8186f9163ad56d8e31c4d07690",
+    "/home/kadir/humanoid-sitting/scripts/sagittal_static_bias.py": "37e253c7751fab81cb2df6e13a49631ee7c7747d1d6f7aea09ad3d344c1270bd",
+    "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/shared_frame.py": "daec7a1c769c68579cebfafe79d2063cb19660ca6e09ced705f460218f9fcf5c",
+    "/home/kadir/humanoid-sitting/experiments/furniture_perception_repair_20261029_v1/render_colliders.json": "f682a8f7f05f4fd8e44f462a58bb7d3755a3f7ac3834413df70bab26a2817e0b",
+    "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json": "69e0920e2bec88a43b7a6dc41d0fc361500d060ef09e3e3a07bb04cdaf569584",
+    "/home/kadir/humanoid-sitting/outputs/furniture_examples_20261105_v2/sit_modern_coffee_table_01_center/frame_0.npz": "7233160d17f4a858c3676d1e5cf7daba1299a78c131a93e50e80b6894e333032",
+    "/home/kadir/humanoid-sitting/outputs/furniture_examples_20261105_v2/sit_modern_coffee_table_01_center/startup.npz": "be9bfcd43bbb67aaf371df918e9b30610e73284deb064be5fdbb515b5776b194",
+    "/home/kadir/humanoid-sitting/outputs/furniture_examples_20261105_v2/sit_modern_coffee_table_01_angled/frame_0.npz": "abe785fba94e7e8d0e535a0be7b39e11d7aacd17ec5d4dd0e0d206b4f2fcf79d",
+    "/home/kadir/humanoid-sitting/outputs/furniture_examples_20261105_v2/sit_modern_coffee_table_01_angled/startup.npz": "a75cc10de385260aa0e629b633853df65b19e69b87aed9a17bc9d609130e5c15",
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/software_correction.json": "01ebe7e9bda8d257ba6cc74cba0b072ac45ed00c885ad7b12476f67abc41b3a4",
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/model_v2/cpu_results/receipt.json": "a1346f18f5a2747201414c6a826159896389f01f9fe8dd8d4f233848de696ebd",
+    "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab_assets/isaaclab_assets/robots/unitree.py": "ea47505ddf82d15895fa55a0a666b5c4800eba24782ece6080061b64cd51e54b",
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/model_v4/construction_contract.json": "7b3113594354a41bd384d3f0a5007a59281b207da81d0e2b1fec5b73e3399a73",
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/model_v4/seat_plan.py": "4cb94610acd6a94a7acd5a4d8fd952a2c8e0a656e079d93131bf2c082e8920b5",
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/model_v4/audit_seat_plan.py": "ff20eddc32807d343c34a5acc7fec8b38d5abce88223047a4f22e9bbe1e33707",
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/model_v4/model_probe.py": "9068a87799751f865d7a8b6ee3548e868b13bacdae40185c7df1e78047d8c9cc",
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/model_v3/cpu_results/receipt.json": "ea501d4c8b244f7e463f7b12c9a7f688ae486b07ac3db4e08cf306de6271be20",
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/staged_placement_probe.py": "c59e0fbc3068afcec4be3f59f4ea5eff36d31ac7a55d78341778364812b72c8f",
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/staged_placement_contract.json": "01a79f8352a05cc076c242febd6e9e904827875e3dd1b0c157a912f41bd723f2"
+  },
+  "source_review": {
+    "independent_audit_separate_equations": true,
+    "physics_admitted": false,
+    "no_other_agent": true,
+    "notes": "Source review: independent audit checks full foot rotation/translation beyond builder sagittal residual. Full observed-obstacle clearance and landing controller remain required before physics. Bounded two-case CPU construction only.",
+    "fixed_joint_metadata_correction": true,
+    "new_whole_body_mechanism": "Six arm joints move forward during approach; full COM and arm gravity enter fresh constraints/commands. Audit still checks full feet, all23 command margins and total command-arc timing. No physical admission.",
+    "independent_arm_authority": "Shoulder and elbow are independent decision coordinates;9 physical residuals unchanged; all23 command limits and whole-path timing still checked. Cold initial standing data only; prior failed variables not reused. No physics admission.",
+    "placement_distinction": "New50mm-closer starts are analytically transformed camera inputs, not original-start repair; same model audit. No simulation admission."
+  },
+  "source_cases": [
+    "sit_modern_coffee_table_01_center",
+    "sit_modern_coffee_table_01_angled"
+  ]
+}

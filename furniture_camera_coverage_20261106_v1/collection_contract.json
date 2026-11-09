@@ -1,0 +1,22 @@
+{
+  "problem": "Savednear-startcamera points end at row94,the lowest valid row; chosen near contactpatch outside45degview. Translating old observations cannotrepairnewview. Actualfreshplansclearcollisionbutall8timingsfail16.74-20.06ssettling,leaving<5shold.",
+  "correction": "Derive54deg downward opticalaxis from two namedLCsupportpatchcoverage requirements with10pixel lowerborderreserve. Translation,intrinsics,furniture,actions,physicalcriteria unchanged. This changes the simulatedcamera mount orientation; it is not a reward fix or established physicalrepair.",
+  "scope": "Two namedLCstarts once each,4090only. New coldcommandsfromcurrentcamera andfixedsensor/modeldata. Exactinputhash before45sconstruction. Independentfullmeshacceptance; full20s recordedrollout only ifalladmitted.",
+  "resources": {
+    "max_jobs": 2,
+    "max_construction_total_s_each": 45,
+    "max_rollout_wall_s_each": 900,
+    "max_audit_s_each": 90,
+    "max_active_controls_each": 1000,
+    "max_warmup_controls_each": 25,
+    "max_physics_substeps_each": 4100,
+    "max_storage_MiB_each": 256,
+    "disk_reserve_GiB": 10,
+    "original_finite_owner_deadline_retained": true
+  },
+  "no_other_agents": true,
+  "recurring_automation": false,
+  "action_limits_changed": false,
+  "success_criteria_changed": false,
+  "PPO_autostart": false
+}

@@ -1,0 +1,64 @@
+{
+  "video_sha256": "6953392f2c153af4fde9cb515aef5b58f4bcfbbe0ce32ee90f0fe152372208e4",
+  "renderer_sha256": "f7d280039e9be7097f86ce81e4e311bac16b0a7f7ad5cb75bc053c8d7db036d3",
+  "visual_mesh_sha256": "1d0de933f870cd16b01d69dcbccb1b5f2a91ae6242188e6f30972ce5ce641841",
+  "probe": {
+    "programs": [],
+    "streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "duration": "56.000000",
+        "nb_read_frames": "1400"
+      }
+    ]
+  },
+  "bindings": {
+    "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/learned_armchair11/trajectory.npz": "9746d567a9b2a48df084009fca1bdbaa378ce0b9e794cc58502fda483d4b2749",
+    "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/learned_armchair11/independent_audit.json": "16f1b0aff513a608c55ce6146bdaaac9722857beef5ba681395b44ab5e029452",
+    "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/learned_sitting72/trajectory.npz": "6acd84a30297125e00de1160f0f00817a2a10d8edae41f283d9cc90c9e078dbb",
+    "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/learned_sitting72/independent_audit.json": "099cd0fbbaabd21106393fafd401f54326f9d8c6f63b0f65029075450fdb9930",
+    "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/demo_rear_pelvis_center/trajectory.npz": "de1ad3fba4aebf1fda0a535a2607d07fd950c9522566a07c6d46bc64b2995a1b",
+    "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/demo_rear_pelvis_center/independent_audit.json": "a0abd6a0ed74e460b6bec6cc2d6addb69093859b49a16b5b37a0ff15a4a23def"
+  },
+  "selected_armchair_indices": [
+    0,
+    5,
+    7,
+    10
+  ],
+  "selected_sitting_indices": [
+    0,
+    4
+  ],
+  "segments": [
+    {
+      "name": "intro",
+      "seconds": 3.0
+    },
+    {
+      "name": "armchair_training_starts",
+      "seconds": 20.0
+    },
+    {
+      "name": "armchair_reserved_starts",
+      "seconds": 10.0
+    },
+    {
+      "name": "sitting",
+      "seconds": 10.0
+    },
+    {
+      "name": "pelvis_prototype",
+      "seconds": 6.0
+    },
+    {
+      "name": "results",
+      "seconds": 7.0
+    }
+  ],
+  "rendering": "CPU projection of saved body poses and real robot visuals, neutral materials, no motion editing or physics rerun",
+  "ppo_checkpoint_sha256": "58b3940e313822f3af88f1f4abd64710fefca605025a098cbdc0bcdcf192455c",
+  "physics_steps": 0,
+  "simulation_only": true
+}

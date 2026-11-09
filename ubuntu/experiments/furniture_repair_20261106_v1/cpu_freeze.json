@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-06T06:55:53.738808+00:00",
+  "cases": [
+    "sit_modern_coffee_table_01_center",
+    "sit_modern_coffee_table_01_angled"
+  ],
+  "files": {
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/seat_plan.py": "5c172943ba0652e71b571565fe3c8bd239af084640e379f90145b023a6796164",
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/audit_seat_plan.py": "cb46a6995027fb191622f24eb6b427f60ecf2b98db06b79d2faf26f53a21b294",
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/model_probe.py": "9068a87799751f865d7a8b6ee3548e868b13bacdae40185c7df1e78047d8c9cc",
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/construction_contract.json": "6687af173ebf0bb578fdd121a651b599258a2b53a76eaab6032727f9a753292e",
+    "/home/kadir/humanoid-sitting/experiments/furniture_repair_20261106_v1/saved_findings.json": "779b68c40324119cca6964e7b6b5dcaa77565ef2f098623337996af09c7d2176",
+    "/home/kadir/humanoid-sitting/runs/g1_kinematics_geometry_04/model.json": "fe29aa3c0b8da033c35b8abc1c40ae93b0706e8186f9163ad56d8e31c4d07690",
+    "/home/kadir/humanoid-sitting/scripts/sagittal_static_bias.py": "37e253c7751fab81cb2df6e13a49631ee7c7747d1d6f7aea09ad3d344c1270bd",
+    "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/shared_frame.py": "daec7a1c769c68579cebfafe79d2063cb19660ca6e09ced705f460218f9fcf5c",
+    "/home/kadir/humanoid-sitting/experiments/furniture_perception_repair_20261029_v1/render_colliders.json": "f682a8f7f05f4fd8e44f462a58bb7d3755a3f7ac3834413df70bab26a2817e0b",
+    "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json": "69e0920e2bec88a43b7a6dc41d0fc361500d060ef09e3e3a07bb04cdaf569584",
+    "/home/kadir/humanoid-sitting/outputs/furniture_examples_20261105_v2/sit_modern_coffee_table_01_center/frame_0.npz": "7233160d17f4a858c3676d1e5cf7daba1299a78c131a93e50e80b6894e333032",
+    "/home/kadir/humanoid-sitting/outputs/furniture_examples_20261105_v2/sit_modern_coffee_table_01_center/startup.npz": "be9bfcd43bbb67aaf371df918e9b30610e73284deb064be5fdbb515b5776b194",
+    "/home/kadir/humanoid-sitting/outputs/furniture_examples_20261105_v2/sit_modern_coffee_table_01_angled/frame_0.npz": "abe785fba94e7e8d0e535a0be7b39e11d7aacd17ec5d4dd0e0d206b4f2fcf79d",
+    "/home/kadir/humanoid-sitting/outputs/furniture_examples_20261105_v2/sit_modern_coffee_table_01_angled/startup.npz": "a75cc10de385260aa0e629b633853df65b19e69b87aed9a17bc9d609130e5c15"
+  },
+  "source_review": {
+    "independent_audit_separate_equations": true,
+    "physics_admitted": false,
+    "no_other_agent": true,
+    "notes": "Source review: independent audit checks full foot rotation/translation beyond builder sagittal residual. Full observed-obstacle clearance and landing controller remain required before physics. Bounded two-case CPU construction only."
+  }
+}

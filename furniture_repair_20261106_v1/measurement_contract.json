@@ -1,0 +1,11 @@
+{
+  "authorization": "Latest human request to carry out furniture demonstration repairs and validation before4090-only PPO, without further questions",
+  "purpose": "Validate a motor-axis torque sensor because both saved-data load observers failed their quantitative error gates using approximate implicit-drive telemetry",
+  "new_information": "One full20s known armchair-right lean with an additional JointWrenchSensor. Record only angular reaction projected onto each original actuated axis, with exact physics timestamps. The teacher continues receiving the original approximate torque input; new readings cannot alter actions or scoring. This captures information absent from old trajectories and is not a new successful-example claim.",
+  "initialization": "Original lean_myd1WSucAz_right standing bank, variant, original sensor teacher, original action filter and all physical criteria. Source files and input arrays frozen by SHA256.",
+  "actor_restriction": "No six-axis force, contact truth or simulator pose enters actor/controller. Projected motor-axis readout is evaluation-only until its independent validation passes.",
+  "success_failure": "Require recording integrity and original physical audit; separately require predicted support normal/shear mean absolute error<0.02BW over final250 samples and all wrench condition numbers<200. Failed measurement blocks the replacement observer. No parameter retry or automatic PPO launch.",
+  "resources": {"GPU": "4090 only", "4070": "AIWorker reserved", "known_motion_trials": 1, "active_controls": 1000, "warmup_controls": 25, "maximum_initialization_physics_steps": 1000, "maximum_total_physics_steps": 5100, "maximum_wait_seconds": 10800, "maximum_child_seconds": 900, "maximum_CPU_audit_seconds": 135, "max_temperature_C": 85, "minimum_free_disk_bytes": 20000000000, "retries": 0, "PPO_updates": 0},
+  "ownership": "One scientific owner; cooperative scene.lock and no foreign process termination. Finite job only, no recurring automation.",
+  "after_success": "Finish sensor-only controller/source admission and then the new furniture demonstrations; PPO remains gated on valid complete demonstrations and retention checks."
+}

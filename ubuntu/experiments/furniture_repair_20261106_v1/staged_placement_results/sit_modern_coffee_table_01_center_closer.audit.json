@@ -1,0 +1,37 @@
+{
+  "case": "sit_modern_coffee_table_01_center_closer",
+  "source_case": "sit_modern_coffee_table_01_center",
+  "robot_stance_translation_in_gravity_frame_m": [
+    -0.05,
+    0.0,
+    0.0
+  ],
+  "original_start_repaired": false,
+  "model_audit": {
+    "passed": false,
+    "tests": {
+      "bilateral_feet_fixed": true,
+      "balance_in_foot_support": true,
+      "hover_clearance": true,
+      "contact_patch_observed_interior": true,
+      "command_margin_unchanged": true,
+      "initial_command_exact": true,
+      "time_for_original_hold": false
+    },
+    "max_foot_error": 0.0003241854345010962,
+    "min_command_margin": 0.25999997307436695,
+    "min_patch_inset": 0.03457619135401757,
+    "com_range": [
+      -0.050274502867451214,
+      0.04515000193039673
+    ],
+    "earliest_settled_seconds": 15.473474508095235,
+    "missing_before_physics": [
+      "full observed-obstacle clearance",
+      "final landing/load controller",
+      "live quiet-state gate"
+    ],
+    "simulation_admitted": false,
+    "physical_success": false
+  }
+}

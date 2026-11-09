@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "id": "wooden_stool_01_top",
+  "complete_trials": 1,
+  "duration_s": 20,
+  "raw_clean": false,
+  "contact_mapping_validated": false,
+  "clean": null,
+  "physical_failures": [
+    false,
+    true,
+    false,
+    false,
+    false
+  ],
+  "failure_types": [
+    "forbidden contact"
+  ],
+  "final_hold_s": 0.0,
+  "slip_ticks": 0,
+  "illegal_ticks": 465,
+  "first_recorded_failure_s": 10.72,
+  "warm_failure": false,
+  "max_consecutive_intended_load_before_failure_s": 0.0,
+  "action_limits_changed": false,
+  "success_thresholds_changed": false,
+  "trajectory_sha256": "8f7d152816326633bc280046c55b61c1bc0c4b936982aad3f68f6cb91f57c830",
+  "inputs": {
+    "trajectory.npz": "8f7d152816326633bc280046c55b61c1bc0c4b936982aad3f68f6cb91f57c830",
+    "results.json": "c3a77b8925105427816daed9d92656c4b0229be8e2097cf2e9558caa700cc0ad",
+    "manifest.json": "71ac48c685ff420fa60ebdee8d189a2df0dc704dddb86569add1b897cb6b92d3",
+    "contact_mapping.json": "a7966bbe1c3cf97319f86f5553833bccb412149d5acb36c8c24d3409a0727404",
+    "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+  },
+  "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+  "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+  "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+}

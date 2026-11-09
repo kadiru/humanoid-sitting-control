@@ -1,0 +1,123 @@
+{
+  "checked_utc": "2026-10-29T05:05:46.449529+00:00",
+  "ppo": {
+    "state": "ppo_with_imitation",
+    "owner_pid": 854179,
+    "active": {
+      "label": "train_sitting_64117",
+      "pid": 972499
+    },
+    "completed": [
+      "train_sitting_64111",
+      "eval_sitting_64111_128",
+      "eval_sitting_64111_128_audit",
+      "eval_sitting_64111_256",
+      "eval_sitting_64111_256_audit"
+    ],
+    "seconds": 6215.638801641006,
+    "gpu": "RTX4090",
+    "gpu1_reserved": "AIWorker",
+    "recurring_automation": false,
+    "physical_repair_claimed": false
+  },
+  "seed64111": {
+    "state": "complete",
+    "updates": 256,
+    "active_transitions": 1179648,
+    "warmup_transitions": 43200,
+    "seconds": 4438.598737834021,
+    "weight_updates_verified": true
+  },
+  "seed64117": {
+    "state": "training",
+    "actor_steps": 0,
+    "rejected_kl_steps": 1,
+    "critic_steps": 4,
+    "value_mse": 12.946322441101074,
+    "policy_loss": 0.00044245258322916925,
+    "measured_kl": 4.98166008444656e-10,
+    "last_candidate_kl": 3.150883276248351e-05,
+    "candidate_tests": 8,
+    "accepted_step_scales": [],
+    "imitation_loss": 0.0004421430639922619,
+    "imitation_candidate": 0.0004438102769199759,
+    "imitation_coefficient": 1,
+    "imitation_reference_ceiling": 0.00047884077503113076,
+    "anchor_loss": 0.0004624809371307492,
+    "anchor_ceiling": 0.00046252305764937773,
+    "ppo_surrogate_loss": 3.0952588758736965e-07,
+    "update": 48,
+    "mean_rollout_reward": 0.025338876992464066,
+    "live_samples": 4560,
+    "seconds": 812.7884401770134,
+    "active_transitions": 221184,
+    "warmup_transitions": 9000,
+    "complete_episodes": 216,
+    "curriculum_slot": 2
+  },
+  "furniture": {
+    "state": "waiting_for_PPO",
+    "owner_pid": 935949,
+    "active": null,
+    "completed": [],
+    "waiting_seconds": 0.12393818399868906,
+    "gpu": "4090 only",
+    "gpu4070": "AIWorker untouched",
+    "recurring_automation": false
+  },
+  "comparison_complete": false,
+  "comparison_results": [
+    {
+      "seed": 64111,
+      "stage": "clone",
+      "label": "/home/kadir/humanoid-sitting/outputs/recovery_imitation_sitting_20261028_v2/clone_evaluation_64111",
+      "clean": 0,
+      "complete_trials": 72,
+      "duration_s": 20,
+      "independent_audit_passed": true,
+      "repairs": 0,
+      "regressions": 64
+    },
+    {
+      "seed": 64117,
+      "stage": "clone",
+      "label": "/home/kadir/humanoid-sitting/outputs/recovery_imitation_sitting_20261028_v2/clone_evaluation_64117",
+      "clean": 0,
+      "complete_trials": 72,
+      "duration_s": 20,
+      "independent_audit_passed": true,
+      "repairs": 0,
+      "regressions": 64
+    },
+    {
+      "seed": 64111,
+      "stage": 128,
+      "label": "eval_sitting_64111_128",
+      "clean": 0,
+      "complete_trials": 72,
+      "duration_s": 20,
+      "independent_audit_passed": true,
+      "repairs": 0,
+      "regressions": 64
+    },
+    {
+      "seed": 64111,
+      "stage": 256,
+      "label": "eval_sitting_64111_256",
+      "clean": 0,
+      "complete_trials": 72,
+      "duration_s": 20,
+      "independent_audit_passed": true,
+      "repairs": 0,
+      "regressions": 64
+    }
+  ],
+  "owners_ps": "    PID     ELAPSED STAT COMMAND\n 854179    01:43:40 Ss   /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python /home/kadir/humanoid-sitting/experiments/recovery_imitation_sitting_20261028_v3/owner.py\n 935949       38:02 Ss   /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python /home/kadir/humanoid-sitting/experiments/furniture_validation_20261028_v2/owner.py\n",
+  "furniture_output_files": [
+    "owner.log",
+    "receipt.json",
+    "status.json",
+    "owner.lock"
+  ],
+  "video_exists": false
+}

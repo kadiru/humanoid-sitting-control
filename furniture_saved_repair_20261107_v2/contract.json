@@ -1,0 +1,42 @@
+{
+  "scope": "Saved-data repair; no simulator or PPO launch",
+  "source_reference": {
+    "bank": "known_old",
+    "index": 8,
+    "reason": "Admitted complete clean sit; closest height .44m to stool .437m, lowest slope5deg at that height",
+    "frame": 999,
+    "role": "Positive knee branch and root/posture initial reference only, never direct new-scene action replay"
+  },
+  "targets": [
+    "sit_wooden_stool_01_center",
+    "sit_1kwsjhpY84_center_local_patch_normal_landing"
+  ],
+  "construction": "Geometric positive-bend leg IK eliminates6pitch variables; fixed measured roll/yaw retained;5remaining root/arm variables fit existing gap,legal proximal support22mm inset,common-sole midpoint. Full3DFK/mesh and command audits unchanged.",
+  "initialization": "Accepted demonstration terminal root displacement, pitch and symmetric arms; each target fresh with no failed vector reuse",
+  "finite_return": {
+    "wall_seconds_per_target_including_imports_hashes_setup_and_audits": 45,
+    "targets": 2,
+    "total_max_wall_s": 90,
+    "outer_method": "least_squares,60evaluations; no retry",
+    "nodes": 33,
+    "landing_nodes": 16,
+    "float": "binary64 construction, existing float32 action audit",
+    "failure": "Any exception, timeout or failed original audit rejects; no physics/PPO automatic continuation"
+  },
+  "independent_audits": [
+    "audit_support_geometry.py",
+    "audit_support_commands.py",
+    "audit_mesh_clearance_fast.py"
+  ],
+  "camera": "Same initial facet and original thresholds; select one current pixel-connected region nearest fixed target before unchanged minimax fit.8savedframes plusmissing-depthtests, no choice based on fit success.",
+  "unchanged": [
+    "joint/action limits",
+    ".003rad/tick and .1filter",
+    "rawvelocity quiet gate",
+    "collision6mm",
+    "patch20mm",
+    "full20s and final5s hold",
+    "4070reserved"
+  ],
+  "physical_progress_claim": false
+}

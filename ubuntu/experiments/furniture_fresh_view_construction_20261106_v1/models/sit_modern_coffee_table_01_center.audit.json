@@ -1,0 +1,71 @@
+{
+  "case": "sit_modern_coffee_table_01_center",
+  "model_admitted": false,
+  "physics_steps": 0,
+  "geometry_audit": {
+    "passed": false,
+    "tests": {
+      "bilateral_feet_fixed": true,
+      "balance_in_foot_support": true,
+      "hover_clearance": true,
+      "contact_patch_observed_interior": true,
+      "command_margin_unchanged": true,
+      "initial_command_exact": true,
+      "time_for_original_hold": false
+    },
+    "max_foot_error": 0.0011097521263109804,
+    "min_command_margin": 0.25999997307436695,
+    "min_patch_inset": 0.022297360122948834,
+    "com_range": [
+      -0.05131953642934223,
+      0.045149964107713554
+    ],
+    "earliest_settled_seconds": 20.50169914315211,
+    "missing_before_physics": [
+      "full observed-obstacle clearance",
+      "final landing/load controller",
+      "live quiet-state gate"
+    ],
+    "simulation_admitted": false,
+    "physical_success": false
+  },
+  "command_audit": {
+    "passed": false,
+    "tests": {
+      "discrete_filter_exact": true,
+      "original_rate_limit": true,
+      "desired_command_margin": true,
+      "normal_approach": true,
+      "feet_fixed": true,
+      "landing_command_rate": true,
+      "original_hold_time_reserved": false
+    },
+    "maximum_increment_rad": 0.002999970000000518,
+    "minimum_desired_margin_rad": 0.25999997307436695,
+    "normal_path_tangent_drift_m": 6.330443191387102e-08,
+    "nominal_latest_settled_s": 18.34,
+    "final_model_gap_m": -0.002959341314429431,
+    "actual_quiet_gate_may_delay": true,
+    "missing_before_physics": [
+      "full collision clearance",
+      "live sensor controller and reset checks"
+    ],
+    "simulation_admitted": false,
+    "physical_success": false
+  },
+  "clearance_audit": {
+    "passed": true,
+    "sampled_poses": 189,
+    "triangle_tests": 640,
+    "forbidden_or_early_clearance_intersections": [],
+    "forbidden_or_early_clearance_intersection_count": 0,
+    "expected_target_approaches": 72,
+    "clearance_buffer_m": 0.006,
+    "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+    "simulation_success": false,
+    "accelerator": "cKDTree exact AABB + signed halfspace rejection/interior; original clip on boundary",
+    "fast_exclusions": 568,
+    "fast_inside": 0,
+    "slow_clips": 72
+  }
+}

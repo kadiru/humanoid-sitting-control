@@ -1,0 +1,15 @@
+{
+  "correction": "Prior stool translation ended at an arbitrary150mmcenter stand-off with first_contact_witness=null. That was not the actual collision-limited standing placement. Compute exact first contact of6mmexpanded standing bodies with45degree stool triangles along the specified direction, then retain10mmadditional separation. Same previously specified camera-top construction, freshstandingcoldsolve, no failedvector.",
+  "premise": "Named two stool starts, same mesh45degreeorientation. Translation search endpoint is measured camera-cloud center plus200mm so the contact ray covers the intended support, not a parameter sweep. Actual first-contact witness required. Rootreset maymove, alljoint/action andphysicalcriteria unchanged.",
+  "resources": {
+    "cases": 2,
+    "total_seconds_each": 45,
+    "total_seconds": 90,
+    "CPU_threads": 2,
+    "simulation_steps": 0,
+    "PPO_updates": 0,
+    "retries": 0
+  },
+  "tests": "Require actual first-contact witness; alloriginalgeometry,20mminset,12mmhover,balance,fullmesh6mmclearance,timing,commands. No simulationwithoutmodelPASS;freshcamera/resetrequired.",
+  "source_audit_required": true
+}

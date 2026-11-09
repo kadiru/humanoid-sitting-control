@@ -1,0 +1,19 @@
+{
+  "construction": "Initial local contact patch and neighbouring measured triangle map retained separately. Current depth computes one median vertical odometry correction within original10mm bound; accept >=30fresh2mm map matches and majority. Original2mm initial-contact-plane fit,normal,span,boundary unchanged. Neighbouring curved cushion points are not mislabelled coplanar.",
+  "inputs": "Eight existing depth/encoder/gravity frames and startupK/extrinsics; no actor simulator pose or object mesh.",
+  "independent_audit": "Saved simulator root poses reserved strictly for validation; max3mm target/plane offset and .03normal errors on every pre-failure frame, missing and wrong-depth rejection. These checks tighten validation and do not redefine physical success.",
+  "finite_return": {
+    "frames": 8,
+    "negative_tests": 4,
+    "optimizer_calls": 0,
+    "GPU": 0,
+    "whole_watchdog_seconds": 45
+  },
+  "not_claimed": [
+    "complete20s camera coverage",
+    "physical repair",
+    "validated load estimation",
+    "PPO start"
+  ],
+  "review": "Rigid static furniture map justified by fixed scene asset; current depth corrects only observable height. Tangential odometry remains a limitation; independent3mm target test must reject excess error."
+}

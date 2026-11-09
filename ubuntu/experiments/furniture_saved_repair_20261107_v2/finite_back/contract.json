@@ -1,0 +1,26 @@
+{
+  "problem_evidence": "At the saved armchair standing start, prior global torso support vertex is160.555mm above measured back upper boundary. It is not a finite-surface contact witness.",
+  "construction": "Clip calibrated rear torso/logo collision triangles to current-camera convex patch with20mm boundary/40mm height reserves; minimize signed plane distance on that finite intersection. Existing3joint solver starts from current encoders; never failed vector.",
+  "cases": [
+    "demo_rear_back_center"
+  ],
+  "physical_criteria_unchanged": true,
+  "outer_wall_s": 45,
+  "solve_evaluations": {
+    "endpoint_max_iterations": 100,
+    "path_max_evaluations_per_node": 60,
+    "approach_nodes": 49,
+    "load_nodes": 12
+  },
+  "audit": "Existing separate full-body triangle/convex check plus discrete actions, fixed feet, balance and timing. Exact rear-local x<-.035 scorer condition represented in construction. No physics launch on model pass alone.",
+  "resource": "CPU1thread;0GPU;45souterkill includes imports hashes setup construction all audits and receipts. Single construction; no retry.",
+  "independent_review": {
+    "finite_object_extent_not_a_new_contact_class": true,
+    "same_sources_and_initial_encoders": true,
+    "physical_backend_and_gains_unchanged": true,
+    "same_action_and_success_bounds": true,
+    "failed_vector_not_loaded": true,
+    "body_and_patch_reserves_retained": true,
+    "outer_watchdog_required": true
+  }
+}

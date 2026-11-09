@@ -1,0 +1,101 @@
+{
+  "utc": "2026-11-07T23:49:08.292845+00:00",
+  "state": "CAMERA_SAVED_FRAME_CHECKS_PASS_MOTION_CONSTRUCTIONS_REJECTED_NO_PHYSICS",
+  "authorization": "While4090busy repair ankle,camera,stool,uprightlean using saved data; then20demos,4090PPO,all72; action limits and success criteria unchanged.",
+  "camera": {
+    "candidate": "/Users/kadir/humanoid-sitting-control/furniture_saved_repair_20261107_v2/registered_camera/surface_observer.py",
+    "audit": "/Users/kadir/humanoid-sitting-control/furniture_saved_repair_20261107_v2/registered_camera/validation.json",
+    "saved_frames": 8,
+    "pre_failure_frames": 5,
+    "pre_failure_passed": 5,
+    "all_pre_failure_pose_checks_passed": true,
+    "maximum_pre_failure_target_error_m": 0.0008538107509053274,
+    "maximum_pre_failure_plane_offset_error_m": 1.720281619549402e-05,
+    "missing_and_wrong_depth_rejected": true,
+    "mechanism": "Retain original local planar contact patch and separately track its observed curved neighbouring triangle surface; current depth estimates bounded vertical odometry correction. No truth pose/object mesh used by observer.",
+    "limit": "Only8saved images, not full20scoverage. Post-failure angledframe1000 stays map-valid but target error6.266mm reveals tangential foot-odometry limitation; candidate not deployed.",
+    "full_descent_validated": false,
+    "physical_success": false
+  },
+  "ankles": {
+    "fixed": false,
+    "new_work": "Replaced ambiguous6joint pitch solve with positive-bend geometric IK and common-sole midpoint balance target. Full3D foot closure passed; stool/L-couch support/balance failed, so no controller change deployed.",
+    "remaining": "Raw ankle speed discrepancy remains unproven as driver bug; no finite-difference substitution or quiet-gate bypass."
+  },
+  "stool": {
+    "placement_fix_inherited": true,
+    "new_geometric_branch_foot_audit": "/Users/kadir/humanoid-sitting-control/furniture_saved_repair_20261107_v2/results_v3/stool_center/initial_ik_audit.json",
+    "endpoint_rejected": true,
+    "remaining_patch_inset_error_m": 0.008810403808124277,
+    "original_action_or_success_limits_changed": false,
+    "full_thigh_scoring_observation": "Currentphysicalscorer admits whole hip-yaw body channels; priorplanner uses proximalhalf. Identified construction restriction only; not changed/deployed in this cycle."
+  },
+  "upright_lean": {
+    "root_cause": "Old infinite-plane minimum selects a torso vertex160.555mm above actual observed chair-back upper boundary.",
+    "code_correction": "Finite observed patch / rear-local body triangles determine contact witness, preserving20mm/40mm buffers.",
+    "source": "/Users/kadir/humanoid-sitting-control/furniture_saved_repair_20261107_v2/finite_back/finite_geometry.py",
+    "model_pass": false,
+    "failed_checks": [
+      "CoP_inset",
+      "desired_margin",
+      "full_mesh"
+    ],
+    "candidate_knee_rad": -0.30060693242096886,
+    "hyperextension_candidate_not_deployed": true,
+    "physical_success": false
+  },
+  "rejected_camera_variant": "Singleconnectedcomponent selection did not fix angledframe350 and lostframe650 association; preserved and notdeployed.",
+  "resources": {
+    "owner_count": 1,
+    "other_agents": 0,
+    "GPU_used_for_this_work": false,
+    "completed_model_constructions": 3,
+    "rejected_model_constructions": 3,
+    "software_initialization_failures": 2,
+    "bounded_process_wall_seconds": 40.9864857600478,
+    "bounded_process_cpu_seconds": 40.965455999999996,
+    "bounded_process_max_child_rss_kib": 285060,
+    "bounded_process_count": 6,
+    "outer_watchdog_seconds_each": 45,
+    "unmetered_CPU_work": "Read-only metadata/source diagnosis, local authoring/hash preparation and first connected-component camera replay; not claimed zero or included in bounded construction clocks.",
+    "new_simulation_steps": 0,
+    "new_successful_demos": 0,
+    "new_PPO_updates": 0,
+    "new72checks": 0,
+    "new_video": false
+  },
+  "workers": {
+    "utc": "2026-11-07T23:46:29.848520+00:00",
+    "gpu_rows": [
+      "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, NVIDIA GeForce RTX 4090, 68, 46, 6170, 24564",
+      "GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, NVIDIA GeForce RTX 4070, 88, 68, 4937, 12282"
+    ],
+    "gpu_processes": [
+      "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 3916534, /workspace/venv/bin/python, 6110",
+      "GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 3934199, /isaac-sim/kit/python/bin/python3, 4684"
+    ],
+    "own_scientific_workers": [],
+    "free_gib": {
+      "/home/kadir/humanoid-sitting": 15.854915618896484,
+      "/data": 5.828166961669922
+    },
+    "foreign_workers_untouched": true
+  },
+  "physical_status": {
+    "best09_clean": 64,
+    "development_cases": 72,
+    "unresolved_failures": 8,
+    "new_accepted_repairs": 0
+  },
+  "next_work": "Camera candidate needs complete current-frame/failed-state tracking validation and tangential odometry guard. Obtain an admissible balanced stool/L-couch path and nonhyperextended upright lean with full-path desired-margin and collision checks; do not reuse rejected vectors or relax gates. Only then collect10sitting+10leaning verified full rollouts across5furnitureobjects, validate imitation, train4090PPO and evaluateall72. No runnable training queue exists yet.",
+  "automation": "Deleted by human; not recreated",
+  "PPO_autostart": false,
+  "worker_live": false,
+  "failures_preserved": [
+    "Wrong trial ID vs scene ID causedStopIteration beforeconstruction",
+    "Pythonabs(JSONlist) duringmodelinitialization",
+    "Both geometric-branch endpoints rejected",
+    "Finite-back model rejected by balance,desiredmargin,mesh",
+    "Connected-component camera candidate rejected"
+  ]
+}

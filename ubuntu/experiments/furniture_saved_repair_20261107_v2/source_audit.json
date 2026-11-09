@@ -1,0 +1,22 @@
+{
+  "review": "Separate source-level review before any construction or camera replay",
+  "checks": {
+    "positive_bend_formula_uses_model_joint_frame_offsets": true,
+    "measured_roll_yaw_preserved": true,
+    "full3D_FK_decides_feasibility": true,
+    "accepted_demo_provenance_asserted": true,
+    "no_failed_solver_vectors_imported": true,
+    "all_original_independent_audits_required": true,
+    "outer_process_deadline_covers_imports_and_hashes": true,
+    "no_physics_or_training_spawn_path": true,
+    "camera_region_selection_independent_of_plane_fit_result": true,
+    "original_thresholds_unchanged": true
+  },
+  "not_claimed": [
+    "physical_success",
+    "ankle_stability",
+    "whole_descent_camera_validation",
+    "new_successful_demonstration"
+  ],
+  "limitation": "Planar IK ignores small roll/yaw coupling for construction only; mandatory full3D audit rejects excessive error. Model balance is not a guarantee of realized foot contact."
+}

@@ -1,0 +1,191 @@
+{
+  "utc": "2026-11-06T18:42:51.783291+00:00",
+  "state": "REJECTED_SAVED_DATA_LOAD_ESTIMATOR",
+  "authorization": "Latest human request: repair/validate estimator, then10sitting+10leaning across5objects,4090PPO,unchanged limits/criteria,all72/video",
+  "source": "/Users/kadir/humanoid-sitting-control/furniture_load_estimator_20261106_v2",
+  "remote_source": "/home/kadir/humanoid-sitting/experiments/furniture_load_estimator_20261106_v2",
+  "validation_starts": 21,
+  "passed_starts": 12,
+  "failed_starts": [
+    {
+      "case": "sit_myd1WSucAz_angled",
+      "failed_checks": [
+        "mean_error",
+        "tail_error",
+        "final_hold_error"
+      ],
+      "false_load_detections": 0,
+      "mean_absolute_error_BW": [
+        0.07049980759620667,
+        0.03149471431970596,
+        0.0038332475814968348
+      ]
+    },
+    {
+      "case": "sit_6MoOyPtetL_angled",
+      "failed_checks": [
+        "mean_error",
+        "tail_error",
+        "final_hold_error",
+        "no_false_load"
+      ],
+      "false_load_detections": 14,
+      "mean_absolute_error_BW": [
+        0.05672509968280792,
+        0.04702383279800415,
+        0.02656654641032219
+      ]
+    },
+    {
+      "case": "sit_1kwsjhpY84_angled",
+      "failed_checks": [
+        "mean_error",
+        "tail_error",
+        "final_hold_error"
+      ],
+      "false_load_detections": 0,
+      "mean_absolute_error_BW": [
+        0.09896067529916763,
+        0.07465627044439316,
+        0.003408807795494795
+      ]
+    },
+    {
+      "case": "sit_modern_coffee_table_01_angled",
+      "failed_checks": [
+        "mean_error",
+        "tail_error",
+        "final_hold_error"
+      ],
+      "false_load_detections": 0,
+      "mean_absolute_error_BW": [
+        0.060147229582071304,
+        0.022358525544404984,
+        0.003557348158210516
+      ]
+    },
+    {
+      "case": "original72_05",
+      "failed_checks": [
+        "tail_error",
+        "final_hold_error"
+      ],
+      "false_load_detections": 0,
+      "mean_absolute_error_BW": [
+        0.011376822367310524,
+        0.008781175129115582,
+        0.0013784655602648854
+      ]
+    },
+    {
+      "case": "original72_29",
+      "failed_checks": [
+        "tail_error",
+        "final_hold_error"
+      ],
+      "false_load_detections": 0,
+      "mean_absolute_error_BW": [
+        0.015561713837087154,
+        0.008807022124528885,
+        0.0014803136000409722
+      ]
+    },
+    {
+      "case": "original72_53",
+      "failed_checks": [
+        "tail_error"
+      ],
+      "false_load_detections": 0,
+      "mean_absolute_error_BW": [
+        0.011825845576822758,
+        0.004688609857112169,
+        0.0009698276408016682
+      ]
+    },
+    {
+      "case": "prior_armchair_09",
+      "failed_checks": [
+        "tail_error",
+        "final_hold_error"
+      ],
+      "false_load_detections": 0,
+      "mean_absolute_error_BW": [
+        0.003232930088415742,
+        0.019681356847286224,
+        0.0046913474798202515
+      ]
+    },
+    {
+      "case": "prior_armchair_10",
+      "failed_checks": [
+        "tail_error",
+        "final_hold_error"
+      ],
+      "false_load_detections": 0,
+      "mean_absolute_error_BW": [
+        0.00280951545573771,
+        0.013622857630252838,
+        0.005247223656624556
+      ]
+    }
+  ],
+  "five_object_positive_coverage": false,
+  "coverage_limit": "Stool test has no positive loaded frames; the L-couch leaning test also has none. Numerical accuracy on an unloaded episode is not loaded validation.",
+  "normal_training_loss_final": [
+    0.0005542213739317958,
+    0.0005395355374275823,
+    0.0006248481004149653
+  ],
+  "interpretation": "Training error fell, but independent unseen-start force accuracy and false-contact checks failed. No proof of fundamental unobservability or frame bug; no accepted estimator.",
+  "launch_accounting": {
+    "fixed_model_fits": 3,
+    "supervised_optimizer_steps": 7680,
+    "CPU_threads": 2,
+    "fit_seconds": 10.710925037004927,
+    "owner_total_seconds": 14.177494810995995,
+    "new_physics_steps": 0,
+    "new_PPO_updates": 0,
+    "GPU_used": false,
+    "retries": 0
+  },
+  "training_allowed": false,
+  "physical_demonstrations_added": 0,
+  "original72_retested": false,
+  "accepted_repairs": 0,
+  "action_limits_changed": false,
+  "physical_success_criteria_changed": false,
+  "fresh24_holdout_opened": false,
+  "pending_work": [
+    "Validated current-sensor load estimate with representative loaded coverage",
+    "10clean sitting and10clean leaning complete demonstrations across5furniture objects",
+    "Recovery/imitation complete-rollout validation",
+    "4090-only PPO with actual weight-update verification",
+    "All72 full physical regression/repair checks",
+    "Learned-policy video"
+  ],
+  "no_worker_live": true,
+  "no_recurring_automation": true,
+  "next": "Do not deploy the rejected checkpoints or restart PPO. Resolve force-estimation generalization and loaded-data coverage with a concrete sensor-grounded construction; then the authorized demonstration and training sequence remains outstanding.",
+  "hashes": {
+    "contract.json": "0bfdc7413adc8f3f0f8b37d88c6645790264b5f219d8347d8848ebcb979d26e3",
+    "inputs.json": "1d7fa5b29a715886056ae2993fbdfd438c79b9b783526cfee75d64df567b682d",
+    "source_audit.json": "660c98a26932e1dc067481d276c1cf39651f2ffb8cfd9e3dd587ecf632a44a11",
+    "freeze.json": "cbd76574f4af21b656b862e8deaaf31ea43bef7eb06852d0fa50d603e988d719",
+    "dataset_audit.json": "746d761a22c4172fb8e478539b88d8001fcf5f6d34ac628a1d900dd2233981d7",
+    "fit_result.json": "311232920a20625415a41674a1cea3ef69e1840fcc6facbdbda368358e7f42ed",
+    "validation.json": "b2b743223c01e0c9e002e2933e646056bcf8a6e14531b62463d1c164abc07484",
+    "status.json": "bd56c7e9277a1068ba320ae572ba131fbcf8c0786218d39e0e171eeafc4bf585",
+    "estimator_66201.pt": "4ea5bceb6a8bcf7391d9050c0db9a81c3da3d6ad9cdb9edc75b65dc0d8a98242",
+    "estimator_66202.pt": "d367f132242f87482ca55b275f3c36db023b8d1df8774b2f6edf7aed0086c8d6",
+    "estimator_66203.pt": "71f99df0ea6ad5200a7a381c9aa66872e6b45ded397ab7669459875c1ef9994b"
+  },
+  "video": {
+    "path": "/Users/kadir/humanoid-sitting-control/furniture_load_review_20261106_v1/recorded_behavior_and_load_estimator.mp4",
+    "manifest": "/Users/kadir/humanoid-sitting-control/furniture_load_review_20261106_v1/video_manifest.json",
+    "duration_s": 50,
+    "full_decode_passed": true,
+    "sha256_verified": true,
+    "visual_review": "Both final poses and readable annotations inspected; known armchair7s pass and historical couch0s failure; no new learned-policy success.",
+    "static_observer_and_neural_estimator_failures_are_distinct": true
+  }
+}

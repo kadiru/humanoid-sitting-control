@@ -1,0 +1,56 @@
+{
+  "construction": "Whole-body arm counterbalance for observed-interior bilateral-foot hover",
+  "stage": "CPU model construction only; physics and PPO remain gated",
+  "target_premise_associations": [
+    {
+      "target": "sit_modern_coffee_table_01_center",
+      "premise": "Observed top plane and polygon from saved frame_0; original flat-seat transfer is not an interior-contact construction"
+    },
+    {
+      "target": "sit_modern_coffee_table_01_angled",
+      "premise": "Pelvis loaded slip starts9.94s, before rolling plan tick500; final8.04s hold proves a sustained contact state existed, not a clean episode"
+    }
+  ],
+  "mechanism": "Determine a contact point50mm inside the camera-observed front boundary; solve fresh bilateral-foot equations with COM inside the foot support interval at every approach node; pause at12mm hover; future final descent must retain current quiet-state gates and6mm/s normal cap. Avoid changing pitch/tangent under initial load.",
+  "initialization": "Only saved startup encoders, gravity, previous command, camera plane and selected points; no simulator root pose, contact truth, geometry-bank label, or old failed command path enters construction.",
+  "equations": "Nine variables: six sagittal leg angles, rootx,rootz,pitch. Nine residuals: each fixed-foot x,z,pitch; pelvis mesh-plane gap; pelvis contact tangent; mass-weighted COMx. See seat_plan.py for exact frozen equations. Other body joints remain at standing command in this construction.",
+  "witness_test": "Separate audit recomputes both complete foot poses, full mass COM, observed contact-patch inset, all23 commanded joint margins, initial command identity, and time remaining for original5s hold. This is a model feasibility test, not optimality certification or physical success.",
+  "resource_accounting": {
+    "named_inputs": 2,
+    "maximum_seconds_per_input_including_independent_audit": 45,
+    "outer_process_timeout_seconds": 120,
+    "maximum_endpoint_solver_evaluations_per_node": 60,
+    "maximum_nodes_per_input": 33,
+    "maximum_fits_per_input": 32,
+    "gpu_use": false,
+    "simulator_steps": 0,
+    "ppo_updates": 0,
+    "no_retries": true
+  },
+  "finite_returns": [
+    "model audit passes, with remaining launch gates explicitly listed",
+    "infeasible bounded pose with residuals",
+    "model audit rejection",
+    "timeout",
+    "input/source mismatch or software error"
+  ],
+  "remaining_before_simulation": [
+    "complete observed-obstacle clearance",
+    "normal landing and sensor load feedback implementation",
+    "live quiet-state and freshness gate",
+    "independent full command-path audit",
+    "4090 free and cooperative lock held"
+  ],
+  "unchanged": [
+    "original action bounds and filter",
+    "physical scoring",
+    "materials",
+    "protected64 cases",
+    "closed fresh24 holdout",
+    "4070 reserved",
+    "no recurring automation"
+  ],
+  "predecessor_result": "model_v2 rejected both named constructions: pitch bound0.6481317rad active while contact tangent and COM residuals exceeded2mm; no physics launched.",
+  "substantive_change": "Add six arm joint motions into full mass COM, rather than leaving arms at initial pose. Both shoulders pitch toward-1.3rad, shoulders roll toward+/-0.15rad, elbows pitch toward0.10rad, proportional to approach phase. Include model-derived arm gravity compensation using unchanged40Nm/rad stiffness. All foot, tilt, command, residual and timing bounds unchanged.",
+  "witness_mechanism": "Forward arm mass can supply the missing forward COM moment while the pelvis reaches the observed interior. The full-body COM and complete command-path timing are recomputed; no previous failed direction is reused."
+}

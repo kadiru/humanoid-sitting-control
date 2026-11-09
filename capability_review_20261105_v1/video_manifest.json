@@ -1,0 +1,63 @@
+{
+  "video_sha256": "a6aae8a563bb890f5e0badfe314db81f376b439e4779e93e4e64357d35dabc15",
+  "renderer_sha256": "78249b64e5790a45def1b3a98666cd5112fbe0073a908fc6dd20c0daa2641740",
+  "visual_mesh_sha256": "1d0de933f870cd16b01d69dcbccb1b5f2a91ae6242188e6f30972ce5ce641841",
+  "streams": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "duration": "57.000000",
+      "nb_read_frames": "1425"
+    }
+  ],
+  "source_bindings": {
+    "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_0/trajectory.npz": "85c0179bb84f2e5e26b69f89fc774da04a32f8b16d6dc7f600b5726da6502c8f",
+    "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_0/independent_audit.json": "1a18f0b460acb56d8983d358d97a75852b980a256914c662906f13ed71b41807",
+    "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_0/manifest.json": "f218b7cb910727a9048eb5b7f5fa0e181944acf01ae09190b25d1ec069692373",
+    "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_1/trajectory.npz": "3ad5af283d64d6abb6a19ad44f3cb21b9c4a5713c534dbb3d7dd2f543cfc7e63",
+    "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_1/independent_audit.json": "d8a677b8a14f85b89b70f1db9850a934be6b45ca31bb8be7b3d8ec70d78be930",
+    "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_1/manifest.json": "a9c7e84dad98e91e78233596ef4a7a934810e751f2c8d33204b2ec25a0db218f",
+    "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_2/trajectory.npz": "50905e055280fd552d0ec317758e18a12c87ad45735c1e761ea4e0fb52aa1ab1",
+    "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_2/independent_audit.json": "9845b1fc7d2cb01e36fb49e3921e0946e4b089506f4862be48c8d0d56cef6e22",
+    "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_2/manifest.json": "c6817b322e1523f9f41f4d5d0d447ee02b46d17831421706bc57d38759dd169b",
+    "/home/kadir/humanoid-sitting/outputs/furniture_perception_repair_20261029_v1/robot_myd1WSucAz_seat_oblique/trajectory.npz": "a548ff727be736c18d92d5c4bae120c4dd9470467c5e2bd4da9d3c4abdc5e41f",
+    "/home/kadir/humanoid-sitting/outputs/furniture_perception_repair_20261029_v1/robot_myd1WSucAz_seat_oblique/independent_audit.json": "b7b926af1eb3e4e103407dff067bbbf33cbc4826e711ff26ec3611bfd9673f93",
+    "/home/kadir/humanoid-sitting/outputs/furniture_perception_repair_20261029_v1/robot_myd1WSucAz_seat_oblique/manifest.json": "65b1b7378c1cfd99e06af7612ba320fbe73b1e21249635eadba35c491d3f4c3d",
+    "/home/kadir/humanoid-sitting/outputs/furniture_perception_repair_20261029_v1/robot_6MoOyPtetL_arm/trajectory.npz": "21a7b5c45e32d3bb3f56beacf5ff46bbd77a1f922607ec559c7b90f269ad7c6c",
+    "/home/kadir/humanoid-sitting/outputs/furniture_perception_repair_20261029_v1/robot_6MoOyPtetL_arm/independent_audit.json": "aa881562df227d85caf25ef9e56b397530efb6becad410b0bec5f443caf602b7",
+    "/home/kadir/humanoid-sitting/outputs/furniture_perception_repair_20261029_v1/robot_6MoOyPtetL_arm/manifest.json": "7a6e89591bb78e7ee0a698d51355defe3ef43d8f41e12a56262cc7a346b6e3ab"
+  },
+  "segments": [
+    {
+      "name": "intro",
+      "seconds": 2.0
+    },
+    {
+      "name": "current_lean",
+      "seconds": 20.0
+    },
+    {
+      "name": "repeat_starts",
+      "seconds": 7.0
+    },
+    {
+      "name": "earlier_ppo_failures",
+      "seconds": 20.0
+    },
+    {
+      "name": "limits",
+      "seconds": 8.0
+    }
+  ],
+  "physics_steps": 0,
+  "ppo_updates": 0,
+  "rendering": "CPU-only replay of exact saved poses using simplified authored visual meshes, neutral colors and a display floor grid. No collision overlays, no force arrows, no altered motion.",
+  "scope": "Current model-based lean controller and earlier PPO failure clips are explicitly distinct. Wider current-controller capability is untested.",
+  "local_verification": {
+    "video_sha256_matches_remote": true,
+    "renderer_sha256_matches_remote": true,
+    "all_1425_frames_decoded": true,
+    "visual_review": "Inspected initial pose, final lean, both repeats, both archived failures at middle/end, and limits card. Text and complete robot stay inside frame.",
+    "local_video": "/Users/kadir/humanoid-sitting-control/capability_review_20261105_v1/capabilities_and_limits.mp4"
+  }
+}

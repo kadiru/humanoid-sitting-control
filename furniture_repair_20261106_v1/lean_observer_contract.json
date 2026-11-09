@@ -1,0 +1,9 @@
+{
+  "premise": "Saved left lean physical force yields traction utilization0.9477, but old nominal-plan observer reports only about-4N shear and74N normal. Calibration ended8.75s, before first furniture load10.32s, so premature contact calibration is not supported by the data.",
+  "construction": "Replace nominal planned-pose contact Jacobian with existing actual-encoder/IMU motor-torque foot-wrench equations. Under a quiet quasi-static hold, predicted surface force equals gravity minus the sum of both estimated foot forces. Startup bias is fixed using only initial in-air sensor prediction; never physical force truth.",
+  "named_inputs": ["lean_myd1WSucAz_left", "lean_myd1WSucAz_right"],
+  "validation": "Replay1000 saved sensor observations each; align pre-action predictions to previous physical force sample; report final250 normal/shear errors in measured-plane axes. Require all observer condition numbers<200 and mean absolute normal/shear error<0.02BW. This measurement validation gate is not a changed physical success threshold.",
+  "resources": {"observations": 2000, "CPU_timeout_seconds": 45, "simulator_steps": 0, "PPO_updates": 0, "retries": 0},
+  "downstream": "A failed measurement test forbids deploying this replacement; no automatic parameter correction or physics launch.",
+  "actor_truth_input": false
+}

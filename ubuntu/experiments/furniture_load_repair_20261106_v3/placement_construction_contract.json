@@ -1,0 +1,19 @@
+{
+  "construction": "For the six still-rejected seat starts, use actual static robot convex shapes and furniture triangles to find first contact along a backward standing translation. Three-variable barycentric geometry LPs; reset placement is10mm in front of the first collision of the unchanged6mm expanded hull, capped140mm. The4already-admitted paths are not recomputed.",
+  "why": "The old50mm placement was derived from a whole-object AABB. The seat extends above the feet, so this can unnecessarily restrict a collision-free standing position and force long/deep arm-assisted approaches. Actual shape clearance, not a relaxed action or score bound, decides the new start.",
+  "initialization": "Same original standing q,qd,previous,rootheight/orientation; horizontal reset translation only. Fresh cold measured-plane path construction; no old rejected optimizer vector.",
+  "tests": "Original independent full-path feet/COM/interior/margins/14.4stiming/6mmclearance audits remain. Every actual rollout requires fresh camera and standing reset validation.",
+  "resources": {
+    "cases": 6,
+    "seconds_per_case_including_all_LPs_construction_and_audits": 45,
+    "LP_variables": 3,
+    "max_geometry_LPs_per_case": 2000,
+    "seconds_per_LP": 1,
+    "CPU_threads": 2,
+    "GPU": false,
+    "physics_steps": 0,
+    "PPO_updates": 0,
+    "retries": 0
+  },
+  "physical_success_claimed": false
+}

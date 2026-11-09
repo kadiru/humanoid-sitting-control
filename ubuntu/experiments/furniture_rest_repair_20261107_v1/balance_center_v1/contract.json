@@ -1,0 +1,15 @@
+{
+  "construction": "Choose the unique midpoint of the intersection of both measured sole-support X intervals. This maximizes minimum fore/aft CoP reserve under the unchanged5mm constraint. Old construction deliberately targeted rear edge+20mm; recorded feet pitched up7degrees and raw ankle speed blocked landing.",
+  "mechanism": "Move nominal pre-contact center of pressure away from the heel; do not change damping, raw velocity, physics settings, action rate, support criteria, or the contact target. Static torque change is checked, physical effect is unproven.",
+  "case": "sit_1kwsjhpY84_center_local_patch_normal_landing",
+  "initialization": "Saved actual standing construction_inputs only; no previous endpoint/path initializes solve",
+  "resources": {
+    "cases": 1,
+    "total_seconds": 45,
+    "CPU_threads": 2,
+    "physics_steps": 0,
+    "PPO_updates": 0,
+    "retries": 0
+  },
+  "independent_audit": "Original bilateral pose, normal approach, command/filter/margin/time and all-mesh checks; retain all failures. New motion needs separate current-camera/controller admission."
+}

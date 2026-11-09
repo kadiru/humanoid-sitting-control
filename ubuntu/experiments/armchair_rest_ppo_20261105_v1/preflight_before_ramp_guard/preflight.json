@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "plans": {
+    "rear_back": {
+      "planning_passed": true,
+      "duration_s": 13.494457871861318,
+      "final_q": [
+        -1.2056720517557131,
+        1.4463530618182574,
+        -0.3405829215704013
+      ],
+      "final_height": 0.023135557205895586,
+      "final_pitch": 0.10000000007688858,
+      "cpu_seconds": 1.0829280480975285
+    },
+    "rear_pelvis": {
+      "planning_passed": false,
+      "error": "ValueError('PELVIS_COMMAND_LIMIT')",
+      "cpu_seconds": 0.9297582400031388
+    }
+  },
+  "action_contract_passed": true,
+  "original_demonstrations_intact": true,
+  "physics_steps": 0,
+  "PPO_updates": 0,
+  "scope": "Saved center planning only; new starts and physical support remain unvalidated."
+}

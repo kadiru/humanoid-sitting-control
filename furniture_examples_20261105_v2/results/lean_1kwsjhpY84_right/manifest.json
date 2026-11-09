@@ -1,0 +1,59 @@
+{
+  "case": {
+    "id": "1kwsjhpY84_rear_back",
+    "asset": "1kwsjhpY84",
+    "title": "L-shaped couch",
+    "approach": "rear_back",
+    "yaw_deg": -90,
+    "task": "leaning",
+    "mesh_usd": "/home/kadir/humanoid-sitting/experiments/furniture_examples_20261105_v1/scenes/1kwsjhpY84_rear_back/furniture.usda",
+    "mesh_npz": "/home/kadir/humanoid-sitting/experiments/furniture_examples_20261105_v1/scenes/1kwsjhpY84_rear_back/mesh.npz",
+    "bounds": [
+      [
+        -1.8755194929041783,
+        -1.1000000000000003,
+        0.0
+      ],
+      [
+        -0.18000000000000005,
+        1.1000000000000003,
+        0.8860971985977829
+      ]
+    ],
+    "target_center": [
+      -0.2871143032123825,
+      -0.009552252676735064,
+      0.6580249032166161
+    ],
+    "target_normal": [
+      0.9995779147752706,
+      -0.017859999149780367,
+      -0.022913156131178967
+    ],
+    "uniform_scale": 0.3918488990608461,
+    "color": [
+      0.36,
+      0.41,
+      0.57
+    ],
+    "collision": "Exact triangles, anchored rigid furniture",
+    "contact_scoring_validated": false
+  },
+  "variant": {
+    "id": "lean_1kwsjhpY84_right",
+    "asset": "1kwsjhpY84",
+    "case": "1kwsjhpY84_rear_back",
+    "title": "L-shaped couch",
+    "task": "leaning",
+    "intent": "back",
+    "x": 0.0,
+    "y": -0.035,
+    "yaw_deg": -3.0,
+    "teacher": "validated_camera_back_teacher"
+  },
+  "profile": "rear_back",
+  "task": "leaning",
+  "actor_truth_input": false,
+  "action_limits_unchanged": true,
+  "success_thresholds_unchanged": true
+}

@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "review_kind": "Single execution owner source review with separately implemented NumPy/ray/force audit programs; no external reviewer claimed.",
+  "interfaces_no_actor_truth": true,
+  "capture_pose_audit_only": true,
+  "pixel_centers": true,
+  "connected_components": true,
+  "camera_origin_normal_orientation": true,
+  "original_plane_gate_retained": true,
+  "curved_surface_membership_reported_separately": true,
+  "no_physical_threshold_changes": true,
+  "no_action_changes": true,
+  "wait_for_both_seeds_and_all_evaluations": true,
+  "gpu4090_only": true,
+  "no_new_training": true,
+  "no_automatic_retries": true,
+  "no_recurring_automation": true,
+  "actual_resource_bounds_checked": true,
+  "partial_or_failed_outcomes_preserved": true,
+  "audits": [
+    "audit_depth.py",
+    "audit_support.py",
+    "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py"
+  ],
+  "known_limitations": [
+    "Curved furniture is represented by local planes; old globalplane matching can fail despite correct face recognition.",
+    "Sensorselected development motion library is not a novelfurniture generalization guarantee.",
+    "Body fixtures are held under controlled loads and do not prove wholebodybalance.",
+    "Contact channels touching multiple normals remain unvalidated, never clean by relaxation."
+  ]
+}

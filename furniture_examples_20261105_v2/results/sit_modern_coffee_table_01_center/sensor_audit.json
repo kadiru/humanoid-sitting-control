@@ -1,0 +1,828 @@
+{
+  "channels": 414,
+  "physics_advances_during_camera": 0,
+  "camera_frames": 102,
+  "actor_inputs": "encoders, measured torque, IMU gravity/gyro, previous absolute joint commands, depth plane with encoder/IMU propagation",
+  "truth_validation": [
+    {
+      "t": 0.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.012069002297016995,
+      "offset_error_m": 9.388298805035333e-08
+    },
+    {
+      "t": 0.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.012069002297016995,
+      "offset_error_m": 9.388298805035333e-08
+    },
+    {
+      "t": 0.2,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 4.476020887267396e-09
+    },
+    {
+      "t": 0.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.011185134953891038,
+      "offset_error_m": 2.8654989701060174e-06
+    },
+    {
+      "t": 0.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.006360300342384728,
+      "offset_error_m": 4.176801155164611e-06
+    },
+    {
+      "t": 0.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.011686229204404321,
+      "offset_error_m": 8.706754158094299e-06
+    },
+    {
+      "t": 1.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.013148921194217488,
+      "offset_error_m": 1.7628130417612908e-06
+    },
+    {
+      "t": 1.2,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0019361028195985196,
+      "offset_error_m": 3.10391754920758e-06
+    },
+    {
+      "t": 1.4000000000000001,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 5.5179056626109e-06
+    },
+    {
+      "t": 1.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.010475547527839107,
+      "offset_error_m": 2.4780687790659783e-06
+    },
+    {
+      "t": 1.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.012877007669801176,
+      "offset_error_m": 4.653638313367736e-06
+    },
+    {
+      "t": 2.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 9.153788993909728e-06
+    },
+    {
+      "t": 2.2,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 4.296010444715392e-06
+    },
+    {
+      "t": 2.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 6.859010170057189e-06
+    },
+    {
+      "t": 2.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 9.660428474500549e-06
+    },
+    {
+      "t": 2.8000000000000003,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.012139269667688694,
+      "offset_error_m": 1.594871849830426e-05
+    },
+    {
+      "t": 3.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 1.2759870002820861e-05
+    },
+    {
+      "t": 3.2,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.011630682676386145,
+      "offset_error_m": 1.5352672050550353e-05
+    },
+    {
+      "t": 3.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.01389550472064551,
+      "offset_error_m": 1.5233462760999572e-05
+    },
+    {
+      "t": 3.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 9.749835441663635e-06
+    },
+    {
+      "t": 3.8000000000000003,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.004241422191693658,
+      "offset_error_m": 9.183591316297424e-06
+    },
+    {
+      "t": 4.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 1.8541520546033752e-05
+    },
+    {
+      "t": 4.2,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 1.8630927513196838e-05
+    },
+    {
+      "t": 4.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 1.9167369316175353e-05
+    },
+    {
+      "t": 4.6000000000000005,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.013432909603160367,
+      "offset_error_m": 1.892895073707379e-05
+    },
+    {
+      "t": 4.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 1.2938683937147033e-05
+    },
+    {
+      "t": 5.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.013399142484835199,
+      "offset_error_m": 1.8839543769910705e-05
+    },
+    {
+      "t": 5.2,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.007390618132629921,
+      "offset_error_m": 3.061146111305035e-05
+    },
+    {
+      "t": 5.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 2.1909182975843322e-05
+    },
+    {
+      "t": 5.6000000000000005,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.013159922001757269,
+      "offset_error_m": 2.3667519996717346e-05
+    },
+    {
+      "t": 5.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 2.5008624504163635e-05
+    },
+    {
+      "t": 6.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.010757701297936116,
+      "offset_error_m": 2.375692696388043e-05
+    },
+    {
+      "t": 6.2,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.008009015497293633,
+      "offset_error_m": 3.1743949363782775e-05
+    },
+    {
+      "t": 6.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 2.8137868354871642e-05
+    },
+    {
+      "t": 6.6000000000000005,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.876239628608502e-05
+    },
+    {
+      "t": 6.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.009422557504688055,
+      "offset_error_m": 2.5634473274305236e-05
+    },
+    {
+      "t": 7.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 2.631992668922223e-05
+    },
+    {
+      "t": 7.2,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 2.3399299095228088e-05
+    },
+    {
+      "t": 7.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 2.852529854591168e-05
+    },
+    {
+      "t": 7.6000000000000005,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0031778124916798088,
+      "offset_error_m": 2.6170915077283752e-05
+    },
+    {
+      "t": 7.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 2.6409333656385314e-05
+    },
+    {
+      "t": 8.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 2.4054950187757385e-05
+    },
+    {
+      "t": 8.2,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.00735964640201555,
+      "offset_error_m": 4.169792504127301e-05
+    },
+    {
+      "t": 8.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.12522110443858e-05
+    },
+    {
+      "t": 8.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.012501183317205504,
+      "offset_error_m": 3.006011814887799e-05
+    },
+    {
+      "t": 8.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.757030339057721e-05
+    },
+    {
+      "t": 9.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 2.579838604743756e-05
+    },
+    {
+      "t": 9.200000000000001,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.624410004432477e-05
+    },
+    {
+      "t": 9.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 2.9896205375745666e-05
+    },
+    {
+      "t": 9.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.008290553030177917,
+      "offset_error_m": 3.077537388618268e-05
+    },
+    {
+      "t": 9.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.006187094331807298,
+      "offset_error_m": 4.4007605026319396e-05
+    },
+    {
+      "t": 10.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.2831734130933654e-05
+    },
+    {
+      "t": 10.200000000000001,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.266782135780133e-05
+    },
+    {
+      "t": 10.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.00966598370819118,
+      "offset_error_m": 3.400892586524762e-05
+    },
+    {
+      "t": 10.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.013756018667077473,
+      "offset_error_m": 4.6361988494947326e-05
+    },
+    {
+      "t": 10.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0056385103621158965,
+      "offset_error_m": 4.066974491889752e-05
+    },
+    {
+      "t": 11.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.006883578340501846,
+      "offset_error_m": 3.584176869209088e-05
+    },
+    {
+      "t": 11.200000000000001,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.8419669578626525e-05
+    },
+    {
+      "t": 11.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.430694908912457e-05
+    },
+    {
+      "t": 11.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.012806982595076373,
+      "offset_error_m": 3.272742600257672e-05
+    },
+    {
+      "t": 11.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.008009603605671777,
+      "offset_error_m": 3.8032239387586486e-05
+    },
+    {
+      "t": 12.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.008619042148857989,
+      "offset_error_m": 3.7406390617444885e-05
+    },
+    {
+      "t": 12.200000000000001,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 4.530400605018414e-05
+    },
+    {
+      "t": 12.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 4.724115700538434e-05
+    },
+    {
+      "t": 12.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 4.163832039649762e-05
+    },
+    {
+      "t": 12.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.010143484894496953,
+      "offset_error_m": 3.926903576667584e-05
+    },
+    {
+      "t": 13.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.011965571546678547,
+      "offset_error_m": 3.7465995262220275e-05
+    },
+    {
+      "t": 13.200000000000001,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.009587027288242927,
+      "offset_error_m": 4.171282620246686e-05
+    },
+    {
+      "t": 13.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.564805359657086e-05
+    },
+    {
+      "t": 13.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.323406548316754e-05
+    },
+    {
+      "t": 13.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.019422859962262e-05
+    },
+    {
+      "t": 14.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.4292047927930724e-05
+    },
+    {
+      "t": 14.200000000000001,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 2.910644383247174e-05
+    },
+    {
+      "t": 14.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.013553907525080362,
+      "offset_error_m": 3.457516999061383e-05
+    },
+    {
+      "t": 14.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.1371420333936584e-05
+    },
+    {
+      "t": 14.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 2.8435891578748596e-05
+    },
+    {
+      "t": 15.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.013181634458712664,
+      "offset_error_m": 3.120750756080426e-05
+    },
+    {
+      "t": 15.200000000000001,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.0477350662305724e-05
+    },
+    {
+      "t": 15.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.011186466287162503,
+      "offset_error_m": 3.1118100593641174e-05
+    },
+    {
+      "t": 15.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.012023738174220918,
+      "offset_error_m": 3.037304253394879e-05
+    },
+    {
+      "t": 15.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.038794369514264e-05
+    },
+    {
+      "t": 16.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.0462449501111877e-05
+    },
+    {
+      "t": 16.2,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.012605925613889946,
+      "offset_error_m": 3.0462449501111877e-05
+    },
+    {
+      "t": 16.4,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.0477350662305724e-05
+    },
+    {
+      "t": 16.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.044754833991803e-05
+    },
+    {
+      "t": 16.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.044754833991803e-05
+    },
+    {
+      "t": 17.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.008023155858938293,
+      "offset_error_m": 3.043264717872418e-05
+    },
+    {
+      "t": 17.2,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0037046447633105922,
+      "offset_error_m": 3.044754833991803e-05
+    },
+    {
+      "t": 17.400000000000002,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.056675762946881e-05
+    },
+    {
+      "t": 17.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.052205414588727e-05
+    },
+    {
+      "t": 17.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.052205414588727e-05
+    },
+    {
+      "t": 18.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.050715298469342e-05
+    },
+    {
+      "t": 18.2,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.009231298170517387,
+      "offset_error_m": 3.0477350662305724e-05
+    },
+    {
+      "t": 18.400000000000002,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.044754833991803e-05
+    },
+    {
+      "t": 18.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.0462449501111877e-05
+    },
+    {
+      "t": 18.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.005961389247224207,
+      "offset_error_m": 3.0477350662305724e-05
+    },
+    {
+      "t": 19.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.044754833991803e-05
+    },
+    {
+      "t": 19.2,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.0,
+      "offset_error_m": 3.0492251823499572e-05
+    },
+    {
+      "t": 19.400000000000002,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.007100512052830936,
+      "offset_error_m": 3.0492251823499572e-05
+    },
+    {
+      "t": 19.6,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.01306374001726102,
+      "offset_error_m": 3.0417746017530334e-05
+    },
+    {
+      "t": 19.8,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.00916905830976232,
+      "offset_error_m": 3.0477350662305724e-05
+    },
+    {
+      "t": 20.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.01324474195195778,
+      "offset_error_m": 3.0462449501111877e-05
+    }
+  ],
+  "reference": "Offline joint-command/pitch motion library, control clock and IMU pitch/gyro feedback; not live simulator geometry or robot pose. Explicitly a residual/reference-based controller.",
+  "contract": "Encoders, torque, IMU, measured plane, explicit reference commands and clock; no live truth pose/geometry/contacts in controller or network.",
+  "observations": 414,
+  "traction_contract": "406 inherited sensor/reference channels plus six estimated filtered sagittal foot-wrench channels and two bounded admittance offsets. No contact labels or live truth poses."
+}

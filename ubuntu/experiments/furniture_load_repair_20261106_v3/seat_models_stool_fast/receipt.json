@@ -1,0 +1,775 @@
+{
+  "cases": [
+    {
+      "case": "sit_wooden_stool_01_center_closer",
+      "closer_m": 0.13999999999999999,
+      "placement": {
+        "closer_m": 0.13999999999999999,
+        "first_contact_translation_m": 0.15,
+        "additional_separation_m": 0.01,
+        "existing_clearance_m": 0.006,
+        "first_contact_witness": null,
+        "three_variable_geometry_LPs": 0,
+        "actual_rollout_initial_mesh_check_required": true
+      },
+      "geometry_audit": {
+        "passed": true,
+        "tests": {
+          "bilateral_feet_fixed": true,
+          "balance_in_foot_support": true,
+          "hover_clearance": true,
+          "contact_patch_observed_interior": true,
+          "command_margin_unchanged": true,
+          "initial_command_exact": true,
+          "time_for_original_hold": true
+        },
+        "max_foot_error": 0.00016274566172039208,
+        "min_command_margin": 0.25999997307436695,
+        "min_patch_inset": 0.023673218430411924,
+        "com_range": [
+          -0.05031195537506265,
+          0.04515000193039673
+        ],
+        "earliest_settled_seconds": 12.976880804862551,
+        "missing_before_physics": [
+          "full observed-obstacle clearance",
+          "final landing/load controller",
+          "live quiet-state gate"
+        ],
+        "simulation_admitted": false,
+        "physical_success": false
+      },
+      "command_audit": {
+        "passed": true,
+        "tests": {
+          "discrete_filter_exact": true,
+          "original_rate_limit": true,
+          "desired_command_margin": true,
+          "normal_approach": true,
+          "feet_fixed": true,
+          "landing_command_rate": true,
+          "original_hold_time_reserved": true
+        },
+        "maximum_increment_rad": 0.002999970000000296,
+        "minimum_desired_margin_rad": 0.25999997307436695,
+        "normal_path_tangent_drift_m": 0.00026894626034421987,
+        "nominal_latest_settled_s": 12.08,
+        "final_model_gap_m": -0.002997870137355585,
+        "actual_quiet_gate_may_delay": true,
+        "missing_before_physics": [
+          "full collision clearance",
+          "live sensor controller and reset checks"
+        ],
+        "simulation_admitted": false,
+        "physical_success": false
+      },
+      "clearance_audit": {
+        "passed": false,
+        "sampled_poses": 189,
+        "triangle_tests": 90587,
+        "forbidden_or_early_clearance_intersections": [
+          {
+            "sample": 125,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "approach"
+          },
+          {
+            "sample": 125,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "approach"
+          },
+          {
+            "sample": 125,
+            "body": "left_hip_pitch_link",
+            "face": 10888,
+            "phase": "approach"
+          },
+          {
+            "sample": 126,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "approach"
+          },
+          {
+            "sample": 126,
+            "body": "left_hip_pitch_link",
+            "face": 10608,
+            "phase": "approach"
+          },
+          {
+            "sample": 126,
+            "body": "left_hip_pitch_link",
+            "face": 10641,
+            "phase": "approach"
+          },
+          {
+            "sample": 126,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "approach"
+          },
+          {
+            "sample": 126,
+            "body": "left_hip_pitch_link",
+            "face": 10888,
+            "phase": "approach"
+          },
+          {
+            "sample": 127,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "approach"
+          },
+          {
+            "sample": 127,
+            "body": "left_hip_pitch_link",
+            "face": 10608,
+            "phase": "approach"
+          },
+          {
+            "sample": 127,
+            "body": "left_hip_pitch_link",
+            "face": 10641,
+            "phase": "approach"
+          },
+          {
+            "sample": 127,
+            "body": "left_hip_pitch_link",
+            "face": 10642,
+            "phase": "approach"
+          },
+          {
+            "sample": 127,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "approach"
+          },
+          {
+            "sample": 127,
+            "body": "left_hip_pitch_link",
+            "face": 10888,
+            "phase": "approach"
+          },
+          {
+            "sample": 128,
+            "body": "left_hip_pitch_link",
+            "face": 10493,
+            "phase": "approach"
+          },
+          {
+            "sample": 128,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "approach"
+          },
+          {
+            "sample": 128,
+            "body": "left_hip_pitch_link",
+            "face": 10608,
+            "phase": "approach"
+          },
+          {
+            "sample": 128,
+            "body": "left_hip_pitch_link",
+            "face": 10641,
+            "phase": "approach"
+          },
+          {
+            "sample": 128,
+            "body": "left_hip_pitch_link",
+            "face": 10642,
+            "phase": "approach"
+          },
+          {
+            "sample": 128,
+            "body": "left_hip_pitch_link",
+            "face": 10737,
+            "phase": "approach"
+          },
+          {
+            "sample": 128,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "approach"
+          },
+          {
+            "sample": 128,
+            "body": "left_hip_pitch_link",
+            "face": 10888,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10493,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10608,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10641,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10642,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10737,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10888,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10493,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10544,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10608,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10641,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10642,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10737,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10888,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10493,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10544,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10608,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10641,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10642,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10737,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10888,
+            "phase": "approach"
+          },
+          {
+            "sample": 132,
+            "body": "left_hip_pitch_link",
+            "face": 10493,
+            "phase": "landing"
+          },
+          {
+            "sample": 132,
+            "body": "left_hip_pitch_link",
+            "face": 10544,
+            "phase": "landing"
+          }
+        ],
+        "forbidden_or_early_clearance_intersection_count": 6062,
+        "expected_target_approaches": 599,
+        "clearance_buffer_m": 0.006,
+        "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+        "simulation_success": false,
+        "accelerator": "cKDTree exact AABB + signed halfspace rejection/interior; original clip on boundary",
+        "fast_exclusions": 83896,
+        "fast_inside": 6484,
+        "slow_clips": 207
+      },
+      "model_admitted": false,
+      "physical_success": false,
+      "time_admission": "Exact discrete original-action-contract schedule replaces the preliminary conservative estimate; the14.4s cutoff is unchanged.",
+      "seconds": 10.541820733007626
+    },
+    {
+      "case": "sit_wooden_stool_01_angled_closer",
+      "closer_m": 0.13999999999999999,
+      "placement": {
+        "closer_m": 0.13999999999999999,
+        "first_contact_translation_m": 0.15,
+        "additional_separation_m": 0.01,
+        "existing_clearance_m": 0.006,
+        "first_contact_witness": null,
+        "three_variable_geometry_LPs": 15,
+        "actual_rollout_initial_mesh_check_required": true
+      },
+      "geometry_audit": {
+        "passed": true,
+        "tests": {
+          "bilateral_feet_fixed": true,
+          "balance_in_foot_support": true,
+          "hover_clearance": true,
+          "contact_patch_observed_interior": true,
+          "command_margin_unchanged": true,
+          "initial_command_exact": true,
+          "time_for_original_hold": true
+        },
+        "max_foot_error": 0.00020856925636051146,
+        "min_command_margin": 0.25999997307436695,
+        "min_patch_inset": 0.02516909430206385,
+        "com_range": [
+          -0.050272028635728085,
+          0.045150006809640306
+        ],
+        "earliest_settled_seconds": 13.292632756577103,
+        "missing_before_physics": [
+          "full observed-obstacle clearance",
+          "final landing/load controller",
+          "live quiet-state gate"
+        ],
+        "simulation_admitted": false,
+        "physical_success": false
+      },
+      "command_audit": {
+        "passed": true,
+        "tests": {
+          "discrete_filter_exact": true,
+          "original_rate_limit": true,
+          "desired_command_margin": true,
+          "normal_approach": true,
+          "feet_fixed": true,
+          "landing_command_rate": true,
+          "original_hold_time_reserved": true
+        },
+        "maximum_increment_rad": 0.002999970000000296,
+        "minimum_desired_margin_rad": 0.25999997307436695,
+        "normal_path_tangent_drift_m": 0.00024206069033926646,
+        "nominal_latest_settled_s": 12.34,
+        "final_model_gap_m": -0.0029960911804235435,
+        "actual_quiet_gate_may_delay": true,
+        "missing_before_physics": [
+          "full collision clearance",
+          "live sensor controller and reset checks"
+        ],
+        "simulation_admitted": false,
+        "physical_success": false
+      },
+      "clearance_audit": {
+        "passed": false,
+        "sampled_poses": 189,
+        "triangle_tests": 83560,
+        "forbidden_or_early_clearance_intersections": [
+          {
+            "sample": 126,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "approach"
+          },
+          {
+            "sample": 126,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "approach"
+          },
+          {
+            "sample": 127,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "approach"
+          },
+          {
+            "sample": 127,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "approach"
+          },
+          {
+            "sample": 128,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "approach"
+          },
+          {
+            "sample": 128,
+            "body": "left_hip_pitch_link",
+            "face": 10608,
+            "phase": "approach"
+          },
+          {
+            "sample": 128,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "approach"
+          },
+          {
+            "sample": 128,
+            "body": "left_hip_pitch_link",
+            "face": 10888,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10608,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10737,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10753,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10754,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10888,
+            "phase": "approach"
+          },
+          {
+            "sample": 129,
+            "body": "left_hip_pitch_link",
+            "face": 10889,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10608,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10737,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10753,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10754,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10888,
+            "phase": "approach"
+          },
+          {
+            "sample": 130,
+            "body": "left_hip_pitch_link",
+            "face": 10889,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10608,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10737,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10753,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10754,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10888,
+            "phase": "approach"
+          },
+          {
+            "sample": 131,
+            "body": "left_hip_pitch_link",
+            "face": 10889,
+            "phase": "approach"
+          },
+          {
+            "sample": 132,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "landing"
+          },
+          {
+            "sample": 132,
+            "body": "left_hip_pitch_link",
+            "face": 10608,
+            "phase": "landing"
+          },
+          {
+            "sample": 132,
+            "body": "left_hip_pitch_link",
+            "face": 10737,
+            "phase": "landing"
+          },
+          {
+            "sample": 132,
+            "body": "left_hip_pitch_link",
+            "face": 10753,
+            "phase": "landing"
+          },
+          {
+            "sample": 132,
+            "body": "left_hip_pitch_link",
+            "face": 10754,
+            "phase": "landing"
+          },
+          {
+            "sample": 132,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "landing"
+          },
+          {
+            "sample": 132,
+            "body": "left_hip_pitch_link",
+            "face": 10888,
+            "phase": "landing"
+          },
+          {
+            "sample": 132,
+            "body": "left_hip_pitch_link",
+            "face": 10889,
+            "phase": "landing"
+          },
+          {
+            "sample": 133,
+            "body": "left_hip_pitch_link",
+            "face": 10544,
+            "phase": "landing"
+          },
+          {
+            "sample": 133,
+            "body": "left_hip_pitch_link",
+            "face": 10607,
+            "phase": "landing"
+          },
+          {
+            "sample": 133,
+            "body": "left_hip_pitch_link",
+            "face": 10608,
+            "phase": "landing"
+          },
+          {
+            "sample": 133,
+            "body": "left_hip_pitch_link",
+            "face": 10737,
+            "phase": "landing"
+          },
+          {
+            "sample": 133,
+            "body": "left_hip_pitch_link",
+            "face": 10753,
+            "phase": "landing"
+          },
+          {
+            "sample": 133,
+            "body": "left_hip_pitch_link",
+            "face": 10754,
+            "phase": "landing"
+          },
+          {
+            "sample": 133,
+            "body": "left_hip_pitch_link",
+            "face": 10887,
+            "phase": "landing"
+          },
+          {
+            "sample": 133,
+            "body": "left_hip_pitch_link",
+            "face": 10888,
+            "phase": "landing"
+          },
+          {
+            "sample": 133,
+            "body": "left_hip_pitch_link",
+            "face": 10889,
+            "phase": "landing"
+          },
+          {
+            "sample": 134,
+            "body": "left_hip_pitch_link",
+            "face": 10544,
+            "phase": "landing"
+          }
+        ],
+        "forbidden_or_early_clearance_intersection_count": 6122,
+        "expected_target_approaches": 616,
+        "clearance_buffer_m": 0.006,
+        "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+        "simulation_success": false,
+        "accelerator": "cKDTree exact AABB + signed halfspace rejection/interior; original clip on boundary",
+        "fast_exclusions": 76784,
+        "fast_inside": 6584,
+        "slow_clips": 192
+      },
+      "model_admitted": false,
+      "physical_success": false,
+      "time_admission": "Exact discrete original-action-contract schedule replaces the preliminary conservative estimate; the14.4s cutoff is unchanged.",
+      "seconds": 11.5097689969989
+    }
+  ],
+  "simulation_steps": 0,
+  "ppo_updates": 0,
+  "original_starts_repaired": 0
+}
