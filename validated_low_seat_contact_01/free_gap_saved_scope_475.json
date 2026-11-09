@@ -1,0 +1,464 @@
+{
+  "utc": "2026-10-18T15:17:41.952260+00:00",
+  "scope": "Saved-only accounting and dependent-f correction-box localization.\nNo mechanics, root, Jacobian, optimizer, geometry or audit is repeated.\n",
+  "assembled_subproblems": 12,
+  "actual_scipy_linprog_calls": 6,
+  "correction_boxes_rejected_before_scipy": 6,
+  "main_linear_programs_field_scope": "Counts solve_new_lp wrapper invocations/assembled subproblems, including six empty-box prechecks; it is not the number of scipy.linprog calls.",
+  "nonlinear_trials": 6,
+  "all_new_trials_normal_hover_root_pass": true,
+  "all_new_trials_normal_descent_pass": true,
+  "global_box_pass_count": 5,
+  "phase_pass_count": 0,
+  "hard_pass_count": 0,
+  "positive_soft_reduction_count": 0,
+  "subproblems": [
+    {
+      "index": 0,
+      "mode": "predictor",
+      "status": 0,
+      "actual_scipy_linprog_call": true,
+      "candidate": true
+    },
+    {
+      "index": 1,
+      "mode": "correction",
+      "status": -10,
+      "actual_scipy_linprog_call": false,
+      "candidate": false
+    },
+    {
+      "index": 2,
+      "mode": "predictor",
+      "status": 0,
+      "actual_scipy_linprog_call": true,
+      "candidate": true
+    },
+    {
+      "index": 3,
+      "mode": "correction",
+      "status": -10,
+      "actual_scipy_linprog_call": false,
+      "candidate": false
+    },
+    {
+      "index": 4,
+      "mode": "predictor",
+      "status": 0,
+      "actual_scipy_linprog_call": true,
+      "candidate": true
+    },
+    {
+      "index": 5,
+      "mode": "correction",
+      "status": -10,
+      "actual_scipy_linprog_call": false,
+      "candidate": false
+    },
+    {
+      "index": 6,
+      "mode": "predictor",
+      "status": 0,
+      "actual_scipy_linprog_call": true,
+      "candidate": true
+    },
+    {
+      "index": 7,
+      "mode": "correction",
+      "status": -10,
+      "actual_scipy_linprog_call": false,
+      "candidate": false
+    },
+    {
+      "index": 8,
+      "mode": "predictor",
+      "status": 0,
+      "actual_scipy_linprog_call": true,
+      "candidate": true
+    },
+    {
+      "index": 9,
+      "mode": "correction",
+      "status": -10,
+      "actual_scipy_linprog_call": false,
+      "candidate": false
+    },
+    {
+      "index": 10,
+      "mode": "predictor",
+      "status": 0,
+      "actual_scipy_linprog_call": true,
+      "candidate": true
+    },
+    {
+      "index": 11,
+      "mode": "correction",
+      "status": -10,
+      "actual_scipy_linprog_call": false,
+      "candidate": false
+    }
+  ],
+  "empty_corrections": [
+    {
+      "index": 1,
+      "empty_full_control_intervals": 482,
+      "slot_counts": {
+        "0": 482
+      },
+      "worst_negative_interval_width": -0.006299847412784336,
+      "worst_full_control_index": 9754,
+      "worst_state": 1150,
+      "worst_time_s": 9.99,
+      "scope": "All empty intervals are dependent descent f, dimensionless. This is a wrapper box precheck, not a HiGHS infeasibility result."
+    },
+    {
+      "index": 3,
+      "empty_full_control_intervals": 542,
+      "slot_counts": {
+        "0": 542
+      },
+      "worst_negative_interval_width": -0.004354417300771853,
+      "worst_full_control_index": 2930,
+      "worst_state": 372,
+      "worst_time_s": 7.44,
+      "scope": "All empty intervals are dependent descent f, dimensionless. This is a wrapper box precheck, not a HiGHS infeasibility result."
+    },
+    {
+      "index": 5,
+      "empty_full_control_intervals": 551,
+      "slot_counts": {
+        "0": 551
+      },
+      "worst_negative_interval_width": -0.0022750633513190796,
+      "worst_full_control_index": 8484,
+      "worst_state": 1023,
+      "worst_time_s": 7.45,
+      "scope": "All empty intervals are dependent descent f, dimensionless. This is a wrapper box precheck, not a HiGHS infeasibility result."
+    },
+    {
+      "index": 7,
+      "empty_full_control_intervals": 553,
+      "slot_counts": {
+        "0": 553
+      },
+      "worst_negative_interval_width": -0.0011769075971388297,
+      "worst_full_control_index": 8474,
+      "worst_state": 1022,
+      "worst_time_s": 7.43,
+      "scope": "All empty intervals are dependent descent f, dimensionless. This is a wrapper box precheck, not a HiGHS infeasibility result."
+    },
+    {
+      "index": 9,
+      "empty_full_control_intervals": 1051,
+      "slot_counts": {
+        "0": 1051
+      },
+      "worst_negative_interval_width": -0.0005972885224449986,
+      "worst_full_control_index": 2420,
+      "worst_state": 321,
+      "worst_time_s": 6.42,
+      "scope": "All empty intervals are dependent descent f, dimensionless. This is a wrapper box precheck, not a HiGHS infeasibility result."
+    },
+    {
+      "index": 11,
+      "empty_full_control_intervals": 1124,
+      "slot_counts": {
+        "0": 1124
+      },
+      "worst_negative_interval_width": -0.0003257097132043329,
+      "worst_full_control_index": 6240,
+      "worst_state": 721,
+      "worst_time_s": 1.41,
+      "scope": "All empty intervals are dependent descent f, dimensionless. This is a wrapper box precheck, not a HiGHS infeasibility result."
+    }
+  ],
+  "trials": [
+    {
+      "index": 0,
+      "normal_maximum": 6.661338147750939e-16,
+      "hover_error": 6.106226635438361e-15,
+      "gap_root_error": 2.7755575615628914e-16,
+      "global_control_bound_minimum": -0.011299847412784336,
+      "hard_pass": false,
+      "phase_pass": false,
+      "soft_violation": 1.0334749482475112,
+      "actual_soft_reduction": -0.8355636550554364,
+      "normal_drop_alpha": 0.5000069213111463,
+      "other_chart_alpha_range": [
+        0.49999999999999994,
+        0.9978589335793946
+      ],
+      "actual_minus_linear_predicted_f_maximum": 0.011299847412784336,
+      "domains": [
+        {
+          "group": "mesh_normal_descent",
+          "negative": 0,
+          "minimum_normalized": 3.3310392837422828e-09,
+          "worst_row": 214175,
+          "minimum_unscaled": 1.9986235702453697e-13
+        },
+        {
+          "group": "old_normal_descent",
+          "negative": 0,
+          "minimum_normalized": 0.005500378260844818,
+          "worst_row": 19756,
+          "minimum_unscaled": 6.600453913013782e-07
+        },
+        {
+          "group": "old_phase",
+          "negative": 5,
+          "minimum_normalized": -0.002031886140692607,
+          "worst_row": 12200,
+          "minimum_unscaled": -0.002031886140692607
+        },
+        {
+          "group": "mesh_phase",
+          "negative": 85,
+          "minimum_normalized": -0.0011572388149166668,
+          "worst_row": 175611,
+          "minimum_unscaled": -0.0011572388149166668
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "normal_maximum": 6.661338147750939e-16,
+      "hover_error": 3.1086244689504383e-15,
+      "gap_root_error": 2.220446049250313e-16,
+      "global_control_bound_minimum": 1.4315088747447668e-06,
+      "hard_pass": false,
+      "phase_pass": false,
+      "soft_violation": 0.5906116006790969,
+      "actual_soft_reduction": -0.3927003074870221,
+      "normal_drop_alpha": 0.5000067325078024,
+      "other_chart_alpha_range": [
+        0.49999999999999883,
+        0.9934485976387419
+      ],
+      "actual_minus_linear_predicted_f_maximum": 0.006858357800854531,
+      "domains": [
+        {
+          "group": "mesh_normal_descent",
+          "negative": 0,
+          "minimum_normalized": 3.3305766908153555e-09,
+          "worst_row": 213455,
+          "minimum_unscaled": 1.9983460144892135e-13
+        },
+        {
+          "group": "old_normal_descent",
+          "negative": 0,
+          "minimum_normalized": 7.825311208843495e-07,
+          "worst_row": 19757,
+          "minimum_unscaled": 9.390373450612194e-11
+        },
+        {
+          "group": "old_phase",
+          "negative": 5,
+          "minimum_normalized": -0.0007206176806822118,
+          "worst_row": 12126,
+          "minimum_unscaled": -0.0007206176806822118
+        },
+        {
+          "group": "mesh_phase",
+          "negative": 84,
+          "minimum_normalized": -0.0005514307754366787,
+          "worst_row": 175611,
+          "minimum_unscaled": -0.0005514307754366787
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "normal_maximum": 6.661338147750939e-16,
+      "hover_error": 3.774758283725532e-15,
+      "gap_root_error": 2.7755575615628914e-16,
+      "global_control_bound_minimum": 1.4309137291254683e-06,
+      "hard_pass": false,
+      "phase_pass": false,
+      "soft_violation": 0.30429233260651856,
+      "actual_soft_reduction": -0.1063810394144438,
+      "normal_drop_alpha": 0.5000069213111463,
+      "other_chart_alpha_range": [
+        0.49999999999999745,
+        0.9986290431644963
+      ],
+      "actual_minus_linear_predicted_f_maximum": 0.0035364941290626506,
+      "domains": [
+        {
+          "group": "mesh_normal_descent",
+          "negative": 0,
+          "minimum_normalized": 3.33150187666921e-09,
+          "worst_row": 213491,
+          "minimum_unscaled": 1.998901126001526e-13
+        },
+        {
+          "group": "old_normal_descent",
+          "negative": 0,
+          "minimum_normalized": 7.825311208843495e-07,
+          "worst_row": 19757,
+          "minimum_unscaled": 9.390373450612194e-11
+        },
+        {
+          "group": "old_phase",
+          "negative": 4,
+          "minimum_normalized": -0.0002280406898605425,
+          "worst_row": 12126,
+          "minimum_unscaled": -0.0002280406898605425
+        },
+        {
+          "group": "mesh_phase",
+          "negative": 77,
+          "minimum_normalized": -0.00025314172648494004,
+          "worst_row": 207951,
+          "minimum_unscaled": -0.00025314172648494004
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "normal_maximum": 6.661338147750939e-16,
+      "hover_error": 3.1086244689504383e-15,
+      "gap_root_error": 2.7755575615628914e-16,
+      "global_control_bound_minimum": 1.4303185835061702e-06,
+      "hard_pass": false,
+      "phase_pass": false,
+      "soft_violation": 0.24127022779619195,
+      "actual_soft_reduction": -0.04335893460411719,
+      "normal_drop_alpha": 0.5000067325078024,
+      "other_chart_alpha_range": [
+        0.49999999999999434,
+        0.9999875755426338
+      ],
+      "actual_minus_linear_predicted_f_maximum": 0.0018048566752977835,
+      "domains": [
+        {
+          "group": "mesh_normal_descent",
+          "negative": 0,
+          "minimum_normalized": 3.331964469596137e-09,
+          "worst_row": 213455,
+          "minimum_unscaled": 1.9984776095278986e-13
+        },
+        {
+          "group": "old_normal_descent",
+          "negative": 0,
+          "minimum_normalized": 0.03530504509462606,
+          "worst_row": 19758,
+          "minimum_unscaled": 4.236605411355127e-06
+        },
+        {
+          "group": "old_phase",
+          "negative": 4,
+          "minimum_normalized": -0.00012908227011507178,
+          "worst_row": 12036,
+          "minimum_unscaled": -0.00012908227011507178
+        },
+        {
+          "group": "mesh_phase",
+          "negative": 73,
+          "minimum_normalized": -9.754916290471982e-05,
+          "worst_row": 175611,
+          "minimum_unscaled": -9.754916290471982e-05
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "normal_maximum": 6.661338147750939e-16,
+      "hover_error": 3.1086244689504383e-15,
+      "gap_root_error": 2.7755575615628914e-16,
+      "global_control_bound_minimum": 1.4303185835061702e-06,
+      "hard_pass": false,
+      "phase_pass": false,
+      "soft_violation": 0.41710681923460347,
+      "actual_soft_reduction": -0.2191955260425287,
+      "normal_drop_alpha": 0.5000069213111412,
+      "other_chart_alpha_range": [
+        0.49999999999999395,
+        0.9905946023202336
+      ],
+      "actual_minus_linear_predicted_f_maximum": 0.0009097885224449986,
+      "domains": [
+        {
+          "group": "mesh_normal_descent",
+          "negative": 0,
+          "minimum_normalized": 3.3310392837422828e-09,
+          "worst_row": 213743,
+          "minimum_unscaled": 1.9986235702453697e-13
+        },
+        {
+          "group": "old_normal_descent",
+          "negative": 0,
+          "minimum_normalized": 2.5113768703510786e-06,
+          "worst_row": 19756,
+          "minimum_unscaled": 3.0136522444212943e-10
+        },
+        {
+          "group": "old_phase",
+          "negative": 3,
+          "minimum_normalized": -0.00018652573582544907,
+          "worst_row": 12104,
+          "minimum_unscaled": -0.00018652573582544907
+        },
+        {
+          "group": "mesh_phase",
+          "negative": 88,
+          "minimum_normalized": -0.00018101842365703114,
+          "worst_row": 189823,
+          "minimum_unscaled": -0.00018101842365703114
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "normal_maximum": 6.661338147750939e-16,
+      "hover_error": 7.771561172376096e-15,
+      "gap_root_error": 2.7755575615628914e-16,
+      "global_control_bound_minimum": 1.430318583506185e-06,
+      "hard_pass": false,
+      "phase_pass": false,
+      "soft_violation": 0.3320211587629102,
+      "actual_soft_reduction": -0.13410986557083546,
+      "normal_drop_alpha": 0.5000067325078024,
+      "other_chart_alpha_range": [
+        0.49999999999999434,
+        0.9938948029703742
+      ],
+      "actual_minus_linear_predicted_f_maximum": 0.00048195971320433295,
+      "domains": [
+        {
+          "group": "mesh_normal_descent",
+          "negative": 0,
+          "minimum_normalized": 3.33150187666921e-09,
+          "worst_row": 213419,
+          "minimum_unscaled": 1.998901126001526e-13
+        },
+        {
+          "group": "old_normal_descent",
+          "negative": 0,
+          "minimum_normalized": 7.825313521808129e-07,
+          "worst_row": 19757,
+          "minimum_unscaled": 9.390376226169755e-11
+        },
+        {
+          "group": "old_phase",
+          "negative": 2,
+          "minimum_normalized": -9.995558234143775e-05,
+          "worst_row": 12036,
+          "minimum_unscaled": -9.995558234143775e-05
+        },
+        {
+          "group": "mesh_phase",
+          "negative": 73,
+          "minimum_normalized": -8.34122419235972e-05,
+          "worst_row": 189823,
+          "minimum_unscaled": -8.34122419235972e-05
+        }
+      ]
+    }
+  ],
+  "read_only_inspection_failure": "One earlier inline metadata inspection called min on an absent mesh_gap_order group; it failed before writes. Corrected inspection used actual saved group names. No model/audit/scientific loop repeated.",
+  "model_calls": 0,
+  "root_calls": 0,
+  "optimizer_calls": 0,
+  "physical_admission": false
+}

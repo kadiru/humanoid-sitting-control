@@ -1,0 +1,798 @@
+{
+  "utc": "2026-10-18T15:27:00.527548+00:00",
+  "scope": "Seal new472/473/474 evidence; repair/PPO remain unfinished and active.",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "free_gap_evidence_preservation_471.json",
+      "files": 9256,
+      "passed": true
+    },
+    {
+      "manifest": "free_gap_supplemental_471.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 9482,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_475.json",
+  "manifest_sha256": "3cbaba90a9a004570a905e05613aaeda48888245b1350e453a12a9dc12c36257",
+  "workers": [],
+  "actual_exits": {
+    "utc": "2026-10-18T15:17:56.089349+00:00",
+    "main_actual_exit": 0,
+    "main_evidence": "e330fd/session96296",
+    "independent_audit_actual_exit": 0,
+    "independent_audit_evidence": "5a4cb3/session35260",
+    "compile_report_index_actual_exit": 0,
+    "compile_evidence": "585045/immediate",
+    "saved_index_actual_exit": 0,
+    "saved_index_evidence": "7197c3/immediate",
+    "report_actual_exit": 0,
+    "geometry_and_audit_now_complete": true,
+    "main_pending_flags_scope": "Historical main-exit stage only; full473 complete.",
+    "actual_scipy_lp_calls": 6,
+    "assembled_subproblems": 12,
+    "corrections_skipped_empty_box": 6,
+    "original_report_actual_exit": 143,
+    "original_report_exit_evidence": "a41bbd/session95778",
+    "report_recovery": "/data/humanoid-sitting-perception/low_seat_contact_01/free_gap_report_input_recovery_474",
+    "report_evidence": "a7ee00/session93991",
+    "report_version": "v2",
+    "report_compile_actual_exit": 0,
+    "report_compile_evidence": "398434/immediate",
+    "report_finished_utc": "2026-10-18T15:20:31.155890+00:00"
+  },
+  "main_result": {
+    "utc": "2026-10-18T15:14:07.795049+00:00",
+    "scope": "ONE bounded complete free-gap collocation construction, original440 input.\n\nAll206 normal drops are free with exact endpoint sum. Their finite chart468 is\njoint with conserved persistent loads460, orientation and prehover gap. The\n15-equation constrained lift makes f dependent; all original f boxes/monotonic\nrows stay hard. No fixed piecewise-gap profile, old optimizer continuation or\nrejected-trial selection. Synthetic quiet is not current-sensor permission.\n",
+    "specification": {
+      "max_predictors": 24,
+      "max_corrections_per_predictor": 4,
+      "max_linear_programs": 120,
+      "lp_time_limit_s": 45.0,
+      "lp_method": "highs",
+      "lp_primal_dual_tolerance": 1e-09,
+      "independent_linear_bound": 1e-07,
+      "coordinate_domain_radius": 0.02,
+      "initial_trust_fraction": 1.0,
+      "minimum_trust_fraction": 0.03125,
+      "root_max_updates": 10,
+      "root_max_halvings": 9,
+      "root_absolute_tolerance": 1e-13,
+      "hover_numerical_bound": 1e-08,
+      "strict_inequality_bound": 0.0,
+      "predictor_guard": 9.5367431640625e-07,
+      "acceptance_ratio": 0.1,
+      "correction_radius_fraction": 0.25,
+      "max_consecutive_load_roundings": 120,
+      "seed": "Original440 plus newly encoded466/468 gap targets; first complete lift is NEW and may be infeasible.",
+      "budget_justification": "18 half-reductions from source440 merit to unchanged2^-20 guard plus6 bounded rejection opportunities; at most4 corrections each. This is a separate free-gap formulation, never an extension of462.",
+      "coordinate_domain": "Original11906 f/p/load +/- .02 box around440 unchanged; dependent f bounds explicit. New206 normal-drop bounds retain all original caps plus prepared root/roundoff guard. No extra gap or allocation sweep.",
+      "normal_drop_map": "Audited468 exact residual pivot with bounded joint rounding; no endpoint-sum accumulation.",
+      "equality_policy": "All original normal/hover primal rows still checked. Their analytic zero tangent rows impose homogeneous conservation, not restoration of admissible floating residuals.",
+      "physical_admission": false
+    },
+    "stop": "declared trust floor",
+    "predictors": 6,
+    "linear_programs": 12,
+    "nonlinear_trial_paths": 6,
+    "finite_maps": 6,
+    "coordinate_map_failures": 0,
+    "accepted_steps": 0,
+    "last_accepted_linear_index": null,
+    "initial": {
+      "minimum_retained_buffered_row": -0.19791129319207476,
+      "minimum_hard_row": -9.788105462815722e-07,
+      "minimum_soft_row": -0.19791129319207476,
+      "soft_merit": 0.19791129319207476,
+      "hard_pass": false,
+      "all_inequalities_pass": false,
+      "minimum_phase": -9.788105462815722e-07,
+      "monotone_phase_pass": false,
+      "coordinate_bound_minimum": 2.8206304524295775e-06,
+      "maximum_retained_equality": 8.881784197001252e-16,
+      "maximum_kinematic_residual": 9.85878045867139e-14,
+      "minimum_corner_weight": 0.0,
+      "fixed_states_exact": true,
+      "inactive_exact_zero": true
+    },
+    "initial_lift_pass": true,
+    "final": {
+      "minimum_retained_buffered_row": -0.19791129319207476,
+      "minimum_hard_row": -9.788105462815722e-07,
+      "minimum_soft_row": -0.19791129319207476,
+      "soft_merit": 0.19791129319207476,
+      "hard_pass": false,
+      "all_inequalities_pass": false,
+      "minimum_phase": -9.788105462815722e-07,
+      "monotone_phase_pass": false,
+      "coordinate_bound_minimum": 2.8206304524295775e-06,
+      "maximum_retained_equality": 8.881784197001252e-16,
+      "maximum_kinematic_residual": 9.85878045867139e-14,
+      "minimum_corner_weight": 0.0,
+      "fixed_states_exact": true,
+      "inactive_exact_zero": true
+    },
+    "wrapper_counts": {
+      "value_requests": 33,
+      "jacobian_requests": 20,
+      "trial_paths": 6,
+      "root_updates": 13,
+      "initial_lifts": 1,
+      "finite_maps": 6
+    },
+    "source440_unchanged": true,
+    "old450_or462_point_used": false,
+    "reduced_coordinates": 10540,
+    "new_final_differs_from_source": true,
+    "sampled_full_geometry_pending": true,
+    "independent_audit_pending": true,
+    "actual_forward_filter_ticks": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "physical_admission": false,
+    "elapsed_s": 112.09627258602995
+  },
+  "independent_audit": {
+    "utc": "2026-10-18T15:15:40.171437+00:00",
+    "scope": "Independent full-state/virtual-work audit of NEW472 final diagnostic or accepted path.\nNo root/optimizer/AD fixture or old finite-work loop rerun. Exactly unchanged\nstates inherit sealed441 work; new states receive central finite work, saved\nbefore aggregate assertions. All1467 labels remain, with exact duplicate work\ncached by complete pose and wrench identity. Arithmetic pass is not admission.\n",
+    "passed": true,
+    "arithmetic_only": true,
+    "records": 1467,
+    "new_finite_work_columns": 3280,
+    "inherited441_exact_records": 1262,
+    "duplicate_new_records": 0,
+    "maximum_errors": {
+      "com": 3.3306690738754696e-16,
+      "gap": 2.220446049250313e-16,
+      "frame": 2.2994378889660747e-13,
+      "equilibrium": 2.220446049250313e-16,
+      "torque": 3.160756989473157e-09,
+      "command": 1.8948564939336165e-11
+    },
+    "sampled_geometry_passed": true,
+    "sampled_geometry_failures": [],
+    "minimum_housing_m": 0.00373107834324284,
+    "minimum_cop_m": 0.005000954272362884,
+    "minimum_command_margin_rad": 0.0,
+    "minimum_moving_command_margin_rad": 0.030147325375236594,
+    "all37_margin_includes_fixed_fingers": true,
+    "original_clock_rate_minimum": -0.00043837897576593215,
+    "original_clock_target_minimum": 3.477566778986585e-06,
+    "prior_clock_rate_minimum": -0.0004393326500823384,
+    "prior_clock_target_minimum": 3.5762788286319847e-09,
+    "step_audit": {
+      "passed": true,
+      "linear_programs": 12,
+      "linear_witness_worst_violation": 9.067499529002987e-10,
+      "nonlinear_trial_paths": 6,
+      "finite_maps": 6,
+      "accepted_steps": 0,
+      "maximum_saved_row_replay": 0.0,
+      "maximum_single_load_map_sum_rounding_error": 9.063930161978817e-17,
+      "all_actual_state_assemblies_rebuilt": true,
+      "all_finite_joint_maps_independently_replayed": true,
+      "normal_drop_sum_exact": true,
+      "full_dependent_f_and_pivot_bounds_present": true,
+      "final_selection_exact": true,
+      "details": [
+        {
+          "linear": 0,
+          "status": 0,
+          "candidate": true,
+          "hard_pass": false,
+          "normal_maximum": 6.661338147750939e-16,
+          "hover": 6.106226635438361e-15,
+          "accepted": false
+        },
+        {
+          "linear": 1,
+          "status": -10,
+          "candidate": false
+        },
+        {
+          "linear": 2,
+          "status": 0,
+          "candidate": true,
+          "hard_pass": false,
+          "normal_maximum": 6.661338147750939e-16,
+          "hover": 3.1086244689504383e-15,
+          "accepted": false
+        },
+        {
+          "linear": 3,
+          "status": -10,
+          "candidate": false
+        },
+        {
+          "linear": 4,
+          "status": 0,
+          "candidate": true,
+          "hard_pass": false,
+          "normal_maximum": 6.661338147750939e-16,
+          "hover": 3.774758283725532e-15,
+          "accepted": false
+        },
+        {
+          "linear": 5,
+          "status": -10,
+          "candidate": false
+        },
+        {
+          "linear": 6,
+          "status": 0,
+          "candidate": true,
+          "hard_pass": false,
+          "normal_maximum": 6.661338147750939e-16,
+          "hover": 3.1086244689504383e-15,
+          "accepted": false
+        },
+        {
+          "linear": 7,
+          "status": -10,
+          "candidate": false
+        },
+        {
+          "linear": 8,
+          "status": 0,
+          "candidate": true,
+          "hard_pass": false,
+          "normal_maximum": 6.661338147750939e-16,
+          "hover": 3.1086244689504383e-15,
+          "accepted": false
+        },
+        {
+          "linear": 9,
+          "status": -10,
+          "candidate": false
+        },
+        {
+          "linear": 10,
+          "status": 0,
+          "candidate": true,
+          "hard_pass": false,
+          "normal_maximum": 6.661338147750939e-16,
+          "hover": 7.771561172376096e-15,
+          "accepted": false
+        },
+        {
+          "linear": 11,
+          "status": -10,
+          "candidate": false
+        }
+      ],
+      "optimizer_calls": 0,
+      "root_calls": 0,
+      "model_calls": 0,
+      "physical_admission": false
+    },
+    "actual_forward_filter_ticks": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "physical_admission": false
+  },
+  "saved_scope": {
+    "utc": "2026-10-18T15:17:41.952260+00:00",
+    "scope": "Saved-only accounting and dependent-f correction-box localization.\nNo mechanics, root, Jacobian, optimizer, geometry or audit is repeated.\n",
+    "assembled_subproblems": 12,
+    "actual_scipy_linprog_calls": 6,
+    "correction_boxes_rejected_before_scipy": 6,
+    "main_linear_programs_field_scope": "Counts solve_new_lp wrapper invocations/assembled subproblems, including six empty-box prechecks; it is not the number of scipy.linprog calls.",
+    "nonlinear_trials": 6,
+    "all_new_trials_normal_hover_root_pass": true,
+    "all_new_trials_normal_descent_pass": true,
+    "global_box_pass_count": 5,
+    "phase_pass_count": 0,
+    "hard_pass_count": 0,
+    "positive_soft_reduction_count": 0,
+    "subproblems": [
+      {
+        "index": 0,
+        "mode": "predictor",
+        "status": 0,
+        "actual_scipy_linprog_call": true,
+        "candidate": true
+      },
+      {
+        "index": 1,
+        "mode": "correction",
+        "status": -10,
+        "actual_scipy_linprog_call": false,
+        "candidate": false
+      },
+      {
+        "index": 2,
+        "mode": "predictor",
+        "status": 0,
+        "actual_scipy_linprog_call": true,
+        "candidate": true
+      },
+      {
+        "index": 3,
+        "mode": "correction",
+        "status": -10,
+        "actual_scipy_linprog_call": false,
+        "candidate": false
+      },
+      {
+        "index": 4,
+        "mode": "predictor",
+        "status": 0,
+        "actual_scipy_linprog_call": true,
+        "candidate": true
+      },
+      {
+        "index": 5,
+        "mode": "correction",
+        "status": -10,
+        "actual_scipy_linprog_call": false,
+        "candidate": false
+      },
+      {
+        "index": 6,
+        "mode": "predictor",
+        "status": 0,
+        "actual_scipy_linprog_call": true,
+        "candidate": true
+      },
+      {
+        "index": 7,
+        "mode": "correction",
+        "status": -10,
+        "actual_scipy_linprog_call": false,
+        "candidate": false
+      },
+      {
+        "index": 8,
+        "mode": "predictor",
+        "status": 0,
+        "actual_scipy_linprog_call": true,
+        "candidate": true
+      },
+      {
+        "index": 9,
+        "mode": "correction",
+        "status": -10,
+        "actual_scipy_linprog_call": false,
+        "candidate": false
+      },
+      {
+        "index": 10,
+        "mode": "predictor",
+        "status": 0,
+        "actual_scipy_linprog_call": true,
+        "candidate": true
+      },
+      {
+        "index": 11,
+        "mode": "correction",
+        "status": -10,
+        "actual_scipy_linprog_call": false,
+        "candidate": false
+      }
+    ],
+    "empty_corrections": [
+      {
+        "index": 1,
+        "empty_full_control_intervals": 482,
+        "slot_counts": {
+          "0": 482
+        },
+        "worst_negative_interval_width": -0.006299847412784336,
+        "worst_full_control_index": 9754,
+        "worst_state": 1150,
+        "worst_time_s": 9.99,
+        "scope": "All empty intervals are dependent descent f, dimensionless. This is a wrapper box precheck, not a HiGHS infeasibility result."
+      },
+      {
+        "index": 3,
+        "empty_full_control_intervals": 542,
+        "slot_counts": {
+          "0": 542
+        },
+        "worst_negative_interval_width": -0.004354417300771853,
+        "worst_full_control_index": 2930,
+        "worst_state": 372,
+        "worst_time_s": 7.44,
+        "scope": "All empty intervals are dependent descent f, dimensionless. This is a wrapper box precheck, not a HiGHS infeasibility result."
+      },
+      {
+        "index": 5,
+        "empty_full_control_intervals": 551,
+        "slot_counts": {
+          "0": 551
+        },
+        "worst_negative_interval_width": -0.0022750633513190796,
+        "worst_full_control_index": 8484,
+        "worst_state": 1023,
+        "worst_time_s": 7.45,
+        "scope": "All empty intervals are dependent descent f, dimensionless. This is a wrapper box precheck, not a HiGHS infeasibility result."
+      },
+      {
+        "index": 7,
+        "empty_full_control_intervals": 553,
+        "slot_counts": {
+          "0": 553
+        },
+        "worst_negative_interval_width": -0.0011769075971388297,
+        "worst_full_control_index": 8474,
+        "worst_state": 1022,
+        "worst_time_s": 7.43,
+        "scope": "All empty intervals are dependent descent f, dimensionless. This is a wrapper box precheck, not a HiGHS infeasibility result."
+      },
+      {
+        "index": 9,
+        "empty_full_control_intervals": 1051,
+        "slot_counts": {
+          "0": 1051
+        },
+        "worst_negative_interval_width": -0.0005972885224449986,
+        "worst_full_control_index": 2420,
+        "worst_state": 321,
+        "worst_time_s": 6.42,
+        "scope": "All empty intervals are dependent descent f, dimensionless. This is a wrapper box precheck, not a HiGHS infeasibility result."
+      },
+      {
+        "index": 11,
+        "empty_full_control_intervals": 1124,
+        "slot_counts": {
+          "0": 1124
+        },
+        "worst_negative_interval_width": -0.0003257097132043329,
+        "worst_full_control_index": 6240,
+        "worst_state": 721,
+        "worst_time_s": 1.41,
+        "scope": "All empty intervals are dependent descent f, dimensionless. This is a wrapper box precheck, not a HiGHS infeasibility result."
+      }
+    ],
+    "trials": [
+      {
+        "index": 0,
+        "normal_maximum": 6.661338147750939e-16,
+        "hover_error": 6.106226635438361e-15,
+        "gap_root_error": 2.7755575615628914e-16,
+        "global_control_bound_minimum": -0.011299847412784336,
+        "hard_pass": false,
+        "phase_pass": false,
+        "soft_violation": 1.0334749482475112,
+        "actual_soft_reduction": -0.8355636550554364,
+        "normal_drop_alpha": 0.5000069213111463,
+        "other_chart_alpha_range": [
+          0.49999999999999994,
+          0.9978589335793946
+        ],
+        "actual_minus_linear_predicted_f_maximum": 0.011299847412784336,
+        "domains": [
+          {
+            "group": "mesh_normal_descent",
+            "negative": 0,
+            "minimum_normalized": 3.3310392837422828e-09,
+            "worst_row": 214175,
+            "minimum_unscaled": 1.9986235702453697e-13
+          },
+          {
+            "group": "old_normal_descent",
+            "negative": 0,
+            "minimum_normalized": 0.005500378260844818,
+            "worst_row": 19756,
+            "minimum_unscaled": 6.600453913013782e-07
+          },
+          {
+            "group": "old_phase",
+            "negative": 5,
+            "minimum_normalized": -0.002031886140692607,
+            "worst_row": 12200,
+            "minimum_unscaled": -0.002031886140692607
+          },
+          {
+            "group": "mesh_phase",
+            "negative": 85,
+            "minimum_normalized": -0.0011572388149166668,
+            "worst_row": 175611,
+            "minimum_unscaled": -0.0011572388149166668
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "normal_maximum": 6.661338147750939e-16,
+        "hover_error": 3.1086244689504383e-15,
+        "gap_root_error": 2.220446049250313e-16,
+        "global_control_bound_minimum": 1.4315088747447668e-06,
+        "hard_pass": false,
+        "phase_pass": false,
+        "soft_violation": 0.5906116006790969,
+        "actual_soft_reduction": -0.3927003074870221,
+        "normal_drop_alpha": 0.5000067325078024,
+        "other_chart_alpha_range": [
+          0.49999999999999883,
+          0.9934485976387419
+        ],
+        "actual_minus_linear_predicted_f_maximum": 0.006858357800854531,
+        "domains": [
+          {
+            "group": "mesh_normal_descent",
+            "negative": 0,
+            "minimum_normalized": 3.3305766908153555e-09,
+            "worst_row": 213455,
+            "minimum_unscaled": 1.9983460144892135e-13
+          },
+          {
+            "group": "old_normal_descent",
+            "negative": 0,
+            "minimum_normalized": 7.825311208843495e-07,
+            "worst_row": 19757,
+            "minimum_unscaled": 9.390373450612194e-11
+          },
+          {
+            "group": "old_phase",
+            "negative": 5,
+            "minimum_normalized": -0.0007206176806822118,
+            "worst_row": 12126,
+            "minimum_unscaled": -0.0007206176806822118
+          },
+          {
+            "group": "mesh_phase",
+            "negative": 84,
+            "minimum_normalized": -0.0005514307754366787,
+            "worst_row": 175611,
+            "minimum_unscaled": -0.0005514307754366787
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "normal_maximum": 6.661338147750939e-16,
+        "hover_error": 3.774758283725532e-15,
+        "gap_root_error": 2.7755575615628914e-16,
+        "global_control_bound_minimum": 1.4309137291254683e-06,
+        "hard_pass": false,
+        "phase_pass": false,
+        "soft_violation": 0.30429233260651856,
+        "actual_soft_reduction": -0.1063810394144438,
+        "normal_drop_alpha": 0.5000069213111463,
+        "other_chart_alpha_range": [
+          0.49999999999999745,
+          0.9986290431644963
+        ],
+        "actual_minus_linear_predicted_f_maximum": 0.0035364941290626506,
+        "domains": [
+          {
+            "group": "mesh_normal_descent",
+            "negative": 0,
+            "minimum_normalized": 3.33150187666921e-09,
+            "worst_row": 213491,
+            "minimum_unscaled": 1.998901126001526e-13
+          },
+          {
+            "group": "old_normal_descent",
+            "negative": 0,
+            "minimum_normalized": 7.825311208843495e-07,
+            "worst_row": 19757,
+            "minimum_unscaled": 9.390373450612194e-11
+          },
+          {
+            "group": "old_phase",
+            "negative": 4,
+            "minimum_normalized": -0.0002280406898605425,
+            "worst_row": 12126,
+            "minimum_unscaled": -0.0002280406898605425
+          },
+          {
+            "group": "mesh_phase",
+            "negative": 77,
+            "minimum_normalized": -0.00025314172648494004,
+            "worst_row": 207951,
+            "minimum_unscaled": -0.00025314172648494004
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "normal_maximum": 6.661338147750939e-16,
+        "hover_error": 3.1086244689504383e-15,
+        "gap_root_error": 2.7755575615628914e-16,
+        "global_control_bound_minimum": 1.4303185835061702e-06,
+        "hard_pass": false,
+        "phase_pass": false,
+        "soft_violation": 0.24127022779619195,
+        "actual_soft_reduction": -0.04335893460411719,
+        "normal_drop_alpha": 0.5000067325078024,
+        "other_chart_alpha_range": [
+          0.49999999999999434,
+          0.9999875755426338
+        ],
+        "actual_minus_linear_predicted_f_maximum": 0.0018048566752977835,
+        "domains": [
+          {
+            "group": "mesh_normal_descent",
+            "negative": 0,
+            "minimum_normalized": 3.331964469596137e-09,
+            "worst_row": 213455,
+            "minimum_unscaled": 1.9984776095278986e-13
+          },
+          {
+            "group": "old_normal_descent",
+            "negative": 0,
+            "minimum_normalized": 0.03530504509462606,
+            "worst_row": 19758,
+            "minimum_unscaled": 4.236605411355127e-06
+          },
+          {
+            "group": "old_phase",
+            "negative": 4,
+            "minimum_normalized": -0.00012908227011507178,
+            "worst_row": 12036,
+            "minimum_unscaled": -0.00012908227011507178
+          },
+          {
+            "group": "mesh_phase",
+            "negative": 73,
+            "minimum_normalized": -9.754916290471982e-05,
+            "worst_row": 175611,
+            "minimum_unscaled": -9.754916290471982e-05
+          }
+        ]
+      },
+      {
+        "index": 8,
+        "normal_maximum": 6.661338147750939e-16,
+        "hover_error": 3.1086244689504383e-15,
+        "gap_root_error": 2.7755575615628914e-16,
+        "global_control_bound_minimum": 1.4303185835061702e-06,
+        "hard_pass": false,
+        "phase_pass": false,
+        "soft_violation": 0.41710681923460347,
+        "actual_soft_reduction": -0.2191955260425287,
+        "normal_drop_alpha": 0.5000069213111412,
+        "other_chart_alpha_range": [
+          0.49999999999999395,
+          0.9905946023202336
+        ],
+        "actual_minus_linear_predicted_f_maximum": 0.0009097885224449986,
+        "domains": [
+          {
+            "group": "mesh_normal_descent",
+            "negative": 0,
+            "minimum_normalized": 3.3310392837422828e-09,
+            "worst_row": 213743,
+            "minimum_unscaled": 1.9986235702453697e-13
+          },
+          {
+            "group": "old_normal_descent",
+            "negative": 0,
+            "minimum_normalized": 2.5113768703510786e-06,
+            "worst_row": 19756,
+            "minimum_unscaled": 3.0136522444212943e-10
+          },
+          {
+            "group": "old_phase",
+            "negative": 3,
+            "minimum_normalized": -0.00018652573582544907,
+            "worst_row": 12104,
+            "minimum_unscaled": -0.00018652573582544907
+          },
+          {
+            "group": "mesh_phase",
+            "negative": 88,
+            "minimum_normalized": -0.00018101842365703114,
+            "worst_row": 189823,
+            "minimum_unscaled": -0.00018101842365703114
+          }
+        ]
+      },
+      {
+        "index": 10,
+        "normal_maximum": 6.661338147750939e-16,
+        "hover_error": 7.771561172376096e-15,
+        "gap_root_error": 2.7755575615628914e-16,
+        "global_control_bound_minimum": 1.430318583506185e-06,
+        "hard_pass": false,
+        "phase_pass": false,
+        "soft_violation": 0.3320211587629102,
+        "actual_soft_reduction": -0.13410986557083546,
+        "normal_drop_alpha": 0.5000067325078024,
+        "other_chart_alpha_range": [
+          0.49999999999999434,
+          0.9938948029703742
+        ],
+        "actual_minus_linear_predicted_f_maximum": 0.00048195971320433295,
+        "domains": [
+          {
+            "group": "mesh_normal_descent",
+            "negative": 0,
+            "minimum_normalized": 3.33150187666921e-09,
+            "worst_row": 213419,
+            "minimum_unscaled": 1.998901126001526e-13
+          },
+          {
+            "group": "old_normal_descent",
+            "negative": 0,
+            "minimum_normalized": 7.825313521808129e-07,
+            "worst_row": 19757,
+            "minimum_unscaled": 9.390376226169755e-11
+          },
+          {
+            "group": "old_phase",
+            "negative": 2,
+            "minimum_normalized": -9.995558234143775e-05,
+            "worst_row": 12036,
+            "minimum_unscaled": -9.995558234143775e-05
+          },
+          {
+            "group": "mesh_phase",
+            "negative": 73,
+            "minimum_normalized": -8.34122419235972e-05,
+            "worst_row": 189823,
+            "minimum_unscaled": -8.34122419235972e-05
+          }
+        ]
+      }
+    ],
+    "read_only_inspection_failure": "One earlier inline metadata inspection called min on an absent mesh_gap_order group; it failed before writes. Corrected inspection used actual saved group names. No model/audit/scientific loop repeated.",
+    "model_calls": 0,
+    "root_calls": 0,
+    "optimizer_calls": 0,
+    "physical_admission": false
+  },
+  "local_review": {
+    "utc": "2026-10-18T15:22:40.486414+00:00",
+    "report": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_v2_474/readable.html",
+    "url": "http://127.0.0.1:8807/progress_report_v2_474/readable.html",
+    "all_hashes_verified": true,
+    "manifest_counts": {
+      "free_gap_path_472": 161,
+      "free_gap_path_audit_473": 6,
+      "progress_report_v2_474": 16,
+      "free_gap_report_input_recovery_474": 6
+    },
+    "total_manifest_entries": 189,
+    "visual_review": true,
+    "reviewed": [
+      "scope and original440 versus newinitiallift distinction",
+      "all exact values and six actualLP calls versus12 assemblies",
+      "both rendered plots",
+      "complete12trial/43group/1467state tables and CSV links",
+      "root/normal/phase/box failure scope",
+      "3280newwork versus1262sealedinheritance",
+      "physical effort/PPO limits",
+      "unchanged video loaded58.4s readyState4"
+    ],
+    "browser_table_rows_including_header": [
+      28,
+      13,
+      44,
+      1468
+    ],
+    "images_loaded": true,
+    "video_duration_s": 58.4,
+    "video_ready_state": 4,
+    "report_rerun_after_completion": false,
+    "report_only_recovery": "Original writer terminated143 before CSV completion due lazyNPZ repeated decompression. Separatev2loadsarraysonce; three previous completeCSVfilesbyteidentical. No model/audit/scientific rerun.",
+    "physical_admission": false,
+    "supplemental_report_entries_verified": 2,
+    "derived_prose_correction": "Allsixfailphase; fivealsoplanning andoneofthosealsosupport; lasttrialonlyold/densephasehardgroups. OriginalHTML/plots/dataunchanged,numerictokens/tags/attributesexact. Newwordingvisiblyreviewed."
+  },
+  "new_closure": true,
+  "accepted_new_path_steps": 0,
+  "new_initial_lift": true,
+  "new_initial_state_records": 205,
+  "inherited441_records": 1262,
+  "actual_scipy_lp_calls": 6,
+  "assembled_subproblems": 12,
+  "nonlinear_trials": 6,
+  "actual_forward_filter_ticks": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "best_clean": "64/72",
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}
