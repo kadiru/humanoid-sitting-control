@@ -1,0 +1,331 @@
+{
+  "utc": "2026-10-18T16:19:57.236612+00:00",
+  "scope": "Preserve new482/483 preparation ONLY; sealed closure481 stays unchanged.",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_481.json",
+      "files": 9749,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_481.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 9781,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/interior_evidence_preservation_483.json",
+  "manifest_sha256": "b00966e4fbd8ea77c0f25f684b7c6cb986fec5bdd0663061ea0cdc4ff651c417",
+  "workers": [],
+  "actual_exits": {
+    "interior_preparation_exit_482.json": {
+      "utc": "2026-10-18T16:14:45.105539+00:00",
+      "actual_exit": 0,
+      "observed_tool": "1e1c07",
+      "session": 78310,
+      "compile_actual_exit": 0,
+      "compile_observed_tool": "f8a1cd",
+      "freeze_actual_exit": 0,
+      "freeze_observed_tool": "701c4e",
+      "freeze_session": 30317
+    },
+    "interior_audit_exit_483.json": {
+      "utc": "2026-10-18T16:15:52.722120+00:00",
+      "actual_exit": 0,
+      "observed_tool": "f98fc0",
+      "session": 70321,
+      "compile_actual_exit": 0,
+      "compile_observed_tool": "f8a1cd",
+      "preparation_actual_exit": 0,
+      "preparation_observed_tool": "1e1c07",
+      "preparation_session": 78310
+    }
+  },
+  "preparation": {
+    "utc": "2026-10-18T16:14:16.112968+00:00",
+    "passed": true,
+    "scope": "Prepare NEW all-row interior-witness algebra; zero LP/model/root calls.",
+    "specification": {
+      "scope": "NEW whole-path relative-interior witness formulation, preparation only.\n\nAn ordinary epigraph predictor is never decoded. A second LP maximizes the\nminimum RELATIVE clearance of its coupled direction from every finite control\nand drop face, while retaining at least half the predictor's modeled soft\nimprovement and ALL hard rows. Exact arithmetic certifies positive clearance\nbefore any future decoding. It never edits, clips or projects an LP witness.\n\nThis is not a tolerance/guard change or continuation of478. The existing\nnonlinear acceptance gates, original domain and buffers stay unchanged.\n",
+      "seed": "Sealed472 INITIAL only; no478 accepted/rejected state or witness.",
+      "predictor": "Unchanged470 rate/window epigraph with all existing hard rows.",
+      "witness": "Maximize dimensionless minimum relative interior clearance, subject to half the primary modeled improvement.",
+      "exact_certificate": "Recompute every unscaled interval dot product as Fractions. The certified margin is the actual minimum, not the LP-reported eta.",
+      "finite_encoding": "Unchanged476 shared ray must have alpha EXACT1. Target endpoints are one representable value inward; each drop reserves its existing468 encoding-error bound.",
+      "rejection": "Nonpositive exact clearance, empty shrunken interval or failed LP/root/nonlinear gate rejects without witness edits or fallback.",
+      "zero_tangent_equalities": "All1366 analytic zero tangent rows retained homogeneously; original1411 actual normal/hover equalities still checked.",
+      "prospective_budget": {
+        "max_predictors": 24,
+        "max_corrections_per_predictor": 4,
+        "max_actual_lps": 144,
+        "max_maps": 120,
+        "lp_time_limit_s": 45
+      },
+      "budget_rationale": "24 primary plus24 interior witness LPs and at most96 interior correction LPs; at most120 mapped paths preserves the existing120-load-rounding contract. No old run is extended.",
+      "numerical_limits": "HiGHS1e-9, independent linear1e-7, original2^-20 hard/soft step guards, trust1..1/32 and quarter correction domain unchanged.",
+      "nonlinear_gates": "All original hard rows, actual f/p monotonicity, full11906 boxes, normal<=1e-13, hover<=1e-8, fixed/inactive exactness, positive soft improvement and ratio>=.1.",
+      "physical_admission": false,
+      "executable_run_wrapper": false
+    },
+    "checks": {
+      "predictor": {
+        "shape": [
+          422107,
+          10541
+        ],
+        "finite_intervals": 22653,
+        "target_intervals": 10541,
+        "zero_certificate": {
+          "passed": false,
+          "certified_relative_clearance": [
+            -134217728,
+            821031401511672449723
+          ],
+          "limiting_owner": [
+            "drop",
+            185
+          ],
+          "nonpositive_intervals": [
+            22589,
+            22590,
+            22591,
+            22592,
+            22593,
+            22594,
+            22595,
+            22596,
+            22597,
+            22598,
+            22599,
+            22600,
+            22601,
+            22602,
+            22603,
+            22604,
+            22605,
+            22606,
+            22607,
+            22608,
+            22609,
+            22610,
+            22611,
+            22612,
+            22613,
+            22614,
+            22615,
+            22616,
+            22617,
+            22618,
+            22619,
+            22620,
+            22621,
+            22622,
+            22623,
+            22624,
+            22625,
+            22626,
+            22627,
+            22628,
+            22629,
+            22630,
+            22631,
+            22632,
+            22633,
+            22634,
+            22635,
+            22636,
+            22637,
+            22638,
+            22639,
+            22640,
+            22641,
+            22642,
+            22643,
+            22644,
+            22645,
+            22646,
+            22647
+          ],
+          "witness_modified": false,
+          "actual_dependent_f_guaranteed": false
+        }
+      },
+      "correction": {
+        "shape": [
+          422107,
+          10541
+        ],
+        "finite_intervals": 22653,
+        "target_intervals": 10541,
+        "zero_certificate": {
+          "passed": false,
+          "certified_relative_clearance": [
+            -134217728,
+            821031401511672449723
+          ],
+          "limiting_owner": [
+            "drop",
+            185
+          ],
+          "nonpositive_intervals": [
+            22589,
+            22590,
+            22591,
+            22592,
+            22593,
+            22594,
+            22595,
+            22596,
+            22597,
+            22598,
+            22599,
+            22600,
+            22601,
+            22602,
+            22603,
+            22604,
+            22605,
+            22606,
+            22607,
+            22608,
+            22609,
+            22610,
+            22611,
+            22612,
+            22613,
+            22614,
+            22615,
+            22616,
+            22617,
+            22618,
+            22619,
+            22620,
+            22621,
+            22622,
+            22623,
+            22624,
+            22625,
+            22626,
+            22627,
+            22628,
+            22629,
+            22630,
+            22631,
+            22632,
+            22633,
+            22634,
+            22635,
+            22636,
+            22637,
+            22638,
+            22639,
+            22640,
+            22641,
+            22642,
+            22643,
+            22644,
+            22645,
+            22646,
+            22647
+          ],
+          "witness_modified": false,
+          "actual_dependent_f_guaranteed": false
+        }
+      }
+    },
+    "certificate_cases": 5,
+    "assembly_fixture_soft_ceiling": 0.09895564659603738,
+    "fixture_ceiling_is_not_solved_primary_result": true,
+    "all331888_final_rows_retained": true,
+    "all11906_full_boxes_and206_drop_boxes_retained": true,
+    "all_original_buffers_unchanged": true,
+    "exact_certificate_never_edits_witness": true,
+    "positive_interior_feasibility_unknown": true,
+    "model_calls": 0,
+    "root_calls": 0,
+    "lp_calls": 0,
+    "new_complete_path": false,
+    "physical_admission": false
+  },
+  "independent_audit": {
+    "utc": "2026-10-18T16:14:46.901513+00:00",
+    "passed": true,
+    "scope": "Independent saved-array audit of482 interval/witness assembly, not a solver.",
+    "checks": {
+      "predictor": {
+        "shape": [
+          422107,
+          10541
+        ],
+        "matrix_error": 0.0,
+        "rhs_error": 0,
+        "interval_error": 0,
+        "zero_relative_clearance": -1.6347453672646388e-13
+      },
+      "correction": {
+        "shape": [
+          422107,
+          10541
+        ],
+        "matrix_error": 0.0,
+        "rhs_error": 0,
+        "interval_error": 0,
+        "zero_relative_clearance": -1.6347453672646388e-13
+      }
+    },
+    "certificate_cases": 5,
+    "drop_interior_arithmetic_nonempty": true,
+    "full_joint_interior_feasibility_unknown": true,
+    "dependent_f_actual_feasibility_not_implied": true,
+    "exact_certificate_never_edits_witness": true,
+    "all_original_and_inward_criteria_preserved": true,
+    "model_calls": 0,
+    "root_calls": 0,
+    "lp_calls": 0,
+    "new_complete_path": false,
+    "physical_admission": false
+  },
+  "local_hash_review": {
+    "utc": "2026-10-18T16:16:21.077786+00:00",
+    "manifests": [
+      {
+        "folder": "interior_witness_preparation_482",
+        "entries": 12
+      },
+      {
+        "folder": "interior_witness_audit_483",
+        "entries": 1
+      }
+    ],
+    "total_entries": 13,
+    "all_hashes_verified": true,
+    "visual_review_claimed": false,
+    "new_report": false,
+    "new_motion": false
+  },
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_481.json",
+  "new_closure": false,
+  "new_solver_exists": false,
+  "prospective_joint_solver_assembly_exists": true,
+  "new_executable_whole_path_wrapper_exists": false,
+  "new_candidate": false,
+  "model_calls": 0,
+  "root_calls": 0,
+  "geometry_calls": 0,
+  "finite_work_columns": 0,
+  "optimizer_calls": 0,
+  "actual_forward_filter_ticks": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "best_clean": "64/72",
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}
