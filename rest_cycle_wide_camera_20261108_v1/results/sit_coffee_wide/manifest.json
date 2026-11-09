@@ -1,0 +1,72 @@
+{
+  "task": "sitting",
+  "case": {
+    "id": "modern_coffee_table_01_top",
+    "asset": "modern_coffee_table_01",
+    "title": "Rectangular coffee table",
+    "approach": "top",
+    "yaw_deg": 0,
+    "task": "sitting",
+    "mesh_usd": "/home/kadir/humanoid-sitting/experiments/furniture_examples_20261105_v1/scenes/modern_coffee_table_01_top/furniture.usda",
+    "mesh_npz": "/home/kadir/humanoid-sitting/experiments/furniture_examples_20261105_v1/scenes/modern_coffee_table_01_top/mesh.npz",
+    "bounds": [
+      [
+        -0.7800000238418578,
+        -0.6009150147438049,
+        0.0
+      ],
+      [
+        -0.18,
+        0.6009150147438049,
+        0.38999998569488525
+      ]
+    ],
+    "target_center": [
+      -0.48000001191993763,
+      2.7243873296991684e-10,
+      0.3899814829287034
+    ],
+    "target_normal": [
+      -1.454275488409756e-19,
+      -5.817101953639024e-20,
+      1.0
+    ],
+    "translation": [
+      -0.48000001192092895,
+      0.0,
+      0.0
+    ],
+    "uniform_scale": 1.0,
+    "color": [
+      0.57,
+      0.39,
+      0.22
+    ],
+    "initial_triangle_AABB_clearance_m": 0.06,
+    "contact_scoring_validated": false
+  },
+  "variant": {
+    "id": "sit_modern_coffee_table_01_center_normal_landing",
+    "asset": "modern_coffee_table_01",
+    "case": "modern_coffee_table_01_top",
+    "title": "Coffee table",
+    "task": "sitting",
+    "intent": "top",
+    "x": 0.0,
+    "y": 0.0,
+    "yaw_deg": 0.0,
+    "teacher": "preserved_best09_sitting",
+    "closer_m": 0.05
+  },
+  "purpose": "Fresh wider-camera sitting subtask; not a complete return cycle",
+  "camera": {
+    "width": 384,
+    "height": 288,
+    "horizontal_aperture_mm": 39.0,
+    "focal_length_mm": 15.0,
+    "simulation_sensor_configuration_changed": true
+  },
+  "estimated_force_controls_action": false,
+  "action_limits_unchanged": true,
+  "success_thresholds_unchanged": true
+}
