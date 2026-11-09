@@ -1,0 +1,595 @@
+{
+  "model_admitted": true,
+  "tests": {
+    "feet": true,
+    "balance": true,
+    "plane_nonpenetration": true,
+    "patch_reserve": true,
+    "tilt": true,
+    "base_wrench": true,
+    "first20s_hold_reserve": true,
+    "return20s": true,
+    "partial_support": true,
+    "effort_hypothesis": true,
+    "original_command_limits": true,
+    "entire_observed_corner_polygon": true,
+    "full_mesh_clearance": true,
+    "independent_virtual_work": true
+  },
+  "minimum_corner_margin_m": 0.001988440062187742,
+  "minimum_balance_margin": 0.022728273981420972,
+  "minimum_plane_gap_m": -1.3877787807814457e-16,
+  "minimum_patch_margin_m": 0.002725699306433616,
+  "maximum_foot_error": 6.995869550330269e-09,
+  "forward": {
+    "filter_error": 6.776263578034403e-21,
+    "increment": 0.002988907478964742,
+    "desired_margin": 0.2508236020397428,
+    "fingers_fixed": true
+  },
+  "backward": {
+    "filter_error": 3.3881317890172014e-21,
+    "increment": 0.002988907478964742,
+    "desired_margin": 0.2509972586947025,
+    "fingers_fixed": true
+  },
+  "clearance": {
+    "passed": true,
+    "sampled_poses": 305,
+    "triangle_tests": 2966,
+    "forbidden_or_early_clearance_intersections": [],
+    "forbidden_or_early_clearance_intersection_count": 0,
+    "expected_target_approaches": 161,
+    "clearance_buffer_m": 0.006,
+    "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+    "simulation_success": false
+  },
+  "virtual_work": {
+    "passed": true,
+    "maximum_joint_torque_error_Nm": 1.621996759126887e-09,
+    "maximum_base_wrench_residual": 7.494005416219807e-16
+  },
+  "nodes": [
+    {
+      "node": 0,
+      "phase": "approach",
+      "gap_m": 0.06280979111527815,
+      "load": 0.0,
+      "base_wrench_residual": 1.7763568394002505e-15
+    },
+    {
+      "node": 1,
+      "phase": "approach",
+      "gap_m": 0.05918777550948501,
+      "load": 0.0,
+      "base_wrench_residual": 1.1657341758564144e-15
+    },
+    {
+      "node": 2,
+      "phase": "approach",
+      "gap_m": 0.05559841245068753,
+      "load": 0.0,
+      "base_wrench_residual": 6.2727600891321345e-15
+    },
+    {
+      "node": 3,
+      "phase": "approach",
+      "gap_m": 0.05205279770400714,
+      "load": 0.0,
+      "base_wrench_residual": 2.1649348980190553e-15
+    },
+    {
+      "node": 4,
+      "phase": "approach",
+      "gap_m": 0.048560597790150095,
+      "load": 0.0,
+      "base_wrench_residual": 1.304512053934559e-15
+    },
+    {
+      "node": 5,
+      "phase": "approach",
+      "gap_m": 0.045141134032371855,
+      "load": 0.0,
+      "base_wrench_residual": 3.969047313034935e-15
+    },
+    {
+      "node": 6,
+      "phase": "approach",
+      "gap_m": 0.04179526629737196,
+      "load": 0.0,
+      "base_wrench_residual": 2.4702462297909733e-15
+    },
+    {
+      "node": 7,
+      "phase": "approach",
+      "gap_m": 0.03851045002172601,
+      "load": 0.0,
+      "base_wrench_residual": 1.6653345369377348e-16
+    },
+    {
+      "node": 8,
+      "phase": "approach",
+      "gap_m": 0.03528795958466946,
+      "load": 0.0,
+      "base_wrench_residual": 6.966649479522857e-15
+    },
+    {
+      "node": 9,
+      "phase": "approach",
+      "gap_m": 0.03214076376568692,
+      "load": 0.0,
+      "base_wrench_residual": 2.1649348980190553e-15
+    },
+    {
+      "node": 10,
+      "phase": "approach",
+      "gap_m": 0.02906848388867561,
+      "load": 0.0,
+      "base_wrench_residual": 4.218847493575595e-15
+    },
+    {
+      "node": 11,
+      "phase": "approach",
+      "gap_m": 0.02604621683499389,
+      "load": 0.0,
+      "base_wrench_residual": 3.1363800445660672e-15
+    },
+    {
+      "node": 12,
+      "phase": "approach",
+      "gap_m": 0.023099812714331258,
+      "load": 0.0,
+      "base_wrench_residual": 8.43769498715119e-15
+    },
+    {
+      "node": 13,
+      "phase": "approach",
+      "gap_m": 0.020226083825290536,
+      "load": 0.0,
+      "base_wrench_residual": 2.220446049250313e-15
+    },
+    {
+      "node": 14,
+      "phase": "approach",
+      "gap_m": 0.01742345264318737,
+      "load": 0.0,
+      "base_wrench_residual": 5.6066262743570405e-15
+    },
+    {
+      "node": 15,
+      "phase": "approach",
+      "gap_m": 0.014675258202759167,
+      "load": 0.0,
+      "base_wrench_residual": 2.7755575615628914e-15
+    },
+    {
+      "node": 16,
+      "phase": "landing",
+      "gap_m": 0.0119999999999999,
+      "load": 0.0,
+      "base_wrench_residual": 5.051514762044462e-15
+    },
+    {
+      "node": 17,
+      "phase": "landing",
+      "gap_m": 0.008999999999999897,
+      "load": 0.0,
+      "base_wrench_residual": 9.43689570931383e-16
+    },
+    {
+      "node": 18,
+      "phase": "landing",
+      "gap_m": 0.005999999999999894,
+      "load": 0.0,
+      "base_wrench_residual": 1.915134717478395e-15
+    },
+    {
+      "node": 19,
+      "phase": "landing",
+      "gap_m": 0.0029999999999998916,
+      "load": 0.0,
+      "base_wrench_residual": 1.7763568394002505e-15
+    },
+    {
+      "node": 20,
+      "phase": "landing",
+      "gap_m": -1.1102230246251565e-16,
+      "load": 0.0,
+      "base_wrench_residual": 1.0824674490095276e-15
+    },
+    {
+      "node": 21,
+      "phase": "landing",
+      "gap_m": -1.1102230246251565e-16,
+      "load": 0.02145861295376159,
+      "base_wrench_residual": 3.0531133177191805e-16
+    },
+    {
+      "node": 22,
+      "phase": "landing",
+      "gap_m": -8.326672684688674e-17,
+      "load": 0.06117939412766024,
+      "base_wrench_residual": 5.6343818499726694e-15
+    },
+    {
+      "node": 23,
+      "phase": "landing",
+      "gap_m": -1.3877787807814457e-16,
+      "load": 0.06820177031627475,
+      "base_wrench_residual": 6.938893903907228e-15
+    },
+    {
+      "node": 24,
+      "phase": "landing",
+      "gap_m": -1.3877787807814457e-16,
+      "load": 0.11506811706005239,
+      "base_wrench_residual": 5.578870698741412e-15
+    },
+    {
+      "node": 25,
+      "phase": "landing",
+      "gap_m": -8.326672684688674e-17,
+      "load": 0.11955704712375934,
+      "base_wrench_residual": 1.304512053934559e-15
+    },
+    {
+      "node": 26,
+      "phase": "landing",
+      "gap_m": -8.326672684688674e-17,
+      "load": 0.1573467767173429,
+      "base_wrench_residual": 6.38378239159465e-16
+    },
+    {
+      "node": 27,
+      "phase": "landing",
+      "gap_m": -8.326672684688674e-17,
+      "load": 0.17792609156595443,
+      "base_wrench_residual": 2.1094237467877974e-15
+    },
+    {
+      "node": 28,
+      "phase": "landing",
+      "gap_m": -8.326672684688674e-17,
+      "load": 0.20571574387049715,
+      "base_wrench_residual": 4.440892098500626e-16
+    },
+    {
+      "node": 29,
+      "phase": "landing",
+      "gap_m": -5.551115123125783e-17,
+      "load": 0.2350131603315424,
+      "base_wrench_residual": 2.3037127760972e-15
+    },
+    {
+      "node": 30,
+      "phase": "landing",
+      "gap_m": -1.1102230246251565e-16,
+      "load": 0.24730050824779237,
+      "base_wrench_residual": 2.7200464103316335e-15
+    },
+    {
+      "node": 31,
+      "phase": "landing",
+      "gap_m": -1.1102230246251565e-16,
+      "load": 0.2908832777293215,
+      "base_wrench_residual": 3.6637359812630166e-15
+    },
+    {
+      "node": 32,
+      "phase": "landing",
+      "gap_m": -1.1102230246251565e-16,
+      "load": 0.2957222938743763,
+      "base_wrench_residual": 1.609823385706477e-15
+    },
+    {
+      "node": 33,
+      "phase": "landing",
+      "gap_m": -8.326672684688674e-17,
+      "load": 0.33292432465492217,
+      "base_wrench_residual": 2.7755575615628914e-15
+    },
+    {
+      "node": 34,
+      "phase": "landing",
+      "gap_m": -5.551115123125783e-17,
+      "load": 0.33986826835902456,
+      "base_wrench_residual": 9.71445146547012e-16
+    },
+    {
+      "node": 35,
+      "phase": "landing",
+      "gap_m": -5.551115123125783e-17,
+      "load": 0.379635706189066,
+      "base_wrench_residual": 1.27675647831893e-15
+    },
+    {
+      "node": 36,
+      "phase": "landing",
+      "gap_m": -5.551115123125783e-17,
+      "load": 0.3923598165646916,
+      "base_wrench_residual": 5.551115123125783e-16
+    },
+    {
+      "node": 37,
+      "phase": "landing",
+      "gap_m": -5.551115123125783e-17,
+      "load": 0.4125972204447207,
+      "base_wrench_residual": 1.2212453270876722e-15
+    },
+    {
+      "node": 38,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.44352873473845406,
+      "base_wrench_residual": 7.494005416219807e-16
+    },
+    {
+      "node": 39,
+      "phase": "landing",
+      "gap_m": -5.551115123125783e-17,
+      "load": 0.4125972204447207,
+      "base_wrench_residual": 1.2212453270876722e-15
+    },
+    {
+      "node": 40,
+      "phase": "landing",
+      "gap_m": -5.551115123125783e-17,
+      "load": 0.3923598165646916,
+      "base_wrench_residual": 5.551115123125783e-16
+    },
+    {
+      "node": 41,
+      "phase": "landing",
+      "gap_m": -5.551115123125783e-17,
+      "load": 0.379635706189066,
+      "base_wrench_residual": 1.27675647831893e-15
+    },
+    {
+      "node": 42,
+      "phase": "landing",
+      "gap_m": -5.551115123125783e-17,
+      "load": 0.33986826835902456,
+      "base_wrench_residual": 9.71445146547012e-16
+    },
+    {
+      "node": 43,
+      "phase": "landing",
+      "gap_m": -8.326672684688674e-17,
+      "load": 0.33292432465492217,
+      "base_wrench_residual": 2.7755575615628914e-15
+    },
+    {
+      "node": 44,
+      "phase": "landing",
+      "gap_m": -1.1102230246251565e-16,
+      "load": 0.2957222938743763,
+      "base_wrench_residual": 1.609823385706477e-15
+    },
+    {
+      "node": 45,
+      "phase": "landing",
+      "gap_m": -1.1102230246251565e-16,
+      "load": 0.2908832777293215,
+      "base_wrench_residual": 3.6637359812630166e-15
+    },
+    {
+      "node": 46,
+      "phase": "landing",
+      "gap_m": -1.1102230246251565e-16,
+      "load": 0.24730050824779237,
+      "base_wrench_residual": 2.7200464103316335e-15
+    },
+    {
+      "node": 47,
+      "phase": "landing",
+      "gap_m": -5.551115123125783e-17,
+      "load": 0.2350131603315424,
+      "base_wrench_residual": 2.3037127760972e-15
+    },
+    {
+      "node": 48,
+      "phase": "landing",
+      "gap_m": -8.326672684688674e-17,
+      "load": 0.20571574387049715,
+      "base_wrench_residual": 4.440892098500626e-16
+    },
+    {
+      "node": 49,
+      "phase": "landing",
+      "gap_m": -8.326672684688674e-17,
+      "load": 0.17792609156595443,
+      "base_wrench_residual": 2.1094237467877974e-15
+    },
+    {
+      "node": 50,
+      "phase": "landing",
+      "gap_m": -8.326672684688674e-17,
+      "load": 0.1573467767173429,
+      "base_wrench_residual": 6.38378239159465e-16
+    },
+    {
+      "node": 51,
+      "phase": "landing",
+      "gap_m": -8.326672684688674e-17,
+      "load": 0.11955704712375934,
+      "base_wrench_residual": 1.304512053934559e-15
+    },
+    {
+      "node": 52,
+      "phase": "landing",
+      "gap_m": -1.3877787807814457e-16,
+      "load": 0.11506811706005239,
+      "base_wrench_residual": 5.578870698741412e-15
+    },
+    {
+      "node": 53,
+      "phase": "landing",
+      "gap_m": -1.3877787807814457e-16,
+      "load": 0.06820177031627475,
+      "base_wrench_residual": 6.938893903907228e-15
+    },
+    {
+      "node": 54,
+      "phase": "landing",
+      "gap_m": -8.326672684688674e-17,
+      "load": 0.06117939412766024,
+      "base_wrench_residual": 5.6343818499726694e-15
+    },
+    {
+      "node": 55,
+      "phase": "landing",
+      "gap_m": -1.1102230246251565e-16,
+      "load": 0.02145861295376159,
+      "base_wrench_residual": 3.0531133177191805e-16
+    },
+    {
+      "node": 56,
+      "phase": "landing",
+      "gap_m": -1.1102230246251565e-16,
+      "load": 0.0,
+      "base_wrench_residual": 1.0824674490095276e-15
+    },
+    {
+      "node": 57,
+      "phase": "landing",
+      "gap_m": 0.0029999999999998916,
+      "load": 0.0,
+      "base_wrench_residual": 1.7763568394002505e-15
+    },
+    {
+      "node": 58,
+      "phase": "landing",
+      "gap_m": 0.005999999999999894,
+      "load": 0.0,
+      "base_wrench_residual": 1.915134717478395e-15
+    },
+    {
+      "node": 59,
+      "phase": "landing",
+      "gap_m": 0.008999999999999897,
+      "load": 0.0,
+      "base_wrench_residual": 9.43689570931383e-16
+    },
+    {
+      "node": 60,
+      "phase": "landing",
+      "gap_m": 0.0119999999999999,
+      "load": 0.0,
+      "base_wrench_residual": 5.051514762044462e-15
+    },
+    {
+      "node": 61,
+      "phase": "approach",
+      "gap_m": 0.014675258202759167,
+      "load": 0.0,
+      "base_wrench_residual": 2.7755575615628914e-15
+    },
+    {
+      "node": 62,
+      "phase": "approach",
+      "gap_m": 0.01742345264318737,
+      "load": 0.0,
+      "base_wrench_residual": 5.6066262743570405e-15
+    },
+    {
+      "node": 63,
+      "phase": "approach",
+      "gap_m": 0.020226083825290536,
+      "load": 0.0,
+      "base_wrench_residual": 2.220446049250313e-15
+    },
+    {
+      "node": 64,
+      "phase": "approach",
+      "gap_m": 0.023099812714331258,
+      "load": 0.0,
+      "base_wrench_residual": 8.43769498715119e-15
+    },
+    {
+      "node": 65,
+      "phase": "approach",
+      "gap_m": 0.02604621683499389,
+      "load": 0.0,
+      "base_wrench_residual": 3.1363800445660672e-15
+    },
+    {
+      "node": 66,
+      "phase": "approach",
+      "gap_m": 0.02906848388867561,
+      "load": 0.0,
+      "base_wrench_residual": 4.218847493575595e-15
+    },
+    {
+      "node": 67,
+      "phase": "approach",
+      "gap_m": 0.03214076376568692,
+      "load": 0.0,
+      "base_wrench_residual": 2.1649348980190553e-15
+    },
+    {
+      "node": 68,
+      "phase": "approach",
+      "gap_m": 0.03528795958466946,
+      "load": 0.0,
+      "base_wrench_residual": 6.966649479522857e-15
+    },
+    {
+      "node": 69,
+      "phase": "approach",
+      "gap_m": 0.03851045002172601,
+      "load": 0.0,
+      "base_wrench_residual": 1.6653345369377348e-16
+    },
+    {
+      "node": 70,
+      "phase": "approach",
+      "gap_m": 0.04179526629737196,
+      "load": 0.0,
+      "base_wrench_residual": 2.4702462297909733e-15
+    },
+    {
+      "node": 71,
+      "phase": "approach",
+      "gap_m": 0.045141134032371855,
+      "load": 0.0,
+      "base_wrench_residual": 3.969047313034935e-15
+    },
+    {
+      "node": 72,
+      "phase": "approach",
+      "gap_m": 0.048560597790150095,
+      "load": 0.0,
+      "base_wrench_residual": 1.304512053934559e-15
+    },
+    {
+      "node": 73,
+      "phase": "approach",
+      "gap_m": 0.05205279770400714,
+      "load": 0.0,
+      "base_wrench_residual": 2.1649348980190553e-15
+    },
+    {
+      "node": 74,
+      "phase": "approach",
+      "gap_m": 0.05559841245068753,
+      "load": 0.0,
+      "base_wrench_residual": 6.2727600891321345e-15
+    },
+    {
+      "node": 75,
+      "phase": "approach",
+      "gap_m": 0.05918777550948501,
+      "load": 0.0,
+      "base_wrench_residual": 1.1657341758564144e-15
+    },
+    {
+      "node": 76,
+      "phase": "approach",
+      "gap_m": 0.06280979111527815,
+      "load": 0.0,
+      "base_wrench_residual": 1.7763568394002505e-15
+    }
+  ],
+  "physical_success": false,
+  "model_only": true
+}

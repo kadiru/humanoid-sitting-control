@@ -1,0 +1,288 @@
+{
+  "utc": "2026-11-09T03:00:45.897408+00:00",
+  "state": "QUIET_ARMS_NARROW_SUPPORT_NOMINAL_MODEL_PASS_PHYSICS_NOT_VALIDATED",
+  "authorization": "Latest human: corner or narrow edge clearing hip housings, lower effort, five-second hold and stand;4090only;unchanged actionlimits/successcriteria. Brief factual training summary provided; foot unloading distinguished from effort and fixed-foot planning assumption.",
+  "changes": [
+    "Rigidly rotated unchanged50cm table to face a corner; actual4090rear-camera depth matched mesh. Two-line premise rejected for real clippedcorner. Convexselectedcloud also bridged decorativegrooves; changed to3mmplane+5deglocalnormal nonconvexpolygon retainingholes,6mmerosion, independentlyinsideallowedtriangleunion. Oldfailuresevidencepreserved.",
+    "Corner observedcontactregion couldnot fit acceptedpelviscapradius22.53mm plus22mmreserve. No sitting motion onthatcorner.",
+    "Created distinct anchored12cmwide x40cmdeep x50cmhigh flat supportfixture withfullclosedcollisionmesh andunchangedmaterial. Not an oldfurnitureasset modification or furnituregeneralization claim.",
+    "Initialnarrow nominalmodel clearedhiphousings, butrollingcap approachedfrontface. Correctedwholecontactpath byjointzero-loadexit/clearance construction andinverseexactrolling. This clearedallmesh andpolygon gates buttimingfailed15.02snominalsettle.",
+    "Savedpathaccounting identified8.11s inelbow-limitedsegments. Holdingnonlegjointangles atcurrentstandingvalues removesunneededarmgesture. Recomputedfromoriginalacceptedsourcelegs/orientation; full23jointmechanics/return/clearance/timingpass. No failednumericpose used asinitialization.",
+    "4090 becameoccupied byindependent sircus-mjlab training before narrowcapture. Immediatecaptureowner failedatlockbeforeanyscientificlaunch. Preservedthatfailure andqueuedonefinitecamera-validationjob; no motion orPPO queued."
+  ],
+  "latest_result": {
+    "nominal_model_passed": true,
+    "model_admitted": false,
+    "current_camera_validated": false,
+    "physical_success": false,
+    "new_physics_steps": 0,
+    "PPO_updates": 0,
+    "nominal_rest_settle_s": 11.46,
+    "nominal_return_settle_s": 12.46,
+    "rest_load": 0.4435287347384541,
+    "model_effort_ratio": 0.37881347116110986,
+    "elapsed_seconds": 12.305397557036486
+  },
+  "latest_audit_tests": {
+    "feet": true,
+    "balance": true,
+    "plane_nonpenetration": true,
+    "patch_reserve": true,
+    "tilt": true,
+    "base_wrench": true,
+    "first20s_hold_reserve": true,
+    "return20s": true,
+    "partial_support": true,
+    "effort_hypothesis": true,
+    "original_command_limits": true,
+    "entire_observed_corner_polygon": true,
+    "full_mesh_clearance": true,
+    "independent_virtual_work": true
+  },
+  "model_scope": "Numericalquasistaticmodel withfullsampled6mmmeshclearance andexactrollinggeometry; notcontinuousdynamics, realenergy, actualloadmeasurement or physicalsuccess.",
+  "quantitative": {
+    "rest_load_bw": 0.4435287347384541,
+    "joint_torque_squared_ratio": 0.37881347116110986,
+    "nominal_settle_s": 11.46,
+    "nominal_return_settle_s": 12.46,
+    "mesh_sampled_poses": 305,
+    "mesh_intersections": 0
+  },
+  "counts": {
+    "fixture_constructions": 2,
+    "mechanical_model_constructions": 4,
+    "unique_synthetic_tests_passed": 4,
+    "completed_GPU_captures": 1,
+    "new_physics_steps": 300,
+    "standing_controls_including_warmup": 75,
+    "new_sitting_controls": 0,
+    "complete_cycles": 0,
+    "new_demonstrations": 0,
+    "PPO_updates": 0,
+    "new_full72_checks": 0,
+    "physical_repairs": 0,
+    "queued_camera_jobs": 1
+  },
+  "failures_preserved": [
+    "NumPyboolreportserialization failure afterfirstfixture; independentlyauditedalready-generatedassetwithnativeboolconversion, nofixtureregeneration.",
+    "Two-straight-edge hypothesis failed onclippedcorner.",
+    "Convexplanehull crossedgrooves andincluded5mmbandpointsover3mm; fixedrepresentationretainedholes/localnormals.",
+    "Corner regiontoo small forcap+reserve.",
+    "Narrowrest-onlyplacementfailedfrontface/patch/timing.",
+    "Sweptplacementfailedtiming.",
+    "Narrowcamera launch refused busylock beforephysics."
+  ],
+  "resources": {
+    "each_scientific_CPU_cap_s": 45,
+    "CPUcores": 1,
+    "ASGiB": 40,
+    "processes": [
+      {
+        "folder": "rest_cycle_corner_20261109_v1",
+        "file": "audit_process.json",
+        "returncode": 0,
+        "total_wall_s": 6.379348218033556,
+        "maxrss_KiB": 1356300
+      },
+      {
+        "folder": "rest_cycle_corner_20261109_v1",
+        "file": "patch_process.json",
+        "returncode": 0,
+        "total_wall_s": 0.36477208603173494,
+        "maxrss_KiB": 155780
+      },
+      {
+        "folder": "rest_cycle_corner_20261109_v1",
+        "file": "preparation_process.json",
+        "returncode": 1,
+        "total_wall_s": 1.3671541810035706,
+        "maxrss_KiB": 384808
+      },
+      {
+        "folder": "rest_cycle_corner_20261109_v1",
+        "file": "preparation_audit_process.json",
+        "returncode": 0,
+        "total_wall_s": 1.3166275339899585,
+        "maxrss_KiB": 376420
+      },
+      {
+        "folder": "rest_cycle_corner_20261109_v1",
+        "file": "patch_v2_process.json",
+        "returncode": 0,
+        "total_wall_s": 0.4649676259723492,
+        "maxrss_KiB": 156804
+      },
+      {
+        "folder": "rest_cycle_corner_20261109_v1",
+        "file": "process.json",
+        "returncode": 1,
+        "total_wall_s": 1.8177917280117981,
+        "maxrss_KiB": 295448,
+        "outer_deadline": false,
+        "worker_pid": 2348623,
+        "new_physics_steps": 0,
+        "PPO_updates": 0
+      },
+      {
+        "folder": "rest_cycle_narrow_support_20261109_v1",
+        "file": "preparation_process.json",
+        "returncode": 0,
+        "total_wall_s": 1.6166025639977306,
+        "maxrss_KiB": 382648
+      },
+      {
+        "folder": "rest_cycle_narrow_support_20261109_v1",
+        "file": "nominal_process.json",
+        "returncode": 0,
+        "total_wall_s": 16.14867940096883,
+        "maxrss_KiB": 300624,
+        "outer_deadline": false,
+        "worker_pid": 2359179,
+        "new_physics_steps": 0,
+        "PPO_updates": 0
+      },
+      {
+        "folder": "rest_cycle_swept_support_20261109_v1",
+        "file": "nominal_process.json",
+        "returncode": 0,
+        "total_wall_s": 15.804312047024723,
+        "maxrss_KiB": 299904,
+        "outer_deadline": false,
+        "worker_pid": 2365974,
+        "new_physics_steps": 0,
+        "PPO_updates": 0
+      },
+      {
+        "folder": "rest_cycle_swept_support_20261109_v1",
+        "file": "render_process.json",
+        "returncode": 0,
+        "total_wall_s": 3.422145657998044,
+        "maxrss_KiB": 293892
+      },
+      {
+        "folder": "rest_cycle_quiet_arms_20261109_v1",
+        "file": "nominal_process.json",
+        "returncode": 0,
+        "total_wall_s": 12.398748831998091,
+        "maxrss_KiB": 300664,
+        "outer_deadline": false,
+        "worker_pid": 2377354,
+        "new_physics_steps": 0,
+        "PPO_updates": 0
+      },
+      {
+        "folder": "rest_cycle_quiet_arms_20261109_v1",
+        "file": "render_process.json",
+        "returncode": 0,
+        "total_wall_s": 3.3717088350094855,
+        "maxrss_KiB": 293200
+      }
+    ],
+    "total_measured_CPU_child_process_wall_s": 64.47285871003987,
+    "physics_capture_owner": {
+      "owner_pid": 2332290,
+      "scientific_launches": 1,
+      "PPO_updates": 0,
+      "retries": 0,
+      "GPU": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4",
+      "state": "CAPTURE_COMPLETE_REQUIRES_INDEPENDENT_AUDIT",
+      "utc": "2026-11-09T02:32:08.857604+00:00",
+      "wall_seconds": 18.352583458996378,
+      "child_pid": 2332295,
+      "trial_returncode": 0,
+      "trial_seconds": 18.156949228956364,
+      "sitting_controls": 0,
+      "complete_cycle": false
+    },
+    "queue": {
+      "owner_pid": 2381865,
+      "scientific_launches": 0,
+      "simulation_launches": 0,
+      "PPO_updates": 0,
+      "recurring": false,
+      "queue_deadline_s": 7200,
+      "state": "WAITING_FOR_4090_AND_SHARED_LOCK",
+      "utc": "2026-11-09T02:58:25.122849+00:00",
+      "wall_s": 0.16072734101908281,
+      "purpose": "One standing camera capture and independent depth/region audits only; no sitting, PPO, forced job interruption or recurring automation."
+    },
+    "note": "CPUchildsum includesfailedchecks andbothvideo renders; oneGPUcapture separatelycharged. Authoring/SSH/hashtransport/waiting notclaimedasscientificsolverwall."
+  },
+  "video": "/Users/kadir/humanoid-sitting-control/rest_cycle_quiet_arms_20261109_v1/video/corner_and_narrow_support_review.mp4",
+  "video_manifest": {
+    "duration_s": 16,
+    "frames": 160,
+    "video_sha256": "fb3e7b56e87bf0103bfcfe29cef6c86000e0cee1dcf6d6f9577838468ba6c0ad",
+    "scope": "Actual rear camera snapshot, then explicitly labelled static model poses; no invented physical rollout.",
+    "new_physics_steps": 0,
+    "new_solvers": 0,
+    "PPO_updates": 0,
+    "complete_cycle": false,
+    "elapsed_seconds": 3.27470293402439,
+    "timing": {
+      "fixed_path_continuous_rate_lower_bound_s": 9.523442658765964,
+      "with_existing1p5second_reserves_s": 11.023442658765964,
+      "scheduled_motion_s": 9.96,
+      "nominal_settled_s": 11.46,
+      "required_nominal_settle_below_s": 14.4,
+      "leading_rate_limiting_joints": [
+        [
+          "right_hip_pitch_joint",
+          7.523442658765964
+        ],
+        [
+          "left_knee_joint",
+          2.0000000000000018
+        ],
+        [
+          "left_hip_pitch_joint",
+          0.0
+        ],
+        [
+          "torso_joint",
+          0.0
+        ],
+        [
+          "left_hip_roll_joint",
+          0.0
+        ]
+      ],
+      "scope": "Fixed geometric/command path only; no impossibility claim for a different contact path or foot placement."
+    }
+  },
+  "training_summary": {
+    "running": false,
+    "last_run": "armchair_rest_trainer_20261105_v1",
+    "algorithm": "PPO residuals arounddemonstrationprior; imitation penalty1.0",
+    "network": "447input ->128ELU ->128ELU ->23actoroutputs; separatecritic",
+    "scope": "Newarmchairrestbranch; sittingfrozen",
+    "rewards": "safecompletion+stablehold+demotracking+balancedloadshape(saturates20%BW)-slip/wrongcontact/impact/roughmotion; qualifyingeffortrewardonlycleancompletion",
+    "latest_armchair_clean": "2/11 after128updates versus prior11/11;notpromoted"
+  },
+  "feet": "Fullinitialfootposes fixedinthisconstruction. Footunloading andfull23jointtorque proxyreportedseparately. No footrelocation, electrical-energyreduction or newphysicalcycleclaim.",
+  "worker_check": {
+    "utc": "2026-11-09T02:59:13.822421+00:00",
+    "gpus": [
+      "0, NVIDIA GeForce RTX 4090, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 0 %, 41, 1183 MiB",
+      "1, NVIDIA GeForce RTX 4070, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 42 %, 44, 5057 MiB"
+    ],
+    "compute_apps": [
+      "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 2352741, /home/kadir/sircus-mjlab/venv/bin/python",
+      "GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 2016772, /isaac-sim/kit/python/bin/python3"
+    ],
+    "own_queue": {
+      "owner_pid": 2381865,
+      "scientific_launches": 0,
+      "simulation_launches": 0,
+      "PPO_updates": 0,
+      "recurring": false,
+      "queue_deadline_s": 7200,
+      "state": "WAITING_FOR_4090_AND_SHARED_LOCK",
+      "utc": "2026-11-09T02:58:25.122849+00:00",
+      "wall_s": 0.16072734101908281,
+      "purpose": "One standing camera capture and independent depth/region audits only; no sitting, PPO, forced job interruption or recurring automation."
+    }
+  },
+  "next_work": "Inspect existing one-shot camera queue PID2381865 and outputs/rest_cycle_narrow_support_20261109_v1/queued_capture_status.json first; do not duplicate it. It waits at most7200s for4090/sharedlock and performs exactly one75-control standing capture plus independent depth/region audits, no sitting/PPO. Other4090workload PID2352741 and4070AIWorker remain untouched. Latest quiet-arms nominal construction passes all geometric/mechanical/action/timing gates:11.46srestsettle,12.46sreturn,44.35%BWsupport and0.37881standing23jointtorque-squared. This uses known narrow-fixture geometry, NOT current camera. Bind fresh actualcamera/standingstate to the planned construction before motion; preserve uncertainty and no rejectedvector initialization. Positive-load/release observer remains unvalidated in loaded motion. Prepare bounded sensor-driven/calibration execution and its full20s/final5s plusreturn<=20s/2squiet audit before physics; no truthfeedback or timer asserted contact. No newPPO until reliable completecycles;3starts before scaling. All64protected,8unresolved;holdoutclosed;no recurringautomation.",
+  "prior_checkpoint_sha256": "e59e37eb0b45503a0cbd30d4c785456e7cb5c87c5e028693212b00d87f9572b5"
+}
