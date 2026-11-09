@@ -1,0 +1,10 @@
+{
+  "model_pass": false,
+  "error": "ValueError({'reason': 'COLLISION_AWARE_NODE_REJECTED', 'phase': 'normal', 'node': 4, 'success': False, 'iterations': 6, 'equality': 0.0013849566844574834, 'inequality': -0.003955717507853779, 'message': 'Inequality constraints incompatible', 'foot_pose_residual': 0.0013849566844574834, 'gap_m': -8.002705997878223e-10, 'required_gap_m': 0.0, 'camera_minimum_m': -0.003955717507853779, 'model_contact_point_local': [-0.054169133305549594, -0.01872009970247745, -0.1178673580288887], 'point_frozen': False})",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/contact_transition_20261108_v1/validate.py\", line 82, in <module>\n    result=plan.solve();goal=plan.target.copy();marker=plan.marker.copy();write('plan.json',result)\n           ^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/contact_transition_20261108_v1/construct.py\", line 84, in solve\n    if not fit.success or eq>.002 or ineq<-1e-6:raise ValueError({'reason':'COLLISION_AWARE_NODE_REJECTED',**self.optimizations[-1]})\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: {'reason': 'COLLISION_AWARE_NODE_REJECTED', 'phase': 'normal', 'node': 4, 'success': False, 'iterations': 6, 'equality': 0.0013849566844574834, 'inequality': -0.003955717507853779, 'message': 'Inequality constraints incompatible', 'foot_pose_residual': 0.0013849566844574834, 'gap_m': -8.002705997878223e-10, 'required_gap_m': 0.0, 'camera_minimum_m': -0.003955717507853779, 'model_contact_point_local': [-0.054169133305549594, -0.01872009970247745, -0.1178673580288887], 'point_frozen': False}\n",
+  "total_seconds": 30.998635280993767,
+  "physics_launch_ready": false,
+  "physical_success": false,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}

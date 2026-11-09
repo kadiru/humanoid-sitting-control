@@ -1,0 +1,24 @@
+{
+  "utc": "2026-11-08T04:56:38.222659+00:00",
+  "gpu": "0, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 75 %, 43, 6200 MiB\n1, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 90 %, 60, 4843 MiB\n",
+  "gpu_processes": "232122, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 6140 MiB\n3934199, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 4628 MiB\n",
+  "worker_commands": [
+    {
+      "pid": 232122,
+      "command": "/workspace/venv/bin/python /workspace/studies/shot-benchmark-source-df8de16-v1/sircus/isaac/film_cylinder_farm.py --headless --enable_cameras --device cuda:0 --assets /workspace/assets --output /workspace/output/sweep-ppo-10k-20261106-v2/runs/ppo-seed20261123 --appearance silver --continuous-source /workspace/output/expanded-training-20261102-v4 --continuous-camera-json /workspace/output/expanded-training-20261102-v4/selected-camera.json --shot-benchmark-plan /workspace/output/sweep-ppo-10k-20261106-v2/experiment.json --shot-benchmark-method ppo --shot-benchmark-seed 20261123 "
+    },
+    {
+      "pid": 3934199,
+      "command": "/isaac-sim/kit/python/bin/python3 -u /workspace/src/run_fountain.py --allow-root "
+    }
+  ],
+  "own_scientific_workers": [],
+  "disk_free_bytes": {
+    "/": 58017501184,
+    "/data": 6257946624
+  },
+  "original_minimum_disk_reserve_bytes": 20000000000,
+  "GPU4070_untouched": true,
+  "recurring_automation_created": false,
+  "training_queue_created": false
+}

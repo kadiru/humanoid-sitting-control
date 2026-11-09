@@ -1,0 +1,10 @@
+{
+  "target": "stool_center",
+  "wall_seconds_including_interpreter_startup": 22.55298089500866,
+  "timeout": false,
+  "returncode": 0,
+  "cpu_seconds": 22.547777,
+  "child_peak_rss_kib": 284124,
+  "output": "{\n  \"model_pass\": false,\n  \"error\": \"ValueError({'reason': 'COLLISION_AWARE_NODE_REJECTED', 'phase': 'load', 'node': 2, 'success': False, 'iterations': 60, 'equality': 8.405753193923747e-13, 'inequality': -0.001098140639957404, 'message': 'Iteration limit reached', 'foot_pose_residual': 8.405753193923747e-13, 'gap_m': 3.3956171208160413e-13, 'required_gap_m': 0.0, 'camera_minimum_m': 1.0, 'model_contact_point_local': [0.02351128309965133, 0.0038944864645600323, -0.14779505133628842], 'point_frozen': True})\",\n  \"traceback\": \"Traceback (most recent call last):\\n  File \\\"/home/kadir/humanoid-sitting/experiments/contact_transition_20261108_v1/validate.py\\\", line 82, in <module>\\n    result=plan.solve();goal=plan.target.copy();marker=plan.marker.copy();write('plan.json',result)\\n           ^^^^^^^^^^^^\\n  File \\\"/home/kadir/humanoid-sitting/experiments/contact_transition_20261108_v1/construct.py\\\", line 84, in solve\\n    if not fit.success or eq>.002 or ineq<-1e-6:raise ValueError({'reason':'COLLISION_AWARE_NODE_REJECTED',**self.optimizations[-1]})\\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nValueError: {'reason': 'COLLISION_AWARE_NODE_REJECTED', 'phase': 'load', 'node': 2, 'success': False, 'iterations': 60, 'equality': 8.405753193923747e-13, 'inequality': -0.001098140639957404, 'message': 'Iteration limit reached', 'foot_pose_residual': 8.405753193923747e-13, 'gap_m': 3.3956171208160413e-13, 'required_gap_m': 0.0, 'camera_minimum_m': 1.0, 'model_contact_point_local': [0.02351128309965133, 0.0038944864645600323, -0.14779505133628842], 'point_frozen': True}\\n\",\n  \"total_seconds\": 22.47177434602054,\n  \"physics_launch_ready\": false,\n  \"physical_success\": false,\n  \"physics_steps\": 0,\n  \"PPO_updates\": 0\n}\n",
+  "new_physics_steps": 0
+}
