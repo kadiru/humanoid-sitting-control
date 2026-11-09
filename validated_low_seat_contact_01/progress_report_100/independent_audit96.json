@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-17T10:25:12.402464+00:00",
+  "passed": true,
+  "scope": "Independent all115-node corrected geometry/full-foot/stance/airborne-attitude/tilt/joint replay plus separate16joint finite-difference virtual work, nonnegative static force equilibrium, zero modeled seat loading before zero-gap contact, measured loads NOT established, exact recorded initial/fixed commands, command bounds and specific command-polyline timing. Reports separate geometry/command/time gates. No actual commands applied, no sensed support/dynamics/physical admission. A model pass is not permission to start PPO or holdout.",
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/landing_ankle_path_95/results.json": "2fd554199e7a58267e97cff961b3b3c48a0566bac159051b3e3eb1109fdf4ce6",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_landing_ankle_96.py": "1c89d436f2dfbccafad5c9acf84a7c665c4e6fb536fd06ef041cff9aca0f9f15"
+  },
+  "geometry": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/landing_ankle_path_95/results.json",
+      "parameters": [
+        0.051000000000000004,
+        0.35547494815770114,
+        -0.2094395102377074,
+        0.0
+      ],
+      "length_m": 0.13999999999993848,
+      "knots": 115,
+      "max_replay_error": 2.2354828768292123e-16,
+      "failed_knots": [],
+      "pose_schedule_metric_passed": false,
+      "min_clearance_mm": 3.7310788941825024,
+      "max_foot_position_error_mm": 0.8877595010604838,
+      "max_foot_orientation_error_deg": 0.4985437259413977,
+      "nominal_pose_schedule_at_0_15_rad_s": 16.43970233423505,
+      "min_actual_swing_sole_height_m": 0.02539733069585899
+    }
+  ],
+  "command": {
+    "nodes": 115,
+    "max_virtual_work_error_Nm": 7.626912434943733e-09,
+    "max_equilibrium_residual": 4.440892098500626e-16,
+    "minimum_command_margin_rad": 0.02965136547021266,
+    "maximum_effort_utilization": 0.8118564393555516,
+    "force_allocation_failures": [],
+    "model_command_passed": false,
+    "specific_command_time_s": 16.30260634086717,
+    "command_schedule_passed": false,
+    "initial_command_exact": true,
+    "all_fixed_commands_exact": true
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}
