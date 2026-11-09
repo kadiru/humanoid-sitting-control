@@ -1,0 +1,10 @@
+{
+  "target": "lean_center",
+  "wall_seconds_including_interpreter_startup": 1.6372197010205127,
+  "timeout": false,
+  "returncode": 0,
+  "cpu_seconds": 1.6355439999999999,
+  "child_peak_rss_kib": 286532,
+  "output": "{\n  \"model_pass\": false,\n  \"error\": \"ValueError({'reason': 'NO_BRACKETED_HIP_HOUSING_CLEARANCE', 'history': [{'pitch_rad': 0.38526067166334466, 'housing_margin_m': -0.0026486959741064253}, {'pitch_rad': 0.65, 'housing_margin_m': -0.0018945609277905683}]})\",\n  \"traceback\": \"Traceback (most recent call last):\\n  File \\\"/home/kadir/humanoid-sitting/experiments/hip_housing_20261108_v2/validate.py\\\", line 82, in <module>\\n    seed_x,seed_source=original_seed(provisional_plan)\\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/kadir/humanoid-sitting/experiments/hip_housing_20261108_v2/seed.py\\\", line 137, in construct\\n    if last<0:raise ValueError(dict(reason='NO_BRACKETED_HIP_HOUSING_CLEARANCE',history=history))\\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nValueError: {'reason': 'NO_BRACKETED_HIP_HOUSING_CLEARANCE', 'history': [{'pitch_rad': 0.38526067166334466, 'housing_margin_m': -0.0026486959741064253}, {'pitch_rad': 0.65, 'housing_margin_m': -0.0018945609277905683}]}\\n\",\n  \"total_seconds\": 1.5664129260112531,\n  \"physics_launch_ready\": false,\n  \"physical_success\": false,\n  \"physics_steps\": 0,\n  \"PPO_updates\": 0\n}\n",
+  "new_physics_steps": 0
+}
