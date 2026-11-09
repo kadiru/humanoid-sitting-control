@@ -1,0 +1,8 @@
+{
+  "channels": 405,
+  "physics_advances_during_camera": 0,
+  "camera_frames": 205,
+  "actor_inputs": "encoders, measured torque, IMU gravity/gyro, previous absolute joint commands, depth plane with encoder/IMU propagation",
+  "truth_validation": [],
+  "reference": "Offline joint-command/pitch motion library, control clock and IMU pitch/gyro feedback; not live simulator geometry or robot pose. Explicitly a residual/reference-based controller."
+}

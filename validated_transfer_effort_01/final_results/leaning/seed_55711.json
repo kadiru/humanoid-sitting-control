@@ -1,0 +1,193 @@
+{
+  "phase": "trained_selection_frozen",
+  "parent": "/data/humanoid-sitting-perception/split_support_curriculum_02/ppo_01/leaning/train_55311_block3_stage0/final.pt",
+  "history": [
+    {
+      "block": 0,
+      "checkpoint": "/data/humanoid-sitting-perception/transfer_effort_01/ppo/leaning/train_55711_block0/final.pt",
+      "train": "train_55711_block0",
+      "evaluation": "dev_55711_block0",
+      "verification": {
+        "budget": {
+          "updates": 32,
+          "transitions": 36864,
+          "active": 36000,
+          "warmup": 864
+        },
+        "changed": {
+          "actor_state_dict": [
+            "distribution.log_std_param",
+            "mlp.0.weight",
+            "mlp.0.bias",
+            "mlp.2.weight",
+            "mlp.2.bias",
+            "mlp.4.weight",
+            "mlp.4.bias"
+          ],
+          "critic_state_dict": [
+            "mlp.0.weight",
+            "mlp.0.bias",
+            "mlp.2.weight",
+            "mlp.2.bias",
+            "mlp.4.weight",
+            "mlp.4.bias"
+          ]
+        },
+        "iteration": 159,
+        "pending_warmup": 36,
+        "unfinished_active": 0,
+        "checkpoint_sha256": "fb2e71f23f2452ca2c2917b043de513d5c8b26d83a5ddc4ac5f5f0a29b5efb8d"
+      },
+      "retention": {
+        "eligible": true,
+        "lost_success_conditions": [],
+        "new_physical_failures": [],
+        "successes": 18,
+        "reference_common_count": 18,
+        "mean_squared_torque": 530.4528628472221
+      }
+    },
+    {
+      "block": 1,
+      "checkpoint": "/data/humanoid-sitting-perception/transfer_effort_01/ppo/leaning/train_55711_block1/final.pt",
+      "train": "train_55711_block1",
+      "evaluation": "dev_55711_block1",
+      "verification": {
+        "budget": {
+          "updates": 32,
+          "transitions": 36864,
+          "active": 36000,
+          "warmup": 864
+        },
+        "changed": {
+          "actor_state_dict": [
+            "distribution.log_std_param",
+            "mlp.0.weight",
+            "mlp.0.bias",
+            "mlp.2.weight",
+            "mlp.2.bias",
+            "mlp.4.weight",
+            "mlp.4.bias"
+          ],
+          "critic_state_dict": [
+            "mlp.0.weight",
+            "mlp.0.bias",
+            "mlp.2.weight",
+            "mlp.2.bias",
+            "mlp.4.weight",
+            "mlp.4.bias"
+          ]
+        },
+        "iteration": 191,
+        "pending_warmup": 36,
+        "unfinished_active": 0,
+        "checkpoint_sha256": "c0a98ec8811bdc5c2b4cc21f6ccc1b85bb837712f7febcccb5d96474b2edd462"
+      },
+      "retention": {
+        "eligible": true,
+        "lost_success_conditions": [],
+        "new_physical_failures": [],
+        "successes": 18,
+        "reference_common_count": 18,
+        "mean_squared_torque": 534.2893194444443
+      }
+    },
+    {
+      "block": 2,
+      "checkpoint": "/data/humanoid-sitting-perception/transfer_effort_01/ppo/leaning/train_55711_block2/final.pt",
+      "train": "train_55711_block2",
+      "evaluation": "dev_55711_block2",
+      "verification": {
+        "budget": {
+          "updates": 32,
+          "transitions": 36864,
+          "active": 36000,
+          "warmup": 864
+        },
+        "changed": {
+          "actor_state_dict": [
+            "distribution.log_std_param",
+            "mlp.0.weight",
+            "mlp.0.bias",
+            "mlp.2.weight",
+            "mlp.2.bias",
+            "mlp.4.weight",
+            "mlp.4.bias"
+          ],
+          "critic_state_dict": [
+            "mlp.0.weight",
+            "mlp.0.bias",
+            "mlp.2.weight",
+            "mlp.2.bias",
+            "mlp.4.weight",
+            "mlp.4.bias"
+          ]
+        },
+        "iteration": 223,
+        "pending_warmup": 36,
+        "unfinished_active": 0,
+        "checkpoint_sha256": "b886abe1d6dfd3f6c271aad0b01ca1a495c7ab5733c18d6be336e5414bd35bbc"
+      },
+      "retention": {
+        "eligible": true,
+        "lost_success_conditions": [],
+        "new_physical_failures": [],
+        "successes": 18,
+        "reference_common_count": 18,
+        "mean_squared_torque": 537.88684375
+      }
+    },
+    {
+      "block": 3,
+      "checkpoint": "/data/humanoid-sitting-perception/transfer_effort_01/ppo/leaning/train_55711_block3/final.pt",
+      "train": "train_55711_block3",
+      "evaluation": "dev_55711_block3",
+      "verification": {
+        "budget": {
+          "updates": 32,
+          "transitions": 36864,
+          "active": 36000,
+          "warmup": 864
+        },
+        "changed": {
+          "actor_state_dict": [
+            "distribution.log_std_param",
+            "mlp.0.weight",
+            "mlp.0.bias",
+            "mlp.2.weight",
+            "mlp.2.bias",
+            "mlp.4.weight",
+            "mlp.4.bias"
+          ],
+          "critic_state_dict": [
+            "mlp.0.weight",
+            "mlp.0.bias",
+            "mlp.2.weight",
+            "mlp.2.bias",
+            "mlp.4.weight",
+            "mlp.4.bias"
+          ]
+        },
+        "iteration": 255,
+        "pending_warmup": 36,
+        "unfinished_active": 0,
+        "checkpoint_sha256": "f34a3152144e8bc05926f6514cce1b3d32345f02b8a8391e50d68579acac2a8f"
+      },
+      "retention": {
+        "eligible": true,
+        "lost_success_conditions": [],
+        "new_physical_failures": [],
+        "successes": 18,
+        "reference_common_count": 18,
+        "mean_squared_torque": 541.5379010416667
+      }
+    }
+  ],
+  "final_checkpoint": "/data/humanoid-sitting-perception/transfer_effort_01/ppo/leaning/train_55711_block3/final.pt",
+  "selected_checkpoint": "/data/humanoid-sitting-perception/transfer_effort_01/ppo/leaning/train_55711_block0/final.pt",
+  "selected_block": 0,
+  "selected_is_fallback": false,
+  "selection_scope": "development only; no holdout yet",
+  "updates": 128,
+  "transitions": 147456
+}
