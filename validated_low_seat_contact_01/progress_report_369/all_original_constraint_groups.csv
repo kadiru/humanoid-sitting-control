@@ -1,0 +1,22 @@
+group,rows,raw units,raw minimum,negative,below numerical -1e-8,dimensionless minimum,scale basis
+command_lower,1824,rad,8.604786276672494e-05,0,0,0.002868262092224165,command reserve .03 rad; configured effort limits; whole body weight fraction
+command_upper,1824,rad,0.029223380541447574,0,0,0.9741126847149192,command reserve .03 rad; configured effort limits; whole body weight fraction
+effort_upper,1824,Nm,8.413597502618774,0,0,0.42067987513093874,command reserve .03 rad; configured effort limits; whole body weight fraction
+effort_lower,1824,Nm,3.6873013380378126,0,0,0.18436506690189064,command reserve .03 rad; configured effort limits; whole body weight fraction
+corner_nonnegative,912,BW fraction,-0.0009166340271983675,63,63,-0.0009166340271983675,command reserve .03 rad; configured effort limits; whole body weight fraction
+corner_upper,912,BW fraction,0.3157466564567665,0,0,0.3157466564567665,command reserve .03 rad; configured effort limits; whole body weight fraction
+root_lower,206,m,0.7048185951739174,0,0,7.048185951739174,same .1 m root and 1 rad joint nondimensionalization as357
+joint_lower,1236,rad,-1.838347200860957e-05,2,2,-1.838347200860957e-05,same .1 m root and 1 rad joint nondimensionalization as357
+root_upper,206,m,0.9046508641982214,0,0,9.046508641982212,same .1 m root and 1 rad joint nondimensionalization as357
+joint_upper,1236,rad,0.07436379932920173,0,0,0.07436379932920173,same .1 m root and 1 rad joint nondimensionalization as357
+phase_order,208,fraction,-0.0009166340272036555,65,65,-0.0009166340272036555,unit interval phase
+increasing_rate,1824,rad per segment,-2.749902388379105e-06,89,89,-0.0009166965500126103,one 20 ms interval at actual reserved nominal rates
+decreasing_rate,1824,rad per segment,-2.7501172002210306e-06,137,137,-0.0009167057334070101,one 20 ms interval at actual reserved nominal rates
+upper_linear_headroom,1824,rad s,0.00018736157366757773,0,0,0.3122692894459629,existing .03 rad desired reserve times one 20 ms interval
+lower_linear_headroom,1824,rad s,-5.504854620986752e-07,34,34,-0.0009174757701644586,existing .03 rad desired reserve times one 20 ms interval
+prehover_gap,98,m,0.006043058080794094,0,0,0.5035881733995078,existing 12 mm hover height
+posthover_gap,5,m,0.005568063069432711,0,0,0.4640052557860593,existing 12 mm hover height
+nonnegative_gap,104,m,1.2863819015264113e-08,0,0,1.071984917938676e-06,existing 12 mm hover height
+approach_gap_order,39,m,0.00040665721728924686,0,0,0.03388810144077057,existing 12 mm hover height
+normal_descent,5,m,-1.0999768743167465e-07,5,5,-0.0009166473952639554,one 20 ms interval at existing 6 mm/s descent cap
+total_time,1,s,-0.012374559367042792,1,1,-0.000916634027188355,existing total nominal transition budget
