@@ -1,0 +1,257 @@
+{
+  "utc": "2026-10-18T23:12:58.705235+00:00",
+  "scope": "Preserve completed522/523 preparation; last SEALED closure521 remains unchanged.",
+  "preparation_only": true,
+  "new_closure": false,
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_521.json",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_521.json",
+      "files": 11532,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_521.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 11572,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_evidence_preservation_523.json",
+  "manifest_sha256": "f1b10b830f2c2113d3519eabeb52c06729770c170d238d01bd9cd51c323778b8",
+  "workers": [],
+  "actual_exits": {
+    "torque_projection_compile_exit_522.json": {
+      "actual_exit": 0,
+      "tool_chunk": "d078d0",
+      "utc": "2026-10-18T23:08:07.763357+00:00"
+    },
+    "torque_projection_freeze_exit_522.json": {
+      "actual_exit": 0,
+      "tool_chunk": "47b629",
+      "session_id": 25428,
+      "utc": "2026-10-18T23:08:34.113518+00:00"
+    },
+    "torque_projection_preparation_exit_522.json": {
+      "actual_exit": 0,
+      "tool_chunk": "cca1de",
+      "session_id": 49013,
+      "utc": "2026-10-18T23:09:04.583939+00:00"
+    },
+    "torque_projection_audit_exit_523.json": {
+      "actual_exit": 0,
+      "tool_chunk": "2d8e78",
+      "session_id": 35344,
+      "utc": "2026-10-18T23:10:20.055541+00:00"
+    }
+  },
+  "preparation": {
+    "utc": "2026-10-18T23:08:45.530071+00:00",
+    "passed": true,
+    "specification": {
+      "scope": "NEW exact Fourier-Motzkin existential projection of21840 native auxiliary TORQUE increments, not physical torque controls or a new basis. Preparation only.",
+      "source": "Immutable516 original-coordinate representative matrices and517 exact REAL-system implication proof, inherited after hashes. Full490 remains mandatory future witness check. No504 transform,old quotient grouping/proof,model/root/AD/LP or finite map is repeated.",
+      "coordinates": "Each1365nonfixed state has16 auxiliary torque outputs. Delete only their21840 LP columns, retaining56950 original direction coordinates plus epigraph/eta. ActualX,commands,COM,loads,gaps,all physical controls remain. Sourceactual472 and490canonicalauxiliary unchanged.",
+      "structure": "Verify EVERY source row has at most ONE eliminated torque coordinate; eliminated columns have zero objective, no equality occurrence and no finite direct variable bound. All their finite limits remain source inequality rows. Each column has nonempty positive and negative incidence. No numerical threshold.",
+      "derivation": "For a negative row aL*x+rL*y<=bL and positive row aU*x+rU*y<=bU, multiply the former by aU>0 and latter by -aL>0. The sum eliminates x exactly: (aU*rL-aL*rU)*y<=aU*bL-aL*bU. Retain EVERY lower/upper pair. Rows with no eliminated variable are copied. Because no source row couples eliminated variables, all such pair inequalities are necessary and sufficient for simultaneous real interval lifts. This is variable elimination, not another cut queue or coordinate rename.",
+      "proof": "For fixed retained y, each source negative row gives a lower endpoint and each positive row an upper endpoint. All pair rows hold iff max(lower)<=min(upper). Choosing any member reconstructs each auxiliary. This preserves BOTH signs and unit scales of torque consistency existentially, not by deleting mechanics criteria. Commands and all other consistency remain explicit. All original criteria are explicit, projected, or inherited exact implications.",
+      "exact": "All source binary64 coefficients/RHS are exact Fractions. Products and sums are exact. Only EXACT zero coefficients cancel. A constant nonnegative-RHS pair is tautological. A pair implied by unchanged retained VARIABLE bounds is proved by its exact maximum over those bounds. Every other pair, including contradictions, is kept; no duplicate/proportional regrouping.",
+      "storage": "Each generated nontrivial pair receives a positive power-of-two scale bringing its largest coefficient/RHS magnitude to(0.5,1]. Scale is exact; each resulting matrix coefficient/RHS rounds ONCE tobinary64. Nonzero-to-zero underflow or nonfinite output rejects. Pair provenance and scale permit independent exact reconstruction. Copied source rows are unchanged. This is exact-real projection with a rounded numerical representation, NOT bitwise equivalence of floating LPs or a changed physical/LP tolerance.",
+      "reconstruction": "A future reduced solver vector keeps every retained coordinate unchanged. Eliminated auxiliary directions would be reconstructed from EXACT original source lower/upper endpoint intersections, with rounding explicitly recorded and exhaustive FULL490 inequality/equality/bound checking at unchanged1e-7. Empty intersections reject. A real singleton need not contain any binary64 number; this limitation is explicit. No clipping or repair of solver-retained values; no claim of a universally exact binary64 lift. Full original intervaleta>0 and immutable490finiteencoding remain separate before any actual mechanics.",
+      "nonlinear": "Auxiliary torque is not realized torque. The eventual full original direction must participate in SAME modeled merit/prediction and finite encoded delta; actual newX needs fresh mechanics/J. Allactualsignednormal/hover/kinematic/geometry/filter/runtime/physical/PPO gates remain. No15-root postprocessing or force-only construction.",
+      "reference": "Primary and witness are SAVED assembly systems only. Witness .09895564659603738 is illustrative, not a solved ceiling. Any changed full LP requires new incidence/projection/proof. No run wrapper,budget,solverperformance or candidate is established.",
+      "fixtures": "Two NEW small existential-projection arithmetic examples: feasible/empty interval distinction and non-binary64 real singleton1/3. Not full-coordinate finite maps,model/derivative/old quotient fixtures or candidate seeds.",
+      "lp_calls": 0,
+      "model_calls": 0,
+      "root_calls": 0,
+      "finite_maps": 0,
+      "new_actual_path": false,
+      "physical_admission": false
+    },
+    "systems": {
+      "primary": {
+        "source_shape": [
+          452522,
+          78791
+        ],
+        "source_nnz": 2235285,
+        "shape": [
+          408842,
+          56951
+        ],
+        "nnz": 2147925,
+        "eliminated_columns": 21840,
+        "copied_rows": 365162,
+        "pair_rows": 87360,
+        "kept_pairs": 43680,
+        "constant_tautologies": 21840,
+        "bound_implied_pairs": 21840,
+        "generated_coefficients": 487890
+      },
+      "witness": {
+        "source_shape": [
+          618101,
+          78791
+        ],
+        "source_nnz": 2380700,
+        "shape": [
+          577755,
+          56951
+        ],
+        "nnz": 2697204,
+        "eliminated_columns": 21840,
+        "copied_rows": 487061,
+        "pair_rows": 196560,
+        "kept_pairs": 90694,
+        "constant_tautologies": 43680,
+        "bound_implied_pairs": 62186,
+        "generated_coefficients": 935434
+      }
+    },
+    "new_small_arithmetic_examples": 2,
+    "inherited517_proof_not_repeated": true,
+    "new_actual_path": false,
+    "lp_calls": 0,
+    "model_calls": 0,
+    "finite_maps": 0,
+    "physical_admission": false
+  },
+  "independent_audit": {
+    "utc": "2026-10-18T23:09:19.713157+00:00",
+    "passed": true,
+    "arithmetic_only": true,
+    "systems": {
+      "primary": {
+        "pairs_verified": 87360,
+        "generated_coefficients_verified": 487890,
+        "kept_pairs": 43680,
+        "constant_tautologies": 21840,
+        "variable_bound_implications": 21840,
+        "matrix_rhs_copy_error": 0,
+        "rounded_exact_pair_error": 0,
+        "shape": [
+          408842,
+          56951
+        ],
+        "nnz": 2147925,
+        "source_quotient_proof_inherited_not_repeated": true
+      },
+      "witness": {
+        "pairs_verified": 196560,
+        "generated_coefficients_verified": 935434,
+        "kept_pairs": 90694,
+        "constant_tautologies": 43680,
+        "variable_bound_implications": 62186,
+        "matrix_rhs_copy_error": 0,
+        "rounded_exact_pair_error": 0,
+        "shape": [
+          577755,
+          56951
+        ],
+        "nnz": 2697204,
+        "source_quotient_proof_inherited_not_repeated": true
+      }
+    },
+    "new_examples_verified": 2,
+    "original_variables_removed": 21840,
+    "remaining_direction_coordinates": 56950,
+    "exact_real_projection_proved": true,
+    "rounded_lp_exact_equivalence_claimed": false,
+    "binary64_lift_always_exists": false,
+    "prior517_proof_repeated": false,
+    "model_calls": 0,
+    "lp_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "new_actual_path": false,
+    "physical_admission": false
+  },
+  "local_verification": {
+    "utc": "2026-10-18T23:10:46.332918+00:00",
+    "all_hashes_verified": true,
+    "manifest_entries": {
+      "torque_projection_preparation_522": 12,
+      "torque_projection_audit_523": 3
+    },
+    "total_entries": 15,
+    "new_html_report": false,
+    "new_video": false,
+    "arithmetic_only": true
+  },
+  "saved_scope": {
+    "utc": "2026-10-18T23:10:20.055676+00:00",
+    "saved_only": true,
+    "systems": {
+      "primary": {
+        "source_shape": [
+          452522,
+          78791
+        ],
+        "source_nnz": 2235285,
+        "shape": [
+          408842,
+          56951
+        ],
+        "nnz": 2147925,
+        "eliminated_columns": 21840,
+        "copied_rows": 365162,
+        "pair_rows": 87360,
+        "kept_pairs": 43680,
+        "constant_tautologies": 21840,
+        "bound_implied_pairs": 21840,
+        "generated_coefficients": 487890
+      },
+      "witness": {
+        "source_shape": [
+          618101,
+          78791
+        ],
+        "source_nnz": 2380700,
+        "shape": [
+          577755,
+          56951
+        ],
+        "nnz": 2697204,
+        "eliminated_columns": 21840,
+        "copied_rows": 487061,
+        "pair_rows": 196560,
+        "kept_pairs": 90694,
+        "constant_tautologies": 43680,
+        "bound_implied_pairs": 62186,
+        "generated_coefficients": 935434
+      }
+    },
+    "total_pair_checks": 283920,
+    "total_generated_coefficients": 1423324,
+    "source_direction_coordinates": 78790,
+    "remaining_direction_coordinates": 56950,
+    "eliminated_auxiliary_torque_coordinates": 21840,
+    "rounding_scope": "Exact pair coefficients and RHS round once after positive dyadic scaling; rounded LP is not claimed exactly equivalent. Full original witness and exact interval certification remain mandatory.",
+    "binary64_lift_obstruction": "The new local singleton1/3 has no exact binary64 representation; no universal exact lift is claimed.",
+    "performance_scope": "Primary nonzeros decrease2235285to2147925; witness nonzeros INCREASE2380700to2697204. No solver performance or feasibility evidence.",
+    "lp_calls": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physical_admission": false
+  },
+  "old_grouping_or_proof_repeated": false,
+  "new_solver_exists": false,
+  "new_complete_path": false,
+  "model_calls": 0,
+  "root_calls": 0,
+  "lp_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}
