@@ -1,0 +1,57 @@
+{
+  "kind": "preflight_control_revision_before_leaning_study",
+  "original_reference": "leaning_reference_validation_01",
+  "original_smoke": "leaning_optimizer_smoke_01",
+  "original_evaluation": "leaning_smoke_evaluation_01",
+  "original_successes": 12,
+  "physical_failures": 0,
+  "failed_cases": [
+    {
+      "case": 10,
+      "stage": 5
+    },
+    {
+      "case": 13,
+      "stage": 6
+    }
+  ],
+  "reason": "Extra knee bend unnecessarily reconfigured already-supported stages5/6; revised reference applies it only to starts0\u20134.",
+  "new_sources": [
+    "scripts/run_split_leaning.py",
+    "scripts/verify_split_leaning.py",
+    "scripts/run_split_leaning_preflight.py",
+    "scripts/run_split_leaning_study.py"
+  ],
+  "no_original_output_overwritten": true,
+  "no_physical_label_or_reward_change": true,
+  "no_sitting_study_change": true,
+  "extra_development_smoke_transitions": 2048,
+  "preserved_hashes": {
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/geometry.json": "8cb2417a674757192277bf36f5e4a115b62cd34197b708daa28c5eee16d945c1",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/results.json": "d6e22fe9855faf083a098bfc3ee51cb7a6e160014e8deaca03976a89a16b18e8",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/final.pt": "78f6df55c9a77e0f3c6f4e4687a24ca67552fb4fbd3576605f489ee56bad4b90",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/progress.json": "5b4f44dc1360c7d41b64e9b615191a0f546e5e5fe3aa3c857be9191fa977890e",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/startup.npz": "09daf4c5fc292dc6c03de7a4d69a2c887c67a2a44bca49b5d1e3d72b3f1ac4a8",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/initial.pt": "145fc7b5630e1d8779e0e3c83f5c8971a75d18cf8076d37e3e9339e2156ecf6a",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/verification.json": "4a92eb23005d77700a491db9f778d72f2fc02b1b19674846787a823ff66a8b9c",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/manifest.json": "1b9d8fd87702b51abe10625952ae3e7385d5a985220719484cab8aecb74830c5",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/sensor_audit.json": "aa6cab5d8f03f2c5818d7d9617cde32e7fad634af588f40bf4092664c8d17e31",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/startup_validation.json": "39f2868ddb54d3ec3da67923dcfc703903e8b63583047078471097d105eaca3f",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/first_failures.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/model_1.pt": "97607d48cf59b5f4cce15c9528af6f1dddcde6660c59f9d1321c25b3389b7cf5",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/model_0.pt": "faba2fec74ecfd3273148dcbac26c97989cec77b817b294dd0fad1b643cc0ab6",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/events.out.tfevents.1791964281.kfuHomeUbuntu.455812.0": "51cc50eaeab989ad198d3d1c234ec85b63ef333d05979d2e7e3852a1a80a3265",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_optimizer_smoke_01/static_inertial_model.json": "ce5865e3ceb71125987bec8bf84738985366d815005d5a470ad71a85bad22af4",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_smoke_evaluation_01/geometry.json": "f56e45e570341aa3dd3f07b785f01a6063b1f77c7dc3f08d5a8736ac4cc53bf5",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_smoke_evaluation_01/results.json": "a1a271255f00e1f35833b736e6c20f5e3813e3fa86d78a016dc35988a3e414c2",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_smoke_evaluation_01/startup.npz": "ff669b7ab1c7fe3818b219b2c56115d1c5bb8850e21a85c82003326afcf8b7f0",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_smoke_evaluation_01/trace.npz": "01a50c854f3fcdeb40ed0fdca6e83accea19d623d03f4a2e1fee633554f8b201",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_smoke_evaluation_01/initial.pt": "c3e73f1ea1ad0909d3010d2caea2afa74f1ff7712c61e90740a1cc8dbf012ca4",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_smoke_evaluation_01/episodes.jsonl": "502311dd78efb4688e5022f98401e530bdd9e91ffeb48bd49e2d0be6c0b1d78b",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_smoke_evaluation_01/manifest.json": "2190e467eaeaaa2e20335dcb08d16f8ad7b4036ab0d26f1a174b19a5ea3fa482",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_smoke_evaluation_01/sensor_audit.json": "7390698c75d4378dba31808e569a1c7bb1a21596119dc7b9e55a41cfe1ba698a",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_smoke_evaluation_01/startup_validation.json": "77d914742360a495ac89717821a35b46f950b9e7452c908814cfaee4f79b3f94",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_smoke_evaluation_01/first_failures.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/leaning_smoke_evaluation_01/static_inertial_model.json": "ce5865e3ceb71125987bec8bf84738985366d815005d5a470ad71a85bad22af4"
+  }
+}

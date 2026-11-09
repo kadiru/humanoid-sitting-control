@@ -1,0 +1,59 @@
+{
+  "phase": "complete",
+  "utc": "2026-10-14T08:18:57.253958+00:00",
+  "history": [
+    {
+      "stage": 4,
+      "block": 0,
+      "train": "train_55217_block0_stage4",
+      "budget": {
+        "updates": 32,
+        "transitions": 32768,
+        "active": 32000,
+        "warmup": 768
+      },
+      "checkpoint": "/data/humanoid-sitting-perception/split_support_curriculum_02/ppo_01/sitting/train_55217_block0_stage4/final.pt"
+    },
+    {
+      "stage": 2,
+      "block": 1,
+      "train": "train_55217_block1_stage2",
+      "budget": {
+        "updates": 32,
+        "transitions": 32768,
+        "active": 32000,
+        "warmup": 768
+      },
+      "checkpoint": "/data/humanoid-sitting-perception/split_support_curriculum_02/ppo_01/sitting/train_55217_block1_stage2/final.pt"
+    },
+    {
+      "stage": 0,
+      "block": 2,
+      "train": "train_55217_block2_stage0",
+      "budget": {
+        "updates": 32,
+        "transitions": 32768,
+        "active": 32000,
+        "warmup": 768
+      },
+      "checkpoint": "/data/humanoid-sitting-perception/split_support_curriculum_02/ppo_01/sitting/train_55217_block2_stage0/final.pt"
+    },
+    {
+      "stage": 0,
+      "block": 3,
+      "train": "train_55217_block3_stage0",
+      "budget": {
+        "updates": 32,
+        "transitions": 32768,
+        "active": 32000,
+        "warmup": 768
+      },
+      "checkpoint": "/data/humanoid-sitting-perception/split_support_curriculum_02/ppo_01/sitting/train_55217_block3_stage0/final.pt"
+    }
+  ],
+  "updates": 128,
+  "transitions": 131072,
+  "active_transitions": 128000,
+  "warmup_transitions": 3072,
+  "last_checkpoint": "/data/humanoid-sitting-perception/split_support_curriculum_02/ppo_01/sitting/train_55217_block3_stage0/final.pt"
+}
