@@ -1,0 +1,11 @@
+{
+  "reason": "Stopped after initial two evaluations and before main training: camera transforms stale immediately after reset",
+  "main_training_started": false,
+  "excluded_debug_runs": [
+    "support_rl_independent_fresh_zero_03",
+    "support_rl_independent_fresh_prior_03"
+  ],
+  "corrected_by": "Hold only the reset robot for one ordinary control tick before camera admission; no extra global physics step",
+  "replacement_launcher": "scripts/run_support_rl_independent_05.sh",
+  "note": "Launcher EXIT trap returned 0 on termination; this does not indicate a completed experiment. Finalizer 03 failed on missing main results."
+}
