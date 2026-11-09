@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-17T19:59:23.954344+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_active_physics_ticks": 0,
+  "new_initial_settling_ticks": 0,
+  "new_optimizer_updates": 0,
+  "new_full20s_trials": 0,
+  "new_diagnostic_prefixes": 0,
+  "holdout_started": false,
+  "physical_admission_passed": false,
+  "best_verified_controller": "current_retention_09",
+  "best_development_clean": 64,
+  "latest_physical_candidate": "roll_feedback_probe_273",
+  "prior_recheck": {
+    "utc": "2026-10-17T19:59:23.954344+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "completed_probes_preservation_293.json",
+        "checked": 6230,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "supplemental_preservation_293.json",
+        "checked": 3,
+        "passed": true,
+        "mismatches": []
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_300.json",
+  "protected_completed_files": 6282,
+  "manifest_sha256": "6b2413608950abc9603e998a44ee64124e11f0d305084560f955ab78f5b4d28d",
+  "physical_workers_running": false,
+  "model_workers_running": false,
+  "audit_workers_running": false,
+  "report": "progress_report_299",
+  "video": "all_attempts_video_276/all_attempts.mp4",
+  "video_unchanged": true,
+  "local_review": {
+    "utc": "2026-10-17T19:53:27.700430+00:00",
+    "local_hashes_verified": true,
+    "manifests": [
+      {
+        "folder": "momentum_balance_294",
+        "entries": 2,
+        "passed": true
+      },
+      {
+        "folder": "momentum_audit_295",
+        "entries": 1,
+        "passed": true
+      },
+      {
+        "folder": "ankle_impulse_296",
+        "entries": 2,
+        "passed": true
+      },
+      {
+        "folder": "ankle_impulse_audit_297",
+        "entries": 1,
+        "passed": true
+      },
+      {
+        "folder": "drive_context_298",
+        "entries": 7,
+        "passed": true
+      },
+      {
+        "folder": "progress_report_299",
+        "entries": 9,
+        "passed": true
+      }
+    ],
+    "total_original_entries": 22,
+    "plots_visually_inspected": true,
+    "browser_visually_inspected": true,
+    "embedded_video_loaded": true,
+    "report_url": "http://127.0.0.1:8807/progress_report_299/findings.html",
+    "inspected": [
+      "momentum_residuals.png",
+      "ankle_boundary.png",
+      "scope and coverage",
+      "selected ankle table",
+      "all192 momentum and96 ankle case-window tables including unavailable rows",
+      "physical/effort status and unchanged video intro"
+    ],
+    "video_rerendered": false,
+    "physics_ticks": 0,
+    "repair_complete": false
+  },
+  "mutable_status_aliases_reconciled_to_existing_physical_273": true,
+  "next": "# Momentum and ankle-boundary checks294\u2013298 audited; physical repair unfinished\n\nContinue the authorized repair in THIS chat via Mac SSH kfuUbuntu, /home/kadir/humanoid-sitting; never another coding agent. Python /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python. Read protocol/status, study status.json and closure_record_300.json. Check actual workers before launch. Do not repeat completed294\u2013299, physical273 or older diagnostics. Stay quiet during ordinary progress; notify meaningful failure/completion/required input. No promotion. The user explicitly renewed continuation after upgrading their subscription.\n\nBest verified current_retention_09 remains64/72clean,70stable,8slipping,2housing. All64 protected; all8 unresolved. MainPPO63111/63117 and fresh holdout UNSTARTED. New294\u2013299 are OFFLINE: zero physics/settling/optimizer/full20s/video motion. Latestphysical273 remains rejected; selected36/+15 rows0/1 hover withZEROlegal load/hold/quiet release. No72retention.\n\nNEW momentum_balance_294 uses verified259 link/contact records:1001private5ms states8\u201313s,24cases,44bodies,24000case intervals. Linear momentum sums frozenmass\u00d7recordedCOMvelocity; angular uses authored290rotationaltensors plus orbital momentum about a fixed per-case origin. External impulses use separately recorded normal/friction application points via audited260wrenches, plus configuredgravity0,0,\u22129.81. Joint efforts cancel; approximatePD telemetry is NOT used as external force. Poststepqueryk applies to(k\u22121,k];first8s query excluded. Fixed5/20/100/1000ms windows, no fitted lag/gravity/inertia/offset. Gravitymoment trapezoidal; endpoint sampling difference separately saved.\n\n17144case intervals have observed floor-only coverage: enclosing20ms all non-foot normal histories EXACTZERO and wrongresultantZERO. Sourcehistory4/lazyFalse spans4\u00d75ms;6856intervals have missing externalmoments and are excluded from closed-balance summaries, not set tozero. Net-resultant cancellation/unrecordedforces remain limitations. Selected0/1coveredthroughout. At11\u201313s their5ms force-residualRMS1.2095e\u22125/1.2091e\u22125N;momentRMS.00117168/.00117844Nm. At1s force2.79e\u22126/2.71e\u22126N,moment.00044849/.00046942Nm. Supports recorded momentum/contact accounting under assumptions; doesNOTmakeqd equalposeFD,provebad sensors,validate290response orwaivequietguards.\n\nIndependent momentum_audit_295 passes24024whole-body/1057056body states,24000intervals,allavailable fixed-window stats,sourcehashes andorigintranslationcovariance. Quaternion-vector/bodywise assembly andcumulativeimpulses differfrom294. Maxarithmeticerror5.5138116294983774e\u221212under1e\u221210 arithmetic tolerance. Physical_admissionFALSE.\n\nNEW ankle_impulse_296 independently scoped terminal-foot boundary inference:48000foot-case intervals, no descendant bodies. Fixed-origin foot momentum yields equivalent boundaryforce/couple, shifted to midpointjointorigin and projected onto normalizedmean axis. Selectedlate11\u201313s inferredrollmedian left\u2212.013562/\u2212.013984Nm,right\u2212.005852/\u2212.006056Nm;approxPDtelemetry left\u2212.991258/\u2212.994742Nm,right\u2212.927191/\u2212.927270Nm. DiscrepancyRMS.98934/.99245/.92074/.92084Nm. Separately reported armature\u00d7\u0394rawqd/5ms RMS.01158/.01128/.00586/.00601Nm is descriptive, NOTasserted physicalrotor model/correction. Boundaryinference is NOT measuredmotoreffort. Finiteintervaljointmotion, authoredinertia, armature/constraint/solverimpulsetiming remain. No compensation/gainscale/singlecauseclaim.\n\nIndependent ankle_impulse_audit_297 checksall48000 intervals through distinct moving-COM discrete product-rule identity andraw-sourcequaternionrotation;912reportedstats,maxerror1.2434497875801753e\u221214 under1e\u221210arithmetic tolerance. Physical_admissionFALSE. Bothauditscomplete; no recovery or rerun required.\n\nRead-only drive_context_298 reads37preservedUSD drives andinstalledsource. Ankleauthoringforce-type100/0stiffness/damping versusrecordedconfigured160/4 isEXPECTED initializationdifference, NOTfailedsetterproof. ActuatorCollection resolvesproperties; controlforwardsimplicitgains; articulationwritersupdatepropertybuffers andcallPhysXsetters inbackendorder. Recorded246/259metadata readsinternalpropertybuffers, NOT independentpostconfigurationbackendreadback. Directlivegain/friction/drive-type andincomingjointforce remainuncaptured. NVIDIAprimarycontext https://nvidia-omniverse.github.io/PhysX/physx/5.8.0/docs/Articulations.html documentsimplicitendstepdrives andincomingjointforce replacingdeprecatedjointsolverforce. Contextdoesnotcertify259effectiveruntime.\n\nNEXT: beforechoosingnewboundedcontact/controlrevision, resolvebackenddriveproperties/incominganklejointwrench correspondence. A separatelyscopedpassiverecorder mayreadincomingjointwrench andindependentbackendgain/friction readback. FirstinspectactualAPIframes/order/availability; proveprivatestorage/no publiccachemutation withCPU/GPUfixtures, preservecontrols andexistingquery behavior, freezeaccounting andsourcehashes; onlythen bounded diagnostic withEXACTGLOBALreplayrequired. DoNOTrepeatunchanged259/246/198 orassumeincomingforceisdirectmotortorque. DoNOTuse deprecatedjointsolverforce asgroundtruth. Noautomaticphysicslaunch from294\u2013298arithmetic. Preserve164balance,207v2pitchbias,175/130quiet/loadguards. No gain/Ki/arm/lean/rate sweeps,solverflagchanges,truthoffset/runtimefeedback,FDqdsubstitution,footdrag/teleport orendpoint-onlylaunch. Otherthreecentered227geometries stillfail3mmclearance; all8removed+all64retained across72matchedfull20s mandatorybeforePPO.\n\nLatestlocalreport progress_report_299/findings.html andallfivecalculation/audit/contextfolderscopied/hashverified:6manifests22originalentries. Bothplots,HTMLcoverage/selected/independentaudit/limits/all192momentum and96anklecase-window tables(includingunavailable rows),physicaleffortstatusandunchangedvideo introvisuallyinspected. URL http://127.0.0.1:8807/progress_report_299/findings.html . No reportrecovery needed. InterimOFFLINEevidence,notrepair/PPO/unseencompletion. Allsources/resultsremainpreserved.\n\nVideo276 remainsCURRENTunchanged /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/all_attempts_video_276/all_attempts.mp4,58.4s4K15fpsH264,43recordedsources864full20strials503clean361failed,168prefixes96abortednomotionattemptsdisclosed;independent2771032records612firstevents.47panels8x6grid,recordedXYZW LINKschematic+modelheadCOM,notcamerafootage. No newmotion294\u2013299:donotrerenderunchangedvideo. Updatefullcoverageafterfuturephysical/PPO,omitnofailure.\n\nNo neweffortresult.273vsbestnormal14commoncompleteclean torque\u00b2whole20+.0126472%,final10+.0264487%,final5+.0794278%;strictbothONLY1whole20\u2212.00504478%,final5\u2212.0247301%.09vs61111commoncleanexact;vs62111@8old20whole20+4.38%,final5+25.45%. Unselected-successdifferences arenotrepair/savings. ApproximplicitPDtelemetryNOTsolver/hardwaremotor/energy/globaloptimum. No oldreward/resultrewrites orhover/prefixfragmentsavings.\n\nPhysical273still20stable14clean8slip2hiphousing/physical0illegal19warnings,selectedzeroquiet/load. UnselectedexactgateFAILED body.769615mm,q.000864387rad,command.000684381,no waiver. All64retention+all8removal beforePPO. Quiet25currentconsecutive samples movingrawqd<=.05,pitcherror<=.5deg,gyro-y<=.02,freshgeo+130guards before12mmhoverrelease,normaldescent<=.006m/s. .03desiredmargin/.1filter/.15globalrate/14fingersunchanged.269roll.01capinsideabs(pitch)+abs(roll)<=.06,feedback.0375+nominal.1125;207pitchpriority;parent59117@15selected/11\u201315elsewhere;early61111omittedonlyisolatingprobes. Earlierstudies/best09read-only;holdoutclosed;criteria/materialsunchanged.\n\nAutomationACTIVE;taskunfinished. PauseONLYafteractualrepair,newPPOcomparison andupdatedcomplete subminutevideo delivered. Offlineanalysis/reportcompletion isNOTtaskcompletion.\n"
+}
