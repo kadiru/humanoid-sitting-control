@@ -1,0 +1,165 @@
+{
+  "utc": "2026-10-18T09:24:25.836886+00:00",
+  "passed": true,
+  "scope": "Independent complete-path arithmetic audit424 with hard static-command rows and direct nonlinear constraints. Rebuild geometry/virtual work/original rows, the continuous-window envelope and all675 idealclock samples. Independently replay the final budget-domain epigraph, original-coordinate bounds, variable event budgets, fractional relaxation labels and structural domain; report failed gates without assuming success. No optimization or projection. Arithmetic pass is not candidate admission.",
+  "geometry": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/budget_path_424/results.json",
+      "parameters": [
+        0.13249248997109972,
+        0.4351349021283094,
+        -0.1883883483030849,
+        0.023619600000000004
+      ],
+      "length_m": 0.13999999999993848,
+      "knots": 115,
+      "max_replay_error": 2.0741358282907776e-16,
+      "failed_knots": [],
+      "pose_schedule_metric_passed": false,
+      "min_clearance_mm": 3.731078343242842,
+      "max_foot_position_error_mm": 0.8411018361374456,
+      "max_foot_orientation_error_deg": 0.49854366657171784,
+      "nominal_pose_schedule_at_0_15_rad_s": 13.745907734087316,
+      "min_actual_swing_sole_height_m": 0.013000000000093437
+    }
+  ],
+  "command": {
+    "nodes": 115,
+    "max_virtual_work_error_Nm": 6.996106804990632e-09,
+    "max_equilibrium_residual": 2.5493496202955157e-14,
+    "minimum_command_margin_rad": 0.030147325214439552,
+    "maximum_effort_utilization": 0.9381877742953293,
+    "force_allocation_failures": [],
+    "model_command_passed": true,
+    "specific_command_time_s": 11.742981527060559,
+    "command_schedule_passed": true,
+    "initial_command_exact": true,
+    "all_fixed_commands_exact": true
+  },
+  "feasibility_epigraph": {
+    "slack": 4.971893759026523e-16,
+    "scaled_original_violation": 4.448343164993306e-13,
+    "all_original_rows_replayed": 19760,
+    "additional_support_rows": 524,
+    "all_window_rows": 7424,
+    "all_clock_rows": 43200,
+    "removed_contact_constant_rows": 392,
+    "removed_exact_integer_time_rows": 1,
+    "original_numerical_feasibility": true,
+    "positive_slack_is_not_admission": true,
+    "direct_nonlinear_domain_replay": {
+      "nodes": [
+        {
+          "node": 0,
+          "decision": "branched_fractional_relaxation",
+          "numerical_gate": true,
+          "strict_model_point": false,
+          "callbacks": 20
+        },
+        {
+          "node": 1,
+          "decision": "branched_fractional_relaxation",
+          "numerical_gate": true,
+          "strict_model_point": false,
+          "callbacks": 2
+        },
+        {
+          "node": 2,
+          "decision": "branched_fractional_relaxation",
+          "numerical_gate": true,
+          "strict_model_point": false,
+          "callbacks": 5
+        },
+        {
+          "node": 3,
+          "decision": "branched_fractional_relaxation",
+          "numerical_gate": true,
+          "strict_model_point": false,
+          "callbacks": 6
+        },
+        {
+          "node": 4,
+          "decision": "branched_fractional_relaxation",
+          "numerical_gate": true,
+          "strict_model_point": false,
+          "callbacks": 1
+        }
+      ],
+      "all_node_and_callback_bookkeeping_replayed": true,
+      "callback_count": 34,
+      "callbacks_not_selected": true,
+      "export_rule_verified": true,
+      "exported_node": 0,
+      "optimizer_calls": 5,
+      "maximum_nodes": 5,
+      "maximum_iterations_per_node": 30,
+      "event_budgets": [
+        92.8869427387681,
+        193.8869447423062,
+        245.73982514524425,
+        101.00000000000001,
+        16.48628737368142
+      ],
+      "mandatory_events_exactly_integer": false,
+      "all_3648_static_command_rows_hard": true,
+      "additional_coordinate_bound_rows": 1572,
+      "dependent_budget_bound_rows": 2,
+      "final_augmented_minimum": -4.44337127123428e-13,
+      "final_coordinate_margin": 0.0001886091856414529,
+      "strict_hard_passed": true,
+      "positive_load_reconstruction": 9.425620006719981e-15,
+      "endpoint_moment_error": 4.641512868497344e-14,
+      "cumulative_phase_error": 2.220446049250313e-16,
+      "posthover_increment_minimum": 5.571180131336284e-06,
+      "hover_gap_error": 7.28583859910259e-17,
+      "actual_float32_schedule": false,
+      "physical_admission": false
+    },
+    "strict_hard_rows_passed": true,
+    "window_replay_error": 3.552713678800501e-15
+  },
+  "primal": {
+    "equalities": 1,
+    "inequalities": 27708,
+    "max_equation_replay_error": 0.0,
+    "max_inequality_replay_error": 3.552713678800501e-15,
+    "max_local_replay_error": 4.163336342344337e-16,
+    "maximum_kinematic_residual": 9.156564395595979e-14,
+    "minimum_dependent_planning_bound": 8.199196826819133e-06,
+    "numerical_constraints_passed": true,
+    "minimum_inequality": -1.7763568394002505e-15
+  },
+  "timing": {
+    "event_budgets": [
+      92.8869427387681,
+      193.8869447423062,
+      245.73982514524425,
+      101.00000000000001,
+      16.48628737368142
+    ],
+    "clock_replay_error": 7.105427357601002e-15,
+    "clock_overlap_error": 4.393187202911264e-16,
+    "clock_original_rate_minimum": 5.960464470773641e-08,
+    "clock_original_target_minimum": 4.773693986770411e-07,
+    "mandatory_events_exactly_integer": false,
+    "event_integer_error": 0.48628737368142083,
+    "movement_budget_sum": 650,
+    "minimum_synthetic_quiet_ticks": 25,
+    "integer_duration_s": null,
+    "original_minimum_inequality": -1.7763568394002505e-15,
+    "new_construction_minimum_inequality": -1.7763568394002505e-15,
+    "continuous_guarded_s": 13.500000000000002,
+    "raw_target_minimum_headroom_rad": 4.7683715800883597e-07,
+    "hover_gap_m": 0.011999999999999927,
+    "actual_float32_schedule": false,
+    "quiet_guard_exercised": false
+  },
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "physical_admission": false,
+  "repair_complete": false,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/budget_path_424/results.json": "70bd345a888d836e365b8cdff004c7ac5fafacc32b5245f41ee2b2bc0dbf6747",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_budget_path_425.py": "5fba04b5cbbfd45f2ba5293c8e0857517376c6d2c33b3510580a9fb5898cb14f"
+  }
+}
