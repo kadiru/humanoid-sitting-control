@@ -1,0 +1,140 @@
+{
+  "kind": "next_interior_diagnostic_proposal",
+  "version": 1,
+  "utc": "2026-10-20T09:34:34.255001+00:00",
+  "classification": "Source-reviewed proposal only; no new point evaluation, assembly, optimizer, finite certificate, decoding or mechanics execution",
+  "authorization": {
+    "execution_approved": false,
+    "prior_single_diagnostic_exception_consumed": true,
+    "requires_new_review": "A new600-second numerical allowance is outside the prior one-run approval and inherited45-second limit."
+  },
+  "question": "Can the accepted primary direction lead to a full-original interior direction with a strictly positive exact finite-encoding margin?",
+  "recommendation": "One new cold full-original interior solve at the actual modeled ceiling, followed by all original numerical checks and one exact unscaled interval-margin certificate. Stop before decoding, nonlinear mechanics, runtime or physics.",
+  "new_evidence_used": {
+    "path": "/data/humanoid-sitting-perception/low_seat_contact_01/limits_diagnostic_20261020_v1",
+    "summary_sha256": "5c05524a5f40bd90fe497c40fc53aa529a1b761e07b0fb93a4b00026db1ea72d",
+    "manifest_sha256": "6aaee5f547c57eeb0f37974a0d7527d4809c65c2ec9d21dc23df60195a795391",
+    "accepted_primary_path": "/data/humanoid-sitting-perception/low_seat_contact_01/limits_diagnostic_20261020_v1/primary/lp/witness.npy",
+    "accepted_primary_sha256": "7715ec610c7769a1e2ba5ba2d2b0955f0d073317231fe74136c9447608f00d4d",
+    "status": "All nine checks and independent audit passed. This is a newly accepted primary, not any old internal/rejected vector."
+  },
+  "source_assessment": {
+    "initial_mu_saved": 0.19791129319207476,
+    "theta_not_computed": true,
+    "actual_ceiling_not_computed": true,
+    "old_illustrative_ceiling": 0.09895564659603738,
+    "old_illustrative_ceiling_must_not_be_assumed_actual": true,
+    "full_original_interior_shape": [
+      837063,
+      78791
+    ],
+    "coefficient_slots": 2738418,
+    "matrix_compressed_file_bytes": 15374681,
+    "dimension_evidence": "491 saved independent_audit assembly metadata; NPZ data/indices/indptr headers read only, no coefficient arithmetic",
+    "source_functions": [
+      "492.modeled_phi",
+      "490.assemble interior branch",
+      "490.certificate",
+      "599 independent matrix/interval/return checks"
+    ],
+    "original_598_prove_full_cannot_be_called_unchanged": "It would reconstruct and re-prove unchanged initial intervals/context. Inherit certified initial context/intervals by identity and independently check only the new actual ceiling/RHS associations; retain all original rows."
+  },
+  "equations": {
+    "primary_input": "p is the unchanged accepted78791-vector; d=p[:-1], scalar p[-1] already0. Use saved524 initial A,C,r,h,guard and original446 keep/soft associations.",
+    "modeled_merit": "theta=max(0,max(-(r+A*d)[keep&soft]),max(abs(h+C*d))). Require finite theta<mu; do not infer theta=0 from primary epigraph0. No LP if this gate fails.",
+    "ceiling": "c=(mu+theta)/2 evaluated in the frozen original operation order. New actual numeric c is recorded before the cold solve.",
+    "interior": "Minimize -eta over78790 original direction coordinates and0<=eta<=1/2. Retain ALL original hard/rate/consistency/bounds/closed interval rows; both consistency signs have ceiling c. Require H*d/width+eta<=upper/width and -H*d/width+eta<=-lower/width for all92267 intervals. Original1366 zero equality rows remain. No594/596 zero-face condensation applies.",
+    "input_construction": "At unchanged INITIAL state/trust, the full490 interior matrix, equality, cost and bounds are independent of c. Inherit their certified unchanged coefficient blocks by identity. Build a separate full-original input with fresh RHS first331495 r[keep]-guard[keep]+soft[keep]*c, next68250 -h+c, next68250 h+c. Retain remaining certified closed/strict interval RHS bitwise. Never obtain new RHS by subtracting an old rounded ceiling term from an old rounded RHS.",
+    "source_proof_boundary": "491 certified both complete original matrices at INITIAL;525 certified saved initial context/intervals. Before launch establish exact matching state/J/scales/trust/row IDs/source inputs and template coefficients. This reuse is valid only at that unchanged initial state; no changed-state inference.",
+    "numerical_return": "Require status0/success/finite full78791 binary64 vector unchanged; no scalar fixing, clipping or polishing. Backend dual sign conventions and full-original primal/equality/bound/stationarity/absolute-gap/nonnegative-dual gates stay<=1e-9 inside unchanged1e-7 outer bound.",
+    "finite_certificate": "For the full unscaled returned direction d, evaluate every H row exactly using binary64 integer ratios. eta_cert=min(1/2,min_i((H*d-lower_i)/width_i,(upper_i-H*d)/width_i)). Require eta_cert>0 exactly. No rounding this value to establish positivity; retain all207U/gap/drop/endpoint/box/trust reserves.",
+    "stopping_point": "No finite decode, dyadic trial, nonlinear model, changed Jacobian or motion is produced by this proposal. A successful certificate makes the next finite-motion construction concrete, but is not model or physical admission."
+  },
+  "input_associations": {
+    "initial_context": {
+      "/data/humanoid-sitting-perception/low_seat_contact_01/torque_path_524/major_00/C.npz": "8fca0c79cbe6e5b2a1267d47e47982e76e1358e67a0ab3136c48aef633740d7e",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/torque_path_524/major_00/H.npz": "bba75bc53c8c964380e9ab68335a1da13bd3b793c24ddab1f94ddc9fb28111e9",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/torque_path_524/major_00/intervals.json": "dfdc75580d3704a1d2708fe947cce99848d12a9534c3a9e5a669bd0f422b146f",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/torque_path_524/major_00/A.npz": "7cfc8fcb32cff55c6a0cc6500471e931ab1f19ed63637ba8959f16c5cbefdf44",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/torque_path_524/major_00/state.npz": "f35b2009efc86202d486198832ca5b26fc489aa9d28bd24c12f7d89c223baeab"
+    },
+    "original_interior_template": {
+      "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/witness/equality.npz": "c27c5897520fe7949f33e173419fc5ad3e41a9630891dd0137bae1b849163695",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/witness/arrays.npz": "8e2e756b393c5b51fbb3ee5e275e5725cfde05f0effe56c8dd89389f1254406b",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/witness/scope.json": "3c74d417e0e7978a15b5b9db191865b1ad63ec87bbefb1751099cbe38b4116df",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/witness/matrix.npz": "fa138784825ea82b2864b1f7ca5839a90457bb8d94a1b103136587d5bbecb26a"
+    },
+    "identity_status": "Hashes are inherited manifest bindings, not a new live input freeze. Entire relevant source/input/proof identity must be checked under prelaunch cap."
+  },
+  "budget": {
+    "prelaunch_seconds": 300,
+    "numerical_total_seconds": 600,
+    "backend_absolute_deadline_from_main_entry_seconds": 300,
+    "independent_audit_seconds": 600,
+    "stage_total_max_seconds": 1500,
+    "address_space_per_worker_bytes": 42949672960,
+    "maxiter": 4096,
+    "cold_HiGHS_IPM_calls": 1,
+    "primary_repeats": 0,
+    "interior_calls": 1,
+    "finite_certificates": 1,
+    "finite_maps": 0,
+    "nonlinear_model_calls": 0,
+    "physical_trials": 0,
+    "PPO_updates": 0,
+    "holdout_trials": 0,
+    "presolve": true,
+    "solver_tolerances": 1e-09,
+    "runtime_policy": "Same installed frozen SciPy/HiGHS, no warmstart/restart/fallback. Setup/global hashes/theta/RHS/new-input certificate/backend/full numerical return/exact interval certificate all charged to600s. Backend receives only time remaining until absolute300s; external supervisor enforces deadlines. No candidate/audit accepted after cap or nonzero exit."
+  },
+  "cost_and_audit": {
+    "full_rows": 837063,
+    "full_columns": 78791,
+    "matrix_coefficient_slots": 2738418,
+    "new_ceiling_rhs_entries": 467995,
+    "exact_interval_rows": 92267,
+    "coefficient_proofs_and_initial_interval_construction": "Inherited by verified identity, not replayed",
+    "new_point_and_rhs_arithmetic": "Producer and independent auditor each evaluate the new accepted-primary modeled merit, actual ceiling associations, complete new RHS/input, full-original numerical return and every exact interval row. Independent implementation imports no producer/optimizer. Every returned coordinate preserved; numerical objective eta and exact eta_cert distinguished.",
+    "finite_cost_limit": "No claimed guaranteed solve/validation time, peakRSS prediction or speedup. Exact rational bit growth, imports/hashing/copies/output and all acceptance arithmetic are charged;40GiBAS and hard clocks stop incomplete runs. Complete nnz/bit/storage accounting and executable source/auditor freeze remain prelaunch obligations.",
+    "evidence_preservation": "New unique output directory, immutable accepted diagnostic retained, actual exits/times/overshoot/peakRSS and all partial logs saved; no automatic retry."
+  },
+  "outcomes": {
+    "accepted": "Full-original numerical checks plus strictly positive exact unscaled eta certificate and independent audit complete inside caps. Report a certified finite-margin direction only; prepare finite encoding/model assessment separately.",
+    "eligibility_fail": "theta absent/nonfinite or not less than mu: no LP; stop and preserve result.",
+    "solver_fail_or_timeout": "No admissible direction; no global infeasibility inference or automatic extension.",
+    "numerical_or_exact_margin_fail": "Do not map/repair/use the returned direction. Exact margin failure is distinct from optimizer success.",
+    "audit_incomplete_or_failed": "Candidate unaccepted; no retry or partial certificate promotion."
+  },
+  "remaining_before_any_launch": [
+    "Prepare isolated producer/supervisor/auditor sources for this one interior step, with actual point/RHS association and clock instrumentation.",
+    "Compile and record actual exits; finish independent source/input/resource audit freeze; check current workers and preserve originals.",
+    "Obtain approval for this separate time-budget exception. The completed primary diagnostic cannot authorize it implicitly."
+  ],
+  "latest_readonly_check": {
+    "tool": "2ff4f9",
+    "actual_exit": 0,
+    "utc": "2026-10-20T09:30:07.570111+00:00",
+    "workers": [],
+    "new_diagnostic_summary_and_manifest_match": true,
+    "old_protocol_status_match": true
+  },
+  "physical_state_unchanged": {
+    "clean": "64/72",
+    "stable": 70,
+    "slipping": 8,
+    "housing_contact": 2,
+    "categories_overlap": true,
+    "all64_protected": true,
+    "all8_unresolved": true,
+    "PPO_unstarted": true,
+    "holdout_unstarted": true,
+    "automation": "ACTIVE"
+  },
+  "reviewed_sources_sha256": {
+    "low_seat_lifted_feasibility_490.py": "04d675594cc2c72a08a1acf12a3d189aebf854f1857c2adbcc96d1a8f3cf0150",
+    "low_seat_lifted_execution_492.py": "0eb9ad712dbd6ea2a7a85c0d4d43c65b2a5d0b9c0aaf1450a8630c9bebadcf4c",
+    "certify_low_seat_balance_path_input_599.py": "bcc08e5582374377f92f12c47dedb4690c101c291d69edeadd1eaf75b5445583",
+    "audit_low_seat_balance_path_steps_599.py": "b2fd007044ad2fcd98f8b959c3ed6205b2eac5fcd494297715bd04d5160942a1",
+    "audit_low_seat_lifted_feasibility_491.py": "bce45d98cecad105bcb8a782e4ec6a37ce8c12e0420c47a11be33f69b8ca0568"
+  }
+}

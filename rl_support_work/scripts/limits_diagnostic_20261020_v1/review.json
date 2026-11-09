@@ -1,0 +1,49 @@
+{
+  "reviewed_utc": "2026-10-20T09:19:03.249895+00:00",
+  "classification": "Source and resource design review before scientific execution",
+  "governing_context_sha256": "baa22866e235a04c7d64c8fff6bad0c9ebd67030174919552e24892161b89ac5",
+  "entire_governing_context_consulted": true,
+  "new_user_authorization_supersedes_only": [
+    "one cold retry of identical initial primary",
+    "numerical clock600s with backend absolute300s",
+    "independent audit600s",
+    "hard supervisor replacing120s child watchdog"
+  ],
+  "equations": "min t,596 Ahat*u<=bhat,1367 exact equality rows and10541 explicit finite bounds; t is original78790 at retained10540, must already be zero. Initial472 X/Y/J and490 canonical auxiliary state are inherited through certified524 input; no old LP result enters initialization.",
+  "return": "All original materialized exact594 rows checked at unchanged backendu. Exact594 graph then exact586 graph on unrounded intermediates then exact578 graph on unrounded intermediates; round68250 eliminated outputs once; keep10541 retained binary64 values unchanged. Check full exact586/578 rows on final rounded projections and numeric596/572/570/546/516/full490, all original primal/equality/bounds/dual/stationarity/absolute-gap gates unchanged.",
+  "audit": "Derived599 auditor uses independently implemented integer-ratio products and adjacent binary64 midpoint rounding checks, not producer functions. New settings/path/timing changed only as listed in source_derivations.json. Audit is a separate process under600s/40GiB and checks new prefixes once; incomplete audit cannot accept candidate.",
+  "source_review": "Reviewed complete unified derivations: no coefficient/model/solver method/options/tolerance/return-arithmetic changes. New main calls one primary only. No downstream construction loop imported or called.",
+  "resources": {
+    "prelaunch_s": 300,
+    "numerical_s": 600,
+    "backend_absolute_s": 300,
+    "audit_s": 600,
+    "stage_total_s": 1500,
+    "address_space_per_worker_bytes": 42949672960,
+    "primary_calls": 1,
+    "interior_calls": 0,
+    "maxiter": 4096,
+    "physics": 0,
+    "PPO": 0,
+    "holdout": 0,
+    "source_authoring_and_transport_separate": true
+  },
+  "costs": {
+    "inherited_input_inequality_shape": [
+      265967,
+      10541
+    ],
+    "encoded_nonzeros": 6102946,
+    "full_original_coordinates": 78791,
+    "exact_materialized_inequality_checks": 797901,
+    "exact_reduced_equalities_594_586": 6829,
+    "rounded_outputs": 68250,
+    "direct_exact_inequality_coefficient_products": 10575111,
+    "return_materialized_source_bytes_at_least": 5896025179,
+    "cost_scope": "Includes global hashes/imports/input checks/copy and all return arithmetic inside600s. Audit repeats new point checks independently inside its600s. Old coefficient proofs hash inherited only. Rational operations/logging may exhaust deadline; no completion guarantee. Inherited3644-bit coefficients with binary64input may grow during exact accumulation. All memory bounded40GiBAS; disk free10GiB prerequisite; no new old inverse/encoding/model arithmetic.",
+    "hard_stop": "External supervisor sendsSIGKILL to process group at phase deadline; any observed overshoot/partial output/nonzero actualexit is unaccepted. wait4 peakRSS separately recorded; factor counts unavailable."
+  },
+  "acceptance": "Only full accepted primary plus complete independent audit within caps counts. Primary never decoded or promoted. No physical progress claim.",
+  "source_review_passed": true,
+  "scientific_execution_in_review": false
+}

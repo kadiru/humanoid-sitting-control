@@ -1,0 +1,78 @@
+{
+  "selected": {
+    "update": 8,
+    "start_s": 8.0,
+    "checkpoint": "/data/humanoid-sitting-perception/low_positive_transfer_01/ppo_01/seed_62117/train/model_08.pt",
+    "sha256": "47be016b696627fce6a084b4a1edba2632b508ca8f86d8d7e8b6332d3626ac1e",
+    "evaluation": "/data/humanoid-sitting-perception/low_positive_transfer_01/ppo_01/seed_62117/development_prospective8",
+    "gate": {
+      "passed": true,
+      "lost_baseline_clean": [],
+      "added_physical_failure": [],
+      "clean": 18,
+      "physical": 2,
+      "effort": {
+        "metrics_whole_trial": {
+          "ratio": 0.999375501378115,
+          "within": true,
+          "common_clean": 18
+        },
+        "metrics_last5s": {
+          "ratio": 0.9935736601366834,
+          "within": true,
+          "common_clean": 18
+        }
+      }
+    },
+    "validation": {
+      "passed": true,
+      "physical": {
+        "trials": 28,
+        "stable": 26,
+        "clean": 18,
+        "slip": 10,
+        "illegal": 0,
+        "physical": 2,
+        "strict": 7,
+        "max_friction_utilization": 1.0176273584365845,
+        "max_conservative_margin_ticks": 14,
+        "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit"
+      },
+      "actual417_inputs": true,
+      "full_reward_audited": true,
+      "bounds_and_slew": true,
+      "parent_exact": true,
+      "CPU_optimizer_replay": false,
+      "actor_steps": 0,
+      "critic_steps": 0,
+      "numerical_tolerances": {
+        "action_atol": 1e-05,
+        "action_rtol": 1e-05,
+        "weight_atol": 5e-05,
+        "weight_rtol": 0.0005
+      },
+      "active": 28000,
+      "warmup": 0
+    },
+    "matched": {
+      "max_errors": {
+        "root": 0.0,
+        "q": 0.0,
+        "command": 0.0,
+        "geometry": 0.0,
+        "observation": 0.0
+      },
+      "exact": true,
+      "tolerance": 1e-05,
+      "actual414_startup_exact": true,
+      "prefix_exact_until": 8.0
+    },
+    "trained_at_8s": false
+  },
+  "final_checkpoint": "/data/humanoid-sitting-perception/low_positive_transfer_01/ppo_01/seed_62117/train/final.pt",
+  "final_sha256": "dd0b72ea51f77701ae6fc8046e026e40e27ffb06235ceb1b1b4f5f89cf32a17f",
+  "training_start_s": 10.0,
+  "all16_updates_trained_at_10s": true,
+  "selected_at": 1792184716.627426,
+  "holdout_used": false
+}

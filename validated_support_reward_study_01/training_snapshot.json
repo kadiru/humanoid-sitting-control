@@ -1,0 +1,98 @@
+{
+  "utc": "2026-10-12T01:30:54.410632+00:00",
+  "status": {
+    "phase": "running",
+    "utc": "2026-10-12T01:30:35.242310+00:00",
+    "completed": [
+      "train_gentle",
+      "train_legacy"
+    ],
+    "job": "novel_initial",
+    "command": [
+      "bash",
+      "scripts/run.sh",
+      "python",
+      "../scripts/train_support_reward_study.py",
+      "--output",
+      "/data/humanoid-sitting-perception/support_reward_study_01/novel_initial",
+      "--parent",
+      "/data/humanoid-sitting-perception/support_rl_independent_train_04/final.pt",
+      "--resume151",
+      "/data/humanoid-sitting-perception/support_split_ppo_train_01/final.pt",
+      "--interface",
+      "split",
+      "--num-envs",
+      "16",
+      "--device",
+      "cuda:0",
+      "--kit_args=--/renderer/multiGpu/activeCudaGpus=0, --/renderer/multiGpu/enabled=false",
+      "--mode",
+      "evaluate",
+      "--reward-arm",
+      "legacy",
+      "--geometry-count",
+      "8",
+      "--geometry-seed",
+      "52741",
+      "--seed",
+      "52743"
+    ]
+  },
+  "arms": {
+    "legacy": {
+      "updates": 128,
+      "transitions": 131072,
+      "duration_min": 37.6033289347329,
+      "attempts": 205,
+      "successes": 44,
+      "success_percent": 21.463414634146343,
+      "mean_peak_force_N": 989.6650590850086,
+      "median_peak_force_N": 784.521240234375,
+      "p95_peak_force_N": 2003.4506591796876,
+      "max_force_N": 4545.904296875,
+      "mean_success_seated_leg_rms_Nm": 4.32384050434286,
+      "mean_success_foot_fraction": 0.2407199403863739,
+      "mean_peak_hold_s": 1.6605846798274575,
+      "failure_counts": {
+        "fall": 2,
+        "wrong_contact": 13,
+        "pelvis_floor": 0,
+        "impact": 128,
+        "fast_descent": 0,
+        "torque": 0,
+        "perception_unavailable": 13
+      },
+      "finite_parameters": true,
+      "frozen_normalization": true,
+      "verified_transition_accounting": true
+    },
+    "gentle": {
+      "updates": 128,
+      "transitions": 131072,
+      "duration_min": 37.66549553615041,
+      "attempts": 212,
+      "successes": 37,
+      "success_percent": 17.452830188679247,
+      "mean_peak_force_N": 982.3552706016684,
+      "median_peak_force_N": 864.3549499511719,
+      "p95_peak_force_N": 2124.9688720703125,
+      "max_force_N": 2840.7978515625,
+      "mean_success_seated_leg_rms_Nm": 4.683868002247166,
+      "mean_success_foot_fraction": 0.28435839465945156,
+      "mean_peak_hold_s": 1.428395582433298,
+      "failure_counts": {
+        "fall": 7,
+        "wrong_contact": 15,
+        "pelvis_floor": 0,
+        "impact": 126,
+        "fast_descent": 2,
+        "torque": 0,
+        "perception_unavailable": 18
+      },
+      "finite_parameters": true,
+      "frozen_normalization": true,
+      "verified_transition_accounting": true
+    }
+  },
+  "interpretation": "Exploratory training statistics; different sampled trajectories and independent resets, not matched deterministic evaluation. No evidence of improvement established yet."
+}

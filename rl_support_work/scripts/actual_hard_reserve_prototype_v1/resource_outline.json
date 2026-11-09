@@ -1,0 +1,33 @@
+{
+  "classification": "Source-derived planning bounds, not completed resource or wall-time freeze",
+  "basis_premises": [
+    "Source444: at most24 physical coordinates per state,51 outputs.",
+    "Source446 hard-row constructors: at most10 original feature terms and at most2 states per hard row; old coordinate rows have up to8 loads+2COM terms.",
+    "Source466+490: physical parameter basis is state-local,15 extra physical coordinates+1orientation+at most7conserved-load coordinates=23columns/state. Each physical basis row has at most7 entries. These invariants require frozen runtime identity/shape checks before use."
+  ],
+  "hard_rows": 156647,
+  "original_rows_retained": true,
+  "primary_shape_upper": [
+    809178,
+    78791
+  ],
+  "interior_shape_upper": [
+    993712,
+    78791
+  ],
+  "new_primary_nnz_upper": 7205762,
+  "new_interior_nnz_upper": 7362409,
+  "total_primary_nnz_upper": 9820080,
+  "total_interior_nnz_upper": 10412995,
+  "shared_actual_output_transform_product_upper": 11695320,
+  "row_transform_product_upper": 36028810,
+  "row_intercept_products_upper": 1566470,
+  "row_profile_products_upper": 1566470,
+  "audit_cost_policy": "Independent coefficient/box/reserve audits are additional and must be charged; no assumption they are free.",
+  "memory_policy": "Stream exact rational rows rather than retaining millions of Fraction/dict objects. The sparse nnz bound is not a full40GiB memory proof.",
+  "finite_return_cost": "At most1365 fresh value states and1365 conditional new J states, one alpha1 finite map plus all inherited checks; new exact predictor/error/row certificates and their independent audit require complete additional bit/operation/file bounds.",
+  "wall_clock_feasibility_demonstrated": false,
+  "complete_total_resource_accounting": false,
+  "scientific_launch_ready": false,
+  "no_synthetic_timing_extrapolation": true
+}

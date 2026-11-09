@@ -1,0 +1,31 @@
+{
+  "actual_exit": 0,
+  "stderr": "",
+  "compiled": {
+    "independent_return.py": "1ad187feee1db69644cf3f2cf35658c6bfdaaf09961f890af4f6e7de49f76177",
+    "common.py": "c63bcc88ee2a3acdccf26ffea0e06e4c35878ee9cba010444a97b5789bee4eb9",
+    "producer.py": "b02f9ca4f8e1f1140d3294add27232fe215b608be49ac270db18a72ede904cad",
+    "execution_driver.py": "4c76f695c32bceaaa512ccb3c6b8d02d5ac9a9f9d966e139c23ad82c58760f41",
+    "supervise.py": "401bcbcb8b79fa1239e2f79df20be5266dcd4edc479c9cc8863ce1eb7d3becd4",
+    "helper_fixtures.py": "a9387e5b273f7d46178b94d3730fd92897a092d74af3d9c8df6385816033fb10"
+  },
+  "scientific_execution": false,
+  "fixtures": {
+    "passed": true,
+    "checks": [
+      "approval_gate_blocks_before_scientific_access",
+      "only_named_entry_changes_original_untouched",
+      "auditor_rejects_second_entry",
+      "auditor_rejects_negative_zero",
+      "different_source_value_rejected",
+      "small_certificate_change_passes_full_gate",
+      "tiny_multiplier_with_large_coefficients_rejected",
+      "strict_margin_passes",
+      "zero_exact_margin_rejected"
+    ],
+    "count": 9,
+    "study_data_loaded": false,
+    "solver_calls": 0
+  },
+  "tool": "f2de8e"
+}

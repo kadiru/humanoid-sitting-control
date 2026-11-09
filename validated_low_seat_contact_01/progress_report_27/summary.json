@@ -1,0 +1,84 @@
+{
+  "utc": "2026-10-17T05:47:29.331787+00:00",
+  "task_complete": false,
+  "physical_repair_admitted": false,
+  "best_verified": {
+    "controller": "current_retention_09",
+    "clean": 64,
+    "trials": 72,
+    "stable": 70,
+    "slip": 8,
+    "housing": 2,
+    "original_successes_retained": 60,
+    "conservative_warnings": 50,
+    "strict_clean": 22
+  },
+  "new_full20s_repair_episodes": 0,
+  "ppo_updates": 0,
+  "fresh_holdout": false,
+  "sensor_diagnosis": "Both8.4s captures exactly replay original traces. Unselected own state/camera transforms remain exact; rendered depth first differs at8.2s by up to3.8147\u00b5m. Independent plane fits exactly reproduce both recorded geometries. This locates the first divergence in rendered measurements; renderer internal mechanism is not proven. Original unselected20s exact-preservation failure remains false; no tolerance relaxed.",
+  "static_render_replay": "Attempts22 are inconclusive: unavailable support estimates/stale attached-camera transforms after static pose writes. No physics or causal conclusion from them.",
+  "diagnostic_accounting": {
+    "completed_pair_active": 20160,
+    "completed_pair_initial_settling": 1200,
+    "prior_original_baseline_active_upper_bound": 10080,
+    "prior_instrumented_baseline_active": 10080,
+    "prior_v3_baseline_active": 120,
+    "prior_attempt_initial_settling": 1800,
+    "total_diagnostic_active_upper_bound": 40440,
+    "total_initial_settling": 3000,
+    "normal_control_tick_s": 0.02,
+    "integration_substep_s": 0.005
+  },
+  "execution_recoveries": "Preserved originals: wrong simulator-substep count; capture-write indentation; first audit started before changed prefix completed. No physical/control/reward/criteria change. Failed diagnostic work is counted separately; no failed work is called a full episode.",
+  "clearance": {
+    "best_normal3s": {
+      "contact_cases": 2,
+      "contacts_with_prior_5mm_warning": 2,
+      "clean_cases": 14,
+      "clean_cases_with_5mm_warning": 6
+    },
+    "rejected_joint_path": {
+      "contact_cases": 8,
+      "contacts_with_prior_5mm_warning": 8,
+      "clean_cases": 14,
+      "clean_cases_with_5mm_warning": 6
+    }
+  },
+  "model_screens": [
+    {
+      "case": 0,
+      "height_cm": 35.97686324025842,
+      "slope_deg": 15.015700212604877,
+      "fixed_max_tested_mm": 6.849992943240565,
+      "proposed_shift_mm": -17.975981668736313,
+      "proposed_clearance_mm": 7.244058015225654
+    },
+    {
+      "case": 2,
+      "height_cm": 35.957036245728546,
+      "slope_deg": 19.982311368807746,
+      "fixed_max_tested_mm": 3.4589935460953622,
+      "proposed_shift_mm": null,
+      "proposed_clearance_mm": null
+    },
+    {
+      "case": 6,
+      "height_cm": 36.96952274783648,
+      "slope_deg": 16.2572641418251,
+      "fixed_max_tested_mm": 6.704673716261741,
+      "proposed_shift_mm": -22.48678817107863,
+      "proposed_clearance_mm": 7.243072323094032
+    },
+    {
+      "case": 10,
+      "height_cm": 36.46591257349756,
+      "slope_deg": 17.498843163978524,
+      "fixed_max_tested_mm": 5.414288968386733,
+      "proposed_shift_mm": null,
+      "proposed_clearance_mm": null
+    }
+  ],
+  "physical_conclusion": "No new physical repair. All64 established clean cases must be retained and remaining8 slips/2 housing cases removed before PPO. Proposed foot endpoints do not define safe stepping or dragging commands.",
+  "effort": "No new complete-episode effort comparison. Retention09 remains mixed: versus selected62111@8 on20 common clean old-development cases, whole20 torque\u00b2+4.38%, final5+25.45%. Its current61111 common-clean comparison is exact. These are prior controller-policy results, not new PPO gains."
+}

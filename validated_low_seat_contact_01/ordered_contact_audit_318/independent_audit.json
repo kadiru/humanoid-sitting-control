@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-17T21:11:29.293131+00:00",
+  "passed": true,
+  "records": 1200,
+  "available": 865,
+  "unavailable": 335,
+  "maximum_mass_error": 1.3322676295501878e-15,
+  "maximum_contact_error": 2.220446049250313e-16,
+  "maximum_replay_error": 1.7763568394002505e-14,
+  "maximum_bias_error": 5.3887561080046e-11,
+  "arithmetic_bounds": {
+    "mass_contact": 1e-10,
+    "finite_difference_bias": 1e-06,
+    "ordered_replay": 1e-08
+  },
+  "summary_checks": 152,
+  "scope": "All1200 source selections and recursive mass/contact/bias calculations; all available two-order trajectories independently replayed by direct saddle projection and scalar implicit equation. Audits surrogate arithmetic, NOT installed GPU/internal stages or physical success.",
+  "physical_admission": false,
+  "model_validated_as_PhysX": false,
+  "repair_complete": false,
+  "physics_ticks": 0,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_ordered_contact_318.py": "517c93a9a3b353d1467335bc2b11fc3c181d09016c1f88587d90e4d4a8fbf56d",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/ordered_contact_screen_317/results.json": "714325010baf04301520b0ffaa310158f778651e3a979bcb723ca7cabf317d90",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/ordered_contact_screen_317/arrays.npz": "1e0f429d08120009722ad6534167f38a7c706776450f4f1358d3b0f5fabf59f1"
+  }
+}

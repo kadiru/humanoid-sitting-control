@@ -1,0 +1,80 @@
+{
+  "utc": "2026-10-18T02:49:30.026767+00:00",
+  "passed": true,
+  "scope": "Independent full-path geometry, finite-work and reduced-primal replay for361. No physical admission.",
+  "geometry": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/reduced_path_v2_361/results.json",
+      "parameters": [
+        0.13249248997109972,
+        0.4351349021283094,
+        -0.1883883483030849,
+        0.023619600000000004
+      ],
+      "length_m": 0.13999999999993848,
+      "knots": 115,
+      "max_replay_error": 2.1510571102112408e-16,
+      "failed_knots": [],
+      "pose_schedule_metric_passed": true,
+      "min_clearance_mm": 3.731078343242842,
+      "max_foot_position_error_mm": 0.8411018361374456,
+      "max_foot_orientation_error_deg": 0.49854366657171784,
+      "nominal_pose_schedule_at_0_15_rad_s": 13.45787425868536,
+      "min_actual_swing_sole_height_m": 0.013000000000093194
+    }
+  ],
+  "command": {
+    "nodes": 115,
+    "max_virtual_work_error_Nm": 6.608966707233321e-09,
+    "max_equilibrium_residual": 6.106226635438361e-15,
+    "minimum_command_margin_rad": 0.029974959447142013,
+    "maximum_effort_utilization": 0.8158019125659166,
+    "force_allocation_failures": [
+      15,
+      72,
+      74,
+      76,
+      77,
+      78,
+      80,
+      81,
+      84,
+      88,
+      97,
+      98,
+      99,
+      105
+    ],
+    "model_command_passed": false,
+    "specific_command_time_s": 11.536236718902959,
+    "command_schedule_passed": true,
+    "initial_command_exact": true,
+    "all_fixed_commands_exact": true
+  },
+  "primal": {
+    "equalities": 1,
+    "inequalities": 19760,
+    "max_equation_replay_error": 6.938893903907228e-15,
+    "max_inequality_replay_error": 2.220446049250313e-16,
+    "max_local_replay_error": 5.48172618408671e-16,
+    "maximum_kinematic_residual": 7.571721027943568e-14,
+    "minimum_dependent_planning_bound": -4.452581848779502e-07,
+    "numerical_constraints_passed": false,
+    "minimum_inequality": -0.13773096801008755
+  },
+  "timing": {
+    "continuous_guarded_s": 13.637730968010088,
+    "raw_target_minimum_headroom_rad": -0.007140508953037028,
+    "hover_gap_m": 0.012034146438792359,
+    "actual_float32_schedule": false,
+    "quiet_guard_exercised": false
+  },
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "physical_admission": false,
+  "repair_complete": false,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/reduced_path_v2_361/results.json": "cadcfbb165814c9ce8f96a5e49cc27a204bee6eca494825558908ec5627c2510",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_reduced_path_362.py": "bb1eeb24b1a138e010d0dee3097e9fb0c64ae2e592d72467f11dc754655c74c6"
+  }
+}

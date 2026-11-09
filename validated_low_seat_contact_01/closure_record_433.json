@@ -1,0 +1,114 @@
+{
+  "utc": "2026-10-18T09:51:37.082624+00:00",
+  "completed_work": "428\u2013432 complete once; original/integer gates pass and added buffer fails; physical admission false",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_427.json",
+      "files": 7896,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_427.json",
+      "files": 3,
+      "passed": true
+    }
+  ],
+  "protected_files": 8001,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_433.json",
+  "manifest_sha256": "449e7229413552f6f5f3b8e90db51321997928a02b6ed0c67741cd3f6f4c55bd",
+  "original_report_manifests": 7,
+  "original_manifest_entries": 67,
+  "supplemental_readable_entries": 0,
+  "local_review": {
+    "utc": "2026-10-18T09:49:16.216115+00:00",
+    "visual_review_complete": true,
+    "original_manifests": 7,
+    "original_entries": 67,
+    "checks": [
+      {
+        "folder": "lattice_preparation_428",
+        "entries": 3,
+        "passed": true
+      },
+      {
+        "folder": "lattice_preparation_audit_429",
+        "entries": 1,
+        "passed": true
+      },
+      {
+        "folder": "lattice_launch_metadata_recovery_430",
+        "entries": 3,
+        "passed": true
+      },
+      {
+        "folder": "lattice_path_430",
+        "entries": 42,
+        "passed": true
+      },
+      {
+        "folder": "lattice_path_audit_431",
+        "entries": 1,
+        "passed": true
+      },
+      {
+        "folder": "lattice_report_draft_revision_432",
+        "entries": 2,
+        "passed": true
+      },
+      {
+        "folder": "progress_report_432",
+        "entries": 15,
+        "passed": true
+      }
+    ],
+    "report": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_432/findings.html",
+    "url": "http://127.0.0.1:8807/progress_report_432/findings.html",
+    "plots_inspected": [
+      "path_and_constraints.png",
+      "clock_and_window.png"
+    ],
+    "html_reviewed": [
+      "allocation proof and conditional fixed-waveform bound",
+      "new all-hard closest-path problem and unchanged box",
+      "all prior gates pass versus new buffer failure",
+      "exact signed buffer minima and30/73/31counts",
+      "429 and431 independent audits",
+      "all30callbacks/28unitgroups/115knots/CSVlinks",
+      "physical and effort status",
+      "loaded unchanged58.4s video307 readyState4"
+    ],
+    "csv_counts": {
+      "all_buffered_hard_rows.csv": 28887,
+      "all_115_knots.csv": 115,
+      "all_constraint_groups.csv": 28,
+      "all_window_rows.csv": 7424,
+      "all_clock_rows.csv": 43200,
+      "all_callbacks.csv": 30
+    },
+    "original_artifacts_unchanged_after_execution": true,
+    "supplemental_readable_entries": 0,
+    "physics_ticks": 0,
+    "policy_optimizer_updates": 0,
+    "physical_admission": false
+  },
+  "workers": [],
+  "main_actual_exit": 0,
+  "independent_audit_actual_exit": 0,
+  "report_actual_exit": 0,
+  "physics_ticks": 0,
+  "actual_candidate_command_schedule_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "best_clean": "64/72",
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "main_ppo_started": false,
+  "fresh_holdout_started": false,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}

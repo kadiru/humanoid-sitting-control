@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "utc": "2026-10-24T08:07:05.821502+00:00",
+  "classification": "Concrete next construction selected for preparation; design only, no new execution or inherited budget waiver",
+  "evidence_closure": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_closure_20261024_v1.json",
+  "evidence_closure_sha256": "578c311ed9b977dd9294941f2d6eced9524a4f04e8052f88a42766624a47c04b",
+  "problem": "The two targeted actual-gap tangents allow a numerically optimal finite step that reduces the frozen research merit but creates 188 new actual hard-row violations. Protecting only two gap intervals is insufficient for this step.",
+  "next_construction": "Actual-hard-row feasibility restoration with a justified nonlinear prediction-error reserve",
+  "initialization": "Unchanged last accepted finite_model_step_20261023_v1 state, mu=0.08605330623059242, with its saved accepted derivatives. The rejected C point is evidence only; no warm start, rescaling or smaller-alpha retry.",
+  "actual_target_associations": {
+    "original_gap_targets": [
+      214643,
+      215327
+    ],
+    "new_hard_row_ids_source": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_v1/C/progress_gate.json",
+    "new_hard_row_ids_source_sha256": "ffd288a74dca12eacacc1fa0438af14334e49f2d641cb71034bd4f5ca49fdddc",
+    "affected_families": {
+      "old_normal_descent": {
+        "count": 2,
+        "most_negative_stored": {
+          "row": 19754,
+          "stored_after": -16.478418121672483
+        },
+        "least_negative_stored": {
+          "row": 19757,
+          "stored_after": -7.816804321791514
+        }
+      },
+      "old_support": {
+        "count": 1,
+        "most_negative_stored": {
+          "row": 20010,
+          "stored_after": -0.1528738228898277
+        },
+        "least_negative_stored": {
+          "row": 20010,
+          "stored_after": -0.1528738228898277
+        }
+      },
+      "mesh_support": {
+        "count": 12,
+        "most_negative_stored": {
+          "row": 52165,
+          "stored_after": -0.41716893580734243
+        },
+        "least_negative_stored": {
+          "row": 45209,
+          "stored_after": -0.029806819616393088
+        }
+      },
+      "mesh_effort_lower": {
+        "count": 1,
+        "most_negative_stored": {
+          "row": 53169,
+          "stored_after": -0.00014772033693404295
+        },
+        "least_negative_stored": {
+          "row": 53169,
+          "stored_after": -0.00014772033693404295
+        }
+      },
+      "mesh_posthover": {
+        "count": 2,
+        "most_negative_stored": {
+          "row": 146846,
+          "stored_after": -0.03032782915354095
+        },
+        "least_negative_stored": {
+          "row": 82857,
+          "stored_after": -0.015469637219503306
+        }
+      },
+      "mesh_command_lower": {
+        "count": 7,
+        "most_negative_stored": {
+          "row": 91078,
+          "stored_after": -0.07975073506831243
+        },
+        "least_negative_stored": {
+          "row": 154851,
+          "stored_after": -0.0037380654208181894
+        }
+      },
+      "mesh_gap_nonnegative": {
+        "count": 1,
+        "most_negative_stored": {
+          "row": 92156,
+          "stored_after": -0.03880446542761735
+        },
+        "least_negative_stored": {
+          "row": 92156,
+          "stored_after": -0.03880446542761735
+        }
+      },
+      "mesh_approach_order": {
+        "count": 131,
+        "most_negative_stored": {
+          "row": 192585,
+          "stored_after": -0.1803040348516046
+        },
+        "least_negative_stored": {
+          "row": 194790,
+          "stored_after": -3.036212161318848e-07
+        }
+      },
+      "mesh_normal_descent": {
+        "count": 31,
+        "most_negative_stored": {
+          "row": 211439,
+          "stored_after": -38.16088083475758
+        },
+        "least_negative_stored": {
+          "row": 214031,
+          "stored_after": -1.2252605635805953
+        }
+      }
+    },
+    "coverage_requirement": "Derive actual-output guards for every kept hard row in these families, with a coverage argument for the remaining kept hard rows. Do not merely append the 188 observed rows and assume all other rows are protected."
+  },
+  "mechanism": "Retain every original primal constraint, trust box and reserve. Compose the accepted mechanics derivatives with each relevant original signed-row expression to constrain actual predicted geometry, support, commands and phase relationships in both primary and interior stages. A proved nonlinear remainder bound over the unchanged trust region must give a positive guard; the failed-point residual is not itself a global bound. If such a bound cannot be justified, do not claim launch readiness or silently relax acceptance.",
+  "symbolic_guard": "For each protected actual row i, require r_i(x0)+J_i*d >= target_i+R_i, where R_i is a justified upper bound on adverse nonlinear prediction error within the unchanged trust box. target_i=0 for currently satisfied rows and the two explicit gap targets. Existing violated rows need a separately specified restoration objective and must retain all original final physical criteria.",
+  "concrete_first_preparation_deliverable": "Implement and independently review the actual-row/Jacobian composition and nonlinear-error reserve for the named families using existing sources and accepted derivatives; freeze exact coverage, restoration objective, matrix sizes, source/input hashes and total solve/finite/audit costs before requesting another scientific run.",
+  "test_for_any_later_run": {
+    "original_numeric_and_finite_checks": "unchanged",
+    "actual_research_merit_reduction_at_least_percent": 1,
+    "both_gap_targets_nonnegative": true,
+    "new_negative_kept_hard_rows": 0,
+    "worst_actual_hard_violation_must_not_increase": true,
+    "mechanical_criteria": "All original criteria still required before simulation; research acceptance is not motion admission."
+  },
+  "resource_and_authorization_status": {
+    "scientific_launch_ready": false,
+    "source_freeze_complete": false,
+    "total_resource_accounting_complete": false,
+    "new_budget_exception_approved": false,
+    "new_strengthened_optimality_exception_approved": false,
+    "prior_600_600_45_approval_consumed": true,
+    "no_simulation_PPO_or_holdout": true
+  },
+  "explicit_nonclaims": [
+    "No feasibility or convergence guarantee is established.",
+    "The current failure is not evidence that the 8 physical cases are impossible.",
+    "No new computation is authorized by this design note."
+  ]
+}

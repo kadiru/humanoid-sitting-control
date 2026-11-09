@@ -1,0 +1,227 @@
+{
+  "utc": "2026-10-18T07:49:57.844073+00:00",
+  "passed": true,
+  "scope": "Independent complete-path arithmetic audit406 with strict hard-row acceptance and structural coordinates. Rebuild geometry/virtual work/original rows, the continuous-window envelope and all675 idealclock samples. Independently replay every linear primal and nonlinear-acceptance decision from saved arrays; no optimization or projection. Arithmetic pass is not candidate admission.",
+  "geometry": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/structural_path_406/results.json",
+      "parameters": [
+        0.13249248997109972,
+        0.4351349021283094,
+        -0.1883883483030849,
+        0.023619600000000004
+      ],
+      "length_m": 0.13999999999993848,
+      "knots": 115,
+      "max_replay_error": 1.9916793908558716e-16,
+      "failed_knots": [],
+      "pose_schedule_metric_passed": false,
+      "min_clearance_mm": 3.731078343242842,
+      "max_foot_position_error_mm": 0.8411018361374456,
+      "max_foot_orientation_error_deg": 0.49854366657171784,
+      "nominal_pose_schedule_at_0_15_rad_s": 13.845473856672104,
+      "min_actual_swing_sole_height_m": 0.01300000000009311
+    }
+  ],
+  "command": {
+    "nodes": 115,
+    "max_virtual_work_error_Nm": 6.5833702933559834e-09,
+    "max_equilibrium_residual": 1.6431300764452317e-14,
+    "minimum_command_margin_rad": 0.030087351160048792,
+    "maximum_effort_utilization": 0.9426389156885762,
+    "force_allocation_failures": [],
+    "model_command_passed": true,
+    "specific_command_time_s": 11.817802359654115,
+    "command_schedule_passed": true,
+    "initial_command_exact": true,
+    "all_fixed_commands_exact": true
+  },
+  "feasibility_epigraph": {
+    "slack": 0.4904070563960526,
+    "scaled_original_violation": 0.4904070563960526,
+    "all_original_rows_replayed": 19760,
+    "additional_support_rows": 524,
+    "all_window_rows": 7424,
+    "all_clock_rows": 43200,
+    "removed_contact_constant_rows": 392,
+    "removed_exact_integer_time_rows": 1,
+    "original_numerical_feasibility": false,
+    "positive_slack_is_not_admission": true,
+    "linear_and_acceptance_replay": {
+      "records": [
+        {
+          "iteration": 0,
+          "matrix_exact": true,
+          "linear_minimum": -1.3839787149638738e-08,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "hard_nonlinear_passed": false,
+          "actual_merit": 2.9645789673762906,
+          "acceptance_ratio": -3.9248198341417404
+        },
+        {
+          "iteration": 1,
+          "matrix_exact": true,
+          "linear_minimum": -6.3563419944179245e-09,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "hard_nonlinear_passed": false,
+          "actual_merit": 0.6021471749469804,
+          "acceptance_ratio": 0.002051297802167566
+        },
+        {
+          "iteration": 2,
+          "matrix_exact": true,
+          "linear_minimum": -3.68397023997602e-09,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "hard_nonlinear_passed": false,
+          "actual_merit": 0.1795450319097934,
+          "acceptance_ratio": 0.7385998356273136
+        },
+        {
+          "iteration": 3,
+          "matrix_exact": true,
+          "linear_minimum": -1.375081768069386e-09,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "hard_nonlinear_passed": false,
+          "actual_merit": 0.17833408255945513,
+          "acceptance_ratio": 0.9204038176483305
+        },
+        {
+          "iteration": 4,
+          "matrix_exact": true,
+          "linear_minimum": -2.110561280214626e-09,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "hard_nonlinear_passed": false,
+          "actual_merit": 0.25324610149353255,
+          "acceptance_ratio": 0.976041174419408
+        },
+        {
+          "iteration": 5,
+          "matrix_exact": true,
+          "linear_minimum": -6.06923207763059e-10,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "hard_nonlinear_passed": false,
+          "actual_merit": 0.38527829507226585,
+          "acceptance_ratio": 0.9866929290937159
+        },
+        {
+          "iteration": 6,
+          "matrix_exact": true,
+          "linear_minimum": -4.1786316382986036e-10,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "hard_nonlinear_passed": false,
+          "actual_merit": 0.4547116302002704,
+          "acceptance_ratio": 0.9941276868032844
+        },
+        {
+          "iteration": 7,
+          "matrix_exact": true,
+          "linear_minimum": -2.6229891650071495e-10,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": true,
+          "hard_nonlinear_passed": true,
+          "actual_merit": 0.4904070563960526,
+          "acceptance_ratio": 0.9976698665751582
+        },
+        {
+          "iteration": 8,
+          "matrix_exact": true,
+          "linear_minimum": -2.733404384997265e-10,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "hard_nonlinear_passed": false,
+          "actual_merit": 0.4197251383434884,
+          "acceptance_ratio": 0.9896230717241569
+        },
+        {
+          "iteration": 9,
+          "matrix_exact": true,
+          "linear_minimum": -1.3630441637576055e-10,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "hard_nonlinear_passed": false,
+          "actual_merit": 0.45471754886355187,
+          "acceptance_ratio": 0.9935848073208127
+        }
+      ],
+      "unchanged_independent_linear_bound": 1e-07,
+      "maximum_subproblems": 16,
+      "source_matrices_and_bounds_exact": true,
+      "strict_hard_nonlinear_acceptance_replayed": true,
+      "positive_load_reconstruction": 5.852089646207759e-15,
+      "endpoint_moment_error": 2.7488428200328485e-14,
+      "cumulative_phase_error": 1.1102230246251565e-16,
+      "prescribed_gap_error": 4.649058915617843e-16,
+      "physical_admission": false
+    },
+    "window_replay_error": 3.552713678800501e-15
+  },
+  "primal": {
+    "equalities": 1,
+    "inequalities": 27708,
+    "max_equation_replay_error": 0.0,
+    "max_inequality_replay_error": 3.552713678800501e-15,
+    "max_local_replay_error": 4.163336342344337e-16,
+    "maximum_kinematic_residual": 9.43689570931383e-14,
+    "minimum_dependent_planning_bound": 1.1408868235335268e-05,
+    "numerical_constraints_passed": false,
+    "minimum_inequality": -0.002736100920193829
+  },
+  "timing": {
+    "event_budgets": [
+      93,
+      194,
+      246,
+      101,
+      16
+    ],
+    "clock_replay_error": 7.105427357601002e-15,
+    "clock_overlap_error": 3.2742905609062234e-16,
+    "clock_original_rate_minimum": -0.0006411338413407934,
+    "clock_original_target_minimum": -0.00266085784551251,
+    "integer_movement_ticks": 650,
+    "minimum_synthetic_quiet_ticks": 25,
+    "integer_duration_s": 13.5,
+    "original_minimum_inequality": -0.001468501708381544,
+    "new_construction_minimum_inequality": -0.002736100920193829,
+    "continuous_guarded_s": 13.5,
+    "raw_target_minimum_headroom_rad": -0.0027356240830356537,
+    "hover_gap_m": 0.011999999999999983,
+    "actual_float32_schedule": false,
+    "quiet_guard_exercised": false
+  },
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "physical_admission": false,
+  "repair_complete": false,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/structural_path_406/results.json": "4d58339c340cff4976faf35ce334503955f11eda4bcbc04fdf83d738a38352c5",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_structural_path_407.py": "1f45ef43e1695d563a9ee41f42d6bad296c0eaabb38353acc1cce49ef7980cca"
+  }
+}

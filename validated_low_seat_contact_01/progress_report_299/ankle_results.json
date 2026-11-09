@@ -1,0 +1,2705 @@
+{
+  "utc": "2026-10-17T19:47:44.119823+00:00",
+  "scope": {
+    "utc": "2026-10-17T19:47:43.148219+00:00",
+    "scope": "Recorded terminal-foot boundary impulse, not a motor-torque sensor or controller.",
+    "source_sha256": {
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/substep_states.npz": "d278effc5fee7d511d54d205d0a69c76ce0c381e41866ba8affe97cd68817cab",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/actuator_metadata.json": "3c40b6bbea84e429bf60a0cf7bccd11e0a1e51e36ef9c1bcd105e1ec8474585b",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/implicit_launches.npz": "48959d0cfdb3e4baf09f20bd67949df7e100a431fa79f1077876ab34159ceb73",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_dynamics_screen_v3_290/inertial_model.json": "1ffd883425d2ecf8d80f50796883d33f1373e4419e15d41667431fe2935eb117",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_audit_260/contact_wrenches.json": "01faf7bcb0c4d0f3a66116342cf3eea91e60eddecd1cfda5581559b7a60e3996",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/momentum_balance_294/arrays.npz": "f896316b8f4c43c1975c1918b955e8ce1a288ac0e64f6d5f24689f4b8394eabd",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/momentum_audit_295/independent_audit.json": "14cbdf5a6ebb9e9aeebdf88a5dc2e69a3b55e644e99c480746c0c822c8987923",
+      "/home/kadir/humanoid-sitting/scripts/diagnose_low_seat_ankle_impulse_296.py": "0a7831f2bd9b74d765152473bde4d1d6d9c0793b45563f9342b95c369b1f14e0"
+    },
+    "physics_ticks": 0,
+    "optimizer_updates": 0,
+    "alignment": "Post-step contact interval(k-1,k], midpoint joint position/normalized mean axis. No fitted delay, torque offset, inertia or gain.",
+    "interpretation": "Required equivalent ankle-roll boundary axial moment under a finite-interval rigid-body momentum model. Includes unresolved drive/constraint/armature effects; not directly measured actuator torque. No feedback, effort replacement or physical admission."
+  },
+  "rows": [
+    {
+      "case": 0,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.016325943852939506,
+        "RMS": 0.019329496148562775,
+        "maximum_absolute": 0.05364551953026427
+      },
+      "approximate_PD_Nm": {
+        "median": -1.020354151725769,
+        "RMS": 1.029305978416934,
+        "maximum_absolute": 1.1424463987350464
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.0046318758360768,
+        "RMS": 1.012205350174181,
+        "maximum_absolute": 1.1392883272370162
+      },
+      "armature_acceleration_Nm": {
+        "median": -0.000392764797968459,
+        "RMS": 0.012390535260113592,
+        "maximum_absolute": 0.06094735724596623
+      }
+    },
+    {
+      "case": 0,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 400,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.013562353136743565,
+        "RMS": 0.015576086945171314,
+        "maximum_absolute": 0.041072028395889186
+      },
+      "approximate_PD_Nm": {
+        "median": -0.9912576377391815,
+        "RMS": 1.0032645083280964,
+        "maximum_absolute": 1.0787256956100464
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9795436731568787,
+        "RMS": 0.9893382670823588,
+        "maximum_absolute": 1.0783315740020847
+      },
+      "armature_acceleration_Nm": {
+        "median": -0.0006791055050692218,
+        "RMS": 0.011580123697186216,
+        "maximum_absolute": 0.04432141681787183
+      }
+    },
+    {
+      "case": 1,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.01687069305793787,
+        "RMS": 0.01955751485466719,
+        "maximum_absolute": 0.04650798418871168
+      },
+      "approximate_PD_Nm": {
+        "median": -1.021910309791565,
+        "RMS": 1.0314823975046266,
+        "maximum_absolute": 1.1371363401412964
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.004802951759396,
+        "RMS": 1.0141200173974763,
+        "maximum_absolute": 1.1189995994613409
+      },
+      "armature_acceleration_Nm": {
+        "median": -0.00030848383213988306,
+        "RMS": 0.01221693998944355,
+        "maximum_absolute": 0.05158531550499834
+      }
+    },
+    {
+      "case": 1,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 400,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.01398417910666954,
+        "RMS": 0.016050805910703233,
+        "maximum_absolute": 0.03866054809234823
+      },
+      "approximate_PD_Nm": {
+        "median": -0.9947421252727509,
+        "RMS": 1.0068433749248926,
+        "maximum_absolute": 1.0808206796646118
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9831258063832109,
+        "RMS": 0.9924482716546301,
+        "maximum_absolute": 1.0724028598917246
+      },
+      "armature_acceleration_Nm": {
+        "median": -0.0002793669638179175,
+        "RMS": 0.011284008084929764,
+        "maximum_absolute": 0.04053181319240151
+      }
+    },
+    {
+      "case": 2,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.04823702659620628,
+        "RMS": 0.09883766477611164,
+        "maximum_absolute": 0.2593790079578029
+      },
+      "approximate_PD_Nm": {
+        "median": -1.2225930094718933,
+        "RMS": 1.330053072367015,
+        "maximum_absolute": 1.874951720237732
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.1852191609318323,
+        "RMS": 1.2780345441325052,
+        "maximum_absolute": 1.916619793217973
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0010687410592569169,
+        "RMS": 0.0152263144340429,
+        "maximum_absolute": 0.13247477712166056
+      }
+    },
+    {
+      "case": 2,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 204,
+      "incomplete_intervals": 196,
+      "required_boundary_Nm": {
+        "median": -0.08761648722836667,
+        "RMS": 0.1494555898956971,
+        "maximum_absolute": 0.5605256759128026
+      },
+      "approximate_PD_Nm": {
+        "median": -1.4711652398109436,
+        "RMS": 1.5320212255171843,
+        "maximum_absolute": 1.9623562097549438
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.5040768757457732,
+        "RMS": 1.4700762997161383,
+        "maximum_absolute": 1.8040430460191494
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0005534589166911186,
+        "RMS": 0.023067058107330674,
+        "maximum_absolute": 0.199737425154356
+      }
+    },
+    {
+      "case": 3,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.050653093160510754,
+        "RMS": 0.09885119178546432,
+        "maximum_absolute": 0.2600796135392873
+      },
+      "approximate_PD_Nm": {
+        "median": -1.2177001237869263,
+        "RMS": 1.3315948559008086,
+        "maximum_absolute": 1.8669357299804688
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.180509859648355,
+        "RMS": 1.2795526768302392,
+        "maximum_absolute": 1.909006403599964
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0005843341219946563,
+        "RMS": 0.0161874012587825,
+        "maximum_absolute": 0.14730137257349396
+      }
+    },
+    {
+      "case": 3,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 204,
+      "incomplete_intervals": 196,
+      "required_boundary_Nm": {
+        "median": -0.0908295813347523,
+        "RMS": 0.136371045635733,
+        "maximum_absolute": 0.4737470490462882
+      },
+      "approximate_PD_Nm": {
+        "median": -1.4710368514060974,
+        "RMS": 1.5335540707092816,
+        "maximum_absolute": 1.981454610824585
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.5051135135479816,
+        "RMS": 1.4680318150325091,
+        "maximum_absolute": 1.9821720077376646
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0016070603965134822,
+        "RMS": 0.049660961666473914,
+        "maximum_absolute": 0.37414962707125465
+      }
+    },
+    {
+      "case": 4,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.04780336327298953,
+        "RMS": 0.3888307718296278,
+        "maximum_absolute": 0.8324053177183651
+      },
+      "approximate_PD_Nm": {
+        "median": -1.1168122291564941,
+        "RMS": 1.0708042054555857,
+        "maximum_absolute": 1.6393036842346191
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.0989443209555476,
+        "RMS": 1.102307607619008,
+        "maximum_absolute": 1.4030153046352192
+      },
+      "armature_acceleration_Nm": {
+        "median": -0.00010490417245989647,
+        "RMS": 0.012587651647985197,
+        "maximum_absolute": 0.05608707541032709
+      }
+    },
+    {
+      "case": 4,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 300,
+      "incomplete_intervals": 100,
+      "required_boundary_Nm": {
+        "median": -0.003848767045926056,
+        "RMS": 0.09975624875981152,
+        "maximum_absolute": 0.1806967635117191
+      },
+      "approximate_PD_Nm": {
+        "median": -1.3623706102371216,
+        "RMS": 1.3329400977666057,
+        "maximum_absolute": 1.4519784450531006
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.3174869418622985,
+        "RMS": 1.3498499427641522,
+        "maximum_absolute": 1.5376950913372582
+      },
+      "armature_acceleration_Nm": {
+        "median": -1.612305605136477e-05,
+        "RMS": 0.00797186834773599,
+        "maximum_absolute": 0.024701654358916247
+      }
+    },
+    {
+      "case": 5,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.04552352763593589,
+        "RMS": 0.3874419748003544,
+        "maximum_absolute": 0.8261094416349365
+      },
+      "approximate_PD_Nm": {
+        "median": -1.1157127022743225,
+        "RMS": 1.069855220350423,
+        "maximum_absolute": 1.6282885074615479
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.0995564381917666,
+        "RMS": 1.1019563925333944,
+        "maximum_absolute": 1.3867015953756865
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0007031857810202435,
+        "RMS": 0.007673305417902088,
+        "maximum_absolute": 0.031662761457351696
+      }
+    },
+    {
+      "case": 5,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 300,
+      "incomplete_intervals": 100,
+      "required_boundary_Nm": {
+        "median": -0.0037052874894354573,
+        "RMS": 0.09976099211249276,
+        "maximum_absolute": 0.17800312626599285
+      },
+      "approximate_PD_Nm": {
+        "median": -1.3632327914237976,
+        "RMS": 1.332154397918599,
+        "maximum_absolute": 1.4476141929626465
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.3151977903675922,
+        "RMS": 1.3489736557114291,
+        "maximum_absolute": 1.5420058835286123
+      },
+      "armature_acceleration_Nm": {
+        "median": -0.00017511844243589536,
+        "RMS": 0.00603542133302239,
+        "maximum_absolute": 0.026614605785579837
+      }
+    },
+    {
+      "case": 6,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.04741880071655061,
+        "RMS": 0.19596716369327272,
+        "maximum_absolute": 0.4653600570076238
+      },
+      "approximate_PD_Nm": {
+        "median": -1.1171210408210754,
+        "RMS": 1.147459469407281,
+        "maximum_absolute": 1.4804143905639648
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.14584703335981,
+        "RMS": 1.1840749909869959,
+        "maximum_absolute": 1.5439424630332739
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0006587207170116738,
+        "RMS": 0.009992848680719231,
+        "maximum_absolute": 0.06605744214227549
+      }
+    },
+    {
+      "case": 6,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 176,
+      "incomplete_intervals": 224,
+      "required_boundary_Nm": {
+        "median": 0.0641609992513138,
+        "RMS": 0.22517250243995943,
+        "maximum_absolute": 0.43453917170735123
+      },
+      "approximate_PD_Nm": {
+        "median": -1.3997857570648193,
+        "RMS": 1.4467284701610892,
+        "maximum_absolute": 1.9389876127243042
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.4651361967457928,
+        "RMS": 1.5191389803164963,
+        "maximum_absolute": 1.804750441242803
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0006747841684195954,
+        "RMS": 0.01146324502694952,
+        "maximum_absolute": 0.08165895756351293
+      }
+    },
+    {
+      "case": 7,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.046020639633188795,
+        "RMS": 0.19592338339127854,
+        "maximum_absolute": 0.4631230167342096
+      },
+      "approximate_PD_Nm": {
+        "median": -1.115570843219757,
+        "RMS": 1.1432810725929565,
+        "maximum_absolute": 1.4826490879058838
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.142945962008314,
+        "RMS": 1.180353461927038,
+        "maximum_absolute": 1.5329663111571792
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.00040927528420220405,
+        "RMS": 0.008821372900778727,
+        "maximum_absolute": 0.06204640726641397
+      }
+    },
+    {
+      "case": 7,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 176,
+      "incomplete_intervals": 224,
+      "required_boundary_Nm": {
+        "median": 0.06745701183985901,
+        "RMS": 0.2251458881056942,
+        "maximum_absolute": 0.4332239240875894
+      },
+      "approximate_PD_Nm": {
+        "median": -1.3945767879486084,
+        "RMS": 1.4459132963534926,
+        "maximum_absolute": 1.9238924980163574
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.4663118449686543,
+        "RMS": 1.5188472791528722,
+        "maximum_absolute": 1.7944285833152216
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.001171499464552861,
+        "RMS": 0.01101113177503105,
+        "maximum_absolute": 0.07933115781848521
+      }
+    },
+    {
+      "case": 8,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.060336229643727785,
+        "RMS": 0.3286395926724223,
+        "maximum_absolute": 0.8101260354968451
+      },
+      "approximate_PD_Nm": {
+        "median": -1.1668140888214111,
+        "RMS": 1.1410065521060446,
+        "maximum_absolute": 1.8008655309677124
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.119683036532709,
+        "RMS": 1.136120830009504,
+        "maximum_absolute": 1.4627442953531262
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0006215572218248866,
+        "RMS": 0.007660088714091526,
+        "maximum_absolute": 0.04657465115395221
+      }
+    },
+    {
+      "case": 8,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 292,
+      "incomplete_intervals": 108,
+      "required_boundary_Nm": {
+        "median": 0.019242170432822562,
+        "RMS": 0.24275519368255258,
+        "maximum_absolute": 0.43452358959257814
+      },
+      "approximate_PD_Nm": {
+        "median": -1.3442081809043884,
+        "RMS": 1.3277163809834085,
+        "maximum_absolute": 1.7768959999084473
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.3728432354479385,
+        "RMS": 1.3639844418634577,
+        "maximum_absolute": 1.6903848790562326
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.00045433639464520503,
+        "RMS": 0.00542840552792629,
+        "maximum_absolute": 0.023152827699046696
+      }
+    },
+    {
+      "case": 9,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.06232431780048482,
+        "RMS": 0.3290743406184685,
+        "maximum_absolute": 0.8177221531542346
+      },
+      "approximate_PD_Nm": {
+        "median": -1.1718173027038574,
+        "RMS": 1.1440587842521655,
+        "maximum_absolute": 1.7976570129394531
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.1173873141208606,
+        "RMS": 1.1385934121770758,
+        "maximum_absolute": 1.449414895450373
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.00034573673429183494,
+        "RMS": 0.0090930534685709,
+        "maximum_absolute": 0.05198538187178858
+      }
+    },
+    {
+      "case": 9,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 292,
+      "incomplete_intervals": 108,
+      "required_boundary_Nm": {
+        "median": 0.018665871990105526,
+        "RMS": 0.24397709565133344,
+        "maximum_absolute": 0.4354982489104273
+      },
+      "approximate_PD_Nm": {
+        "median": -1.3383336663246155,
+        "RMS": 1.3291377298249336,
+        "maximum_absolute": 1.7724997997283936
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.375927088004619,
+        "RMS": 1.3645712073535854,
+        "maximum_absolute": 1.6919549830257274
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0003110766341296589,
+        "RMS": 0.00662853069073361,
+        "maximum_absolute": 0.02318459697400188
+      }
+    },
+    {
+      "case": 10,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.049771842955290524,
+        "RMS": 0.09702867967263995,
+        "maximum_absolute": 0.23196657356015585
+      },
+      "approximate_PD_Nm": {
+        "median": -1.2372061610221863,
+        "RMS": 1.3457850535842626,
+        "maximum_absolute": 1.8783867359161377
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.1836058559741023,
+        "RMS": 1.29330615849173,
+        "maximum_absolute": 1.9786787442613374
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.00108063218562382,
+        "RMS": 0.011720866820858943,
+        "maximum_absolute": 0.17131197069633064
+      }
+    },
+    {
+      "case": 10,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 184,
+      "incomplete_intervals": 216,
+      "required_boundary_Nm": {
+        "median": -0.11118888993257106,
+        "RMS": 0.13004612463807225,
+        "maximum_absolute": 0.22204897126372494
+      },
+      "approximate_PD_Nm": {
+        "median": -1.5301206707954407,
+        "RMS": 1.614404151895935,
+        "maximum_absolute": 2.0149788856506348
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.5547477229922113,
+        "RMS": 1.5188322432506454,
+        "maximum_absolute": 1.8383678289524368
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0017369985192194903,
+        "RMS": 0.011688466003227033,
+        "maximum_absolute": 0.09705114147697813
+      }
+    },
+    {
+      "case": 11,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.050481676133381365,
+        "RMS": 0.09705750950601275,
+        "maximum_absolute": 0.23229658799385713
+      },
+      "approximate_PD_Nm": {
+        "median": -1.2433869242668152,
+        "RMS": 1.333850656051203,
+        "maximum_absolute": 1.886468529701233
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.1860809345284475,
+        "RMS": 1.2814951515203175,
+        "maximum_absolute": 1.9986974615088469
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0010090470088486292,
+        "RMS": 0.0109047734890055,
+        "maximum_absolute": 0.18313419409541343
+      }
+    },
+    {
+      "case": 11,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 184,
+      "incomplete_intervals": 216,
+      "required_boundary_Nm": {
+        "median": -0.11051972687532893,
+        "RMS": 0.1276838946142647,
+        "maximum_absolute": 0.21789944520954183
+      },
+      "approximate_PD_Nm": {
+        "median": -1.5289682149887085,
+        "RMS": 1.6119667202921488,
+        "maximum_absolute": 2.01483154296875
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.5521192310474214,
+        "RMS": 1.5183392435080498,
+        "maximum_absolute": 1.826605862846889
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.001409977642968796,
+        "RMS": 0.01065466507570932,
+        "maximum_absolute": 0.09347253828929647
+      }
+    },
+    {
+      "case": 12,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.06133143110385154,
+        "RMS": 0.4186252953794247,
+        "maximum_absolute": 0.8922180420831969
+      },
+      "approximate_PD_Nm": {
+        "median": -1.1570582389831543,
+        "RMS": 1.1801765017105823,
+        "maximum_absolute": 1.998653531074524
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.1033941234871996,
+        "RMS": 1.1317918165894134,
+        "maximum_absolute": 1.5110155826965717
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0011348724111570618,
+        "RMS": 0.004425564109491644,
+        "maximum_absolute": 0.03397470636722355
+      }
+    },
+    {
+      "case": 12,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 296,
+      "incomplete_intervals": 104,
+      "required_boundary_Nm": {
+        "median": -0.05267201704655247,
+        "RMS": 0.15898147393252557,
+        "maximum_absolute": 0.3103481983514974
+      },
+      "approximate_PD_Nm": {
+        "median": -1.6091416478157043,
+        "RMS": 1.5537056304107475,
+        "maximum_absolute": 1.8544516563415527
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.5772276983059248,
+        "RMS": 1.5213431184584343,
+        "maximum_absolute": 1.668810741624667
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0003012716702832652,
+        "RMS": 0.003850841028139812,
+        "maximum_absolute": 0.01695954761744556
+      }
+    },
+    {
+      "case": 13,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.06141852750000326,
+        "RMS": 0.4185913113910398,
+        "maximum_absolute": 0.8918582484295902
+      },
+      "approximate_PD_Nm": {
+        "median": -1.1603658199310303,
+        "RMS": 1.1806429016610758,
+        "maximum_absolute": 1.9950709342956543
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.1093064826188457,
+        "RMS": 1.132159469632904,
+        "maximum_absolute": 1.5092040003660994
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0010587572814801938,
+        "RMS": 0.005265647990758213,
+        "maximum_absolute": 0.038242756465611816
+      }
+    },
+    {
+      "case": 13,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 296,
+      "incomplete_intervals": 104,
+      "required_boundary_Nm": {
+        "median": -0.05396446114097428,
+        "RMS": 0.1588997920299714,
+        "maximum_absolute": 0.3105877547854451
+      },
+      "approximate_PD_Nm": {
+        "median": -1.6080278158187866,
+        "RMS": 1.55369947323309,
+        "maximum_absolute": 1.8539609909057617
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.577721615722428,
+        "RMS": 1.5212534243680302,
+        "maximum_absolute": 1.6735273271736597
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0005747079720785919,
+        "RMS": 0.004488181330495107,
+        "maximum_absolute": 0.01966863826657894
+      }
+    },
+    {
+      "case": 14,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 512,
+      "incomplete_intervals": 88,
+      "required_boundary_Nm": {
+        "median": 0.37811560028947466,
+        "RMS": 0.42017651141972184,
+        "maximum_absolute": 0.709434153884487
+      },
+      "approximate_PD_Nm": {
+        "median": -0.5806286931037903,
+        "RMS": 0.7634986362488185,
+        "maximum_absolute": 1.4338666200637817
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9538364337451617,
+        "RMS": 0.9754666338580432,
+        "maximum_absolute": 1.3229707311758683
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0013517737086465864,
+        "RMS": 0.00717621486872932,
+        "maximum_absolute": 0.04447030921719275
+      }
+    },
+    {
+      "case": 14,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 15,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 512,
+      "incomplete_intervals": 88,
+      "required_boundary_Nm": {
+        "median": 0.37572202460392445,
+        "RMS": 0.41979932999423397,
+        "maximum_absolute": 0.7089647388199787
+      },
+      "approximate_PD_Nm": {
+        "median": -0.5791262686252594,
+        "RMS": 0.763530261159677,
+        "maximum_absolute": 1.4370259046554565
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9459558178871971,
+        "RMS": 0.975646215130307,
+        "maximum_absolute": 1.3205760716754933
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.000745832903403798,
+        "RMS": 0.00884104559649219,
+        "maximum_absolute": 0.047111092944940314
+      }
+    },
+    {
+      "case": 15,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 16,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 504,
+      "incomplete_intervals": 96,
+      "required_boundary_Nm": {
+        "median": 0.2982896358795775,
+        "RMS": 0.40369056886476234,
+        "maximum_absolute": 0.6919723233232877
+      },
+      "approximate_PD_Nm": {
+        "median": -0.5912871062755585,
+        "RMS": 0.6485024354849319,
+        "maximum_absolute": 1.1244971752166748
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9177192497128983,
+        "RMS": 0.93500135017015,
+        "maximum_absolute": 1.1784265854946856
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0005278587223322972,
+        "RMS": 0.009517777369269008,
+        "maximum_absolute": 0.042396186834658955
+      }
+    },
+    {
+      "case": 16,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 17,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 504,
+      "incomplete_intervals": 96,
+      "required_boundary_Nm": {
+        "median": 0.29705355500009745,
+        "RMS": 0.40380289870725766,
+        "maximum_absolute": 0.6926350205765653
+      },
+      "approximate_PD_Nm": {
+        "median": -0.5858039855957031,
+        "RMS": 0.6473951029309881,
+        "maximum_absolute": 1.130081057548523
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9136578451653541,
+        "RMS": 0.9342004664216164,
+        "maximum_absolute": 1.1925528036111646
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0007202029067232552,
+        "RMS": 0.00953289135921385,
+        "maximum_absolute": 0.04157900717305374
+      }
+    },
+    {
+      "case": 17,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 18,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 500,
+      "incomplete_intervals": 100,
+      "required_boundary_Nm": {
+        "median": 0.30042977214890326,
+        "RMS": 0.3727156625273696,
+        "maximum_absolute": 0.5926523681998738
+      },
+      "approximate_PD_Nm": {
+        "median": -0.629021555185318,
+        "RMS": 0.6402238588424579,
+        "maximum_absolute": 0.9840419888496399
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9031174554420405,
+        "RMS": 0.9197829268948292,
+        "maximum_absolute": 1.086169844791026
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0005527138586480795,
+        "RMS": 0.010427067471966795,
+        "maximum_absolute": 0.0326720468847741
+      }
+    },
+    {
+      "case": 18,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 19,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 500,
+      "incomplete_intervals": 100,
+      "required_boundary_Nm": {
+        "median": 0.30242379704258043,
+        "RMS": 0.3727773451226422,
+        "maximum_absolute": 0.59668692620543
+      },
+      "approximate_PD_Nm": {
+        "median": -0.6276722550392151,
+        "RMS": 0.6398529148112645,
+        "maximum_absolute": 0.9758486151695251
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.8994123070207096,
+        "RMS": 0.9192239172942854,
+        "maximum_absolute": 1.0824078029334554
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0002984106473979953,
+        "RMS": 0.010577305320317741,
+        "maximum_absolute": 0.033136188243265696
+      }
+    },
+    {
+      "case": 19,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 20,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 496,
+      "incomplete_intervals": 104,
+      "required_boundary_Nm": {
+        "median": 0.3001962811614036,
+        "RMS": 0.36902973822253904,
+        "maximum_absolute": 0.5925035693525371
+      },
+      "approximate_PD_Nm": {
+        "median": -0.6282027959823608,
+        "RMS": 0.6425483566213677,
+        "maximum_absolute": 1.0090559720993042
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9004619649102482,
+        "RMS": 0.9173378843587336,
+        "maximum_absolute": 1.1083254268120033
+      },
+      "armature_acceleration_Nm": {
+        "median": -0.00038000940427163066,
+        "RMS": 0.01292348013505492,
+        "maximum_absolute": 0.04362976453535783
+      }
+    },
+    {
+      "case": 20,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 21,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 496,
+      "incomplete_intervals": 104,
+      "required_boundary_Nm": {
+        "median": 0.2978620746317719,
+        "RMS": 0.36900848526980023,
+        "maximum_absolute": 0.5943130755358955
+      },
+      "approximate_PD_Nm": {
+        "median": -0.6268739402294159,
+        "RMS": 0.642849130639884,
+        "maximum_absolute": 0.9922401309013367
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9002961370356373,
+        "RMS": 0.9169757997489235,
+        "maximum_absolute": 1.0930805175197662
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.00033751129349668396,
+        "RMS": 0.011711994016474454,
+        "maximum_absolute": 0.0413427343664452
+      }
+    },
+    {
+      "case": 21,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 22,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 508,
+      "incomplete_intervals": 92,
+      "required_boundary_Nm": {
+        "median": 0.30659593868171353,
+        "RMS": 0.38283903517599904,
+        "maximum_absolute": 0.6065489091103268
+      },
+      "approximate_PD_Nm": {
+        "median": -0.6254383623600006,
+        "RMS": 0.6320787651698448,
+        "maximum_absolute": 0.9970889687538147
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9066192744940593,
+        "RMS": 0.9263202605452165,
+        "maximum_absolute": 1.1234561695432599
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.00020098685769021074,
+        "RMS": 0.012429168365501096,
+        "maximum_absolute": 0.044255136454363075
+      }
+    },
+    {
+      "case": 22,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 23,
+      "side": "left",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 508,
+      "incomplete_intervals": 92,
+      "required_boundary_Nm": {
+        "median": 0.3057446196452709,
+        "RMS": 0.3828730107535279,
+        "maximum_absolute": 0.6096342551064184
+      },
+      "approximate_PD_Nm": {
+        "median": -0.6251982748508453,
+        "RMS": 0.6313299809571983,
+        "maximum_absolute": 1.0000473260879517
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.904684309670039,
+        "RMS": 0.9257895902445712,
+        "maximum_absolute": 1.1212041800131487
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0001139342759415296,
+        "RMS": 0.013857593698161159,
+        "maximum_absolute": 0.04516613382474777
+      }
+    },
+    {
+      "case": 23,
+      "side": "left",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 0,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.00868486117866975,
+        "RMS": 0.011029164879791714,
+        "maximum_absolute": 0.028096493322985513
+      },
+      "approximate_PD_Nm": {
+        "median": -0.9524900615215302,
+        "RMS": 0.9527856937545125,
+        "maximum_absolute": 1.029099941253662
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9439016696435198,
+        "RMS": 0.9436438089651299,
+        "maximum_absolute": 1.0211539986469718
+      },
+      "armature_acceleration_Nm": {
+        "median": -0.00022396444773753466,
+        "RMS": 0.006095212697416515,
+        "maximum_absolute": 0.018482863489921453
+      }
+    },
+    {
+      "case": 0,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 400,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.00585239356260512,
+        "RMS": 0.007391564246224124,
+        "maximum_absolute": 0.01720092875061662
+      },
+      "approximate_PD_Nm": {
+        "median": -0.9271906614303589,
+        "RMS": 0.9267775200240497,
+        "maximum_absolute": 0.9638421535491943
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9211682272253192,
+        "RMS": 0.9207385432408968,
+        "maximum_absolute": 0.9612063059584799
+      },
+      "armature_acceleration_Nm": {
+        "median": -3.725290215195187e-05,
+        "RMS": 0.005861521659362699,
+        "maximum_absolute": 0.021312593937383717
+      }
+    },
+    {
+      "case": 1,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.0089969564626781,
+        "RMS": 0.010939344625817507,
+        "maximum_absolute": 0.02711668868394407
+      },
+      "approximate_PD_Nm": {
+        "median": -0.9513365030288696,
+        "RMS": 0.9526937573241124,
+        "maximum_absolute": 1.0253740549087524
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9429614247514382,
+        "RMS": 0.9435869232752162,
+        "maximum_absolute": 1.0160249537247177
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.00025966762915996533,
+        "RMS": 0.0057359275570507545,
+        "maximum_absolute": 0.02057975484625052
+      }
+    },
+    {
+      "case": 1,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 400,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.006055754789546686,
+        "RMS": 0.007441231519526165,
+        "maximum_absolute": 0.01903430553590512
+      },
+      "approximate_PD_Nm": {
+        "median": -0.9272701442241669,
+        "RMS": 0.9269240151423115,
+        "maximum_absolute": 0.963533878326416
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -0.9214473226374579,
+        "RMS": 0.9208445854921852,
+        "maximum_absolute": 0.9614218777304062
+      },
+      "armature_acceleration_Nm": {
+        "median": -0.00032413005104370285,
+        "RMS": 0.0060147196868954944,
+        "maximum_absolute": 0.018852233465338486
+      }
+    },
+    {
+      "case": 2,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.3394465507265978,
+        "RMS": 0.34084852093072665,
+        "maximum_absolute": 0.49584231568058695
+      },
+      "approximate_PD_Nm": {
+        "median": -1.7583760023117065,
+        "RMS": 1.8058055114200355,
+        "maximum_absolute": 2.6434926986694336
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.4211842309387372,
+        "RMS": 1.4669876821652705,
+        "maximum_absolute": 2.282351282996343
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0012862980078243158,
+        "RMS": 0.012787983820905126,
+        "maximum_absolute": 0.15409528864707145
+      }
+    },
+    {
+      "case": 2,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 204,
+      "incomplete_intervals": 196,
+      "required_boundary_Nm": {
+        "median": -0.516403643649638,
+        "RMS": 0.5007433241643972,
+        "maximum_absolute": 0.6286485215081221
+      },
+      "approximate_PD_Nm": {
+        "median": -2.2406866550445557,
+        "RMS": 2.2662869304531834,
+        "maximum_absolute": 2.7539262771606445
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.8106119055631487,
+        "RMS": 1.7906601983450632,
+        "maximum_absolute": 2.162392865568755
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0015944540144252617,
+        "RMS": 0.034004931522750664,
+        "maximum_absolute": 0.27063071122845894
+      }
+    },
+    {
+      "case": 3,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.33903938395814304,
+        "RMS": 0.3409285421388614,
+        "maximum_absolute": 0.4953264348535417
+      },
+      "approximate_PD_Nm": {
+        "median": -1.7511744499206543,
+        "RMS": 1.8069122400559579,
+        "maximum_absolute": 2.6503207683563232
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.4187071392058188,
+        "RMS": 1.4679411898359471,
+        "maximum_absolute": 2.1983116330868566
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0007821917359041031,
+        "RMS": 0.011602124404932843,
+        "maximum_absolute": 0.07107591470161267
+      }
+    },
+    {
+      "case": 3,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 204,
+      "incomplete_intervals": 196,
+      "required_boundary_Nm": {
+        "median": -0.5199578413566963,
+        "RMS": 0.50041815174615,
+        "maximum_absolute": 0.6360778255819731
+      },
+      "approximate_PD_Nm": {
+        "median": -2.2392107248306274,
+        "RMS": 2.2762930553468914,
+        "maximum_absolute": 3.2076878547668457
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.8427283228120959,
+        "RMS": 1.8045361659756745,
+        "maximum_absolute": 3.663113757303095
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0023534893463517115,
+        "RMS": 0.061847112130305554,
+        "maximum_absolute": 0.7268636064187373
+      }
+    },
+    {
+      "case": 4,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.1419777475524291,
+        "RMS": 0.3290379234660838,
+        "maximum_absolute": 0.700401416405819
+      },
+      "approximate_PD_Nm": {
+        "median": -1.216462254524231,
+        "RMS": 1.432057272699174,
+        "maximum_absolute": 2.366292953491211
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.1539962166181281,
+        "RMS": 1.2533014336000712,
+        "maximum_absolute": 1.7525770362873794
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0007825195614430402,
+        "RMS": 0.011608399769427841,
+        "maximum_absolute": 0.05512988444127398
+      }
+    },
+    {
+      "case": 4,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 300,
+      "incomplete_intervals": 100,
+      "required_boundary_Nm": {
+        "median": -0.42472088641362055,
+        "RMS": 0.4172951613451097,
+        "maximum_absolute": 0.5956274119909818
+      },
+      "approximate_PD_Nm": {
+        "median": -2.0304017066955566,
+        "RMS": 1.9980780149442394,
+        "maximum_absolute": 2.1513853073120117
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.5892368437405902,
+        "RMS": 1.5919219181501831,
+        "maximum_absolute": 1.7397208309656
+      },
+      "armature_acceleration_Nm": {
+        "median": -0.0003437697810582119,
+        "RMS": 0.0070435463854548915,
+        "maximum_absolute": 0.019260882900784537
+      }
+    },
+    {
+      "case": 5,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.14374217038655207,
+        "RMS": 0.32783504460963986,
+        "maximum_absolute": 0.69425209388901
+      },
+      "approximate_PD_Nm": {
+        "median": -1.2137353420257568,
+        "RMS": 1.426535699337591,
+        "maximum_absolute": 2.3689358234405518
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.1382641923255008,
+        "RMS": 1.2470666941104662,
+        "maximum_absolute": 1.763939839755717
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.001115083669533945,
+        "RMS": 0.008145624795777929,
+        "maximum_absolute": 0.05499303217992857
+      }
+    },
+    {
+      "case": 5,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 300,
+      "incomplete_intervals": 100,
+      "required_boundary_Nm": {
+        "median": -0.4263960685658973,
+        "RMS": 0.41755179973929446,
+        "maximum_absolute": 0.584903707231254
+      },
+      "approximate_PD_Nm": {
+        "median": -2.0246942043304443,
+        "RMS": 1.9973910168060616,
+        "maximum_absolute": 2.140620708465576
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.5871618631761977,
+        "RMS": 1.5910633354419397,
+        "maximum_absolute": 1.7343831684647935
+      },
+      "armature_acceleration_Nm": {
+        "median": 8.052587329165917e-05,
+        "RMS": 0.004668548570346022,
+        "maximum_absolute": 0.016322731606899232
+      }
+    },
+    {
+      "case": 6,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.20909115143675416,
+        "RMS": 0.2505597890295896,
+        "maximum_absolute": 0.4813978103337901
+      },
+      "approximate_PD_Nm": {
+        "median": -1.6664327383041382,
+        "RMS": 1.570996606935475,
+        "maximum_absolute": 2.0871942043304443
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.3575090892689743,
+        "RMS": 1.349473793607618,
+        "maximum_absolute": 1.9579092021695534
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0009270906241143351,
+        "RMS": 0.008254975449636078,
+        "maximum_absolute": 0.08054739056794213
+      }
+    },
+    {
+      "case": 6,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 176,
+      "incomplete_intervals": 224,
+      "required_boundary_Nm": {
+        "median": -0.3696083069745383,
+        "RMS": 0.39541301855842986,
+        "maximum_absolute": 0.6122745849027839
+      },
+      "approximate_PD_Nm": {
+        "median": -2.13504159450531,
+        "RMS": 2.1977764619775453,
+        "maximum_absolute": 2.669663906097412
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.8275380944970339,
+        "RMS": 1.850775534797671,
+        "maximum_absolute": 2.125219777153065
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0016731619460919056,
+        "RMS": 0.011390593055474643,
+        "maximum_absolute": 0.08220016772597649
+      }
+    },
+    {
+      "case": 7,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.20918404450437367,
+        "RMS": 0.2508437901146662,
+        "maximum_absolute": 0.4809448947863111
+      },
+      "approximate_PD_Nm": {
+        "median": -1.6742433309555054,
+        "RMS": 1.569439473853897,
+        "maximum_absolute": 2.059401035308838
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.3569915189679564,
+        "RMS": 1.3476991221383854,
+        "maximum_absolute": 1.9724111878772244
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0007867216888057804,
+        "RMS": 0.007884818361279099,
+        "maximum_absolute": 0.07625871726292255
+      }
+    },
+    {
+      "case": 7,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 176,
+      "incomplete_intervals": 224,
+      "required_boundary_Nm": {
+        "median": -0.3665201589622634,
+        "RMS": 0.3950079431787339,
+        "maximum_absolute": 0.6082048589481656
+      },
+      "approximate_PD_Nm": {
+        "median": -2.1367422342300415,
+        "RMS": 2.1971478520875785,
+        "maximum_absolute": 2.6679036617279053
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.8268539598081666,
+        "RMS": 1.8505944737996183,
+        "maximum_absolute": 2.1312410756994034
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0013881921457903346,
+        "RMS": 0.01167402707839155,
+        "maximum_absolute": 0.08577072428679333
+      }
+    },
+    {
+      "case": 8,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.19280092367655646,
+        "RMS": 0.32955782063701156,
+        "maximum_absolute": 0.7852399364344642
+      },
+      "approximate_PD_Nm": {
+        "median": -1.2882217168807983,
+        "RMS": 1.5127739008643946,
+        "maximum_absolute": 2.4989912509918213
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.259708441227318,
+        "RMS": 1.2785217111359661,
+        "maximum_absolute": 1.7260852218492737
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0007105171521637477,
+        "RMS": 0.006195787754895691,
+        "maximum_absolute": 0.04154503252629116
+      }
+    },
+    {
+      "case": 8,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 292,
+      "incomplete_intervals": 108,
+      "required_boundary_Nm": {
+        "median": -0.40336938894109553,
+        "RMS": 0.4222999575047158,
+        "maximum_absolute": 0.758097535550055
+      },
+      "approximate_PD_Nm": {
+        "median": -2.012400507926941,
+        "RMS": 1.9840531951218447,
+        "maximum_absolute": 2.4797205924987793
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.6172257125112206,
+        "RMS": 1.6069846577126385,
+        "maximum_absolute": 1.9695251326759378
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.000206679101139029,
+        "RMS": 0.0046693766545135434,
+        "maximum_absolute": 0.01551938022257282
+      }
+    },
+    {
+      "case": 9,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.19305018692256187,
+        "RMS": 0.33015425487270117,
+        "maximum_absolute": 0.7879509882058242
+      },
+      "approximate_PD_Nm": {
+        "median": -1.2865383625030518,
+        "RMS": 1.513218624226362,
+        "maximum_absolute": 2.498444080352783
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.2524414115949476,
+        "RMS": 1.2786071065487528,
+        "maximum_absolute": 1.7243775100399683
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0003747045910051927,
+        "RMS": 0.006485722783603122,
+        "maximum_absolute": 0.037635027521065734
+      }
+    },
+    {
+      "case": 9,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 292,
+      "incomplete_intervals": 108,
+      "required_boundary_Nm": {
+        "median": -0.40085726204052013,
+        "RMS": 0.42347270309824775,
+        "maximum_absolute": 0.7602973495252114
+      },
+      "approximate_PD_Nm": {
+        "median": -2.010778069496155,
+        "RMS": 1.9852501583277962,
+        "maximum_absolute": 2.4845354557037354
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.6178330551480684,
+        "RMS": 1.6074237916923997,
+        "maximum_absolute": 1.9766871013445602
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.00020402669450581,
+        "RMS": 0.0058517561964047966,
+        "maximum_absolute": 0.021090030198767096
+      }
+    },
+    {
+      "case": 10,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.3392728768066261,
+        "RMS": 0.3366283691723453,
+        "maximum_absolute": 0.4793786896221994
+      },
+      "approximate_PD_Nm": {
+        "median": -1.76668381690979,
+        "RMS": 1.7904871535110298,
+        "maximum_absolute": 2.605785608291626
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.4295369352504617,
+        "RMS": 1.456290348756649,
+        "maximum_absolute": 2.236753192791702
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0010860860104988657,
+        "RMS": 0.008529960141471064,
+        "maximum_absolute": 0.13042187399219252
+      }
+    },
+    {
+      "case": 10,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 184,
+      "incomplete_intervals": 216,
+      "required_boundary_Nm": {
+        "median": -0.5427470748443521,
+        "RMS": 0.5309302838756205,
+        "maximum_absolute": 0.6411400160282592
+      },
+      "approximate_PD_Nm": {
+        "median": -2.338290810585022,
+        "RMS": 2.3585777197772253,
+        "maximum_absolute": 2.790855884552002
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.9194964068898492,
+        "RMS": 1.8383848770790927,
+        "maximum_absolute": 2.1849247995134875
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0019841491732564,
+        "RMS": 0.011083047165066681,
+        "maximum_absolute": 0.08558535384568522
+      }
+    },
+    {
+      "case": 11,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.3401895742459826,
+        "RMS": 0.3379592966365128,
+        "maximum_absolute": 0.4797762459083494
+      },
+      "approximate_PD_Nm": {
+        "median": -1.7673782110214233,
+        "RMS": 1.7929296388795466,
+        "maximum_absolute": 2.610567092895508
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.4298741523117848,
+        "RMS": 1.4574950733762166,
+        "maximum_absolute": 2.240279997005056
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0012601315693527848,
+        "RMS": 0.008151008800371137,
+        "maximum_absolute": 0.12963568874517772
+      }
+    },
+    {
+      "case": 11,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 184,
+      "incomplete_intervals": 216,
+      "required_boundary_Nm": {
+        "median": -0.5390499091115204,
+        "RMS": 0.5290111743838372,
+        "maximum_absolute": 0.6392428477637879
+      },
+      "approximate_PD_Nm": {
+        "median": -2.335684061050415,
+        "RMS": 2.3561080935248744,
+        "maximum_absolute": 2.7765491008758545
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.9228498563383367,
+        "RMS": 1.8377599260375663,
+        "maximum_absolute": 2.1792551334760133
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0015265941278652662,
+        "RMS": 0.010861023454775957,
+        "maximum_absolute": 0.08738803668197903
+      }
+    },
+    {
+      "case": 12,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.16477642287365957,
+        "RMS": 0.40623294910076857,
+        "maximum_absolute": 0.9224932171962561
+      },
+      "approximate_PD_Nm": {
+        "median": -1.2116913199424744,
+        "RMS": 1.5411634850040934,
+        "maximum_absolute": 2.697805643081665
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.1377953100247251,
+        "RMS": 1.2816914199094214,
+        "maximum_absolute": 1.847850444327792
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0008968114652452286,
+        "RMS": 0.0056206621999363715,
+        "maximum_absolute": 0.04875069747677374
+      }
+    },
+    {
+      "case": 12,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 296,
+      "incomplete_intervals": 104,
+      "required_boundary_Nm": {
+        "median": -0.4757218759401898,
+        "RMS": 0.4692422799459091,
+        "maximum_absolute": 0.7368149426664733
+      },
+      "approximate_PD_Nm": {
+        "median": -2.316722869873047,
+        "RMS": 2.224294533653171,
+        "maximum_absolute": 2.540083646774292
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.8367621951853979,
+        "RMS": 1.7735665451694196,
+        "maximum_absolute": 1.937422250045167
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.00012019276350305752,
+        "RMS": 0.0028477473504682316,
+        "maximum_absolute": 0.012828826617550249
+      }
+    },
+    {
+      "case": 13,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "required_boundary_Nm": {
+        "median": -0.1649270882589197,
+        "RMS": 0.4062925440048867,
+        "maximum_absolute": 0.9214991657897432
+      },
+      "approximate_PD_Nm": {
+        "median": -1.2108514904975891,
+        "RMS": 1.5413557862568956,
+        "maximum_absolute": 2.695979118347168
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.1267559268276348,
+        "RMS": 1.2815876824742014,
+        "maximum_absolute": 1.8711345896421228
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0008539557266096232,
+        "RMS": 0.005360437718666596,
+        "maximum_absolute": 0.048730133874785864
+      }
+    },
+    {
+      "case": 13,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 296,
+      "incomplete_intervals": 104,
+      "required_boundary_Nm": {
+        "median": -0.47576347901473354,
+        "RMS": 0.4692755944543802,
+        "maximum_absolute": 0.7367816777284383
+      },
+      "approximate_PD_Nm": {
+        "median": -2.3153527975082397,
+        "RMS": 2.224400490110152,
+        "maximum_absolute": 2.5389795303344727
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.835245034406037,
+        "RMS": 1.7736059472896366,
+        "maximum_absolute": 1.938435360959542
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0002622604311497412,
+        "RMS": 0.003264337895754812,
+        "maximum_absolute": 0.011460065585522372
+      }
+    },
+    {
+      "case": 14,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 512,
+      "incomplete_intervals": 88,
+      "required_boundary_Nm": {
+        "median": 0.11012508426186662,
+        "RMS": 0.1881219519033075,
+        "maximum_absolute": 0.3242896407377389
+      },
+      "approximate_PD_Nm": {
+        "median": -1.002805233001709,
+        "RMS": 1.0199556727303285,
+        "maximum_absolute": 1.638120412826538
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.056560347413832,
+        "RMS": 1.0817371115261998,
+        "maximum_absolute": 1.5126070508678524
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0013194977942221353,
+        "RMS": 0.0068017300433792375,
+        "maximum_absolute": 0.03475183170843499
+      }
+    },
+    {
+      "case": 14,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 15,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 512,
+      "incomplete_intervals": 88,
+      "required_boundary_Nm": {
+        "median": 0.10777051332109124,
+        "RMS": 0.1874122359400679,
+        "maximum_absolute": 0.325383032651415
+      },
+      "approximate_PD_Nm": {
+        "median": -1.0097733736038208,
+        "RMS": 1.0204788536156548,
+        "maximum_absolute": 1.6339118480682373
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.0567513700570301,
+        "RMS": 1.0825263118389115,
+        "maximum_absolute": 1.5091248720752988
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0005823373664393117,
+        "RMS": 0.009252921339712769,
+        "maximum_absolute": 0.03795152817774872
+      }
+    },
+    {
+      "case": 15,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 16,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 504,
+      "incomplete_intervals": 96,
+      "required_boundary_Nm": {
+        "median": 0.14596682438323821,
+        "RMS": 0.17753235451289343,
+        "maximum_absolute": 0.3136910120908023
+      },
+      "approximate_PD_Nm": {
+        "median": -0.8859785199165344,
+        "RMS": 0.9438837937345196,
+        "maximum_absolute": 1.6956570148468018
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.009310704172552,
+        "RMS": 1.0449469994471468,
+        "maximum_absolute": 1.4089674414857873
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.001109510635372013,
+        "RMS": 0.011121581424557606,
+        "maximum_absolute": 0.038858234013805504
+      }
+    },
+    {
+      "case": 16,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 17,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 504,
+      "incomplete_intervals": 96,
+      "required_boundary_Nm": {
+        "median": 0.1442608763537568,
+        "RMS": 0.1772261241102113,
+        "maximum_absolute": 0.3180876666261028
+      },
+      "approximate_PD_Nm": {
+        "median": -0.8831445574760437,
+        "RMS": 0.9452789716125242,
+        "maximum_absolute": 1.7054038047790527
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.0103140722508523,
+        "RMS": 1.0466275584434683,
+        "maximum_absolute": 1.417976535610154
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0009143948350609499,
+        "RMS": 0.01063562594017187,
+        "maximum_absolute": 0.0385730853995736
+      }
+    },
+    {
+      "case": 17,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 18,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 500,
+      "incomplete_intervals": 100,
+      "required_boundary_Nm": {
+        "median": 0.09823456835992533,
+        "RMS": 0.11826274057056718,
+        "maximum_absolute": 0.21365779923129186
+      },
+      "approximate_PD_Nm": {
+        "median": -0.9042064547538757,
+        "RMS": 0.9276912349950945,
+        "maximum_absolute": 1.4468580484390259
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.0521391509937406,
+        "RMS": 1.0251688362288092,
+        "maximum_absolute": 1.2515397077904362
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0007674246854910693,
+        "RMS": 0.01051996080307343,
+        "maximum_absolute": 0.032655953631044454
+      }
+    },
+    {
+      "case": 18,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 19,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 500,
+      "incomplete_intervals": 100,
+      "required_boundary_Nm": {
+        "median": 0.09810222762885404,
+        "RMS": 0.1181616066589725,
+        "maximum_absolute": 0.22046155279088855
+      },
+      "approximate_PD_Nm": {
+        "median": -0.9024020135402679,
+        "RMS": 0.9262909408280886,
+        "maximum_absolute": 1.4517101049423218
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.0499830443682043,
+        "RMS": 1.023720211538056,
+        "maximum_absolute": 1.2614075149565283
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0007821619335823815,
+        "RMS": 0.010220449288100371,
+        "maximum_absolute": 0.03436791820001783
+      }
+    },
+    {
+      "case": 19,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 20,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 496,
+      "incomplete_intervals": 104,
+      "required_boundary_Nm": {
+        "median": 0.092471544159514,
+        "RMS": 0.11238794397786665,
+        "maximum_absolute": 0.18814338701223104
+      },
+      "approximate_PD_Nm": {
+        "median": -0.8936108946800232,
+        "RMS": 0.9223610190869,
+        "maximum_absolute": 1.3975287675857544
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.033588964686086,
+        "RMS": 1.0182551548142638,
+        "maximum_absolute": 1.2228224934518064
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0004654228583256259,
+        "RMS": 0.012518701448479556,
+        "maximum_absolute": 0.033889859157282265
+      }
+    },
+    {
+      "case": 20,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 21,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 496,
+      "incomplete_intervals": 104,
+      "required_boundary_Nm": {
+        "median": 0.0924862556831334,
+        "RMS": 0.11243908716066463,
+        "maximum_absolute": 0.18519338078224962
+      },
+      "approximate_PD_Nm": {
+        "median": -0.8995093405246735,
+        "RMS": 0.9227974731613776,
+        "maximum_absolute": 1.3734275102615356
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.033621190713291,
+        "RMS": 1.0184674150849986,
+        "maximum_absolute": 1.2151551453503728
+      },
+      "armature_acceleration_Nm": {
+        "median": 9.378790645775403e-05,
+        "RMS": 0.012351304595069921,
+        "maximum_absolute": 0.03874379309839471
+      }
+    },
+    {
+      "case": 21,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 22,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 508,
+      "incomplete_intervals": 92,
+      "required_boundary_Nm": {
+        "median": 0.11596728308739987,
+        "RMS": 0.13343149821397146,
+        "maximum_absolute": 0.2655630570546511
+      },
+      "approximate_PD_Nm": {
+        "median": -0.9029210209846497,
+        "RMS": 0.9376084819760935,
+        "maximum_absolute": 1.582051157951355
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.05070674827796,
+        "RMS": 1.040567623286459,
+        "maximum_absolute": 1.3434681870630254
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0006485581253046213,
+        "RMS": 0.014309751388462804,
+        "maximum_absolute": 0.04730915917510181
+      }
+    },
+    {
+      "case": 22,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    },
+    {
+      "case": 23,
+      "side": "right",
+      "window": [
+        8.0,
+        11.0
+      ],
+      "intervals": 600,
+      "available_intervals": 508,
+      "incomplete_intervals": 92,
+      "required_boundary_Nm": {
+        "median": 0.1170713071364729,
+        "RMS": 0.13369441101687252,
+        "maximum_absolute": 0.26123259160935736
+      },
+      "approximate_PD_Nm": {
+        "median": -0.9003682732582092,
+        "RMS": 0.9371807203603266,
+        "maximum_absolute": 1.569290280342102
+      },
+      "telemetry_minus_boundary_Nm": {
+        "median": -1.0527019416366572,
+        "RMS": 1.0402485709965634,
+        "maximum_absolute": 1.3252563287405659
+      },
+      "armature_acceleration_Nm": {
+        "median": 0.0002841651376150889,
+        "RMS": 0.014278821450967273,
+        "maximum_absolute": 0.04627066747239228
+      }
+    },
+    {
+      "case": 23,
+      "side": "right",
+      "window": [
+        11.0,
+        13.0
+      ],
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "required_boundary_Nm": null,
+      "approximate_PD_Nm": null,
+      "telemetry_minus_boundary_Nm": null,
+      "armature_acceleration_Nm": null
+    }
+  ],
+  "case_intervals_per_foot": 24000,
+  "foot_case_intervals": 48000,
+  "limitations": [
+    "Terminal feet have no model descendants; a single-body impulse balance is used. Joint origin/axis come from recorded parent poses and unchanged model frames.",
+    "Finite5ms impulses are represented by an equivalent force/couple at the midpoint joint origin with normalized mean axis. Solver-internal application times and moving-axis impulses are unobserved.",
+    "Authored inertia, frozen COM/mass and configured gravity retain294 limitations; no effective-live rotor/spatial armature model is available. Armature times raw-velocity difference is only a separately reported scale.",
+    "Only intervals with zero enclosing non-foot normal history and wrong resultants are summarized; this does not rule out cancelling/unrecorded external forces.",
+    "Approximate PD telemetry is never used in the boundary inverse calculation and is not direct solver/hardware effort. A difference cannot uniquely identify drive, constraint, bias, sampling or inertia cause.",
+    "No controller, damping/gain, solver flag, quiet guard, physical criterion or reported effort result is changed. No physical trial/PPO/holdout/video motion is added."
+  ],
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/substep_states.npz": "d278effc5fee7d511d54d205d0a69c76ce0c381e41866ba8affe97cd68817cab",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/actuator_metadata.json": "3c40b6bbea84e429bf60a0cf7bccd11e0a1e51e36ef9c1bcd105e1ec8474585b",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/implicit_launches.npz": "48959d0cfdb3e4baf09f20bd67949df7e100a431fa79f1077876ab34159ceb73",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_dynamics_screen_v3_290/inertial_model.json": "1ffd883425d2ecf8d80f50796883d33f1373e4419e15d41667431fe2935eb117",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_audit_260/contact_wrenches.json": "01faf7bcb0c4d0f3a66116342cf3eea91e60eddecd1cfda5581559b7a60e3996",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/momentum_balance_294/arrays.npz": "f896316b8f4c43c1975c1918b955e8ce1a288ac0e64f6d5f24689f4b8394eabd",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/momentum_audit_295/independent_audit.json": "14cbdf5a6ebb9e9aeebdf88a5dc2e69a3b55e644e99c480746c0c822c8987923",
+    "/home/kadir/humanoid-sitting/scripts/diagnose_low_seat_ankle_impulse_296.py": "0a7831f2bd9b74d765152473bde4d1d6d9c0793b45563f9342b95c369b1f14e0"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false,
+  "repair_complete": false
+}

@@ -1,0 +1,830 @@
+{
+  "passed": true,
+  "surface": "sitting",
+  "evaluations": {
+    "fixed_01": {
+      "count": 14,
+      "successes": 4,
+      "physical_failures": 0,
+      "standing_count": 2,
+      "standing_successes": 0,
+      "standing_physical_failures": 0,
+      "failures_by_flag": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      },
+      "successes_by_stage": {
+        "0": {
+          "count": 2,
+          "success": 0
+        },
+        "1": {
+          "count": 2,
+          "success": 0
+        },
+        "2": {
+          "count": 2,
+          "success": 0
+        },
+        "3": {
+          "count": 2,
+          "success": 0
+        },
+        "4": {
+          "count": 2,
+          "success": 0
+        },
+        "5": {
+          "count": 2,
+          "success": 2
+        },
+        "6": {
+          "count": 2,
+          "success": 2
+        }
+      },
+      "max_command_change_100ms": 0.0,
+      "command_envelope_error": 0.0,
+      "reference_other_joint_error": 0.0,
+      "constant_uncontrolled_commands": true,
+      "constant_fixed_commands": true,
+      "geometry": [
+        {
+          "case": 0,
+          "stage": 0,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.065157890319802,
+          "max_normal_deg": 0.17857484553139472,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 1,
+          "stage": 0,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.065157890319802,
+          "max_normal_deg": 0.17859723017347032,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 2,
+          "stage": 1,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.1008014678954856,
+          "max_normal_deg": 0.21702763862190358,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 3,
+          "stage": 1,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.1008014678954856,
+          "max_normal_deg": 0.21715668457339105,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 4,
+          "stage": 2,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.0532667636871116,
+          "max_normal_deg": 0.24554610853650863,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 5,
+          "stage": 2,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.0532965660094993,
+          "max_normal_deg": 0.245607926125728,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 6,
+          "stage": 3,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.9863009452819602,
+          "max_normal_deg": 0.29514598882219556,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 7,
+          "stage": 3,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.986226439475991,
+          "max_normal_deg": 0.29497324226960575,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 8,
+          "stage": 4,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.840388774871804,
+          "max_normal_deg": 0.361902615468185,
+          "moving_samples": 10,
+          "moving_missing": 0
+        },
+        {
+          "case": 9,
+          "stage": 4,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.840195059776284,
+          "max_normal_deg": 0.3619317226368775,
+          "moving_samples": 10,
+          "moving_missing": 0
+        },
+        {
+          "case": 10,
+          "stage": 5,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.6219377517699973,
+          "max_normal_deg": 0.22219309919131977,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 11,
+          "stage": 5,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.621684432029702,
+          "max_normal_deg": 0.22217189204737028,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 12,
+          "stage": 6,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.716068387031533,
+          "max_normal_deg": 0.3007899394800131,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 13,
+          "stage": 6,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.7156958580016868,
+          "max_normal_deg": 0.300835600892601,
+          "moving_samples": 0,
+          "moving_missing": 0
+        }
+      ]
+    },
+    "old_reference_01": {
+      "count": 14,
+      "successes": 10,
+      "physical_failures": 4,
+      "standing_count": 2,
+      "standing_successes": 0,
+      "standing_physical_failures": 2,
+      "failures_by_flag": {
+        "fall": 4,
+        "forbidden": 4,
+        "torque": 0,
+        "impact": 4,
+        "joint_limit": 0
+      },
+      "successes_by_stage": {
+        "0": {
+          "count": 2,
+          "success": 0
+        },
+        "1": {
+          "count": 2,
+          "success": 0
+        },
+        "2": {
+          "count": 2,
+          "success": 2
+        },
+        "3": {
+          "count": 2,
+          "success": 2
+        },
+        "4": {
+          "count": 2,
+          "success": 2
+        },
+        "5": {
+          "count": 2,
+          "success": 2
+        },
+        "6": {
+          "count": 2,
+          "success": 2
+        }
+      },
+      "max_command_change_100ms": 0.010000467300415039,
+      "command_envelope_error": 0.0,
+      "reference_other_joint_error": 2.3124361048232345e-07,
+      "constant_uncontrolled_commands": true,
+      "constant_fixed_commands": false,
+      "geometry": [
+        {
+          "case": 0,
+          "stage": 0,
+          "samples": 21,
+          "valid": 21,
+          "max_offset_mm": 2.0864367485046165,
+          "max_normal_deg": 0.19436018839886487,
+          "moving_samples": 32,
+          "moving_missing": 0
+        },
+        {
+          "case": 1,
+          "stage": 0,
+          "samples": 21,
+          "valid": 21,
+          "max_offset_mm": 2.086377143859841,
+          "max_normal_deg": 0.19436400119748248,
+          "moving_samples": 32,
+          "moving_missing": 0
+        },
+        {
+          "case": 2,
+          "stage": 1,
+          "samples": 18,
+          "valid": 18,
+          "max_offset_mm": 2.1016061305999534,
+          "max_normal_deg": 0.22988615280199687,
+          "moving_samples": 26,
+          "moving_missing": 0
+        },
+        {
+          "case": 3,
+          "stage": 1,
+          "samples": 18,
+          "valid": 18,
+          "max_offset_mm": 2.101635932922341,
+          "max_normal_deg": 0.2301188756494485,
+          "moving_samples": 26,
+          "moving_missing": 0
+        },
+        {
+          "case": 4,
+          "stage": 2,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.053117752075173,
+          "max_normal_deg": 0.3219200845128785,
+          "moving_samples": 67,
+          "moving_missing": 0
+        },
+        {
+          "case": 5,
+          "stage": 2,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.0532965660094993,
+          "max_normal_deg": 0.32190460703607343,
+          "moving_samples": 67,
+          "moving_missing": 0
+        },
+        {
+          "case": 6,
+          "stage": 3,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.981830596923806,
+          "max_normal_deg": 0.3346356226364054,
+          "moving_samples": 50,
+          "moving_missing": 0
+        },
+        {
+          "case": 7,
+          "stage": 3,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.9818753004073875,
+          "max_normal_deg": 0.3346755985517194,
+          "moving_samples": 50,
+          "moving_missing": 0
+        },
+        {
+          "case": 8,
+          "stage": 4,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.8356353044509666,
+          "max_normal_deg": 0.3620951613535097,
+          "moving_samples": 35,
+          "moving_missing": 0
+        },
+        {
+          "case": 9,
+          "stage": 4,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.8358141183852927,
+          "max_normal_deg": 0.3621496446755265,
+          "moving_samples": 35,
+          "moving_missing": 0
+        },
+        {
+          "case": 10,
+          "stage": 5,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.6998410224914329,
+          "max_normal_deg": 0.2744691747455332,
+          "moving_samples": 14,
+          "moving_missing": 0
+        },
+        {
+          "case": 11,
+          "stage": 5,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.6998410224914329,
+          "max_normal_deg": 0.2744368958029722,
+          "moving_samples": 14,
+          "moving_missing": 0
+        },
+        {
+          "case": 12,
+          "stage": 6,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.7158150672912376,
+          "max_normal_deg": 0.3007366805167177,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 13,
+          "stage": 6,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.7156958580016868,
+          "max_normal_deg": 0.3007921817552939,
+          "moving_samples": 0,
+          "moving_missing": 0
+        }
+      ]
+    },
+    "reference_validation_01": {
+      "count": 14,
+      "successes": 14,
+      "physical_failures": 0,
+      "standing_count": 2,
+      "standing_successes": 2,
+      "standing_physical_failures": 0,
+      "failures_by_flag": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      },
+      "successes_by_stage": {
+        "0": {
+          "count": 2,
+          "success": 2
+        },
+        "1": {
+          "count": 2,
+          "success": 2
+        },
+        "2": {
+          "count": 2,
+          "success": 2
+        },
+        "3": {
+          "count": 2,
+          "success": 2
+        },
+        "4": {
+          "count": 2,
+          "success": 2
+        },
+        "5": {
+          "count": 2,
+          "success": 2
+        },
+        "6": {
+          "count": 2,
+          "success": 2
+        }
+      },
+      "max_command_change_100ms": 0.010000467300415039,
+      "command_envelope_error": 0.0,
+      "reference_other_joint_error": 2.3124361048232345e-07,
+      "constant_uncontrolled_commands": true,
+      "constant_fixed_commands": false,
+      "geometry": [
+        {
+          "case": 0,
+          "stage": 0,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.0885825157165305,
+          "max_normal_deg": 0.31972648013857,
+          "moving_samples": 104,
+          "moving_missing": 0
+        },
+        {
+          "case": 1,
+          "stage": 0,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.088552713394143,
+          "max_normal_deg": 0.3198031650287285,
+          "moving_samples": 104,
+          "moving_missing": 0
+        },
+        {
+          "case": 2,
+          "stage": 1,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.1023809909820335,
+          "max_normal_deg": 0.32439755042214163,
+          "moving_samples": 88,
+          "moving_missing": 0
+        },
+        {
+          "case": 3,
+          "stage": 1,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.102410793304421,
+          "max_normal_deg": 0.32428508849140886,
+          "moving_samples": 88,
+          "moving_missing": 0
+        },
+        {
+          "case": 4,
+          "stage": 2,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.05302834510801,
+          "max_normal_deg": 0.3345649933551249,
+          "moving_samples": 63,
+          "moving_missing": 0
+        },
+        {
+          "case": 5,
+          "stage": 2,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.0532965660094993,
+          "max_normal_deg": 0.33466595929165305,
+          "moving_samples": 63,
+          "moving_missing": 0
+        },
+        {
+          "case": 6,
+          "stage": 3,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.9816517829894797,
+          "max_normal_deg": 0.3438548187376496,
+          "moving_samples": 52,
+          "moving_missing": 0
+        },
+        {
+          "case": 7,
+          "stage": 3,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.9818753004073875,
+          "max_normal_deg": 0.34386500961374233,
+          "moving_samples": 52,
+          "moving_missing": 0
+        },
+        {
+          "case": 8,
+          "stage": 4,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.8448144197463767,
+          "max_normal_deg": 0.3561467114207289,
+          "moving_samples": 35,
+          "moving_missing": 0
+        },
+        {
+          "case": 9,
+          "stage": 4,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.845172047615029,
+          "max_normal_deg": 0.3561255657760876,
+          "moving_samples": 35,
+          "moving_missing": 0
+        },
+        {
+          "case": 10,
+          "stage": 5,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.6987979412078635,
+          "max_normal_deg": 0.27315520889407663,
+          "moving_samples": 14,
+          "moving_missing": 0
+        },
+        {
+          "case": 11,
+          "stage": 5,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.6988873481750266,
+          "max_normal_deg": 0.2731933058082513,
+          "moving_samples": 14,
+          "moving_missing": 0
+        },
+        {
+          "case": 12,
+          "stage": 6,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.715666055679299,
+          "max_normal_deg": 0.3007465711545388,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 13,
+          "stage": 6,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.7160087823867576,
+          "max_normal_deg": 0.30074859111685326,
+          "moving_samples": 0,
+          "moving_missing": 0
+        }
+      ]
+    },
+    "smoke_evaluation_01": {
+      "count": 14,
+      "successes": 14,
+      "physical_failures": 0,
+      "standing_count": 2,
+      "standing_successes": 2,
+      "standing_physical_failures": 0,
+      "failures_by_flag": {
+        "fall": 0,
+        "forbidden": 0,
+        "torque": 0,
+        "impact": 0,
+        "joint_limit": 0
+      },
+      "successes_by_stage": {
+        "0": {
+          "count": 2,
+          "success": 2
+        },
+        "1": {
+          "count": 2,
+          "success": 2
+        },
+        "2": {
+          "count": 2,
+          "success": 2
+        },
+        "3": {
+          "count": 2,
+          "success": 2
+        },
+        "4": {
+          "count": 2,
+          "success": 2
+        },
+        "5": {
+          "count": 2,
+          "success": 2
+        },
+        "6": {
+          "count": 2,
+          "success": 2
+        }
+      },
+      "max_command_change_100ms": 0.010000467300415039,
+      "command_envelope_error": 0.0,
+      "reference_other_joint_error": 2.3124361048232345e-07,
+      "constant_uncontrolled_commands": true,
+      "constant_fixed_commands": false,
+      "geometry": [
+        {
+          "case": 0,
+          "stage": 0,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.0890593528747337,
+          "max_normal_deg": 0.3195619494977394,
+          "moving_samples": 105,
+          "moving_missing": 0
+        },
+        {
+          "case": 1,
+          "stage": 0,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.0890593528747337,
+          "max_normal_deg": 0.3198581509802145,
+          "moving_samples": 104,
+          "moving_missing": 0
+        },
+        {
+          "case": 2,
+          "stage": 1,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.102738618850686,
+          "max_normal_deg": 0.32435478191399386,
+          "moving_samples": 87,
+          "moving_missing": 0
+        },
+        {
+          "case": 3,
+          "stage": 1,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.102738618850686,
+          "max_normal_deg": 0.32446089546702545,
+          "moving_samples": 88,
+          "moving_missing": 0
+        },
+        {
+          "case": 4,
+          "stage": 2,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.05302834510801,
+          "max_normal_deg": 0.3343137991201193,
+          "moving_samples": 64,
+          "moving_missing": 0
+        },
+        {
+          "case": 5,
+          "stage": 2,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 2.0532965660094993,
+          "max_normal_deg": 0.33449300240897495,
+          "moving_samples": 64,
+          "moving_missing": 0
+        },
+        {
+          "case": 6,
+          "stage": 3,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.9816517829894797,
+          "max_normal_deg": 0.3441627613006062,
+          "moving_samples": 52,
+          "moving_missing": 0
+        },
+        {
+          "case": 7,
+          "stage": 3,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.9818753004073875,
+          "max_normal_deg": 0.34383973475801055,
+          "moving_samples": 52,
+          "moving_missing": 0
+        },
+        {
+          "case": 8,
+          "stage": 4,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.8454104661941306,
+          "max_normal_deg": 0.35631844066052043,
+          "moving_samples": 35,
+          "moving_missing": 0
+        },
+        {
+          "case": 9,
+          "stage": 4,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.8449336290359275,
+          "max_normal_deg": 0.3563085483995402,
+          "moving_samples": 35,
+          "moving_missing": 0
+        },
+        {
+          "case": 10,
+          "stage": 5,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.6985148191451804,
+          "max_normal_deg": 0.2731247971873285,
+          "moving_samples": 14,
+          "moving_missing": 0
+        },
+        {
+          "case": 11,
+          "stage": 5,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.698470115661599,
+          "max_normal_deg": 0.2731439843477001,
+          "moving_samples": 13,
+          "moving_missing": 0
+        },
+        {
+          "case": 12,
+          "stage": 6,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.715472340583779,
+          "max_normal_deg": 0.3007975503448163,
+          "moving_samples": 0,
+          "moving_missing": 0
+        },
+        {
+          "case": 13,
+          "stage": 6,
+          "samples": 101,
+          "valid": 101,
+          "max_offset_mm": 1.7154127359390037,
+          "max_normal_deg": 0.3007102755809947,
+          "moving_samples": 0,
+          "moving_missing": 0
+        }
+      ]
+    }
+  },
+  "startups": {
+    "fixed_01": {
+      "root": 0.0,
+      "q": 0.0,
+      "command": 0.0,
+      "geometry": 0.0,
+      "sensor_history": 0.0
+    },
+    "old_reference_01": {
+      "root": 0.0,
+      "q": 0.0,
+      "command": 0.0,
+      "geometry": 0.0,
+      "sensor_history": 0.0
+    },
+    "reference_validation_01": {
+      "root": 0.0,
+      "q": 0.0,
+      "command": 0.0,
+      "geometry": 0.0,
+      "sensor_history": 0.0
+    },
+    "smoke_evaluation_01": {
+      "root": 0.0,
+      "q": 0.0,
+      "command": 0.0,
+      "geometry": 0.0,
+      "sensor_history": 0.0
+    }
+  },
+  "reset_isolation": true,
+  "changed_weights": {
+    "actor_state_dict": [
+      "distribution.log_std_param",
+      "mlp.0.weight",
+      "mlp.0.bias",
+      "mlp.2.weight",
+      "mlp.2.bias",
+      "mlp.4.weight",
+      "mlp.4.bias"
+    ],
+    "critic_state_dict": [
+      "mlp.0.weight",
+      "mlp.0.bias",
+      "mlp.2.weight",
+      "mlp.2.bias",
+      "mlp.4.weight",
+      "mlp.4.bias"
+    ]
+  },
+  "smoke_budget": {
+    "updates": 2,
+    "transitions": 2048,
+    "active": 2048,
+    "warmup": 0
+  }
+}

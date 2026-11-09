@@ -1,0 +1,38 @@
+{
+  "utc": "2026-10-17T23:04:21.621563+00:00",
+  "scope": "One complete nominal knee-hold landing coordination, zero physics.\nKeep330 lift/foot translation/rotation/endpoint/COM prescription. At its saved\nswing knee maximum, coordinate further pelvis descent with foot lowering to\nhold that NOMINAL knee angle, then continue the complete double-support approach.\nNo added feedback authority or claim about actual measured velocity.\n",
+  "case": 2,
+  "height_m": 0.024274582606774276,
+  "peak_knot": 55,
+  "peak_u": 0.8125,
+  "nominal_peak_knee_rad": 1.0280132412591372,
+  "original_landing_knee_rad": 0.9331056180263754,
+  "construction": "Retain all records through original swing knee peak exactly. Subsequent swing knots solve rootxy,progress and12leg angles for both fixed foot targets, prescribedCOMxy and fixed nominal peak knee. Progress is nondecreasing, bounded by originalprogress and1. Remaining approach remaps from the resulting landingprogress to1. Finalapproach/load exact330.",
+  "maximum_complete_path_builds": 1,
+  "maximum_parameter_searches": 0,
+  "maximum_constraint_nfev_per_changed_swing_knot": 80,
+  "nominal_knee_constraint_rad": 1e-07,
+  "nominal_com_constraint_m": 1e-07,
+  "inputs": "Actual saved1s development q/IMU/geometry/command only; no runtime.",
+  "fixed_prior_parameters": [
+    0.13249248997109972,
+    0.4351349021283094,
+    -0.1883883483030849,
+    0.023619600000000004
+  ],
+  "fixed_endpoint": true,
+  "fixed_prior_swing_rotation_targets": true,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/build_low_seat_coordinated_landing_336.py": "3ec6a358d22ef1a4431e147bf52ebe0bfe65860945d99c03fadf6d0214f647ff",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_lift_path_330/results.json": "495f70a6764e7c821bc8a1f2e0ad3819d45b3841b795bbd6153410aec39f3831",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_stance_screen_89/results.json": "3cc9f72110080a0f207c81b0f29e1c1eee60a9eff9e8323abc07a582f949cbf2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+    "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json": "69e0920e2bec88a43b7a6dc41d0fc361500d060ef09e3e3a07bb04cdaf569584",
+    "/data/humanoid-sitting-perception/contact_effort_repair_01/plane_calibration.json": "6a6a0f078ced3d3510897e96670c26226dee25d495653a222cf1dd52e97a8009",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/trace.npz": "c380356202f31c64d5667f48bd2f8d13d3391c6f751dd19db2dc002101d020d2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/sensor_inputs.npz": "468d3637bc09c404b000b15f48bdbc1f2e8c6aacc23e51d966c2604801afb6d6"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}

@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "gate": {
+    "passed": true,
+    "included_stable": 12,
+    "included_strict": 12,
+    "included_physical": 0,
+    "included_trials": 12,
+    "excluded_stable": 0,
+    "excluded_physical": 2,
+    "excluded_trials": 6
+  },
+  "finite_changed": {
+    "actor": true,
+    "critic": true
+  },
+  "smoke_transitions": 17280,
+  "smoke_checkpoint": "1c7b42a1381ab8c2d553b6a34174b86b135ca99481883eee9cd53c48418fef8e",
+  "exact_startup_and_teacher_prefix": true,
+  "control_accounting": {
+    "control_ticks": 2520,
+    "teacher_ticks": 9000,
+    "excluded_ticks": 5710,
+    "control_by_case": [
+      210,
+      210,
+      210,
+      210,
+      210,
+      210,
+      0,
+      0,
+      210,
+      210,
+      210,
+      210,
+      0,
+      0,
+      0,
+      0,
+      210,
+      210
+    ],
+    "earliest_control_s": [
+      15.0,
+      15.0,
+      15.0,
+      15.0,
+      15.0,
+      15.0,
+      1000000000.0,
+      1000000000.0,
+      15.0,
+      15.0,
+      15.0,
+      15.0,
+      1000000000.0,
+      1000000000.0,
+      1000000000.0,
+      1000000000.0,
+      15.0,
+      15.0
+    ],
+    "active_physics": 17230,
+    "indexed_warmup": 50
+  },
+  "main_training_started": false
+}

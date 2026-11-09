@@ -1,0 +1,103 @@
+LOW-SEAT SITTING REPAIR — READABLE TASK SUMMARY
+Prepared October 20, 2026. Evidence checkpoint: 2026-10-20 07:42:11 UTC.
+
+The task is unfinished. We have not obtained a validated repair for the remaining eight failing conditions, and the planned new PPO comparison has not started.
+
+The actual goal
+
+Repair slipping and unwanted housing contact when the humanoid sits on low, positively sloped seats; keep every condition the current controller already handles successfully; then train and compare two small PPO runs under a frozen budget, evaluate a reserved test set, and deliver an updated complete video under one minute. This is a simulation study with measured-sensor restrictions. It does not establish real-robot or unrestricted sitting ability.
+
+Where we are now
+
+  Best verified controller: current_retention_09, also called best09.
+  Development trials:      72 matched trials, each a complete 20 seconds.
+  Clean trials:            64; all 64 must be preserved.
+  Stable trials:           70.
+  Slipping trials:         8, still unresolved.
+  Housing-contact trials:  2. These counts overlap other failure categories.
+  New main PPO training:   NOT STARTED.
+  Reserved 24-trial test:  NOT OPENED.
+  Study workers:           None observed at the checkpoint above.
+
+The remaining conditions are 36 cm/+15 degrees, 36 cm/+20 degrees, 37 cm/+16.25 degrees, and 36.5 cm/+17.5 degrees, each in two placements.
+
+What we have actually been doing
+
+1. Physical simulation experiments and model corrections.
+
+   Early work tested landing timing, balance, arm counterbalance, feedback, measured-geometry coverage, and guarded contact transfer. Some experiments improved the baseline; many failed. We also discovered that certain model screens were incomplete: a tilted endpoint could violate the resting definition, the cooked collision surface differed from the raw planning mesh, and being motionless while hovering did not count as sitting.
+
+   The most recent physical candidate recorded in the current status is experiment 273. Its selected cases could hover without establishing legal seat load or completing the required quiet release. It was rejected. It did not replace best09.
+
+2. Offline construction of an entire admissible sitting motion.
+
+   Work shifted toward finding a complete motion that simultaneously obeys foot placement, balance, housing clearance, joint limits, actuator command rates, filter behavior, contact transfer, timing, and finite-precision execution rules. These calculations run on saved model data; they are different from running the robot in simulation.
+
+   Some offline paths satisfied geometry and static checks but failed command rates, target bounds, timing, or finite execution checks. For example, the latest new nonlinear-model construction, 484, improved several constraints but still failed the original command-rate and target constraints. It was not accepted as an executable repair.
+
+3. Large linear feasibility problems and attempts to simplify them.
+
+   To construct a valid next motion update, we built a linear program: a large collection of linear inequalities and equalities representing the saved motion and its restrictions. A “witness” means a complete vector that independently passes those constraints. It is not yet a successful physical motion.
+
+   The original representation had 78,791 variables. We tried exact removal of duplicate or implied rows, alternative optimization formulations, and algebraic elimination of variables determined by mechanical equalities. Each substantive change required a separate proof/audit so that fewer equations would not silently remove physical requirements.
+
+   Several bounded solver attempts finished without an admissible witness. Two other algorithm families also stopped without one. A partial solution in experiment 512 failed omitted constraints and is explicitly unusable. Solver timeouts do not prove that the original problem is impossible.
+
+4. The most recent numerical solver attempt: experiment 598.
+
+   Exact algebra reduced the optimizer to 10,541 coordinates, with other coordinates reconstructed through saved equations. However, the resulting inequalities became much denser: about 6.10 million nonzero coefficients. Fewer variables did not demonstrate a faster or better problem.
+
+   A single cold HiGHS interior-point solve was attempted under a 45-second total allowance, including preparation. It reported six interior-point iterations, exceeded the charged allowance by about 0.68 seconds, and returned NO candidate vector. The charged total was 45.683 seconds; only about 26.878 seconds remained as the backend allowance after preparation.
+
+   Therefore no reconstruction, new model evaluation, new physical trial, or PPO update followed. Audit 599 verified the accounting and saved result. Report 600 and closure record 601 document that failure to obtain a witness; “closure” means closing that experiment's records, not completing the user task.
+
+5. The most recent scientific experiment: 602, independently audited in 603.
+
+   We tested whether one local pressure degree of freedom could be removed while preserving every affected modeled output. An exact calculation showed that it could not, for the specific saved block being tested. This is a useful negative result about that proposed simplification, not a proof that sitting or the full optimization problem is infeasible. No new reduced problem or solver was launched.
+
+6. What the recent scheduled updates have been doing.
+
+   Since 603, work has consisted of reading source and saved records, developing conditional mathematical ideas, and preserving those notes. There have been no new scientific solver runs, robot motions, or policy updates in that period.
+
+   Ideas considered include projecting variables through interval bounds, using ordered chains or command inequalities to imply other constraints, and identifying necessary box facets. Their prerequisites have not been established on the saved problem. The latest local draft proposes simplifying a two-coordinate family of arm inequalities, but even its exact two-coordinate support assumption is unproved. It is not an approved next experiment.
+
+Why the history became hard to follow
+
+The record numbers identify preparations, executions, independent audits, reports, and preservation operations—not successive successful controllers or robot trials. Each scheduled message repeatedly carried the full accumulated history and restrictions. A Python process exiting successfully, an arithmetic audit passing, and a robot succeeding are three separate outcomes.
+
+The provenance is detailed, but the communication became dominated by that provenance and by design notes. I should have kept the unchanged physical result prominent. The recent research has not delivered the intended repair, and the amount of activity should not be mistaken for progress on the eight physical failures.
+
+What should happen in the new conversation
+
+Start by reviewing whether the current optimization route has a credible path to a complete witness within the existing limits. Identify one substantive next construction, its exact assumptions, its likely reduction, its total costs, its success/failure test, and what a successful result would enable physically. Do not treat another generic design note or a new record number as a milestone.
+
+No complete experiment 604 is selected or ready. Existing stopped solvers and the rejected local-pressure proposal remain terminal. Changing their time limit, tolerances, backend, or parameters is not an authorized retry. Nor may physical criteria be weakened. Any new experiment requires the full equations, initialization, resource accounting, finite return procedure, and independent audit to be frozen before launch.
+
+The intended sequence remains:
+  a valid offline motion -> execution/filter/runtime checks -> all 72 development
+  trials with 64 successes retained and all 8 failures removed -> two frozen PPO
+  runs -> fixed development selections -> reserved 24-trial evaluation -> updated
+  complete comparison and video.
+
+Files in this transfer
+
+  CONTINUE_IN_NEW_CHAT.txt   Operational handoff and essential constraints.
+  RUN_HISTORY.csv           Compact map of the main experiment families.
+  governing_context.txt     Exact saved scheduler context, including historical
+                            restrictions and failures; retained for lookup.
+  evidence/                 Copies of key records, notes, and supplemental files.
+  transfer_checkpoint.json  Fresh read-only remote status and worker check.
+  MANIFEST.json             SHA256 hashes and source locations for this bundle.
+
+This is a portable conversation handoff and evidence bundle. It is NOT a complete
+copy of the scientific datasets, environment, multi-gigabyte matrices, or video.
+Those remain in the original workspace and on kfuUbuntu. No scientific result was
+changed or recomputed to prepare this transfer.
+
+Current report:
+  /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_600/findings.html
+Current video, unchanged (58.4 seconds):
+  /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/all_attempts_video_307/all_attempts.mp4
+
+The original conversation and all original evidence remain available. This
+summary is an entry point; it does not erase older failed attempts or constraints.

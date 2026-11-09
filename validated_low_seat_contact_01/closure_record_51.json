@@ -1,0 +1,59 @@
+{
+  "utc": "2026-10-17T08:08:32.266613+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "notes": "Latest completed diagnosis51 \u2014 collision-model discrepancy; physical repair remains unresolved.\n\nNo new physical trajectory, optimizer update, retention run or fresh holdout ran in44\u201351. All model/query/report jobs completed. Best verified controller remains current_retention_09:64/72clean,70stable,8slipping,2housing; all60original successes plus4gains retained. Preserve all64. No PPO admission or promotion.\n\nImportant new finding: configured USD raw mesh vertices EXACTLY match the frozen planner model, but installed PhysX convex-cooking queries simplify them. In eight dual40 late/first-event samples, queried cooked pelvis support surface is5.03\u20135.95mm above the raw-model surface. Example36cm/+20: at14.1s before14.16s housing contact, raw pelvis gap\u22122.467mm, cooked+2.969mm, legal seat load0. Other sampled target cases similarly show delayed legal support. This locates a concrete collision-representation discrepancy; not a live-shape dump or sole-cause proof. All120old episodes included;0.1s poses bracket0.02s labels. Actual contact failures remain failures; the separate0.9rad>40deg terminal-planning error also remains.\n\nQueries47/49 completed32mesh hulls; six primitive colliders remain unchanged. Original assets, all controls/rewards/criteria, joint frames/inertia/defaults and perception inputs stayed unchanged. Zero environment creation/reset/physics steps. Successful49 records timeline0\u21920. cooked_model_50/model.json is a SEPARATE OFFLINE PLANNING collision model, NOT a replacement for the visual/perception self-mask or current sensors. No actor/runtime uses it. Contact/rest offsets were unauthored/unavailable; do not assume0. Six primitive colliders retain prior analytic sampling. Query data are standalone cooked representations, not certified live collision shapes.\n\nCorrected endpoint50 repeats42's fixedfeet, fixed\u2212.35rad symmetric shoulder/elbow, rootx[\u2212.28,\u2212.10],pitch5\u201338deg, two bounded starts/static assumption, unchanged3mmclearance/5mmCoP/15mmpatch screens. Foot-only best tested clearances:36/+15=3.922mm,36/+20=.482mm,37/+16.25=3.731mm,36.5/+17.5=2.458mm. Hypothetical seat-supported endpoints:4.530/2.146/4.729/3.662mm. Deepest remains below3mm even assuming contact. Tested best pitches now14.45\u201321.80deg. These are LOCAL endpoints, not paths, actual support, dynamic safety or impossibility proofs. Do not execute endpoint-only solutions, drag/teleport feet, or unload before measured support. Next work needs a complete feasible contact transition, with clearance/loading/support/rate constraints using the corrected collision representation. No blind gain/arm/rate sweeps.\n\nEarlier new offline44 evolving material-contact rolling path38\u21920deg: all4 wholepath gates failed, peaks.2067\u2013.2115rad/s>.175; cases36/+20 and36.5/+17.5 also violated3mmclearance. No physical run. Raw-model upperbody first-moment bound45 added18.48mm forwardCOM but deepest clearance only2.166mm; no executable arm proposal/self-collision/path check. Independent modelaudit_v2_46 passed unchanged arithmetic tolerances, retaining failed model gates. Independent_model_audit_51 passed allsourcehashes,32mesh identity, unchanged6primitives/metadata, zeroquerytick accounting and all8 corrected endpoint-clearance replays. These are audit passes, NOT physical admission.\n\nNarrow recoveries preserved:44 NumPy bool JSON serialization (versioned output, model unchanged); audit46 trace starts.1s vs sensor history0s caused wrong1.1s inputs (v2 matches1s, unchanged1e\u22129);47 unsupported--headless rejected before initialization; completed five47 queries survived shutdown before post-context summary write, recovered without requery;49 assumedmesh_0 path failed on ankle/Cube after one valid query. v2 uses observed paths and reuses all6completed, queriesonly26missing, persists summary before shutdown. No physical reruns or tolerances/criteria changes.\n\nLocal progress_report_51 copied under validated_low_seat_contact_01:14original SHA entries verified;comparison.png/contact_model_comparison.png/findings.html and endpoint/event tables visually inspected. URLhttp://127.0.0.1:8807/progress_report_51/findings.html. It labels repair unresolved and no new PPO/holdout/effort. Previous reports stay unchanged. No new physical effort result; prior09 equals61111 commonclean, but vsselected62111@8 old20commonclean whole20torque\u00b2+4.38%,final5+25.45%. Do not imply gains.\n\nFreshholdout closed; main PPO63111/63117 unstarted. Only after removing8failures AND retaining64 matched full20s successes across72development trials may the small8-update/seed PPO preparation proceed. Existing protocol/criteria/budgets remain. See closure_record_51.json,prior_recheck_after_collision_model_51.json,completed_probes_preservation_51.json. Automation remainsACTIVE;taskunfinished.\n",
+  "report": {
+    "utc": "2026-10-17T08:06:11.270107+00:00",
+    "repair_complete": false,
+    "task_complete": false,
+    "main_training_started": false,
+    "fresh_holdout_started": false,
+    "policy_promoted": false,
+    "new_physical_ticks": 0,
+    "new_optimizer_updates": 0,
+    "best_current": {
+      "clean": 64,
+      "stable": 70,
+      "slip": 8,
+      "housing_contacts": 2,
+      "trials": 72,
+      "original_union_retained": 60,
+      "new_successes_retained": 4,
+      "warnings": 50,
+      "strict_clean": 22
+    },
+    "finding": "Queried cooked pelvis contact surface is about5.03\u20135.95mm above raw-planner hull in the selected recorded late/first-event samples. Raw vertices match configured asset exactly; collision approximation, not a different source mesh, explains this model discrepancy. Recorded force timing is consistent with it, not a single-cause proof. Actual contacts and unsupported outcomes remain failures.",
+    "geometry_only": true,
+    "recorded_episodes_reviewed": 120,
+    "queried_meshes": 32,
+    "primitives_unchanged": 6,
+    "model50_scope": "Separate offline planning collision model; never replace current sensors or visual self-mask with cooked collision points.",
+    "no_new_effort_result": true,
+    "next": "Design a complete support/clearance-feasible approach using the corrected collision representation, including an actual legal load transition and existing40deg terminal support. Deep36/+20 still fails3mm even with hypothetical seat support; do not execute endpoints or repeat blind gain/rate/arm changes. Retain64 and remove8 before PPO."
+  },
+  "local_review": {
+    "utc": "2026-10-17T08:07:43.072455+00:00",
+    "original_sha_entries": 14,
+    "mismatches": [],
+    "visually_checked": [
+      "comparison.png",
+      "contact_model_comparison.png",
+      "findings.html",
+      "endpoint table",
+      "contact event table"
+    ],
+    "scope": "Interim development/model diagnosis. No new physical trajectories, PPO,holdout or task completion.",
+    "report_manifest_sha256": "d333b6fd199cf0b25ef824fc0c4da3f21f0861128ab161993ac8e50425139a0b"
+  },
+  "preserved_prior_count": 24242,
+  "preserved_previous_evidence_count": 2539,
+  "new_completed_evidence_count": 2652,
+  "preservation_sha256": "4aef7e9236de6bd2544c613742864c9fc85cb5efd4b69a659a1970af8173e305",
+  "handoff_sha256": "5b57371feb2aed7e7933162258808f9aced1d61c23b8b4070cdae6aa6ef4ecf9",
+  "protocol_sha256": "96a29b09b7358daa4a5264103646dbd2685e1597e97f55aaf59a4ef4dab17f19",
+  "new_physical_ticks": 0,
+  "new_optimizer_updates": 0,
+  "workers_running": false,
+  "next": "Design a complete support/clearance-feasible approach using the corrected collision representation, including an actual legal load transition and existing40deg terminal support. Deep36/+20 still fails3mm even with hypothetical seat support; do not execute endpoints or repeat blind gain/rate/arm changes. Retain64 and remove8 before PPO."
+}

@@ -1,0 +1,91 @@
+{
+  "utc": "2026-10-19T11:07:29.038467+00:00",
+  "compile_actual_exit": 0,
+  "compile_exit_evidence": {
+    "actual_exit": 0,
+    "observed_chunk": "049288",
+    "local_compile_chunk": "b2dbc0",
+    "source_copy_chunk": "a5e144",
+    "utc": "2026-10-19T11:07:04.909757+00:00"
+  },
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "foot_block_evidence_preservation_587.json",
+      "files": 13093,
+      "passed": true
+    },
+    {
+      "manifest": "foot_block_supplemental_587.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "workers": [],
+  "source_input_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/low_seat_foot_encoding_588.py": "05f1ff72873dc56833c023b256a91e6a86af3dc886564abd905f3d2901cbffdc",
+    "/home/kadir/humanoid-sitting/scripts/prepare_low_seat_foot_encoding_588.py": "825bde9fc59d952d233dd03a2dc725b2df7f8f7f1485b680ec428af019905501",
+    "/home/kadir/humanoid-sitting/scripts/freeze_low_seat_foot_encoding_588.py": "dddd898967eb3b5db40c7684a4a0d9978cd8d4eb4ecbfda39fa57f4efb7cf991",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_foot_encoding_589.py": "1626fe0e25c3690e405df86d54b93c0f8d62011ee17f4d95ec33947b05c13cf4",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_preparation_586/maps.npz": "d27aabda78166903eb502a07e5373119b7365857f76f0985dc85988922e2d402",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_preparation_586/arrays.npz": "713d979fff90043e3531612d5a0c9226bad1a97a6d38801be25b62ed84cf38ed",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_preparation_586/preparation.json": "d3f2aa8582202706ae6dde561f1d2fc71b37b4f1d2999de3d5eb15e9a3e75140",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_preparation_586/original_row_ids.npy": "886382a8b4c8e91422a55364aedc9ab0d26b6cd7ce32f889db0fa54a493bcee6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_preparation_586/rational_inequalities.jsonl": "d1e4693568bd09bcdf7253a526daa034370a6f750402f250b49deb696ca4f569",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_preparation_586/rational_equalities.jsonl": "5b90b3b4af59d92f6b1f0b6570a38e3c2e164da6af5e354b8870c0accc86b0d8",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_preparation_586/block_graphs.jsonl": "8216c0f10de6b76339620ec9312e3d1e959480a2666e314c79e76382b6bd4a31",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_preparation_586/SHA256.json": "0973ff5291a4e38b9232f9a230d7d206570b48bf721b11e91744f05d0db9cfb5",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_audit_587/equality_reverse_verified.npy": "7e0fca85f41fc5981d7079de7eb7f3647b10e24f1cec56da7dd823dc540367ae",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_audit_587/independent_audit.json": "a566edac65602f72c44f4ce447757092680df0b180c11fbe4c12c12ee1468fbc",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_audit_587/original_retained_columns_verified.npy": "9f77e30eadee318260220d853db3919dadfe0577f80fc16a3bef527f777cd89b",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_audit_587/inequality_reverse_verified.npy": "d0136cfe78ae5c062a863be2f596db8f367fefcc20672148cb374dcb508cd278",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_audit_587/block_identities_verified.npy": "9464b0dafba1dbf47a776faf5d17f345bb2656a3fc845bdbe99f22e799eb706d",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_audit_587/SHA256.json": "4cb059d46d9a98c8d35d048cb2916844c813d9798f34749e96fc06f1c3863b81",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_preparation_580/maps.npz": "d68679d31d22a2e420b94037977b9a0f0f1c4264c1321cb0f4b37be9f18c0bd1",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_preparation_580/arrays.npz": "b22f09e00de28ae070c29066fe14fb57f1e3606387087de3ef7984b95c2d31c7",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_preparation_580/retained_equality.npz": "6692f30dc2ebe0d4fa684a59cc1cb3555783a5aa87d3871cf352c3e6786cbf7c",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_preparation_580/rounding_certificates.jsonl": "9f26a407ed644ff155c5af49fb22ffc24862e4e428ca686691cc6e95223a3a57",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_preparation_580/original_bounds.npy": "e7885d020ae571f8df5ade399d53d9be63a37161a5e437757efa2eb1a5ecd84e",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_preparation_580/preparation.json": "45ff5f4ad914eb8a119519c83188ce4e9d012df7735081f2d9f0c94976f9b806",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_preparation_580/matrix.npz": "2c878cc832f6e0b13ed060ffa71a2c93766bb916ea2db44458d71c76ec971fca",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_preparation_580/original_row_ids.npy": "886382a8b4c8e91422a55364aedc9ab0d26b6cd7ce32f889db0fa54a493bcee6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_preparation_580/box_exponents.npy": "47903b21bcb2804c748f8fe87d33350dbf0b380b5d4d778a8c9d058bdc9ce330",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_preparation_580/SHA256.json": "7a76d8ff1e6c99526e7ad826710b5eb715bcdf3fe9ba3c08f5cc307e543430a6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_audit_581/independent_audit.json": "20aafc7a1312b895962584837c8de07fd015b7d31d282acb13fe568a6f1a2573",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_audit_581/RHS_floor_verified.npy": "d0136cfe78ae5c062a863be2f596db8f367fefcc20672148cb374dcb508cd278",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_audit_581/nearest_coefficients_verified.npy": "94e7762b15eb6f0ca058c559ef3ec52527e8361234d74031f8245cb0d3752762",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_audit_581/row_error_support_verified.npy": "d0136cfe78ae5c062a863be2f596db8f367fefcc20672148cb374dcb508cd278",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_audit_581/outer_box_verified.npy": "5ef1955e5db809099813c326caaf36cc3ba8a7a546ede7cc2e7008ea9a0197b2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_audit_581/SHA256.json": "5b74744dc4d9fa889bbc4c98801b9ebcf07c95dca862fbd359c5890b1acbbbee",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_launch_586.json": "68c2710d861d0b5592160c22dbc048a5ddea4ed340e2cedd96fd20e6f6d8db87",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_preparation_exit_586.json": "f374aa3a057a607cfa57c3b3357d08c4c4d19ea2f8c66531040a98b51984eca9",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/foot_block_audit_exit_587.json": "76b927fa670e3eda724a73cec353a080a216567e26d4d68405ded5b1b0ef9c40",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_launch_580.json": "85747e1c7609c175e83777d4c677f7aa21e99b0fe0dd198513ee8d5db1ad42f7",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_preparation_exit_580.json": "8adec7abdb110ba743b8c717cfddb71a200fc84eede4651a9469a8012ddc7ee6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/graph_encoding_audit_exit_581.json": "c8ccc8712b6a790b3be624983a83cfdfbc41cb334071c9e470ce73e8dc4fb835",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/preparation_handoff_record_587.json": "9bbf500ad82c570eea70377b889ec797037d12a745da698598fd9e4de7b98425",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_585.json": "d838b7282b3d6240143081240f2b4137b9695203ce38c764a8a1343e7c33ede1"
+  },
+  "specification": {
+    "scope": "NEW numeric INPUT preparation for586 exact rational coupled-foot dimension reduction. No LP/primalpoint/graphlift/actualmechanics. Complete numerical algorithm,wholepath and return auditor remain absent.",
+    "source": "Immutable586 rational A AND rational AFFINE E/RHS;587 inverse/graph/reverse proofs inherited byhash. No block inversion/substitution/old578 graph proof or580 encoding repeated. Original472actualX/Y/J,490canonicalaux anddrops unchanged.",
+    "domain": "Project the ALREADY certified580 explicit OUTER coordinate box by586 retained_columns into the SAME original coordinates. Prove index association using580 retained_columns and586 original_columns,not an assumption about changed coefficients. No new endpoint derivation or power2 encoding. This is a new14636-coordinate domain projection,not reuse of580 row compensation. Original586 native DIRECTbounds remain infinite and are preserved separately. Impose every projected numeric bound explicitly;scalaroriginal78790 at14635 retains original[0,U]. Exact586 feasibility lifts to578 so inherited580 coordinate enclosures apply to the projected coordinates; approximate points do not inherit omitted-coordinate feasibility.",
+    "inequality": "For every NEW586 rational inequality a.v<=b,encode each coefficient once nearest-evenfinitebinary64 ahat. Compute exact e=a-F(ahat),M=sum max(e*l,e*u) over projected explicit bounds. bhat=floor64(b-M) by direct integer IEEE encoding. Save M,b-M,downward rounding slack. All265967rows/1891613slots retained,even roundedzero slots;no scaling/threshold/rowremoval/adaptiveguard. ExactREAL numeric inequality satisfaction insidebox implies exactrational inequality satisfaction. No tolerance-equivalence.",
+    "equality": "For EVERY5462 NEW586 rational AFFINE equality c.v=d,encode each coefficient chat and RHS dhat ONCE nearest-evenfinitebinary64. Define e=c-F(chat),delta=d-F(dhat),L=sum min(e*l,e*u)-delta,H=sum max(e*l,e*u)-delta. Save exact L,H,delta,rho=max(abs(L),abs(H)). For any REALv inside explicitbox, exactrational equality residual=(chat.v-dhat)+error with error in[L,H]. E remains an equality numerically,not replaced by inequalities orzeroRHS. All5462rows/52506slots retained,including1366zeroE/scalarzero. No claim that chat.v=dhat implies exact c.v=d.",
+    "equality_policy": "The COMPLETE numeric system is an APPROXIMATE EQUALITY SURROGATE,NOT a certified REALinner/equivalent feasible set of586. Only its inequality block has the sufficient-inner implication. Equality defect intervals bound coefficient/RHS encoding error ONLY,not backend dot-product error or solver residual. No tolerance/guard change and no guaranteed feasibility/existence. Future return must independently evaluate EVERY exact rational586 equality at unchanged backendcoordinates and reject if exact residual exceeds unchanged1e-9;also all exact586 inequalities,fulloriginal checks andnumericKKT. Worst-case interval need not establish an unconditional residual budget;no adaptive reencoding or coefficientrepair based on certificate sizes.",
+    "finite": "Future14636retainedvaluesBITWISEbackend,scalarALREADYexact0(+/-0),no postsetting. Exactnewfootgraphs thenold578auxgraphs on EXACTUNROUNDED intermediate31016-vector;roundeach64155eliminatedoriginalcoordinateONCE. No universalfiniteextension/no clip/repair/normalize. Fullnumeric588,exact586/578/572/570/546/516/FULL490 primal/equality/bound/requiredstationarity/absgap<=1e-9 inside1e-7.573analyticlower_t1 onlyinherited,no newdualproof/primalpair. NumericalKKTNOTexactfeasibility/optimality/objectiveerrorbound.",
+    "wholepath": "Freeze complete initialization/algorithm/return and independentactualstateaudit BEFOREanyLP. SAMEcompleteoriginaldirectioncomputesmodeledphi/theta/ACTUAL(mu+theta)/2ceiling/prediction,primaryNEVERmapped/notassumedphi0. Actualinterior needs freshFULLoriginal490 conservativebranch;zero-facegraphs inapplicable. Newstate/trust freshassembly/validproofs beforeLPinside45sTOTALMAINentrybeforeimports/hash/preparation/backend/allKKT.40GiB/120sparent,24major48LP120maps5dyadics/trust/guards unchanged. Exactoriginalunscaledeta>0before490encoder,newXfreshmechanics/J. Allphysical/filter/runtime/72retention/PPOgates unchanged.",
+    "audit": "Standalone589 importsNOproducer/optimizer. Verify ALLnewnearestcoefficient/RHS cells by exact adjacentbinary64midpoint/tie-even comparisons; independent integer-cross-difference products forA support andE lower/upperdefects; ALLA directedRHS successor floors; projectedbox originalcoordinate association andcost/maps/IDs. No oldencoding/inversion/graph/analyticdualproof replay.",
+    "resources": "ONE240sproducer andONE240saudit TOTALbefore scientificimports/inputhashes,40GiBaddressspace,checksbetweenoperations,peakUNMEASURED. Preparationcaps NOT45srobotLPextension. Failureterminal,no completedarithmeticreplay.",
+    "physical_admission": false,
+    "complete_numerical_algorithm_exists": false,
+    "primal_witness_exists": false,
+    "complete_numeric_system_real_inner_subset_claimed": false
+  },
+  "disk_free_bytes": 26259779584,
+  "physical_admission": false
+}

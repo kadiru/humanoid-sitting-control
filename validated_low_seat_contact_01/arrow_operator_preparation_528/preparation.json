@@ -1,0 +1,81 @@
+{
+  "utc": "2026-10-19T00:12:16.406272+00:00",
+  "passed": true,
+  "specification": {
+    "scope": "NEW lossless row-local arrow factorization of weighted regularized normal operators for the two SAVED522 projected numeric matrices. Preparation only; no LP algorithm, budget, witness or candidate.",
+    "inputs": "SAVED522 primary/witness and523 proof plus490 coordinate labels. No projection, pair proof, quotient grouping, old local inverse, root, model, finite map or LP repeated. The witness remains an illustrative assembly, not an actual primary-dependent ceiling.",
+    "partition": "Candidate local variables are native rootxy/f/legs15 and COM3 per nonfixed state. Joint g/p/load/drop and all command auxiliaries plus epigraph/eta are separators. If any row touches candidate locals in multiple states, promote ALL candidate-local columns on that row to separators. This deterministic one-pass promotion cannot introduce a new multi-state local row. No variable or row is deleted.",
+    "exact_structure": "Every original stored nonzero is copied into exactly one of B=A[:,local] or C=A[:,separator]. Every row of B has support in at most one state block. Thus B.T*diag(d)*B is exactly block diagonal in real arithmetic for ANY diagonal d. Signs, tiny nonzero coefficients, all rows, bounds, objective and equalities remain unchanged.",
+    "operator": "For strictly positive finite diagonal d,w define K=diag(w)+A.T*diag(d)*A. With local first, G=diag(w_local)+B.T*diag(d)*B is block diagonal, V=B.T*diag(d)*C, T=diag(w_separator)+C.T*diag(d)*C. K is SPD since v.T*K*v=sum(w*v*v)+sum(d*(A*v)^2)>0 for v!=0. Each G block is SPD.",
+    "factorization": "K=[[I,0],[V.T*G^-1,I]]*diag(G,S)*[[I,G^-1*V],[0,I]], S=T-V.T*G^-1*V. This identity is an exact-real algebraic theorem; a rounded Cholesky solve is not an exact inverse. S is SPD by the minimization identity y.T*S*y=min_x (x,y).T*K*(x,y).",
+    "sparse_action": "S*y=w_separator*y+C.T*(d*(C*y-B*solve(G,B.T*(d*(C*y))))). Never form K, V, T, S or a dense separator Schur matrix. Store only B,C and small local Cholesky blocks. RHS condenses to b_separator-C.T*(d*(B*solve(G,b_local))); recovery is solve(G,b_local-B.T*(d*(C*y))).",
+    "numerical_example": "ONE NEW operator-action/RHS example per saved system. Deterministic algorithm-unused separator y and b. d_i=2^(-2*frexp(max(1,sum(abs(A_i)))) exponent), w=1. This dyadic weighting is ONLY an algebra exercise, not LP row scaling, guards, tolerances, an IPM iterate, barrier weights or a physical model. Cholesky factors are of NEW weighted Gram blocks, not old L/K/Q mechanics matrices. No LP or Schur equation is solved.",
+    "validation": "Independent529 must verify every copied coefficient/support, partition and equality/cost/bound provenance exactly; check the new saved factors and actions against the original matrix without repeating the local factorizations/solves. Relative algebra residual threshold1e-11 is not a physical or LP threshold, a directed-rounding proof, or a claim about future solver weights.",
+    "limitations": "This does not specify initialization, feasibility restoration, barrier/centering updates, regularization convergence, a Schur linear solver/preconditioner, stopping/budget or final LP witness construction. A future complete method must account for those and justify its resources before launch. Arbitrary changing weights need fresh factors and residual checks. No speedup, conditioning improvement, timeout cause or feasibility claim.",
+    "gates": "522 exact-real projection differs from its rounded numeric matrix. Future retained LP coordinates stay unchanged; exact endpoint/midpoint binary64 backsubstitution, all original490 checks1e-7, actual primary-derived ceiling, exact interval eta>0 and immutable490 encoding remain mandatory. Every actual mechanics/geometry/filter/runtime/physical/PPO gate remains. No command-auxiliary Fourier-Motzkin elimination is attempted.",
+    "lp_calls": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "new_actual_path": false,
+    "physical_admission": false
+  },
+  "systems": {
+    "primary": {
+      "local_blocks": 1365,
+      "maximum_local_size": 17,
+      "local_factor_entries": 394485,
+      "local_cholesky_factorizations": 1365,
+      "local_triangular_rhs_solves": 2730,
+      "new_operator_examples": 1,
+      "full_normal_or_schur_matrix_assembled": false,
+      "schur_equation_solved": false,
+      "weights_scope": "fixed algebra-only example; not barrier weights or LP scaling",
+      "shape": [
+        408842,
+        56951
+      ],
+      "source_nnz": 2147925,
+      "local_nnz": 981864,
+      "separator_nnz": 1166061,
+      "initial_local": 24570,
+      "promoted_columns": 1365,
+      "cross_state_rows": 1466,
+      "local_columns": 23205,
+      "separator_columns": 33746,
+      "retained_all_rows": true,
+      "changed_lp_coefficients": false
+    },
+    "witness": {
+      "local_blocks": 1365,
+      "maximum_local_size": 17,
+      "local_factor_entries": 394485,
+      "local_cholesky_factorizations": 1365,
+      "local_triangular_rhs_solves": 2730,
+      "new_operator_examples": 1,
+      "full_normal_or_schur_matrix_assembled": false,
+      "schur_equation_solved": false,
+      "weights_scope": "fixed algebra-only example; not barrier weights or LP scaling",
+      "shape": [
+        577755,
+        56951
+      ],
+      "source_nnz": 2697204,
+      "local_nnz": 1279890,
+      "separator_nnz": 1417314,
+      "initial_local": 24570,
+      "promoted_columns": 1365,
+      "cross_state_rows": 1466,
+      "local_columns": 23205,
+      "separator_columns": 33746,
+      "retained_all_rows": true,
+      "changed_lp_coefficients": false
+    }
+  },
+  "lp_calls": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "new_actual_path": false,
+  "physical_admission": false
+}

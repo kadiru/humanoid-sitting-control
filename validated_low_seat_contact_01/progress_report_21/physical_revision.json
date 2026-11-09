@@ -1,0 +1,26 @@
+{
+  "scope": "Pre-training research revision: selected measured low positive slopes14\u201318deg use an8\u201315s joint-space path to a0.9rad pelvis pitch,-0.17m rootx,nominal1mm pelvis gap. Command-arc timing keeps nominal rate<=0.15rad/s; applied slew and physical criteria unchanged. Original first10s lock explicitly becomes8s for six selected trials. All other episodes retain best guarded normal3s reference.",
+  "rationale": "Recorded inward/pitch tracking errors and narrow housing clearance motivated a rate-feasible path. Earlier Cartesian path failed its rate screen. Joint path passed only three geometries; deepest36cm/+20deg stays unchanged and unresolved. Model checks are not dynamic proof.",
+  "retains_parent": true,
+  "first_prefix_s": 8.0,
+  "unselected_first20_unchanged_required": true,
+  "physical_gpu": 1,
+  "trials": 24,
+  "active_ticks": 24000,
+  "initial_settling_excluded": 600,
+  "indexed_warmup": 0,
+  "optimizer_updates": 0,
+  "fresh_holdout": false,
+  "sources": {
+    "/home/kadir/humanoid-sitting/scripts/low_seat_joint_path_controller_17.py": "0da0da411bc63efacd5e74e53413eba5bbf0911eece6640d685e21d553fd9123",
+    "/home/kadir/humanoid-sitting/scripts/run_low_seat_joint_path_probe_17.py": "f6721730cc3f76b442c4fb953c53f3f6f1267465456650baca24128ae255f9ca",
+    "/home/kadir/humanoid-sitting/scripts/launch_low_seat_joint_path_17.py": "47a89db1694470bcc5c0cf8727673d8798582eccfc8d434f214ba6ed5d47343c",
+    "/home/kadir/humanoid-sitting/scripts/prepare_low_seat_joint_path_17.py": "48b2436d8402b5411a016e24bf813b7ca7e5d173de7c8c05dcdf4d72238513b9",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_joint_path_17.py": "609074d0ef8ec0405ffa2fbe4ff004abd941a80a08b2dcb20ed0d6860cc9b4e2",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_normal_duration_17.py": "b43d0631270ac8d842ab591598f224a2afb8de895e91fed51969b804aa809847",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_load_duration_17.py": "29ec385b502d8f86de446e2c4e9717ba6bc6564c87809cce82dc6d9a67de5dee",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_contact_duration_17.py": "4916a09b7b7517f248dde82c7180b51b42c6b6f36206b2ef4f75e03ebb90abd6"
+  },
+  "preparation_sha256": "c52420f284d857093b8910562f7b9a987edca2ac2a63268d958057678e1bf17d",
+  "config_sha256": "efe6f90adf6d1ca4507cbf2e528423a0cf1e29deb10578b897fcd990bd3ca3ab"
+}

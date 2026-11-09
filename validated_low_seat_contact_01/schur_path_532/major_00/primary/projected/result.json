@@ -1,0 +1,28 @@
+{
+  "status": 1,
+  "message": "45s total solver wall deadline",
+  "reason": "45s total solver wall deadline",
+  "elapsed_s": 45.007629787083715,
+  "elapsed_including_evidence_s": 45.528986787074246,
+  "statistics": {
+    "local_cholesky_blocks": 1365,
+    "local_rhs_blocks": 4995900,
+    "K_solves": 235,
+    "CG_iterations": 3191,
+    "schur_matvecs": 3191,
+    "maximum_K_residual": 8.693108940054246e-10,
+    "DR_iterations": 233
+  },
+  "candidate": false,
+  "success": false,
+  "iterations": 233,
+  "crossover_iterations": 0,
+  "actual_lp_call": true,
+  "problem_scope": "robot_projected_LP",
+  "full_size_robot_LP": true,
+  "terminal_stage": "DR",
+  "physical_admission": false,
+  "method": "hsd-schur-dr",
+  "peak_memory_measured": false,
+  "trace_policy": "scalar ledger plus only last K equation and last DR step; factors saved once"
+}

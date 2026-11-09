@@ -1,0 +1,23 @@
+{
+  "cause": "Audit deserialized runtime float32 command/sensor arrays as float64. This changed command-arc retiming slightly: q replay error2.418e-7 against unchanged2e-7 limit.",
+  "repair": "Separately versioned audit reconstructs original stored dtypes; first diagnostic gives q error1.071e-7. No tolerance enlarged; no physics, controller, geometry or outcomes changed.",
+  "scope": "All six new physical housing-contact regressions remain rejected regardless of audit result.",
+  "original_hashes": {
+    "audit_low_seat_joint_path_17.py.log": "0593f661068ed0fbbb7365ce28fe746e3f53465a4231a5d124001c7d4b47bf2d",
+    "status_joint_path_17.json": "07b8a2edb227fbf900c16eb4ac9f5d60f0e4f9681b1da3444bd7b80bba8c7490",
+    "audit_low_seat_joint_path_17.py": "609074d0ef8ec0405ffa2fbe4ff004abd941a80a08b2dcb20ed0d6860cc9b4e2",
+    "joint_path_replay_diagnosis_17.json": "c59149fa115fe93c7996645f180c9ebc4ea8f13e67d6d27fb72b9a8fc5741291"
+  },
+  "additional_cause": "Replay also used newly recorded inertial metadata instead of the frozen bridge_inertial model. Local COM values differ by sub-micrometre reconstruction rounding. The runtime correctly used the frozen model.",
+  "final_repair": "v3 reconstructs float32 sensors/commands and reads the exact bridge_inertial file and verifies its recorded hash. All2e-7 replay limits remain unchanged. No physics or criteria change.",
+  "all_originals_sha256": {
+    "audit_low_seat_joint_path_v2_17.log": "cfaba75c9769279ea430218bfb186a95451239cb36765df73162113d5c357baf",
+    "recovery_stage1.json": "0746cc27e2b62903154864a6e658bd3ba82f96d3bbd5b19124639c59326d3431",
+    "audit_low_seat_joint_path_17.py.log": "0593f661068ed0fbbb7365ce28fe746e3f53465a4231a5d124001c7d4b47bf2d",
+    "audit_low_seat_joint_path_v2_17.py": "5f0e699d3bc60da4956f2599be6427bfdf77f5a7426975403d33e54d174d96c1",
+    "status_joint_path_17.json": "07b8a2edb227fbf900c16eb4ac9f5d60f0e4f9681b1da3444bd7b80bba8c7490",
+    "audit_low_seat_joint_path_17.py": "609074d0ef8ec0405ffa2fbe4ff004abd941a80a08b2dcb20ed0d6860cc9b4e2",
+    "joint_path_replay_diagnosis_17.json": "c59149fa115fe93c7996645f180c9ebc4ea8f13e67d6d27fb72b9a8fc5741291"
+  },
+  "additional_real_failure": "With exact dtypes/frozen model, planner replay passed. Exact unselected episode preservation FAILED: measured geometry first differs8.2s, before command differences after10s; maximum body component2.08mm,q0.00265rad. No tolerance change or acceptance. v4 completes remaining reporting while setting passed=false and exact_preservation_gate_passed=false."
+}

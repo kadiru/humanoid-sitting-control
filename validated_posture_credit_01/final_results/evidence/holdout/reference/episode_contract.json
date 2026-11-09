@@ -1,0 +1,29 @@
+{
+  "options": {
+    "episode_mode": "zero",
+    "episode_updates": 16,
+    "episode_calibration": "/data/humanoid-sitting-perception/posture_credit_01/preflight/calibrate/episode_calibration.json",
+    "episode_span": 0.008
+  },
+  "sensor_inputs": 414,
+  "macro_actions": 3,
+  "names": [
+    "symmetric_hip_pitch",
+    "symmetric_knee",
+    "symmetric_ankle_pitch"
+  ],
+  "span_rad": 0.008,
+  "decision_time_s": 11.0,
+  "held_until_s": 20.0,
+  "initial_settle_excluded": 400,
+  "all_starts_standing": true,
+  "fingers_and_other17_body_residuals_zero": true,
+  "baseline_reward_only": true,
+  "updates": 0,
+  "active": 16000,
+  "warmup": 0,
+  "transitions": 16000,
+  "episodes": 16,
+  "optimizer_actor_steps": 0,
+  "optimizer_critic_steps": 0
+}

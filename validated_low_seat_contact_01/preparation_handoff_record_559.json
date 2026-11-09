@@ -1,0 +1,416 @@
+{
+  "utc": "2026-10-19T05:43:25.845094+00:00",
+  "scope": "Preserve558/559 definition-lift preparation only; sealed557 and actual path remain unchanged.",
+  "preparation_only": true,
+  "new_closure": false,
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_557.json",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_557.json",
+      "files": 12406,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_557.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 12456,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/definition_evidence_preservation_559.json",
+  "manifest_sha256": "77aeee3947d226298127c5cb10c53cacb6ccaab457583bc3063d814fda23a776",
+  "workers": [],
+  "actual_exits": {
+    "definition_compile_exit_558.json": {
+      "actual_exit": 0,
+      "observed_chunk_id": "43daad",
+      "utc": "2026-10-19T05:37:47.131112+00:00",
+      "scope": "All four new558/559 sources py_compile; no arithmetic execution"
+    },
+    "definition_freeze_exit_558.json": {
+      "actual_exit": 0,
+      "observed_chunk_id": "93305b",
+      "session_id": 92784,
+      "utc": "2026-10-19T05:39:16.993703+00:00"
+    },
+    "definition_preparation_exit_558.json": {
+      "actual_exit": 0,
+      "observed_chunk_id": "f976b4",
+      "session_id": 17359,
+      "scope": "One symbolic preparation558 completed",
+      "utc": "2026-10-19T05:39:47.647855+00:00"
+    },
+    "definition_audit_exit_559.json": {
+      "actual_exit": 0,
+      "observed_chunk_id": "d78a8b",
+      "session_id": 29178,
+      "utc": "2026-10-19T05:40:29.328241+00:00"
+    },
+    "definition_index_exit_559.json": {
+      "actual_exit": 0,
+      "observed_chunk_id": "325ffe",
+      "utc": "2026-10-19T05:40:45.545927+00:00"
+    },
+    "definition_preservation_compile_exit_559.json": {
+      "actual_exit": 0,
+      "observed_chunk_id": "4534a7",
+      "session_id": null,
+      "scope": "Index559 and preservation559 compiled",
+      "utc": "2026-10-19T05:39:47.647949+00:00"
+    }
+  },
+  "preparation": {
+    "utc": "2026-10-19T05:39:25.430757+00:00",
+    "passed": true,
+    "preparation_only": true,
+    "specification": {
+      "scope": "NEW exact extended formulation factoring each eligible saved pair of opposite native mechanics rows through ONE new definition variable. Preparation only; not a solver, robot witness or actual path.",
+      "source": "Immutable546 ORIGINAL-coordinate source subset and original490 row IDs; inherit547/517 proofs byhash. ALL78791 source variables, INCLUDING21840tau auxiliaries and original scalar at78790, remain unchanged. New definition variables appended AFTER original scalar.",
+      "pair_policy": "Only original490 consistency IDs k+i and k+m+i, k=331495,m=68250,i ascending, present together in546 are eligible. Verify identical native index pattern and EXACT opposite binary64 coefficients; scalar coefficients copied separately. Lift iff native length>=4, so net stored coefficient saving length-3 is positive. No hashing/regrouping by coefficient rays, forest, endpoint test, bound propagation or old proof replay.",
+      "primal": "For paired a.x+gamma_plus*t<=bplus and -a.x+gamma_minus*t<=bminus introduce free z, equality a.x-z=0, and retain BOTH inequalities as z+gamma_plus*t<=bplus and -z+gamma_minus*t<=bminus. All RHS/scalar coefficients/other rows unchanged. Original E padded with zeros; definition RHS0, bounds(-inf,+inf),cost0.",
+      "exact_real_theorem": "Every original real feasible w extends uniquely by z=a.x. Every extended feasible (w,z) projects to the identical w, since adding/subtracting the definition equality reconstructs each source row EXACTLY. Original costs/domains and objective retained. This is exact-real equality over stored binary64 coefficients without inversion,multiplication or coefficient rounding; no original variable is changed or removed.",
+      "finite_limit": "The exact real z=a.x need not be binary64 even when w is. NO universal binary64 extension or equality of finite/tolerance-feasible sets is claimed. Any future returned original78791 coordinates must remain BITWISE unchanged; discard only appended definitions. Never reconstruct/repair original native/scalar values from z. Full extended,546,516,FULL490 primal/equality/bound/KKT gates remain mandatory.",
+      "dual": "Let yplus,yminus be nonnegative paired inequality duals and nu the new equality dual for a.x-z=0. New-z stationarity is yplus-yminus-nu=0. When exact, nu=yplus-yminus and original native stationarity is identical after discarding nu and keeping all source inequality duals unchanged. Source equality/bound duals copied; appended free bounds have zero duals. All RHS and objective terms identical, so signed gaps agree. Finite z-stationarity errors can amplify through a; require full original stationarity and absolute gap<=1e-9, not inferred from the extended residual. No dual certificate computed here.",
+      "difference": "This shares a repeated dense local mechanics expression through an explicit defining equality, reducing stored nonzeros while ADDING variables/equalities. It is not496 inverse residual-coordinate substitution,522 torque elimination,538 scalar elimination,552 inward-bound domain change,516 regrouping,536 forest or a backend/metric retry. Original546 unbounded-native domain is retained;552 finite bounds are not used.",
+      "audit": "Independent559 imports no producer/solver. Check inheritedhashes, all eligible original-ID pair decisions, exact new equality coefficients, BOTH signed source-row reconstruction identities and dual column cancellation over Fractions, all untouched row/domain/cost/E/ID copies. No optimizer, old implication/endpoint/fixture/model/geometry replay.",
+      "future": "No560 numerical algorithm/child/whole-path wrapper/budget/sourcefreeze/candidate exists. A complete method must handle actual nonzero E, appended variables and original scalar at78790, original-domain/KKT projection, actual primary-derived interior ceiling, all state branches and unchanged45s/caps before any LP. Old illustrative witness ceiling never actual. Exact interval eta>0 before immutable490 encoder; newX fresh mechanics/J and all actual/filter/runtime/72retention/PPO gates.",
+      "resources": {
+        "preparation_wall_s": 240,
+        "independent_audit_wall_s": 240,
+        "address_space_GiB": 40,
+        "checks_between_operations": true,
+        "peak_memory_measured": false,
+        "LP_budget_unchanged_s": 45
+      },
+      "physical_admission": false,
+      "new_candidate": false
+    },
+    "systems": {
+      "primary": {
+        "source_shape": [
+          402487,
+          78791
+        ],
+        "source_inequality_nonzeros": 2049085,
+        "source_equality_shape": [
+          1366,
+          78791
+        ],
+        "extended_shape": [
+          402487,
+          136120
+        ],
+        "extended_inequality_nonzeros": 730937,
+        "extended_equality_shape": [
+          58695,
+          136120
+        ],
+        "extended_equality_nonzeros": 773732,
+        "definition_variables": 57329,
+        "source_variables_retained": 78791,
+        "original_scalar_column": 78790,
+        "source_inequalities_retained": 402487,
+        "definition_native_coefficients": 716403,
+        "net_nonzeros_removed": 544416,
+        "original_ID_pairs_considered": 68250,
+        "missing_one_or_both_source_rows": 0,
+        "present_low_degree_pairs_not_lifted": 10921,
+        "exact_opposite_pairs_lifted": 57329,
+        "real_projection_equivalence": true,
+        "finite_binary64_extension_guaranteed": false,
+        "source_coefficients_rounded": 0
+      },
+      "witness": {
+        "source_shape": [
+          568283,
+          78791
+        ],
+        "source_inequality_nonzeros": 2236454,
+        "source_equality_shape": [
+          1366,
+          78791
+        ],
+        "extended_shape": [
+          568283,
+          136120
+        ],
+        "extended_inequality_nonzeros": 918306,
+        "extended_equality_shape": [
+          58695,
+          136120
+        ],
+        "extended_equality_nonzeros": 773732,
+        "definition_variables": 57329,
+        "source_variables_retained": 78791,
+        "original_scalar_column": 78790,
+        "source_inequalities_retained": 568283,
+        "definition_native_coefficients": 716403,
+        "net_nonzeros_removed": 544416,
+        "original_ID_pairs_considered": 68250,
+        "missing_one_or_both_source_rows": 0,
+        "present_low_degree_pairs_not_lifted": 10921,
+        "exact_opposite_pairs_lifted": 57329,
+        "real_projection_equivalence": true,
+        "finite_binary64_extension_guaranteed": false,
+        "source_coefficients_rounded": 0
+      }
+    },
+    "elapsed_s": 3.2813128189882264,
+    "lp_calls": 0,
+    "small_examples": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physics_ticks": 0,
+    "new_solver": false,
+    "new_candidate": false,
+    "physical_admission": false,
+    "old_calculations_repeated": false
+  },
+  "independent_audit": {
+    "utc": "2026-10-19T05:40:05.151012+00:00",
+    "passed": true,
+    "scope": "Independent exact row-reconstruction/dual-column audit of558; no producer or optimizer import.",
+    "systems": {
+      "primary": {
+        "pair_ID_decisions_verified": 68250,
+        "lifted_pairs": 57329,
+        "signed_source_row_identities": 114658,
+        "dual_native_coefficient_identities": 1432806,
+        "new_coordinate_dual_cancellations": 114658,
+        "native_coefficients_stored_once": 716403,
+        "net_nonzeros_removed": 544416,
+        "unaltered_inequality_rows": 287829,
+        "new_shape": [
+          402487,
+          136120
+        ],
+        "new_equality_shape": [
+          58695,
+          136120
+        ],
+        "original_domain_cost_RHS_E_ID_copy_error": 0,
+        "exact_real_projection_and_objective_equivalence": true,
+        "finite_binary64_extension_claimed": false,
+        "old_517_547_proofs_repeated": false
+      },
+      "witness": {
+        "pair_ID_decisions_verified": 68250,
+        "lifted_pairs": 57329,
+        "signed_source_row_identities": 114658,
+        "dual_native_coefficient_identities": 1432806,
+        "new_coordinate_dual_cancellations": 114658,
+        "native_coefficients_stored_once": 716403,
+        "net_nonzeros_removed": 544416,
+        "unaltered_inequality_rows": 453625,
+        "new_shape": [
+          568283,
+          136120
+        ],
+        "new_equality_shape": [
+          58695,
+          136120
+        ],
+        "original_domain_cost_RHS_E_ID_copy_error": 0,
+        "exact_real_projection_and_objective_equivalence": true,
+        "finite_binary64_extension_claimed": false,
+        "old_517_547_proofs_repeated": false
+      }
+    },
+    "elapsed_s": 9.396904558991082,
+    "lp_calls": 0,
+    "small_examples": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physical_admission": false,
+    "preparation_only": true,
+    "no_producer_import": true,
+    "no_candidate_dual_or_primal_evaluated": true
+  },
+  "local_verification": {
+    "utc": "2026-10-19T05:41:15.518915+00:00",
+    "scope": "Local verification of two ORIGINAL manifests only; no arithmetic/model replay or new visual report",
+    "all_hashes_verified": true,
+    "manifests": [
+      {
+        "folder": "definition_preparation_558",
+        "entries": 15,
+        "original_manifest_sha256": "e1b28734fc47a6463a728c2ed1698e0977db5aea444be9a6a545bf2f4d74909a"
+      },
+      {
+        "folder": "definition_audit_559",
+        "entries": 7,
+        "original_manifest_sha256": "e406ab39a04ae91522bfea24157eab1ca65f23d049001f32e91c6bd7bf47610b"
+      }
+    ],
+    "entries": 22,
+    "new_html_report": false,
+    "new_video_render": false,
+    "new_candidate": false,
+    "physical_admission": false
+  },
+  "saved_scope": {
+    "utc": "2026-10-19T05:40:36.523414+00:00",
+    "scope": "Saved-only scope index; no matrix, proof, optimizer or model replay.",
+    "preparation_only": true,
+    "systems": {
+      "primary": {
+        "source_shape": [
+          402487,
+          78791
+        ],
+        "source_inequality_nonzeros": 2049085,
+        "source_equality_shape": [
+          1366,
+          78791
+        ],
+        "extended_shape": [
+          402487,
+          136120
+        ],
+        "extended_inequality_nonzeros": 730937,
+        "extended_equality_shape": [
+          58695,
+          136120
+        ],
+        "extended_equality_nonzeros": 773732,
+        "definition_variables": 57329,
+        "source_variables_retained": 78791,
+        "original_scalar_column": 78790,
+        "source_inequalities_retained": 402487,
+        "definition_native_coefficients": 716403,
+        "net_nonzeros_removed": 544416,
+        "original_ID_pairs_considered": 68250,
+        "missing_one_or_both_source_rows": 0,
+        "present_low_degree_pairs_not_lifted": 10921,
+        "exact_opposite_pairs_lifted": 57329,
+        "real_projection_equivalence": true,
+        "finite_binary64_extension_guaranteed": false,
+        "source_coefficients_rounded": 0
+      },
+      "witness": {
+        "source_shape": [
+          568283,
+          78791
+        ],
+        "source_inequality_nonzeros": 2236454,
+        "source_equality_shape": [
+          1366,
+          78791
+        ],
+        "extended_shape": [
+          568283,
+          136120
+        ],
+        "extended_inequality_nonzeros": 918306,
+        "extended_equality_shape": [
+          58695,
+          136120
+        ],
+        "extended_equality_nonzeros": 773732,
+        "definition_variables": 57329,
+        "source_variables_retained": 78791,
+        "original_scalar_column": 78790,
+        "source_inequalities_retained": 568283,
+        "definition_native_coefficients": 716403,
+        "net_nonzeros_removed": 544416,
+        "original_ID_pairs_considered": 68250,
+        "missing_one_or_both_source_rows": 0,
+        "present_low_degree_pairs_not_lifted": 10921,
+        "exact_opposite_pairs_lifted": 57329,
+        "real_projection_equivalence": true,
+        "finite_binary64_extension_guaranteed": false,
+        "source_coefficients_rounded": 0
+      }
+    },
+    "audit_systems": {
+      "primary": {
+        "pair_ID_decisions_verified": 68250,
+        "lifted_pairs": 57329,
+        "signed_source_row_identities": 114658,
+        "dual_native_coefficient_identities": 1432806,
+        "new_coordinate_dual_cancellations": 114658,
+        "native_coefficients_stored_once": 716403,
+        "net_nonzeros_removed": 544416,
+        "unaltered_inequality_rows": 287829,
+        "new_shape": [
+          402487,
+          136120
+        ],
+        "new_equality_shape": [
+          58695,
+          136120
+        ],
+        "original_domain_cost_RHS_E_ID_copy_error": 0,
+        "exact_real_projection_and_objective_equivalence": true,
+        "finite_binary64_extension_claimed": false,
+        "old_517_547_proofs_repeated": false
+      },
+      "witness": {
+        "pair_ID_decisions_verified": 68250,
+        "lifted_pairs": 57329,
+        "signed_source_row_identities": 114658,
+        "dual_native_coefficient_identities": 1432806,
+        "new_coordinate_dual_cancellations": 114658,
+        "native_coefficients_stored_once": 716403,
+        "net_nonzeros_removed": 544416,
+        "unaltered_inequality_rows": 453625,
+        "new_shape": [
+          568283,
+          136120
+        ],
+        "new_equality_shape": [
+          58695,
+          136120
+        ],
+        "original_domain_cost_RHS_E_ID_copy_error": 0,
+        "exact_real_projection_and_objective_equivalence": true,
+        "finite_binary64_extension_claimed": false,
+        "old_517_547_proofs_repeated": false
+      }
+    },
+    "new_definition_variables": 114658,
+    "new_definition_equalities": 114658,
+    "new_signed_source_row_identities": 229316,
+    "new_dual_native_coefficient_identities": 2865612,
+    "new_coordinate_dual_cancellations": 229316,
+    "net_nonzeros_removed": 1088832,
+    "lp_calls": 0,
+    "small_examples": 0,
+    "metric_calculations": 0,
+    "linear_system_solves": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physics_ticks": 0,
+    "new_numerical_algorithm": false,
+    "new_candidate": false,
+    "physical_admission": false,
+    "source_original_variables_retained_per_system": 78791,
+    "exact_real_projection_equivalence": true,
+    "finite_binary64_extension_guaranteed": false
+  },
+  "old_scientific_calculations_repeated": false,
+  "execution_recovery": false,
+  "completed_scientific_calculations_repeated": false,
+  "new_complete_numerical_algorithm": false,
+  "new_solver_exists": false,
+  "new_complete_path": false,
+  "lp_calls": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}

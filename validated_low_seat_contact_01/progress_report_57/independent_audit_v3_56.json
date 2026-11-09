@@ -1,0 +1,141 @@
+{
+  "utc": "2026-10-17T08:28:23.587667+00:00",
+  "passed": true,
+  "physical_admission": false,
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "holdout_used": false,
+  "source_hashes_passed": true,
+  "serialization_only_recovery_verified": true,
+  "endpoints": [
+    {
+      "case": 0,
+      "assumption": "foot_only_before_contact",
+      "clearance_m": 0.0071829362473419525,
+      "foot_shift_m": -0.059999999999908765,
+      "maximum_replay_error": 0.0,
+      "endpoint_screen_passed": true,
+      "physical_admission": false
+    },
+    {
+      "case": 0,
+      "assumption": "hypothetical_seat_supported_endpoint",
+      "clearance_m": 0.006100705156221716,
+      "foot_shift_m": -0.059999999999930276,
+      "maximum_replay_error": 0.0,
+      "endpoint_screen_passed": true,
+      "physical_admission": false
+    },
+    {
+      "case": 2,
+      "assumption": "foot_only_before_contact",
+      "clearance_m": 0.0030720532922788335,
+      "foot_shift_m": -0.06,
+      "maximum_replay_error": 0.0,
+      "endpoint_screen_passed": true,
+      "physical_admission": false
+    },
+    {
+      "case": 2,
+      "assumption": "hypothetical_seat_supported_endpoint",
+      "clearance_m": 0.0022524412806938124,
+      "foot_shift_m": -0.06,
+      "maximum_replay_error": 0.0,
+      "endpoint_screen_passed": false,
+      "physical_admission": false
+    },
+    {
+      "case": 6,
+      "assumption": "foot_only_before_contact",
+      "clearance_m": 0.006905155693196551,
+      "foot_shift_m": -0.06,
+      "maximum_replay_error": 0.0,
+      "endpoint_screen_passed": true,
+      "physical_admission": false
+    },
+    {
+      "case": 6,
+      "assumption": "hypothetical_seat_supported_endpoint",
+      "clearance_m": 0.005762058204014076,
+      "foot_shift_m": -0.06,
+      "maximum_replay_error": 0.0,
+      "endpoint_screen_passed": true,
+      "physical_admission": false
+    },
+    {
+      "case": 10,
+      "assumption": "foot_only_before_contact",
+      "clearance_m": 0.005409225882808298,
+      "foot_shift_m": -0.06,
+      "maximum_replay_error": 0.0,
+      "endpoint_screen_passed": true,
+      "physical_admission": false
+    },
+    {
+      "case": 10,
+      "assumption": "hypothetical_seat_supported_endpoint",
+      "clearance_m": 0.004263107827000592,
+      "foot_shift_m": -0.06,
+      "maximum_replay_error": 0.0,
+      "endpoint_screen_passed": true,
+      "physical_admission": false
+    }
+  ],
+  "steps": [
+    {
+      "shift_m": -0.06,
+      "sampled_nodes": 155,
+      "maximum_replay_error": 0.0,
+      "maximum_stance_target_motion_m": 0.0,
+      "minimum_lift_during_horizontal_translation_m": 0.03455407407407407,
+      "command_arc_rad": 2.545178358482455,
+      "necessary_command_seconds_at015": 16.96785572321637,
+      "necessary_command_seconds_with_initial_jump_at015": 17.05645653247849,
+      "initial_command_join_rad": 0.013290121389317733,
+      "kinematic_pose_arc_rad": 2.489181448426512,
+      "original_gate": {
+        "full_foot_pose": true,
+        "full_foot_rotation": false,
+        "static_support": true,
+        "floor": true,
+        "seat_clearance": true,
+        "command_joint_margin": true,
+        "necessary_time_before15s": false,
+        "frozen_nonleg_commands": true,
+        "fixed_14_fingers": true
+      },
+      "original_all_prerequisite_gates_passed": false,
+      "physical_admission": false,
+      "fixed14_fingers_exact": true,
+      "nonleg_commands_exact_recorded": true
+    },
+    {
+      "shift_m": -0.1,
+      "sampled_nodes": 155,
+      "maximum_replay_error": 0.0,
+      "maximum_stance_target_motion_m": 0.0,
+      "minimum_lift_during_horizontal_translation_m": 0.03455407407407407,
+      "command_arc_rad": 2.8687784684682938,
+      "necessary_command_seconds_at015": 19.125189789788624,
+      "necessary_command_seconds_with_initial_jump_at015": 19.213790599050743,
+      "initial_command_join_rad": 0.013290121389317733,
+      "kinematic_pose_arc_rad": 2.830286775152799,
+      "original_gate": {
+        "full_foot_pose": true,
+        "full_foot_rotation": false,
+        "static_support": true,
+        "floor": true,
+        "seat_clearance": true,
+        "command_joint_margin": true,
+        "necessary_time_before15s": false,
+        "frozen_nonleg_commands": true,
+        "fixed_14_fingers": true
+      },
+      "original_all_prerequisite_gates_passed": false,
+      "physical_admission": false,
+      "fixed14_fingers_exact": true,
+      "nonleg_commands_exact_recorded": true
+    }
+  ],
+  "limitations": "Numerical model/FK/clearance/CoP/command-arc replay only. Stepping samples hold stance target fixed and lift before horizontal swing; not a simulator step. Actual forces, dynamic ZMP/friction, continuous collision/IK, self-collision, sensing/tracking and subsequent contact transfer remain unvalidated. The recorded positive initial command join is additional required motion, not discarded. Static-source command bounds/timing are necessary screens, not dynamic certification. Failed model gates stay failed."
+}

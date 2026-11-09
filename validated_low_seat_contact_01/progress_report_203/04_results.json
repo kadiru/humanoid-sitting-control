@@ -1,0 +1,86 @@
+{
+  "utc": "2026-10-17T14:44:04.670171+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "device": "cpu",
+      "ordered": false,
+      "mode": "good",
+      "passed": true
+    },
+    {
+      "device": "cpu",
+      "ordered": false,
+      "mode": "bad_descriptor",
+      "passed": true
+    },
+    {
+      "device": "cpu",
+      "ordered": false,
+      "mode": "mutate",
+      "passed": true
+    },
+    {
+      "device": "cpu",
+      "ordered": true,
+      "mode": "good",
+      "passed": true
+    },
+    {
+      "device": "cpu",
+      "ordered": true,
+      "mode": "bad_descriptor",
+      "passed": true
+    },
+    {
+      "device": "cpu",
+      "ordered": true,
+      "mode": "mutate",
+      "passed": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": false,
+      "mode": "good",
+      "passed": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": false,
+      "mode": "bad_descriptor",
+      "passed": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": false,
+      "mode": "mutate",
+      "passed": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": true,
+      "mode": "good",
+      "passed": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": true,
+      "mode": "bad_descriptor",
+      "passed": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": true,
+      "mode": "mutate",
+      "passed": true
+    }
+  ],
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false,
+  "sources": {
+    "/home/kadir/humanoid-sitting/scripts/check_low_seat_private_recorder_198.py": "676fa66b24ceb3acb80ba85d9d85d2cebe619936ba8544abe4a78c879833f186",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_private_recorder_198.py": "754bc3b151eaeccb3ec51df6fb38f9b68014980326d0ae542e91bed47bc6cc51"
+  },
+  "scope": "Synthetic caller-owned destination descriptors, identity/permuted ordering, corrupt-descriptor and cache-mutation rejection. Real API and full-prefix replay remain unvalidated."
+}

@@ -1,0 +1,74 @@
+{
+  "utc": "2026-10-17T18:19:23.421386+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_active_physics_ticks": 0,
+  "new_initial_settling_ticks": 0,
+  "new_optimizer_updates": 0,
+  "new_full20s_trials": 0,
+  "new_diagnostic_prefixes": 0,
+  "holdout_started": false,
+  "physical_admission_passed": false,
+  "best_verified_controller": "current_retention_09",
+  "best_development_clean": 64,
+  "latest_physical_candidate": "roll_feedback_probe_273",
+  "prior_recheck": {
+    "utc": "2026-10-17T18:19:23.421386+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "completed_probes_preservation_281.json",
+        "checked": 6085,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "supplemental_preservation_281.json",
+        "checked": 3,
+        "passed": true,
+        "mismatches": []
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_285.json",
+  "protected_completed_files": 6115,
+  "manifest_sha256": "de40ae9cc1e71ca34dfdfa43cdd54c0c5568c901587d54222d969d0d7a5d0a74",
+  "physical_workers_running": false,
+  "model_workers_running": false,
+  "audit_workers_running": false,
+  "report": "progress_report_284",
+  "video": "all_attempts_video_276/all_attempts.mp4",
+  "video_unchanged": true,
+  "local_review": {
+    "utc": "2026-10-17T18:18:58.598168+00:00",
+    "local_hashes_verified": true,
+    "manifests_verified": 3,
+    "hash_entries_verified": 11,
+    "plots_visually_inspected": true,
+    "plots": [
+      "paired_response.png",
+      "stance_geometry.png"
+    ],
+    "browser_visually_inspected": true,
+    "embedded_video_loaded": true,
+    "video_duration_s": 58.4,
+    "video_unchanged": true,
+    "url": "http://127.0.0.1:8807/progress_report_284/findings.html",
+    "tables_inspected": [
+      "summary",
+      "selected paired motion",
+      "clock onsets",
+      "independent audit",
+      "all96 case-windows"
+    ],
+    "repair_complete": false,
+    "ppo_started": false
+  },
+  "next": "# Paired roll-response282/283 completed \u2014 pelvis\u2013foot coupling identified, repair unresolved\n\nContinue the user's authorized low-seat repair, preserve ALL64 clean successes, then the small two-seed PPO stability/all37-joint effort comparison and complete subminute video in THIS chat. Work directly Mac SSH kfuUbuntu, /home/kadir/humanoid-sitting; never another coding agent. Python /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python. Read docs protocol/status, study status.json and closure_record_285.json. Check actual workers before launching. All282\u2013284 offline jobs completed; no physical/model/audit worker remains at closure. Do not rerun these calculations, completed273 or earlier diagnostics. Stay quiet during ordinary progress; notify meaningful failure/completion/required input. No promotion.\n\nBest verified current_retention_09 remains64/72 clean,70 stable,8 slipping,2 housing cases. Preserve all64. MainPPO63111/63117, freshholdout and promotion remain UNSTARTED. This round added ZERO physics/settling/optimizer/full20s episodes or video motion. Physical repair remains unresolved.\n\nNEW diagnosis282 compares saved234 and273 full20s data for ALL24cases,96case-windows, all37 recorded q/command/torque channels and both selected raw20ms input streams. At11\u201314.9s, selected ankle-roll encoder differences are\u22127.559/\u22127.567mrad(case0 left/right),\u22127.606/\u22127.609mrad(case1), versus command differences about\u22126.85\u2026\u22126.94mrad left/\u22126.17\u2026\u22126.18 right. Pelvis roll changed+0.3583/+0.3601deg and lateral position\u22123.087/\u22123.104mm. Foot roll changed only+.000412\u2026+.000831deg; foot translations stayed submicrometre in median. The correction mainly changed whole-body pose with feet constrained; raw velocity never met quiet guards. This is paired observed coupling, NOT an identified causal transfer function or permission for gain extrapolation.\n\nClock interpretation is now explicit: feedback uses inputs at tickk*.02, but fixed_ticks after-command timestamp is(k+1)*.02, the end of the applied interval. Feedback onset9.38s and first differing command record9.40s are NOT evidence of a20ms implementation delay. Next rawq at9.4 follows that interval;100ms body poses only bracket motion. No timing fit or sensor substitution. All24 onset records retained, including unselected measured geometry divergence before later control/motion; exactness is NOT waived.\n\nOffline cooked foot-bottom z is roughly\u221242\u2026\u221244micrometres in late selected records, changing little despite pelvis movement. This uses corrected50vertices and actual saved body poses. It is NOT a live-shape or contact-offset certificate; unknown contact/rest offsets remain. Actual loads and body poses are evaluation only. Full contact259/point267 evidence remains preserved; no new query or simulation.\n\nIndependent283 PASSED exact source-array checks, manual quaternion/component reconstruction of460800 geometry values (max8.882e\u221216), all96 case-window statistics using independently sorted medians/sums (max1.110e\u221216), all24onsets and both rawstreams. Arithmetic pass is not physical admission. No execution/report recovery was needed in282\u2013284. Sources diagnose_low_seat_roll_response_282.py,audit_low_seat_roll_response_283.py; outputs roll_response_diagnosis_282,roll_response_audit_283. No endstate-PD reconstruction or fitted moment offset was used.\n\nNEXT: do not repeat direct-roll273 or merely raise its gain/Ki. There is no hidden timing fix established. A new bounded control/contact formulation must account for coupled pelvis/foot motion while retaining current measured-input validity, total authority, whole-path clearance/support and actual quiet/load guards. First use the existing full-body kinematics and saved input records to assess whether a coordinated correction can reduce measured foot angular motion without shifting the pelvis/violating foot support; model feasibility alone cannot certify dynamic success. Preserve164 approach balance,207v2 pitch bias and175/130 guards. No blind gain/arm/lean/rate sweep, solver-flag change, finite-difference replacement of rawqd, truth feedback, foot drag/teleport or endpoint-only launch. Other36/+20,37/+16.25,36.5/+17.5 centered227 paths still fail3mm clearance. Limited searches are not impossibility proofs. All8 removed+all64 retained across72matchedfull20s remains mandatory beforePPO.\n\nLatest physical273 remains REJECTED:24full20s,20stable14clean8slip2hiphousing/physical0illegal19warnings. No best-probe clean gain/loss or added physical failure. Selected36/+15 rows0/1 hover withZERO legal seat load/hold,zero quiet ticks/no release. Original36/+20 housing at11.98s remains; all8target0/1/2/3/6/7/10/11 unresolved. Eight slip/physical/contact-union cases plus two unsupported selected hovers. No-slip hovering is not sitting. No72retention/PPO/holdout followed. Budget27324000active+600settling; all prior physical attempts preserved.\n\n273 fixed raw-roll gain.025s=Kd/Kp4/160,rollcap.01rad inside existing per-ankle abs(pitch)+abs(roll)<=.06,feedback.0375rad/s+nominal.1125 within.15 global. Originalpitch207 priority,antiwindup,currentgeometry/loadvalidity, .03desiredmargin/.1filter,14fingers,materials/physicalcriteria unchanged. Completecentered234path/planner126/145v2forceallocation; no static255wrench or replayed observations. Frozen59117 additive15s selected/11\u201315elsewhere; early61111 omitted in isolating probes. Runtime269/270 and50sources frozen in roll_feedback_probe_273/revision.json.\n\n273 actual correction medianleft\u2212.00690/\u2212.00693,right\u2212.00619rad; raw-speed minima11\u201314.9s.23522/.24144 versusunchanged.05. After15s parentminima.24857/.24639,pitchpeaks1.2297/1.2329deg. Bothrawquietcount andlegalnormalload zero. Keep25CURRENT consecutive samples movingqd<=.05,pitcherror<=.5deg,gyro-y<=.02,freshgeometry+130guards before12mmhoverrelease; normaldescent<=.006m/s. No gain scaling or guard waiver follows the small speed reduction.\n\n273 independent274v2/275v2 software audits pass actual417/actions/rewards/frozenparent/starts/first1s/planners,all1900selectedGPUfilters,1900rawbalance/roll+1900settlingrecords,24000increments/14fingers,2280currentviews/zero downfallback. Overall physical/exact gates remainFALSE. Maxunselectedbody.769615mm,q.000864387rad,command.000684381rad. Original130rawestimator replay.1sonly; normalized414qd sampledcheckwithin3e\u22127,not bitexact raw reconstruction. Original274syntaxerror was caught locally but orchestration improperly continued launching the already-prepared singletrial. Originalauditor/finalizer failure preserved in274/278recoveries; correctedv2audits ranONCE,nophysics/video rerun. Inspect each exitstatus before dependentcopy/launch; don'trepeat that sequencing error.\n\nPrior255 static6D wrench estimate~1Nm disagrees with nearzeroactualcontactmoment; feedbackNOTADMITTED.267/268contact-pointvelocity:normalRMS10.9\u201311.3mm/s versus same-material poseFD.057\u2013.073mm/s,smallnegative separation; distinct quantities,not badsensorproof.259/246/198 private recordings EXACTreplayed respective full13sprefixes with publiccache unchanged;189 failed replay remainsfailed. Rawjoint/linkvelocityclosure and implicittelemetry arithmetic are not continuous-motion/effective-solver certificates. AuthoredTGS/externalforceeveryiterationTRUE/artic8pos4vel not independently captured internalislandcounts; noflag changed. Contacttruth stays evaluationonly.\n\nLocal progress_report_284/findings.html, diagnosis282 and audit283 copied/hashverified:3manifests/11originalentries. paired_response.png,stance_geometry.png and HTML summary/selected-motion/onset/audit/all96tables visually inspected; embeddedcurrent58.4s video loaded. URL http://127.0.0.1:8807/progress_report_284/findings.html . This is interim OFFLINEdevelopment evidence,not newrepair/PPO/holdout completion. Earlier280 remains the physical/effort report, unchanged.\n\nVideo276 remains CURRENT and unchanged: /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/all_attempts_video_276/all_attempts.mp4,58.4s4K15fpsH264,43recordedsources,864full20strials503clean361failed,168prefixes and96abortedcaseattempts withoutmotion disclosed; independent277checked612firstevents and1032recordedcases.8x6grid47panels. RecordedXYZW LINK-pose schematic withmodelheadCOM,notcamerafootage;.1sposesbracket.02slabels. Historicaltotalsnotcontrolleraccuracy. No newmotion282\u2013284; doNOTrerenderunchangedvideo. Updateafterfuturephysical/PPOattempts,omitnofailure.\n\nNo new effort result.273vsbestnormal14commoncompleteclean whole20torque\u00b2+.0126472%,final10+.0264487%,final5+.0794278%;strictbothONLY1whole20\u2212.00504478%,final5\u2212.0247301%. Unselectedsuccessdifferences,notrepair/savings.09vs61111commoncleanexact;vs62111@8old20commonclean whole20+4.38%,final5+25.45%. Applied torque is approximateimplicitPD telemetry,NOTsolver/hardware/energy/globaloptimum. Nohover/prefix/fragmentsavings. Fullall37threewindows/squared/absolute/time-meaninstantRMS/leg-upper/strictsubsetsONLYcommoncompletecleanBOTH.\n\nAutomationACTIVE,taskunfinished. PauseONLYafteractualrepair,newPPOcomparison andupdatedcomplete subminutevideo delivered. Offlineaudit/reportcompletion is not taskcompletion. Closure285 gives finalpreservationcounts/workerstate. Earlierstudies/best09readonly; no physicalcriterion/material/quietguardchange,holdoutorpromotion.\n"
+}

@@ -1,0 +1,91 @@
+{
+  "utc": "2026-10-17T13:21:15.858964+00:00",
+  "passed": true,
+  "scope": "New balance/parent composition checks; synthetic command arithmetic only.",
+  "tests": [
+    {
+      "case": 0,
+      "synthetic_pitch_error_rad": -0.1,
+      "command_ticks": 1000,
+      "cpu_gpu_exact": true,
+      "parent_not_cancelled_max_error": 5.960464477539062e-07,
+      "max_step_rad": 0.002249985933303833,
+      "no_clipped_targets": true
+    },
+    {
+      "case": 0,
+      "synthetic_pitch_error_rad": 0.1,
+      "command_ticks": 1000,
+      "cpu_gpu_exact": true,
+      "parent_not_cancelled_max_error": 5.960464477539062e-07,
+      "max_step_rad": 0.002249985933303833,
+      "no_clipped_targets": true
+    },
+    {
+      "case": 1,
+      "synthetic_pitch_error_rad": -0.1,
+      "command_ticks": 1000,
+      "cpu_gpu_exact": true,
+      "parent_not_cancelled_max_error": 5.960464477539062e-07,
+      "max_step_rad": 0.002249985933303833,
+      "no_clipped_targets": true
+    },
+    {
+      "case": 1,
+      "synthetic_pitch_error_rad": 0.1,
+      "command_ticks": 1000,
+      "cpu_gpu_exact": true,
+      "parent_not_cancelled_max_error": 5.960464477539062e-07,
+      "max_step_rad": 0.002249985933303833,
+      "no_clipped_targets": true
+    },
+    {
+      "case": 6,
+      "synthetic_pitch_error_rad": -0.1,
+      "command_ticks": 1000,
+      "cpu_gpu_exact": true,
+      "parent_not_cancelled_max_error": 4.76837158203125e-07,
+      "max_step_rad": 0.002249985933303833,
+      "no_clipped_targets": true
+    },
+    {
+      "case": 6,
+      "synthetic_pitch_error_rad": 0.1,
+      "command_ticks": 1000,
+      "cpu_gpu_exact": true,
+      "parent_not_cancelled_max_error": 4.76837158203125e-07,
+      "max_step_rad": 0.002249985933303833,
+      "no_clipped_targets": true
+    },
+    {
+      "case": 7,
+      "synthetic_pitch_error_rad": -0.1,
+      "command_ticks": 1000,
+      "cpu_gpu_exact": true,
+      "parent_not_cancelled_max_error": 5.960464477539062e-07,
+      "max_step_rad": 0.002249985933303833,
+      "no_clipped_targets": true
+    },
+    {
+      "case": 7,
+      "synthetic_pitch_error_rad": 0.1,
+      "command_ticks": 1000,
+      "cpu_gpu_exact": true,
+      "parent_not_cancelled_max_error": 5.960464477539062e-07,
+      "max_step_rad": 0.002249985933303833,
+      "no_clipped_targets": true
+    }
+  ],
+  "actual_parent_fixture_exact": true,
+  "parent_sha256": "7dc9c68f8897bb6c35451cbde6202f01247d68dc8af332f9ef283b368e4b8f65",
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_balance_parent_163.py": "89c5edd79d4ad5ab7d92e52e9cdbde22a191620d8c6df04e1f6cddb8e87a511b",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_balance_feedback_160.py": "6f2fec374997e83593fa08f512d1c8a69ac21827019eb1a0e49ca3bb80d771d1",
+    "/data/humanoid-sitting-perception/posture_credit_01/ppo_01/seed_59117/train/final.pt": "7dc9c68f8897bb6c35451cbde6202f01247d68dc8af332f9ef283b368e4b8f65",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/sensor_inputs.npz": "468d3637bc09c404b000b15f48bdbc1f2e8c6aacc23e51d966c2604801afb6d6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/balanced_force_paths_144/SHA256.json": "8e14ffa431464536ecd92ca3556d53fdceef192e2f206dc0778d2dd764c84845"
+  }
+}

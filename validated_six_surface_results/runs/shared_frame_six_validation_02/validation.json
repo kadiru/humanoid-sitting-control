@@ -1,0 +1,3162 @@
+{
+  "capture": "shared_frame_rear_down_six_capture_01",
+  "names": {
+    "clean": "shared_frame_rear_down_six_clean_02",
+    "noisy": "shared_frame_rear_down_six_noisy_02",
+    "occlusion": "shared_frame_rear_down_six_occlusion_02",
+    "original": "shared_frame_quality_clean_05"
+  },
+  "runs": {
+    "clean": {
+      "samples": 966,
+      "alignment_valid": 602,
+      "quantities": {
+        "clearance": {
+          "available": 966,
+          "fraction": 1.0,
+          "accepted_error": {
+            "n": 966,
+            "p95": 0.058067023881272495,
+            "max": 0.06507329455705535
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 0.058067023881272495,
+            "max": 0.06507329455705535
+          },
+          "threshold": 2.0,
+          "invalid_reasons": {}
+        },
+        "forward": {
+          "available": 640,
+          "fraction": 0.6625258799171843,
+          "accepted_error": {
+            "n": 640,
+            "p95": 0.3121271002225015,
+            "max": 0.33942238737239006
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 0.6206811320157962,
+            "max": 10.593020349655363
+          },
+          "threshold": 3.0,
+          "invalid_reasons": {
+            "motion_direction_unobserved": 6,
+            "physical_extent_unconfirmed": 324,
+            "seat_axis_ambiguous": 2
+          }
+        },
+        "lateral": {
+          "available": 771,
+          "fraction": 0.7981366459627329,
+          "accepted_error": {
+            "n": 771,
+            "p95": 0.2856921378487696,
+            "max": 0.37678740684117873
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 0.29937497141336833,
+            "max": 26.451203306066596
+          },
+          "threshold": 3.0,
+          "invalid_reasons": {
+            "motion_direction_unobserved": 82,
+            "physical_extent_unconfirmed": 164,
+            "seat_axis_ambiguous": 2,
+            "unobserved_motion_budget": 20
+          }
+        },
+        "yaw": {
+          "available": 800,
+          "fraction": 0.8281573498964804,
+          "accepted_error": {
+            "n": 800,
+            "p95": 0.11612846191348118,
+            "max": 0.25636055032089894
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 0.298290727352718,
+            "max": 5.097030638288968
+          },
+          "threshold": 5.0,
+          "invalid_reasons": {
+            "motion_direction_unobserved": 6,
+            "axis_unconfirmed": 163,
+            "seat_axis_ambiguous": 2
+          }
+        }
+      },
+      "violations": [],
+      "finite_support": {
+        "unsupported_observed_cells_fraction": {
+          "n": 966,
+          "p95": 0.014975041597337771,
+          "max": 0.019736842105263157
+        },
+        "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+      },
+      "source_sha256": {
+        "test_shared_frame.py": "231aca57ba4db381c23fea03ab9de1fdd66ecd0aadc86ffdde688bf9ef5e4400",
+        "run_shared_frame.py": "fa9671072c8dc79da5f2fc8cb37e79078a6ee3f2654ac68353ecfb56641c7d75",
+        "shared_frame.py": "50000e1a059f380d033f9435194ccf7101c4cd6a8418ce81dca085e1cb53fbb7",
+        "evaluate_shared_frame.py": "6731901b33466802a47b8276f96a5f6fffe5be74c09696f2afa10033ac06721d"
+      },
+      "cases": [
+        {
+          "samples": 161,
+          "alignment_valid": 0,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.05524359770751608,
+                "max": 0.055902415731712285
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.05524359770751608,
+                "max": 0.055902415731712285
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.42672139626788175,
+                "max": 10.593020349655363
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "physical_extent_unconfirmed": 161
+              }
+            },
+            "lateral": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.2056796890064221,
+                "max": 0.2359651968031902
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.20634718288191703,
+                "max": 1.9575777470939648
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            },
+            "yaw": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.1538794481160853,
+                "max": 0.18800945946846698
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.1550932992791545,
+                "max": 3.0623894113160937
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.0032258064516129032,
+              "max": 0.0032733224222585926
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 0,
+          "geometry": {
+            "family": "chair",
+            "shape": "rect",
+            "depth": 0.52,
+            "width": 0.88,
+            "height": 0.3,
+            "x": -0.4,
+            "y": 0.008,
+            "yaw": 0.05235987755982989
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 161,
+            "lateral": 1,
+            "yaw": 1
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 160
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 124,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.05847444010305958,
+                "max": 0.05899552179338963
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.05847444010305958,
+                "max": 0.05899552179338963
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.2663457926259319,
+                "max": 0.2903870374576345
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2666550643392718,
+                "max": 8.886101983883771
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "physical_extent_unconfirmed": 1
+              }
+            },
+            "lateral": {
+              "available": 131,
+              "fraction": 0.8136645962732919,
+              "accepted_error": {
+                "n": 131,
+                "p95": 0.23195998020994724,
+                "max": 0.24943273915098776
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2300792491332762,
+                "max": 25.51718509259116
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 30,
+                "physical_extent_unconfirmed": 1,
+                "unobserved_motion_budget": 11
+              }
+            },
+            "yaw": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.0714829396261037,
+                "max": 0.10524383722271409
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.0752688377931137,
+                "max": 0.5170482473455672
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "axis_unconfirmed": 1
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.007782101167315175,
+              "max": 0.007863695937090432
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 1,
+          "geometry": {
+            "family": "bench",
+            "shape": "rect",
+            "depth": 0.48,
+            "width": 1.02,
+            "height": 0.31,
+            "x": -0.4,
+            "y": -0.008,
+            "yaw": -0.06981317007977318
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 1,
+            "lateral": 29,
+            "yaw": 1
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 131,
+            "3": 29
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 159,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.053605513317298015,
+                "max": 0.05408342622088835
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.053605513317298015,
+                "max": 0.05408342622088835
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.2790879050371819,
+                "max": 0.2913355317714639
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2806438351267204,
+                "max": 0.8665033715372084
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "seat_axis_ambiguous": 1
+              }
+            },
+            "lateral": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.20713911770296492,
+                "max": 0.2304909686076037
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.20871306127224626,
+                "max": 6.658990567234026
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "physical_extent_unconfirmed": 1,
+                "seat_axis_ambiguous": 1
+              }
+            },
+            "yaw": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.0696805889798753,
+                "max": 0.10107748615519041
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.07224299435041598,
+                "max": 4.779244892618469
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "seat_axis_ambiguous": 1
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.010498687664041995,
+              "max": 0.010498687664041995
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 2,
+          "geometry": {
+            "family": "box",
+            "shape": "rect",
+            "depth": 0.54,
+            "width": 0.84,
+            "height": 0.29,
+            "x": -0.4,
+            "y": 0.012,
+            "yaw": 0.08726646259971647
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 1,
+            "lateral": 1,
+            "yaw": 1
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 160
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 0,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.05935235096256597,
+                "max": 0.06165334786186749
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.05935235096256597,
+                "max": 0.06165334786186749
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.6549036022149957,
+                "max": 0.7277963443608815
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "physical_extent_unconfirmed": 161
+              }
+            },
+            "lateral": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.5642422153412332,
+                "max": 0.660932071644214
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 48,
+                "physical_extent_unconfirmed": 161,
+                "unobserved_motion_budget": 9
+              }
+            },
+            "yaw": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.329118091463596,
+                "max": 0.41578825867407815
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "axis_unconfirmed": 161
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 3,
+          "geometry": {
+            "family": "rigid_couch",
+            "shape": "rect",
+            "depth": 0.5,
+            "width": 1.06,
+            "height": 0.3,
+            "x": -0.4,
+            "y": -0.01,
+            "yaw": -0.05235987755982989
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 161,
+            "lateral": 161,
+            "yaw": 161
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 113,
+            "3": 47
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 160,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.051632687506045216,
+                "max": 0.052454938265600326
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.051632687506045216,
+                "max": 0.052454938265600326
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.32644418889577725,
+                "max": 0.33942238737239006
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.3264285525519217,
+                "max": 0.33942238737239006
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            },
+            "lateral": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.3436627738916597,
+                "max": 0.37678740684117873
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.3436454076788963,
+                "max": 0.37678740684117873
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            },
+            "yaw": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.20462512716762163,
+                "max": 0.25636055032089894
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2045121553074689,
+                "max": 0.25636055032089894
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.014687882496940025,
+              "max": 0.014796547472256474
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 4,
+          "geometry": {
+            "family": "bench",
+            "shape": "chamfered",
+            "depth": 0.53,
+            "width": 0.96,
+            "height": 0.305,
+            "x": -0.4,
+            "y": 0.004,
+            "yaw": 0.06981317007977318
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 1,
+            "lateral": 1,
+            "yaw": 1
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 160
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 159,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.06423779787024242,
+                "max": 0.06507329455705535
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.06423779787024242,
+                "max": 0.06507329455705535
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.2365329843712077,
+                "max": 0.2659545366889504
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.237373910559735,
+                "max": 7.587612888758355
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "physical_extent_unconfirmed": 1,
+                "seat_axis_ambiguous": 1
+              }
+            },
+            "lateral": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.29820919044596117,
+                "max": 0.31696332762665563
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2994393535229914,
+                "max": 26.451203306066596
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "physical_extent_unconfirmed": 1,
+                "seat_axis_ambiguous": 1
+              }
+            },
+            "yaw": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.06448202849173626,
+                "max": 0.10755918175261676
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.06711059481848772,
+                "max": 5.097030638288968
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "axis_unconfirmed": 1,
+                "seat_axis_ambiguous": 1
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.015,
+              "max": 0.019736842105263157
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 5,
+          "geometry": {
+            "family": "box",
+            "shape": "ellipse",
+            "depth": 0.51,
+            "width": 0.92,
+            "height": 0.295,
+            "x": -0.4,
+            "y": -0.004,
+            "yaw": -0.08726646259971647
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 1,
+            "lateral": 1,
+            "yaw": 1
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 160
+          }
+        }
+      ]
+    },
+    "noisy": {
+      "samples": 966,
+      "alignment_valid": 640,
+      "quantities": {
+        "clearance": {
+          "available": 966,
+          "fraction": 1.0,
+          "accepted_error": {
+            "n": 966,
+            "p95": 0.3398457478575361,
+            "max": 0.5945542336948717
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 0.3398457478575361,
+            "max": 0.5945542336948717
+          },
+          "threshold": 2.0,
+          "invalid_reasons": {}
+        },
+        "forward": {
+          "available": 640,
+          "fraction": 0.6625258799171843,
+          "accepted_error": {
+            "n": 640,
+            "p95": 0.5025801375749192,
+            "max": 0.6201123676023657
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 0.6459595175387994,
+            "max": 0.6968382647344118
+          },
+          "threshold": 3.0,
+          "invalid_reasons": {
+            "motion_direction_unobserved": 6,
+            "physical_extent_unconfirmed": 322
+          }
+        },
+        "lateral": {
+          "available": 800,
+          "fraction": 0.8281573498964804,
+          "accepted_error": {
+            "n": 800,
+            "p95": 0.3936979445234536,
+            "max": 1.3915177776292649
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 0.4903995628070166,
+            "max": 1.5853839584163987
+          },
+          "threshold": 3.0,
+          "invalid_reasons": {
+            "motion_direction_unobserved": 6,
+            "physical_extent_unconfirmed": 161
+          }
+        },
+        "yaw": {
+          "available": 800,
+          "fraction": 0.8281573498964804,
+          "accepted_error": {
+            "n": 800,
+            "p95": 0.36594157209658035,
+            "max": 0.8534382177847715
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 0.34839661871188393,
+            "max": 0.8534382177847715
+          },
+          "threshold": 5.0,
+          "invalid_reasons": {
+            "motion_direction_unobserved": 6,
+            "axis_unconfirmed": 161
+          }
+        }
+      },
+      "violations": [],
+      "finite_support": {
+        "unsupported_observed_cells_fraction": {
+          "n": 966,
+          "p95": 0.02810304449648712,
+          "max": 0.029239766081871343
+        },
+        "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+      },
+      "source_sha256": {
+        "test_shared_frame.py": "231aca57ba4db381c23fea03ab9de1fdd66ecd0aadc86ffdde688bf9ef5e4400",
+        "run_shared_frame.py": "fa9671072c8dc79da5f2fc8cb37e79078a6ee3f2654ac68353ecfb56641c7d75",
+        "shared_frame.py": "50000e1a059f380d033f9435194ccf7101c4cd6a8418ce81dca085e1cb53fbb7",
+        "evaluate_shared_frame.py": "6731901b33466802a47b8276f96a5f6fffe5be74c09696f2afa10033ac06721d"
+      },
+      "cases": [
+        {
+          "samples": 161,
+          "alignment_valid": 0,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.3499180425309223,
+                "max": 0.5945542336948717
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.3499180425309223,
+                "max": 0.5945542336948717
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.6750804539655819,
+                "max": 0.6968382647344118
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "physical_extent_unconfirmed": 161
+              }
+            },
+            "lateral": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.2253822278848286,
+                "max": 0.25305651349217595
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2248856465345745,
+                "max": 0.25305651349217595
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            },
+            "yaw": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.27359720319419567,
+                "max": 0.5357116159005896
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.27355267793665045,
+                "max": 0.5357116159005896
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.023289665211062592,
+              "max": 0.023289665211062592
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 0,
+          "geometry": {
+            "family": "chair",
+            "shape": "rect",
+            "depth": 0.52,
+            "width": 0.88,
+            "height": 0.3,
+            "x": -0.4,
+            "y": 0.008,
+            "yaw": 0.05235987755982989
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 161,
+            "lateral": 1,
+            "yaw": 1
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 160
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 160,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.299211325858581,
+                "max": 0.43454506422521966
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.299211325858581,
+                "max": 0.43454506422521966
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.5106652643543103,
+                "max": 0.579978206178039
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.5109662251921943,
+                "max": 0.579978206178039
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            },
+            "lateral": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.7543509695586146,
+                "max": 1.3915177776292649
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.7533235475864837,
+                "max": 1.3915177776292649
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            },
+            "yaw": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.36545229581417804,
+                "max": 0.5208634571151415
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.3653686962706776,
+                "max": 0.5208634571151415
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.029239766081871343,
+              "max": 0.029239766081871343
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 1,
+          "geometry": {
+            "family": "bench",
+            "shape": "rect",
+            "depth": 0.48,
+            "width": 1.02,
+            "height": 0.31,
+            "x": -0.4,
+            "y": -0.008,
+            "yaw": -0.06981317007977318
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 1,
+            "lateral": 1,
+            "yaw": 1
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 160
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 160,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.3610152852010523,
+                "max": 0.4043374328020599
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.3610152852010523,
+                "max": 0.4043374328020599
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.5228986085994799,
+                "max": 0.6201123676023657
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.5226764116855298,
+                "max": 0.6201123676023657
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            },
+            "lateral": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.3064808835463219,
+                "max": 0.35575007937666653
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.3063091655355496,
+                "max": 0.35575007937666653
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            },
+            "yaw": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.29106215149547693,
+                "max": 0.5619101802441188
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.29074679006354115,
+                "max": 0.5619101802441188
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.01797175866495507,
+              "max": 0.01797175866495507
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 2,
+          "geometry": {
+            "family": "box",
+            "shape": "rect",
+            "depth": 0.54,
+            "width": 0.84,
+            "height": 0.29,
+            "x": -0.4,
+            "y": 0.012,
+            "yaw": 0.08726646259971647
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 1,
+            "lateral": 1,
+            "yaw": 1
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 160
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 0,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.3297130300742579,
+                "max": 0.5677464441119162
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.3297130300742579,
+                "max": 0.5677464441119162
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.6684748600825852,
+                "max": 0.6855680552769139
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "physical_extent_unconfirmed": 161
+              }
+            },
+            "lateral": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 1.2491731036720979,
+                "max": 1.5853839584163987
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "physical_extent_unconfirmed": 161
+              }
+            },
+            "yaw": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.3025463635138235,
+                "max": 0.57672720933061
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "axis_unconfirmed": 161
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.009067357512953367,
+              "max": 0.009067357512953367
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 3,
+          "geometry": {
+            "family": "rigid_couch",
+            "shape": "rect",
+            "depth": 0.5,
+            "width": 1.06,
+            "height": 0.3,
+            "x": -0.4,
+            "y": -0.01,
+            "yaw": -0.05235987755982989
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 161,
+            "lateral": 161,
+            "yaw": 161
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 160
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 160,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.3442377308870065,
+                "max": 0.3706093662017712
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.3442377308870065,
+                "max": 0.3706093662017712
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.46716407648695724,
+                "max": 0.5256677937297005
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.46834614846590905,
+                "max": 0.6332972021938665
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            },
+            "lateral": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.30459761546015984,
+                "max": 0.6280531170411628
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.3045680038241044,
+                "max": 0.6280531170411628
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            },
+            "yaw": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.5869191032019314,
+                "max": 0.8534382177847715
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.5863941982382787,
+                "max": 0.8534382177847715
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.02035928143712575,
+              "max": 0.021505376344086023
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 4,
+          "geometry": {
+            "family": "bench",
+            "shape": "chamfered",
+            "depth": 0.53,
+            "width": 0.96,
+            "height": 0.305,
+            "x": -0.4,
+            "y": 0.004,
+            "yaw": 0.06981317007977318
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 1,
+            "lateral": 1,
+            "yaw": 1
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 160
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 160,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.3387118427308905,
+                "max": 0.4043454091319898
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.3387118427308905,
+                "max": 0.4043454091319898
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.2595839301791347,
+                "max": 0.33847265518057723
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2598269623295013,
+                "max": 0.33847265518057723
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            },
+            "lateral": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.19589756519417917,
+                "max": 0.24570734476481415
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.19584652520891407,
+                "max": 0.24570734476481415
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            },
+            "yaw": {
+              "available": 160,
+              "fraction": 0.9937888198757764,
+              "accepted_error": {
+                "n": 160,
+                "p95": 0.14669566428355343,
+                "max": 0.17734191898879176
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.14634688481694924,
+                "max": 0.17734191898879176
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.028846153846153848,
+              "max": 0.028846153846153848
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 5,
+          "geometry": {
+            "family": "box",
+            "shape": "ellipse",
+            "depth": 0.51,
+            "width": 0.92,
+            "height": 0.295,
+            "x": -0.4,
+            "y": -0.004,
+            "yaw": -0.08726646259971647
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 1,
+            "lateral": 1,
+            "yaw": 1
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 160
+          }
+        }
+      ]
+    },
+    "occlusion": {
+      "samples": 966,
+      "alignment_valid": 501,
+      "quantities": {
+        "clearance": {
+          "available": 816,
+          "fraction": 0.84472049689441,
+          "accepted_error": {
+            "n": 816,
+            "p95": 0.05352328717992891,
+            "max": 0.06507329455701927
+          },
+          "all_emitted_error": {
+            "n": 816,
+            "p95": 0.05352328717992891,
+            "max": 0.06507329455701927
+          },
+          "threshold": 2.0,
+          "invalid_reasons": {
+            "no_current_seat_plane": 150
+          }
+        },
+        "forward": {
+          "available": 540,
+          "fraction": 0.5590062111801242,
+          "accepted_error": {
+            "n": 540,
+            "p95": 0.3121271002225015,
+            "max": 0.33942238737239006
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 0.6212175126189392,
+            "max": 10.593020349655363
+          },
+          "threshold": 3.0,
+          "invalid_reasons": {
+            "motion_direction_unobserved": 167,
+            "physical_extent_unconfirmed": 324,
+            "seat_axis_ambiguous": 2,
+            "pose_reacquisition_required": 113,
+            "seat_observation_expired": 77,
+            "unobserved_motion_budget": 28
+          }
+        },
+        "lateral": {
+          "available": 638,
+          "fraction": 0.660455486542443,
+          "accepted_error": {
+            "n": 638,
+            "p95": 0.29830005203040105,
+            "max": 0.37678740684117873
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 0.2919687444301061,
+            "max": 26.451203306066596
+          },
+          "threshold": 3.0,
+          "invalid_reasons": {
+            "motion_direction_unobserved": 245,
+            "physical_extent_unconfirmed": 164,
+            "seat_axis_ambiguous": 2,
+            "pose_reacquisition_required": 113,
+            "seat_observation_expired": 77,
+            "unobserved_motion_budget": 58
+          }
+        },
+        "yaw": {
+          "available": 668,
+          "fraction": 0.6915113871635611,
+          "accepted_error": {
+            "n": 668,
+            "p95": 0.12909228411613807,
+            "max": 0.25636055032089894
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 0.2964744060242027,
+            "max": 5.097030638288968
+          },
+          "threshold": 5.0,
+          "invalid_reasons": {
+            "motion_direction_unobserved": 167,
+            "axis_unconfirmed": 163,
+            "seat_axis_ambiguous": 2,
+            "pose_reacquisition_required": 113,
+            "seat_observation_expired": 77,
+            "unobserved_motion_budget": 5
+          }
+        }
+      },
+      "violations": [],
+      "finite_support": {
+        "unsupported_observed_cells_fraction": {
+          "n": 966,
+          "p95": 0.015,
+          "max": 0.019736842105263157
+        },
+        "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+      },
+      "source_sha256": {
+        "test_shared_frame.py": "231aca57ba4db381c23fea03ab9de1fdd66ecd0aadc86ffdde688bf9ef5e4400",
+        "run_shared_frame.py": "fa9671072c8dc79da5f2fc8cb37e79078a6ee3f2654ac68353ecfb56641c7d75",
+        "shared_frame.py": "50000e1a059f380d033f9435194ccf7101c4cd6a8418ce81dca085e1cb53fbb7",
+        "evaluate_shared_frame.py": "6731901b33466802a47b8276f96a5f6fffe5be74c09696f2afa10033ac06721d"
+      },
+      "cases": [
+        {
+          "samples": 161,
+          "alignment_valid": 0,
+          "quantities": {
+            "clearance": {
+              "available": 136,
+              "fraction": 0.84472049689441,
+              "accepted_error": {
+                "n": 136,
+                "p95": 0.053611299433792975,
+                "max": 0.05569767849722129
+              },
+              "all_emitted_error": {
+                "n": 136,
+                "p95": 0.053611299433792975,
+                "max": 0.05569767849722129
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {
+                "no_current_seat_plane": 25
+              }
+            },
+            "forward": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.42515991042018086,
+                "max": 10.593020349655363
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 33,
+                "physical_extent_unconfirmed": 161,
+                "pose_reacquisition_required": 24,
+                "seat_observation_expired": 18,
+                "unobserved_motion_budget": 10
+              }
+            },
+            "lateral": {
+              "available": 128,
+              "fraction": 0.7950310559006211,
+              "accepted_error": {
+                "n": 128,
+                "p95": 0.20771952871564955,
+                "max": 0.2359651968031902
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.20909205120166302,
+                "max": 1.9575777470939648
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 33,
+                "pose_reacquisition_required": 24,
+                "seat_observation_expired": 18,
+                "unobserved_motion_budget": 10
+              }
+            },
+            "yaw": {
+              "available": 128,
+              "fraction": 0.7950310559006211,
+              "accepted_error": {
+                "n": 128,
+                "p95": 0.1559758680193496,
+                "max": 0.18800945946846698
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.20966363171514554,
+                "max": 3.0623894113160937
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 33,
+                "pose_reacquisition_required": 24,
+                "seat_observation_expired": 18,
+                "unobserved_motion_budget": 4
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.0032258064516129032,
+              "max": 0.0032733224222585926
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 0,
+          "geometry": {
+            "family": "chair",
+            "shape": "rect",
+            "depth": 0.52,
+            "width": 0.88,
+            "height": 0.3,
+            "x": -0.4,
+            "y": 0.008,
+            "yaw": 0.05235987755982989
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 20,
+            "forward": 161,
+            "lateral": 27,
+            "yaw": 27
+          },
+          "registration_ranks": {
+            "0": 33,
+            "4": 128
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 98,
+          "quantities": {
+            "clearance": {
+              "available": 136,
+              "fraction": 0.84472049689441,
+              "accepted_error": {
+                "n": 136,
+                "p95": 0.05161253109223496,
+                "max": 0.05807543598751186
+              },
+              "all_emitted_error": {
+                "n": 136,
+                "p95": 0.05161253109223496,
+                "max": 0.05807543598751186
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {
+                "no_current_seat_plane": 25
+              }
+            },
+            "forward": {
+              "available": 135,
+              "fraction": 0.8385093167701864,
+              "accepted_error": {
+                "n": 135,
+                "p95": 0.2663704511762349,
+                "max": 0.28495978191449556
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.266248474106362,
+                "max": 8.886101983883771
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 26,
+                "physical_extent_unconfirmed": 1,
+                "pose_reacquisition_required": 17,
+                "seat_observation_expired": 11,
+                "unobserved_motion_budget": 3
+              }
+            },
+            "lateral": {
+              "available": 105,
+              "fraction": 0.6521739130434783,
+              "accepted_error": {
+                "n": 105,
+                "p95": 0.23984992488356682,
+                "max": 0.24943273915098776
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2308574214033049,
+                "max": 25.51718509259116
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 56,
+                "physical_extent_unconfirmed": 1,
+                "pose_reacquisition_required": 17,
+                "seat_observation_expired": 11,
+                "unobserved_motion_budget": 14
+              }
+            },
+            "yaw": {
+              "available": 135,
+              "fraction": 0.8385093167701864,
+              "accepted_error": {
+                "n": 135,
+                "p95": 0.07957481866365464,
+                "max": 0.10524383722271409
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.08025847731736475,
+                "max": 0.5170482473455672
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 26,
+                "axis_unconfirmed": 1,
+                "pose_reacquisition_required": 17,
+                "seat_observation_expired": 11
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.007782101167315175,
+              "max": 0.007863695937090432
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 1,
+          "geometry": {
+            "family": "bench",
+            "shape": "rect",
+            "depth": 0.48,
+            "width": 1.02,
+            "height": 0.31,
+            "x": -0.4,
+            "y": -0.008,
+            "yaw": -0.06981317007977318
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 20,
+            "forward": 20,
+            "lateral": 29,
+            "yaw": 20
+          },
+          "registration_ranks": {
+            "0": 26,
+            "4": 105,
+            "3": 30
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 134,
+          "quantities": {
+            "clearance": {
+              "available": 136,
+              "fraction": 0.84472049689441,
+              "accepted_error": {
+                "n": 136,
+                "p95": 0.05371485444813848,
+                "max": 0.054083426220880026
+              },
+              "all_emitted_error": {
+                "n": 136,
+                "p95": 0.05371485444813848,
+                "max": 0.054083426220880026
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {
+                "no_current_seat_plane": 25
+              }
+            },
+            "forward": {
+              "available": 135,
+              "fraction": 0.8385093167701864,
+              "accepted_error": {
+                "n": 135,
+                "p95": 0.28066013733821615,
+                "max": 0.2913355317714639
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2806438351267204,
+                "max": 0.8665033715372084
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 26,
+                "seat_axis_ambiguous": 1,
+                "pose_reacquisition_required": 17,
+                "seat_observation_expired": 11,
+                "unobserved_motion_budget": 3
+              }
+            },
+            "lateral": {
+              "available": 135,
+              "fraction": 0.8385093167701864,
+              "accepted_error": {
+                "n": 135,
+                "p95": 0.20904317310816253,
+                "max": 0.2304909686076037
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.20871306127224626,
+                "max": 6.658990567234026
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 26,
+                "physical_extent_unconfirmed": 1,
+                "seat_axis_ambiguous": 1,
+                "pose_reacquisition_required": 17,
+                "seat_observation_expired": 11,
+                "unobserved_motion_budget": 3
+              }
+            },
+            "yaw": {
+              "available": 135,
+              "fraction": 0.8385093167701864,
+              "accepted_error": {
+                "n": 135,
+                "p95": 0.07343049212949784,
+                "max": 0.10107735659908669
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.10107735659908669,
+                "max": 4.779244892618469
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 26,
+                "seat_axis_ambiguous": 1,
+                "pose_reacquisition_required": 17,
+                "seat_observation_expired": 11
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.010498687664041995,
+              "max": 0.010498687664041995
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 2,
+          "geometry": {
+            "family": "box",
+            "shape": "rect",
+            "depth": 0.54,
+            "width": 0.84,
+            "height": 0.29,
+            "x": -0.4,
+            "y": 0.012,
+            "yaw": 0.08726646259971647
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 20,
+            "forward": 20,
+            "lateral": 20,
+            "yaw": 20
+          },
+          "registration_ranks": {
+            "0": 26,
+            "4": 135
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 0,
+          "quantities": {
+            "clearance": {
+              "available": 136,
+              "fraction": 0.84472049689441,
+              "accepted_error": {
+                "n": 136,
+                "p95": 0.05232961979225459,
+                "max": 0.061501720976991914
+              },
+              "all_emitted_error": {
+                "n": 136,
+                "p95": 0.05232961979225459,
+                "max": 0.061501720976991914
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {
+                "no_current_seat_plane": 25
+              }
+            },
+            "forward": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.6529411156955933,
+                "max": 0.7194412560631191
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 30,
+                "physical_extent_unconfirmed": 161,
+                "pose_reacquisition_required": 21,
+                "seat_observation_expired": 15,
+                "unobserved_motion_budget": 7
+              }
+            },
+            "lateral": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.308895141406176,
+                "max": 0.40410380032413484
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 78,
+                "physical_extent_unconfirmed": 161,
+                "pose_reacquisition_required": 21,
+                "seat_observation_expired": 15,
+                "unobserved_motion_budget": 25
+              }
+            },
+            "yaw": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.32080883017168577,
+                "max": 0.4131780734297929
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 30,
+                "axis_unconfirmed": 161,
+                "pose_reacquisition_required": 21,
+                "seat_observation_expired": 15,
+                "unobserved_motion_budget": 1
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 3,
+          "geometry": {
+            "family": "rigid_couch",
+            "shape": "rect",
+            "depth": 0.5,
+            "width": 1.06,
+            "height": 0.3,
+            "x": -0.4,
+            "y": -0.01,
+            "yaw": -0.05235987755982989
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 20,
+            "forward": 161,
+            "lateral": 161,
+            "yaw": 161
+          },
+          "registration_ranks": {
+            "0": 30,
+            "4": 83,
+            "3": 48
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 135,
+          "quantities": {
+            "clearance": {
+              "available": 136,
+              "fraction": 0.84472049689441,
+              "accepted_error": {
+                "n": 136,
+                "p95": 0.05171319691023024,
+                "max": 0.05245493826560865
+              },
+              "all_emitted_error": {
+                "n": 136,
+                "p95": 0.05171319691023024,
+                "max": 0.05245493826560865
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {
+                "no_current_seat_plane": 25
+              }
+            },
+            "forward": {
+              "available": 135,
+              "fraction": 0.8385093167701864,
+              "accepted_error": {
+                "n": 135,
+                "p95": 0.32659399385563503,
+                "max": 0.33942238737239006
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.32599849316077845,
+                "max": 0.33942238737239006
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 26,
+                "pose_reacquisition_required": 17,
+                "seat_observation_expired": 11,
+                "unobserved_motion_budget": 2
+              }
+            },
+            "lateral": {
+              "available": 135,
+              "fraction": 0.8385093167701864,
+              "accepted_error": {
+                "n": 135,
+                "p95": 0.3441102420180762,
+                "max": 0.37678740684117873
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.3436454076788963,
+                "max": 0.37678740684117873
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 26,
+                "pose_reacquisition_required": 17,
+                "seat_observation_expired": 11,
+                "unobserved_motion_budget": 3
+              }
+            },
+            "yaw": {
+              "available": 135,
+              "fraction": 0.8385093167701864,
+              "accepted_error": {
+                "n": 135,
+                "p95": 0.2068058485189944,
+                "max": 0.25636055032089894
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2045121553074689,
+                "max": 0.25636055032089894
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 26,
+                "pose_reacquisition_required": 17,
+                "seat_observation_expired": 11
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.014687882496940025,
+              "max": 0.014796547472256474
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 4,
+          "geometry": {
+            "family": "bench",
+            "shape": "chamfered",
+            "depth": 0.53,
+            "width": 0.96,
+            "height": 0.305,
+            "x": -0.4,
+            "y": 0.004,
+            "yaw": 0.06981317007977318
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 20,
+            "forward": 20,
+            "lateral": 20,
+            "yaw": 20
+          },
+          "registration_ranks": {
+            "0": 26,
+            "4": 135
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 134,
+          "quantities": {
+            "clearance": {
+              "available": 136,
+              "fraction": 0.84472049689441,
+              "accepted_error": {
+                "n": 136,
+                "p95": 0.06397442541442311,
+                "max": 0.06507329455701927
+              },
+              "all_emitted_error": {
+                "n": 136,
+                "p95": 0.06397442541442311,
+                "max": 0.06507329455701927
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {
+                "no_current_seat_plane": 25
+              }
+            },
+            "forward": {
+              "available": 135,
+              "fraction": 0.8385093167701864,
+              "accepted_error": {
+                "n": 135,
+                "p95": 0.23870688444319388,
+                "max": 0.2659545366889504
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.237373910559735,
+                "max": 7.587612888758355
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 26,
+                "physical_extent_unconfirmed": 1,
+                "seat_axis_ambiguous": 1,
+                "pose_reacquisition_required": 17,
+                "seat_observation_expired": 11,
+                "unobserved_motion_budget": 3
+              }
+            },
+            "lateral": {
+              "available": 135,
+              "fraction": 0.8385093167701864,
+              "accepted_error": {
+                "n": 135,
+                "p95": 0.29997291251945096,
+                "max": 0.31696332762665563
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2994393535229914,
+                "max": 26.451203306066596
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 26,
+                "physical_extent_unconfirmed": 1,
+                "seat_axis_ambiguous": 1,
+                "pose_reacquisition_required": 17,
+                "seat_observation_expired": 11,
+                "unobserved_motion_budget": 3
+              }
+            },
+            "yaw": {
+              "available": 135,
+              "fraction": 0.8385093167701864,
+              "accepted_error": {
+                "n": 135,
+                "p95": 0.07250787641234366,
+                "max": 0.10755918175261676
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.09162149196260491,
+                "max": 5.097030638288968
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 26,
+                "axis_unconfirmed": 1,
+                "seat_axis_ambiguous": 1,
+                "pose_reacquisition_required": 17,
+                "seat_observation_expired": 11
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.015,
+              "max": 0.019736842105263157
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 5,
+          "geometry": {
+            "family": "box",
+            "shape": "ellipse",
+            "depth": 0.51,
+            "width": 0.92,
+            "height": 0.295,
+            "x": -0.4,
+            "y": -0.004,
+            "yaw": -0.08726646259971647
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 20,
+            "forward": 20,
+            "lateral": 20,
+            "yaw": 20
+          },
+          "registration_ranks": {
+            "0": 26,
+            "4": 135
+          }
+        }
+      ]
+    },
+    "original": {
+      "samples": 966,
+      "alignment_valid": 43,
+      "quantities": {
+        "clearance": {
+          "available": 966,
+          "fraction": 1.0,
+          "accepted_error": {
+            "n": 966,
+            "p95": 0.10979655508198405,
+            "max": 0.1111143652539226
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 0.10979655508198405,
+            "max": 0.1111143652539226
+          },
+          "threshold": 2.0,
+          "invalid_reasons": {}
+        },
+        "forward": {
+          "available": 96,
+          "fraction": 0.09937888198757763,
+          "accepted_error": {
+            "n": 96,
+            "p95": 0.342747562189083,
+            "max": 0.37689397637455935
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 5.498094580214759,
+            "max": 11.224634926984345
+          },
+          "threshold": 3.0,
+          "invalid_reasons": {
+            "motion_direction_unobserved": 265,
+            "physical_extent_unconfirmed": 807,
+            "unobserved_motion_budget": 9
+          }
+        },
+        "lateral": {
+          "available": 244,
+          "fraction": 0.2525879917184265,
+          "accepted_error": {
+            "n": 244,
+            "p95": 0.2712371880887065,
+            "max": 0.9556648105980493
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 2.1645446619156394,
+            "max": 16.979784765147496
+          },
+          "threshold": 3.0,
+          "invalid_reasons": {
+            "motion_direction_unobserved": 560,
+            "physical_extent_unconfirmed": 167,
+            "unobserved_motion_budget": 381
+          }
+        },
+        "yaw": {
+          "available": 290,
+          "fraction": 0.3002070393374741,
+          "accepted_error": {
+            "n": 290,
+            "p95": 0.4261944248372745,
+            "max": 1.492426400009313
+          },
+          "all_emitted_error": {
+            "n": 966,
+            "p95": 2.348459059031204,
+            "max": 5.080294822172489
+          },
+          "threshold": 5.0,
+          "invalid_reasons": {
+            "motion_direction_unobserved": 514,
+            "axis_unconfirmed": 167,
+            "unobserved_motion_budget": 294
+          }
+        }
+      },
+      "violations": [],
+      "finite_support": {
+        "unsupported_observed_cells_fraction": {
+          "n": 966,
+          "p95": 0.011185682326621925,
+          "max": 0.014018691588785047
+        },
+        "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+      },
+      "source_sha256": {
+        "test_shared_frame.py": "231aca57ba4db381c23fea03ab9de1fdd66ecd0aadc86ffdde688bf9ef5e4400",
+        "run_shared_frame.py": "fa9671072c8dc79da5f2fc8cb37e79078a6ee3f2654ac68353ecfb56641c7d75",
+        "shared_frame.py": "50000e1a059f380d033f9435194ccf7101c4cd6a8418ce81dca085e1cb53fbb7",
+        "evaluate_shared_frame.py": "6731901b33466802a47b8276f96a5f6fffe5be74c09696f2afa10033ac06721d"
+      },
+      "cases": [
+        {
+          "samples": 161,
+          "alignment_valid": 0,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.10682303521027947,
+                "max": 0.10700864211205807
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.10682303521027947,
+                "max": 0.10700864211205807
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 3.5668443378372103,
+                "max": 10.154148563613152
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "physical_extent_unconfirmed": 161
+              }
+            },
+            "lateral": {
+              "available": 112,
+              "fraction": 0.6956521739130435,
+              "accepted_error": {
+                "n": 112,
+                "p95": 0.09182569521493932,
+                "max": 0.9556648105980493
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 1.2128040649297753,
+                "max": 16.979784765147496
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 47,
+                "physical_extent_unconfirmed": 3,
+                "unobserved_motion_budget": 22
+              }
+            },
+            "yaw": {
+              "available": 158,
+              "fraction": 0.9813664596273292,
+              "accepted_error": {
+                "n": 158,
+                "p95": 0.440637712251662,
+                "max": 1.492426400009313
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.4481244048653463,
+                "max": 3.1550871151742665
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "axis_unconfirmed": 3
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.002352941176470588,
+              "max": 0.005555555555555556
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 0,
+          "geometry": {
+            "family": "chair",
+            "shape": "rect",
+            "depth": 0.52,
+            "width": 0.88,
+            "height": 0.3,
+            "x": -0.4,
+            "y": 0.008,
+            "yaw": 0.05235987755982989
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 161,
+            "lateral": 40,
+            "yaw": 3
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 114,
+            "3": 46
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 0,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.11019136618255765,
+                "max": 0.11070776088570045
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.11019136618255765,
+                "max": 0.11070776088570045
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 3.2913923310615436,
+                "max": 5.196511026113571
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 16,
+                "physical_extent_unconfirmed": 161
+              }
+            },
+            "lateral": {
+              "available": 32,
+              "fraction": 0.19875776397515527,
+              "accepted_error": {
+                "n": 32,
+                "p95": 0.3219551607016782,
+                "max": 0.5658163253068921
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.5681933304155361,
+                "max": 0.5787882220423133
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 129,
+                "physical_extent_unconfirmed": 1,
+                "unobserved_motion_budget": 85
+              }
+            },
+            "yaw": {
+              "available": 32,
+              "fraction": 0.19875776397515527,
+              "accepted_error": {
+                "n": 32,
+                "p95": 0.13146510589695967,
+                "max": 0.20181800324713065
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.1486748465403417,
+                "max": 0.20181800324713065
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 129,
+                "axis_unconfirmed": 1,
+                "unobserved_motion_budget": 51
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.009508716323296355,
+              "max": 0.009881422924901186
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 1,
+          "geometry": {
+            "family": "bench",
+            "shape": "rect",
+            "depth": 0.48,
+            "width": 1.02,
+            "height": 0.31,
+            "x": -0.4,
+            "y": -0.008,
+            "yaw": -0.06981317007977318
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 161,
+            "lateral": 106,
+            "yaw": 106
+          },
+          "registration_ranks": {
+            "0": 1,
+            "3": 121,
+            "4": 32,
+            "2": 7
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 0,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.10840761330009052,
+                "max": 0.10930969063284723
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.10840761330009052,
+                "max": 0.10930969063284723
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 5.436962889839431,
+                "max": 6.582963940063164
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 80,
+                "physical_extent_unconfirmed": 161
+              }
+            },
+            "lateral": {
+              "available": 27,
+              "fraction": 0.16770186335403728,
+              "accepted_error": {
+                "n": 27,
+                "p95": 0.07090523295889016,
+                "max": 0.08971446234371239
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2319351449743358,
+                "max": 0.26299380564856895
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 134,
+                "unobserved_motion_budget": 108
+              }
+            },
+            "yaw": {
+              "available": 27,
+              "fraction": 0.16770186335403728,
+              "accepted_error": {
+                "n": 27,
+                "p95": 0.12286213531637462,
+                "max": 0.1387750280220937
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.10248847957473133,
+                "max": 0.16160169473519753
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 134,
+                "unobserved_motion_budget": 86
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.011049723756906077,
+              "max": 0.01107011070110701
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 2,
+          "geometry": {
+            "family": "box",
+            "shape": "rect",
+            "depth": 0.54,
+            "width": 0.84,
+            "height": 0.29,
+            "x": -0.4,
+            "y": 0.012,
+            "yaw": 0.08726646259971647
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 161,
+            "lateral": 134,
+            "yaw": 134
+          },
+          "registration_ranks": {
+            "0": 1,
+            "3": 123,
+            "2": 10,
+            "4": 27
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 0,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.10981079720313036,
+                "max": 0.109945803288658
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.10981079720313036,
+                "max": 0.109945803288658
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 4.245033714480861,
+                "max": 5.746958091481891
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "physical_extent_unconfirmed": 161
+              }
+            },
+            "lateral": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 2.3124018027188606,
+                "max": 2.345967735352187
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "physical_extent_unconfirmed": 161
+              }
+            },
+            "yaw": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 2.3625539952341326,
+                "max": 2.372502058855872
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 1,
+                "axis_unconfirmed": 161
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 3,
+          "geometry": {
+            "family": "rigid_couch",
+            "shape": "rect",
+            "depth": 0.5,
+            "width": 1.06,
+            "height": 0.3,
+            "x": -0.4,
+            "y": -0.01,
+            "yaw": -0.05235987755982989
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 161,
+            "lateral": 161,
+            "yaw": 161
+          },
+          "registration_ranks": {
+            "0": 1,
+            "4": 160
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 0,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.1061010251349942,
+                "max": 0.10658736816866743
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.1061010251349942,
+                "max": 0.10658736816866743
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 0,
+              "fraction": 0.0,
+              "accepted_error": null,
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 5.5418310306987575,
+                "max": 7.669168255714853
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 103,
+                "physical_extent_unconfirmed": 161,
+                "unobserved_motion_budget": 6
+              }
+            },
+            "lateral": {
+              "available": 30,
+              "fraction": 0.18633540372670807,
+              "accepted_error": {
+                "n": 30,
+                "p95": 0.16986752951096384,
+                "max": 0.18911429029828883
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2925953879535169,
+                "max": 0.5801165470374209
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 131,
+                "unobserved_motion_budget": 98
+              }
+            },
+            "yaw": {
+              "available": 30,
+              "fraction": 0.18633540372670807,
+              "accepted_error": {
+                "n": 30,
+                "p95": 0.0999762503115694,
+                "max": 0.13889165074303542
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.1804004903998722,
+                "max": 0.41644869373192595
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 131,
+                "unobserved_motion_budget": 88
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.00931098696461825,
+              "max": 0.009671179883945842
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 4,
+          "geometry": {
+            "family": "bench",
+            "shape": "chamfered",
+            "depth": 0.53,
+            "width": 0.96,
+            "height": 0.305,
+            "x": -0.4,
+            "y": 0.004,
+            "yaw": 0.06981317007977318
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 161,
+            "lateral": 131,
+            "yaw": 131
+          },
+          "registration_ranks": {
+            "0": 1,
+            "3": 112,
+            "2": 18,
+            "4": 30
+          }
+        },
+        {
+          "samples": 161,
+          "alignment_valid": 43,
+          "quantities": {
+            "clearance": {
+              "available": 161,
+              "fraction": 1.0,
+              "accepted_error": {
+                "n": 161,
+                "p95": 0.1107858166715936,
+                "max": 0.1111143652539226
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.1107858166715936,
+                "max": 0.1111143652539226
+              },
+              "threshold": 2.0,
+              "invalid_reasons": {}
+            },
+            "forward": {
+              "available": 96,
+              "fraction": 0.5962732919254659,
+              "accepted_error": {
+                "n": 96,
+                "p95": 0.342747562189083,
+                "max": 0.37689397637455935
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.3517908826973726,
+                "max": 11.224634926984345
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 64,
+                "physical_extent_unconfirmed": 2,
+                "unobserved_motion_budget": 3
+              }
+            },
+            "lateral": {
+              "available": 43,
+              "fraction": 0.2670807453416149,
+              "accepted_error": {
+                "n": 43,
+                "p95": 0.3035104499233242,
+                "max": 0.35504796058810284
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.31042153166334907,
+                "max": 10.933783026398714
+              },
+              "threshold": 3.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 118,
+                "physical_extent_unconfirmed": 2,
+                "unobserved_motion_budget": 68
+              }
+            },
+            "yaw": {
+              "available": 43,
+              "fraction": 0.2670807453416149,
+              "accepted_error": {
+                "n": 43,
+                "p95": 0.17486294696469296,
+                "max": 0.18747134193362325
+              },
+              "all_emitted_error": {
+                "n": 161,
+                "p95": 0.2442061827601175,
+                "max": 5.080294822172489
+              },
+              "threshold": 5.0,
+              "invalid_reasons": {
+                "motion_direction_unobserved": 118,
+                "axis_unconfirmed": 2,
+                "unobserved_motion_budget": 69
+              }
+            }
+          },
+          "violations": [],
+          "finite_support": {
+            "unsupported_observed_cells_fraction": {
+              "n": 161,
+              "p95": 0.01126126126126126,
+              "max": 0.014018691588785047
+            },
+            "note": "Observed cells checked against finite truth polygon with 1 cm tolerance; clearance is still to the seat plane, not a certified landing footprint."
+          },
+          "case": 5,
+          "geometry": {
+            "family": "box",
+            "shape": "ellipse",
+            "depth": 0.51,
+            "width": 0.92,
+            "height": 0.295,
+            "x": -0.4,
+            "y": -0.004,
+            "yaw": -0.08726646259971647
+          },
+          "longest_rejected_run_frames": {
+            "clearance": 0,
+            "forward": 62,
+            "lateral": 101,
+            "yaw": 101
+          },
+          "registration_ranks": {
+            "0": 1,
+            "3": 69,
+            "4": 43,
+            "2": 48
+          }
+        }
+      ]
+    }
+  },
+  "trajectory_comparison": [
+    {
+      "case": 0,
+      "family": "chair",
+      "root_position_difference_cm": {
+        "n": 161,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "root_rotation_difference_deg": {
+        "n": 161,
+        "p95": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "case": 1,
+      "family": "bench",
+      "root_position_difference_cm": {
+        "n": 161,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "root_rotation_difference_deg": {
+        "n": 161,
+        "p95": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "case": 2,
+      "family": "box",
+      "root_position_difference_cm": {
+        "n": 161,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "root_rotation_difference_deg": {
+        "n": 161,
+        "p95": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "case": 3,
+      "family": "rigid_couch",
+      "root_position_difference_cm": {
+        "n": 161,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "root_rotation_difference_deg": {
+        "n": 161,
+        "p95": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "case": 4,
+      "family": "bench",
+      "root_position_difference_cm": {
+        "n": 161,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "root_rotation_difference_deg": {
+        "n": 161,
+        "p95": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "case": 5,
+      "family": "box",
+      "root_position_difference_cm": {
+        "n": 161,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "root_rotation_difference_deg": {
+        "n": 161,
+        "p95": 0.0,
+        "max": 0.0
+      }
+    }
+  ],
+  "live_replay": {
+    "T_O_P": 0.0,
+    "T_S_P": 0.2674723620890509,
+    "quality_flags_identical": true,
+    "same_observer_version_as_online_capture": false,
+    "scope": "Revised shape association: odometry must agree; relative seat pose and quality can change. This is not live validation of the revised shape fit."
+  },
+  "depth_blackout": {
+    "samples": 150,
+    "alignment_accepted": 0,
+    "clearance_accepted": 0
+  },
+  "reacquisition": [
+    {
+      "case": 0,
+      "first_relocalized_stamp": 10.700000000000001,
+      "final_recovery": null,
+      "final_requires_reacquisition": false
+    },
+    {
+      "case": 1,
+      "first_relocalized_stamp": 10.0,
+      "final_recovery": null,
+      "final_requires_reacquisition": false
+    },
+    {
+      "case": 2,
+      "first_relocalized_stamp": 10.0,
+      "final_recovery": null,
+      "final_requires_reacquisition": false
+    },
+    {
+      "case": 3,
+      "first_relocalized_stamp": 10.4,
+      "final_recovery": null,
+      "final_requires_reacquisition": false
+    },
+    {
+      "case": 4,
+      "first_relocalized_stamp": 10.0,
+      "final_recovery": null,
+      "final_requires_reacquisition": false
+    },
+    {
+      "case": 5,
+      "first_relocalized_stamp": 10.0,
+      "final_recovery": null,
+      "final_requires_reacquisition": false
+    }
+  ],
+  "analysis_source_sha256": "a425347efb7385d94fbf147150f42a147aa067d32278416209de3fa9f8454f22",
+  "scope": "Frozen estimator and frozen controller, six previously seen simulated surface geometries. Runtime uses sensor archive only. Truth is offline. Quality budgets are heuristics; no control authorization, hardware calibration or untouched geometry generalization claim."
+}

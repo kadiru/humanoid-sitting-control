@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "checks": {
+    "near_reference5": {
+      "success": 18,
+      "strict": 18,
+      "physical": 0,
+      "count": 18
+    },
+    "near_reference4": {
+      "success": 18,
+      "strict": 18,
+      "physical": 0,
+      "count": 18
+    },
+    "learned_smoke": {
+      "success": 18,
+      "strict": 18,
+      "physical": 0,
+      "count": 18
+    }
+  },
+  "reset_stages": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "smoke": {
+    "updates": 2,
+    "actor_updates": 1,
+    "policy_decisions": 1152,
+    "transitions": 5760,
+    "active": 5760,
+    "warmup": 0
+  },
+  "standing_reference": 3,
+  "standing_reference_validated": false,
+  "scope": "Validated near-seat transfer admits bounded progressive learning. The standing reference still has2 physical failures; not relabeled or claimed solved."
+}

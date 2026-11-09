@@ -1,0 +1,54 @@
+{
+  "scope": "Post603 design reasoning from inherited exact elimination certificates; no new scientific execution, reduction, solver or witness",
+  "status": "Design derivation only; no new independently executed rank audit or604 executable algorithm",
+  "source_summary_hashes_verified_by_read_only_tool": "6ac778",
+  "source_summary_sha256": {
+    "zero_face_preparation_572/preparation.json": "c247c41c00d21c7542259a26fd96304ad487440583b457015c14cc9520bc4dac",
+    "affine_output_preparation_578/preparation.json": "651cdc1aaf88b8f7d073a60d3fad2415203819f6ffee163da23d54053e1f8509",
+    "affine_output_audit_579/independent_audit.json": "9cb140bd8fdbefd6b67c7731c8d9095eb613b0010ae75aa25a724209cecf581f",
+    "foot_block_preparation_586/preparation.json": "d3f2aa8582202706ae6dde561f1d2fc71b37b4f1d2999de3d5eb15e9a3e75140",
+    "foot_block_audit_587/independent_audit.json": "a566edac65602f72c44f4ce447757092680df0b180c11fbe4c12c12ee1468fbc",
+    "balance_block_preparation_594/preparation.json": "b812cad7b68fc6cdcbf2b0a355029c5139b9e37806de2182845662e815395f77",
+    "balance_block_audit_595/independent_audit.json": "e1e14b1375a5e8b0a95a4c4baca4e75aef84540f43690d2d65512f1166ce5f94",
+    "balance_encoding_audit_597/independent_audit.json": "fb527190e9e876d161d13a051273c188752363e0ec73c0144848cf8869236011"
+  },
+  "inheritance": "These eight summary hashes were checked against pressure_quotient_evidence_preservation_603.json. No coefficient matrix, graph, determinant, inverse, identity, rounding certificate or primal point was recomputed.",
+  "affine_dimension_derivation": [
+    "For an equality matrix partitioned as [B C; D F] with certified square invertible B, exact invertible row operations give rank(E)=dim(B)+rank(F-D B^-1 C). This statement uses the inherited certificates; it does not request another factorization or Schur-complement computation.",
+    "Inherited578/579 contributes47775 nonzero scalar equality pivots;586/587 contributes16380 independent leg columns;594/595 contributes4095 independent rootxy/f columns. The remaining594 equality matrix is already certified as1366 empty zero rows plus one scalar-one row with all RHSzero by596/597.",
+    "Consequently the saved572 equality coefficient matrix has rank47775+16380+4095+1=68251, and its homogeneous nullity is78791-68251=10540. This is a logical consequence of the existing certified block elimination, not a newly executed rank calculation.",
+    "The equality-only affine set is consistent: any real retained10540-vector with scalar t=0 has the unique exact composition of the three inherited affine graphs. This is an abstract parametrization statement; no value was selected, evaluated, rounded or saved as a point.",
+    "Thus removing scalar t leaves10540 free affine parameters. Equality-only unique-graph elimination cannot lower that parameter count while preserving the entire equality-only solution set. An alternative original-coordinate chart could change sparsity, but would be a basis change rather than additional affine dimension reduction. Removing only t is not a substantively new witness construction."
+  ],
+  "limits": [
+    "This rank/nullity statement concerns ONLY the saved572 equality matrix. It does not claim dimension, nonemptiness or relative interior of the inequality-and-bound feasible polyhedron, which may still be empty or lower dimensional.",
+    "No inequality rank, primal existence, original optimum, conditioning, runtime improvement, finite extension or physical feasibility follows. Source572 remains a possibly proper zero-face restriction of the original LP.",
+    "The602/603 pressure obstruction remains terminal. This derivation does not test another foot, state, minor or approximate null and does not rescue that route."
+  ],
+  "next_method_boundary": [
+    "A genuinely smaller feasible-set representation must now exploit certified consequences of inequalities and bounds, or use an existential projection with a set-valued reconstruction interval. It cannot obtain new independent equality pivots merely by repeating or regrouping the three completed graphs.",
+    "For a possible existential elimination of a coordinate x, write each row as a_i*x+r_i(y)<=b_i. Positive a_i gives U_i(y)=(b_i-r_i(y))/a_i; negative a_i gives L_i(y)=(b_i-r_i(y))/a_i. Exact projection retains all zero-coefficient rows and every pair L_j(y)<=U_i(y), including all relevant bounds. Conversely any projected y with max L<=min U admits a real x in that interval. Unbounded-sided cases must be treated explicitly. This is a general derivation, not a selected or executed604 formulation.",
+    "Such projection can multiply row counts and couple time blocks. No target-column selection, bounded row-growth argument, complete reconstruction/finite policy, resource freeze or independent implementation has been established for this problem. It is therefore NOT authorized for numerical or scientific launch by this note. Do not treat the generic formula as sufficient justification for another blind elimination or LP retry.",
+    "Continue mathematical design from saved wholeclock/command/localmechanics structure. Before any new scientific launch, select ONE substantive construction and freeze its complete initialization, equations, resources, source/input identity and independent audit. No completed arithmetic replay, old solver restart, parameter/basis/backend retry, internal/rejected vector, threshold or physical waiver."
+  ],
+  "new_scientific_execution": false,
+  "new_independently_executed_rank_audit": false,
+  "new_coefficient_arithmetic": false,
+  "new_formulation_selected": false,
+  "new_algorithm_or_budget_frozen": false,
+  "new_reduced_matrix": false,
+  "new_lp": false,
+  "new_primal_point": false,
+  "new_actual_model_or_physics": false,
+  "last_sealed_closure": "closure_record_601.json",
+  "last_completed_preparation": "preparation_handoff_record_603.json",
+  "current_reviewed_report": "progress_report_600/findings.html",
+  "video_unchanged": "all_attempts_video_307/all_attempts.mp4",
+  "all64_protected": true,
+  "all8_unresolved": true,
+  "ppo_unstarted": true,
+  "fresh_holdout_unstarted": true,
+  "task_complete": false,
+  "automation_status": "ACTIVE",
+  "user_input_needed": false
+}

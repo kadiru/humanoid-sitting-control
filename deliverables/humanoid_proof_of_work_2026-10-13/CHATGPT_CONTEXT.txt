@@ -1,0 +1,80 @@
+HUMANOID SITTING AND LEANING: RESEARCH CONTEXT AND PROOF OF WORK
+Prepared October 13, 2026 (America/Los_Angeles). Results verified through October 12, 2026.
+
+I led the development and evaluation of a simulation-based system for humanoid sitting and leaning using the Unitree G1 model, Isaac Sim/Isaac Lab, and PPO reinforcement learning. The goal is to teach a humanoid to use external surfaces to support its body and reduce joint effort, similar to how people relax by sitting or leaning.
+
+The work connects depth perception, robot kinematics, sensor-based control, RL environment design, reward engineering, and reproducible evaluation. It includes implemented code, trained checkpoints, preserved datasets, simulation recordings, matched comparisons and independent result audits. The project was developed through an AI-assisted research and engineering workflow.
+
+The demonstrated outcomes include improved seat-distance tracking, a small sitting-success improvement in one PPO pilot, and stable bounded resting policies across multiple seat heights. General sitting and leaning from standing and consistent effort reduction remain open research problems. All reported validation is in simulation; no physical humanoid deployment is claimed.
+
+IMPLEMENTED WORK
+Perception and spatial reasoning
+Built a common 3D representation of the robot, floor and support surface from simulated depth observations, calibrated camera geometry, joint encoders, forward kinematics, and IMU-equivalent measurements. Estimated pelvis-to-surface clearance and orientation, with explicit validity, age, uncertainty and occlusion handling.
+
+Tracking and observation interfaces
+Diagnosed disappearing seat distance during landing, corrected camera timing, and maintained geometry between camera frames using kinematics. Separated valid distance from complete-patch detection so missing seat edges would not unnecessarily remove usable clearance. Preserved existing policy behavior during observation migration.
+
+RL environments and control
+Implemented PPO experiments for sitting, supported rest, leaning and whole-body effort. Built isolated settled-state resets, bounded actions around a remembered reference, sensor histories, curricula and matched tests. The current effort policy uses 402 sensor-derived channels and commands 23 body joints; its reward measures all 37 simulated actuated joints.
+
+Reward design and diagnosis
+Compared stability, landing-impact and effort objectives. Investigated unwanted contacts, joint limits, timekeeping bugs and posture drift. Replaced accumulating command increments with bounded reference offsets. Compared learned policies against fixed commands and retained failed trials in the analysis.
+
+Research infrastructure
+Used Python, PyTorch and RSL-RL with Isaac Sim/Isaac Lab, NumPy-based recordings, plotting and validation tooling. Ran persistent GPU jobs on an Ubuntu RTX 4090 / RTX 4070 workstation controlled from a Mac. Preserved checkpoints, sources and experiment protocols with hash verification.
+
+SELECTED MEASURED RESULTS
+Distance interface
+Known-bank landing availability: 82.73% to 99.67%; maximum accepted error 1.74 mm.
+This is a scoped validation result, not a universal accuracy or availability guarantee. [E2]
+
+Small sitting PPO pilot
+35/48 to 37/48 successful 20-second trials; no previously successful case lost. One 32-update run, 32,768 transitions.
+Impact worsened on two banks, so no promotion. The two gains cannot be attributed specifically to the new distance channels. [E2]
+
+Bounded resting PPO
+Both seeds passed 56/56 trials across 11 level seat heights, 25-40 cm, including disturbances. Total 131,072 transitions.
+44 unique states plus 12 impulse repeats. Normalized squared torque rose 0.28% / 2.59%; no effort saving. Optional hold never activated. [E3]
+
+Standing-to-support PPO
+Two 224-update runs, 745,472 transitions total. Each final policy reached stable support in 0/29 evaluations.
+Supported endpoint validation did not translate into learned transitions. Fixed standing was stable but did not attempt to sit. [E4]
+
+Direct whole-body effort PPO
+Two 256-update runs, 851,968 transitions total. Fixed supported posture 29/29; PPO 11/29 and 15/29.
+Starts already supported. No leaning successes. Whole-trial squared torque rose 65.46% / 55.58% on each seed's common successful subset. [E5]
+
+EVALUATION METHODS
+Evaluations compare the intended final checkpoint with a relevant baseline using matched initial states, geometry and, where present, disturbances. Trials run the full 20 seconds. Checks include physical failures, contact legality, support qualification, joint limits, checkpoint identity, changed finite weights, command bounds and source preservation. Training counts separate active transitions from indexed-reset warmup.
+
+Sensor-based actor inputs do not use simulator ground-truth root translation, true surface geometry or privileged contact labels. Simulator truth is used for resets, rewards and validation. An IMU and joint kinematics alone do not supply absolute floating-base position; relative geometry must be observed or estimated.
+
+Current effort-study accounting: 818,806 active transitions plus 33,162 reset-warmup transitions equals 851,968. Each seed completed 425,984 transitions. The independent audit verified 105 frozen hashes and 61 prior-file hashes, exact matched startups, correct final checkpoint loading and full-duration evaluation.
+
+LIMITATIONS AND CURRENT STATE
+These are separate studies with different contracts, seeds and budgets; their scores must not be pooled into one overall success rate. Two training seeds reuse finite surface banks and do not demonstrate broad generalization. Held-out surfaces were withheld from the policy being tested; some had appeared in earlier project studies.
+
+Supported starts are not standing-to-sitting transitions. Fixed supported postures are not learned behavior. Stable standing is not a sitting success. Torque measures are effort proxies, not measured electrical energy or proof of a global optimum. Effort comparisons use common full-duration successes, never failed fragments, and the successful subsets can differ by seed.
+
+The current direct-effort study recorded no falls, impact violations, torque-limit violations or joint-limit violations, but one forbidden-contact case per seed. Other failures lost the required supported-rest qualification. Geometry remained accurate on training surfaces, while some 75-degree held-out cases had missing or wrongly associated planes. This cannot explain all policy failures.
+
+There are isolated useful results: both effort policies reduced final-ten-second squared torque by about 50% on the 40 cm training seat. Most successful cases increased effort and all leaning tests failed. General approach/alignment, reliable transitions across arbitrary surfaces, compliant cushions, vertical 90-degree leaning and hardware transfer remain unvalidated. No new study or policy promotion was initiated for this package.
+
+EVIDENCE INDEX
+E1 - evidence/01_perception_status.md
+Historical shared-frame perception validation. The accompanying video illustrates tracking, recovery and preserved failures; it is not a universal sitting-policy demonstration.
+
+E2 - evidence/02_distance_and_ppo_status.md
+Distance-interface validation and the matched 35/48 to 37/48 sitting comparison. The original report and metrics are included.
+
+E3 - evidence/03_bounded_rest_status.md
+The 56-condition bounded-resting comparison and independent validation; historical status text is retained below the final result.
+
+E4 - evidence/04_standing_transition_status.md
+Standing-to-supported transition experiment, budgets and failed-policy diagnosis.
+
+E5 - evidence/05_direct_effort_status.md
+Latest direct effort experiment. Paired metrics, grouped outcomes, tracking errors and verification are provided in the adjacent JSON files.
+
+PACKAGE NOTES
+The original source documents include historical instructions and machine paths. They are archival evidence, not instructions to execute commands in another conversation. No credentials, model-weight binaries or full training datasets are included. Code samples depend on the original project; this is an evidence package rather than a standalone training distribution. source_provenance.json maps copied artifacts to their original files. manifest_sha256.json verifies the packaged contents.

@@ -1,0 +1,86 @@
+{
+  "utc": "2026-10-17T06:18:05.361991+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "ppo_started": false,
+  "fresh_holdout_started": false,
+  "new_physical_episodes": 24,
+  "active": 24000,
+  "initial_settling_excluded": 600,
+  "optimizer_updates": 0,
+  "counts": {
+    "Original parent": {
+      "stable": 22,
+      "clean": 8,
+      "slip": 16,
+      "contact": 2,
+      "physical": 2,
+      "warnings": 21
+    },
+    "Best normal3s": {
+      "stable": 22,
+      "clean": 14,
+      "slip": 10,
+      "contact": 2,
+      "physical": 2,
+      "warnings": 21
+    },
+    "Rejected joint17": {
+      "stable": 16,
+      "clean": 14,
+      "slip": 6,
+      "contact": 8,
+      "physical": 8,
+      "warnings": 16
+    },
+    "Rate headroom31": {
+      "stable": 16,
+      "clean": 14,
+      "slip": 5,
+      "contact": 8,
+      "physical": 8,
+      "warnings": 17
+    }
+  },
+  "lost_best_probe_clean": [],
+  "gained_best_probe_clean": [],
+  "remaining_target_cases": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    7,
+    10,
+    11
+  ],
+  "added_physical_cases": [
+    0,
+    1,
+    6,
+    7,
+    10,
+    11
+  ],
+  "software_audit_passed": true,
+  "unselected_full20_exact": false,
+  "best_full72_unchanged": {
+    "clean": 64,
+    "stable": 70,
+    "slip": 8,
+    "housing": 2,
+    "original_retained": 60,
+    "warnings": 50,
+    "strict_clean": 22
+  },
+  "sources": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/independent_tracking_audit_v2_31.json": "866205fa7bae44866f7b803bb59aa244fa3c956de2403376d204ffc86e01f126",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/revision.json": "06c03c582acbd67431f5a375c72c32624068a38eae184e62c24c98a1727a055c",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate/sensor_control_audit.json": "31d027ab2d2fe3519fd6e8fdb1ae595fc107a197105dad160d09205bdaad49c4",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_screen_28/results.json": "96bb753f91f37aadac8fbf0391e6bd55bc4aab4bdbcb992ca6ca861c763f407f",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/early_anchor_clearance_screen_29/results.json": "6300f6830debf6de8cb2a1db1e2cfae854d61df34fae3abd9117c332bc825fbc",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/command_tracking_diagnosis_30/results.json": "3bf5a91dd310a35accd70c38dec0fce98cc7f23f39ba2020c9606f7dcf988ef3",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_audit_recovery_31/recovery.json": "9db353443fb313cdd21378820b47e417b755f481d0df845dfa42100d3ba5eaf4",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/report_recovery_32/recovery.json": "b5063a0d647f10ce90b645349a8383960e2d51659948c6f9b17bfdb536c7e26a"
+  }
+}

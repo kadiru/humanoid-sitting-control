@@ -1,0 +1,233 @@
+{
+  "paired_startup_archives": {
+    "regression": {
+      "case": true,
+      "t": true,
+      "attempt": true,
+      "depth": true,
+      "K": true,
+      "q": true,
+      "gravity": true,
+      "initialized": true
+    },
+    "fresh": {
+      "case": true,
+      "t": true,
+      "attempt": true,
+      "depth": true,
+      "K": true,
+      "q": true,
+      "gravity": true,
+      "initialized": true
+    },
+    "starts": {
+      "case": true,
+      "t": true,
+      "attempt": true,
+      "depth": true,
+      "K": true,
+      "q": true,
+      "gravity": true,
+      "initialized": true
+    }
+  },
+  "admitted_only_secondary": {
+    "regression_parent": {
+      "refused_cases": [],
+      "admitted_count": 16,
+      "max_admitted_force_N": 520.5017700195312
+    },
+    "regression_trained": {
+      "refused_cases": [],
+      "admitted_count": 16,
+      "max_admitted_force_N": 616.4586181640625
+    },
+    "fresh_parent": {
+      "refused_cases": [],
+      "admitted_count": 16,
+      "max_admitted_force_N": 1078.0694580078125
+    },
+    "fresh_trained": {
+      "refused_cases": [],
+      "admitted_count": 16,
+      "max_admitted_force_N": 1176.07568359375
+    },
+    "starts_parent": {
+      "refused_cases": [
+        15
+      ],
+      "admitted_count": 15,
+      "max_admitted_force_N": 1848.8592529296875
+    },
+    "starts_trained": {
+      "refused_cases": [
+        15
+      ],
+      "admitted_count": 15,
+      "max_admitted_force_N": 964.7265625
+    }
+  },
+  "late_trial_effort_secondary": {
+    "regression_parent": {
+      "mean_leg_rms_last_2s_Nm": [
+        3.0826833248138428,
+        3.2835042476654053,
+        3.3004825115203857,
+        3.9973623752593994,
+        3.8542439937591553,
+        3.9783506393432617,
+        4.057016849517822,
+        4.749898433685303,
+        3.730219602584839,
+        3.4950473308563232,
+        3.6680150032043457,
+        3.6710216999053955,
+        3.376465320587158,
+        3.2459523677825928,
+        4.238173484802246,
+        3.6089131832122803
+      ]
+    },
+    "regression_trained": {
+      "mean_leg_rms_last_2s_Nm": [
+        4.030526638031006,
+        4.426413536071777,
+        3.7605278491973877,
+        5.041004657745361,
+        3.8248448371887207,
+        4.015528678894043,
+        6.339542865753174,
+        4.034503936767578,
+        5.316859245300293,
+        4.804944038391113,
+        3.807101011276245,
+        3.7341532707214355,
+        3.693587064743042,
+        3.8175013065338135,
+        1.7199172973632812,
+        1.788212776184082
+      ]
+    },
+    "fresh_parent": {
+      "mean_leg_rms_last_2s_Nm": [
+        3.194159984588623,
+        3.2558212280273438,
+        5.355814456939697,
+        3.8637139797210693,
+        2.7889018058776855,
+        3.5644328594207764,
+        3.1934847831726074,
+        3.8357980251312256,
+        5.900845050811768,
+        5.609912872314453,
+        4.539858341217041,
+        4.575501441955566,
+        5.615293502807617,
+        5.972353458404541,
+        5.140532493591309,
+        6.921677589416504
+      ]
+    },
+    "fresh_trained": {
+      "mean_leg_rms_last_2s_Nm": [
+        3.267740488052368,
+        3.4394829273223877,
+        4.6752800941467285,
+        4.290882110595703,
+        3.5394718647003174,
+        4.473445892333984,
+        4.487294673919678,
+        4.212420463562012,
+        8.844574928283691,
+        4.173691749572754,
+        4.5816426277160645,
+        4.7281270027160645,
+        11.337676048278809,
+        11.021371841430664,
+        5.56331729888916,
+        7.026832103729248
+      ]
+    },
+    "starts_parent": {
+      "mean_leg_rms_last_2s_Nm": [
+        5.562282562255859,
+        6.02047872543335,
+        4.115065097808838,
+        4.001677513122559,
+        4.302468776702881,
+        2.8838019371032715,
+        4.824057102203369,
+        6.293659687042236,
+        2.946366548538208,
+        3.033433198928833,
+        6.262198448181152,
+        9.873644828796387,
+        4.348565101623535,
+        6.569969654083252,
+        5.481053352355957,
+        5.250446319580078
+      ]
+    },
+    "starts_trained": {
+      "mean_leg_rms_last_2s_Nm": [
+        4.739487171173096,
+        11.69865608215332,
+        3.6716244220733643,
+        3.5749599933624268,
+        2.1095433235168457,
+        4.80606746673584,
+        3.2063770294189453,
+        8.57745361328125,
+        2.878980875015259,
+        3.027613639831543,
+        6.3808135986328125,
+        9.087491989135742,
+        3.609123706817627,
+        3.1959547996520996,
+        9.824198722839355,
+        5.250446319580078
+      ]
+    }
+  },
+  "training": {
+    "initial": {
+      "valid_samples": 32528,
+      "missing_patch_samples": 745,
+      "clearance_plus_1cm_max_residual_target_change_rad": 0.0,
+      "clearance_plus_1cm_missing_patch_max_residual_target_change_rad": 0.0,
+      "new_column_max_weights": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "trained": {
+      "valid_samples": 32528,
+      "missing_patch_samples": 745,
+      "clearance_plus_1cm_max_residual_target_change_rad": 3.002583923716884e-07,
+      "clearance_plus_1cm_missing_patch_max_residual_target_change_rad": 2.7731059049074247e-07,
+      "new_column_max_weights": [
+        0.0017089383909478784,
+        0.0023200437426567078,
+        0.0017652865499258041,
+        0.0020849851425737143,
+        0.002074203919619322,
+        0.0016341590089723468,
+        0.002028544433414936
+      ]
+    },
+    "normalization_bitwise_unchanged": true,
+    "accounted_transitions": 32768,
+    "declared_transitions": 32768,
+    "note": "Counterfactual scalar-only perturbation on recorded training observations. Does not establish a causal success improvement; final motor slew limits are not modeled here."
+  },
+  "total_evaluations": 96,
+  "all_trials_full_20s": true,
+  "parent_successes": 35,
+  "trained_successes": 37,
+  "isaaclab_clean": true
+}

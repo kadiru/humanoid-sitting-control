@@ -1,0 +1,65 @@
+{
+  "utc": "2026-10-18T03:48:05.896920+00:00",
+  "gates": [
+    [
+      "Sampled complete geometry",
+      true
+    ],
+    [
+      "Command limit margin only",
+      true
+    ],
+    [
+      "Nonnegative assumed corner forces",
+      false
+    ],
+    [
+      "Static commands / nonnegative corner loads",
+      false
+    ],
+    [
+      "All original plus support numerical constraints",
+      true
+    ],
+    [
+      "Guarded continuous timing and constraints",
+      true
+    ],
+    [
+      "Actual float32 full schedule",
+      "Not executed"
+    ],
+    [
+      "Runtime / both placements / parent / balance / bias",
+      "Not executed"
+    ],
+    [
+      "Physical admission",
+      false
+    ]
+  ],
+  "optimizer": {
+    "success": true,
+    "message": "Optimization terminated successfully",
+    "iterations": 11,
+    "evaluations": 12,
+    "minimum_augmented_inequality": -1.1297386637298956e-11,
+    "objective_time_s": 13.499999999999988,
+    "objective_slack": 0.0,
+    "max_equality_residual": 5.493291007259889e-15,
+    "minimum_inequality": -1.2384190894998426e-14,
+    "numerical_constraints_passed": true,
+    "local_not_global": true,
+    "objective_is_dimensionless_slack": true,
+    "objective_time_s_is_legacy_duration_field": true,
+    "scaled_original_violation": 1.1297386637298956e-11,
+    "scaled_hard_violation": 1.1297386637298956e-11,
+    "scaled_soft_violation": 4.128063631666142e-12,
+    "slack_is_not_admission_tolerance": true
+  },
+  "physical_admission": false,
+  "repair_complete": false,
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "video_unchanged": true
+}

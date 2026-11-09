@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-17T17:54:23.833467+00:00",
+  "phase": "needs_recovery",
+  "physics_repair": false,
+  "optimizer_updates": 0,
+  "audit": {
+    "phase": "failed",
+    "steps": [
+      {
+        "script": "audit_low_seat_roll_274.py",
+        "exit_code": 1
+      }
+    ],
+    "passed": false
+  },
+  "video": {
+    "phase": "complete",
+    "steps": [
+      {
+        "script": "render_low_seat_all_attempts_276.py",
+        "exit_code": 0
+      },
+      {
+        "script": "verify_low_seat_all_attempts_277.py",
+        "exit_code": 0
+      }
+    ],
+    "passed": true
+  },
+  "finished_utc": "2026-10-17T17:56:04.816478+00:00",
+  "sources_unchanged": true,
+  "physical_repair": false
+}

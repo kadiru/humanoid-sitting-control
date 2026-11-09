@@ -1,0 +1,23 @@
+{
+  "leg_order": [
+    "hip_pitch",
+    "hip_roll",
+    "hip_yaw",
+    "knee",
+    "ankle_pitch",
+    "ankle_roll"
+  ],
+  "stiffness_Nm_per_rad": [
+    200,
+    150,
+    150,
+    200,
+    160,
+    160
+  ],
+  "source_sha256": {
+    "IsaacLab/source/isaaclab_assets/isaaclab_assets/robots/unitree.py": "ea47505ddf82d15895fa55a0a666b5c4800eba24782ece6080061b64cd51e54b",
+    "sitting_task/src/humanoid_sitting/tasks/full_transition.py": "e44f6a77f51453d47e1f2456b793b8a1eee9ba32f1c29b176ce46dce7a8f7e4c"
+  },
+  "scope": "Existing G1 leg stiffness plus existing FullTransition feet override. Offline vertical-force feedforward is an approximation; no runtime value changed."
+}

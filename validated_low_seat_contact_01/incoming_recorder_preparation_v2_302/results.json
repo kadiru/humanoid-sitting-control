@@ -1,0 +1,479 @@
+{
+  "utc": "2026-10-17T20:11:35.240074+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "device": "cpu",
+      "ordered": false,
+      "mode": "good",
+      "passed": true,
+      "metadata": {
+        "nonidentity_joint_ordering": false,
+        "private_query_destinations": true,
+        "user_to_backend": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "public_pointers": [
+          764469568,
+          778231680
+        ],
+        "implicit_kernel_state_pointers": [
+          764469568,
+          778231680
+        ],
+        "backend_pointers": [
+          769943680,
+          769952960
+        ],
+        "records": 2,
+        "every_read_public_cache_bytes_and_timestamps_exact": true,
+        "every_backend_query_nonoverlapping_public_storage": true,
+        "control_use": false,
+        "body_user_to_backend": [
+          0,
+          1,
+          2
+        ],
+        "additional_private_queries": [
+          "link_transforms",
+          "link_velocities",
+          "dof_position_targets",
+          "dof_velocity_targets",
+          "link_incoming_joint_force"
+        ],
+        "extra_backend_pointers": [
+          769874816,
+          769875200,
+          769953344,
+          769958016,
+          773483008
+        ],
+        "all_allocated_timestamped_caches_unchanged": true,
+        "cache_count_min": 3,
+        "cache_count_max": 3,
+        "implicit_launch_records": 0,
+        "input_replacement": false,
+        "incoming_frame": "Child incoming joint frame, force xyz then torque xyz; transmitted wrench, not isolated motor effort.",
+        "new_query_calls": 18,
+        "property_snapshots": 3,
+        "property_read_steps": [
+          0,
+          1600,
+          2600
+        ],
+        "property_queries": [
+          "dof_stiffnesses",
+          "dof_dampings",
+          "dof_armatures",
+          "dof_max_forces",
+          "dof_friction_properties"
+        ],
+        "property_destination_devices": {
+          "dof_stiffnesses": "cpu",
+          "dof_dampings": "cpu",
+          "dof_armatures": "cpu",
+          "dof_max_forces": "cpu",
+          "dof_friction_properties": "cpu"
+        },
+        "property_buffer_checks": 6,
+        "all_existing_property_and_view_buffers_byte_exact": true,
+        "preflight_completed": true
+      }
+    },
+    {
+      "device": "cpu",
+      "ordered": false,
+      "mode": "mutate_body",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cpu",
+      "ordered": false,
+      "mode": "mutate_property",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cpu",
+      "ordered": false,
+      "mode": "bad_wrench_descriptor",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cpu",
+      "ordered": false,
+      "mode": "bad_property_descriptor",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cpu",
+      "ordered": false,
+      "mode": "unavailable",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cpu",
+      "ordered": true,
+      "mode": "good",
+      "passed": true,
+      "metadata": {
+        "nonidentity_joint_ordering": true,
+        "private_query_destinations": true,
+        "user_to_backend": [
+          2,
+          0,
+          3,
+          1
+        ],
+        "public_pointers": [
+          770092224,
+          770229056
+        ],
+        "implicit_kernel_state_pointers": [
+          770092224,
+          770229056
+        ],
+        "backend_pointers": [
+          765060480,
+          765060864
+        ],
+        "records": 2,
+        "every_read_public_cache_bytes_and_timestamps_exact": true,
+        "every_backend_query_nonoverlapping_public_storage": true,
+        "control_use": false,
+        "body_user_to_backend": [
+          2,
+          0,
+          1
+        ],
+        "additional_private_queries": [
+          "link_transforms",
+          "link_velocities",
+          "dof_position_targets",
+          "dof_velocity_targets",
+          "link_incoming_joint_force"
+        ],
+        "extra_backend_pointers": [
+          765192832,
+          765193216,
+          770230400,
+          770231360,
+          765193472
+        ],
+        "all_allocated_timestamped_caches_unchanged": true,
+        "cache_count_min": 3,
+        "cache_count_max": 3,
+        "implicit_launch_records": 0,
+        "input_replacement": false,
+        "incoming_frame": "Child incoming joint frame, force xyz then torque xyz; transmitted wrench, not isolated motor effort.",
+        "new_query_calls": 18,
+        "property_snapshots": 3,
+        "property_read_steps": [
+          0,
+          1600,
+          2600
+        ],
+        "property_queries": [
+          "dof_stiffnesses",
+          "dof_dampings",
+          "dof_armatures",
+          "dof_max_forces",
+          "dof_friction_properties"
+        ],
+        "property_destination_devices": {
+          "dof_stiffnesses": "cpu",
+          "dof_dampings": "cpu",
+          "dof_armatures": "cpu",
+          "dof_max_forces": "cpu",
+          "dof_friction_properties": "cpu"
+        },
+        "property_buffer_checks": 6,
+        "all_existing_property_and_view_buffers_byte_exact": true,
+        "preflight_completed": true
+      }
+    },
+    {
+      "device": "cpu",
+      "ordered": true,
+      "mode": "mutate_body",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cpu",
+      "ordered": true,
+      "mode": "mutate_property",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cpu",
+      "ordered": true,
+      "mode": "bad_wrench_descriptor",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cpu",
+      "ordered": true,
+      "mode": "bad_property_descriptor",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cpu",
+      "ordered": true,
+      "mode": "unavailable",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": false,
+      "mode": "good",
+      "passed": true,
+      "metadata": {
+        "nonidentity_joint_ordering": false,
+        "private_query_destinations": true,
+        "user_to_backend": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "public_pointers": [
+          136190875403264,
+          136190875403776
+        ],
+        "implicit_kernel_state_pointers": [
+          136190875403264,
+          136190875403776
+        ],
+        "backend_pointers": [
+          17213423616,
+          17213424128
+        ],
+        "records": 2,
+        "every_read_public_cache_bytes_and_timestamps_exact": true,
+        "every_backend_query_nonoverlapping_public_storage": true,
+        "control_use": false,
+        "body_user_to_backend": [
+          0,
+          1,
+          2
+        ],
+        "additional_private_queries": [
+          "link_transforms",
+          "link_velocities",
+          "dof_position_targets",
+          "dof_velocity_targets",
+          "link_incoming_joint_force"
+        ],
+        "extra_backend_pointers": [
+          17213424640,
+          17213425152,
+          17213425664,
+          17213426176,
+          17213426688
+        ],
+        "all_allocated_timestamped_caches_unchanged": true,
+        "cache_count_min": 3,
+        "cache_count_max": 3,
+        "implicit_launch_records": 0,
+        "input_replacement": false,
+        "incoming_frame": "Child incoming joint frame, force xyz then torque xyz; transmitted wrench, not isolated motor effort.",
+        "new_query_calls": 18,
+        "property_snapshots": 3,
+        "property_read_steps": [
+          0,
+          1600,
+          2600
+        ],
+        "property_queries": [
+          "dof_stiffnesses",
+          "dof_dampings",
+          "dof_armatures",
+          "dof_max_forces",
+          "dof_friction_properties"
+        ],
+        "property_destination_devices": {
+          "dof_stiffnesses": "cuda:1",
+          "dof_dampings": "cuda:1",
+          "dof_armatures": "cuda:1",
+          "dof_max_forces": "cuda:1",
+          "dof_friction_properties": "cuda:1"
+        },
+        "property_buffer_checks": 6,
+        "all_existing_property_and_view_buffers_byte_exact": true,
+        "preflight_completed": true
+      }
+    },
+    {
+      "device": "cuda:1",
+      "ordered": false,
+      "mode": "mutate_body",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": false,
+      "mode": "mutate_property",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": false,
+      "mode": "bad_wrench_descriptor",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": false,
+      "mode": "bad_property_descriptor",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": false,
+      "mode": "unavailable",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": true,
+      "mode": "good",
+      "passed": true,
+      "metadata": {
+        "nonidentity_joint_ordering": true,
+        "private_query_destinations": true,
+        "user_to_backend": [
+          2,
+          0,
+          3,
+          1
+        ],
+        "public_pointers": [
+          136190875419136,
+          136190875420160
+        ],
+        "implicit_kernel_state_pointers": [
+          136190875419136,
+          136190875420160
+        ],
+        "backend_pointers": [
+          17213423616,
+          17213424128
+        ],
+        "records": 2,
+        "every_read_public_cache_bytes_and_timestamps_exact": true,
+        "every_backend_query_nonoverlapping_public_storage": true,
+        "control_use": false,
+        "body_user_to_backend": [
+          2,
+          0,
+          1
+        ],
+        "additional_private_queries": [
+          "link_transforms",
+          "link_velocities",
+          "dof_position_targets",
+          "dof_velocity_targets",
+          "link_incoming_joint_force"
+        ],
+        "extra_backend_pointers": [
+          17213424640,
+          17213425152,
+          17213425664,
+          17213426176,
+          17213426688
+        ],
+        "all_allocated_timestamped_caches_unchanged": true,
+        "cache_count_min": 3,
+        "cache_count_max": 3,
+        "implicit_launch_records": 0,
+        "input_replacement": false,
+        "incoming_frame": "Child incoming joint frame, force xyz then torque xyz; transmitted wrench, not isolated motor effort.",
+        "new_query_calls": 18,
+        "property_snapshots": 3,
+        "property_read_steps": [
+          0,
+          1600,
+          2600
+        ],
+        "property_queries": [
+          "dof_stiffnesses",
+          "dof_dampings",
+          "dof_armatures",
+          "dof_max_forces",
+          "dof_friction_properties"
+        ],
+        "property_destination_devices": {
+          "dof_stiffnesses": "cuda:1",
+          "dof_dampings": "cuda:1",
+          "dof_armatures": "cuda:1",
+          "dof_max_forces": "cuda:1",
+          "dof_friction_properties": "cuda:1"
+        },
+        "property_buffer_checks": 6,
+        "all_existing_property_and_view_buffers_byte_exact": true,
+        "preflight_completed": true
+      }
+    },
+    {
+      "device": "cuda:1",
+      "ordered": true,
+      "mode": "mutate_body",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": true,
+      "mode": "mutate_property",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": true,
+      "mode": "bad_wrench_descriptor",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": true,
+      "mode": "bad_property_descriptor",
+      "passed": true,
+      "rejected": true
+    },
+    {
+      "device": "cuda:1",
+      "ordered": true,
+      "mode": "unavailable",
+      "passed": true,
+      "rejected": true
+    }
+  ],
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/check_low_seat_incoming_recorder_v2_302.py": "7c05a188f48eb4e9658ca52639563098c6b659cab52bc3c3cedc2a2c1dd1d288",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_incoming_recorder_v2_301.py": "f4c03f4afb4772d0732dbaf628b3b5707bebbba24bfb29840b5beeac940dee32",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_drive_recorder_244.py": "0787b1df7c4fa87c6b9b71e6f2856e28358f853809f2bec0741ac970a55f617d",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_private_recorder_198.py": "754bc3b151eaeccb3ec51df6fb38f9b68014980326d0ae542e91bed47bc6cc51"
+  }
+}

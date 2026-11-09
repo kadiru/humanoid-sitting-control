@@ -1,0 +1,46 @@
+{
+  "classification": "Approved cycle stage A; saved-data attribution only",
+  "total_seconds": 45.0,
+  "address_space_bytes": 42949672960,
+  "concurrent_scientific_workers": 1,
+  "initialization": "Immutable saved raw_direction.npy from the sealed diagnostic, accepted mu, and current verified full M/b/E/bounds. Read only. No recomputed direction, candidate or warm start.",
+  "equations": [
+    "z0=[0,mu], v=[saved_raw,-mu/2]. For every row M_i z<=b_i compute exact stored-binary64 margin m_i=b_i-M_i z0 and slope s_i=M_i v. Require m_i>=0. If s_i>0 the exact real-ray restriction is alpha<=m_i/s_i. Otherwise that row has no forward upper bound.",
+    "The initial alpha<=1 and native t bound alpha<=2 are included analytically; all other native bounds are infinite and all native equalities are identically zero, asserted explicitly. Return the minimum ratio, all exact ties and all ratios whose nearest binary64 equals the exact minimum's nearest binary64. No candidate alpha is selected.",
+    "Producer dyadics use variable denominators; audit independently sums integer coefficients/coordinates on a common2^-1074 grid with products at2^-2148. Audit verifies no tighter row exists and reconstructs every exact/rounded-indistinguishable tie and original row/unit/state/time association.",
+    "Compare the exact bound to the saved alpha. A bound in[2*saved_alpha,4*saved_alpha] accounts for the small step through the original restriction plus the prescribed half reserve/dyadic rounding. No old interval calculation or full candidate audit is replayed."
+  ],
+  "associations": {
+    "full_M_shape": [652529,78791],
+    "full_M_nnz": 2614306,
+    "full_equality_shape": [1366,78791],
+    "full_equality_nnz": 0,
+    "original_signed_rows": 331495,
+    "consistency_rows_both_signs": 136500,
+    "closed_interval_rows_both_signs": 184534,
+    "physical_mapping": "First331495 map through original keep mask into446 G/group/scale/soft; next2*68250 map by490 active-state/50OUTPUT/sigma; last2*92267 map through frozen interval owners. Mesh canonical labels map states to exact times. Underlying feature2 is coupled root-height/arm phase and feature3 is pelvis rotation phase, as defined by444 calc."
+  },
+  "costs": {
+    "full_row_passes": 2,
+    "exact_sparse_products": 5228612,
+    "maximum_row_width": 256,
+    "maximum_denominator_exponent": 2148,
+    "integer_sum_numerator_bit_cap": 4352,
+    "ratio_cross_product_bits_upper_bound": 13000,
+    "maximum_retained_limiting_or_rounded_rows": 10000,
+    "maximum_mapping_coefficient_visits": 5120000,
+    "LP_or_linear_solves": 0,
+    "candidate_vectors_created": 0,
+    "model_J_or_encoder_calls": 0,
+    "simulation_PPO_holdout_calls": 0,
+    "planning_peak_bytes": 2147483648,
+    "maximum_attribution_JSON_bytes": 268435456,
+    "minimum_free_disk_bytes": 1073741824
+  },
+  "complete_return": "Exact rational margin/slope/bound for every retained tie plus source associations; all rows independently checked before a PASS. Disk/output/audit/hash cost is inside the same clock. More than10000 retained rows, mismatched schema/units, nonpositive bound, missing records, nonfinite data or any failed proof terminates without partial acceptance.",
+  "time_enforcement": "Supervisor starts clock before imports; hashes and all workers share it. Children inherit40GiB AS; one sequential producer then one auditor. Child process group killed at44.75s to reserve0.25s finalization. Outer launch-through-exit measured separately and must also be<=45s. Any overshoot is failure, never extra budget. No retry.",
+  "success": "Actual zero exits, complete independent exact-bound and all-tie/map verification, and total launch-through-shutdown<=45s. This is attribution success only. Stage B still needs a credible newly frozen mechanism and>=1% predicted improvement.",
+  "failure": "Any first failed premise, unexpected schema/association, resource cap, missing output or audit failure terminates the approved cycle. No rerun of this analysis.",
+  "independence": "Different exact implementations in two sequential processes, statically reviewed by the sole execution owner; no second-person review or second coding agent claimed.",
+  "unchanged": "No physical admission or repair.64/72 clean,8 unresolved; main PPO unstarted;holdout closed."
+}

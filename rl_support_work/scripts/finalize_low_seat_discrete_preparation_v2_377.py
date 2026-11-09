@@ -1,0 +1,19 @@
+"""Serialization-only recovery: use the already saved377 fixture; no model/derivative rerun."""
+from pathlib import Path
+import json,hashlib,datetime,shutil
+import numpy as np
+D=Path('/data/humanoid-sitting-perception/low_seat_contact_01');O=D/'discrete_preparation_v2_377';R=D/'discrete_serialization_recovery_377'
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def main():
+ R.mkdir(exist_ok=False)
+ for p in [Path('scripts/prepare_low_seat_discrete_377.py'),Path('scripts/low_seat_discrete_problem_377.py'),D/'discrete_preparation_377.log']:
+  shutil.copy2(p,R/p.name)
+ original=D/'discrete_preparation_377/fixture.npz';assert original.is_file();a=dict(np.load(original));s=dict(np.load(D/'support_path_373/final.npz'));O.mkdir(exist_ok=False);shutil.copy2(original,O/'fixture.npz');assert sha(original)==sha(O/'fixture.npz')
+ reconstruction=float(max(abs(a['X']-s['full_coordinates']).max(),abs(a['Y']-s['local_outputs']).max()));err=float(abs(a['fd']-a['analytic']).max());assert reconstruction<1e-9 and err<2e-6
+ hashes=json.loads((D/'support_path_373/revision.json').read_text())['source_input_sha256']
+ for p in [Path('scripts/low_seat_discrete_problem_377.py').resolve(),Path('scripts/prepare_low_seat_discrete_377.py').resolve(),Path(__file__).resolve(),original,D/'support_path_373/final.npz',D/'support_path_373/results.json',D/'support_path_audit_374/independent_audit.json']:
+  hashes[str(p)]=sha(p)
+ for p,h in hashes.items():assert sha(p)==h,p
+ r=dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),passed=True,scope=__doc__,source_input_sha256=hashes,maximum_reconstruction_error=reconstruction,raw_directional_error=err,unchanged_derivative_bound=2e-6,original_rows=len(a['ineq']),retained_rows=int(a['keep'].sum()),hard_rows=int((a['keep']&a['hard']).sum()),soft_rows=int((a['keep']&~a['hard']).sum()),free_path_variables=len(a['free']),declared_path_variables=len(a['x']),movement_ticks=int(a['segment_ticks'].sum()),normal_ticks=int(a['segment_ticks'][99:104].sum()),synthetic_quiet_ticks=25,integer_time_limit_ticks=675,integer_time_s=13.5,tick_allocation='one grouped Hamilton allocation:101 normal +549 other; >=one tick per segment; ascending-index tie break; one20ms normal research reserve; no sweep',construction_contact_interior_BW=float(8*np.finfo(np.float32).eps),construction_phase_increment=float(8*np.finfo(np.float32).eps),construction_support_interior_m=float(8*np.spacing(np.float32(1.))),construction_rate_roundoff_rad_per_tick=a['rate_per_tick_envelope'].tolist(),construction_target_roundoff_rad=a['target_envelope'].tolist(),initial_original_feasibility_not_claimed=True,initial_hard_scaled_minimum=float((a['ineq'][a['keep']&a['hard']]/a['scale'][a['keep']&a['hard']]).min()),initial_slack=float(a['initial_slack']),exact_rounded_filter_is_separate_mandatory_gate=True,all675_ticks_and_intermediate_geometry_must_be_checked=True,original_physical_criteria_unchanged=True,physics_ticks=0,policy_optimizer_updates=0,nominal_optimizer_runs=0,physical_admission=False,recovery='Original preparation calculated/saved fixture, then JSON failed on numpy.float32. Metadata recovered from identical saved arrays; no model, projection or derivative repeated.')
+ (O/'preparation.json').write_text(json.dumps(r,indent=2));(O/'SHA256.json').write_text(json.dumps({p.name:sha(p) for p in O.iterdir() if p.is_file()},indent=2));rr=dict(utc=r['utc'],scope=__doc__,original_exit_code=1,original_tool_chunk='77351c',original_output_preserved=str(original.parent),fixture_sha256=sha(original),cause='NumPy float32 research interior in JSON metadata',calculation_repeated=False,model_changed=False,criteria_changed=False,output=str(O));(R/'recovery.json').write_text(json.dumps(rr,indent=2));(R/'SHA256.json').write_text(json.dumps({p.name:sha(p) for p in R.iterdir() if p.is_file()},indent=2));print(json.dumps({k:v for k,v in r.items() if k!='source_input_sha256'},indent=2))
+if __name__=='__main__':main()

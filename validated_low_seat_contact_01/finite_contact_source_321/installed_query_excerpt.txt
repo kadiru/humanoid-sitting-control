@@ -1,0 +1,151 @@
+4990:     def get_contact_data(self, dt):
+4991:         """ Gets the detailed contact data between sensors and filter prims per patch.
+4992: 
+4993:             This includes the contact forces, contact points, contact normals, and separation distances.
+4994: 
+4995:             Note that there could be more than one contact point between a sensor prim and a filter prim. This function however, does not report the aggregated values for a pair of sensor/filter prims. This is an important distinction from the :py:func:`RigidContactView.get_contact_force_matrix` function.
+4996:             This is needed because some of the variables reported by this function (such as contact normals, points, and separation) are defined only for contact points and cannot be aggregated accross the shape without further information about the geometry of the contact.
+4997: 
+4998:             Note also that the structure of the data returned by this function is different from the :py:func:`RigidContactView.get_contact_force_matrix` function. This function returns contacts data in buffers that need to be further processed.
+4999:             Specifically, the last two tensors returned by this function (i.e. contact_count_buffer, and start_indices_buffer) are used to locate the set of contact data for each sensor-filter pair in the first three tensors (i.e. force_buffer, point_buffer, normal_buffer, separation_buffer).
+5000: 
+5001:             For each sensor-filter pair, contact data (force_buffer, point_buffer, normal_buffer, separation_buffer) for all the contact points between sensor-filter prims are within the range of start_indices_buffer[sensor, filter] to start_indices_buffer[sensor, filter] + contact_count_buffer[sensor, filter].
+5002: 
+5003:             .. note::
+5004:                 * The function raises an exception if the contact data cannot be obtained from the backend.
+5005:                 * This function can only be used if the view is initialized with a valid filter prims.
+5006:                 * The function raises an exception if the view is initialized with max_contact_data_count = 0.
+5007: 
+5008:             Args:
+5009:                 dt (float): The time step of the simulation to use to convert impulses to forces.
+5010: 
+5011:             Returns:
+5012:                 Tuple[Union[np.ndarray, torch.Tensor, wp.array], Union[np.ndarray, torch.Tensor, wp.array], Union[np.ndarray, torch.Tensor, wp.array], Union[np.ndarray, torch.Tensor, wp.array], Union[np.ndarray, torch.Tensor, wp.array]]:
+5013:                   A tuple of five arrays of contact data:
+5014:                     * The first array is the contact forces with shape (max_contact_data_count, 1) where max_contact_data_count is the maximum number of contact data that can be stored in the view.
+5015:                     * The second array is the contact points with shape (max_contact_data_count, 3) where the 3 elements of the last dimension are the x, y, z components of the contact points.
+5016:                     * The third array is the contact normals with shape (max_contact_data_count, 3) where the 3 elements of the last dimension are the x, y, z components of the contact normals vector.
+5017:                     * The fourth array is the separation distances with shape (max_contact_data_count, 1).
+5018:                     * The fifth array is the contact count buffer with shape (sensor_count, filter_count) where sensor_count is the number of sensors in the view and filter_count is the number of filter prims in the view.
+5019:                     * The sixth array is the start indices buffer with shape (sensor_count, filter_count).
+5020: 
+5021:             Example:
+5022:                 .. code-block:: python
+5023: 
+5024:                   >>> import omni.physics.tensors as tensors
+5025:                   >>> sim_view = tensors.create_simulation_view("warp")
+5026:                   >>> rigid_contact_view = sim_view.create_rigid_contact_view("/World/Cube_*") # This assumes that the prims referenced by "/World/Cube_*" were already created in the stage
+5027:                   >>> forces, points, normals, distances, counts, start_indices = rigid_contact_view.get_contact_data(dt) # Get the detailed contact data between sensors and filter prims per patch
+5028: 
+5029:                   >>> forces_np = forces.numpy().reshape(rigid_contact_view.max_contact_data_count) # Reshape the obtained array in a 1D numpy array on the host
+5030:                   >>> points_np = points.numpy().reshape(rigid_contact_view.max_contact_data_count * 3) # Reshape the obtained array in a 1D numpy array on the host
+5031:                   >>> normals_np = normals.numpy().reshape(rigid_contact_view.max_contact_data_count * 3) # Reshape the obtained array in a 1D numpy array on the host
+5032:                   >>> distances_np = distances.numpy().reshape(rigid_contact_view.max_contact_data_count) # Reshape the obtained array in a 1D numpy array on the host
+5033:                   >>> counts_np = counts.numpy().reshape(rigid_contact_view.sensor_count, rigid_contact_view.filter_count) # Reshape the obtained array in a 2D numpy array on the host
+5034:                   >>> start_indices_np = start_indices.numpy().reshape(rigid_contact_view.sensor_count, rigid_contact_view.filter_count) # Reshape the obtained array in a 2D numpy array on the host
+5035: 
+5036:                   # for given prims i and j, the net pairwise contact force is the sum of individual contact forces
+5037:                   >>> start_indices_ij = start_indices_np[i, j]
+5038:                   >>> count_ij = counts_np[i, j]
+5039:                   >>> if count_ij > 0:
+5040:                   >>>     forces_ij = forces_np[start_indices_ij:start_indices_ij + count_ij] * normals_np[start_indices_ij:start_indices_ij + count_ij]
+5041:                   >>> force_aggregate = numpy.sum(forces_ij, axis=0)
+5042:         """
+5043:         if self.filter_count == 0:
+5044:             raise Exception("Contact data is not available because no filters were specified")
+5045: 
+5046:         if self.max_contact_data_count == 0:
+5047:             raise Exception("No contact data is available because create_rigid_contact_view is initialized with max_contact_data_count = 0")
+5048: 
+5049:         if not hasattr(self, "_force_buffer"):
+5050:             self._force_buffer, self._force_buffer_desc = self._frontend.create_tensor(
+5051:                 (self.max_contact_data_count, 1), float32)         
+5052:         if not hasattr(self, "_point_buffer"):
+5053:             self._point_buffer, self._point_buffer_desc = self._frontend.create_tensor(
+5054:                 (self.max_contact_data_count, 3), float32)
+5055:         if not hasattr(self, "_normal_buffer"):
+5056:             self._normal_buffer, self._normal_buffer_desc = self._frontend.create_tensor(
+5057:                 (self.max_contact_data_count, 3), float32)
+5058:         if not hasattr(self, "_separation_buffer"):
+5059:             self._separation_buffer, self._separation_buffer_desc = self._frontend.create_tensor(
+5060:                 (self.max_contact_data_count, 1), float32)  
+5061:         if not hasattr(self, "_start_indices_buffer"):
+5062:             self._start_indices_buffer, self._start_indices_buffer_desc = self._frontend.create_tensor(
+5063:                 (self.sensor_count, self.filter_count), uint32)
+5064:         if not hasattr(self, "_contact_count_buffer"):
+5065:             self._contact_count_buffer, self._contact_count_buffer_desc = self._frontend.create_tensor(
+5066:                 (self.sensor_count, self.filter_count), uint32)  
+5067: 
+5068:         if not self._backend.get_contact_data(self._force_buffer_desc, self._point_buffer_desc, self._normal_buffer_desc, 
+5069:                                                 self._separation_buffer_desc, self._contact_count_buffer_desc, self._start_indices_buffer_desc, dt):
+5070:             raise Exception("Failed to get contact data from backend")
+5071: 
+5072:         return self._force_buffer, self._point_buffer, self._normal_buffer, self._separation_buffer, self._contact_count_buffer, self._start_indices_buffer,
+5073: 
+5074:     def get_friction_data(self, dt):
+5075:         """ Gets the friction data between sensors and filter prims.
+5076: 
+5077:             This includes the friction forces and the friction points.
+5078: 
+5079:             Note that there could be more than one contact point between a sensor prim and a filter prim. This function is similar to :py:func:`RigidContactView.get_contact_force_matrix`, but does not report the aggregated values for a pair of sensor/filter prims.
+5080:             This is needed because some of the variables reported by this function (such as friction points) are defined only for contact points and cannot be aggregated accross the shape without further information about the geometry of the contact.
+5081: 
+5082:             Note also that the structure of the data returned by this function is different from the :py:func:`RigidContactView.get_contact_force_matrix` function. This function returns contacts data in buffers that need to be further processed.
+5083:             Specifically, the last two tensors returned by this function (i.e. contact_count_buffer, and start_indices_buffer) are used to locate the set of contact data for each sensor-filter pair in the first two tensors (i.e. force_buffer, point_buffer).
+5084: 
+5085:             For each sensor-filter pair, contact data (force_buffer, point_buffer) for all the contact points between sensor-filter prims are within the range of start_indices_buffer[sensor, filter] to start_indices_buffer[sensor, filter] + contact_count_buffer[sensor, filter].
+5086: 
+5087:             .. note::
+5088:                 * The function raises an exception if the friction data cannot be obtained from the backend.
+5089:                 * This function can only be used if the view is initialized with a valid filter prims.
+5090:                 * The function raises an exception if the view is initialized with max_contact_data_count = 0.
+5091: 
+5092:             Args:
+5093:                 dt (float): The time step of the simulation to use to convert impulses to forces.
+5094: 
+5095:             Returns:
+5096:                 Tuple[Union[np.ndarray, torch.Tensor, wp.array], Union[np.ndarray, torch.Tensor, wp.array], Union[np.ndarray, torch.Tensor, wp.array], Union[np.ndarray, torch.Tensor, wp.array]]:
+5097:                   A tuple of four arrays of friction data:
+5098:                     * The first array is the friction forces with shape (max_contact_data_count, 3) where max_contact_data_count is the maximum number of contact data that can be stored in the view. The 3 elements of the last dimension are the x, y, z components of the friction forces.
+5099:                     * The second array is the friction points with shape (max_contact_data_count, 3) where the 3 elements of the last dimension are the x, y, z components of the friction points.
+5100:                     * The third array is the contact count buffer with shape (sensor_count, filter_count) where sensor_count is the number of sensors in the view and filter_count is the number of filter prims in the view.
+5101:                     * The fourth array is the start indices buffer with shape (sensor_count, filter_count).
+5102: 
+5103:             Example:
+5104:                 .. code-block:: python
+5105: 
+5106:                   >>> import omni.physics.tensors as tensors
+5107:                   >>> sim_view = tensors.create_simulation_view("warp")
+5108:                   >>> rigid_contact_view = sim_view.create_rigid_contact_view("/World/Cube_*") # This assumes that the prims referenced by "/World/Cube_*" were already created in the stage
+5109:                   >>> frictions, points, counts, start_indices = rigid_contact_view.get_friction_data(dt) # Get the detailed friction data between sensors and filter prims
+5110: 
+5111:                   >>> frictions_np = frictions.numpy().reshape(rigid_contact_view.max_contact_data_count * 3) # Reshape the obtained array in a 1D numpy array on the host
+5112:                   >>> points_np = points.numpy().reshape(rigid_contact_view.max_contact_data_count * 3) # Reshape the obtained array in a 1D numpy array on the host
+5113:                   >>> counts_np = counts.numpy().reshape(rigid_contact_view.sensor_count, rigid_contact_view.filter_count) # Reshape the obtained array in a 2D numpy array on the host
+5114:                   >>> start_indices_np = start_indices.numpy().reshape(rigid_contact_view.sensor_count, rigid_contact_view.filter_count) # Reshape the obtained array in a 2D numpy array on the host
+5115: 
+5116:                   # for given prims i and j, the net pairwise friction force is the sum of individual friction forces
+5117:                   >>> start_indices_ij = start_indices_np[i, j]
+5118:                   >>> count_ij = counts_np[i, j]
+5119:                   >>> if count_ij > 0:
+5120:                   >>>     frictions_forces_ij = frictions_np[start_indices_ij:start_indices_ij + count_ij]
+5121:                   >>> frictions_force_aggregate = numpy.sum(frictions_forces_ij, axis=0)
+5122:         """
+5123:         if self.filter_count == 0:
+5124:             raise Exception("Friction data is not available because no filters were specified")
+5125: 
+5126:         if self.max_contact_data_count == 0:
+5127:             raise Exception("No contact data is available because create_rigid_contact_view is initialized with max_contact_data_count = 0")
+5128: 
+5129:         if not hasattr(self, "_friction_force_buffer"):
+5130:             self._friction_force_buffer, self._friction_force_buffer_desc = self._frontend.create_tensor(
+5131:                 (self.max_contact_data_count, 3), float32)         
+5132:         if not hasattr(self, "_friction_point_buffer"):
+5133:             self._friction_point_buffer, self._friction_point_buffer_desc = self._frontend.create_tensor(
+5134:                 (self.max_contact_data_count, 3), float32)
+5135:         if not hasattr(self, "_start_indices_buffer"):
+5136:             self._start_indices_buffer, self._start_indices_buffer_desc = self._frontend.create_tensor(
+5137:                 (self.sensor_count, self.filter_count), uint32)
+5138:         if not hasattr(self, "_contact_count_buffer"):
+5139:             self._contact_count_buffer, self._contact_count_buffer_desc = self._frontend.create_tensor(
+5140:                 (self.sensor_count, self.filter_count), uint32)  

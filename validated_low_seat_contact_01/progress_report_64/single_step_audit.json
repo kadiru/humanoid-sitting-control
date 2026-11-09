@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-17T08:55:22.675622+00:00",
+  "passed": true,
+  "scope": "Independent arithmetic replay of all210 trajectory knots and2endpoints, source hashes, frozen1s inputs, static support, cooked clearance, fixed stance foot/35mm swing targets, nominal pose preservation and schedule arithmetic. Both model-path failures remain failures. No simulator/optimizer. Pose-only arc/.15 is a nominal reference schedule metric, NOT a proven lower bound on actual PD command time or a dynamic/actuator certificate. Actual fixed-finger COMMAND and command-rate validation remain unperformed.",
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/single_step_transition_screen_62/results.json": "1e0a845af299c2b28c9a5034172e8ec5519b2a24d806843960a7b5b51c2acc04",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_single_step_63.py": "bc19fb43bd73e67b612b37b0b2f30a0742cbb0381304f21cc7a6ee4ef99a5941"
+  },
+  "rows": [
+    {
+      "length_m": 0.06,
+      "knots": 105,
+      "max_replay_error": 1.713229142180622e-16,
+      "failed_knots": [
+        103,
+        104
+      ],
+      "model_screen_passed": false,
+      "min_clearance_mm": 2.0020837261003104,
+      "max_foot_position_error_mm": 0.26934812916866896,
+      "max_foot_orientation_error_deg": 0.18437801893156525,
+      "nominal_pose_schedule_at_0_15_rad_s": 14.5015064976179
+    },
+    {
+      "length_m": 0.1,
+      "knots": 105,
+      "max_replay_error": 1.8957816868854926e-16,
+      "failed_knots": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        104
+      ],
+      "model_screen_passed": false,
+      "min_clearance_mm": 2.7041979422642686,
+      "max_foot_position_error_mm": 5.908813251722805,
+      "max_foot_orientation_error_deg": 2.60802674321906,
+      "nominal_pose_schedule_at_0_15_rad_s": 14.81496807789753
+    }
+  ],
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}

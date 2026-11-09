@@ -1,0 +1,792 @@
+{
+  "utc": "2026-10-17T10:27:59.479821+00:00",
+  "scope": "OFFLINE diagnosis of fixed sagittal COM target in recorded paths91/95. The target was the closest original-COM point inside the left stance sole. This computes unused rearward support range using the same5.5mm target reserve. Original97 world-x/fixed-y assertion failed because the sole is slightly rotated. v2 uses its longitudinal tangent, with1e-12 arithmetic replay precision and unchanged5.5mm target reserve/5mm model gate. Originals remain preserved. No new IK, optimized trajectory, commands, force allocation or simulation. An inset COM point alone does not prove feasible ankle motion, effort, contact transfer, friction, sensed loading or dynamic safety.",
+  "records": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_path_screen_v2_91/results.json",
+      "fixed_stance_target_xy": [
+        0.057608964488563646,
+        0.09013715158786612
+      ],
+      "left_sole_xy": [
+        [
+          -0.05463077302552926,
+          0.08465725658402136
+        ],
+        [
+          0.14847844068382915,
+          0.08462087439021966
+        ],
+        [
+          -0.05461904582282317,
+          0.15012649956156482
+        ],
+        [
+          0.14849016788653524,
+          0.15009011736776312
+        ]
+      ],
+      "normalized_halfspaces": [
+        [
+          -0.0001791262570199127,
+          -0.9999999839568918,
+          0.08464746941996568
+        ],
+        [
+          0.9999999839570505,
+          -0.00017912537222974584,
+          -0.14846328055617347
+        ],
+        [
+          -0.9999999839570505,
+          0.00017912537222974584,
+          -0.05464593641168809
+        ],
+        [
+          0.0001791262570199127,
+          0.9999999839568918,
+          -0.1501167134478289
+        ]
+      ],
+      "sole_longitudinal_axis": [
+        0.9999999839568918,
+        -0.0001791262570199127
+      ],
+      "original_exact_margin_m": 0.005499999999999991,
+      "boundary_arithmetic_residual_m": -8.673617379884035e-18,
+      "target_arithmetic_tolerance_m": 1e-12,
+      "available_rearward_shift_m": 0.10673875412520412,
+      "target_only_checks": [
+        {
+          "rearward_offset_m": -0.0,
+          "target_xy": [
+            0.057608964488563646,
+            0.09013715158786612
+          ],
+          "target_margin_m": 0.005499999999999991,
+          "inside_existing_target_reserve": true
+        },
+        {
+          "rearward_offset_m": 0.02,
+          "target_xy": [
+            0.03760896480942581,
+            0.09014073411300651
+          ],
+          "target_margin_m": 0.005499999999999991,
+          "inside_existing_target_reserve": true
+        },
+        {
+          "rearward_offset_m": 0.04,
+          "target_xy": [
+            0.017608965130287972,
+            0.09014431663814691
+          ],
+          "target_margin_m": 0.005499999999999991,
+          "inside_existing_target_reserve": true
+        },
+        {
+          "rearward_offset_m": 0.06,
+          "target_xy": [
+            -0.0023910345488498616,
+            0.0901478991632873
+          ],
+          "target_margin_m": 0.005499999999999991,
+          "inside_existing_target_reserve": true
+        },
+        {
+          "rearward_offset_m": 0.08,
+          "target_xy": [
+            -0.022391034227987702,
+            0.09015148168842771
+          ],
+          "target_margin_m": 0.005499999999999991,
+          "inside_existing_target_reserve": true
+        }
+      ],
+      "failed_knots": [
+        {
+          "knot": 57,
+          "phase": "swing",
+          "u": 0.8541666666666666,
+          "com_target_xy": [
+            0.057608964488563646,
+            0.09013715158786612
+          ],
+          "root": [
+            -0.008756022939313676,
+            0.09773397478244232,
+            0.6144431754510321,
+            -0.06651172684937809,
+            0.08039678726538393,
+            0.046483087527562215,
+            0.9934545129812553
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.0014632214659564288,
+          "foot_orientation_error_rad": 0.011082271672345101
+        },
+        {
+          "knot": 58,
+          "phase": "swing",
+          "u": 0.875,
+          "com_target_xy": [
+            0.057608964488563646,
+            0.09013715158786612
+          ],
+          "root": [
+            -0.008588430117870003,
+            0.09779031079654035,
+            0.6137688333832236,
+            -0.06644956877173669,
+            0.08096461975939943,
+            0.04681344337496283,
+            0.9933970438231862
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.0020912788566621655,
+          "foot_orientation_error_rad": 0.015740764691026355
+        },
+        {
+          "knot": 59,
+          "phase": "swing",
+          "u": 0.8958333333333333,
+          "com_target_xy": [
+            0.057608964488563646,
+            0.09013715158786612
+          ],
+          "root": [
+            -0.008332100640376481,
+            0.09785636984047283,
+            0.6131845147311423,
+            -0.06639568510564638,
+            0.08145661895190554,
+            0.04709968072557786,
+            0.9933468942438107
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.0027478891982155363,
+          "foot_orientation_error_rad": 0.020516468096466543
+        },
+        {
+          "knot": 60,
+          "phase": "swing",
+          "u": 0.9166666666666666,
+          "com_target_xy": [
+            0.057608964488563646,
+            0.09013715158786612
+          ],
+          "root": [
+            -0.008019689179557647,
+            0.09792381219253415,
+            0.612695220795662,
+            -0.06635054743486084,
+            0.08186858622803615,
+            0.04733935684634013,
+            0.993304648502911
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.00338237476213392,
+          "foot_orientation_error_rad": 0.025015846898958412
+        },
+        {
+          "knot": 61,
+          "phase": "swing",
+          "u": 0.9375,
+          "com_target_xy": [
+            0.057608964488563646,
+            0.09013715158786612
+          ],
+          "root": [
+            -0.007690274303805731,
+            0.09798559959599225,
+            0.6123059528776563,
+            -0.06631462627952815,
+            0.08219632181955823,
+            0.047530028337761154,
+            0.9932708751528727
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.00394723771028645,
+          "foot_orientation_error_rad": 0.028903122352376385
+        },
+        {
+          "knot": 62,
+          "phase": "swing",
+          "u": 0.9583333333333333,
+          "com_target_xy": [
+            0.057608964488563646,
+            0.09013715158786612
+          ],
+          "root": [
+            -0.007390356712377241,
+            0.09803569923991418,
+            0.6120217122779991,
+            -0.06628839078891602,
+            0.0824356243742232,
+            0.04766925088475389,
+            0.9932461223688388
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.004398970873085176,
+          "foot_orientation_error_rad": 0.03191418801599855
+        },
+        {
+          "knot": 63,
+          "phase": "swing",
+          "u": 0.9791666666666666,
+          "com_target_xy": [
+            0.057608964488563646,
+            0.09013715158786612
+          ],
+          "root": [
+            -0.007171310571690246,
+            0.09806916851692343,
+            0.611847500297564,
+            -0.06627230841795365,
+            0.0825822905069738,
+            0.047754578996968874,
+            0.9932309130390574
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.004697948315681796,
+          "foot_orientation_error_rad": 0.03385039621144257
+        },
+        {
+          "knot": 64,
+          "phase": "swing",
+          "u": 1.0,
+          "com_target_xy": [
+            0.057608964488563646,
+            0.09013715158786612
+          ],
+          "root": [
+            -0.007086974176287018,
+            0.0980813097208818,
+            0.6117883182372248,
+            -0.06626684458715683,
+            0.08263211433694066,
+            0.047783565740933544,
+            0.9932257396149932
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.004806244152539182,
+          "foot_orientation_error_rad": 0.034538843969714156
+        },
+        {
+          "knot": 65,
+          "phase": "approach",
+          "u": 0.025,
+          "com_target_xy": [
+            0.05719480873321038,
+            0.08983657583789291
+          ],
+          "root": [
+            -0.007694101733759888,
+            0.09771136922746387,
+            0.6115504405295757,
+            -0.06610810132851372,
+            0.08282577721360124,
+            0.04791148086556342,
+            0.9932140250565185
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.004833053878097928,
+          "foot_orientation_error_rad": 0.034770083867271324
+        },
+        {
+          "knot": 66,
+          "phase": "approach",
+          "u": 0.05,
+          "com_target_xy": [
+            0.055980419823445725,
+            0.0889552266049206
+          ],
+          "root": [
+            -0.009472668854738284,
+            0.09662656654109857,
+            0.6108529347088424,
+            -0.06564263899433341,
+            0.08339341591452844,
+            0.04828685160839677,
+            0.9931792195216907
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.004908260202992844,
+          "foot_orientation_error_rad": 0.03542406770482321
+        },
+        {
+          "knot": 67,
+          "phase": "approach",
+          "u": 0.07500000000000001,
+          "com_target_xy": [
+            0.054007915293712384,
+            0.08752367091437022
+          ],
+          "root": [
+            -0.01235480251123916,
+            0.09486509465061749,
+            0.6097199917283447,
+            -0.06488661696243804,
+            0.08431471748878522,
+            0.048897502915456505,
+            0.9931212360847941
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.005019919999816388,
+          "foot_orientation_error_rad": 0.036411255793629506
+        },
+        {
+          "knot": 68,
+          "phase": "approach",
+          "u": 0.1,
+          "com_target_xy": [
+            0.05131941267845305,
+            0.08557247579166276
+          ],
+          "root": [
+            -0.01626951536037476,
+            0.09246557473877075,
+            0.6081758025414031,
+            -0.06385620751617935,
+            0.0855690403088333,
+            0.04973169546508959,
+            0.9930393157214086
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.005151782424399519,
+          "foot_orientation_error_rad": 0.03760875536513669
+        },
+        {
+          "knot": 69,
+          "phase": "approach",
+          "u": 0.125,
+          "com_target_xy": [
+            0.04795702951211045,
+            0.08313220826221922
+          ],
+          "root": [
+            -0.02114357638282083,
+            0.08946703431048611,
+            0.6062445581013377,
+            -0.06256759940180398,
+            0.08713547923906127,
+            0.05077802937316583,
+            0.9929321706420094
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.0052848680412080525,
+          "foot_orientation_error_rad": 0.038869376100824964
+        },
+        {
+          "knot": 70,
+          "phase": "approach",
+          "u": 0.15000000000000002,
+          "com_target_xy": [
+            0.043962883329127275,
+            0.0802334353514606
+          ],
+          "root": [
+            -0.026901984244488697,
+            0.08590914520409597,
+            0.6039504493614688,
+            -0.061037002025263375,
+            0.08899292645416194,
+            0.05202535290553514,
+            0.9927981194985951
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.005398938903713771,
+          "foot_orientation_error_rad": 0.0400306943092878
+        },
+        {
+          "knot": 71,
+          "phase": "approach",
+          "u": 0.17500000000000002,
+          "com_target_xy": [
+            0.03937909166394623,
+            0.07690672408480793
+          ],
+          "root": [
+            -0.033468707487954726,
+            0.0818322601810821,
+            0.6013176672751166,
+            -0.05928064958940746,
+            0.09112012845246614,
+            0.05346267657133568,
+            0.9926352144614319
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.005473691259352099,
+          "foot_orientation_error_rad": 0.040923463514173655
+        },
+        {
+          "knot": 72,
+          "phase": "approach",
+          "u": 0.2,
+          "com_target_xy": [
+            0.034247772051010025,
+            0.0731826414876822
+          ],
+          "root": [
+            -0.040767336268910076,
+            0.07727744061429039,
+            0.5983704027956014,
+            -0.05731480460177804,
+            0.09349573970638908,
+            0.05507909290476,
+            0.9924413601593818
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.005489656110953612,
+          "foot_orientation_error_rad": 0.041379336215042244
+        },
+        {
+          "knot": 73,
+          "phase": "approach",
+          "u": 0.225,
+          "com_target_xy": [
+            0.02861104202476136,
+            0.06909175458550441
+          ],
+          "root": [
+            -0.04872169874101826,
+            0.07228642510822907,
+            0.5951328468762433,
+            -0.05515576030450465,
+            0.09609837329436598,
+            0.05686370218271538,
+            0.9922144244715877
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.0054288149245464235,
+          "foot_orientation_error_rad": 0.04123764608810604
+        },
+        {
+          "knot": 74,
+          "phase": "approach",
+          "u": 0.25,
+          "com_target_xy": [
+            0.02251101911964294,
+            0.06466463040369558
+          ],
+          "root": [
+            -0.057256431331157216,
+            0.06690153489384287,
+            0.5916291904703628,
+            -0.05281984169112428,
+            0.09890664876670456,
+            0.058805544270468045,
+            0.9919523411517907
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.005274981093398562,
+          "foot_orientation_error_rad": 0.04035110745008164
+        },
+        {
+          "knot": 75,
+          "phase": "approach",
+          "u": 0.275,
+          "com_target_xy": [
+            0.015989820870097468,
+            0.059931835967676685
+          ],
+          "root": [
+            -0.06629749414694941,
+            0.06116551678988081,
+            0.5878836245312797,
+            -0.05032340488050801,
+            0.10189923741219678,
+            0.06089353673603215,
+            0.9916532042603516
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900907,
+          "foot_position_error_m": 0.005014010597025772,
+          "foot_orientation_error_rad": 0.03859038182088722
+        },
+        {
+          "knot": 76,
+          "phase": "approach",
+          "u": 0.30000000000000004,
+          "com_target_xy": [
+            0.009089564810567656,
+            0.054923938302868756
+          ],
+          "root": [
+            -0.07577262352295824,
+            0.05512133329365623,
+            0.5839203400123146,
+            -0.04768283471548275,
+            0.10505490501354833,
+            0.06311641932613757,
+            0.9913153543739437
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900903,
+          "foot_position_error_m": 0.004633908363994586,
+          "foot_orientation_error_rad": 0.0358475229745066
+        },
+        {
+          "knot": 77,
+          "phase": "approach",
+          "u": 0.325,
+          "com_target_xy": [
+            0.001852368475496205,
+            0.049671504434692794
+          ],
+          "root": [
+            -0.08561171404788762,
+            0.04881191125251095,
+            0.5797635278667878,
+            -0.04491454054315914,
+            0.10835255210803314,
+            0.06546270485163001,
+            0.9909374565395039
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900903,
+          "foot_position_error_m": 0.004124888305779721,
+          "foot_orientation_error_rad": 0.032038359954062304
+        },
+        {
+          "knot": 78,
+          "phase": "approach",
+          "u": 0.35000000000000003,
+          "com_target_xy": [
+            -0.005679650600674185,
+            0.04420510138856979
+          ],
+          "root": [
+            -0.09574712403927206,
+            0.042279866420170835,
+            0.5754373790480192,
+            -0.042034950215382026,
+            0.11177125170550876,
+            0.06792063648782853,
+            0.9905185699378192
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900902,
+          "foot_position_error_m": 0.0034794224241724713,
+          "foot_orientation_error_rad": 0.027103927565390536
+        },
+        {
+          "knot": 79,
+          "phase": "approach",
+          "u": 0.375,
+          "com_target_xy": [
+            -0.013464374883500774,
+            0.038555296189920776
+          ],
+          "root": [
+            -0.10611389915901477,
+            0.0355672232018285,
+            0.5709660845093292,
+            -0.03906050242105122,
+            0.11529028435920467,
+            0.07047815145553932,
+            0.9900582092232754
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900901,
+          "foot_position_error_m": 0.0026923027665111386,
+          "foot_orientation_error_rad": 0.021011050369105975
+        },
+        {
+          "knot": 80,
+          "phase": "approach",
+          "u": 0.4,
+          "com_target_xy": [
+            -0.021459686838540937,
+            0.032752655864166716
+          ],
+          "root": [
+            -0.11664991022358627,
+            0.028715147510459886,
+            0.566373835204038,
+            -0.03600763752725555,
+            0.11888917043560224,
+            0.07312285101107147,
+            0.9895563975099412
+          ],
+          "right_ankle_pitch_rad": -0.6489999679900899,
+          "foot_position_error_m": 0.001760721725027096,
+          "foot_orientation_error_rad": 0.013752199414474765
+        }
+      ],
+      "command_limit_records": [
+        {
+          "knot": 99,
+          "phase": "approach",
+          "joint": "left_hip_roll_joint",
+          "margin_rad": 0.029375169209396035,
+          "passed": false
+        },
+        {
+          "knot": 100,
+          "phase": "approach",
+          "joint": "left_hip_roll_joint",
+          "margin_rad": 0.029690853916193638,
+          "passed": false
+        },
+        {
+          "knot": 101,
+          "phase": "approach",
+          "joint": "left_hip_roll_joint",
+          "margin_rad": 0.029979500317627472,
+          "passed": false
+        }
+      ],
+      "command_arc_by_phase_rad": {
+        "shift": 0.30057149677619355,
+        "swing": 0.764451244725767,
+        "approach": 1.1970131800332773,
+        "load": 0.055979654825816905
+      },
+      "model_geometry_passed": false,
+      "model_command_passed": false,
+      "command_schedule_passed": false
+    },
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/landing_ankle_path_95/results.json",
+      "fixed_stance_target_xy": [
+        0.057608964488563646,
+        0.09013715158786612
+      ],
+      "left_sole_xy": [
+        [
+          -0.05463077302552926,
+          0.08465725658402136
+        ],
+        [
+          0.14847844068382915,
+          0.08462087439021966
+        ],
+        [
+          -0.05461904582282317,
+          0.15012649956156482
+        ],
+        [
+          0.14849016788653524,
+          0.15009011736776312
+        ]
+      ],
+      "normalized_halfspaces": [
+        [
+          -0.0001791262570199127,
+          -0.9999999839568918,
+          0.08464746941996568
+        ],
+        [
+          0.9999999839570505,
+          -0.00017912537222974584,
+          -0.14846328055617347
+        ],
+        [
+          -0.9999999839570505,
+          0.00017912537222974584,
+          -0.05464593641168809
+        ],
+        [
+          0.0001791262570199127,
+          0.9999999839568918,
+          -0.1501167134478289
+        ]
+      ],
+      "sole_longitudinal_axis": [
+        0.9999999839568918,
+        -0.0001791262570199127
+      ],
+      "original_exact_margin_m": 0.005499999999999991,
+      "boundary_arithmetic_residual_m": -8.673617379884035e-18,
+      "target_arithmetic_tolerance_m": 1e-12,
+      "available_rearward_shift_m": 0.10673875412520412,
+      "target_only_checks": [
+        {
+          "rearward_offset_m": -0.0,
+          "target_xy": [
+            0.057608964488563646,
+            0.09013715158786612
+          ],
+          "target_margin_m": 0.005499999999999991,
+          "inside_existing_target_reserve": true
+        },
+        {
+          "rearward_offset_m": 0.02,
+          "target_xy": [
+            0.03760896480942581,
+            0.09014073411300651
+          ],
+          "target_margin_m": 0.005499999999999991,
+          "inside_existing_target_reserve": true
+        },
+        {
+          "rearward_offset_m": 0.04,
+          "target_xy": [
+            0.017608965130287972,
+            0.09014431663814691
+          ],
+          "target_margin_m": 0.005499999999999991,
+          "inside_existing_target_reserve": true
+        },
+        {
+          "rearward_offset_m": 0.06,
+          "target_xy": [
+            -0.0023910345488498616,
+            0.0901478991632873
+          ],
+          "target_margin_m": 0.005499999999999991,
+          "inside_existing_target_reserve": true
+        },
+        {
+          "rearward_offset_m": 0.08,
+          "target_xy": [
+            -0.022391034227987702,
+            0.09015148168842771
+          ],
+          "target_margin_m": 0.005499999999999991,
+          "inside_existing_target_reserve": true
+        }
+      ],
+      "failed_knots": [],
+      "command_limit_records": [
+        {
+          "knot": 99,
+          "phase": "approach",
+          "joint": "left_hip_roll_joint",
+          "margin_rad": 0.02965136547021266,
+          "passed": false
+        },
+        {
+          "knot": 100,
+          "phase": "approach",
+          "joint": "left_hip_roll_joint",
+          "margin_rad": 0.029739652824049057,
+          "passed": false
+        },
+        {
+          "knot": 101,
+          "phase": "approach",
+          "joint": "left_hip_roll_joint",
+          "margin_rad": 0.030002929338499268,
+          "passed": true
+        }
+      ],
+      "command_arc_by_phase_rad": {
+        "shift": 0.20910209525728304,
+        "swing": 0.9138375845060435,
+        "approach": 1.2664716166909957,
+        "load": 0.055979654675754054
+      },
+      "model_geometry_passed": true,
+      "model_command_passed": false,
+      "command_schedule_passed": false
+    }
+  ],
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/diagnose_low_seat_stance_support_v2_97.py": "5471ac538d237751a08109842757bd4592c2b9d1ded4c1d2122c964e20d8453c",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/landing_ankle_path_audit_96/independent_audit.json": "9f16c731d6aa9b380916213650eaf78bba8a47bb53769f50781e397d4a1a9f13",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_path_screen_v2_91/results.json": "68ea540246c66bf3c01ae63ec23736b920c8ad0eb6166fd123c5e55b2f272cc0",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/landing_ankle_path_95/results.json": "2fd554199e7a58267e97cff961b3b3c48a0566bac159051b3e3eb1109fdf4ce6"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "holdout_used": false,
+  "physical_admission": false
+}

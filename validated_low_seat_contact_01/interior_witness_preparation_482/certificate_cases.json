@@ -1,0 +1,95 @@
+[
+  {
+    "label": "interior",
+    "tangent": 0.5,
+    "result": {
+      "passed": true,
+      "certified_relative_clearance": [
+        1,
+        2
+      ],
+      "limiting_owner": null,
+      "nonpositive_intervals": [],
+      "witness_modified": false,
+      "actual_dependent_f_guaranteed": false
+    }
+  },
+  {
+    "label": "exact_lower",
+    "tangent": 0.0,
+    "result": {
+      "passed": false,
+      "certified_relative_clearance": [
+        0,
+        1
+      ],
+      "limiting_owner": [
+        "synthetic",
+        0
+      ],
+      "nonpositive_intervals": [
+        0
+      ],
+      "witness_modified": false,
+      "actual_dependent_f_guaranteed": false
+    }
+  },
+  {
+    "label": "exact_upper",
+    "tangent": 1.0,
+    "result": {
+      "passed": false,
+      "certified_relative_clearance": [
+        0,
+        1
+      ],
+      "limiting_owner": [
+        "synthetic",
+        0
+      ],
+      "nonpositive_intervals": [
+        0
+      ],
+      "witness_modified": false,
+      "actual_dependent_f_guaranteed": false
+    }
+  },
+  {
+    "label": "tiny_outward",
+    "tangent": -1e-13,
+    "result": {
+      "passed": false,
+      "certified_relative_clearance": [
+        -3961408125713217,
+        39614081257132168796771975168
+      ],
+      "limiting_owner": [
+        "synthetic",
+        0
+      ],
+      "nonpositive_intervals": [
+        0
+      ],
+      "witness_modified": false,
+      "actual_dependent_f_guaranteed": false
+    }
+  },
+  {
+    "label": "exact_coupled_cancellation",
+    "tangent": [
+      0.3,
+      0.3
+    ],
+    "result": {
+      "passed": true,
+      "certified_relative_clearance": [
+        1,
+        2
+      ],
+      "limiting_owner": null,
+      "nonpositive_intervals": [],
+      "witness_modified": false,
+      "actual_dependent_f_guaranteed": false
+    }
+  }
+]

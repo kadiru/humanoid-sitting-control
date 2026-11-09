@@ -1,0 +1,126 @@
+{
+  "utc": "2026-10-17T20:28:54.770903+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_active_physics_ticks": 15600,
+  "new_initial_settling_ticks": 1200,
+  "new_optimizer_updates": 0,
+  "new_full20s_trials": 0,
+  "new_diagnostic_prefixes": 24,
+  "new_aborted_case_attempts": 24,
+  "holdout_started": false,
+  "physical_admission_passed": false,
+  "best_verified_controller": "current_retention_09",
+  "best_development_clean": 64,
+  "latest_physical_candidate": "roll_feedback_probe_273",
+  "prior_recheck": {
+    "utc": "2026-10-17T20:28:54.770903+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "completed_probes_preservation_300.json",
+        "checked": 6282,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "supplemental_preservation_300.json",
+        "checked": 3,
+        "passed": true,
+        "mismatches": []
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_311.json",
+  "protected_completed_files": 6463,
+  "manifest_sha256": "1924053238d32cb9050ffc7ca8b6374d8fade9fcfec08fc442f1036e6669c809",
+  "physical_workers_running": false,
+  "model_workers_running": false,
+  "audit_workers_running": false,
+  "report": "progress_report_309",
+  "video": "all_attempts_video_307/all_attempts.mp4",
+  "video_unchanged": false,
+  "local_review": {
+    "utc": "2026-10-17T20:28:12.283389+00:00",
+    "local_hashes_verified": true,
+    "manifests": [
+      {
+        "folder": "incoming_recorder_preparation_302",
+        "entries": 1,
+        "passed": true
+      },
+      {
+        "folder": "incoming_recorder_preparation_v2_302",
+        "entries": 1,
+        "passed": true
+      },
+      {
+        "folder": "incoming_allocation_recovery_304",
+        "entries": 9,
+        "passed": true
+      },
+      {
+        "folder": "incoming_audit_v2_305",
+        "entries": 2,
+        "passed": true
+      },
+      {
+        "folder": "incoming_diagnosis_306",
+        "entries": 2,
+        "passed": true
+      },
+      {
+        "folder": "incoming_diagnosis_audit_306",
+        "entries": 1,
+        "passed": true
+      },
+      {
+        "folder": "all_attempts_video_307",
+        "entries": 3,
+        "passed": true
+      },
+      {
+        "folder": "all_attempts_video_audit_308",
+        "entries": 7,
+        "passed": true
+      },
+      {
+        "folder": "progress_report_309",
+        "entries": 10,
+        "passed": true
+      },
+      {
+        "folder": "drive_iteration_context_310",
+        "entries": 1,
+        "passed": true
+      }
+    ],
+    "total_original_entries": 37,
+    "plots_visually_inspected": true,
+    "browser_visually_inspected": true,
+    "embedded_video_loaded": true,
+    "report_url": "http://127.0.0.1:8807/progress_report_309/findings.html",
+    "inspected": [
+      "incoming_comparison.png",
+      "incoming_traces.png",
+      "new-prefix/intro/closing video frames",
+      "HTML scope and exact replay",
+      "37-joint backend properties",
+      "selected incoming/boundary/telemetry table",
+      "all96 case-window results including unavailable intervals",
+      "recovery, limits, physical and effort status",
+      "loaded 58.4-second embedded video"
+    ],
+    "video_rerendered": true,
+    "repair_complete": false,
+    "physical_admission_passed": false
+  },
+  "mutable_status_aliases_reconciled_to_existing_physical_273": true,
+  "next": "# Incoming-joint/drive readback303v2 verified \u2014 physical repair unresolved\n\nContinue the authorized repair in THIS chat via Mac SSH kfuUbuntu, /home/kadir/humanoid-sitting; never another coding agent. Python /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python. Read docs/LOW_SEAT_CONTACT_PROTOCOL.md, docs/LOW_SEAT_CONTACT_STATUS.md, study status.json and closure_record_311.json. Check actual workers before launching. All301\u2013310 jobs COMPLETE; do not repeat303v2, completed audits, physical273 or older diagnostics. Stay quiet during ordinary progress; notify meaningful failure/completion/required input. No promotion. The user renewed continuation after upgrading their subscription.\n\nBest verified current_retention_09 remains64/72 clean,70 stable,8 slipping,2 housing cases. All64 protected; all8 unresolved. MainPPO63111/63117/freshholdout UNSTARTED. No new full20s repair,72-case retention,optimizer or promotion. Latest physical273 remains rejected, selected36/+15 rows0/1 hover without legal load/hold/quiet release.\n\nNEW incoming_diagnostic_v2_303 ran one13s\u00d724 GPU1 prefix with unchanged centered234 controller, current sensors, parent, gains, materials, physics and criteria. From8\u201313s,1001 private5ms captures add incoming joint wrench;1000 implicit-kernel input/output records and existing normal/friction contact-query returns retained. Child-joint-frame wrench is NOT isolated motor effort. Five backend property arrays read at preflight/8/13s: stiffness,damping,armature,effort limits,three-component friction. Actual joint/body order checked. Public timestamped cache bytes,pointers,timestamps AND direct property/view buffer bytes unchanged; destinations disjoint.1017 new private backend queries,NO extra contact queries or recorder input into control. Runtime/source/revision in incoming_revision_v2_304.json. Exit0 at20:16:29.869832UTC.\n\nIndependent incoming_audit_v2_305 PASSED EXACT GLOBAL13s replay against234: all24 physical/sensor/torque/event/start arrays,actual414 inputs,1004 rawq/qd checks,14fingers,frozen parent and all1000 implicit outputs. Contact284077points/2002foot-time records/4004returns from10400existing queries. Diagnostic/arithmetic passes are NOT physical admission.\n\nBackend stiffness,damping,armature,maxforce EXACTLY match configured buffers for ALL37joints and stay unchanged at0/8/13s. Ankle rollKp160,Kd4,armature.01,effort20Nm; ankle friction[0,0,0]. These captures do not support stale gains or nonzero ankle friction as explanation. No backend drive-type/effective solver-island count was independently captured. Approximate applied_torque remains implicit-PD telemetry, NOT actual solver/hardware motor effort.\n\nNEW incoming_diagnosis_306 compares all48000 foot-case intervals/96case-windows with previously audited296 boundary inference. Underlying303 joint/link/command/telemetry arrays EXACTLY equal259. Incoming child-joint wrench transformed with recorded child pose and authored joint frame, shifted to fixed midpoint joint origin, projected onto mean axis; fixed post-step(k\u22121,k] alignment, no fitted sign/gain/delay/offset. Observed floor-only coverage retained; incomplete external moments remain unavailable. Selected11\u201313s incoming ankle-roll medians L\u2212.0135697/\u2212.0139123Nm,R\u2212.0059455/\u2212.0060183Nm. Incoming-minus-boundary RMS.000081\u2013.000159Nm versus PD-minus-incoming RMS.921\u2013.992Nm. This independently supports small equivalent transmitted moments and a limitation of approximate telemetry; NOT isolated motor torque, sole-cause proof, controller success or effort saving.\n\nIndependent incoming_diagnosis_audit_306 PASSED all48000 intervals,96windows,all37properties,550checks with manual quaternion/component-cross reconstruction and independently sorted/scalar statistics. Max8.527e\u221214 under unchanged1e\u221210 arithmetic bound. Finalizer310 all jobs finished20:22:52UTC, frozen sources unchanged; no pending workers.\n\nPreserved narrow recovery: original303 stopped after600initialsettling but BEFORE active control because Warp received backend parameter-device ordinal\u22121. incoming_allocation_recovery_304 preserves original sources/log/revision/output and unexecuted305. V2 maps\u22121\u2192CPU/nonnegative\u2192cuda:n exactly as installed frontend;302v2's24CPU/GPU fixtures now use actual ordinals. Compilation and exit statuses checked BEFORE one versioned run. No controller/physics/criteria change. Original0active+600settling,24abortedcaseattempts without savedmotion; v2 15600active+600settling,24recordedprefixes. Combined15600active+1200settling,2600shared5ms steps in active run,0complete20s/indexedwarmup/optimizer. No completed experiment was repeated.\n\nRead-only drive_iteration_context_310 uses official PhysX5.8 \"Implicit Spring Joint Drives\" (2024-04-23), pages4\u20136: TGS position iterations accumulate implicit drive force; velocity iterations hold drive force fixed. https://nvidia-omniverse.github.io/PhysX/physx/5.8.0/_downloads/6acf3afb8f69452757e0e766b5a22978/implicitDrives.pdf . This is descriptive primary-source context, NOT a capture of installed GPU solver internals or a causal proof. No solver flags changed. Do not assume a fresh explicit Kp*error\u2212Kd*qd torque is the actual transmitted joint moment. Do not rewrite old rewards/results.\n\nNEXT: use already recorded303v2/259 drive,link/contact evidence to assess a contact-aware implicit-drive formulation with explicit sampling and position/velocity-stage distinctions BEFORE any new bounded feedback/contact revision.290's frozen backward-Euler/ideal sticking model is not validated as PhysX. Do not repeat passive diagnostics unchanged, scale273 gain/Ki, grant extra hip/pitch authority or install255 static-wrench feedback. Keep164 approach balance,207v2 bounded bias,175/130 quiet/load guards, existing authority/filter/rate and whole-path support/clearance. No truth offsets/sensor substitution,FD velocity replacement,solver settings,blind pose/gain/arm/rate sweep or endpoint-only launch. Other36/+20,37/+16.25,36.5/+17.5 centered227 paths still fail3mm clearance. Limited failures do not prove impossibility. All8 removed+all64 retained across72matched full20s BEFORE PPO.\n\nPrior294/295 wholebody momentum closure uses frozen masses/authored290 inertia, observed floor-only contacts and fixed post-step impulses.296/297 terminal-foot boundary inference is independently audited but not motor effort. Authored290 inertia NOT certified live effective mass; six finger masses differ one float32step3.725e\u22129kg, frozen values retained. Original290 equality failure preserved, no tolerances changed. Prior private259/246/198 exactprefixes and failed189 remain unchanged. Rawvelocity/pose differences do not establish bad sensors or permit quiet-guard waiver.\n\nCurrent complete video all_attempts_video_307/all_attempts.mp4:58.4s,3840x2160,15fps,H264.44recorded sources:864complete20s trials(503clean/361failed),192recorded diagnostic prefixes,120abortedcaseattempts without savedmotion explicitly disclosed.49panels8\u00d77. Independent308 verifies1056recordedcases,624firstevents,complete inventory/labels/hashes/duration. RecordedXYZW LINK-pose schematic plus modelheadCOM,NOT camerafootage;.1sposes bracket.02sevents. Historical repeated totals are not controller accuracy. Earlier276 and all originals unchanged. Update fullcoverage after future physical/PPO attempts; omit no failure.\n\nLocal report /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_309/findings.html and video /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/all_attempts_video_307/all_attempts.mp4 copied/hashverified/visuallychecked.10manifests/37originalentries, bothplots,new-prefix/intro/closing frames,HTML scope/properties/selected/all96case-window/recovery/physical-effort tables andloaded58.4s video inspected. URL http://127.0.0.1:8807/progress_report_309/findings.html . Interim diagnostic evidence,NOT repair/PPO/unseen completion.\n\nNo new full-duration effort result.273vsbestnormal14commoncompleteclean whole20 torque\u00b2+.0126472%,final10+.0264487%,final5+.0794278%;strictbothONLY1whole20\u2212.00504478%,final5\u2212.0247301%. Unselectedsuccess differences,notrepair/savings.09vs61111commoncleanexact;vs62111@8old20whole20+4.38%,final5+25.45%. ApproximatePD telemetry is not actual solver/hardware effort,energy or global optimum. No failed-hover/prefix/fragment savings.\n\nLatestphysical273:20stable14clean8slip2hiphousing/physical0illegal19warnings,selectedzeroquiet/load/hold. No clean gain/loss or addedphysical case; all8 unresolved. Frozen59117@15selected/11\u201315elsewhere; early61111 omitted only in isolatingprobes. Independent274v2/275v2 softwarepassed but physical/unselectedexactfailed(body.769615mm,q.000864387rad,command.000684381rad). No equalitywaiver. Keep25CURRENT consecutive samples movingrawqd<=.05,pitcherror<=.5deg,abs gyro-y<=.02,freshgeometry+130guards before12mmhover releases; normaldescent<=.006m/s. Existing rollcap.01insideperankle abs(pitch)+abs(roll)<=.06,feedback.0375+nominal.1125 underglobal.15,.03desiredmargin/.1filter/14fixedfingers. No gain scaling follows model/diagnostic arithmetic.\n\nAutomationACTIVE; taskunfinished. Pause ONLY after actualrepair,newPPOcomparison andupdatedcomplete subminutevideo delivered. Diagnostic/report/video completion is NOT taskcompletion.\n"
+}

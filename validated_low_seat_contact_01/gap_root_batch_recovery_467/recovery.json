@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-18T14:21:20.717157+00:00",
+  "original_actual_exit": 1,
+  "observed_tool": "f76ce6",
+  "session": 60841,
+  "compile_v2_actual_exit": 0,
+  "compile_observed": "3d0675",
+  "failure": "NumPy batched vector RHS interpreted as matrix before first Newton update. Initial oracle values and Jacobian evaluated; no completed root or saved signed fixture.",
+  "narrow_fix": "Explicit trailing singleton RHS dimension then remove it after solve; all equations, limits, backtracking, thresholds unchanged.",
+  "original_preparation_and_audit_not_repeated": true,
+  "empty_failed_output": "/data/humanoid-sitting-perception/low_seat_contact_01/gap_root_initialization_467",
+  "workers": []
+}

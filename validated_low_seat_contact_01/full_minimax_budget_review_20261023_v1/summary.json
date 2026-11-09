@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-23T16:29:20.788736+00:00",
+  "classification": "Completed numerical full-original primary diagnostic; not nonlinear validation or physical success",
+  "candidate_accepted": true,
+  "physical_success": false,
+  "approved_contract_sha256": "622780e120e202d0d3b0f5567967119824b84b8700a53f6bf27c46b54525f279",
+  "backend": {
+    "status": 0,
+    "success": true,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "candidate_returned": true,
+    "iterations": 2,
+    "crossover_iterations": 17894,
+    "seconds": 326.12226696894504,
+    "total_elapsed_s": 327.02697768900543
+  },
+  "full_original_numerical_checks": {
+    "passed": true,
+    "primal": 1.0531464589291772e-11,
+    "dual": 1.5765166949677223e-13,
+    "absolute_gap": 1.7976072019809664e-16,
+    "finite": true,
+    "dual_signs": true
+  },
+  "baseline_merit": 0.12270472005373632,
+  "predicted_merit": 0.00109804446609885,
+  "predicted_fractional_reduction": 0.9910513265861494,
+  "subsequent_interior_ceiling": 0.061901382259917585,
+  "independent_audit_passed": true,
+  "owner_process_wall_s_rounded": 327.81,
+  "child_process_wall_s": 327.76959151308984,
+  "total_cap_s": 600,
+  "producer_peak_rss_bytes": 1124732928,
+  "audit_peak_rss_bytes": 131416064,
+  "cold_solves": 1,
+  "retries": 0,
+  "finite_maps": 0,
+  "model_calls": 0,
+  "simulation_calls": 0,
+  "PPO_updates": 0,
+  "physical_status": {
+    "clean": 64,
+    "development_trials": 72,
+    "unresolved": 8,
+    "protected": 64,
+    "main_PPO": "unstarted",
+    "fresh_holdout": "closed"
+  },
+  "authorization": "Consumed by this one successful numerical diagnostic; no automatic downstream execution",
+  "interpretation": "A larger bounded budget yielded a numerically optimal full-model candidate with useful predicted reduction. This supplies a research direction, not an executable controller. It does not establish exact arithmetic or nonlinear or physical feasibility.",
+  "next_required_gate": "A separately governed strict-interior construction at the saved ceiling, then finite encoding and fresh nonlinear mechanics validation under unchanged checks before any motion admission."
+}

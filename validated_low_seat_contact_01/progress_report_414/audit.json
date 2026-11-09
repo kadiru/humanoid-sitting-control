@@ -1,0 +1,304 @@
+{
+  "utc": "2026-10-18T08:14:09.742628+00:00",
+  "passed": true,
+  "scope": "Independent complete-path arithmetic audit412 with strict hard-row acceptance and structural coordinates. Rebuild geometry/virtual work/original rows, the continuous-window envelope and all675 idealclock samples. Independently replay every linear primal and nonlinear-acceptance decision from saved arrays; no optimization or projection. Arithmetic pass is not candidate admission.",
+  "geometry": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/monotone_path_412/results.json",
+      "parameters": [
+        0.13249248997109972,
+        0.4351349021283094,
+        -0.1883883483030849,
+        0.023619600000000004
+      ],
+      "length_m": 0.13999999999993848,
+      "knots": 115,
+      "max_replay_error": 1.942890293094024e-16,
+      "failed_knots": [],
+      "pose_schedule_metric_passed": false,
+      "min_clearance_mm": 3.731078343242842,
+      "max_foot_position_error_mm": 0.8411018361374456,
+      "max_foot_orientation_error_deg": 0.49854366657171784,
+      "nominal_pose_schedule_at_0_15_rad_s": 13.865489321644459,
+      "min_actual_swing_sole_height_m": 0.013000000000093354
+    }
+  ],
+  "command": {
+    "nodes": 115,
+    "max_virtual_work_error_Nm": 6.97164637131209e-09,
+    "max_equilibrium_residual": 1.479372180313021e-14,
+    "minimum_command_margin_rad": 0.02984902350403945,
+    "maximum_effort_utilization": 0.9427123931260439,
+    "force_allocation_failures": [],
+    "model_command_passed": false,
+    "specific_command_time_s": 11.874823167221205,
+    "command_schedule_passed": true,
+    "initial_command_exact": true,
+    "all_fixed_commands_exact": true
+  },
+  "feasibility_epigraph": {
+    "slack": 0.1523553700346307,
+    "scaled_original_violation": 0.1523553700346307,
+    "all_original_rows_replayed": 19760,
+    "additional_support_rows": 524,
+    "all_window_rows": 7424,
+    "all_clock_rows": 43200,
+    "removed_contact_constant_rows": 392,
+    "removed_exact_integer_time_rows": 1,
+    "original_numerical_feasibility": false,
+    "positive_slack_is_not_admission": true,
+    "linear_and_acceptance_replay": {
+      "records": [
+        {
+          "iteration": 0,
+          "matrix_exact": true,
+          "linear_minimum": -7.423252755545118e-09,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "trials": [
+            {
+              "index": 0,
+              "alpha": 1.0,
+              "hard_passed": false,
+              "accepted": false,
+              "merit": 3.435708765173572,
+              "ratio": -6.005830678983878
+            }
+          ]
+        },
+        {
+          "iteration": 1,
+          "matrix_exact": true,
+          "linear_minimum": -9.976612922943384e-09,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "trials": [
+            {
+              "index": 0,
+              "alpha": 1.0,
+              "hard_passed": false,
+              "accepted": false,
+              "merit": 0.5726619282818787,
+              "ratio": -0.17026446535705478
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "matrix_exact": true,
+          "linear_minimum": -3.868986409027997e-09,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "trials": [
+            {
+              "index": 0,
+              "alpha": 1.0,
+              "hard_passed": false,
+              "accepted": false,
+              "merit": 0.20774511222486933,
+              "ratio": 0.6128285311067798
+            }
+          ]
+        },
+        {
+          "iteration": 3,
+          "matrix_exact": true,
+          "linear_minimum": -1.3777411529344863e-09,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": true,
+          "trials": [
+            {
+              "index": 0,
+              "alpha": 1.0,
+              "hard_passed": false,
+              "accepted": false,
+              "merit": 0.17238730997919433,
+              "ratio": 0.9087967149695763
+            },
+            {
+              "index": 1,
+              "alpha": 0.5,
+              "hard_passed": true,
+              "accepted": true,
+              "merit": 0.3189531001950393,
+              "ratio": 0.9799189753628169
+            }
+          ]
+        },
+        {
+          "iteration": 4,
+          "matrix_exact": true,
+          "linear_minimum": -7.299547292571179e-10,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": true,
+          "trials": [
+            {
+              "index": 0,
+              "alpha": 1.0,
+              "hard_passed": false,
+              "accepted": false,
+              "merit": 0.15124717524111705,
+              "ratio": 0.9421550669621153
+            },
+            {
+              "index": 1,
+              "alpha": 0.5,
+              "hard_passed": true,
+              "accepted": true,
+              "merit": 0.230745012007843,
+              "ratio": 0.9910883844606232
+            }
+          ]
+        },
+        {
+          "iteration": 5,
+          "matrix_exact": true,
+          "linear_minimum": -2.3104435975095788e-10,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": true,
+          "trials": [
+            {
+              "index": 0,
+              "alpha": 1.0,
+              "hard_passed": false,
+              "accepted": false,
+              "merit": 0.14454213102012423,
+              "ratio": 0.9613507130830631
+            },
+            {
+              "index": 1,
+              "alpha": 0.5,
+              "hard_passed": true,
+              "accepted": true,
+              "merit": 0.18601868635243526,
+              "ratio": 0.997592759393843
+            }
+          ]
+        },
+        {
+          "iteration": 6,
+          "matrix_exact": true,
+          "linear_minimum": -1.181752460103179e-10,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": true,
+          "trials": [
+            {
+              "index": 0,
+              "alpha": 1.0,
+              "hard_passed": false,
+              "accepted": false,
+              "merit": 0.14195879202367173,
+              "ratio": 0.9810484617723876
+            },
+            {
+              "index": 1,
+              "alpha": 0.5,
+              "hard_passed": true,
+              "accepted": true,
+              "merit": 0.16358959295969405,
+              "ratio": 0.9988234363815065
+            }
+          ]
+        },
+        {
+          "iteration": 7,
+          "matrix_exact": true,
+          "linear_minimum": -9.193612269587682e-11,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": true,
+          "trials": [
+            {
+              "index": 0,
+              "alpha": 1.0,
+              "hard_passed": false,
+              "accepted": false,
+              "merit": 0.14132579006233523,
+              "ratio": 0.9906255792878224
+            },
+            {
+              "index": 1,
+              "alpha": 0.5,
+              "hard_passed": true,
+              "accepted": true,
+              "merit": 0.1523553700346307,
+              "ratio": 0.9997311441322131
+            }
+          ]
+        }
+      ],
+      "unchanged_independent_linear_bound": 1e-07,
+      "maximum_subproblems": 16,
+      "maximum_nonlinear_trials": 128,
+      "actual_nonlinear_trials": 13,
+      "source_matrices_and_bounds_exact": true,
+      "fraction_to_boundary_predictor_replayed": true,
+      "strict_hard_nonlinear_backtracking_replayed": true,
+      "positive_load_reconstruction": 2.402592014227878e-15,
+      "endpoint_moment_error": 1.1828212020947859e-14,
+      "cumulative_phase_error": 4.440892098500626e-16,
+      "posthover_increment_minimum": 5.035193853752951e-06,
+      "hover_gap_error": 1.0408340855860843e-17,
+      "exact_linear_gap_profile_removed": true,
+      "physical_admission": false
+    },
+    "window_replay_error": 3.552713678800501e-15
+  },
+  "primal": {
+    "equalities": 1,
+    "inequalities": 27708,
+    "max_equation_replay_error": 2.3129646346357427e-15,
+    "max_inequality_replay_error": 3.552713678800501e-15,
+    "max_local_replay_error": 3.885780586188048e-16,
+    "maximum_kinematic_residual": 9.636735853746359e-14,
+    "minimum_dependent_planning_bound": 5.9300968827114e-06,
+    "numerical_constraints_passed": false,
+    "minimum_inequality": -0.004165481883023681
+  },
+  "timing": {
+    "event_budgets": [
+      93,
+      194,
+      246,
+      101,
+      16
+    ],
+    "clock_replay_error": 5.329070518200751e-15,
+    "clock_overlap_error": 3.3350058825654116e-16,
+    "clock_original_rate_minimum": -0.00041686238615335196,
+    "clock_original_target_minimum": -0.004146091562633458,
+    "integer_movement_ticks": 650,
+    "minimum_synthetic_quiet_ticks": 25,
+    "integer_duration_s": 13.5,
+    "original_minimum_inequality": -0.00045433867081664473,
+    "new_construction_minimum_inequality": -0.004165481883023681,
+    "continuous_guarded_s": 13.500000000000002,
+    "raw_target_minimum_headroom_rad": -0.0041650050458655885,
+    "hover_gap_m": 0.012000000000000038,
+    "actual_float32_schedule": false,
+    "quiet_guard_exercised": false
+  },
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "physical_admission": false,
+  "repair_complete": false,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/monotone_path_412/results.json": "8c5548da508380af7cb1e8b00712a9cb2983eee2def9fdae8f8ba0029d203670",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_monotone_path_413.py": "efb0e1842f5b86bd803e2b67364480c06f41e6ac923d1d8485894815978ee31b"
+  }
+}

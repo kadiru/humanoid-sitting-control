@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-18T20:43:08.473437+00:00",
+  "scope": "512 active launch history; verify actual worker state, never infer liveness later from this file",
+  "session_id": 91803,
+  "launch_chunk": "eacc06",
+  "compile_actual_exit": 0,
+  "compile_chunk": "e57eb1",
+  "freeze_actual_exit": 0,
+  "freeze_chunk": "6e40e2",
+  "workers_at_observation": [
+    {
+      "pid": 1489896,
+      "argv": [
+        "/home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python",
+        "scripts/build_low_seat_separated_path_512.py",
+        ""
+      ]
+    },
+    {
+      "pid": 1490074,
+      "argv": [
+        "/home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python",
+        "/home/kadir/humanoid-sitting/scripts/solve_low_seat_separated_lp_512.py",
+        "/data/humanoid-sitting-perception/low_seat_contact_01/separated_path_512/major_00/primary/round_00",
+        ""
+      ]
+    }
+  ],
+  "main_log": "/data/humanoid-sitting-perception/low_seat_contact_01/separated_path_512.log",
+  "do_not_restart": true
+}

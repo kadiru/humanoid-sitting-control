@@ -1,0 +1,140 @@
+{
+  "utc": "2026-10-18T02:52:45.630320+00:00",
+  "scope": "Index and group the saved primal arrays already replayed by362; no recalculation of kinematics, solve or audit.",
+  "dependent_worst": {
+    "knot": 98,
+    "side": "lower",
+    "coordinate": "left_hip_roll_joint",
+    "residual": -4.452581848779502e-07,
+    "units": "rad"
+  },
+  "linear_raw_headroom_later_intervals": {
+    "knot": 99,
+    "side": "lower",
+    "joint": "left_ankle_roll_joint",
+    "residual_rad": -0.007140508953037028,
+    "scope": "intervals ending2..114 only; independent362 all-interval aggregate is separate"
+  },
+  "groups": [
+    {
+      "group": "local_command_effort_corner",
+      "count": 9120,
+      "units": "mixed rad/Nm/BW",
+      "start_index": 0,
+      "min_residual": -2.505078208231426e-05,
+      "negative_count": 24,
+      "below_minus_1e8_count": 11
+    },
+    {
+      "group": "dependent_planning",
+      "count": 2884,
+      "units": "root m / joint rad",
+      "start_index": 9120,
+      "min_residual": -4.452581848779502e-07,
+      "negative_count": 2,
+      "below_minus_1e8_count": 1
+    },
+    {
+      "group": "phase_order",
+      "count": 208,
+      "units": "dimensionless",
+      "start_index": 12004,
+      "min_residual": -1.1384889675447596e-07,
+      "negative_count": 56,
+      "below_minus_1e8_count": 2
+    },
+    {
+      "group": "increasing_rate",
+      "count": 1824,
+      "units": "rad/segment",
+      "start_index": 12212,
+      "min_residual": -5.152892353529979e-05,
+      "negative_count": 100,
+      "below_minus_1e8_count": 67
+    },
+    {
+      "group": "decreasing_rate",
+      "count": 1824,
+      "units": "rad/segment",
+      "start_index": 14036,
+      "min_residual": -8.969033289318688e-05,
+      "negative_count": 154,
+      "below_minus_1e8_count": 113
+    },
+    {
+      "group": "upper_linear_headroom",
+      "count": 1824,
+      "units": "rad*s",
+      "start_index": 15860,
+      "min_residual": 0.00017948358352210903,
+      "negative_count": 0,
+      "below_minus_1e8_count": 0
+    },
+    {
+      "group": "lower_linear_headroom",
+      "count": 1824,
+      "units": "rad*s",
+      "start_index": 17684,
+      "min_residual": -0.0007090232817069921,
+      "negative_count": 34,
+      "below_minus_1e8_count": 32
+    },
+    {
+      "group": "prehover_gap",
+      "count": 98,
+      "units": "m",
+      "start_index": 19508,
+      "min_residual": 0.0029620128900036784,
+      "negative_count": 0,
+      "below_minus_1e8_count": 0
+    },
+    {
+      "group": "posthover_gap",
+      "count": 5,
+      "units": "m",
+      "start_index": 19606,
+      "min_residual": 0.005539458849747204,
+      "negative_count": 0,
+      "below_minus_1e8_count": 0
+    },
+    {
+      "group": "nonnegative_gap",
+      "count": 104,
+      "units": "m",
+      "start_index": 19611,
+      "min_residual": 1.2863819015264113e-08,
+      "negative_count": 0,
+      "below_minus_1e8_count": 0
+    },
+    {
+      "group": "approach_gap_order",
+      "count": 39,
+      "units": "m",
+      "start_index": 19715,
+      "min_residual": 0.0004138319714714622,
+      "negative_count": 0,
+      "below_minus_1e8_count": 0
+    },
+    {
+      "group": "normal_descent",
+      "count": 5,
+      "units": "m",
+      "start_index": 19754,
+      "min_residual": -8.690609533153551e-06,
+      "negative_count": 5,
+      "below_minus_1e8_count": 1
+    },
+    {
+      "group": "total_time",
+      "count": 1,
+      "units": "s",
+      "start_index": 19759,
+      "min_residual": -0.13773096801008755,
+      "negative_count": 1,
+      "below_minus_1e8_count": 1
+    }
+  ],
+  "hover_error_m": 3.414643879244214e-05,
+  "physical_admission": false,
+  "optimizer_executed": false
+}

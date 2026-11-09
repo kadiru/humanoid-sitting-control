@@ -1,0 +1,59 @@
+{
+  "utc": "2026-10-18T04:21:39.278089+00:00",
+  "optimizer": {
+    "success": false,
+    "message": "Iteration limit reached",
+    "iterations": 30,
+    "evaluations": 31,
+    "minimum_augmented_inequality": -0.0015645469371152465,
+    "objective_time_s": 13.5,
+    "objective_slack": 0.08114195132310555,
+    "max_equality_residual": 4.2313693145399717e-07,
+    "minimum_inequality": -0.0002481194947806624,
+    "numerical_constraints_passed": false,
+    "local_not_global": true,
+    "objective_is_dimensionless_slack": true,
+    "objective_time_s_is_legacy_duration_field": true,
+    "scaled_original_violation": 0.08270649826022079,
+    "scaled_hard_violation": 6.689003047924876e-07,
+    "scaled_soft_violation": 0.08270649826022079,
+    "slack_is_not_admission_tolerance": true
+  },
+  "gates": [
+    [
+      "Sampled115-knot geometry",
+      true
+    ],
+    [
+      "Strict static command/support",
+      true
+    ],
+    [
+      "Original+stricter construction numerical constraints",
+      false
+    ],
+    [
+      "Integer budget (650+25 ticks)",
+      13.5
+    ],
+    [
+      "Actual rounded candidate schedule",
+      "Not executed: prerequisite gates must pass"
+    ],
+    [
+      "Current-input / both placements / parent / balance / bias",
+      "Not executed"
+    ],
+    [
+      "Physics / PPO / fresh holdout / promotion",
+      "Not started"
+    ]
+  ],
+  "negative_corner_rows": [],
+  "physical_admission": false,
+  "repair_complete": false,
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "video_unchanged": true,
+  "command_schedule": null
+}

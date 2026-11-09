@@ -1,0 +1,114 @@
+{
+  "node": 2,
+  "parent": 0,
+  "kind": "branch_upper",
+  "optimizer": {
+    "success": true,
+    "status": 0,
+    "message": "Optimization terminated successfully",
+    "iterations": 5,
+    "objective_nfev": 6,
+    "jacobian_njev": 5
+  },
+  "decision": "branched_fractional_relaxation",
+  "branch": {
+    "budget": 1,
+    "value": 193.85524456660647,
+    "floor": 193.0,
+    "ceil": 194.0
+  },
+  "slack": 2.0153989445470556e-15,
+  "soft_merit": 1.656329502200806e-11,
+  "minimum_augmented": -1.6561279623063512e-11,
+  "minimum_hard": -9.540979117872439e-18,
+  "coordinate_margin": 0.00018864490812686707,
+  "box_margin": 0.0,
+  "budgets": [
+    92.85537951320399,
+    193.85524456660647,
+    246.0,
+    101.0,
+    16.289375920189514
+  ],
+  "integer_error": 0.28937592018951364,
+  "numerical_branching_gate_passed": true,
+  "strict_model_point": false,
+  "callback_count": 5,
+  "history": [
+    {
+      "callback": 0,
+      "slack": 8.70264258417384e-05,
+      "soft_merit": 0.0002812951253428101,
+      "minimum_hard": -4.142667979489811e-12,
+      "minimum_augmented": -0.00019426869950107172,
+      "budgets": [
+        92.86119630916893,
+        193.86117737891607,
+        246.0,
+        101.0,
+        16.277626311915014
+      ],
+      "not_selected": true
+    },
+    {
+      "callback": 1,
+      "slack": 7.240780006862115e-05,
+      "soft_merit": 7.443825869733232e-05,
+      "minimum_hard": 1.2863819015264113e-08,
+      "minimum_augmented": -2.030458628711173e-06,
+      "budgets": [
+        92.86050059705505,
+        193.86047027007905,
+        246.0,
+        101.0,
+        16.279029132865844
+      ],
+      "not_selected": true
+    },
+    {
+      "callback": 2,
+      "slack": 4.573557005317059e-05,
+      "soft_merit": 4.642966930796518e-05,
+      "minimum_hard": -3.4154189892943165e-13,
+      "minimum_augmented": -6.94099254794593e-07,
+      "budgets": [
+        92.85864103965105,
+        193.85857319523177,
+        246.0,
+        101.0,
+        16.282785765117183
+      ],
+      "not_selected": true
+    },
+    {
+      "callback": 3,
+      "slack": 6.82688226696232e-16,
+      "soft_merit": 1.4509934284115177e-06,
+      "minimum_hard": -3.3018032752352156e-12,
+      "minimum_augmented": -1.4509934277288294e-06,
+      "budgets": [
+        92.85538231220733,
+        193.8552474240296,
+        246.0,
+        101.0,
+        16.28937026376309
+      ],
+      "not_selected": true
+    },
+    {
+      "callback": 4,
+      "slack": 2.0153989445470556e-15,
+      "soft_merit": 1.656329502200806e-11,
+      "minimum_hard": -9.540979117872439e-18,
+      "minimum_augmented": -1.6561279623063512e-11,
+      "budgets": [
+        92.85537951320399,
+        193.85524456660647,
+        246.0,
+        101.0,
+        16.289375920189514
+      ],
+      "not_selected": true
+    }
+  ]
+}

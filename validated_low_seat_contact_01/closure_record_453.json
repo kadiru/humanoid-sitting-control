@@ -1,0 +1,210 @@
+{
+  "utc": "2026-10-18T11:57:36.338145+00:00",
+  "scope": "Seal completed448\u2013452 evidence; user repair/PPO task remains unfinished.",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "clock_transcription_evidence_preservation_447.json",
+      "files": 8182,
+      "passed": true
+    },
+    {
+      "manifest": "clock_transcription_supplemental_447.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 8373,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_453.json",
+  "manifest_sha256": "7b96061189b2a435206f42c656d60058d04a628875d490f1fbc8c193e6b9f443",
+  "workers": [],
+  "actual_exits": {
+    "448": "ef98bc/session79037/exit0",
+    "449": "98b9be/immediate/exit0",
+    "450": "e6897b/session28514/exit0",
+    "451": "4e06b0/session81143/exit0",
+    "452": "a8b042/session60996/exit0",
+    "453_index_original": "5d58d7/exit1",
+    "453_index_v2": "b8d34e/exit0"
+  },
+  "local_review": {
+    "utc": "2026-10-18T11:55:12.944630+00:00",
+    "report": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_452/findings.html",
+    "url": "http://127.0.0.1:8807/progress_report_452/findings.html",
+    "hash_review": {
+      "utc": "2026-10-18T11:52:42.149612+00:00",
+      "manifests": [
+        {
+          "folder": "collocation_solver_preparation_448",
+          "entries": 7,
+          "passed": true
+        },
+        {
+          "folder": "collocation_solver_audit_449",
+          "entries": 1,
+          "passed": true
+        },
+        {
+          "folder": "collocation_path_450",
+          "entries": 117,
+          "passed": true
+        },
+        {
+          "folder": "collocation_path_audit_451",
+          "entries": 6,
+          "passed": true
+        },
+        {
+          "folder": "collocation_index_recovery_453",
+          "entries": 3,
+          "passed": true
+        },
+        {
+          "folder": "progress_report_452",
+          "entries": 13,
+          "passed": true
+        }
+      ],
+      "total_entries": 147,
+      "passed": true
+    },
+    "visual_review_completed": true,
+    "reviewed": [
+      "HTML scope and distinction between arithmetic and physical admission",
+      "both original plots",
+      "exact gate values and all37 versus moving-command margin scope",
+      "all14 decisions and four strict bound rejections",
+      "complete constraint-group table and complete1467-table layout/CSV links",
+      "preparation/audit/recovery provenance",
+      "unchanged58.4s video loaded and physical effort/repair status"
+    ],
+    "original_html_plots_data_unchanged": true,
+    "formatting_recovery": false,
+    "physical_admission": false
+  },
+  "solver_summary": {
+    "utc": "2026-10-18T11:46:30.712490+00:00",
+    "scope": "ONE bounded whole-clock sparse predictor/corrector feasibility run.\nSix predictors at most; up to two nonlinear defect corrections per predictor.\nThe complete new444/446v2 domain varies11906 phase/load coordinates jointly.\nThe infeasible440 seed is never admitted; only actual hard-feasible, monotone,\npositive-load steps with nonlinear rate/window improvement may be accepted.\nCorrection LPs minimize displacement inside the SAME predictor domain, while\nrequiring half its predicted improvement. They cannot soften hard rows. No\npost-cap polishing, alternate allocation, hidden root fallback or old run restart.\n",
+    "specification": {
+      "max_predictors": 6,
+      "max_corrections_per_predictor": 2,
+      "max_linear_programs": 18,
+      "lp_time_limit_s": 45.0,
+      "lp_method": "highs",
+      "lp_primal_dual_tolerance": 1e-09,
+      "independent_linear_bound": 1e-07,
+      "coordinate_domain_radius": 0.02,
+      "initial_trust_fraction": 1.0,
+      "minimum_trust_fraction": 0.03125,
+      "root_max_updates": 10,
+      "root_max_halvings": 9,
+      "root_absolute_tolerance": 1e-13,
+      "hover_numerical_bound": 1e-08,
+      "strict_inequality_bound": 0.0,
+      "predictor_guard": 9.5367431640625e-07,
+      "acceptance_ratio": 0.1,
+      "correction_radius_fraction": 0.25
+    },
+    "stop": "predictor cap",
+    "predictors": 6,
+    "linear_programs": 14,
+    "nonlinear_trial_paths": 14,
+    "accepted_steps": 4,
+    "last_accepted_linear_index": 7,
+    "initial": {
+      "minimum_retained_buffered_row": -0.19791129319207476,
+      "minimum_hard_row": -9.788228589879822e-07,
+      "minimum_soft_row": -0.19791129319207476,
+      "soft_merit": 0.19791129319207476,
+      "hard_pass": false,
+      "all_inequalities_pass": false,
+      "minimum_phase": -9.788228589879822e-07,
+      "monotone_phase_pass": false,
+      "coordinate_bound_minimum": 2.8206304524295775e-06,
+      "maximum_retained_equality": 8.881784197001252e-16,
+      "maximum_kinematic_residual": 9.85878045867139e-14,
+      "minimum_corner_weight": 0.0,
+      "fixed_states_exact": true,
+      "inactive_exact_zero": true
+    },
+    "final": {
+      "minimum_retained_buffered_row": -0.012401911962708735,
+      "minimum_hard_row": 6.667949525862582e-11,
+      "minimum_soft_row": -0.012401911962708735,
+      "soft_merit": 0.012401911962708735,
+      "hard_pass": true,
+      "all_inequalities_pass": false,
+      "minimum_phase": 6.667949525862582e-11,
+      "monotone_phase_pass": true,
+      "coordinate_bound_minimum": 0.0,
+      "maximum_retained_equality": 3.1403901701310133e-10,
+      "maximum_kinematic_residual": 2.4841240175987878e-15,
+      "minimum_corner_weight": 0.0,
+      "fixed_states_exact": true,
+      "inactive_exact_zero": true
+    },
+    "wrapper_counts": {
+      "value_requests": 50,
+      "jacobian_requests": 30,
+      "trial_paths": 14,
+      "root_updates": 18
+    },
+    "source440_unchanged": true,
+    "new_final_differs_from_source": true,
+    "sampled_full_geometry_pending": true,
+    "independent_audit_pending": true,
+    "actual_forward_filter_ticks": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "physical_admission": false,
+    "elapsed_s": 201.2293966539437
+  },
+  "independent_audit_summary": {
+    "utc": "2026-10-18T11:47:54.122824+00:00",
+    "scope": "Independent full-state/virtual-work audit of NEW450 final accepted path.\nNo root/optimizer/AD fixture or old finite-work loop rerun. Exactly unchanged\nstates inherit sealed441 work; new states receive central finite work, saved\nbefore aggregate assertions. All1467 labels remain, with exact duplicate work\ncached by complete pose and wrench identity. Arithmetic pass is not admission.\n",
+    "passed": true,
+    "arithmetic_only": true,
+    "records": 1467,
+    "new_finite_work_columns": 21840,
+    "inherited441_exact_records": 48,
+    "duplicate_new_records": 54,
+    "maximum_errors": {
+      "com": 2.220446049250313e-16,
+      "gap": 2.220446049250313e-16,
+      "frame": 2.5698110692123118e-15,
+      "equilibrium": 2.220446049250313e-16,
+      "torque": 6.943285058014226e-09,
+      "command": 3.4767855261463865e-11
+    },
+    "sampled_geometry_passed": true,
+    "sampled_geometry_failures": [],
+    "minimum_housing_m": 0.00373107834324284,
+    "minimum_cop_m": 0.005000954421374368,
+    "minimum_command_margin_rad": 0.0,
+    "original_clock_rate_minimum": -3.6168605187960993e-05,
+    "original_clock_target_minimum": -0.00037073466948234213,
+    "prior_clock_rate_minimum": -3.7122279504367243e-05,
+    "prior_clock_target_minimum": -0.00037121150664054525,
+    "actual_forward_filter_ticks": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "physical_admission": false
+  },
+  "original_failed_index_preserved": true,
+  "no_scientific_recovery": true,
+  "trajectory_lp_calls": 14,
+  "actual_forward_filter_ticks": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "video307_unchanged": true,
+  "best_clean": "64/72",
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}

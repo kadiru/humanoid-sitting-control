@@ -1,0 +1,12 @@
+# Complete: crouch-to-rest bridge and bounded PPO — October 15, 2026
+
+Read `rl_support_work/CROUCH_REST_BRIDGE_STATUS.md` locally and `docs/CROUCH_REST_BRIDGE_STATUS.md` on Ubuntu, plus frozen `docs/CROUCH_REST_SAFE_PPO_PROTOCOL.md`. Work directly through Mac SSH to `kfuUbuntu`; never another agent. Study root `/data/humanoid-sitting-perception/crouch_rest_bridge_01`.
+
+Both64-rollout PPO seeds58111/58117 finished. Neither progressed beyond control starting15s; all approaches remain reference-controlled. Development admitted clean11/12 and12/12; six stress trials remain0/6 with two forbidden-contact failures.58117passedits48-update current-window gate but failed the separate13s-control gate11/12strict. No gate bypass.
+
+Holdout: older current reference/currentPPO56211/56217 each16/16stable; repaired reference and both new policies each8/16stable,5/16clean,0physical failures. Remaining misses are traction-margin/slip problems; no unwanted holdout contacts. PPO does not help effort: final5s torque² rises1.93%/1.09% versus repaired reference, wholemotion+0.10%/+0.06%, on8common successes. Large savings versus older baselines (~37%whole/~87%rest) come from the reference repair and do not offset lost reliability. No policy promotion.
+
+Verification01/02/03 pass identically;49frozen/8705prior hashes unchanged. Main368640physics ticks include only42000policy-enabled ticks; actor272/critic320Adam steps perseed. Exact startup/checkpoint/prefix matches and full20s horizons. Geometry available; physical transfer is the remaining problem. Final report/export SHA-verified and visually inspected at `validated_crouch_rest_bridge_01/final_results`, localhost8800/final_results/findings.html. Named completion automation paused after final reporting; no training pending. Earlier results below remain unchanged.
+
+---
+

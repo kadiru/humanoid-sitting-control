@@ -1,0 +1,73 @@
+{
+  "status": "interrupted_debug_run_not_candidate",
+  "reason": "Training prototype 10 box overlaps the initial standing robot: repeated first-tick wrong-contact failures before any sit action.",
+  "time_utc": "2026-10-11T08:17:00.052485+00:00",
+  "completed_rows_before_signal": 130,
+  "first_attempt": {
+    "episode": 0,
+    "env": 10,
+    "geometry": 10,
+    "success": false,
+    "standing": false,
+    "hold_s": 0.0,
+    "peak_force_N": 92.41476440429688,
+    "reward": -4.999840259552002,
+    "seated_leg_rms_Nm": null,
+    "seated_foot_load_fraction": null,
+    "depth_availability": 0.0,
+    "failures": {
+      "fall": false,
+      "wrong_contact": true,
+      "pelvis_floor": false,
+      "impact": false,
+      "fast_descent": false,
+      "torque": false,
+      "perception_unavailable": false
+    },
+    "duration_s": 0.02,
+    "steps": 1,
+    "standing_checked": false,
+    "startup_ready": true,
+    "startup_refusal_reason": null,
+    "end_reason": "failure"
+  },
+  "latest_attempt": {
+    "episode": 129,
+    "env": 10,
+    "geometry": 10,
+    "success": false,
+    "standing": false,
+    "hold_s": 0.0,
+    "peak_force_N": 102.54988861083984,
+    "reward": -4.999820709228516,
+    "seated_leg_rms_Nm": null,
+    "seated_foot_load_fraction": null,
+    "depth_availability": 0.0,
+    "failures": {
+      "fall": false,
+      "wrong_contact": true,
+      "pelvis_floor": false,
+      "impact": false,
+      "fast_descent": false,
+      "torque": false,
+      "perception_unavailable": false
+    },
+    "duration_s": 0.02,
+    "steps": 1,
+    "standing_checked": false,
+    "startup_ready": true,
+    "startup_refusal_reason": null,
+    "end_reason": "failure"
+  },
+  "geometry": {
+    "family": "box",
+    "depth": 0.64,
+    "width": 0.9,
+    "height": 0.26,
+    "x": -0.36,
+    "y": -0.04,
+    "yaw": 0.13962634015954636
+  },
+  "resume_parent": "support_rl_pace_easy_train_01/final.pt",
+  "holdout_evaluated": false
+}

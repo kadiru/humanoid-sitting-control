@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "scope": "LOCAL process fixtures only; no scientific arrays or solve",
+  "results": [
+    {
+      "stage": "zero",
+      "actual_exit": 0,
+      "elapsed_s": 0.015976000111550093,
+      "total_elapsed_s": 0.016000875271856785,
+      "completed_within_deadline": true,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "overshoot_s": 0.0,
+      "peak_rss_bytes": 15267266560,
+      "worker_pid": 46993,
+      "supervisor_error": null
+    },
+    {
+      "stage": "nonzero",
+      "actual_exit": 7,
+      "elapsed_s": 0.015973332803696394,
+      "total_elapsed_s": 0.016016208101063967,
+      "completed_within_deadline": false,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "overshoot_s": 0.0,
+      "peak_rss_bytes": 15300820992,
+      "worker_pid": 46994,
+      "supervisor_error": null
+    },
+    {
+      "stage": "timeout",
+      "actual_exit": -9,
+      "elapsed_s": 0.14769775001332164,
+      "total_elapsed_s": 0.14772904198616743,
+      "completed_within_deadline": false,
+      "hard_termination_reason": "shared_total_deadline",
+      "termination_signal_sent_at": 2189488.165158875,
+      "overshoot_s": 0.027729041986167435,
+      "peak_rss_bytes": 15334375424,
+      "worker_pid": 46995,
+      "supervisor_error": null
+    }
+  ]
+}

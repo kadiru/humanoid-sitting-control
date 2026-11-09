@@ -1,0 +1,69 @@
+{
+  "classification": "Source-derived component cost bounds; full scientific-stage resource freeze is incomplete",
+  "scientific_data_loaded": false,
+  "scientific_launch_ready": false,
+  "layout": {
+    "states": 1410,
+    "active": 1365,
+    "X": 24,
+    "Y": 51,
+    "feature_columns": 105750,
+    "parameters": 78790,
+    "hard_rows": 156647
+  },
+  "per_pass_bounds": {
+    "physical_tangent_cache_products": 11695320,
+    "cached_output_coefficients": 1601145,
+    "composed_row_tangent_products": 36028810,
+    "composed_row_intercept_products": 1566470,
+    "composed_row_profile_products": 1566470,
+    "primary_new_coefficients": 7205762,
+    "interior_new_coefficients": 7362409,
+    "new_point_row_dot_products": 7205762,
+    "posterior_J_times_physical_trace_products": 1725840,
+    "posterior_original_row_feature_terms": 1566470,
+    "explicit_physical_box_witnesses": 31395
+  },
+  "matrix_bounds": {
+    "primary_shape": [
+      809178,
+      78791
+    ],
+    "primary_nnz": 9820080,
+    "interior_shape": [
+      993712,
+      78791
+    ],
+    "interior_nnz": 10412995,
+    "new_interior_packed_payload_bytes": 91481856,
+    "payload_is_not_total_allocation": true
+  },
+  "arithmetic": {
+    "input_premise": "Every scientific scalar is finite binary64; physical basis entries are exact signed units. These are runtime assertions in the adapter/assembly. Synthetic integer fixtures are outside this premise.",
+    "binary64_absolute_bound": "abs(x)<2^1024; exact grid2^-1074",
+    "canonical_M_bound": "At most10 raw terms; aliases combined exactly; abs(combined)<2^1028 on grid2^-1074.",
+    "physical_output_tangent_bound": "At most24 signed J terms per coefficient: abs(T)<2^1029 on grid2^-1074.",
+    "raw_tangent_bound": "At most10 terms: abs(sum M*T)<2^2061 on grid2^-2148; mantissa bits<=4210.",
+    "raw_intercept_and_kappa_bound": "abs(value)<2^2056 on grid2^-2148; mantissa bits<=4205.",
+    "inward_compensation_bound": "Finite encoded coefficients and box endpoints required. Each raw error numerator is <2^2062 on grid2^-2148. Sum of <=47 error*endpoint terms plus intercept is <2^3093 on grid2^-3222; mantissa bits<=6316.",
+    "division_policy": "Divide only for nearest/downward binary64 conversion with the single positive source row scale. Nonfinite conversion terminates; never rescale the row or point.",
+    "producer_hard_caps": {
+      "mantissa_bits": 32768,
+      "absolute_exponent": 16384
+    },
+    "independent_audit": "Fraction operations use the same exact binary64 inputs but no producer arithmetic. Its allocation and CPU time must be included separately."
+  },
+  "required_pass_accounting": [
+    "A and B each require original input/runtime hash verification and loading, producer physical tangent construction, independent reference construction, all hard-row composition/encoding and independent encoding audit before the cold solve.",
+    "After a successful untouched A/B return: full strengthened KKT/dual sign/gap checks, exact finite boxes and new tangent guards; independent exact point check includes its own reference/predictor arithmetic. All original return audits remain.",
+    "B additionally requires the unchanged complete92267-interval/125867-product exact positive margin and its independent audit, both target gap rows, and all original finite-map prerequisites.",
+    "C reuses the NEW H trace; no P*d,H*d,N*d repeat. It performs one unchanged finite map, <=1365 fresh values and conditional <=1365 J states, old mechanical/merit/row audits, plus producer and independent posterior error/row certificates.",
+    "Do not reuse the old600/600/45 exception or claim tiny synthetic test timings establish scientific-stage feasibility. All imports, loads, hashing, assembly, solver, returns, audits, writes and finalization must share each future stage deadline."
+  ],
+  "remaining_resource_work": [
+    "Integrate these components with frozen primary/interior/finite stage source and verify immutable original matrix/RHS/cost/equality prefixes.",
+    "Count actual integrated passes and source/input/runtime bytes; bound all process peaks, buffers, output records and backend allocations under the total40GiB limit.",
+    "Freeze externally enforced stage deadlines including independent audit/finalization reserves. No backend completion or positive eta is guaranteed."
+  ],
+  "no_new_time_exception_requested": true
+}

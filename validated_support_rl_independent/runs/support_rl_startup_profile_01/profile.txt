@@ -1,0 +1,43 @@
+         19517 function calls in 0.353 seconds
+
+   Ordered by: cumulative time
+   List reduced from 183 to 35 due to restriction <35>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001    0.353    0.353 /home/kadir/humanoid-sitting/scripts/profile_support_startup.py:16(run)
+       16    0.048    0.003    0.351    0.022 /home/kadir/humanoid-sitting/scripts/seat_depth_estimator.py:46(estimate_body_frame)
+       16    0.061    0.004    0.235    0.015 /home/kadir/humanoid-sitting/scripts/seat_depth_estimator.py:6(estimate)
+     1455    0.124    0.000    0.124    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+       48    0.034    0.001    0.064    0.001 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/_core/numeric.py:1562(cross)
+      389    0.000    0.000    0.051    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:43(_amin)
+      405    0.000    0.000    0.051    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:39(_amax)
+      373    0.000    0.000    0.049    0.000 {method 'min' of 'numpy.ndarray' objects}
+      389    0.000    0.000    0.049    0.000 {method 'max' of 'numpy.ndarray' objects}
+      144    0.029    0.000    0.029    0.000 {method 'astype' of 'numpy.ndarray' objects}
+       48    0.007    0.000    0.029    0.001 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2598(norm)
+       16    0.002    0.000    0.010    0.001 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/lib/_type_check_impl.py:368(nan_to_num)
+       32    0.009    0.000    0.009    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/_core/shape_base.py:378(stack)
+       32    0.004    0.000    0.006    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/lib/_index_tricks_impl.py:146(__getitem__)
+       32    0.000    0.000    0.006    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/lib/_histograms_impl.py:685(histogram)
+      453    0.006    0.000    0.006    0.000 {built-in method numpy.array}
+       64    0.005    0.000    0.005    0.000 {method 'copy' of 'numpy.ndarray' objects}
+       32    0.000    0.000    0.004    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:941(sort)
+       48    0.004    0.000    0.004    0.000 {method 'sort' of 'numpy.ndarray' objects}
+       16    0.000    0.000    0.003    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/lib/_twodim_base_impl.py:695(histogram2d)
+       16    0.001    0.000    0.003    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/lib/_histograms_impl.py:913(histogramdd)
+       16    0.001    0.000    0.002    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/scipy/spatial/transform/_rotation.py:2363(align_vectors)
+       32    0.000    0.000    0.002    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3914(median)
+       32    0.002    0.000    0.002    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/_core/numeric.py:1725(indices)
+       32    0.000    0.000    0.002    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3827(_ureduce)
+       32    0.000    0.000    0.002    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:4003(_median)
+       48    0.000    0.000    0.001    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:48(_wrapfunc)
+       96    0.001    0.000    0.001    0.000 {method 'searchsorted' of 'numpy.ndarray' objects}
+       48    0.000    0.000    0.001    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/lib/_histograms_impl.py:1040(<genexpr>)
+       32    0.001    0.000    0.001    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/lib/_ufunclike_impl.py:75(isposinf)
+       32    0.000    0.000    0.001    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:1459(searchsorted)
+       48    0.000    0.000    0.001    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/scipy/spatial/transform/_rotation.py:348(__init__)
+       64    0.000    0.000    0.001    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/scipy/spatial/transform/_rotation.py:40(_promote)
+       16    0.001    0.000    0.001    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/lib/_ufunclike_impl.py:145(isneginf)
+       32    0.000    0.000    0.001    0.000 /home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:732(partition)
+
+

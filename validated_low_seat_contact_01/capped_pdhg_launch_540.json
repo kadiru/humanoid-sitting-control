@@ -1,0 +1,78 @@
+{
+  "utc": "2026-10-19T02:40:25.013302+00:00",
+  "compile_actual_exit": 0,
+  "compile_exit_evidence": {
+    "utc": "2026-10-19T02:40:06.810000+00:00",
+    "actual_exit": 0,
+    "observed_tool_chunk": "d5c18d"
+  },
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "capped_max_evidence_preservation_539.json",
+      "files": 11969,
+      "passed": true
+    },
+    {
+      "manifest": "capped_max_supplemental_539.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "workers": [],
+  "source_input_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/low_seat_capped_pdhg_540.py": "5ecc904089ef36fb3c3de4613e7c21f04eef449dd934ccd01899286162c072d8",
+    "/home/kadir/humanoid-sitting/scripts/prepare_low_seat_capped_pdhg_540.py": "9a8aac132a62ebb65ebe055fb2548fcc72ec06f8cb7fc85fb9139a6229baadc7",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_capped_pdhg_541.py": "870a7dfca8035e92848f25a3a117635dbb3d9c97d9b8fc01bb2477e93763f8b0",
+    "/home/kadir/humanoid-sitting/scripts/freeze_low_seat_capped_pdhg_540.py": "90764a0c8f13fc4cf4b6743bc4307cb9b02bbed2916a5469d350d841c6ddd9d6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_preparation_538/small_exact_examples.json": "31af5116e2ad901890f3ec1b09817aa20e09dd4643771af1f8212c6a2e0ddca8",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_preparation_538/preparation.json": "9c1d89a05fe4b0eb267bbb57ba6ae27778566945ed3cd728ad96d9a98a3ce2c3",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_preparation_538/primary/hard.npz": "94b57f64ec340929135684c30cb4dd2caf7d8e43fbc756d85f7c4b14ff13b316",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_preparation_538/primary/arrays.npz": "a0273070ec1ef89faa3fb4d431c879e77c1f9bec6ff10293c05bd5f366665ace",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_preparation_538/primary/native_equality.npz": "e029aa756358154c2916f65ca6ed841087d8df326e3610b3bfd8fc2dea01c938",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_preparation_538/primary/coupled.npz": "f1cb3124a6f10b2628363470efee328143be36739801afe5232af6abe579ee97",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_preparation_538/witness/hard.npz": "849af3640579763353249493ab9879c325518e2aed8df004e27a4e3d8ef9cbbe",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_preparation_538/witness/arrays.npz": "8282d6ffcce0ceca6f35bea4281c226561f7afd8f72df87e5e639d08430902ab",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_preparation_538/witness/native_equality.npz": "e029aa756358154c2916f65ca6ed841087d8df326e3610b3bfd8fc2dea01c938",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_preparation_538/witness/coupled.npz": "4d22a7ac8c9e980411f7e83358b9340fc8dd8a7697d2962c4fce73e84c3faa1e",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_preparation_538/SHA256.json": "dc97f1903ef906ac6c33ac0112cc35ce4624a69176216e4c1fdc6caac8cc4cf3",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_audit_539/independent_audit.json": "acd46b334f84dfda6978e10d009979a9639f5594fe53113eed91a2af35a91c6e",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_audit_539/witness_row_copy_verified.npy": "4ad495bb93626505536a8a09b3310e8b7b856b0314fce8e66e30f91ae3d619d2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_audit_539/primary_row_copy_verified.npy": "2e8bea0c43afec7180348a99717269b216b691e946fb95b3a432dee3df8070ff",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/capped_max_audit_539/SHA256.json": "f1e04ff30ecd1a80a971cce98df0819fafdac900a057eeed20dfdb29b0973021"
+  },
+  "specification": {
+    "scope": "Complete new LP SUBSOLVER for538 capped-maximum saddle form, with all native coordinates including auxiliary torques. Preparation of exact metric certificates and two NEW small LP tests only. No full-size LP or trajectory wrapper launched.",
+    "reference": "Chambolle and Pock2010/2011, https://optimization-online.org/2010/06/2646/ . Exact-real reference is their fixed-step primal-dual iteration with theta1 after fixed positive diagonal metric coordinate substitution. No implementation or empirical performance is inherited.",
+    "input": "H*x<=bH and g(S*x-bS), g(r)=max(L,maxr) on maxr<=U, infinity otherwise. Source538/539 copied-original rows and517 proof inherited by hash. Native costs must be zero, native bounds unbounded, equalities literally zero/RHS zero; reject unsupported nonzero domain, never silently drop it. No522 projection,504 transform,old rejected/internal vectors or source coefficient scaling.",
+    "metric": "For K=vertical_stack(H,S), compute EXACT positive absolute row/column sums using integer units2^-1074. For each positive sum choose least enclosing power2^p, then sigma_i=2^(-p_i-1),tau_j=2^(-p_j-1); zero sum uses1. Reject nonfinite/zero step. Fixed once per NEW input; no adaptive balance/tuning. All source coefficients stay unchanged.",
+    "norm_proof": "Exact sigma_i*rowL1_i<=1/2 and tau_j*colL1_j<=1/2. Cauchy gives ||sqrt(Sigma)*K*sqrt(T)*z||^2 <= sum_i sigma_i*rowL1_i*sum_j|Kij|*tau_j*z_j^2 <=1/4*||z||^2. Thus norm<=1/2<1. This proves a valid exact-real metric condition, NOT a finite-arithmetic convergence rate or45s success.",
+    "initialization": "x=xbar=0,yH=lambda=0. Native increment zero is an LP seed, not physical hard feasibility. No warm start. Fixed theta1,no restart,acceleration,line search,ergodic averaging or best-iterate selection.",
+    "iteration": "wH=yH+sigmaH*(H*xbar); yHnew=max(wH-sigmaH*bH,0). wS=lambda+sigmaS*(S*xbar); lambdanew=weighted prox of bS.lambda+g* at wS. xnew=x-T*(H.T*yHnew+S.T*lambdanew); xbarnew=2*xnew-x. All native coordinates remain joint. Cone projections concern dual variables only, no primal clipping/normalization.",
+    "finite_prox": "q=w-sigma*(b+L), width=U-L. Select a=0, width, or sorted weighted-simplex threshold from q/sigma and longdouble prefix sums, then lambda=max(q-sigma*a,0). No bisection/retry. Check finite/nonnegative output, threshold bounds, scaled orthant stationarity and hinge complementarity<=1e-12. These numerical algebra screens are NOT an exact rational proximal certificate nor a summable-error convergence theorem. Independent small audit computes exact proximal primal-dual gaps of SAVED evaluations.",
+    "finite_limits": "Exact-real convergence assumes an existing saddle point and exact arithmetic/proximals. Fixed finite screens and IEEE arithmetic do not establish that hypothesis or global convergence. Only explicit original unscaled numerical KKT may return a candidate. No empirical speed/conditioning/global infeasibility claim.",
+    "scalar": "At every numerical screen v=max(L,max(S*x-bS)), without clipping to U; t=e*v. If KKT screens pass, compute every coupled residual with exactFraction source coefficients and binary64 x, take exact v=max(L,maxr), round ONCE nearest binary64 and t=e*v. Record exact maximum/owning row/rounding error and lower slack. Native x is BITWISE unchanged. A rounded scalar can lie below exact max; do NOT call it exact feasible. Recheck all source numerical KKT/bounds at unchanged thresholds; no nextafter or repair.",
+    "dual": "s=sum(lambda); alpha=max(s-1,0),beta=max(1-s,0). Swap bound multipliers if e=-1. Source row duals are yH/lambda; numerical native stationarity and original scalar stationarity, source inequalities/bounds and absolute primal-dual gap all<=1e-9. Nonnegative finite duals required. Also source full inequalities<=1e-7. These are numerical KKT, not exact optimality.",
+    "stopping": "First nonfinite,proximal check failure,unsupported domain,cap or deadline ends with NO candidate. No internal vector selected on failure. No infeasibility/unboundedness certificate. After one eligible scalar reconstruction, any final KKT failure terminates rather than polishing.",
+    "budget": {
+      "seconds_total": 45.0,
+      "maximum_PDHG_steps": 4096,
+      "maximum_LP_calls_per_invocation": 1,
+      "address_space_GiB": 40,
+      "parent_wall_seconds": 120
+    },
+    "budget_scope": "45s includes input checks/metric computation when not inherited/all PDHG/proximal and scalar certification. Deadline checked between operations and in exact residual loop; actual overshoot reported.40GiB/120s required for future full-size child. Current preparation only two declared small tests, same45s/4096caps once each.",
+    "trace": "Bounded scalar ledger and ONE last transition by default. Full transition trace allowed ONLY for explicit small-test mode with n<=16,m<=64. No unbounded robot vector history.",
+    "future_admission": "A returned source-native LP vector still needs FULLoriginal490 inequalities/equalities/bounds1e-7, actual-primary-derived interior ceiling, original unscaled eta>0 exact interval certification,immutable490 encoding,and actual model/J/unit/geometry/filter/runtime/PPO gates. Same full direction supplies phi/prediction; primary never mapped. No whole-path wrapper/independent actual-state auditor exists yet.",
+    "tests": "Two NEW small LPs distinct from530/538 fixtures: asymmetric lower-bound primary with sum epigraph, and translated asymmetric clearance maximization. Exact primal/dual optima provided for independent certification. No old small LP/proximal example repeated.",
+    "physical_admission": false
+  },
+  "disk_free_bytes": 28673331200,
+  "new_full_size_LP_calls": 0,
+  "new_small_LP_calls_planned": 2,
+  "physical_admission": false
+}

@@ -1,0 +1,250 @@
+{
+  "scope": "Offline recorded development state/model only. Clearance3mm, endpoint patch margin15mm (air-path patch must remain over seat), and CoP5mm are research-screen targets, not changes to physical pass/fail criteria. No physical admission implied; static preload rate ignores changing feedback and is only a necessary check.",
+  "physical_simulations": 0,
+  "optimizer_updates": 0,
+  "fresh_holdout_used": false,
+  "research_scope": "Model pose/rate search on the already-failing36cm/+20degree development state. No new gain sweep. Arc time is an optimistic lower bound excluding endpoint acceleration and feedback.",
+  "source_sha256": "b40a70893546a6556f3390d81203b28dfc18cecd62fbe1f034fd12a63de2d322",
+  "rows": [
+    {
+      "case": 2,
+      "target_x": -0.18,
+      "pitch_rad": 0.9,
+      "command_arc_rad": 0.7398896724735153,
+      "minimum_time_at_015_rad_s": 4.9325978164901025,
+      "max_ik_error": 1.8416660725600798e-08,
+      "minimum_housing_clearance_m": 0.0034194903334551835,
+      "endpoint_housing_clearance_m": 0.0034194903334551835,
+      "minimum_finite_patch_margin_m": 0.009667277446221034,
+      "endpoint_patch_margin_m": 0.09941386636884891,
+      "minimum_no_seat_model_cop_margin_m": -0.0021235389913299985,
+      "durations": [
+        {
+          "rotation_seconds": 5.0,
+          "landing_seconds": 5.0,
+          "concurrent": true,
+          "finish_seconds": 15.0,
+          "peak_no_seat_target_rate_rad_s": 0.22086460888374404,
+          "necessary_rate_pass": false
+        }
+      ],
+      "screen_pass": false
+    },
+    {
+      "case": 2,
+      "target_x": -0.18,
+      "pitch_rad": 0.95,
+      "command_arc_rad": 0.7822389188685883,
+      "minimum_time_at_015_rad_s": 5.214926125790589,
+      "max_ik_error": 9.929970164445081e-09,
+      "minimum_housing_clearance_m": 0.0038326317785686926,
+      "endpoint_housing_clearance_m": 0.0038326317785686926,
+      "minimum_finite_patch_margin_m": 0.009667277446221034,
+      "endpoint_patch_margin_m": 0.10235447472223544,
+      "minimum_no_seat_model_cop_margin_m": 3.118814181810037e-05,
+      "durations": [
+        {
+          "rotation_seconds": 5.0,
+          "landing_seconds": 5.0,
+          "concurrent": true,
+          "finish_seconds": 15.0,
+          "peak_no_seat_target_rate_rad_s": 0.23325664840452873,
+          "necessary_rate_pass": false
+        }
+      ],
+      "screen_pass": false
+    },
+    {
+      "case": 2,
+      "target_x": -0.17,
+      "pitch_rad": 0.9,
+      "command_arc_rad": 0.7473420741684547,
+      "minimum_time_at_015_rad_s": 4.982280494456365,
+      "max_ik_error": 1.7537061872406752e-08,
+      "minimum_housing_clearance_m": 0.0032815358939324185,
+      "endpoint_housing_clearance_m": 0.0032815358939324185,
+      "minimum_finite_patch_margin_m": 0.009667277446221034,
+      "endpoint_patch_margin_m": 0.0887736089233491,
+      "minimum_no_seat_model_cop_margin_m": 0.007018582501717711,
+      "durations": [
+        {
+          "rotation_seconds": 5.0,
+          "landing_seconds": 5.0,
+          "concurrent": true,
+          "finish_seconds": 15.0,
+          "peak_no_seat_target_rate_rad_s": 0.22292743341940877,
+          "necessary_rate_pass": false
+        }
+      ],
+      "screen_pass": false
+    },
+    {
+      "case": 2,
+      "target_x": -0.17,
+      "pitch_rad": 0.95,
+      "command_arc_rad": 0.7900402854420472,
+      "minimum_time_at_015_rad_s": 5.266935236280315,
+      "max_ik_error": 1.6904297520084194e-08,
+      "minimum_housing_clearance_m": 0.0036868557870984413,
+      "endpoint_housing_clearance_m": 0.0036868557870984413,
+      "minimum_finite_patch_margin_m": 0.009667277446221034,
+      "endpoint_patch_margin_m": 0.09171421727673565,
+      "minimum_no_seat_model_cop_margin_m": 0.009174351916729738,
+      "durations": [
+        {
+          "rotation_seconds": 5.0,
+          "landing_seconds": 5.0,
+          "concurrent": true,
+          "finish_seconds": 15.0,
+          "peak_no_seat_target_rate_rad_s": 0.23544490226562403,
+          "necessary_rate_pass": false
+        }
+      ],
+      "screen_pass": false
+    },
+    {
+      "case": 2,
+      "target_x": -0.16,
+      "pitch_rad": 0.9,
+      "command_arc_rad": 0.753663376634162,
+      "minimum_time_at_015_rad_s": 5.024422510894414,
+      "max_ik_error": 1.1738906999058407e-08,
+      "minimum_housing_clearance_m": 0.00316666933744413,
+      "endpoint_housing_clearance_m": 0.00316666933744413,
+      "minimum_finite_patch_margin_m": 0.009667277446221034,
+      "endpoint_patch_margin_m": 0.07813335147784922,
+      "minimum_no_seat_model_cop_margin_m": 0.012596853381993484,
+      "durations": [
+        {
+          "rotation_seconds": 5.0,
+          "landing_seconds": 5.0,
+          "concurrent": true,
+          "finish_seconds": 15.0,
+          "peak_no_seat_target_rate_rad_s": 0.2247726249218786,
+          "necessary_rate_pass": false
+        }
+      ],
+      "screen_pass": false
+    },
+    {
+      "case": 2,
+      "target_x": -0.16,
+      "pitch_rad": 0.95,
+      "command_arc_rad": 0.7967129521089897,
+      "minimum_time_at_015_rad_s": 5.3114196807265985,
+      "max_ik_error": 4.297642184842713e-08,
+      "minimum_housing_clearance_m": 0.00356455224255193,
+      "endpoint_housing_clearance_m": 0.00356455224255193,
+      "minimum_finite_patch_margin_m": 0.009667277446221034,
+      "endpoint_patch_margin_m": 0.08107395983123575,
+      "minimum_no_seat_model_cop_margin_m": 0.012596853381993484,
+      "durations": [
+        {
+          "rotation_seconds": 5.0,
+          "landing_seconds": 5.0,
+          "concurrent": true,
+          "finish_seconds": 15.0,
+          "peak_no_seat_target_rate_rad_s": 0.237313616301212,
+          "necessary_rate_pass": false
+        }
+      ],
+      "screen_pass": false
+    },
+    {
+      "case": 2,
+      "target_x": -0.15,
+      "pitch_rad": 0.9,
+      "command_arc_rad": 0.7588398362586455,
+      "minimum_time_at_015_rad_s": 5.058932241724303,
+      "max_ik_error": 2.0315352229000198e-08,
+      "minimum_housing_clearance_m": 0.0030740786793644393,
+      "endpoint_housing_clearance_m": 0.0030740786793644393,
+      "minimum_finite_patch_margin_m": 0.009667277446221034,
+      "endpoint_patch_margin_m": 0.06749309403234935,
+      "minimum_no_seat_model_cop_margin_m": 0.012596853381993484,
+      "durations": [
+        {
+          "rotation_seconds": 5.0,
+          "landing_seconds": 5.0,
+          "concurrent": true,
+          "finish_seconds": 15.0,
+          "peak_no_seat_target_rate_rad_s": 0.22636704385530848,
+          "necessary_rate_pass": false
+        }
+      ],
+      "screen_pass": false
+    },
+    {
+      "case": 2,
+      "target_x": -0.15,
+      "pitch_rad": 0.95,
+      "command_arc_rad": 0.802245374839047,
+      "minimum_time_at_015_rad_s": 5.34830249892698,
+      "max_ik_error": 2.7771352535350827e-08,
+      "minimum_housing_clearance_m": 0.0034648172184143563,
+      "endpoint_housing_clearance_m": 0.0034648172184143563,
+      "minimum_finite_patch_margin_m": 0.009667277446221034,
+      "endpoint_patch_margin_m": 0.0704337023857359,
+      "minimum_no_seat_model_cop_margin_m": 0.012596853381993484,
+      "durations": [
+        {
+          "rotation_seconds": 5.0,
+          "landing_seconds": 5.0,
+          "concurrent": true,
+          "finish_seconds": 15.0,
+          "peak_no_seat_target_rate_rad_s": 0.23886953405241015,
+          "necessary_rate_pass": false
+        }
+      ],
+      "screen_pass": false
+    },
+    {
+      "case": 2,
+      "target_x": -0.14,
+      "pitch_rad": 0.9,
+      "command_arc_rad": 0.76285087755863,
+      "minimum_time_at_015_rad_s": 5.085672517057533,
+      "max_ik_error": 8.425910508085762e-09,
+      "minimum_housing_clearance_m": 0.0030032467441832417,
+      "endpoint_housing_clearance_m": 0.0030032467441832417,
+      "minimum_finite_patch_margin_m": 0.009667277446221034,
+      "endpoint_patch_margin_m": 0.0568528365868495,
+      "minimum_no_seat_model_cop_margin_m": 0.012596853381993484,
+      "durations": [
+        {
+          "rotation_seconds": 5.0,
+          "landing_seconds": 5.0,
+          "concurrent": true,
+          "finish_seconds": 15.0,
+          "peak_no_seat_target_rate_rad_s": 0.22760864719952068,
+          "necessary_rate_pass": false
+        }
+      ],
+      "screen_pass": false
+    },
+    {
+      "case": 2,
+      "target_x": -0.14,
+      "pitch_rad": 0.95,
+      "command_arc_rad": 0.8066192727434331,
+      "minimum_time_at_015_rad_s": 5.377461818289555,
+      "max_ik_error": 1.588533461486025e-08,
+      "minimum_housing_clearance_m": 0.0033870400733835215,
+      "endpoint_housing_clearance_m": 0.0033870400733835215,
+      "minimum_finite_patch_margin_m": 0.009667277446221034,
+      "endpoint_patch_margin_m": 0.05979344494023603,
+      "minimum_no_seat_model_cop_margin_m": 0.012596853381993484,
+      "durations": [
+        {
+          "rotation_seconds": 5.0,
+          "landing_seconds": 5.0,
+          "concurrent": true,
+          "finish_seconds": 15.0,
+          "peak_no_seat_target_rate_rad_s": 0.24039027229457446,
+          "necessary_rate_pass": false
+        }
+      ],
+      "screen_pass": false
+    }
+  ]
+}

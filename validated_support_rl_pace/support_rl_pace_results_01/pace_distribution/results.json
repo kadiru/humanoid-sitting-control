@@ -1,0 +1,14 @@
+{
+  "scope": "Isolated action mapping with constant zero Gaussian mean and std 0.5; no robot simulation or success score.",
+  "seed": 51691,
+  "parallel_filters": 256,
+  "steps": 2000,
+  "discarded_transient_steps": 250,
+  "stochastic_filtered_pace_mean": 0.8632327914237976,
+  "stochastic_filtered_pace_std": 0.043909940868616104,
+  "stochastic_pace_5th_percentile": 0.7853951454162598,
+  "stochastic_pace_95th_percentile": 0.9291229844093323,
+  "deterministic_mean_action_pace": 1.0,
+  "conclusion": "Upper clipping at nominal speed makes zero-mean exploration systematically slower. Executing the raw Gaussian mean is not equivalent to the average transformed training action.",
+  "causal_limit": "This establishes an action-distribution mismatch, not that it alone caused the robot regressions. Actual policy means and states change during training."
+}

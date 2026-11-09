@@ -1,0 +1,2001 @@
+{
+  "valid_count": 5,
+  "total": 18,
+  "rows": [
+    {
+      "case": 0,
+      "geometry": {
+        "case": 0,
+        "label": "lean_k0.42_tilt-16.0_surface75.0",
+        "kind": "lean",
+        "pitch_deg": 75.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.7117699103497975,
+        "x": -0.2837670905046901,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.2837670905046901,
+          0.0,
+          0.7117699103497975
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.6087614290087207,
+          0.0,
+          0.7933533402912352
+        ],
+        "normal": [
+          0.9659258262890683,
+          0.0,
+          0.25881904510252074
+        ],
+        "initial_root_pitch_deg": -15.999999999999996,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0014982140171182323,
+            "logo_link"
+          ],
+          [
+            0.0019999999999999896,
+            "torso_link"
+          ],
+          [
+            0.025602924249371908,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.02560293782684476,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.03391178863996316,
+            "pelvis"
+          ],
+          [
+            0.041872210563697505,
+            "left_hip_pitch_link"
+          ],
+          [
+            0.041872210563697505,
+            "right_hip_pitch_link"
+          ],
+          [
+            0.0877366391908835,
+            "left_shoulder_roll_link"
+          ]
+        ]
+      },
+      "valid": false,
+      "steps": 1000,
+      "good_fraction": 0.268,
+      "final_hold_seconds": 0.0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 0.0,
+        "effort_cost": -0.0,
+        "failure_cost": -0.0,
+        "normalized_torque_squared": 0.0018181063933297992,
+        "all_joint_rms_Nm": 3.104361057281494,
+        "absolute_mechanical_power_W": 1.3792929649353027,
+        "rest_normal_load_bw": 0.1102360412478447,
+        "rest_vertical_load_bw": 0.0874086394906044,
+        "maximum_friction_utilization": 0.9222447872161865,
+        "contacts_legal": 1.0,
+        "traction_ok": 0.0,
+        "no_slip": 1.0,
+        "good": 0.0,
+        "wrong_force_N": 0.0,
+        "peak_force_N": 51.61503601074219,
+        "max_slip_m_s": 0.0031678418163210154,
+        "foot_load_bw": 0.9657385349273682,
+        "torso_load_bw": 0.1102360412478447,
+        "root_height_m": 0.688915491104126,
+        "tilt_deg": 15.891305923461914
+      }
+    },
+    {
+      "case": 1,
+      "geometry": {
+        "case": 1,
+        "label": "lean_k0.42_tilt-16.0_surface90.0",
+        "kind": "lean",
+        "pitch_deg": 90.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.7350683965890332,
+        "x": -0.3436188454974861,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.3436188454974861,
+          0.0,
+          0.7350683965890332
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.7071067811865475,
+          0.0,
+          0.7071067811865477
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          2.220446049250313e-16
+        ],
+        "initial_root_pitch_deg": -15.999999999999996,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0016960219709093952,
+            "torso_link"
+          ],
+          [
+            0.004676882660910317,
+            "head_link"
+          ],
+          [
+            0.005316745729424574,
+            "logo_link"
+          ],
+          [
+            0.023137659257301317,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.02313767553991613,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.09601172174684368,
+            "left_shoulder_roll_link"
+          ],
+          [
+            0.09601172174684368,
+            "right_shoulder_roll_link"
+          ],
+          [
+            0.11393765594212012,
+            "pelvis"
+          ]
+        ]
+      },
+      "valid": false,
+      "steps": 1000,
+      "good_fraction": 0.0,
+      "final_hold_seconds": 0.0,
+      "failures": {
+        "fall": false,
+        "forbidden": true,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 0.0,
+        "effort_cost": -0.0,
+        "failure_cost": -5.0,
+        "normalized_torque_squared": 0.0009338946547359228,
+        "all_joint_rms_Nm": 3.067605495452881,
+        "absolute_mechanical_power_W": 0.6397359371185303,
+        "rest_normal_load_bw": 0.0,
+        "rest_vertical_load_bw": 0.0,
+        "maximum_friction_utilization": 0.20357610285282135,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 0.0,
+        "wrong_force_N": 43.89786148071289,
+        "peak_force_N": 0.0,
+        "max_slip_m_s": 0.005529497284442186,
+        "foot_load_bw": 0.9898552894592285,
+        "torso_load_bw": 0.0,
+        "root_height_m": 0.6883240342140198,
+        "tilt_deg": 15.850168228149414
+      }
+    },
+    {
+      "case": 2,
+      "geometry": {
+        "case": 2,
+        "label": "lean_k0.42_tilt-20.0_surface75.0",
+        "kind": "lean",
+        "pitch_deg": 75.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.6926651984648596,
+        "x": -0.34466775706183456,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.34466775706183456,
+          0.0,
+          0.6926651984648596
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.6087614290087207,
+          0.0,
+          0.7933533402912352
+        ],
+        "normal": [
+          0.9659258262890683,
+          0.0,
+          0.25881904510252074
+        ],
+        "initial_root_pitch_deg": -19.99999999999999,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.001501711429062051,
+            "logo_link"
+          ],
+          [
+            0.0020000000000000204,
+            "torso_link"
+          ],
+          [
+            0.023612185884106848,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.023612200282281264,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.0560000348126911,
+            "pelvis"
+          ],
+          [
+            0.06528383382844306,
+            "left_hip_pitch_link"
+          ],
+          [
+            0.06528383382844306,
+            "right_hip_pitch_link"
+          ],
+          [
+            0.0890539755899527,
+            "left_shoulder_roll_link"
+          ]
+        ]
+      },
+      "valid": false,
+      "steps": 1000,
+      "good_fraction": 0.88,
+      "final_hold_seconds": 0.6,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 2.0,
+        "effort_cost": -0.0009693239699117839,
+        "failure_cost": -0.0,
+        "normalized_torque_squared": 0.0009693239699117839,
+        "all_joint_rms_Nm": 3.0545334815979004,
+        "absolute_mechanical_power_W": 1.1840298175811768,
+        "rest_normal_load_bw": 0.1478516012430191,
+        "rest_vertical_load_bw": 0.10664749145507812,
+        "maximum_friction_utilization": 0.8001052141189575,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 1.0,
+        "wrong_force_N": 0.0,
+        "peak_force_N": 63.1751594543457,
+        "max_slip_m_s": 0.0040436540730297565,
+        "foot_load_bw": 0.9434666633605957,
+        "torso_load_bw": 0.1478516012430191,
+        "root_height_m": 0.6743524074554443,
+        "tilt_deg": 19.595993041992188
+      }
+    },
+    {
+      "case": 3,
+      "geometry": {
+        "case": 3,
+        "label": "lean_k0.42_tilt-20.0_surface90.0",
+        "kind": "lean",
+        "pitch_deg": 90.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.7196801172912398,
+        "x": -0.4066111846322384,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.4066111846322384,
+          0.0,
+          0.7196801172912398
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.7071067811865475,
+          0.0,
+          0.7071067811865477
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          2.220446049250313e-16
+        ],
+        "initial_root_pitch_deg": -19.99999999999999,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0018830969260016318,
+            "torso_link"
+          ],
+          [
+            0.002146339587884013,
+            "head_link"
+          ],
+          [
+            0.00842393975313281,
+            "logo_link"
+          ],
+          [
+            0.024518911998495253,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.024518928820998476,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.09939134109937957,
+            "left_shoulder_roll_link"
+          ],
+          [
+            0.09939134109937957,
+            "right_shoulder_roll_link"
+          ],
+          [
+            0.12904804867566846,
+            "left_shoulder_yaw_link"
+          ]
+        ]
+      },
+      "valid": false,
+      "steps": 1000,
+      "good_fraction": 0.0,
+      "final_hold_seconds": 0.0,
+      "failures": {
+        "fall": false,
+        "forbidden": true,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 0.0,
+        "effort_cost": -0.0,
+        "failure_cost": -5.0,
+        "normalized_torque_squared": 0.000716418435331434,
+        "all_joint_rms_Nm": 3.097890615463257,
+        "absolute_mechanical_power_W": 0.8265907764434814,
+        "rest_normal_load_bw": 0.0,
+        "rest_vertical_load_bw": 0.0,
+        "maximum_friction_utilization": 0.26851990818977356,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 0.0,
+        "wrong_force_N": 56.7814826965332,
+        "peak_force_N": 0.0,
+        "max_slip_m_s": 0.006241950672119856,
+        "foot_load_bw": 0.9859952330589294,
+        "torso_load_bw": 0.0,
+        "root_height_m": 0.6744811534881592,
+        "tilt_deg": 19.31873893737793
+      }
+    },
+    {
+      "case": 4,
+      "geometry": {
+        "case": 4,
+        "label": "lean_k0.42_tilt-24.0_surface75.0",
+        "kind": "lean",
+        "pitch_deg": 75.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.6701044236268415,
+        "x": -0.4051747889795134,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.4051747889795134,
+          0.0,
+          0.6701044236268415
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.6087614290087207,
+          0.0,
+          0.7933533402912352
+        ],
+        "normal": [
+          0.9659258262890683,
+          0.0,
+          0.25881904510252074
+        ],
+        "initial_root_pitch_deg": -23.999999999999996,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0019638476234381226,
+            "torso_link"
+          ],
+          [
+            0.002160492830565657,
+            "logo_link"
+          ],
+          [
+            0.022777859129470807,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.022777874278200258,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.07827334831064403,
+            "pelvis"
+          ],
+          [
+            0.08970830220937531,
+            "left_hip_pitch_link"
+          ],
+          [
+            0.08970830220937531,
+            "right_hip_pitch_link"
+          ],
+          [
+            0.09122807569521585,
+            "left_shoulder_roll_link"
+          ]
+        ]
+      },
+      "valid": true,
+      "steps": 1000,
+      "good_fraction": 1.0,
+      "final_hold_seconds": 20.0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 2.0,
+        "effort_cost": -0.0004191389016341418,
+        "failure_cost": -0.0,
+        "normalized_torque_squared": 0.0004191389016341418,
+        "all_joint_rms_Nm": 3.0202224254608154,
+        "absolute_mechanical_power_W": 0.6986098289489746,
+        "rest_normal_load_bw": 0.2081974893808365,
+        "rest_vertical_load_bw": 0.07722432166337967,
+        "maximum_friction_utilization": 0.35971200466156006,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 1.0,
+        "wrong_force_N": 0.0,
+        "peak_force_N": 69.9559326171875,
+        "max_slip_m_s": 0.0054078069515526295,
+        "foot_load_bw": 0.9258498549461365,
+        "torso_load_bw": 0.2081974893808365,
+        "root_height_m": 0.656475305557251,
+        "tilt_deg": 23.40205955505371
+      }
+    },
+    {
+      "case": 5,
+      "geometry": {
+        "case": 5,
+        "label": "lean_k0.42_tilt-24.0_surface90.0",
+        "kind": "lean",
+        "pitch_deg": 90.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.7010486236988526,
+        "x": -0.46809080923526375,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.46809080923526375,
+          0.0,
+          0.7010486236988526
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.7071067811865475,
+          0.0,
+          0.7071067811865477
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          2.220446049250313e-16
+        ],
+        "initial_root_pitch_deg": -23.999999999999996,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0018777243278214554,
+            "head_link"
+          ],
+          [
+            0.00187916312070207,
+            "torso_link"
+          ],
+          [
+            0.011953890755304212,
+            "logo_link"
+          ],
+          [
+            0.026137644124720184,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.026137661405154267,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.10266963165146574,
+            "left_shoulder_roll_link"
+          ],
+          [
+            0.10266963165146574,
+            "right_shoulder_roll_link"
+          ],
+          [
+            0.1331589358045193,
+            "right_shoulder_yaw_link"
+          ]
+        ]
+      },
+      "valid": false,
+      "steps": 1000,
+      "good_fraction": 0.0,
+      "final_hold_seconds": 0.0,
+      "failures": {
+        "fall": false,
+        "forbidden": true,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 0.0,
+        "effort_cost": -0.0,
+        "failure_cost": -5.0,
+        "normalized_torque_squared": 0.000684077909681946,
+        "all_joint_rms_Nm": 3.231684446334839,
+        "absolute_mechanical_power_W": 0.8443695306777954,
+        "rest_normal_load_bw": 0.0,
+        "rest_vertical_load_bw": 0.0,
+        "maximum_friction_utilization": 0.3497912883758545,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 0.0,
+        "wrong_force_N": 63.11482620239258,
+        "peak_force_N": 0.0,
+        "max_slip_m_s": 0.006030721589922905,
+        "foot_load_bw": 0.9667123556137085,
+        "torso_load_bw": 0.0,
+        "root_height_m": 0.6579554080963135,
+        "tilt_deg": 22.73015594482422
+      }
+    },
+    {
+      "case": 6,
+      "geometry": {
+        "case": 6,
+        "label": "lean_k0.7_tilt-16.0_surface75.0",
+        "kind": "lean",
+        "pitch_deg": 75.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.6768392070822917,
+        "x": -0.27472900386323024,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.27472900386323024,
+          0.0,
+          0.6768392070822917
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.6087614290087207,
+          0.0,
+          0.7933533402912352
+        ],
+        "normal": [
+          0.9659258262890683,
+          0.0,
+          0.25881904510252074
+        ],
+        "initial_root_pitch_deg": -15.999999999999996,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0014982140171182054,
+            "logo_link"
+          ],
+          [
+            0.0019999999999999896,
+            "torso_link"
+          ],
+          [
+            0.025602924249371908,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.02560293782684476,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.03391178863996313,
+            "pelvis"
+          ],
+          [
+            0.040332031437945455,
+            "left_hip_pitch_link"
+          ],
+          [
+            0.040332031437945455,
+            "right_hip_pitch_link"
+          ],
+          [
+            0.08481665761149271,
+            "left_hip_roll_link"
+          ]
+        ]
+      },
+      "valid": false,
+      "steps": 1000,
+      "good_fraction": 0.0,
+      "final_hold_seconds": 0.0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 0.0,
+        "effort_cost": -0.0,
+        "failure_cost": -0.0,
+        "normalized_torque_squared": 0.005647159181535244,
+        "all_joint_rms_Nm": 4.1883697509765625,
+        "absolute_mechanical_power_W": 1.9887912273406982,
+        "rest_normal_load_bw": 0.10678192973136902,
+        "rest_vertical_load_bw": 0.08527301251888275,
+        "maximum_friction_utilization": 0.9313215613365173,
+        "contacts_legal": 1.0,
+        "traction_ok": 0.0,
+        "no_slip": 1.0,
+        "good": 0.0,
+        "wrong_force_N": 0.0,
+        "peak_force_N": 52.256614685058594,
+        "max_slip_m_s": 0.003930784296244383,
+        "foot_load_bw": 0.9917070269584656,
+        "torso_load_bw": 0.10678192973136902,
+        "root_height_m": 0.6490291953086853,
+        "tilt_deg": 16.36204719543457
+      }
+    },
+    {
+      "case": 7,
+      "geometry": {
+        "case": 7,
+        "label": "lean_k0.7_tilt-16.0_surface90.0",
+        "kind": "lean",
+        "pitch_deg": 90.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.7001376933215274,
+        "x": -0.3345807588560263,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.3345807588560263,
+          0.0,
+          0.7001376933215274
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.7071067811865475,
+          0.0,
+          0.7071067811865477
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          2.220446049250313e-16
+        ],
+        "initial_root_pitch_deg": -15.999999999999996,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0016960219709093952,
+            "torso_link"
+          ],
+          [
+            0.004676882660910317,
+            "head_link"
+          ],
+          [
+            0.0053167457294246295,
+            "logo_link"
+          ],
+          [
+            0.023137659257301317,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.023137675539916185,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.0960117217468437,
+            "left_shoulder_roll_link"
+          ],
+          [
+            0.0960117217468437,
+            "right_shoulder_roll_link"
+          ],
+          [
+            0.11393765594212014,
+            "pelvis"
+          ]
+        ]
+      },
+      "valid": false,
+      "steps": 1000,
+      "good_fraction": 0.0,
+      "final_hold_seconds": 0.0,
+      "failures": {
+        "fall": false,
+        "forbidden": true,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 0.0,
+        "effort_cost": -0.0,
+        "failure_cost": -5.0,
+        "normalized_torque_squared": 0.003998068626970053,
+        "all_joint_rms_Nm": 4.0886006355285645,
+        "absolute_mechanical_power_W": 1.2082347869873047,
+        "rest_normal_load_bw": 0.0,
+        "rest_vertical_load_bw": 0.0,
+        "maximum_friction_utilization": 0.2170320451259613,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 0.0,
+        "wrong_force_N": 43.19598388671875,
+        "peak_force_N": 0.0,
+        "max_slip_m_s": 0.006928134243935347,
+        "foot_load_bw": 0.9995302557945251,
+        "torso_load_bw": 0.0,
+        "root_height_m": 0.6487243175506592,
+        "tilt_deg": 16.27837371826172
+      }
+    },
+    {
+      "case": 8,
+      "geometry": {
+        "case": 8,
+        "label": "lean_k0.7_tilt-20.0_surface75.0",
+        "kind": "lean",
+        "pitch_deg": 75.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.6584500496884046,
+        "x": -0.333215044059837,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.333215044059837,
+          0.0,
+          0.6584500496884046
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.6087614290087207,
+          0.0,
+          0.7933533402912352
+        ],
+        "normal": [
+          0.9659258262890683,
+          0.0,
+          0.25881904510252074
+        ],
+        "initial_root_pitch_deg": -19.99999999999999,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.00150171142906194,
+            "logo_link"
+          ],
+          [
+            0.0020000000000000204,
+            "torso_link"
+          ],
+          [
+            0.023612185884106792,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.02361220028228121,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.05600003481269106,
+            "pelvis"
+          ],
+          [
+            0.06425026185666873,
+            "left_hip_pitch_link"
+          ],
+          [
+            0.06425026185666873,
+            "right_hip_pitch_link"
+          ],
+          [
+            0.0890539755899526,
+            "left_shoulder_roll_link"
+          ]
+        ]
+      },
+      "valid": true,
+      "steps": 1000,
+      "good_fraction": 1.0,
+      "final_hold_seconds": 20.0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 2.0,
+        "effort_cost": -0.0034656047355383635,
+        "failure_cost": -0.0,
+        "normalized_torque_squared": 0.0034656047355383635,
+        "all_joint_rms_Nm": 3.9031314849853516,
+        "absolute_mechanical_power_W": 1.2300469875335693,
+        "rest_normal_load_bw": 0.20295298099517822,
+        "rest_vertical_load_bw": -0.028620628640055656,
+        "maximum_friction_utilization": 0.6921967267990112,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 1.0,
+        "wrong_force_N": 0.0,
+        "peak_force_N": 64.64910888671875,
+        "max_slip_m_s": 0.007161581888794899,
+        "foot_load_bw": 0.9702649712562561,
+        "torso_load_bw": 0.20295298099517822,
+        "root_height_m": 0.6358712911605835,
+        "tilt_deg": 20.055524826049805
+      }
+    },
+    {
+      "case": 9,
+      "geometry": {
+        "case": 9,
+        "label": "lean_k0.7_tilt-20.0_surface90.0",
+        "kind": "lean",
+        "pitch_deg": 90.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.6854649685147848,
+        "x": -0.39515847163024087,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.39515847163024087,
+          0.0,
+          0.6854649685147848
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.7071067811865475,
+          0.0,
+          0.7071067811865477
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          2.220446049250313e-16
+        ],
+        "initial_root_pitch_deg": -19.99999999999999,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0018830969260016873,
+            "torso_link"
+          ],
+          [
+            0.0021463395878839574,
+            "head_link"
+          ],
+          [
+            0.00842393975313281,
+            "logo_link"
+          ],
+          [
+            0.024518911998495253,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.024518928820998532,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.09939134109937957,
+            "left_shoulder_roll_link"
+          ],
+          [
+            0.09939134109937957,
+            "right_shoulder_roll_link"
+          ],
+          [
+            0.12904804867566846,
+            "left_shoulder_yaw_link"
+          ]
+        ]
+      },
+      "valid": false,
+      "steps": 1000,
+      "good_fraction": 0.0,
+      "final_hold_seconds": 0.0,
+      "failures": {
+        "fall": false,
+        "forbidden": true,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 0.0,
+        "effort_cost": -0.0,
+        "failure_cost": -5.0,
+        "normalized_torque_squared": 0.0030992787797003984,
+        "all_joint_rms_Nm": 3.9287707805633545,
+        "absolute_mechanical_power_W": 1.0262823104858398,
+        "rest_normal_load_bw": 0.0,
+        "rest_vertical_load_bw": 0.0,
+        "maximum_friction_utilization": 0.2758442759513855,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 0.0,
+        "wrong_force_N": 56.08063888549805,
+        "peak_force_N": 0.0,
+        "max_slip_m_s": 0.0068540205247700214,
+        "foot_load_bw": 0.966736376285553,
+        "torso_load_bw": 0.0,
+        "root_height_m": 0.6363542675971985,
+        "tilt_deg": 19.701627731323242
+      }
+    },
+    {
+      "case": 10,
+      "geometry": {
+        "case": 10,
+        "label": "lean_k0.7_tilt-24.0_surface75.0",
+        "kind": "lean",
+        "pitch_deg": 75.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.6367715221069814,
+        "x": -0.3913632460835013,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.3913632460835013,
+          0.0,
+          0.6367715221069814
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.6087614290087207,
+          0.0,
+          0.7933533402912352
+        ],
+        "normal": [
+          0.9659258262890683,
+          0.0,
+          0.25881904510252074
+        ],
+        "initial_root_pitch_deg": -23.999999999999996,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.001963847623438178,
+            "torso_link"
+          ],
+          [
+            0.002160492830565657,
+            "logo_link"
+          ],
+          [
+            0.02277785912947075,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.022777874278200258,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.07827334831064403,
+            "pelvis"
+          ],
+          [
+            0.08918637285033097,
+            "left_hip_pitch_link"
+          ],
+          [
+            0.08918637285033097,
+            "right_hip_pitch_link"
+          ],
+          [
+            0.09122807569521582,
+            "left_shoulder_roll_link"
+          ]
+        ]
+      },
+      "valid": true,
+      "steps": 1000,
+      "good_fraction": 1.0,
+      "final_hold_seconds": 20.0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 2.0,
+        "effort_cost": -0.002110446570441127,
+        "failure_cost": -0.0,
+        "normalized_torque_squared": 0.002110446570441127,
+        "all_joint_rms_Nm": 3.7402584552764893,
+        "absolute_mechanical_power_W": 1.1541390419006348,
+        "rest_normal_load_bw": 0.2234553098678589,
+        "rest_vertical_load_bw": 0.04450618475675583,
+        "maximum_friction_utilization": 0.3542718291282654,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 1.0,
+        "wrong_force_N": 0.0,
+        "peak_force_N": 70.6545181274414,
+        "max_slip_m_s": 0.00690267700701952,
+        "foot_load_bw": 0.9290415048599243,
+        "torso_load_bw": 0.2234553098678589,
+        "root_height_m": 0.6193522810935974,
+        "tilt_deg": 23.880090713500977
+      }
+    },
+    {
+      "case": 11,
+      "geometry": {
+        "case": 11,
+        "label": "lean_k0.7_tilt-24.0_surface90.0",
+        "kind": "lean",
+        "pitch_deg": 90.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.6677157221789924,
+        "x": -0.4542792663392516,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.4542792663392516,
+          0.0,
+          0.6677157221789924
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.7071067811865475,
+          0.0,
+          0.7071067811865477
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          2.220446049250313e-16
+        ],
+        "initial_root_pitch_deg": -23.999999999999996,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0018777243278214,
+            "head_link"
+          ],
+          [
+            0.0018791631207020145,
+            "torso_link"
+          ],
+          [
+            0.011953890755304156,
+            "logo_link"
+          ],
+          [
+            0.026137644124720073,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.026137661405154267,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.10266963165146568,
+            "left_shoulder_roll_link"
+          ],
+          [
+            0.10266963165146568,
+            "right_shoulder_roll_link"
+          ],
+          [
+            0.13315893580451924,
+            "right_shoulder_yaw_link"
+          ]
+        ]
+      },
+      "valid": false,
+      "steps": 1000,
+      "good_fraction": 0.0,
+      "final_hold_seconds": 0.0,
+      "failures": {
+        "fall": false,
+        "forbidden": true,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 0.0,
+        "effort_cost": -0.0,
+        "failure_cost": -5.0,
+        "normalized_torque_squared": 0.0029556755907833576,
+        "all_joint_rms_Nm": 3.9397826194763184,
+        "absolute_mechanical_power_W": 1.3430960178375244,
+        "rest_normal_load_bw": 0.0,
+        "rest_vertical_load_bw": 0.0,
+        "maximum_friction_utilization": 0.34230276942253113,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 0.0,
+        "wrong_force_N": 64.6084213256836,
+        "peak_force_N": 0.0,
+        "max_slip_m_s": 0.007739673834294081,
+        "foot_load_bw": 0.9637191891670227,
+        "torso_load_bw": 0.0,
+        "root_height_m": 0.6212011575698853,
+        "tilt_deg": 23.10111427307129
+      }
+    },
+    {
+      "case": 12,
+      "geometry": {
+        "case": 12,
+        "label": "lean_k1.0_tilt-16.0_surface75.0",
+        "kind": "lean",
+        "pitch_deg": 75.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.6283832030748278,
+        "x": -0.2618277854576651,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.2618277854576651,
+          0.0,
+          0.6283832030748278
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.6087614290087207,
+          0.0,
+          0.7933533402912352
+        ],
+        "normal": [
+          0.9659258262890683,
+          0.0,
+          0.25881904510252074
+        ],
+        "initial_root_pitch_deg": -15.999999999999996,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0014982140171183164,
+            "logo_link"
+          ],
+          [
+            0.0019999999999999896,
+            "torso_link"
+          ],
+          [
+            0.025602924249371956,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.025602937826844814,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.033911788639963185,
+            "pelvis"
+          ],
+          [
+            0.03981522615613113,
+            "left_hip_pitch_link"
+          ],
+          [
+            0.03981522615613113,
+            "right_hip_pitch_link"
+          ],
+          [
+            0.0767961289838784,
+            "left_hip_roll_link"
+          ]
+        ]
+      },
+      "valid": false,
+      "steps": 1000,
+      "good_fraction": 0.041,
+      "final_hold_seconds": 0.0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 0.0,
+        "effort_cost": -0.0,
+        "failure_cost": -0.0,
+        "normalized_torque_squared": 0.010855111293494701,
+        "all_joint_rms_Nm": 5.2270684242248535,
+        "absolute_mechanical_power_W": 1.6323354244232178,
+        "rest_normal_load_bw": 0.16365915536880493,
+        "rest_vertical_load_bw": -0.04419846087694168,
+        "maximum_friction_utilization": 0.9125853776931763,
+        "contacts_legal": 1.0,
+        "traction_ok": 0.0,
+        "no_slip": 1.0,
+        "good": 0.0,
+        "wrong_force_N": 0.0,
+        "peak_force_N": 52.6912841796875,
+        "max_slip_m_s": 0.0054321750067174435,
+        "foot_load_bw": 1.0034312009811401,
+        "torso_load_bw": 0.16365915536880493,
+        "root_height_m": 0.5941835045814514,
+        "tilt_deg": 16.73981285095215
+      }
+    },
+    {
+      "case": 13,
+      "geometry": {
+        "case": 13,
+        "label": "lean_k1.0_tilt-16.0_surface90.0",
+        "kind": "lean",
+        "pitch_deg": 90.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.6516816893140635,
+        "x": -0.3216795404504611,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.3216795404504611,
+          0.0,
+          0.6516816893140635
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.7071067811865475,
+          0.0,
+          0.7071067811865477
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          2.220446049250313e-16
+        ],
+        "initial_root_pitch_deg": -15.999999999999996,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0016960219709093952,
+            "torso_link"
+          ],
+          [
+            0.004676882660910317,
+            "head_link"
+          ],
+          [
+            0.005316745729424574,
+            "logo_link"
+          ],
+          [
+            0.023137659257301317,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.02313767553991613,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.0960117217468437,
+            "left_shoulder_roll_link"
+          ],
+          [
+            0.0960117217468437,
+            "right_shoulder_roll_link"
+          ],
+          [
+            0.11393765594212014,
+            "pelvis"
+          ]
+        ]
+      },
+      "valid": false,
+      "steps": 1000,
+      "good_fraction": 0.0,
+      "final_hold_seconds": 0.0,
+      "failures": {
+        "fall": false,
+        "forbidden": true,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 0.0,
+        "effort_cost": -0.0,
+        "failure_cost": -5.0,
+        "normalized_torque_squared": 0.008475524373352528,
+        "all_joint_rms_Nm": 5.082614421844482,
+        "absolute_mechanical_power_W": 1.2003508806228638,
+        "rest_normal_load_bw": 0.0,
+        "rest_vertical_load_bw": 0.0,
+        "maximum_friction_utilization": 0.21612651646137238,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 0.0,
+        "wrong_force_N": 42.507572174072266,
+        "peak_force_N": 0.0,
+        "max_slip_m_s": 0.005431381054222584,
+        "foot_load_bw": 0.9955031871795654,
+        "torso_load_bw": 0.0,
+        "root_height_m": 0.5942267775535583,
+        "tilt_deg": 16.623065948486328
+      }
+    },
+    {
+      "case": 14,
+      "geometry": {
+        "case": 14,
+        "label": "lean_k1.0_tilt-20.0_surface75.0",
+        "kind": "lean",
+        "pitch_deg": 75.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.6110120255742876,
+        "x": -0.31696513240260293,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.31696513240260293,
+          0.0,
+          0.6110120255742876
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.6087614290087207,
+          0.0,
+          0.7933533402912352
+        ],
+        "normal": [
+          0.9659258262890683,
+          0.0,
+          0.25881904510252074
+        ],
+        "initial_root_pitch_deg": -19.99999999999999,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0015017114290619955,
+            "logo_link"
+          ],
+          [
+            0.0020000000000000204,
+            "torso_link"
+          ],
+          [
+            0.023612185884106792,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.023612200282281264,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.05600003481269107,
+            "pelvis"
+          ],
+          [
+            0.06428440144304212,
+            "left_hip_pitch_link"
+          ],
+          [
+            0.06428440144304212,
+            "right_hip_pitch_link"
+          ],
+          [
+            0.08905397558995265,
+            "left_shoulder_roll_link"
+          ]
+        ]
+      },
+      "valid": true,
+      "steps": 1000,
+      "good_fraction": 1.0,
+      "final_hold_seconds": 20.0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 2.0,
+        "effort_cost": -0.00999197456985712,
+        "failure_cost": -0.0,
+        "normalized_torque_squared": 0.00999197456985712,
+        "all_joint_rms_Nm": 5.306361198425293,
+        "absolute_mechanical_power_W": 2.1065292358398438,
+        "rest_normal_load_bw": 0.19178153574466705,
+        "rest_vertical_load_bw": -0.013012351468205452,
+        "maximum_friction_utilization": 0.5642113089561462,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 1.0,
+        "wrong_force_N": 0.0,
+        "peak_force_N": 60.55464172363281,
+        "max_slip_m_s": 0.00837696809321642,
+        "foot_load_bw": 1.0130345821380615,
+        "torso_load_bw": 0.19178153574466705,
+        "root_height_m": 0.581326961517334,
+        "tilt_deg": 20.665205001831055
+      }
+    },
+    {
+      "case": 15,
+      "geometry": {
+        "case": 15,
+        "label": "lean_k1.0_tilt-20.0_surface90.0",
+        "kind": "lean",
+        "pitch_deg": 90.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.6380269444006678,
+        "x": -0.3789085599730069,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.3789085599730069,
+          0.0,
+          0.6380269444006678
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.7071067811865475,
+          0.0,
+          0.7071067811865477
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          2.220446049250313e-16
+        ],
+        "initial_root_pitch_deg": -19.99999999999999,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0018830969260017429,
+            "torso_link"
+          ],
+          [
+            0.0021463395878840684,
+            "head_link"
+          ],
+          [
+            0.008423939753132865,
+            "logo_link"
+          ],
+          [
+            0.024518911998495364,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.024518928820998587,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.09939134109937962,
+            "left_shoulder_roll_link"
+          ],
+          [
+            0.09939134109937962,
+            "right_shoulder_roll_link"
+          ],
+          [
+            0.12904804867566855,
+            "left_shoulder_yaw_link"
+          ]
+        ]
+      },
+      "valid": false,
+      "steps": 1000,
+      "good_fraction": 0.0,
+      "final_hold_seconds": 0.0,
+      "failures": {
+        "fall": false,
+        "forbidden": true,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 0.0,
+        "effort_cost": -0.0,
+        "failure_cost": -5.0,
+        "normalized_torque_squared": 0.0076671382412314415,
+        "all_joint_rms_Nm": 4.9479217529296875,
+        "absolute_mechanical_power_W": 1.3562588691711426,
+        "rest_normal_load_bw": 0.0,
+        "rest_vertical_load_bw": 0.0,
+        "maximum_friction_utilization": 0.27821657061576843,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 0.0,
+        "wrong_force_N": 54.60273742675781,
+        "peak_force_N": 0.0,
+        "max_slip_m_s": 0.00648448197171092,
+        "foot_load_bw": 0.9825295805931091,
+        "torso_load_bw": 0.0,
+        "root_height_m": 0.5831466913223267,
+        "tilt_deg": 20.09479331970215
+      }
+    },
+    {
+      "case": 16,
+      "geometry": {
+        "case": 16,
+        "label": "lean_k1.0_tilt-24.0_surface75.0",
+        "kind": "lean",
+        "pitch_deg": 75.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.5905825911712418,
+        "x": -0.37184380911075693,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.37184380911075693,
+          0.0,
+          0.5905825911712418
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.6087614290087207,
+          0.0,
+          0.7933533402912352
+        ],
+        "normal": [
+          0.9659258262890683,
+          0.0,
+          0.25881904510252074
+        ],
+        "initial_root_pitch_deg": -23.999999999999996,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.001963847623438178,
+            "torso_link"
+          ],
+          [
+            0.002160492830565657,
+            "logo_link"
+          ],
+          [
+            0.02277785912947075,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.022777874278200258,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.07827334831064403,
+            "pelvis"
+          ],
+          [
+            0.08977129098025889,
+            "left_hip_pitch_link"
+          ],
+          [
+            0.08977129098025889,
+            "right_hip_pitch_link"
+          ],
+          [
+            0.09122807569521585,
+            "left_shoulder_roll_link"
+          ]
+        ]
+      },
+      "valid": true,
+      "steps": 1000,
+      "good_fraction": 1.0,
+      "final_hold_seconds": 20.0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 2.0,
+        "effort_cost": -0.006874992977827787,
+        "failure_cost": -0.0,
+        "normalized_torque_squared": 0.006874992977827787,
+        "all_joint_rms_Nm": 4.969834804534912,
+        "absolute_mechanical_power_W": 1.7983558177947998,
+        "rest_normal_load_bw": 0.22550274431705475,
+        "rest_vertical_load_bw": 0.031418342143297195,
+        "maximum_friction_utilization": 0.39297544956207275,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 1.0,
+        "wrong_force_N": 0.0,
+        "peak_force_N": 71.35820007324219,
+        "max_slip_m_s": 0.00874616950750351,
+        "foot_load_bw": 0.9689137935638428,
+        "torso_load_bw": 0.22550274431705475,
+        "root_height_m": 0.5667030215263367,
+        "tilt_deg": 24.541223526000977
+      }
+    },
+    {
+      "case": 17,
+      "geometry": {
+        "case": 17,
+        "label": "lean_k1.0_tilt-24.0_surface90.0",
+        "kind": "lean",
+        "pitch_deg": 90.0,
+        "depth": 0.48,
+        "width": 0.85,
+        "height": 0.6215267912432528,
+        "x": -0.4347598293665072,
+        "y": 0.0,
+        "yaw": 0.0,
+        "family": "slab",
+        "top_center": [
+          -0.4347598293665072,
+          0.0,
+          0.6215267912432528
+        ],
+        "rotation_xyzw": [
+          0.0,
+          0.7071067811865475,
+          0.0,
+          0.7071067811865477
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          2.220446049250313e-16
+        ],
+        "initial_root_pitch_deg": -23.999999999999996,
+        "initial_forbidden_penetrations": [],
+        "nearest_bodies": [
+          [
+            0.0018777243278214,
+            "head_link"
+          ],
+          [
+            0.0018791631207020145,
+            "torso_link"
+          ],
+          [
+            0.011953890755304156,
+            "logo_link"
+          ],
+          [
+            0.026137644124720073,
+            "left_shoulder_pitch_link"
+          ],
+          [
+            0.026137661405154267,
+            "right_shoulder_pitch_link"
+          ],
+          [
+            0.10266963165146568,
+            "left_shoulder_roll_link"
+          ],
+          [
+            0.10266963165146568,
+            "right_shoulder_roll_link"
+          ],
+          [
+            0.13315893580451924,
+            "right_shoulder_yaw_link"
+          ]
+        ]
+      },
+      "valid": false,
+      "steps": 1000,
+      "good_fraction": 0.0,
+      "final_hold_seconds": 0.0,
+      "failures": {
+        "fall": false,
+        "forbidden": true,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      },
+      "final_metrics": {
+        "stable_hold": 0.0,
+        "effort_cost": -0.0,
+        "failure_cost": -5.0,
+        "normalized_torque_squared": 0.007858600467443466,
+        "all_joint_rms_Nm": 4.987211227416992,
+        "absolute_mechanical_power_W": 1.8581675291061401,
+        "rest_normal_load_bw": 0.0,
+        "rest_vertical_load_bw": 0.0,
+        "maximum_friction_utilization": 0.3552561402320862,
+        "contacts_legal": 1.0,
+        "traction_ok": 1.0,
+        "no_slip": 1.0,
+        "good": 0.0,
+        "wrong_force_N": 62.132057189941406,
+        "peak_force_N": 0.0,
+        "max_slip_m_s": 0.008161282166838646,
+        "foot_load_bw": 0.9829481840133667,
+        "torso_load_bw": 0.0,
+        "root_height_m": 0.56954425573349,
+        "tilt_deg": 23.51181411743164
+      }
+    }
+  ],
+  "joint_names": [
+    "left_hip_pitch_joint",
+    "right_hip_pitch_joint",
+    "torso_joint",
+    "left_hip_roll_joint",
+    "right_hip_roll_joint",
+    "left_shoulder_pitch_joint",
+    "right_shoulder_pitch_joint",
+    "left_hip_yaw_joint",
+    "right_hip_yaw_joint",
+    "left_shoulder_roll_joint",
+    "right_shoulder_roll_joint",
+    "left_knee_joint",
+    "right_knee_joint",
+    "left_shoulder_yaw_joint",
+    "right_shoulder_yaw_joint",
+    "left_ankle_pitch_joint",
+    "right_ankle_pitch_joint",
+    "left_elbow_pitch_joint",
+    "right_elbow_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_ankle_roll_joint",
+    "left_elbow_roll_joint",
+    "right_elbow_roll_joint",
+    "left_five_joint",
+    "left_three_joint",
+    "left_zero_joint",
+    "right_five_joint",
+    "right_three_joint",
+    "right_zero_joint",
+    "left_six_joint",
+    "left_four_joint",
+    "left_one_joint",
+    "right_six_joint",
+    "right_four_joint",
+    "right_one_joint",
+    "left_two_joint",
+    "right_two_joint"
+  ],
+  "body_names": [
+    "pelvis",
+    "left_hip_pitch_link",
+    "pelvis_contour_link",
+    "right_hip_pitch_link",
+    "torso_link",
+    "left_hip_roll_link",
+    "right_hip_roll_link",
+    "head_link",
+    "imu_link",
+    "left_shoulder_pitch_link",
+    "logo_link",
+    "right_shoulder_pitch_link",
+    "left_hip_yaw_link",
+    "right_hip_yaw_link",
+    "left_shoulder_roll_link",
+    "right_shoulder_roll_link",
+    "left_knee_link",
+    "right_knee_link",
+    "left_shoulder_yaw_link",
+    "right_shoulder_yaw_link",
+    "left_ankle_pitch_link",
+    "right_ankle_pitch_link",
+    "left_elbow_pitch_link",
+    "right_elbow_pitch_link",
+    "left_ankle_roll_link",
+    "right_ankle_roll_link",
+    "left_elbow_roll_link",
+    "right_elbow_roll_link",
+    "left_palm_link",
+    "right_palm_link",
+    "left_five_link",
+    "left_three_link",
+    "left_zero_link",
+    "right_five_link",
+    "right_three_link",
+    "right_zero_link",
+    "left_six_link",
+    "left_four_link",
+    "left_one_link",
+    "right_six_link",
+    "right_four_link",
+    "right_one_link",
+    "left_two_link",
+    "right_two_link"
+  ],
+  "origins": [
+    [
+      6.0,
+      -4.5,
+      0.0
+    ],
+    [
+      6.0,
+      -1.5,
+      0.0
+    ],
+    [
+      6.0,
+      1.5,
+      0.0
+    ],
+    [
+      6.0,
+      4.5,
+      0.0
+    ],
+    [
+      3.0,
+      -4.5,
+      0.0
+    ],
+    [
+      3.0,
+      -1.5,
+      0.0
+    ],
+    [
+      3.0,
+      1.5,
+      0.0
+    ],
+    [
+      3.0,
+      4.5,
+      0.0
+    ],
+    [
+      -0.0,
+      -4.5,
+      0.0
+    ],
+    [
+      -0.0,
+      -1.5,
+      0.0
+    ],
+    [
+      -0.0,
+      1.5,
+      0.0
+    ],
+    [
+      -0.0,
+      4.5,
+      0.0
+    ],
+    [
+      -3.0,
+      -4.5,
+      0.0
+    ],
+    [
+      -3.0,
+      -1.5,
+      0.0
+    ],
+    [
+      -3.0,
+      1.5,
+      0.0
+    ],
+    [
+      -3.0,
+      4.5,
+      0.0
+    ],
+    [
+      -6.0,
+      -4.5,
+      0.0
+    ],
+    [
+      -6.0,
+      -1.5,
+      0.0
+    ]
+  ]
+}

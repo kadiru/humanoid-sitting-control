@@ -1,0 +1,128 @@
+{
+  "utc": "2026-10-18T06:40:25.892141+00:00",
+  "passed": true,
+  "scope": "Independent full-path geometry, finite-work, COM/support and original-primal replay for394, plus independently reconstructed mixed-integer linear witness. V2 reports a failed witness threshold rather than assuming feasibility; same1e-7 bound. NPZ arrays cached once without arithmetic changes. Original failed source/log retained. No physical admission.",
+  "geometry": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/integer_restoration_path_394/results.json",
+      "parameters": [
+        0.13249248997109972,
+        0.4351349021283094,
+        -0.1883883483030849,
+        0.023619600000000004
+      ],
+      "length_m": 0.13999999999993848,
+      "knots": 115,
+      "max_replay_error": 1.6653345369377348e-16,
+      "failed_knots": [],
+      "pose_schedule_metric_passed": false,
+      "min_clearance_mm": 3.731078343242842,
+      "max_foot_position_error_mm": 0.8411018361374456,
+      "max_foot_orientation_error_deg": 0.49854366657171784,
+      "nominal_pose_schedule_at_0_15_rad_s": 13.974806620596603,
+      "min_actual_swing_sole_height_m": 0.013000000000093326
+    }
+  ],
+  "command": {
+    "nodes": 115,
+    "max_virtual_work_error_Nm": 6.797475471387315e-09,
+    "max_equilibrium_residual": 1.6443443828784154e-14,
+    "minimum_command_margin_rad": 0.03004718749086907,
+    "maximum_effort_utilization": 0.817531349781575,
+    "force_allocation_failures": [],
+    "model_command_passed": true,
+    "specific_command_time_s": 11.916723022650736,
+    "command_schedule_passed": true,
+    "initial_command_exact": true,
+    "all_fixed_commands_exact": true
+  },
+  "linear_restoration": {
+    "matrix_replay_exact": true,
+    "rows": 21693,
+    "columns": 901,
+    "solver_status": {
+      "success": true,
+      "status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "solver_wall_s": 0.916172110941261,
+      "mip_node_count": 1,
+      "mip_gap": 0.0,
+      "mip_dual_bound": 0.37564254525607166,
+      "objective": 0.37564254525607166,
+      "candidate_available": true,
+      "solver_calls": 1,
+      "nonlinear_optimizer_calls": 0
+    },
+    "independent_global_optimality_or_infeasibility_certificate": false,
+    "minimum_linear_residual": -9.5367431640625e-07,
+    "minimum_bound_residual": 0.0,
+    "integer_decode_error": 0.0,
+    "normalized_step_radius": 0.37564254525607166,
+    "all_linear_constraints_numerically_passed": false,
+    "unchanged_linear_numerical_bound": 1e-07,
+    "lower_rows_below_bound": [
+      11613
+    ],
+    "upper_rows_below_bound": [],
+    "original_audit_assumed_candidate_feasibility_and_failed": true
+  },
+  "unslacked_final_constraints": {
+    "slack": 0.0,
+    "scaled_original_violation": 0.021549225961612316,
+    "scaled_hard_violation": 0.021549225961612316,
+    "scaled_soft_violation": 0.009913906202117071,
+    "minimum_augmented_inequality": -0.021549225961612316,
+    "augmented_rows": 41491,
+    "all_original_rows_replayed": 19760,
+    "additional_support_rows": 524,
+    "all_explicit_clock_target_rows": 21600,
+    "all_clock_rate_final_rows": 21600,
+    "removed_contact_constant_rows": 392,
+    "removed_exact_integer_time_rows": 1,
+    "original_numerical_feasibility": false,
+    "hard_hover_equality": true,
+    "positive_slack_is_not_admission": true
+  },
+  "primal": {
+    "equalities": 1,
+    "inequalities": 41884,
+    "max_equation_replay_error": 4.6259247517624336e-15,
+    "max_inequality_replay_error": 7.105427357601002e-15,
+    "max_local_replay_error": 4.718447854656915e-16,
+    "maximum_kinematic_residual": 9.192646643896296e-14,
+    "minimum_dependent_planning_bound": 5.036012069858931e-07,
+    "numerical_constraints_passed": false,
+    "minimum_inequality": -2.2306288954763413e-05
+  },
+  "timing": {
+    "event_budgets": [
+      94,
+      193,
+      245,
+      101,
+      17
+    ],
+    "clock_replay_error": 7.105427357601002e-15,
+    "clock_overlap_error": 2.658463726934457e-16,
+    "clock_original_rate_minimum": -4.073088298391439e-06,
+    "clock_original_target_minimum": -8.788016701899437e-06,
+    "integer_movement_ticks": 650,
+    "minimum_synthetic_quiet_ticks": 25,
+    "integer_duration_s": 13.5,
+    "original_minimum_inequality": -2.0931508729693862e-05,
+    "new_construction_minimum_inequality": -2.2306288954763413e-05,
+    "continuous_guarded_s": 13.5,
+    "raw_target_minimum_headroom_rad": -9.900377804433758e-06,
+    "hover_gap_m": 0.012000756380378147,
+    "actual_float32_schedule": false,
+    "quiet_guard_exercised": false
+  },
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "physical_admission": false,
+  "repair_complete": false,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/integer_restoration_path_394/results.json": "e960d1bea7c6ad6b6794abad4fa53d0cb236f17a7276b12921489257a9505a57",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_integer_path_v2_395.py": "c7ad7f2d4228af7ea9478b5dbbc04308b4602e21cf9782ac553ae1df499a86a3"
+  }
+}

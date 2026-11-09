@@ -1,0 +1,76 @@
+{
+  "utc": "2026-10-18T20:09:28.795016+00:00",
+  "passed": true,
+  "scope": "Independent partial-residual map assembly and inherited subblock proof audit.\nNo inverse solve, repeated directed product/integer fixture, LP, map or model.\n",
+  "local_zero_kinematic_auxiliary_block_exact": true,
+  "inherited_R_norm_upper": 2.003691821005633e-14,
+  "inherited_proof": "K*R-I is the kin/kin principal submatrix of certified LQ-I because L[kin,aux]=0 exactly; selected full-row outward bounds imply norm<1. No old products or inverse repeated.",
+  "coordinate_transform_independent_rebuild_error": 0.0,
+  "native_auxiliary_identity_exact": true,
+  "new_shift_exact": true,
+  "checks": {
+    "feature_basis": {
+      "error": 0.0,
+      "rows": 105750,
+      "new_nnz": 531351,
+      "no_thresholding": true
+    },
+    "all_rows_chain": {
+      "error": 0.0,
+      "rows": 331888,
+      "new_nnz": 1468054,
+      "no_thresholding": true
+    },
+    "consistency_chain": {
+      "error": 0.0,
+      "rows": 68250,
+      "new_nnz": 1580103,
+      "no_thresholding": true
+    },
+    "interval_matrix": {
+      "error": 0.0,
+      "rows": 92267,
+      "new_nnz": 579763,
+      "no_thresholding": true
+    },
+    "normal_drop_chain": {
+      "error": 0.0,
+      "rows": 206,
+      "new_nnz": 410,
+      "no_thresholding": true
+    },
+    "primary": {
+      "error": 0.0,
+      "rhs_error": 0.0,
+      "shape": [
+        652529,
+        78791
+      ],
+      "new_nnz": 6099134,
+      "cost_bounds_equalities_exact": true
+    },
+    "witness": {
+      "error": 0.0,
+      "rhs_error": 0.0,
+      "shape": [
+        837063,
+        78791
+      ],
+      "new_nnz": 7131846,
+      "cost_bounds_equalities_exact": true
+    }
+  },
+  "literal_kinematic_identity_defect_retained": 4.8009447979613373e-14,
+  "literal_auxiliary_consistency_shift_retained": 4.823509099780236e-12,
+  "all_original_rows_and_both_consistency_signs_retained": true,
+  "original_witness_and_exact_interval_checks_still_required": true,
+  "solver_speedup_demonstrated": false,
+  "actual_model_calls": 0,
+  "local_inverse_calls": 0,
+  "directed_inverse_product_proof_calls": 0,
+  "integer_incidence_proof_repeats": 0,
+  "lp_calls": 0,
+  "finite_maps": 0,
+  "new_complete_path": false,
+  "physical_admission": false
+}

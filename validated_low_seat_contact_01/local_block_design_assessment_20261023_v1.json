@@ -1,0 +1,81 @@
+{
+  "utc": "2026-10-23T03:43:36Z",
+  "classification": "Source-only structural design assessment; no scientific array calculation or launch",
+  "local_only": true,
+  "remote_certificate": false,
+  "candidate": "State-local block elimination inside an original-system Newton linear solve",
+  "status": "Not selected as a scientific method; complete algorithm, net advantage and resource/return audit remain unresolved",
+  "inherits": {
+    "current_checkpoint_before_edit_sha256": "60f4700adbba73e7051590d7d58425b4b01ec898a2d3610d81abc46daa2ecbe5",
+    "closed_cycle_sha256": "9652f7bbccb78fcfd8939f3a02ed025249ec5594791194a7afada9a029d745eb",
+    "previous_design": "ankle_adjoint_design_assessment_20261022_v1.json",
+    "previous_design_sha256": "9f39e0fb0f74bd2be3e29c3b20082e43e4c8f2b682ddd5c076b767077c7c3819"
+  },
+  "fixed_partition_from_source": {
+    "private_feature_indices": [0, 1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 72, 73, 74],
+    "private_extra_offsets": [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49],
+    "private_base_columns": "Exactly the current layout columns whose kind is load, grouped by their recorded state. No pressure mode is discarded.",
+    "retained_columns": "Every f extra, all 16 command extras, all orientation/gap/normal_drop base columns, and the original scalar. The existing normal-drop chart stays intact.",
+    "column_association": "For active-state ordinal a, extra offset j maps to native column 10540+50*a+j. Load columns retain their current native IDs. No alternative partition or basis search is proposed."
+  },
+  "source_associations": [
+    "490 load() maps the 50 EXTRA coordinates at each active state directly to unit feature rows. 466 assigns every conserved-load column only to its own state, including its pivot load.",
+    "446 old_rate, old_ramp, old_window, mesh_rate, clock_target and mesh_window families couple command features 39..54 across time. Those features are retained.",
+    "446 old_phase and mesh_phase couple features 2 and 3 across time; both are retained. Gap order/descent families use feature 71 and hence only retained gap/drop columns.",
+    "446 planning, effort, support, force and old_coordinate families use one state. All current consistency rows in builder.py use one state's 75 feature rows; their private columns therefore belong to at most that one state. Normal-drop incidence may be nonlocal but is entirely retained.",
+    "Current normalized interval rows come from individual feature rows or the normal-drop chain. A private extra or a nonpivot load has a nonzero singleton trust row. This supports a real-arithmetic positive-definiteness argument with strictly positive row weights; it is not a numerical conditioning certificate."
+  ],
+  "conditional_linear_algebra": [
+    "For an eligible original-system Newton equation K*delta=g with K=M^T*W*M plus applicable diagonal bound terms and strictly positive diagonal W, order private blocks P_s before retained variables Q. The source incidence implies K_PP=diag(K_s): no source inequality has private columns from two states.",
+    "If each K_s is nonsingular, form S=K_QQ-sum_s K_Qs*K_s^-1*K_sQ and r=g_Q-sum_s K_Qs*K_s^-1*g_s. Solve S*delta_Q=r and recover delta_s=K_s^-1*(g_s-K_sQ*delta_Q). These equations are an exact real block identity; no inverse or matrix has been calculated here.",
+    "The original LP rows, right-hand sides, primal coordinates, objective and dual coordinates would remain unchanged. This does not establish LP feasibility, an optimum, a new zero face, a finite point, or authorization to use a nonzero-epigraph exception.",
+    "A future finite implementation would have to check its linear-system residual and every required final original primal/dual/KKT and interval condition. The block identity alone cannot admit a returned point or restore a consumed waiver."
+  ],
+  "symbolic_resource_accounting": {
+    "active_states": 1365,
+    "private_direct_extras_per_state": 33,
+    "maximum_private_load_columns_per_state": 7,
+    "maximum_local_block_order": 40,
+    "private_direct_extras_total": 45045,
+    "private_total_formula": "45045 + L, where L is the number of current native load columns; L has not been counted in a new saved-data calculation.",
+    "retained_order_formula": "78791 - (45045 + L), at most 33746, before any handling of an explicit scalar equality required by the chosen legal formulation.",
+    "local_dense_block_storage_bound_bytes": 17472000,
+    "storage_bound_scope": "Only one binary64 copy of 1365 dense 40x40 private blocks; excludes factors, cross blocks, all original arrays, retained fill, solver state, return and independent audit.",
+    "not_yet_bounded": [
+      "Actual retained fill and factor work, including the untouched 205-column normal-drop chart and all temporal command/window edges",
+      "Weighted assembly, local factor/solve and Schur update work per iteration and total iteration work",
+      "Strict initialization or infeasible-start mechanism compatible with the still-governing formulation and optimality requirements",
+      "Finite arithmetic stability, singularity/underflow handling without guard or tolerance relaxation",
+      "Complete imports, hashes, input association proof, original-system return checks, independent audit, memory and total 45-second accounting"
+    ],
+    "comparison_limit": "An existing sparse factorization may already exploit the same local elimination. The smaller explicitly retained system is not evidence of net speedup over the terminal solver. No measured or certified comparative savings are claimed."
+  },
+  "decision": "Keep as one source-level structural observation, not a selected launch or a reason to retry a solver. Proceed further only if a concrete algorithm establishes an advantage beyond ordinary factor ordering and supplies complete initialization, resource, finite-return and independent-audit specifications under all remaining gates. Do not run a generic incidence/eligibility scan or a benchmark to rescue this observation.",
+  "source_sha256": {
+    "rl_support_work/scripts/low_seat_clock_rows_v2_446.py": "9502e1e4fbcbec6ce440373e24839727c10635f08c1666ebf1e70ab841fc1f9a",
+    "rl_support_work/scripts/low_seat_lifted_feasibility_490.py": "04d675594cc2c72a08a1acf12a3d189aebf854f1857c2adbcc96d1a8f3cf0150",
+    "rl_support_work/scripts/changed_state_primary_20261020_v1/builder.py": "076568b6abeeab437df567d3616424272d46b121fd61acb1a3722e37d343fa76",
+    "rl_support_work/scripts/prepare_low_seat_gap_coordinates_v3_466.py": "baef5b402728ed3f70a46664ae276d1d106b9f899c40ad50ad66cbc2701d1f14"
+  },
+  "evidence": {
+    "new_source_read": "a044cc",
+    "new_source_hash_check": "6e8976",
+    "worker_check": "dc2df1",
+    "worker_check_utc": "2026-10-23T03:36:12.050319+00:00",
+    "workers": []
+  },
+  "scientific_execution": {
+    "saved_coefficient_arithmetic": 0,
+    "new_matrices_or_factorizations": 0,
+    "solver_calls": 0,
+    "model_calls": 0,
+    "physical_trials": 0,
+    "PPO_updates": 0,
+    "old_proofs_or_rejected_vectors_reused": false
+  },
+  "physical_status": "64/72 clean; all64 protected;0/8 repaired; main PPO unstarted; fresh holdout closed",
+  "cycle_remains_closed": true,
+  "new_exception_or_approval_requested": false,
+  "overall_task": "ACTIVE",
+  "automation": "ACTIVE"
+}

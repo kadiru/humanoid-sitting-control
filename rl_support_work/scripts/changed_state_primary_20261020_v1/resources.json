@@ -1,0 +1,94 @@
+{
+  "scope": "ONE cold primary zero-face solve at a genuinely changed, accepted nonlinear iterate. No prior timed-out input or internal iterate reused.",
+  "total_seconds": 45,
+  "clock": "Shared supervisor origin before imports, hashes, loading, complete new-state assembly, independent input proof, cold backend, all original point gates, predicted ceiling and independent return audit. No reset or moved preparation. Hard group termination/reaping; a late zero exit is rejected.",
+  "address_space_bytes": 42949672960,
+  "concurrent_scientific_workers": 1,
+  "initialization": {
+    "features": "finite_model_step_20261020_v1/mapped.npz",
+    "actualY": "finite_model_step_20261020_v1/actual.npz:Y",
+    "J": "finite_model_step_20261020_v1/accepted_J.npz:J",
+    "drops": "finite_model_step_20261020_v1/map.json:drop_state",
+    "trust": 1,
+    "accepted_ratio": 0.7600028470906671,
+    "merit": 0.12270472005373632,
+    "cold": true,
+    "x0_basis_restart": false
+  },
+  "equations": [
+    "New C=(blockdiag([-J_active,output selectors])@P)/sigma; signed h from saved new consistency/sigma. Static A=M@P/scale and H=[P_controls;P_varying;N] inherited by exact source/input identity, not old state-specific reductions.",
+    "Original full primary min t: -Akeep*d-soft*t<=rkeep-guard; +/-C*d-t<=-/+h; +/-Hnorm*d<=closed bounds; original zero E and t>=0. All original controls unbounded in native coordinates except t<=max(1,2mu), with complete closed finite feature/control/drop rows retained.",
+    "New native zero face keeps all other full rows, replaces68250 signed consistency pairs by C*d=-h and adds t=0. Whole LP equivalence NOT claimed; this is exactly its zero face. No old quotient/box/coupled/graph/inner encoding applied.",
+    "Every backend coordinate remains bitwise unchanged; scalar must already be exactly0. Full and native primal/equality/bounds/stationarity/absolute-gap/finite/sign/zero-at-infinity gates<=1e-9. Reuse573 analytic lower_t=1, all other duals0, whose applicability is separately checked for both inputs.",
+    "Primary point never decoded. Compute actual theta=max(0,-(r+Ad)_soft,abs(h+Cd)); save actual(mu+theta)/2 ceiling only after all gates. Interior, positive eta, finite return, new model and physical gates remain separate future work."
+  ],
+  "input_associations": {
+    "full_variables": 78791,
+    "direction_variables": 78790,
+    "scalar_original_column": 78790,
+    "full_rows": 652529,
+    "full_zero_equalities": 1366,
+    "kept_original_rows": 331495,
+    "all_original_rows": 331888,
+    "consistency_positive_rows": [
+      331495,
+      399745
+    ],
+    "consistency_negative_rows": [
+      399745,
+      467995
+    ],
+    "closed_interval_rows": [
+      467995,
+      652529
+    ],
+    "interval_rows": 92267,
+    "native_inequalities": 516029,
+    "native_equalities": 69617,
+    "old_state_reductions": 0
+  },
+  "coefficient_bounds": {
+    "P_nnz": 107105,
+    "A_nnz": 552084,
+    "H_nnz": 125867,
+    "C_nnz_upper": 5462355,
+    "full_nnz_upper": 12196523,
+    "native_inequality_nnz_upper": 1135313,
+    "native_equality_nnz_upper": 5462356,
+    "construction_sparse_products_per_implementation": "One new block local-C product; no static A/E coefficient proof replay. Independent implementation repeats new C and interval construction as required.",
+    "new_interval_fraction_bits_upper": 2200,
+    "rational_comparison_products_bits_upper": 4400,
+    "rational_point_or_graph_lift_products": 0,
+    "new_interval_bound_objects_per_implementation": 461335,
+    "reason": "New interval endpoints are sums/differences of finite binary64s and U-scaled dyadics; no rational sparse matrix generation. Sizes bounded before frozen execution."
+  },
+  "storage": {
+    "output_bound_bytes": 1073741824,
+    "working_memory_hard_limit_bytes": 42949672960,
+    "runtime_file_bindings": 2362,
+    "source_metadata_header_read": "cf08a0 actual0; no matrix arithmetic",
+    "nnz_limits_are_conservative_not_performance_forecasts": true
+  },
+  "solver_options": {
+    "method": "highs-ipm",
+    "presolve": true,
+    "maxiter": 4096,
+    "primal_feasibility_tolerance": 1e-09,
+    "dual_feasibility_tolerance": 1e-09,
+    "ipm_optimality_tolerance": 1e-09,
+    "time_limit": "only remaining portion of shared45s, passed once"
+  },
+  "terminal_rule": "One attempt. Missing/nonfinite/infeasible/uncertified point or deadline closes this new input; no retry, trust change, later scalar face or backend switch.",
+  "success_test": "Within shared45s complete new-input proof, backend success with unmodified78791 vector/scalar0, full/native original gates and independent return audit. No finite motion or physical success is inferred.",
+  "cost_savings": "No state-specific dense rational graph construction/lift, no previous point or old coefficient proof repeats. No promised solve time or convergence benefit; full native coordinates retained.",
+  "counts": {
+    "cold_primary_calls_max": 1,
+    "interior_calls": 0,
+    "finite_maps": 0,
+    "model_calls": 0,
+    "J_calls": 0,
+    "simulation_calls": 0,
+    "PPO_updates": 0,
+    "holdout_trials": 0
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "utc": "2026-10-21T05:44:50.620407+00:00",
+  "classification": "Audited finite encoding and accepted nonlinear research iterate; actual numerical motion admission FAILED",
+  "finite_map_passed": true,
+  "independent_audit_passed": true,
+  "trial_merit_accepted": true,
+  "actual_numerical_admission_gate": false,
+  "merit_before": 0.19791129319207476,
+  "merit_after": 0.12270472005373632,
+  "fractional_merit_reduction": 0.3800014234930482,
+  "actual_to_predicted_ratio": 0.7600028470906671,
+  "model_failures": {
+    "actual_all_rows_min": -328764.5146446765,
+    "actual_hard_min": -52.5510503481505,
+    "actual_hover_normalized": 0.17425646560237218,
+    "consistency_by_unit": {
+      "feet_m": 0.007750459694340003,
+      "orientation_0_1_vee": 0.004718493199843856,
+      "moment_BW_m": 0.004799139998677218,
+      "command_rad": 0.026618538861372693,
+      "torque_Nm": 2.6323219959935997,
+      "gap_m": 0.0024061309606221437,
+      "COM_m": 0.004799147381829655
+    },
+    "consistency_pass": false
+  },
+  "counts": {
+    "finite_maps": 1,
+    "value_requests": 1,
+    "value_state_records": 1365,
+    "jacobian_requests": 1,
+    "jacobian_state_records": 1365
+  },
+  "time_seconds": 8.269158354960382,
+  "total_time_cap_seconds": 45,
+  "stages": [
+    {
+      "stage": "producer",
+      "actual_exit": 0,
+      "elapsed_s": 6.706507537979633,
+      "total_elapsed_s": 6.739405094878748,
+      "completed_within_deadline": true,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "overshoot_s": 0.0,
+      "peak_rss_bytes": 1173258240,
+      "worker_pid": 1790316,
+      "supervisor_error": null
+    },
+    {
+      "stage": "audit",
+      "actual_exit": 0,
+      "elapsed_s": 1.5291045890189707,
+      "total_elapsed_s": 8.268879828974605,
+      "completed_within_deadline": true,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "overshoot_s": 0.0,
+      "peak_rss_bytes": 295456768,
+      "worker_pid": 1790384,
+      "supervisor_error": null
+    }
+  ],
+  "peak_rss_bytes": 1173258240,
+  "solvers": 0,
+  "retries": 0,
+  "physical_trials": 0,
+  "PPO_updates": 0,
+  "holdout_trials": 0,
+  "contract_sha256": "5067939aa9a8dc1c40946815fb1a221af8de2e3dd169545bfeab0ed6a8b262cd",
+  "scientific_outer_actual_exit": 0,
+  "scientific_outer_exit_evidence": "Mac session77766 final tool5130c2",
+  "initial_exact_certificate_inherited": true,
+  "old_proofs_replayed": false,
+  "workers": [],
+  "old_evidence_preserved": {
+    "/home/kadir/humanoid-sitting/docs/LOW_SEAT_CONTACT_PROTOCOL.md": "0df7fa154b64c99f7c992c6a6317e87e62adac7ab31410daa140f742d01a4415",
+    "/home/kadir/humanoid-sitting/docs/LOW_SEAT_CONTACT_STATUS.md": "7c2c8fd221ca7d021f7ffdf582665fe68fd0523d9b34c8671cb3812bfd24b7c6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/interior_diagnostic_20261020_v1/summary.json": "71a90392b9b5319792b444e8dffde554715f150babe878af2d041b9a3936d9ab"
+  },
+  "finite_output_sha256": {
+    "decision.json": "ab20bcf2bea951bd18237552637474a0f0378e647366f2157e15a4f1c5a7c781",
+    "actual.npz": "992a1602a85b55a91c11b65695c1fea89047c6c6d93712b041b0e709b6bde770",
+    "accepted_J.npz": "9b70ecd8bc0620cf466878707bff63506971cf97f6f7873945f7ad71aed18e40",
+    "map.json": "02173c8583b7bbf181146b763c0ab20021afbf375c0b3c9aa453d58835ffd511",
+    "mapped.npz": "e6d44ae6b99322663889f1136106c3d64a44a42f5d879e2dd004ed7dc2ea1262"
+  },
+  "physical_state": {
+    "clean": "64/72",
+    "stable": 70,
+    "slipping": 8,
+    "housing_contact": 2,
+    "categories_overlap": true,
+    "all64_protected": true,
+    "all8_unresolved": true,
+    "main_PPO": "unstarted",
+    "fresh_holdout": "closed"
+  },
+  "next_boundary": "Changed X/Y/J and encoded drops are a research iterate, not an admitted motion. Any next calculation needs freshly frozen complete full-original assembly/input proof and independent audit under original budgets. Old state-specific condensed graphs/certificates are not reusable on this changed state. Both enlarged diagnostic approvals are consumed; no further budget exception is approved.",
+  "remaining_gates": "All actual signed rows, seven unit closures, normal/hover, full geometry/work, float32/filter/runtime/both placements,72 retention,then PPO/holdout/video remain mandatory.",
+  "historical_seal": 601,
+  "report": 600,
+  "video": 307,
+  "repair_complete": false,
+  "automation": "ACTIVE"
+}

@@ -1,0 +1,51 @@
+{
+  "scope": "Maintain supported rest on level rigid surfaces; no approach/sit transition or leaning claim",
+  "seeds": [
+    52911,
+    52917
+  ],
+  "arms": [
+    "stability",
+    "effort"
+  ],
+  "updates": 128,
+  "steps_per_update": 64,
+  "num_envs": 16,
+  "transitions_per_run": 131072,
+  "total_transitions": 524288,
+  "training_heights_m": [
+    0.25,
+    0.3,
+    0.35,
+    0.4
+  ],
+  "heldout_heights_m": [
+    0.275,
+    0.325,
+    0.375
+  ],
+  "effort_reference": 0.005249470561742783,
+  "calibration": "/data/humanoid-sitting-perception/resting_fixed_dev01/results.json",
+  "reward": "2 per qualifying second; effort arm subtracts E/(E+reference) per qualifying second; -5 once on physical failure",
+  "E": "mean over ALL joints of (applied torque / existing peak effort limit)^2; not electrical energy",
+  "gamma": 0.998,
+  "lam": 0.97,
+  "learning_rate": 0.0001,
+  "epochs": 3,
+  "minibatches": 4,
+  "entropy": 0.001,
+  "initial_std": 0.15,
+  "action": "23 joint-target increments capped 0.01 rad per 20ms; joint/effort limits retained; no timed nominal controller",
+  "reset": "Full root/joint position and velocity plus held command; .5s ordinary-tick settling with zero reward during resets; warmup transitions separately counted",
+  "runtime": "324 sensor-only channels: three frames of q,qd,torque,gravity,gyro,previous command and observed local plane; same critic inputs",
+  "evaluation": "28 unique held-out starts:16 at training heights and12 at intermediate heights; plus same12 with +/-0.06m/s base-velocity impulse at5s;20s per trial; all four final models and fixed PD",
+  "success": "no latched failure,>=95% qualifying rest ticks, final2s continuously qualifying; integer counters",
+  "startup_parity_absolute_tolerance": 1e-06,
+  "limitations": [
+    "Two training seeds; perturbation cases repeat the intermediate-height placements",
+    "Ideal simulated encoder/IMU/torque equivalents; depth is measured, no runtime simulator geometry",
+    "Finite rigid floor blocks permit measured friction; top z=0, materials .8/.6; no inclined or compliant surfaces",
+    "Highest initial posture has light seat support and substantial foot load; report load alongside effort"
+  ],
+  "no_automatic_promotion": true
+}

@@ -1,0 +1,60 @@
+{
+  "utc": "2026-10-22T23:34:09.568595+00:00",
+  "status": "CYCLE_TERMINATED_AT_FIRST_FAILED_STAGE_B",
+  "authorization": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/feasibility_research_cycle_authorization_20261022_v1.json",
+  "proposal_sha256": "7e5f7d1a981178f1349add0b254db90fb1b53e85cd2f4cf93d8b69b53f3e9af6",
+  "stages_launched": [
+    "A",
+    "B"
+  ],
+  "stages_not_launched": {
+    "C": "B failed",
+    "D": "B failed"
+  },
+  "all_cycle_execution_authority_consumed": true,
+  "remaining_stage_allowances_reusable": false,
+  "stage_A": {
+    "summary": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/ray_attribution_20261022_v1/summary.json",
+    "summary_sha256": "526ba1bad6586135b2324a4269d12f21e67085d450bf77186988b1358539a426",
+    "passed": true,
+    "limiting_constraint": "right ankle roll planning lower bound at13.14s; unique original row92148/full91755",
+    "margin_rad": 2.5027317718251396e-10,
+    "alpha_upper_bound": 9.188606129720404e-08,
+    "phase_ordering_hypothesis_rejected": true
+  },
+  "stage_B": {
+    "summary": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/ankle_bound_construction_20261022_v1/summary.json",
+    "summary_sha256": "fd90af746c988d46d96e6a240e744774f77c071d5301ba1ef08564636e0db95c",
+    "passed": false,
+    "reason": "The certified step gives no improvement larger than the numerical test",
+    "alpha": 7.275957614183426e-12,
+    "predicted_epigraph_reduction": 4.46379044838352e-13,
+    "modeled_one_percent_test_reached": false,
+    "exact_primal_audit_executed": false,
+    "audit_scope": "Failure accounting only",
+    "new_limiting_row_identity": "not recorded; no replay authorized"
+  },
+  "total_scientific_wall_seconds": 8.594428682001308,
+  "maximum_per_stage_seconds": 45,
+  "maximum_per_worker_address_space_bytes": 42949672960,
+  "scientific_workers_after": [],
+  "no_retry": true,
+  "accepted_new_research_iterate": false,
+  "physical_progress": false,
+  "repair_complete": false,
+  "overall_task": "ACTIVE",
+  "automation": "ACTIVE",
+  "next_work": "Design only under remaining inherited rules: a genuinely new construction must handle original joint/phase/trajectory constraints jointly, offer a defensible complete witness/resource mechanism and preserve physical gates. No method is selected. Do not repeat these constructions, recover B missing row by a new scan, reuse B raw, or start C/D. No automatic new exception chain.",
+  "physical": {
+    "clean": 64,
+    "total": 72,
+    "stable": 70,
+    "slipping": 8,
+    "housing_contact": 2,
+    "failures_fixed": 0,
+    "all64protected": true,
+    "all8unresolved": true,
+    "main_PPO": "unstarted",
+    "fresh_holdout": "closed"
+  }
+}

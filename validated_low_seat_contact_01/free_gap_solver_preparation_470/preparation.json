@@ -1,0 +1,53 @@
+{
+  "utc": "2026-10-18T14:44:27.392613+00:00",
+  "scope": "Saved-matrix preparation for new free-gap JOINT LPs; NO root/optimizer/candidate.",
+  "passed": true,
+  "reference": "Original440 saved mechanics/J only. New target gaps are NOT yet lifted; this is LP assembly validation, not candidate feasibility.",
+  "predictor_shape": [
+    355719,
+    10541
+  ],
+  "corrector_shape": [
+    379531,
+    10541
+  ],
+  "homogeneous_equalities": 1366,
+  "independent_coordinates": 10540,
+  "full_control_bound_rows": 23812,
+  "dependent_f_bounds_retained": true,
+  "normal_drop_bound_rows": 412,
+  "all331888_final_rows_retained": true,
+  "all_buffers_retained": true,
+  "specification": {
+    "max_predictors": 24,
+    "max_corrections_per_predictor": 4,
+    "max_linear_programs": 120,
+    "lp_time_limit_s": 45.0,
+    "lp_method": "highs",
+    "lp_primal_dual_tolerance": 1e-09,
+    "independent_linear_bound": 1e-07,
+    "coordinate_domain_radius": 0.02,
+    "initial_trust_fraction": 1.0,
+    "minimum_trust_fraction": 0.03125,
+    "root_max_updates": 10,
+    "root_max_halvings": 9,
+    "root_absolute_tolerance": 1e-13,
+    "hover_numerical_bound": 1e-08,
+    "strict_inequality_bound": 0.0,
+    "predictor_guard": 9.5367431640625e-07,
+    "acceptance_ratio": 0.1,
+    "correction_radius_fraction": 0.25,
+    "max_consecutive_load_roundings": 120,
+    "seed": "Original440 plus newly encoded466/468 gap targets; first complete lift is NEW and may be infeasible.",
+    "budget_justification": "18 half-reductions from source440 merit to unchanged2^-20 guard plus6 bounded rejection opportunities; at most4 corrections each. This is a separate free-gap formulation, never an extension of462.",
+    "coordinate_domain": "Original11906 f/p/load +/- .02 box around440 unchanged; dependent f bounds explicit. New206 normal-drop bounds retain all original caps plus prepared root/roundoff guard. No extra gap or allocation sweep.",
+    "normal_drop_map": "Audited468 exact residual pivot with bounded joint rounding; no endpoint-sum accumulation.",
+    "equality_policy": "All original normal/hover primal rows still checked. Their analytic zero tangent rows impose homogeneous conservation, not restoration of admissible floating residuals.",
+    "physical_admission": false
+  },
+  "model_calls": 0,
+  "root_calls": 0,
+  "lp_calls": 0,
+  "new_complete_paths": 0,
+  "physical_admission": false
+}

@@ -1,0 +1,420 @@
+{
+  "primary_totals": {
+    "initial": 47,
+    "legacy": 44,
+    "gentle": 42
+  },
+  "paired_startup_equal": true,
+  "common_successes_all_three": {
+    "count": 36,
+    "means": {
+      "initial": {
+        "peak_force_N": 375.0619405110677,
+        "seated_leg_rms_Nm": 4.476692060629527,
+        "seated_foot_load_fraction": 0.31170839195450145,
+        "hold_s": 7.580554087956746
+      },
+      "legacy": {
+        "peak_force_N": 431.70328521728516,
+        "seated_leg_rms_Nm": 4.33905914094713,
+        "seated_foot_load_fraction": 0.2107733107275433,
+        "hold_s": 6.8711100750499305
+      },
+      "gentle": {
+        "peak_force_N": 404.4494692484538,
+        "seated_leg_rms_Nm": 4.879400935437944,
+        "seated_foot_load_fraction": 0.26042427702082527,
+        "hold_s": 6.94944370455212
+      }
+    }
+  },
+  "pairwise": {
+    "gentle_vs_initial": {
+      "common": 40,
+      "gained": 2,
+      "lost": 7,
+      "common_mean_differences": {
+        "peak_force_N": 32.73376884460449,
+        "seated_leg_rms_Nm": 0.523410040140152,
+        "seated_foot_load_fraction": -0.052170226164162156,
+        "hold_s": -0.7079991161823272
+      }
+    },
+    "gentle_vs_legacy": {
+      "common": 38,
+      "gained": 4,
+      "lost": 6,
+      "common_mean_differences": {
+        "peak_force_N": -31.309474342747738,
+        "seated_leg_rms_Nm": 0.617165766264263,
+        "seated_foot_load_fraction": 0.05024672338837072,
+        "hold_s": 0.10052657127380371
+      }
+    },
+    "legacy_vs_initial": {
+      "common": 41,
+      "gained": 3,
+      "lost": 6,
+      "common_mean_differences": {
+        "peak_force_N": 54.71225496617759,
+        "seated_leg_rms_Nm": -0.12686271202273486,
+        "seated_foot_load_fraction": -0.0973292069464195,
+        "hold_s": -0.625365303783882
+      }
+    }
+  },
+  "hold_roundoff": {
+    "reproduced_150_ticks_s": 2.999997854232788,
+    "original_test_passes": false,
+    "changed_cases": [
+      {
+        "bank": "novel",
+        "role": "gentle",
+        "case": 13,
+        "hold_s": 2.999997854232788,
+        "ticks": 150,
+        "original": false,
+        "tick_based": true
+      }
+    ],
+    "tick_based_totals": {
+      "initial": 47,
+      "legacy": 44,
+      "gentle": 43
+    }
+  },
+  "body_weight_from_export_N": 316.26387157291947,
+  "training": {
+    "legacy": {
+      "reward_totals": {
+        "approach": 1134.301741963923,
+        "support": 1652.6407531667503,
+        "hold": 2823.960000000001,
+        "seat_load_share": 682.8095419889688,
+        "upright": 361.72804574985986,
+        "quiet": 376.4235553461313,
+        "leg_economy": 694.7309646844864,
+        "impact": -114.68604626896607,
+        "descent": -6.838077697324543,
+        "effort": -3.1964175324770623,
+        "command_slew": -16.149600357785822,
+        "correction_size": -0.11439269557129592,
+        "failure": -700.0,
+        "actual_total": 6885.609903490898
+      },
+      "positive_total": 7726.594602900121,
+      "supported_good_time_s": 470.66000000000014,
+      "value_loss_first32": 2.7235208494433514,
+      "value_loss_last32": 4.019353277360399,
+      "parent_kl_final": 1.7396044532457988
+    },
+    "gentle": {
+      "reward_totals": {
+        "approach": 1143.146642240584,
+        "support": 1354.6620500382783,
+        "hold": 2522.0400000000004,
+        "seat_load_share": 533.3360383234174,
+        "upright": 311.16453544367107,
+        "quiet": 328.17348078068346,
+        "leg_economy": 1238.455425670147,
+        "impact": -23283.12930392973,
+        "descent": -8.579661994367127,
+        "effort": -3.4565754553000443,
+        "command_slew": -16.251008597314357,
+        "correction_size": -0.11203550504695159,
+        "failure": -745.0,
+        "actual_total": -16625.550627635064
+      },
+      "positive_total": 7430.978172496782,
+      "supported_good_time_s": 420.3400000000001,
+      "value_loss_first32": 314.9423126788267,
+      "value_loss_last32": 516.6464747829984,
+      "parent_kl_final": 1.5589710970719655,
+      "completed_admitted_peak_cost_diagnostic": {
+        "total": 23272.98916901728,
+        "fraction_on_impact_failure_attempts": 0.9920842003851557,
+        "max_single_attempt": 764.6180062319719,
+        "median": 48.12392722798744,
+        "note": "Reconstructed from complete-attempt peak forces and exported mass; excludes refused/unfinished attempts."
+      }
+    }
+  },
+  "lost_successes": [
+    {
+      "bank": "regression",
+      "case": 15,
+      "roles": {
+        "initial": {
+          "first_support_s": 12.4,
+          "first_failure_s": null,
+          "window_end_s": 12.4,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.5156735181808472,
+          "max_raw_action": 0.06859033554792404,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.006353065371513367
+        },
+        "legacy": {
+          "first_support_s": 11.34,
+          "first_failure_s": null,
+          "window_end_s": 11.34,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.3318098783493042,
+          "max_raw_action": 0.09654082357883453,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": 0.0005581527948379517
+        },
+        "gentle": {
+          "first_support_s": 12.88,
+          "first_failure_s": 12.84,
+          "window_end_s": 12.84,
+          "distance_valid_percent": 98.0392156862745,
+          "max_accepted_error_mm": 1.5147700309753418,
+          "max_raw_action": 0.09383903443813324,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.014778494834899902
+        }
+      }
+    },
+    {
+      "bank": "fresh",
+      "case": 0,
+      "roles": {
+        "initial": {
+          "first_support_s": 13.98,
+          "first_failure_s": null,
+          "window_end_s": 13.98,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.2002177238464355,
+          "max_raw_action": 0.04844360798597336,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.005898803472518921
+        },
+        "legacy": {
+          "first_support_s": 13.88,
+          "first_failure_s": null,
+          "window_end_s": 13.88,
+          "distance_valid_percent": 96.07843137254902,
+          "max_accepted_error_mm": 1.4224648475646973,
+          "max_raw_action": 0.06011396273970604,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.003743693232536316
+        },
+        "gentle": {
+          "first_support_s": 14.6,
+          "first_failure_s": 14.6,
+          "window_end_s": 14.6,
+          "distance_valid_percent": 92.15686274509804,
+          "max_accepted_error_mm": 1.6996525526046753,
+          "max_raw_action": 0.06544818729162216,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.01851917803287506
+        }
+      }
+    },
+    {
+      "bank": "fresh",
+      "case": 4,
+      "roles": {
+        "initial": {
+          "first_support_s": 10.68,
+          "first_failure_s": null,
+          "window_end_s": 10.68,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.0254569053649902,
+          "max_raw_action": 0.05523791164159775,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.002881556749343872
+        },
+        "legacy": {
+          "first_support_s": 9.84,
+          "first_failure_s": 9.84,
+          "window_end_s": 9.84,
+          "distance_valid_percent": 98.0392156862745,
+          "max_accepted_error_mm": 0.8830428123474121,
+          "max_raw_action": 0.05716776102781296,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.01809258759021759
+        },
+        "gentle": {
+          "first_support_s": 10.200000000000001,
+          "first_failure_s": 10.200000000000001,
+          "window_end_s": 10.200000000000001,
+          "distance_valid_percent": 98.0392156862745,
+          "max_accepted_error_mm": 0.937245786190033,
+          "max_raw_action": 0.06991651654243469,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.013195738196372986
+        }
+      }
+    },
+    {
+      "bank": "fresh",
+      "case": 13,
+      "roles": {
+        "initial": {
+          "first_support_s": 12.02,
+          "first_failure_s": null,
+          "window_end_s": 12.02,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.4636367559432983,
+          "max_raw_action": 0.05703823268413544,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": 0.00046309828758239746
+        },
+        "legacy": {
+          "first_support_s": 11.56,
+          "first_failure_s": null,
+          "window_end_s": 11.56,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.3731383085250854,
+          "max_raw_action": 0.08686895668506622,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.006435945630073547
+        },
+        "gentle": {
+          "first_support_s": 11.74,
+          "first_failure_s": 19.14,
+          "window_end_s": 11.74,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.4428868293762207,
+          "max_raw_action": 0.06920791417360306,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.006607741117477417
+        }
+      }
+    },
+    {
+      "bank": "starts",
+      "case": 2,
+      "roles": {
+        "initial": {
+          "first_support_s": 11.5,
+          "first_failure_s": null,
+          "window_end_s": 11.5,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.392576813697815,
+          "max_raw_action": 0.06418158113956451,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": 0.0003109872341156006
+        },
+        "legacy": {
+          "first_support_s": 11.200000000000001,
+          "first_failure_s": null,
+          "window_end_s": 11.200000000000001,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.2940950393676758,
+          "max_raw_action": 0.07930228859186172,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.0004084259271621704
+        },
+        "gentle": {
+          "first_support_s": 11.4,
+          "first_failure_s": 19.68,
+          "window_end_s": 11.4,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.3517886400222778,
+          "max_raw_action": 0.06224421039223671,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": 0.0005894005298614502
+        }
+      }
+    },
+    {
+      "bank": "novel",
+      "case": 12,
+      "roles": {
+        "initial": {
+          "first_support_s": 11.74,
+          "first_failure_s": null,
+          "window_end_s": 11.74,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.060387134552002,
+          "max_raw_action": 0.07030492275953293,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": 0.00044493377208709717
+        },
+        "legacy": {
+          "first_support_s": 10.96,
+          "first_failure_s": null,
+          "window_end_s": 10.96,
+          "distance_valid_percent": 98.0392156862745,
+          "max_accepted_error_mm": 1.0050982236862183,
+          "max_raw_action": 0.08136201649904251,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.004663512110710144
+        },
+        "gentle": {
+          "first_support_s": 11.6,
+          "first_failure_s": null,
+          "window_end_s": 11.6,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.0702069997787476,
+          "max_raw_action": 0.07463818788528442,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.0001506209373474121
+        }
+      }
+    },
+    {
+      "bank": "novel",
+      "case": 13,
+      "roles": {
+        "initial": {
+          "first_support_s": 11.28,
+          "first_failure_s": null,
+          "window_end_s": 11.28,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.135237455368042,
+          "max_raw_action": 0.0661582425236702,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": 0.00012449920177459717
+        },
+        "legacy": {
+          "first_support_s": 11.06,
+          "first_failure_s": null,
+          "window_end_s": 11.06,
+          "distance_valid_percent": 98.0392156862745,
+          "max_accepted_error_mm": 1.0649933815002441,
+          "max_raw_action": 0.07674401998519897,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.00225202739238739
+        },
+        "gentle": {
+          "first_support_s": 11.08,
+          "first_failure_s": null,
+          "window_end_s": 11.08,
+          "distance_valid_percent": 100.0,
+          "max_accepted_error_mm": 1.0983235836029053,
+          "max_raw_action": 0.07714326679706573,
+          "saturated_action_fraction": 0.0,
+          "last_100ms_clearance_change_m": -0.008696839213371277
+        }
+      }
+    }
+  ],
+  "input_distance_sensitivity": {
+    "initial": {
+      "samples": 61675,
+      "max_correction_change_rad": 2.9876827056796174e-07,
+      "p95_correction_change_rad": 2.852082161552971e-07,
+      "note": "Scalar-only +1cm perturbation on fixed inputs; not a closed-loop causal ablation."
+    },
+    "legacy": {
+      "samples": 61675,
+      "max_correction_change_rad": 1.76668163476279e-06,
+      "p95_correction_change_rad": 1.6626714796075248e-06,
+      "note": "Scalar-only +1cm perturbation on fixed inputs; not a closed-loop causal ablation."
+    },
+    "gentle": {
+      "samples": 61675,
+      "max_correction_change_rad": 1.7622112409299007e-06,
+      "p95_correction_change_rad": 1.6751885141275125e-06,
+      "note": "Scalar-only +1cm perturbation on fixed inputs; not a closed-loop causal ablation."
+    }
+  },
+  "preservation": {
+    "frozen_files_unchanged": true,
+    "no_new_simulation_or_training": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "physical": {
+    "trials": 448,
+    "stable": 416,
+    "clean": 285,
+    "slip": 163,
+    "illegal": 0,
+    "physical": 32,
+    "strict": 110,
+    "max_friction_utilization": 1.08212411403656,
+    "max_conservative_margin_ticks": 16,
+    "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit"
+  },
+  "actual417_inputs": true,
+  "full_reward_audited": true,
+  "bounds_and_slew": true,
+  "parent_exact": true,
+  "CPU_optimizer_replay": true,
+  "actor_steps": 127,
+  "critic_steps": 128,
+  "numerical_tolerances": {
+    "action_atol": 1e-05,
+    "action_rtol": 1e-05,
+    "weight_atol": 5e-05,
+    "weight_rtol": 0.0005
+  },
+  "active": 448000,
+  "warmup": 10500
+}

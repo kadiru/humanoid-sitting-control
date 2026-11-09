@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "utc": "2026-10-24T06:10:23.466579+00:00",
+  "classification": "Concrete experiment specification for human policy decision; no approval or scientific execution",
+  "name": "One gap-guarded correction cycle with sufficient offline solver time",
+  "trigger": "Human asks whether work is stuck, which concrete experiment could move repair forward, and what approval is needed.",
+  "hypothesis": "Retaining the two saved actual-gap tangent constraints in both the primary and interior problems can produce a finite step that reduces nonlinear mismatch while correcting those two actual normal-descent violations. This is unproven; the tangent constraints alone do not guarantee nonlinear success.",
+  "evidence": {
+    "current_model_origin": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/finite_model_step_20261023_v1",
+    "current_merit": 0.08605330623059242,
+    "last_finite_model_reduction_fraction": 0.2986960388083937,
+    "last_predicted_reduction_fraction_approx": 0.4955,
+    "last_finite_model_closure": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/finite_model_closure_20261023_v1.json",
+    "last_finite_model_closure_sha256": "ad32bd3f3bccbfd6ccf2e8645af37c75b6d1406463b4866f330092714fda0269",
+    "latest_solver_closure": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/targeted_gap_primary_closure_20261023_v1.json",
+    "latest_solver_closure_sha256": "db31eb5caea3d49d28914a92c296ce7eae61e07ae4960021f107a8a11c78ec20",
+    "latest_solver_candidate_returned": false,
+    "latest_solver_IPM_iterations": 8,
+    "latest_total_seconds": 32.85,
+    "earlier_successful_primary_total_seconds": 327.81,
+    "earlier_interior_total_seconds_before_return_rejection": 175.86,
+    "interpretation": "The45-second total cap has not produced a current candidate. The earlier larger-budget solve did produce one at an older model origin. That motivates a bounded budget test, not a guarantee of convergence or repair."
+  },
+  "targets": [
+    {
+      "original_row": 214643,
+      "group": "mesh_normal_descent",
+      "start_state": 622,
+      "end_state": 1273,
+      "latest_saved_normalized_residual_approx": -27.5176
+    },
+    {
+      "original_row": 215327,
+      "group": "mesh_normal_descent",
+      "start_state": 1400,
+      "end_state": 631,
+      "latest_saved_normalized_residual_approx": -304.47048
+    }
+  ],
+  "existing_inputs": {
+    "remote_directory": "/data/humanoid-sitting-perception/low_seat_contact_01/targeted_gap_primary_20261023_v1",
+    "sha256": {
+      "augmented_matrix.npz": "3d6ab5b8bacb7c19d1062658d1589b6c9a47c82b48c4497f55917e3e686d69ff",
+      "augmented_arrays.npz": "933c4eeea0bd9fe5ff7524cb1ef5775b8eb3f49fcde95e6eadc2ee518cab517e",
+      "full_matrix.npz": "7861ca419b8d2a3c2087e181f4c0ad037092128de41729c983b90b26414a805c",
+      "full_arrays.npz": "8c2c77579a829d62319279f5c1c24bc35e683a783074796dc8b0c3a627e87e89",
+      "full_equality.npz": "c27c5897520fe7949f33e173419fc5ad3e41a9630891dd0137bae1b849163695",
+      "target_matrix.npz": "fa5566a4e3eeae9d2c73a37404fa255e136ce90ae62f66e1f20264d66a3e9df6",
+      "target_rhs.npy": "90c3f6e49b379be99cad12bc665fd3419da417a8437811805a2f629136e19550",
+      "input_proof.json": "1799c6ad773d1904c2842c1fc33ac26c21a70eab738fa95793b693e807454b45",
+      "target_input_proof.json": "e442f7aea4c99480b4f2ff74af711a8fae6622d0187a338c6506428d955a3d09",
+      "A.npz": "7cfc8fcb32cff55c6a0cc6500471e931ab1f19ed63637ba8959f16c5cbefdf44",
+      "C.npz": "ceda6ecdbe30f74752cde1cc13879aa67cef8c5de5000e14a74b2e9a55654bb1",
+      "H.npz": "bba75bc53c8c964380e9ab68335a1da13bd3b793c24ddab1f94ddc9fb28111e9",
+      "state.npz": "973873d0a4a6521a55cf6cf07c8439c953b12c7829acdd5e2eaa3a12fd7a7bef",
+      "intervals.json": "ea017a1649b6a23e7c8287e3caac69bddc2b2197ab7da2fbf42b4808028a9ded"
+    },
+    "reuse_policy": "Inherit already audited matrices/proofs by exact hash; no reassembly, target derivative recomputation, proof replay, or old/internal primal direction."
+  },
+  "requested_policy_changes": [
+    "Permit exactly one cold revisit of the terminal targeted-gap primary input; this is explicitly a retry exception, not a newly invented formulation.",
+    "Permit up to600seconds total for the primary stage and up to600seconds total for the conditional interior stage, including imports, hashing, loads, solve, return checks, independent audit and finalization; finite/model stage remains45seconds.",
+    "For these two stages only, certify optimality of the strengthened problem including the two actual-gap constraints. Retain every original primal constraint and its unchanged feasibility threshold, but do not require the added dual multipliers to be exactly zero or demand a separate optimum certificate for the original problem without those constraints. No returned multiplier may be edited."
+  ],
+  "stages": [
+    {
+      "stage": "A",
+      "scope": "One cold full-coordinate primary solve using the saved augmented input.",
+      "total_seconds": 600,
+      "backend_soft_absolute_deadline": 420,
+      "producer_hard_absolute_deadline": 480,
+      "audit_hard_absolute_deadline": 598,
+      "problem": "min t subject to the saved652531x78791 augmented system, all1366 original homogeneous equalities and all original bounds.",
+      "initialization": "Saved accepted nonlinear origin; no x0, saved basis, internal iterate or rejected point. One highs-ipm call with inherited options and only remaining420s allowance.",
+      "acceptance": "Successful complete finite raw return; unchanged primal and dual arrays; augmented primal/equality/bound/stationarity/absolute-gap<=1e-9, exact dual signs and zero infinite-bound multipliers; full-original primal/equality/bound<=1e-9; both target buffered slacks>=0; at least1% predicted merit reduction.",
+      "failure": "Stop whole cycle on timeout, missing point, failed audit, any gate failure or insufficient predicted progress. No alternate method, parameter change or retry."
+    },
+    {
+      "stage": "B",
+      "scope": "Only after A passes: one fresh strict-interior solve that retains both actual-gap constraints.",
+      "total_seconds": 600,
+      "backend_soft_absolute_deadline": 420,
+      "producer_hard_absolute_deadline": 480,
+      "audit_hard_absolute_deadline": 598,
+      "problem": "Original490 interior with ceiling=(current_mu+new_primary_theta)/2, plus the same two gap constraints with eta coefficient zero. All original interval reserve rows and eta bounds[0,0.5] retained. Derived full shape837065x78791 must be independently verified.",
+      "initialization": "Cold solve. The primary direction is not decoded or used as a warm start. The new primary establishes only the recorded mismatch ceiling.",
+      "acceptance": "Unchanged finite raw point and raw marginals; full strengthened-system numerical KKT<=1e-9, exact dual signs; full-original primal checks; both target slacks>=0; exact unscaled positive interval clearance on all92267 intervals; independently verified trace.",
+      "failure": "Stop whole cycle on first failure. No dual correction, point editing, scaling, boundary repair or revalidation exception."
+    },
+    {
+      "stage": "C",
+      "scope": "Only after B passes: one alpha1 finite encoding and fresh nonlinear-model evaluation plus independent audit.",
+      "total_seconds": 45,
+      "solver_calls": 0,
+      "finite_maps": 1,
+      "fresh_value_states_max": 1365,
+      "fresh_J_states_max": 1365,
+      "mechanics": "Use the existing468/490 finite rules:205 binary64 drops and exact pivot203, exact endpoint sum, original load-rounding and interval reserves; no clipping, normalization, root rescue or alternate step.",
+      "research_success": "Encoding and independent audit pass; nonlinear phi decreases by at least1% from0.08605330623059242; both target actual signed rows>=0; no previously nonnegative actual kept-hard row becomes negative; worst actual kept-hard violation does not increase; existing auxiliary-domain and encoded-prediction/filter checks also pass.",
+      "report_every_outcome": "Full actual signed-row residuals, all seven physical consistency units, original bounds, normal and hover, fixed/inactive/load invariants, before/after target gaps, actual/predicted reduction and time/memory; report failures without selecting a failed point.",
+      "admission": "Research success alone is not motion admission. All inherited original nonlinear/mechanical/runtime/geometry gates remain before simulation. This cycle authorizes no simulation/PPO/holdout.",
+      "failure": "Any failure terminates this cycle. Preserve output and diagnostics; no smaller step, renewed solver call, altered tolerance or automatic next cycle."
+    }
+  ],
+  "resources": {
+    "maximum_total_scientific_stage_wall_seconds": 1245,
+    "maximum_total_minutes_seconds": "20min45s",
+    "accounting": "600+600+45; each includes producer, independent audit, hashes/loads and finalization. No budget transfers between stages. Implementation/preparation time is separate and not scientific execution. Each stage requires an outer wall-clock watchdog as well as backend limits.",
+    "address_space_bytes_per_worker": 42949672960,
+    "maximum_concurrent_scientific_workers": 1,
+    "maximum_solver_calls": 2,
+    "maximum_finite_maps": 1,
+    "maximum_nonlinear_validation_steps": 1,
+    "retry_count": 0
+  },
+  "unchanged_requirements": [
+    "Every original bound, trust radius, guard, row, numerical feasibility tolerance and exact finite encoding rule.",
+    "All physical success criteria and protection of all64 existing successes.",
+    "No current repair claim without all72 full20-second development trials; specified PPO and held-out evaluation and complete subminute video still required.",
+    "No simulation, PPO, holdout access, or extra cycle under this proposal."
+  ],
+  "required_implementation_before_launch": [
+    "Create a new isolated versioned runner; do not change any completed experiment source/output.",
+    "Implement source-bound reuse of saved primary inputs, augmented rather than original-only optimum admission, and the interior augmentation; retain all original feasibility checks.",
+    "Implement and synthetically test the explicit fresh-nonlinear comparison rule, including new hard-row violations and both actual targets.",
+    "Freeze complete sources, input/runtime hashes, source review, independent input/return/finite audit, exact rational resource bounds and watchdogs. Never set launch_ready from this proposal alone.",
+    "Bind any human approval to this exact specification; check live workers and use one execution owner. Changes beyond this scope require fresh human steering."
+  ],
+  "existing_audited_components": {
+    "rl_support_work/scripts/targeted_gap_primary_20261023_v1/numerical_checks.py": "b4fb9f775d8f26b45932bc42f3813376422ff310d5f6b012379695eb2696fe3d",
+    "rl_support_work/scripts/interior_after_minimax_20261023_v1/builder.py": "6cd5f5329c3994835736eeadb9b131db105671c63c7736c9940ddf0ef2887180",
+    "rl_support_work/scripts/interior_after_minimax_20261023_v1/producer.py": "ec657a3102145c51b8960035690d3614a8cb8ebe7831c5bd1a0c4a7372823f09",
+    "rl_support_work/scripts/finite_model_step_20261023_v1/assessment.py": "11ca78db5e8e756090587cf7c3fe89764a5880fde978f8c416b20ffa55cc1b3a",
+    "rl_support_work/scripts/finite_model_step_20261023_v1/producer.py": "872f899c457241000b0e3724d1c631a29f380026c4ef27c0a066cf9571f846bc",
+    "rl_support_work/scripts/finite_model_step_20261023_v1/independent.py": "7fb041c0a066d1158456465c5d8d833d856682ed3dcdf601ccc9f8af8305378d"
+  },
+  "approval_received": false,
+  "scientific_launch_ready": false,
+  "scientific_launches": 0,
+  "physical_state": {
+    "clean": "64/72",
+    "stable": 70,
+    "slipping": 8,
+    "housing_contact": 2,
+    "categories_overlap": true,
+    "all64_protected": true,
+    "all8_unresolved": true,
+    "main_PPO": "unstarted",
+    "fresh_holdout": "closed"
+  },
+  "disclosure": "This is a reviewable experimental specification, not a completed execution/source freeze or repair. The new runner and independent audit adaptations must be completed and frozen before any scientific run. No existing approval is reused."
+}

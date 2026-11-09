@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-17T21:37:22.251815+00:00",
+  "scope": "One zero-physics assessment of existing259 finite contact returns and267 point records; 1000 poststep intervals8.005-13s x24cases x2feet.",
+  "source_sha256": "d127c6d9adb566370e47025c1ede0390d8887884dad6b8708cdc82c705451b2d",
+  "source": "/home/kadir/humanoid-sitting/scripts/diagnose_low_seat_finite_contact_322.py",
+  "normal": "Retain every returned normal point including zero force. Group positive loads, separate signs of endstate normal velocity and separation, report scaled normal-row singular values/rank with numerical1e-10 threshold.",
+  "friction": "Use separate friction points; no matching to normal points or inferred patch association. Report sum of force magnitudes divided by sum scalar normal force as descriptive demand, not utilization or capacity.",
+  "timing": "Returned forces use original dt=.005 (impulse/dt). Pair them with same poststep backend point velocity and same-material pose difference over(k-1,k] separately. Neither pairing is internal-stage work or measured dissipated power; no timing fit.",
+  "coverage": "All foot records retained. Observed floor-only flags from296 separately describe wholebody external-wrench completeness; incomplete cases never certify full external closure.",
+  "windows": [
+    [
+      8.005,
+      10.995
+    ],
+    [
+      11,
+      13
+    ]
+  ],
+  "not_observed": [
+    "Per-stage impulse, velocity and bias",
+    "CFM/effective response/force limits",
+    "Friction patch IDs, combined coefficients, anchors and broken flags",
+    "Effective internal iteration counts/order",
+    "Installed equivalence to public source321"
+  ],
+  "constraints": "No runtime/control/material/solver/quiet-guard/physical-criterion/authority change. No forward prediction, fitted offsets, extra physics or PPO. Derived FD used only for offline comparison, never replacing rawqd.",
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}

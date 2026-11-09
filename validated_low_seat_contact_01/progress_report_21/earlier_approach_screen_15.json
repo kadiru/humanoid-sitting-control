@@ -1,0 +1,121 @@
+{
+  "scope": "Offline model screen on four already-failed development geometries. Explicitly proposes changing selected-case approach after8s, instead of the previous10s lock; no runtime implementation or physical admission yet. Larger clearance and slower7s path must pass feasibility first. Physical criteria and materials unchanged.",
+  "physical_trials": 0,
+  "optimizer_updates": 0,
+  "fresh_holdout_used": false,
+  "source_sha256": "47a322010ca1dbfdcae8475d0f5c9825718e85935e657fc23be9e5ddb3fdc119",
+  "input_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/trace.npz": "c380356202f31c64d5667f48bd2f8d13d3391c6f751dd19db2dc002101d020d2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/static_inertial_model.json": "92d77b993ef80d78af0440a1066af421555aff2794f14ff37f3df3d09669c801"
+  },
+  "rows": [
+    {
+      "case": 0,
+      "start_seconds": 8.0,
+      "end_seconds": 15.0,
+      "source_sample_seconds": 8.0,
+      "measured_geometry_valid": true,
+      "measured_height_m": 0.3597322243059443,
+      "measured_slope_deg": 15.028388652854725,
+      "initial_pitch_rad": 0.29472694701891466,
+      "initial_gap_m": 0.15185276907844875,
+      "initial_root": [
+        -0.08334614336490631,
+        0.0,
+        0.5749569506001762
+      ],
+      "goal_x": -0.17,
+      "goal_pitch_rad": 0.9,
+      "max_ik_error": 8.207729762489288e-09,
+      "minimum_housing_clearance_m": 0.006722843928341599,
+      "endpoint_housing_clearance_m": 0.006722843928341599,
+      "minimum_patch_margin_m": -0.013310370078969624,
+      "endpoint_patch_margin_m": 0.08768758754239572,
+      "minimum_no_seat_cop_margin_m": 0.006892748599272684,
+      "peak_nominal_target_rate_rad_s": 0.22407943620712498,
+      "command_arc_lower_bound_seconds": 6.700374322325907,
+      "screen_pass": false
+    },
+    {
+      "case": 2,
+      "start_seconds": 8.0,
+      "end_seconds": 15.0,
+      "source_sample_seconds": 8.0,
+      "measured_geometry_valid": true,
+      "measured_height_m": 0.3595906646814365,
+      "measured_slope_deg": 19.997670133203137,
+      "initial_pitch_rad": 0.30237515742277554,
+      "initial_gap_m": 0.17460927650853003,
+      "initial_root": [
+        -0.07931574434041977,
+        0.0,
+        0.5751432404961551
+      ],
+      "goal_x": -0.17,
+      "goal_pitch_rad": 0.9,
+      "max_ik_error": 8.649600530742473e-09,
+      "minimum_housing_clearance_m": 0.0033063717355311575,
+      "endpoint_housing_clearance_m": 0.0033063717355311575,
+      "minimum_patch_margin_m": 0.0029961171811874188,
+      "endpoint_patch_margin_m": 0.08875591849906297,
+      "minimum_no_seat_cop_margin_m": 0.006835151029265386,
+      "peak_nominal_target_rate_rad_s": 0.233711497552949,
+      "command_arc_lower_bound_seconds": 6.974949261535087,
+      "screen_pass": false
+    },
+    {
+      "case": 6,
+      "start_seconds": 8.0,
+      "end_seconds": 15.0,
+      "source_sample_seconds": 8.0,
+      "measured_geometry_valid": true,
+      "measured_height_m": 0.36965229171365344,
+      "measured_slope_deg": 16.26900526718967,
+      "initial_pitch_rad": 0.2923088380915364,
+      "initial_gap_m": 0.14492753783998763,
+      "initial_root": [
+        -0.08466584235429764,
+        0.0,
+        0.5749123712733976
+      ],
+      "goal_x": -0.17,
+      "goal_pitch_rad": 0.9,
+      "max_ik_error": 6.980354107792614e-09,
+      "minimum_housing_clearance_m": 0.006556954688329352,
+      "endpoint_housing_clearance_m": 0.006556954688329352,
+      "minimum_patch_margin_m": -0.010893159341263281,
+      "endpoint_patch_margin_m": 0.0868533113760713,
+      "minimum_no_seat_cop_margin_m": 0.006873591199607509,
+      "peak_nominal_target_rate_rad_s": 0.21827516690816498,
+      "command_arc_lower_bound_seconds": 6.546562323140967,
+      "screen_pass": false
+    },
+    {
+      "case": 10,
+      "start_seconds": 8.0,
+      "end_seconds": 15.0,
+      "source_sample_seconds": 8.0,
+      "measured_geometry_valid": true,
+      "measured_height_m": 0.36464179610551717,
+      "measured_slope_deg": 17.51225537872077,
+      "initial_pitch_rad": 0.29664241532770985,
+      "initial_gap_m": 0.1571348614968706,
+      "initial_root": [
+        -0.08232273906469345,
+        0.0,
+        0.5750004767648665
+      ],
+      "goal_x": -0.17,
+      "goal_pitch_rad": 0.9,
+      "max_ik_error": 1.2211360128161888e-08,
+      "minimum_housing_clearance_m": 0.005264956170914587,
+      "endpoint_housing_clearance_m": 0.005264956170914587,
+      "minimum_patch_margin_m": -0.00687089756400916,
+      "endpoint_patch_margin_m": 0.087828420218511,
+      "minimum_no_seat_cop_margin_m": 0.006892068113531234,
+      "peak_nominal_target_rate_rad_s": 0.22476859709554983,
+      "command_arc_lower_bound_seconds": 6.7239750443711355,
+      "screen_pass": false
+    }
+  ]
+}

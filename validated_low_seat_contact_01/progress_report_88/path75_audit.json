@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-17T09:36:49.101726+00:00",
+  "passed": true,
+  "scope": "Independent all105-node corrected geometry/full-foot/stance/airborne-attitude/tilt/joint replay plus separate16joint finite-difference virtual work, nonnegative static force equilibrium, exact recorded initial/fixed commands, command bounds and specific command-polyline timing. Reports separate geometry/command/time gates. No actual commands applied, no sensed support/dynamics/physical admission. A model pass is not permission to start PPO or holdout.",
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/actuator_contact_path_v2_75/results.json": "a2bb8e73283ad1ea950e0c4445a315fad4f83768d0a8760c9f402e40373e86b9",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_actuator_path_76.py": "f19d86f28043f2e641d9a1877fa26dfa61c0c609a7dcf0796ea95034d4c8e616"
+  },
+  "geometry": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/actuator_contact_path_v2_75/results.json",
+      "parameters": [
+        0.1964010677414693,
+        0.30447744098732227,
+        -0.12222725093418316
+      ],
+      "length_m": 0.1,
+      "knots": 105,
+      "max_replay_error": 2.2872301572933006e-16,
+      "failed_knots": [],
+      "model_screen_passed": false,
+      "min_clearance_mm": 3.4429872786398796,
+      "max_foot_position_error_mm": 0.8396933404464063,
+      "max_foot_orientation_error_deg": 0.4948394467431135,
+      "nominal_pose_schedule_at_0_15_rad_s": 15.155914982731591,
+      "min_actual_swing_sole_height_m": 0.03191757987256532
+    }
+  ],
+  "command": {
+    "nodes": 105,
+    "max_virtual_work_error_Nm": 8.427043951542146e-09,
+    "max_equilibrium_residual": 2.220446049250313e-16,
+    "minimum_command_margin_rad": 0.030127387574744646,
+    "maximum_effort_utilization": 0.8162819538881649,
+    "force_allocation_failures": [],
+    "model_command_passed": true,
+    "specific_command_time_s": 14.299843777690542,
+    "command_schedule_passed": false,
+    "initial_command_exact": true,
+    "all_fixed_commands_exact": true
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}

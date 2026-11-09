@@ -1,0 +1,10 @@
+{
+  "reason": "logo_link is the fixed torso shell; include rear face only in the new leaning task",
+  "fixed_joint": "logo_joint",
+  "parent": "torso_link",
+  "relative_transform": "identity",
+  "rear_x_bound": -0.08508909,
+  "patch_condition": "contact x in torso frame < -0.035m; within finite surface bounds",
+  "forbidden": "chest/head/arms/hands/hip housings remain rejected",
+  "original_studies_unchanged": true
+}

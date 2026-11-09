@@ -1,0 +1,7 @@
+{
+  "original_gate_passed": false,
+  "reason": "New audit used an unapproved stricter2e-8 tolerance on subtracting two float32 commands. CPU/CUDA commands had already matched exactly. V2 requires exact representable before+/-cap bounds AND existing3e-7 tolerance from frozen audits31/36. Preserve/report original stricter comparison for every sequence. No physics or command/gain/rate changes.",
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_gated_command_v2_129.py": "9698677b78163689da1675b321c4c7c0fde8880e1bf42380141b033dd29732e4"
+  }
+}

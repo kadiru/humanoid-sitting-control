@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "device": "cpu",
+      "kind": "normal",
+      "identity": true,
+      "private_count_copy": true,
+      "no_extra_query": true,
+      "outside_window_passthrough": true
+    },
+    {
+      "device": "cpu",
+      "kind": "normal",
+      "bad_active_bounds_rejected": true
+    },
+    {
+      "device": "cpu",
+      "kind": "friction",
+      "identity": true,
+      "private_count_copy": true,
+      "no_extra_query": true,
+      "outside_window_passthrough": true
+    },
+    {
+      "device": "cpu",
+      "kind": "friction",
+      "bad_active_bounds_rejected": true
+    },
+    {
+      "device": "cuda:1",
+      "kind": "normal",
+      "identity": true,
+      "private_count_copy": true,
+      "no_extra_query": true,
+      "outside_window_passthrough": true
+    },
+    {
+      "device": "cuda:1",
+      "kind": "normal",
+      "bad_active_bounds_rejected": true
+    },
+    {
+      "device": "cuda:1",
+      "kind": "friction",
+      "identity": true,
+      "private_count_copy": true,
+      "no_extra_query": true,
+      "outside_window_passthrough": true
+    },
+    {
+      "device": "cuda:1",
+      "kind": "friction",
+      "bad_active_bounds_rejected": true
+    }
+  ],
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/check_low_seat_contact_recorder_258.py": "a3878f962179d61e6b172a379f2686dca152263db3a255ba2561dd0ac553de03",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_contact_recorder_257.py": "b19e4d3dac3a9e526bf6a91545fbc363d07731ada8c50102d31967f25c131193"
+  }
+}

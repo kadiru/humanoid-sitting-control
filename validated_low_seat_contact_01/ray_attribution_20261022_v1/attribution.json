@@ -1,0 +1,70 @@
+{
+  "attribution_passed": true,
+  "exact_alpha_bound": [
+    "577090656",
+    "6280502699244113"
+  ],
+  "alpha_bound_float": 9.188606129720404e-08,
+  "limiting_rows": [
+    91755
+  ],
+  "rounded_indistinguishable_rows": [
+    91755
+  ],
+  "rows": [
+    {
+      "full_row": 91755,
+      "exact_limiting": true,
+      "exact_margin": [
+        "18034083",
+        "72057594037927936"
+      ],
+      "exact_slope": [
+        "6280502699244113",
+        "2305843009213693952"
+      ],
+      "exact_ratio": [
+        "577090656",
+        "6280502699244113"
+      ],
+      "normalized_margin": 2.5027317718251396e-10,
+      "normalized_slope": 0.002723733868328617,
+      "family": "original_signed",
+      "original_row": 92148,
+      "group": "mesh_planning_lower",
+      "scale": 1.0,
+      "soft": false,
+      "source_terms": [
+        {
+          "state": 632,
+          "feature": 15,
+          "coefficient": 1.0,
+          "canonical_label": 657,
+          "exact_time": [
+            "657",
+            "50"
+          ]
+        }
+      ],
+      "units": "rad",
+      "native_terms": [
+        [
+          42104,
+          -1.0
+        ]
+      ]
+    }
+  ],
+  "full_rows": 652529,
+  "products": 2614306,
+  "positive_slope_rows": 319040,
+  "saved_alpha": 2.9802322387695312e-08,
+  "saved_alpha_over_exact_bound": 0.3243399702518553,
+  "exact_bound_over_saved_alpha": 3.0831845955448647,
+  "bound_within_expected_half_then_dyadic_band": true,
+  "scalar_and_initial_alpha_bounds_not_limiting": true,
+  "scope": "Exact real-ray bounds on the stored binary64 coefficients; no new point, encoding or physical result. Rounded-indistinguishable means ratios round to the same binary64 as the exact minimum.",
+  "arithmetic_note": "The producer used conservative interval slopes, a half-step reserve and dyadic rounding. The reported exact bound distinguishes the original-row restriction from that combined conservatism without replaying the old interval calculation.",
+  "candidate_created": false,
+  "old_direction_modified": false
+}

@@ -1,0 +1,66 @@
+{
+  "utc": "2026-10-18T06:42:27.595269+00:00",
+  "optimizer": {
+    "success": true,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "iterations": 1,
+    "evaluations": 1,
+    "milp_success_is_not_nonlinear_feasibility": true,
+    "minimum_augmented_inequality": -0.021549225960918426,
+    "objective_time_s": 13.5,
+    "objective_slack": 0.0,
+    "max_equality_residual": 6.303169817426652e-05,
+    "minimum_inequality": -2.2306288954763413e-05,
+    "numerical_constraints_passed": false,
+    "local_not_global": true,
+    "objective_is_dimensionless_slack": false,
+    "objective_time_s_is_legacy_duration_field": true,
+    "scaled_original_violation": 0.021549225960918426,
+    "scaled_hard_violation": 0.021549225960918426,
+    "scaled_soft_violation": 0.009913906202117071,
+    "slack_is_not_admission_tolerance": true,
+    "objective_is_normalized_step_radius": true,
+    "normalized_step_radius": 0.37564254525607166,
+    "feasibility_slack_variables": 0
+  },
+  "gates": [
+    [
+      "115 sampled geometry knots",
+      true
+    ],
+    [
+      "Strict static commands / nonnegative support",
+      true
+    ],
+    [
+      "All original + construction numerical constraints",
+      false
+    ],
+    [
+      "All ideal clock rate rows, strict",
+      false
+    ],
+    [
+      "All ideal clock target rows, strict",
+      false
+    ],
+    [
+      "Actual rounded candidate filter schedule",
+      "Not executed"
+    ],
+    [
+      "Intermediate geometry / both placements / current-input runtime / parent composition",
+      "Not executed"
+    ],
+    [
+      "Physical repair / PPO / holdout / promotion",
+      "Not started"
+    ]
+  ],
+  "physics_ticks": 0,
+  "actual_command_schedule": false,
+  "policy_optimizer_updates": 0,
+  "video_unchanged": true,
+  "physical_admission": false,
+  "repair_complete": false
+}

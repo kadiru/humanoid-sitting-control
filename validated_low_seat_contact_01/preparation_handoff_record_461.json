@@ -1,0 +1,159 @@
+{
+  "utc": "2026-10-18T13:19:20.670603+00:00",
+  "scope": "Preserve completed arithmetic preparation only; last sealed closure is459.",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_459.json",
+      "files": 8685,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_459.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 8717,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/simplex_evidence_preservation_461.json",
+  "manifest_sha256": "f1767140572479355d7188d7c1aa93dbbd0cfa7310dd6238f40039cc7c31dd2e",
+  "workers": [],
+  "actual_exits": {
+    "utc": "2026-10-18T13:15:40.944715+00:00",
+    "compile460_actual_exit": 0,
+    "compile460_observed": "57d052",
+    "freeze460_actual_exit": 0,
+    "freeze460_observed": "f6844b/session73095",
+    "preparation460_actual_exit": 0,
+    "preparation460_observed": "cecd89/session24950",
+    "original_audit461_actual_exit": 1,
+    "original_audit461_observed": "0d2476/immediate",
+    "corrected_audit_v2_compile_exit": 0,
+    "corrected_audit_v2_compile_observed": "ed94fb",
+    "corrected_audit_v2_actual_exit": 0,
+    "corrected_audit_v2_observed": "151bdc/session81699",
+    "source_inputs_unchanged": true,
+    "preparation_reruns": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "optimizer_calls": 0,
+    "candidate_exists": false
+  },
+  "preparation_summary": {
+    "utc": "2026-10-18T13:12:35.574404+00:00",
+    "passed": true,
+    "contract": {
+      "seed": "immutable440; no450/456 final or rejected trial",
+      "coordinate_domain_radius": 0.02,
+      "max_consecutive_map_roundings": 120,
+      "binary64_unit_roundoff": 1.1102230246251565e-16,
+      "max_round_error_per_load": 5.551115123125783e-17,
+      "original_total_normal_bound": 1e-13,
+      "derivative_bound": 2e-06,
+      "exact_rational_load_sum_before_rounding": true,
+      "normalization_or_clipping": false,
+      "candidate_exists": false,
+      "structural_phase_monotonicity": false,
+      "phase_monotonicity_is_hard_constraint": true,
+      "physical_admission": false
+    },
+    "free_controls": 11906,
+    "reduced_coordinates": 10541,
+    "load_groups": 1365,
+    "groups": 4095,
+    "original_inequalities": 331888,
+    "original_equalities": 1411,
+    "retained_rows": 331495,
+    "retained_equalities": 1366,
+    "normal_tangent_nonzeros": 0,
+    "ray_derivative_error": 1.3219754513293935e-08,
+    "unchanged_derivative_bound": 2e-06,
+    "joint_bounds_minimum": 4.0904876092207054e-05,
+    "joint_maximum_exact_sum_change": 7.979727989493313e-17,
+    "rounding_proof": {
+      "max_initial_exact_load_sum_error": 5.998619569819175e-16,
+      "maximum_active_loads": 8,
+      "maximum_map_roundings": 120,
+      "accumulated_exact_sum_rounding_bound": 5.3290705182007514e-14,
+      "sequential_sum_gamma7": 7.771561172376102e-16,
+      "maximum_evaluated_normal_bound": 5.4667723256227085e-14,
+      "unchanged_normal_bound": 1e-13,
+      "free_state_seat_load_exact_zero": true,
+      "scope": "Free states have zero seat load; fixed states unchanged. Exact rational conservation precedes one rounding per load. This bound is not an actual-force certificate."
+    },
+    "all_old_rows_retained": true,
+    "seed_exact": true,
+    "model_calls": 0,
+    "root_calls": 0,
+    "optimizer_calls": 0,
+    "candidate_exists": false,
+    "physical_admission": false
+  },
+  "independent_audit_summary": {
+    "utc": "2026-10-18T13:14:16.873037+00:00",
+    "passed": true,
+    "arithmetic_only": true,
+    "coordinates": 10541,
+    "free_original_controls": 11906,
+    "load_groups": 1365,
+    "all_rational_outputs_exact_replay": true,
+    "null_basis_error": 0.0,
+    "all_rows_chain_error": 0.0,
+    "equality_chain_error": 0.0,
+    "normal_tangent_nonzeros": 0,
+    "ray_derivative_error": 1.3219754513293935e-08,
+    "derivative_bound": 2e-06,
+    "maximum_evaluated_normal_bound": 5.4667723256227085e-14,
+    "normal_bound": 1e-13,
+    "model_calls": 0,
+    "root_calls": 0,
+    "optimizer_calls": 0,
+    "new_candidate": false,
+    "physical_admission": false
+  },
+  "local_hash_review": {
+    "utc": "2026-10-18T13:16:41.107846+00:00",
+    "manifests": [
+      {
+        "folder": "simplex_preparation_460",
+        "entries": 7,
+        "passed": true
+      },
+      {
+        "folder": "simplex_audit_v2_461",
+        "entries": 1,
+        "passed": true
+      },
+      {
+        "folder": "simplex_audit_input_recovery_461",
+        "entries": 3,
+        "passed": true
+      }
+    ],
+    "all_hashes_verified": true,
+    "source_and_formula_review": true,
+    "visual_review_claimed": false,
+    "new_html_report": false,
+    "candidate_exists": false
+  },
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_459.json",
+  "new_closure": false,
+  "new_solver_exists": false,
+  "new_candidate": false,
+  "model_calls": 0,
+  "root_calls": 0,
+  "optimizer_calls": 0,
+  "actual_forward_filter_ticks": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "best_clean": "64/72",
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}

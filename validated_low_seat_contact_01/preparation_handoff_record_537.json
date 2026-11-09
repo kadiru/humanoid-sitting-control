@@ -1,0 +1,378 @@
+{
+  "utc": "2026-10-19T01:44:37.431637+00:00",
+  "scope": "Preserve negative536/537 preparation; no reduction, LP or actual path, last sealed535 unchanged.",
+  "preparation_only": true,
+  "new_closure": false,
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_535.json",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_535.json",
+      "files": 11883,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_535.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 11929,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/command_forest_evidence_preservation_537.json",
+  "manifest_sha256": "2c75c8de257686903c3338066bd6531666e0672950ad04ea7b6832b6142720de",
+  "workers": [],
+  "actual_exits": {
+    "command_forest_compile_exit_536.json": {
+      "actual_exit": 0,
+      "observed_chunk": "1e2597",
+      "utc": "2026-10-19T01:37:56.805226+00:00"
+    },
+    "command_forest_freeze_exit_536.json": {
+      "actual_exit": 0,
+      "observed_chunk": "14cc1f",
+      "session": 83549,
+      "utc": "2026-10-19T01:38:37.602723+00:00"
+    },
+    "command_forest_preparation_exit_536.json": {
+      "actual_exit": 0,
+      "observed_chunk": "44957d",
+      "session": 24938,
+      "utc": "2026-10-19T01:39:01.148123+00:00"
+    },
+    "command_forest_audit_compile_exit_537.json": {
+      "actual_exit": 0,
+      "observed_chunk": "e8f11f",
+      "utc": "2026-10-19T01:40:08.581109+00:00"
+    },
+    "command_forest_audit_exit_537.json": {
+      "actual_exit": 0,
+      "observed_chunk": "bee831",
+      "session": 65011,
+      "utc": "2026-10-19T01:40:57.987625+00:00"
+    },
+    "command_forest_index_exit_537.json": {
+      "actual_exit": 0,
+      "observed_chunk": "d5b970",
+      "compile_actual_exit": 0,
+      "compile_observed_chunk": "c13e5e",
+      "utc": "2026-10-19T01:42:37.879107+00:00"
+    }
+  },
+  "preparation": {
+    "utc": "2026-10-19T01:38:54.190184+00:00",
+    "passed": true,
+    "specification": {
+      "scope": "NEW exact multirow implication reduction of the saved522 projected NUMERIC systems, using a bidirected command forest and retained unary command rows. Preparation only; no solver/trajectory wrapper or candidate.",
+      "source": "All saved522 primary/witness rows, costs, bounds and zero equality systems; inherited523 projection and517 original implication provenance. No532 state or unfinished K vector, old grouping/projection/scaling/factor/solve is input or repeated.",
+      "graph": "Only rows containing exactly two command columns of the SAME joint, opposite strictly nonzero signs, and optionally epigraph/eta qualify. Normalize by the positive command coefficient to x_v-g*x_u+e*z<=b with g>0. All other rows remain explicit. A row with three commands, different joints, same-sign commands or any other feature is never treated as an edge.",
+      "forest": "Use unordered pairs possessing BOTH directed edges. Sort pairs by absolute source-state-index distance, then column IDs; Kruskal constructs a deterministic spanning forest. This ordering is combinatorial, not a coefficient/violation threshold. Keep ALL rows on every forest pair. For each direction use its smallest original row ID. Keep all unary rows. Nonforest edge candidates use the unique oriented forest path only, at least two edges; paths over128 edges stay explicit as an arithmetic resource bound.",
+      "derivation": "Compose positive-gain edges exactly: x_t-G*x_s+E*z<=B. Every path multiplier is strictly positive (a product of later gains divided by positive source coefficient). To imply target x_t-g*x_s+e*z<=b, if G-g is nonzero, add the smallest-ID retained unary source row with its x_s sign matching G-g, normalized by abs(coefficient), multiplied by abs(G-g). This cancels the remaining command coefficient exactly. The residual involves ONLY z. Check B_total+(e-E_total)*z<=b at BOTH unchanged finite z bounds using exact Fractions. This is a nonnegative conic combination plus direct bound implication, not positive-ray grouping or deletion based on a numerical residual.",
+      "equivalence": "Every removed row follows from explicitly retained forest/unary rows and the unchanged z bounds. No removed row is used by any proof, so no circular implication. Subset inclusion gives the converse. This proves exact-real equivalence over the stored binary64 projected numeric matrix, not equivalence to the earlier unrounded522 projection or actual mechanics.",
+      "exact": "All coefficients and RHS are exact binary64 dyadic Fractions; all gain products, coefficient cancellations and endpoint comparisons exact. No coefficient threshold, sign rounding, fitted weights, additional guard, constraint relaxation or returned-vector repair. Stored kept CSR coefficients/RHS and objective/bounds/equalities copied unchanged.",
+      "coverage": "Every original/inward criterion remains explicit, proved here, or covered by inherited517/523 provenance. Both signs/frozen units of consistency remain mandatory. Command variables are NOT eliminated and are NOT assumed disjoint like torque variables. All coupled rate/window/three-command/clock rows not proved remain explicit.",
+      "future": "A future unmodified retained vector must pass the FULL522 projected numeric system at unchanged1e-7, exact21840-auxiliary source endpoint/midpoint backsubstitution, all FULLORIGINAL490 rows/equalities/bounds1e-7, primary-derived actual witness ceiling, exact intervaleta>0 and immutable490 finite encoding. A small reduced residual does not transfer through conic multipliers. All actual unit/geometry/filter/runtime/physical/PPO gates remain.",
+      "limitations": "Saved reference systems only. Witness old illustrative ceiling is not a solved result. Changed state/trust/actual ceiling needs valid new full assembly/provenance and proofs. This is not a new LP algorithm, performance result or feasibility witness. No small arithmetic example/old synthetic test is run.",
+      "max_path_edges": 128,
+      "lp_calls": 0,
+      "model_calls": 0,
+      "root_calls": 0,
+      "finite_maps": 0,
+      "new_candidate": false,
+      "physical_admission": false
+    },
+    "systems": {
+      "primary": {
+        "source_shape": [
+          408842,
+          56951
+        ],
+        "source_nnz": 2147925,
+        "shape": [
+          408842,
+          56951
+        ],
+        "nnz": 2147925,
+        "command_columns": 21840,
+        "directed_edge_rows": 96832,
+        "bidirected_pairs": 43648,
+        "forest_pairs": 21824,
+        "forest_components": 16,
+        "candidates": 44256,
+        "implied_rows": 0,
+        "path_source_row_uses": 0,
+        "unary_source_row_uses": 0,
+        "decisions": {
+          "not_implied": 9920,
+          "path_limit": 34336
+        },
+        "maximum_proved_path": 0,
+        "lp_columns_unchanged": true
+      },
+      "witness": {
+        "source_shape": [
+          577755,
+          56951
+        ],
+        "source_nnz": 2697204,
+        "shape": [
+          577755,
+          56951
+        ],
+        "nnz": 2697204,
+        "command_columns": 21840,
+        "directed_edge_rows": 96832,
+        "bidirected_pairs": 43648,
+        "forest_pairs": 21824,
+        "forest_components": 16,
+        "candidates": 44256,
+        "implied_rows": 0,
+        "path_source_row_uses": 0,
+        "unary_source_row_uses": 0,
+        "decisions": {
+          "not_implied": 9920,
+          "path_limit": 34336
+        },
+        "maximum_proved_path": 0,
+        "lp_columns_unchanged": true
+      }
+    },
+    "lp_calls": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physical_admission": false
+  },
+  "independent_audit": {
+    "utc": "2026-10-19T01:40:48.646169+00:00",
+    "passed": true,
+    "arithmetic_only": true,
+    "removed_row_certificates_empty": true,
+    "systems": {
+      "primary": {
+        "passed": true,
+        "source_rows": 408842,
+        "kept_rows": 408842,
+        "proved_removed_rows": 0,
+        "path_row_uses": 0,
+        "unary_row_uses": 0,
+        "exact_coefficient_additions": 0,
+        "coefficient_copy_error": 0,
+        "rhs_copy_error": 0,
+        "all_proof_rows_explicitly_retained": true,
+        "cost_bounds_equalities_unchanged": true,
+        "new_graph_edge_classification": 96832,
+        "old_proofs_repeated": false,
+        "lp_calls": 0,
+        "model_calls": 0,
+        "physical_admission": false,
+        "negative_decision_audit": {
+          "exact_tested_decisions": 9920,
+          "negative_endpoint_decisions": 9920,
+          "path_cap_decisions": 34336,
+          "longest_forest_path": 1063,
+          "coefficient_additions": 1942020,
+          "scope": "Negative decisions refer ONLY to the fixed forest path and fixed unary choices. They do not prove global nonredundancy, LP infeasibility or physical impossibility. Long paths were not arithmetically tested."
+        }
+      },
+      "witness": {
+        "passed": true,
+        "source_rows": 577755,
+        "kept_rows": 577755,
+        "proved_removed_rows": 0,
+        "path_row_uses": 0,
+        "unary_row_uses": 0,
+        "exact_coefficient_additions": 0,
+        "coefficient_copy_error": 0,
+        "rhs_copy_error": 0,
+        "all_proof_rows_explicitly_retained": true,
+        "cost_bounds_equalities_unchanged": true,
+        "new_graph_edge_classification": 96832,
+        "old_proofs_repeated": false,
+        "lp_calls": 0,
+        "model_calls": 0,
+        "physical_admission": false,
+        "negative_decision_audit": {
+          "exact_tested_decisions": 9920,
+          "negative_endpoint_decisions": 9920,
+          "path_cap_decisions": 34336,
+          "longest_forest_path": 1063,
+          "coefficient_additions": 1296608,
+          "scope": "Negative decisions refer ONLY to the fixed forest path and fixed unary choices. They do not prove global nonredundancy, LP infeasibility or physical impossibility. Long paths were not arithmetically tested."
+        }
+      }
+    },
+    "proof": "No rows were omitted: the removed-row proof set is EMPTY. Independently verify all saved tested negative endpoint decisions and combinatorial path-cap decisions, as well as exact full source copies. The fixed forest did not establish any new implication. No production code imported; no solver, model, old grouping/projection proof or fixture repeated.",
+    "lp_calls": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physical_admission": false
+  },
+  "local_verification": {
+    "utc": "2026-10-19T01:42:34.946427+00:00",
+    "all_hashes_verified": true,
+    "manifests": {
+      "command_forest_preparation_536": 13,
+      "command_forest_audit_537": 3
+    },
+    "manifest_entries": 16,
+    "scope": "New preparation/audit files only; no new HTML/visual report, model trajectory or video. All19840 tested chosen implications failed; no rows removed and no LP or path. Current reviewed report remains534."
+  },
+  "saved_scope": {
+    "utc": "2026-10-19T01:41:39.693999+00:00",
+    "scope": "Index saved536/537 negative evidence only; no matrix or arithmetic replay.",
+    "systems": {
+      "primary": {
+        "source_shape": [
+          408842,
+          56951
+        ],
+        "source_nnz": 2147925,
+        "shape": [
+          408842,
+          56951
+        ],
+        "nnz": 2147925,
+        "command_columns": 21840,
+        "directed_edge_rows": 96832,
+        "bidirected_pairs": 43648,
+        "forest_pairs": 21824,
+        "forest_components": 16,
+        "candidates": 44256,
+        "implied_rows": 0,
+        "path_source_row_uses": 0,
+        "unary_source_row_uses": 0,
+        "decisions": {
+          "not_implied": 9920,
+          "path_limit": 34336
+        },
+        "maximum_proved_path": 0,
+        "lp_columns_unchanged": true
+      },
+      "witness": {
+        "source_shape": [
+          577755,
+          56951
+        ],
+        "source_nnz": 2697204,
+        "shape": [
+          577755,
+          56951
+        ],
+        "nnz": 2697204,
+        "command_columns": 21840,
+        "directed_edge_rows": 96832,
+        "bidirected_pairs": 43648,
+        "forest_pairs": 21824,
+        "forest_components": 16,
+        "candidates": 44256,
+        "implied_rows": 0,
+        "path_source_row_uses": 0,
+        "unary_source_row_uses": 0,
+        "decisions": {
+          "not_implied": 9920,
+          "path_limit": 34336
+        },
+        "maximum_proved_path": 0,
+        "lp_columns_unchanged": true
+      }
+    },
+    "audit_systems": {
+      "primary": {
+        "passed": true,
+        "source_rows": 408842,
+        "kept_rows": 408842,
+        "proved_removed_rows": 0,
+        "path_row_uses": 0,
+        "unary_row_uses": 0,
+        "exact_coefficient_additions": 0,
+        "coefficient_copy_error": 0,
+        "rhs_copy_error": 0,
+        "all_proof_rows_explicitly_retained": true,
+        "cost_bounds_equalities_unchanged": true,
+        "new_graph_edge_classification": 96832,
+        "old_proofs_repeated": false,
+        "lp_calls": 0,
+        "model_calls": 0,
+        "physical_admission": false,
+        "negative_decision_audit": {
+          "exact_tested_decisions": 9920,
+          "negative_endpoint_decisions": 9920,
+          "path_cap_decisions": 34336,
+          "longest_forest_path": 1063,
+          "coefficient_additions": 1942020,
+          "scope": "Negative decisions refer ONLY to the fixed forest path and fixed unary choices. They do not prove global nonredundancy, LP infeasibility or physical impossibility. Long paths were not arithmetically tested."
+        }
+      },
+      "witness": {
+        "passed": true,
+        "source_rows": 577755,
+        "kept_rows": 577755,
+        "proved_removed_rows": 0,
+        "path_row_uses": 0,
+        "unary_row_uses": 0,
+        "exact_coefficient_additions": 0,
+        "coefficient_copy_error": 0,
+        "rhs_copy_error": 0,
+        "all_proof_rows_explicitly_retained": true,
+        "cost_bounds_equalities_unchanged": true,
+        "new_graph_edge_classification": 96832,
+        "old_proofs_repeated": false,
+        "lp_calls": 0,
+        "model_calls": 0,
+        "physical_admission": false,
+        "negative_decision_audit": {
+          "exact_tested_decisions": 9920,
+          "negative_endpoint_decisions": 9920,
+          "path_cap_decisions": 34336,
+          "longest_forest_path": 1063,
+          "coefficient_additions": 1296608,
+          "scope": "Negative decisions refer ONLY to the fixed forest path and fixed unary choices. They do not prove global nonredundancy, LP infeasibility or physical impossibility. Long paths were not arithmetically tested."
+        }
+      }
+    },
+    "new_graph_systems": 2,
+    "new_exact_path_decisions": 19840,
+    "new_negative_path_decisions": 19840,
+    "new_path_cap_decisions": 68672,
+    "new_proved_implications": 0,
+    "new_removed_rows": 0,
+    "new_lp_variables_removed": 0,
+    "independent_negative_coefficient_additions": 3238628,
+    "successful_reduction": false,
+    "full_projected_matrices_unchanged": true,
+    "empty_success_proof_scope": "No removed rows; all_proof_rows_explicitly_retained and zero positive-certificate additions describe EMPTY successful-proof sets. Separately audited19840 negative path decisions are actual new evidence.",
+    "negative_scope": "The fixed forest and fixed unary choices failed every tested endpoint implication.68672 candidate paths exceeded128-edge arithmetic cap and were retained untested. No global nonredundancy/infeasibility claim. No cap extension, alternate forest or unary-selection retry.",
+    "lp_calls": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "physical_admission": false,
+    "new_candidate": false,
+    "new_solver": false,
+    "task_complete": false
+  },
+  "old_scientific_calculations_repeated": false,
+  "execution_recovery": false,
+  "unexecuted_original_audit_preserved": true,
+  "new_reduction": false,
+  "new_solver_exists": false,
+  "new_complete_path": false,
+  "model_calls": 0,
+  "root_calls": 0,
+  "lp_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}

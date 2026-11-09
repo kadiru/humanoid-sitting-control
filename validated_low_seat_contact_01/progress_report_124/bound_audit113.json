@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-17T11:21:36.624683+00:00",
+  "passed": true,
+  "scope": "Independent all115-node finite-difference virtual work, equilibrium, initial/fixed commands, zero pre-lift/swing foot loading, preserved zero/assumed seat loading and model command constraints, plus saved GLOBAL LP primal/dual feasibility, signs, stationarity and duality gap. Certified numerical lower bound applies ONLY to visiting these115 fixed sampled poses in order under the unchanged static-command construction/contact force family. It is NOT a universal motion lower bound or dynamics/filtered execution certificate.",
+  "nodes": 115,
+  "max_virtual_work_error_Nm": 6.77515954450314e-09,
+  "max_equilibrium_residual": 4.440892098500626e-16,
+  "minimum_command_margin_rad": 0.03,
+  "maximum_static_effort_utilization": 0.8133993051728794,
+  "model_command_gate": true,
+  "specific_command_time_s": 14.420519490866504,
+  "dual_time_lower_bound_s": 14.420519490866493,
+  "maximum_primal_residual": 4.440892098500626e-16,
+  "dual_sign_violation": 9.901714691608699e-14,
+  "maximum_stationarity": 4.218847493575595e-14,
+  "duality_gap_s": 7.105427357601002e-15,
+  "planning_allowance_s": 13.5,
+  "command_time_gate": false,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_command_bound_112/results.json": "081b4ed9a5db5e07463622313c6c364100479659915be2b5b423e0b83d30d105",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/stance_com_path_v2_98/results.json": "cd70ad73525155d2db0974d9ddc0ba6b55a42063274d89011f4aaf3352621468",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_command_bound_113.py": "544cbf458322b251a06e3f06af766b5b165b5d27116b48bf387995dc408cfaf0",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_command_bound_112/inequalities.npz": "17333662950602a9530cce25fb849a179ef0efdf6db96b7232174f050c1fba77",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_command_bound_112/equalities.npz": "c33ad35974d32ec5c0ae0e925287c6bf0856b11421d96bbf937de8c191d7d3b6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_command_bound_112/lp_witness.npz": "4f69354c2070c56ba73964dbea1a3ed2466807d467adfec26e83d1f4fca02048"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "holdout_used": false,
+  "physical_admission": false
+}

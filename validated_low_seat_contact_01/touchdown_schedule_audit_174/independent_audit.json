@@ -1,0 +1,69 @@
+{
+  "utc": "2026-10-17T13:44:35.458791+00:00",
+  "passed": true,
+  "scope": "Independent vectorized interpolation, bounded-target and Torch filter audit173.\n\nNo schedule generator or feedback controller is imported. Synthetic settling\nand loading remain assumptions; this verifies command arithmetic only.\n",
+  "rows": [
+    {
+      "case": 0,
+      "ticks": 1000,
+      "duration_s": 11.42,
+      "nominal_interpolation_max_error_rad": 2.9103830456733704e-11,
+      "nominal_interpolation_exact": false,
+      "nominal_endpoint_exact": true,
+      "hold_ticks": 25,
+      "max_normal_speed_m_s": 0.006000000000499985,
+      "cpu_gpu_actual_filter_exact": true,
+      "clipped_targets": 0,
+      "fixed14_fingers_exact": true
+    },
+    {
+      "case": 1,
+      "ticks": 1000,
+      "duration_s": 11.42,
+      "nominal_interpolation_max_error_rad": 2.9103830456733704e-11,
+      "nominal_interpolation_exact": false,
+      "nominal_endpoint_exact": true,
+      "hold_ticks": 25,
+      "max_normal_speed_m_s": 0.006000000000499963,
+      "cpu_gpu_actual_filter_exact": true,
+      "clipped_targets": 0,
+      "fixed14_fingers_exact": true
+    },
+    {
+      "case": 6,
+      "ticks": 1000,
+      "duration_s": 11.42,
+      "nominal_interpolation_max_error_rad": 2.9103830456733704e-11,
+      "nominal_interpolation_exact": false,
+      "nominal_endpoint_exact": true,
+      "hold_ticks": 25,
+      "max_normal_speed_m_s": 0.006000000000499985,
+      "cpu_gpu_actual_filter_exact": true,
+      "clipped_targets": 0,
+      "fixed14_fingers_exact": true
+    },
+    {
+      "case": 7,
+      "ticks": 1000,
+      "duration_s": 11.42,
+      "nominal_interpolation_max_error_rad": 2.9103830456733704e-11,
+      "nominal_interpolation_exact": false,
+      "nominal_endpoint_exact": true,
+      "hold_ticks": 25,
+      "max_normal_speed_m_s": 0.00600000000049999,
+      "cpu_gpu_actual_filter_exact": true,
+      "clipped_targets": 0,
+      "fixed14_fingers_exact": true
+    }
+  ],
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_touchdown_schedule_174.py": "a465566c8d988e8574d7716deb0a3b958413ce574a6336cd2d1542e11fa968a7",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/touchdown_schedule_173/SHA256.json": "6c9044407fbb6194052d11b2099c0561c3e17fb3fa7da75f4e6853733d674cba",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/balanced_force_paths_144/SHA256.json": "8e14ffa431464536ecd92ca3556d53fdceef192e2f206dc0778d2dd764c84845",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+    "/data/humanoid-sitting-perception/posture_credit_01/ppo_01/seed_59117/train/final.pt": "7dc9c68f8897bb6c35451cbde6202f01247d68dc8af332f9ef283b368e4b8f65"
+  }
+}

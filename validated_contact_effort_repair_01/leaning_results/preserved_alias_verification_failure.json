@@ -1,0 +1,6 @@
+{
+  "phase": "failed",
+  "utc": "2026-10-14T19:49:06.781065+00:00",
+  "error": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/scripts/recover_leaning_holdout_calibration.py\", line 59, in <module>\n    study.verify(view,recovery/'verified_01')\n  File \"/home/kadir/humanoid-sitting/scripts/run_stable_effort_comparison.py\", line 73, in verify\n    label=f'dev_{seed}_block{block}';ev,_=evaluation(folder/label,18,previous);report['evaluations'][label]=ev\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/scripts/verify_stable_effort_leaning.py\", line 52, in evaluation\n    assert m['args']['checkpoint']==str(checkpoint)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

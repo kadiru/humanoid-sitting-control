@@ -1,0 +1,41 @@
+{
+  "checkpoint": "/data/humanoid-sitting-perception/positive_slope_01/ppo_01/seed_61117/block_02/train/final.pt",
+  "sha256": "0a2a40e2f240f358376d12eea6121bdd405116f1db25a13ecf16f86555470210",
+  "start_s": 6.0,
+  "evaluation": "/data/humanoid-sitting-perception/positive_slope_01/ppo_01/seed_61117/block_02/current_eval",
+  "gate": {
+    "passed": true,
+    "physical": {
+      "trials": 18,
+      "stable": 18,
+      "clean": 18,
+      "slip": 0,
+      "illegal": 0,
+      "physical": 0,
+      "strict": 4,
+      "max_friction_utilization": 1.0172383785247803,
+      "max_conservative_margin_ticks": 10,
+      "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit"
+    },
+    "effort": {
+      "metrics_whole_trial": {
+        "policy": 652.8048923611111,
+        "parent": 652.80765625,
+        "reference": 659.6260763888889,
+        "within_parent_tolerance": true,
+        "below_reference": true
+      },
+      "metrics_last5s": {
+        "policy": 196.48068967013887,
+        "parent": 196.48394401041665,
+        "reference": 210.34927126736113,
+        "within_parent_tolerance": true,
+        "below_reference": true
+      }
+    },
+    "conservative_warnings": "Unchanged .90 flags reported and penalized; advancement requires full supported success and zero measured slipping/contact/physical failures. Legacy .6 ratio is not a static capacity; .90 flags stay reported and penalized."
+  },
+  "block": 2,
+  "selection_timestamp": 1792149967.0701568,
+  "selection": "Admitted development training surfaces only: earliest passing time, whole-motion/resting effort; explicit frozen-parent fallback. Known stress and holdout excluded."
+}

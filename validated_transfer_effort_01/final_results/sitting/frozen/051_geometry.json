@@ -1,0 +1,52 @@
+[
+  {
+    "case": 0,
+    "label": "sit_dh+0.000_ds+0.0",
+    "kind": "sit",
+    "family": "slab",
+    "height": 0.4,
+    "x": -0.4,
+    "y": 0.0,
+    "yaw": 0.0,
+    "pitch_deg": 0.0,
+    "depth": 0.5,
+    "width": 0.9,
+    "top_center": [
+      -0.4,
+      0.0,
+      0.4
+    ],
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "rotation_xyzw": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "source": "/data/humanoid-sitting-perception/resting_seated_capture_dev02",
+    "source_index": 12,
+    "split": "identity",
+    "surface_id": 0,
+    "source_case": 3,
+    "stage": 6,
+    "phase": 1.0,
+    "pitch_correction_rad": 0.0,
+    "source_motion_id": 0,
+    "height_delta_m": 0.0,
+    "slope_delta_deg": 0.0,
+    "known_anchor": true,
+    "reset_scope": "Standing only; original intermediate/end states are commands, not validated resets on changed surfaces",
+    "start_stage": 0,
+    "control_profile": {
+      "name": "imu_pitch_balance",
+      "kp": 0.3,
+      "kd": 0.03,
+      "cap": 0.2
+    },
+    "effort_scale_Nm2": 1500.0
+  }
+]

@@ -1,0 +1,516 @@
+{
+  "runs": {
+    "train0": "support_rl_zero_train_01",
+    "train1": "support_rl_eval_train_01",
+    "regression0": "support_rl_zero_holdout_01",
+    "regression1": "support_rl_eval_holdout_01",
+    "extended0": "support_rl_zero_extended_01",
+    "extended1": "support_rl_eval_extended_01",
+    "ablation1": "support_rl_no_live_depth_01",
+    "regression2base": "support_rl_zero_regression_02",
+    "regression2": "support_rl_evaluate_regression_02",
+    "fresh0": "support_rl_zero_fresh_02",
+    "fresh2": "support_rl_evaluate_fresh_02",
+    "balanced0": "support_rl_zero_balanced_02",
+    "balanced2": "support_rl_evaluate_balanced_02"
+  },
+  "summaries": {
+    "train0": {
+      "trials": 8,
+      "successes": 7,
+      "maximum_impact_N": 729.8284301757812,
+      "median_impact_N": 303.37730407714844,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 0,
+        "pelvis_floor": 0,
+        "impact": 1,
+        "fast_descent": 0,
+        "torque": 0
+      },
+      "failed_cases": [
+        5
+      ],
+      "depth_accepted": 1482,
+      "depth_samples": 1600,
+      "max_accepted_clearance_error_cm": 0.3365924656391144,
+      "accepted_clearance_errors_above_2cm": 0,
+      "elapsed_s": 75.41105133201927,
+      "step_median_s": 0.026831946495804004,
+      "step_p95_s": 0.17629752425564219
+    },
+    "train1": {
+      "trials": 8,
+      "successes": 8,
+      "maximum_impact_N": 583.4830322265625,
+      "median_impact_N": 328.289306640625,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 0,
+        "pelvis_floor": 0,
+        "impact": 0,
+        "fast_descent": 0,
+        "torque": 0
+      },
+      "failed_cases": [],
+      "depth_accepted": 1469,
+      "depth_samples": 1600,
+      "max_accepted_clearance_error_cm": 0.320395827293396,
+      "accepted_clearance_errors_above_2cm": 0,
+      "elapsed_s": 75.06404682100401,
+      "step_median_s": 0.026737478983704932,
+      "step_p95_s": 0.17428692033863627
+    },
+    "regression0": {
+      "trials": 8,
+      "successes": 8,
+      "maximum_impact_N": 517.7946166992188,
+      "median_impact_N": 393.8346252441406,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 0,
+        "pelvis_floor": 0,
+        "impact": 0,
+        "fast_descent": 0,
+        "torque": 0
+      },
+      "failed_cases": [],
+      "depth_accepted": 1498,
+      "depth_samples": 1600,
+      "max_accepted_clearance_error_cm": 0.4505254328250885,
+      "accepted_clearance_errors_above_2cm": 0,
+      "elapsed_s": 75.44117246600217,
+      "step_median_s": 0.026781284512253478,
+      "step_p95_s": 0.1755916170499404
+    },
+    "regression1": {
+      "trials": 8,
+      "successes": 6,
+      "maximum_impact_N": 2318.033203125,
+      "median_impact_N": 442.6798095703125,
+      "failures": {
+        "fall": 2,
+        "wrong_contact": 2,
+        "pelvis_floor": 0,
+        "impact": 2,
+        "fast_descent": 0,
+        "torque": 0
+      },
+      "failed_cases": [
+        2,
+        3
+      ],
+      "depth_accepted": 1279,
+      "depth_samples": 1600,
+      "max_accepted_clearance_error_cm": 0.7461600303649902,
+      "accepted_clearance_errors_above_2cm": 0,
+      "elapsed_s": 74.99702724898816,
+      "step_median_s": 0.027012188496883027,
+      "step_p95_s": 0.1716884050052613
+    },
+    "extended0": {
+      "trials": 24,
+      "successes": 23,
+      "maximum_impact_N": 633.16748046875,
+      "median_impact_N": 414.7710876464844,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 0,
+        "pelvis_floor": 0,
+        "impact": 1,
+        "fast_descent": 0,
+        "torque": 0
+      },
+      "failed_cases": [
+        2
+      ],
+      "depth_accepted": 4506,
+      "depth_samples": 4800,
+      "max_accepted_clearance_error_cm": 0.47087883949279785,
+      "accepted_clearance_errors_above_2cm": 0,
+      "elapsed_s": 156.07291777801584,
+      "step_median_s": 0.029105703491950408,
+      "step_p95_s": 0.45955427091248563
+    },
+    "extended1": {
+      "trials": 24,
+      "successes": 23,
+      "maximum_impact_N": 711.668212890625,
+      "median_impact_N": 430.1321105957031,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 0,
+        "pelvis_floor": 0,
+        "impact": 1,
+        "fast_descent": 0,
+        "torque": 0
+      },
+      "failed_cases": [
+        2
+      ],
+      "depth_accepted": 4504,
+      "depth_samples": 4800,
+      "max_accepted_clearance_error_cm": 0.46389251947402954,
+      "accepted_clearance_errors_above_2cm": 0,
+      "elapsed_s": 155.98714824099443,
+      "step_median_s": 0.02930207298777532,
+      "step_p95_s": 0.46039871809625765
+    },
+    "ablation1": {
+      "trials": 8,
+      "successes": 6,
+      "maximum_impact_N": 2426.1904296875,
+      "median_impact_N": 362.1677703857422,
+      "failures": {
+        "fall": 1,
+        "wrong_contact": 1,
+        "pelvis_floor": 0,
+        "impact": 2,
+        "fast_descent": 0,
+        "torque": 0
+      },
+      "failed_cases": [
+        2,
+        3
+      ],
+      "depth_accepted": 1401,
+      "depth_samples": 1600,
+      "max_accepted_clearance_error_cm": 0.46778953075408936,
+      "accepted_clearance_errors_above_2cm": 0,
+      "elapsed_s": 76.8291600200173,
+      "step_median_s": 0.0280946889979532,
+      "step_p95_s": 0.17604286038840655
+    },
+    "regression2base": {
+      "trials": 8,
+      "successes": 8,
+      "maximum_impact_N": 517.7946166992188,
+      "median_impact_N": 393.8346252441406,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 0,
+        "pelvis_floor": 0,
+        "impact": 0,
+        "fast_descent": 0,
+        "torque": 0,
+        "perception_unavailable": 0
+      },
+      "failed_cases": [],
+      "depth_accepted": 1498,
+      "depth_samples": 1600,
+      "max_accepted_clearance_error_cm": 0.4505254328250885,
+      "accepted_clearance_errors_above_2cm": 0,
+      "elapsed_s": 75.47536301100627,
+      "step_median_s": 0.026964742501149885,
+      "step_p95_s": 0.17680381875834428
+    },
+    "regression2": {
+      "trials": 8,
+      "successes": 8,
+      "maximum_impact_N": 451.7208251953125,
+      "median_impact_N": 349.8089294433594,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 0,
+        "pelvis_floor": 0,
+        "impact": 0,
+        "fast_descent": 0,
+        "torque": 0,
+        "perception_unavailable": 0
+      },
+      "failed_cases": [],
+      "depth_accepted": 1505,
+      "depth_samples": 1600,
+      "max_accepted_clearance_error_cm": 0.4569522440433502,
+      "accepted_clearance_errors_above_2cm": 0,
+      "elapsed_s": 75.36530195199884,
+      "step_median_s": 0.026777007995406166,
+      "step_p95_s": 0.1766845422098413
+    },
+    "fresh0": {
+      "trials": 16,
+      "successes": 14,
+      "maximum_impact_N": 772.1080322265625,
+      "median_impact_N": 396.93951416015625,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 0,
+        "pelvis_floor": 0,
+        "impact": 2,
+        "fast_descent": 0,
+        "torque": 0,
+        "perception_unavailable": 0
+      },
+      "failed_cases": [
+        0,
+        15
+      ],
+      "depth_accepted": 3113,
+      "depth_samples": 3200,
+      "max_accepted_clearance_error_cm": 0.6324543356895447,
+      "accepted_clearance_errors_above_2cm": 0,
+      "elapsed_s": 115.7087787729979,
+      "step_median_s": 0.028646217004279606,
+      "step_p95_s": 0.3152094935489004
+    },
+    "fresh2": {
+      "trials": 16,
+      "successes": 14,
+      "maximum_impact_N": 651.123779296875,
+      "median_impact_N": 463.6197052001953,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 0,
+        "pelvis_floor": 0,
+        "impact": 2,
+        "fast_descent": 0,
+        "torque": 0,
+        "perception_unavailable": 0
+      },
+      "failed_cases": [
+        14,
+        15
+      ],
+      "depth_accepted": 3129,
+      "depth_samples": 3200,
+      "max_accepted_clearance_error_cm": 0.6067891716957092,
+      "accepted_clearance_errors_above_2cm": 0,
+      "elapsed_s": 116.08599422298721,
+      "step_median_s": 0.02837310198810883,
+      "step_p95_s": 0.3177234239090467
+    },
+    "balanced0": {
+      "trials": 16,
+      "successes": 14,
+      "maximum_impact_N": 784.23974609375,
+      "median_impact_N": 484.1279754638672,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 0,
+        "pelvis_floor": 0,
+        "impact": 2,
+        "fast_descent": 0,
+        "torque": 0,
+        "perception_unavailable": 0
+      },
+      "failed_cases": [
+        7,
+        11
+      ],
+      "depth_accepted": 2806,
+      "depth_samples": 3200,
+      "max_accepted_clearance_error_cm": 0.5055220127105713,
+      "accepted_clearance_errors_above_2cm": 0,
+      "elapsed_s": 116.04365761898225,
+      "step_median_s": 0.028598898992640898,
+      "step_p95_s": 0.313753704309056
+    },
+    "balanced2": {
+      "trials": 16,
+      "successes": 14,
+      "maximum_impact_N": 682.4385986328125,
+      "median_impact_N": 449.72344970703125,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 0,
+        "pelvis_floor": 0,
+        "impact": 2,
+        "fast_descent": 0,
+        "torque": 0,
+        "perception_unavailable": 0
+      },
+      "failed_cases": [
+        7,
+        11
+      ],
+      "depth_accepted": 2774,
+      "depth_samples": 3200,
+      "max_accepted_clearance_error_cm": 0.4164868891239166,
+      "accepted_clearance_errors_above_2cm": 0,
+      "elapsed_s": 115.50609646597877,
+      "step_median_s": 0.02850039949407801,
+      "step_p95_s": 0.31307674551353554
+    }
+  },
+  "comparisons": [
+    {
+      "label": "Pilot 1 training bank",
+      "baseline": "train0",
+      "candidate": "train1",
+      "common_successes": 7,
+      "gained_cases": [
+        5
+      ],
+      "lost_cases": [],
+      "paired_leg_rms_change_Nm": -0.20505186489650182,
+      "paired_baseline_leg_rms_Nm": 4.936014379773821,
+      "paired_candidate_leg_rms_Nm": 4.730962514877319,
+      "paired_leg_rms_change_percent": -4.154199099109956,
+      "paired_foot_fraction_change": -0.03879780854497637
+    },
+    {
+      "label": "Pilot 1 unseen bank",
+      "baseline": "regression0",
+      "candidate": "regression1",
+      "common_successes": 6,
+      "gained_cases": [],
+      "lost_cases": [
+        2,
+        3
+      ],
+      "paired_leg_rms_change_Nm": -0.05646864573160807,
+      "paired_baseline_leg_rms_Nm": 5.068271636962891,
+      "paired_candidate_leg_rms_Nm": 5.011802991231282,
+      "paired_leg_rms_change_percent": -1.1141598117942797,
+      "paired_foot_fraction_change": -0.04282725602388382
+    },
+    {
+      "label": "Pilot 1 larger unseen bank",
+      "baseline": "extended0",
+      "candidate": "extended1",
+      "common_successes": 23,
+      "gained_cases": [],
+      "lost_cases": [],
+      "paired_leg_rms_change_Nm": -0.010515078254367994,
+      "paired_baseline_leg_rms_Nm": 4.608492467714393,
+      "paired_candidate_leg_rms_Nm": 4.597977389460024,
+      "paired_leg_rms_change_percent": -0.22816741761071402,
+      "paired_foot_fraction_change": -0.01715632236522177
+    },
+    {
+      "label": "Pilot 1 live-depth ablation",
+      "baseline": "regression0",
+      "candidate": "ablation1",
+      "common_successes": 6,
+      "gained_cases": [],
+      "lost_cases": [
+        2,
+        3
+      ],
+      "paired_leg_rms_change_Nm": -0.2881876627604167,
+      "paired_baseline_leg_rms_Nm": 5.068271636962891,
+      "paired_candidate_leg_rms_Nm": 4.780083974202474,
+      "paired_leg_rms_change_percent": -5.68611320393061,
+      "paired_foot_fraction_change": -0.04286546011765798
+    },
+    {
+      "label": "Pilot 2 known regression bank",
+      "baseline": "regression2base",
+      "candidate": "regression2",
+      "common_successes": 8,
+      "gained_cases": [],
+      "lost_cases": [],
+      "paired_leg_rms_change_Nm": -0.3457030951976776,
+      "paired_baseline_leg_rms_Nm": 4.769378513097763,
+      "paired_candidate_leg_rms_Nm": 4.4236754179000854,
+      "paired_leg_rms_change_percent": -7.248388741809874,
+      "paired_foot_fraction_change": -0.034903026185929775
+    },
+    {
+      "label": "Pilot 2 fresh unseen bank",
+      "baseline": "fresh0",
+      "candidate": "fresh2",
+      "common_successes": 13,
+      "gained_cases": [
+        0
+      ],
+      "lost_cases": [
+        14
+      ],
+      "paired_leg_rms_change_Nm": -0.3048857175386869,
+      "paired_baseline_leg_rms_Nm": 4.416026482215295,
+      "paired_candidate_leg_rms_Nm": 4.111140764676607,
+      "paired_leg_rms_change_percent": -6.904073577605496,
+      "paired_foot_fraction_change": -0.02389699793778933
+    },
+    {
+      "label": "Pilot 2 training bank",
+      "baseline": "balanced0",
+      "candidate": "balanced2",
+      "common_successes": 14,
+      "gained_cases": [],
+      "lost_cases": [],
+      "paired_leg_rms_change_Nm": -0.33503687381744385,
+      "paired_baseline_leg_rms_Nm": 4.492087858063834,
+      "paired_candidate_leg_rms_Nm": 4.15705098424639,
+      "paired_leg_rms_change_percent": -7.4583775830655785,
+      "paired_foot_fraction_change": 0.014209796275411333
+    }
+  ],
+  "training": {
+    "pilot1": {
+      "path": "/data/humanoid-sitting-perception/support_rl_train_01",
+      "verification": {
+        "finite": true,
+        "max_parameter_change": 0.012762133032083511,
+        "transitions": 98304,
+        "ppo_iterations": 192,
+        "optimizer_contains_actor": true
+      },
+      "results": {
+        "mode": "train",
+        "elapsed_s": 787.897115196014,
+        "observed_complete_trials": 96,
+        "successes": 89,
+        "step_median_s": 0.026820468512596563,
+        "step_p95_s": 0.17475663781515322,
+        "depth_batch_median_s": 0.14202594848757144,
+        "depth_batch_p95_s": 0.15263983430195366,
+        "partial_training_episode_excluded": true
+      },
+      "final_checkpoint_sha256": "eaa0dea4c4c58cd3e3e16e3392d56188d0114e31ff4b879dcd37f4055eff786a"
+    },
+    "pilot2": {
+      "path": "/data/humanoid-sitting-perception/support_rl_diverse_train_02",
+      "verification": {
+        "finite": true,
+        "max_parameter_change": 0.010458789765834808,
+        "transitions": 98304,
+        "ppo_iterations": 96,
+        "optimizer_contains_actor": true
+      },
+      "results": {
+        "mode": "train",
+        "elapsed_s": 617.0837140590011,
+        "observed_complete_trials": 96,
+        "successes": 65,
+        "step_median_s": 0.028994854001211934,
+        "step_p95_s": 0.3133640283325803,
+        "depth_batch_median_s": 0.2781068820040673,
+        "depth_batch_p95_s": 0.2912770724884467,
+        "partial_training_episode_excluded": true
+      },
+      "final_checkpoint_sha256": "1c70e869ab4646c945b3bf3500188139183083b98feadca6aec2b03db76693b0"
+    }
+  },
+  "interrupted_run": {
+    "status": "interrupted",
+    "exit_status": 1,
+    "last_completed_optimizer_iteration": 14,
+    "completed_optimizer_updates": 15,
+    "optimized_transitions": 15360,
+    "reason": "Startup detector raised ValueError: Aligned landing patch is occluded or not observable, during first batch reset",
+    "final_checkpoint_exists": false,
+    "log_sha256": "0fb62842ed5f563947d8b5ef5392cbe044ac90e16f626d82df4d8b34b7267c7c",
+    "replacement_run": "support_rl_diverse_train_02",
+    "replacement_behavior": "Sensor-derived startup refusal retained in trial count; no geometry fallback or resampling"
+  },
+  "promotion": "Neither checkpoint replaces the existing default controller.",
+  "scope": "Two small residual PPO pilots over a frozen sensor-based motion scaffold; rigid reachable seats behind the robot.",
+  "limitations": [
+    "No navigation, soft cushions, arbitrary surfaces, hardware validation or statistical superiority established.",
+    "Actor and critic use sensor-derived channels. Simulator truth is used only for reward/failure labels and evaluation.",
+    "Ideal simulated depth and IMU equivalents; existing small proprioceptive noise/delay, not calibrated hardware sensing.",
+    "Foot force is a reward/evaluation label, not an actor input. Physical foot-pressure sensors are unverified.",
+    "Synchronized batch resets waste samples after a latched failure; this is a bounded pilot implementation.",
+    "The first balanced run stopped at its first reset on hidden startup geometry and is preserved. Pilot 2 counts unobservable starts as refused failures and holds posture; no resampling or truth fallback.",
+    "Torque comparisons include only matched successful attempts; all-trial failures and impact are reported separately.",
+    "PPO final checkpoints were fixed for evaluation. Pilot 1 failures informed Pilot 2 training coverage; that old bank is a regression test, not a fresh holdout."
+  ],
+  "admission_regression_check": {
+    "old_successes": 8,
+    "guarded_successes": 8,
+    "guarded_refusals": 0,
+    "maximum_paired_peak_force_difference_N": 0.0
+  }
+}

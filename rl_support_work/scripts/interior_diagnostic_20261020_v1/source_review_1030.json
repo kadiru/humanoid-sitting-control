@@ -1,0 +1,84 @@
+{
+  "utc": "2026-10-20T10:36:07.310405+00:00",
+  "classification": "LOCAL source review and process-control validation; no scientific run",
+  "previous_draft_preserved": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_source_draft_20261020_1010",
+  "source_directory": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_diagnostic_20261020_v1",
+  "reviewed_changes": [
+    "Supervisor catches interruption/failure, kills and reaps its child process group, records actual exit, then propagates the interruption without launching a later stage.",
+    "Numerical completion and overshoot use the backend deadline when no timely return marker exists, including a late zero-exit child observed between polls.",
+    "Backend return marker is tied to the supervised clock origin and independently compared with the backend result.",
+    "Independent audit compares the recorded numerical eta with the unchanged returned point.",
+    "Exact H matrix dtype/finite entries and125867 nonzeros are checked; frozen saved-interval integer size and conservative exact-return bit/trace bounds are enforced."
+  ],
+  "validation": {
+    "six_local_process_fixtures_passed": true,
+    "fixture_record": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_supervisor_review_20261020_1030/review.json",
+    "fixture_record_sha256": "df69b8194d9bdbc0e636b311c6192684b1fa2d8e27d71a0b18c4a28a384f21d3",
+    "all_fixture_children_stopped": true,
+    "scientific_arrays_or_solver_used_in_tests": false,
+    "test_clocks_are_short_local_fixtures_only": true,
+    "current_supervisor_matches_tested_source": true,
+    "final_compile": {
+      "compile_actual_exit": 0,
+      "single_cold_linprog_call_site": [
+        "producer.py"
+      ],
+      "production_authorization": false,
+      "launch_contract_exists": false,
+      "scientific_runs": 0,
+      "source_sha256": {
+        "common.py": "180b0d97ca870db5e5300d779e5097e3384ae94a0e6cc5b2a682cd6c3793bc4e",
+        "independent.py": "e79dc535382469442a06c398daecd37a1a5f2cfe08d301c1a4c432712d2ae874",
+        "preflight.py": "6006c0b6f6341cbf1352b72f23295053b7f17a82e57c35140e1e8f33b7f2b222",
+        "producer.py": "23fd38585e17ccd4bf7dcdb9ea8289d2e13e7bcf9d8dea6e6ce56fbf7d32c8bd",
+        "supervise.py": "68bded9f7a361d8b8192bfca47d0e57f6992de6870a76d1e655bedf92941eba7"
+      },
+      "resources_sha256": "457b82c6136f2a12cd9c3c3147e9f4a3e4c8eedf8928c54e97998694d7faf603"
+    }
+  },
+  "resource_accounting": {
+    "record": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_resource_accounting_20261020_1030.json",
+    "sha256": "457b82c6136f2a12cd9c3c3147e9f4a3e4c8eedf8928c54e97998694d7faf603",
+    "exact_trace_bytes_upper_bound": 188962816,
+    "interval_fraction_component_bits": 1075,
+    "exact_clearance_numerator_bits_upper_bound": 6364,
+    "exact_clearance_denominator_bits_upper_bound": 4299,
+    "exact_comparison_integer_bits_upper_bound": 10663,
+    "no_runtime_or_memory_speedup_claim": true
+  },
+  "source_review_scope": "Read and compare producer and independently implemented input/numerical/exact-return audits, clocks, failure branches and immutable initial-context reuse. No executed candidate or scientific input/return certificate is claimed. Installed runtime and live input/source freeze remain outstanding.",
+  "remote_readonly_snapshot": {
+    "tool": "3284d7",
+    "actual_exit": 0,
+    "utc": "2026-10-20T10:30:23.469857+00:00",
+    "workers": [],
+    "protocol_status_accepted_primary_hashes_match": true,
+    "interior_output_exists": false
+  },
+  "authorization": {
+    "approved": false,
+    "existing_question_pending": true,
+    "new_question_sent": false,
+    "primary_exception_consumed": true
+  },
+  "remaining_before_any_scientific_launch": [
+    "Explicit answer to the existing separate interior-diagnostic approval request.",
+    "Fresh governing/worker check and complete approved source/input/runtime launch contract; this review does not substitute for that freeze.",
+    "Bounded remote compilation, preservation and preflight; no calculation if any prerequisite fails."
+  ],
+  "scientific_activity_this_heartbeat": {
+    "primary_point_evaluations": 0,
+    "new_rhs_assemblies": 0,
+    "solver_calls": 0,
+    "exact_point_certificates": 0,
+    "finite_maps": 0,
+    "model_calls": 0,
+    "physical_trials": 0,
+    "PPO_updates": 0,
+    "holdout_trials": 0,
+    "remote_source_uploads": 0
+  },
+  "physical_result": "Unchanged64/72 clean;8 failures unresolved; mainPPO and freshholdout unstarted.",
+  "automation": "ACTIVE",
+  "launch_ready": false
+}

@@ -1,0 +1,40 @@
+{
+  "utc": "2026-10-17T23:10:35.244689+00:00",
+  "scope": "One complete nominal minimum-extension landing construction, zero physics.\n338exact nominal knee-hold is infeasible at final sampled foot targets. Keep\nboth foot poses and COM as hard constraints, unchanged joint/geometry screens,\nand minimize knee extension within [330nominal,330peak]. This replaces ONLY a\nnew research equality, never the runtime175raw-velocity/quiet/support contract.\nNo extra feedback authority, new angle range, gain, material or physical change.\n",
+  "case": 2,
+  "height_m": 0.024274582606774276,
+  "peak_knot": 55,
+  "peak_u": 0.8125,
+  "nominal_peak_knee_rad": 1.0280132412591372,
+  "original_landing_knee_rad": 0.9331056180263754,
+  "construction": "Retain330 through nominal knee peak. At9subsequent swingknots solve14hardfoot/COM equalities with16unknowns and originaljointbounds; knee additionally bounded between old330knee and oldpeak. Objective .5*(knee-peak)^2 +.5e-6*sum((f,p-oldf)^2);1e-6 is fixed offline tie-break weight, not controllergain. Descent>=max(previous,old),orientation>=previous,both<=1. Wholeapproach maps landingprogress to1; finalapproach/load exact330. Oneconstruction, no weight orparameter sweep.",
+  "maximum_complete_path_builds": 1,
+  "maximum_parameter_searches": 0,
+  "maximum_constraint_iterations_per_changed_swing_knot": 80,
+  "offline_phase_tie_break_weight": 1e-06,
+  "nominal_com_constraint_m": 1e-07,
+  "inputs": "Actual saved1s development q/IMU/geometry/command only; no runtime.",
+  "fixed_prior_parameters": [
+    0.13249248997109972,
+    0.4351349021283094,
+    -0.1883883483030849,
+    0.023619600000000004
+  ],
+  "fixed_endpoint": true,
+  "fixed_prior_swing_rotation_targets": true,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/build_low_seat_minimum_extension_340.py": "58e379b6e2e3271abcebe01903fca223abbb7220d1f095985faeab16ff40787a",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_lift_path_330/results.json": "495f70a6764e7c821bc8a1f2e0ad3819d45b3841b795bbd6153410aec39f3831",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/decoupled_phase_path_338/results.json": "afa4ce49d1a9244a62bd96c9e8af14a5431c3535376ffeb897265fded54630a1",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/decoupled_phase_audit_339/independent_audit.json": "3f0a16eac8d0636439113db981d0ed51e634591ac1fe84d76fee3fc007332da6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_stance_screen_89/results.json": "3cc9f72110080a0f207c81b0f29e1c1eee60a9eff9e8323abc07a582f949cbf2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+    "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json": "69e0920e2bec88a43b7a6dc41d0fc361500d060ef09e3e3a07bb04cdaf569584",
+    "/data/humanoid-sitting-perception/contact_effort_repair_01/plane_calibration.json": "6a6a0f078ced3d3510897e96670c26226dee25d495653a222cf1dd52e97a8009",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/trace.npz": "c380356202f31c64d5667f48bd2f8d13d3391c6f751dd19db2dc002101d020d2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/sensor_inputs.npz": "468d3637bc09c404b000b15f48bdbc1f2e8c6aacc23e51d966c2604801afb6d6"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}

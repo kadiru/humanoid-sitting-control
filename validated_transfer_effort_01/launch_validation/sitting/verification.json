@@ -1,0 +1,281 @@
+{
+  "passed": true,
+  "training": {
+    "budget": {
+      "updates": 2,
+      "transitions": 2304,
+      "active": 2304,
+      "warmup": 0
+    },
+    "changed": {
+      "actor_state_dict": [
+        "distribution.log_std_param",
+        "mlp.0.weight",
+        "mlp.0.bias",
+        "mlp.2.weight",
+        "mlp.2.bias",
+        "mlp.4.weight",
+        "mlp.4.bias"
+      ],
+      "critic_state_dict": [
+        "mlp.0.weight",
+        "mlp.0.bias",
+        "mlp.2.weight",
+        "mlp.2.bias",
+        "mlp.4.weight",
+        "mlp.4.bias"
+      ]
+    },
+    "iteration": 129,
+    "pending_warmup": 0,
+    "unfinished_active": 2304,
+    "checkpoint_sha256": "533964b70d26619aa9a04cf22a3fee99147c405deab41bca2ab5c7d2c6a99cfe"
+  },
+  "evaluation": {
+    "count": 18,
+    "successes": 8,
+    "physical_failures": 10,
+    "standing_count": 18,
+    "standing_successes": 8,
+    "standing_physical_failures": 10,
+    "failures_by_flag": {
+      "fall": 0,
+      "forbidden": 8,
+      "torque": 0,
+      "impact": 8,
+      "joint_limit": 0
+    },
+    "successes_by_stage": {
+      "0": {
+        "count": 18,
+        "success": 8
+      },
+      "1": {
+        "count": 0,
+        "success": 0
+      },
+      "2": {
+        "count": 0,
+        "success": 0
+      },
+      "3": {
+        "count": 0,
+        "success": 0
+      },
+      "4": {
+        "count": 0,
+        "success": 0
+      },
+      "5": {
+        "count": 0,
+        "success": 0
+      },
+      "6": {
+        "count": 0,
+        "success": 0
+      }
+    },
+    "max_command_change_100ms": 0.010000467300415039,
+    "command_envelope_error": 0.0,
+    "reference_other_joint_error": 2.3124361048232345e-07,
+    "constant_uncontrolled_commands": true,
+    "constant_fixed_commands": false,
+    "geometry": [
+      {
+        "case": 0,
+        "stage": 0,
+        "samples": 50,
+        "valid": 50,
+        "max_offset_mm": 2.106964165295877,
+        "max_normal_deg": 0.34473552651444983,
+        "moving_samples": 81,
+        "moving_missing": 0
+      },
+      {
+        "case": 1,
+        "stage": 0,
+        "samples": 50,
+        "valid": 50,
+        "max_offset_mm": 2.1069184452298106,
+        "max_normal_deg": 0.3448201276368119,
+        "moving_samples": 81,
+        "moving_missing": 0
+      },
+      {
+        "case": 2,
+        "stage": 0,
+        "samples": 50,
+        "valid": 50,
+        "max_offset_mm": 2.162094116210933,
+        "max_normal_deg": 0.3212402493318065,
+        "moving_samples": 81,
+        "moving_missing": 0
+      },
+      {
+        "case": 3,
+        "stage": 0,
+        "samples": 50,
+        "valid": 50,
+        "max_offset_mm": 2.162183523178096,
+        "max_normal_deg": 0.32142262848451814,
+        "moving_samples": 81,
+        "moving_missing": 0
+      },
+      {
+        "case": 4,
+        "stage": 0,
+        "samples": 50,
+        "valid": 50,
+        "max_offset_mm": 2.1722669649827386,
+        "max_normal_deg": 0.2940035332099411,
+        "moving_samples": 82,
+        "moving_missing": 0
+      },
+      {
+        "case": 5,
+        "stage": 0,
+        "samples": 50,
+        "valid": 50,
+        "max_offset_mm": 2.1724018235876885,
+        "max_normal_deg": 0.2937125263474948,
+        "moving_samples": 82,
+        "moving_missing": 0
+      },
+      {
+        "case": 6,
+        "stage": 0,
+        "samples": 101,
+        "valid": 101,
+        "max_offset_mm": 2.0404636481647365,
+        "max_normal_deg": 0.3449348983167078,
+        "moving_samples": 101,
+        "moving_missing": 0
+      },
+      {
+        "case": 7,
+        "stage": 0,
+        "samples": 101,
+        "valid": 101,
+        "max_offset_mm": 2.0406215422185126,
+        "max_normal_deg": 0.3447409542627128,
+        "moving_samples": 101,
+        "moving_missing": 0
+      },
+      {
+        "case": 8,
+        "stage": 0,
+        "samples": 101,
+        "valid": 101,
+        "max_offset_mm": 2.094781398773171,
+        "max_normal_deg": 0.32114555133428013,
+        "moving_samples": 101,
+        "moving_missing": 0
+      },
+      {
+        "case": 9,
+        "stage": 0,
+        "samples": 101,
+        "valid": 101,
+        "max_offset_mm": 2.094602584838845,
+        "max_normal_deg": 0.321333211500052,
+        "moving_samples": 101,
+        "moving_missing": 0
+      },
+      {
+        "case": 10,
+        "stage": 0,
+        "samples": 50,
+        "valid": 50,
+        "max_offset_mm": 2.1047959266508043,
+        "max_normal_deg": 0.29374546852821426,
+        "moving_samples": 81,
+        "moving_missing": 0
+      },
+      {
+        "case": 11,
+        "stage": 0,
+        "samples": 50,
+        "valid": 50,
+        "max_offset_mm": 2.1052809824917973,
+        "max_normal_deg": 0.2934563912410065,
+        "moving_samples": 81,
+        "moving_missing": 0
+      },
+      {
+        "case": 12,
+        "stage": 0,
+        "samples": 47,
+        "valid": 47,
+        "max_offset_mm": 1.9734777247287227,
+        "max_normal_deg": 0.34492314543027497,
+        "moving_samples": 75,
+        "moving_missing": 0
+      },
+      {
+        "case": 13,
+        "stage": 0,
+        "samples": 47,
+        "valid": 47,
+        "max_offset_mm": 1.9741283182073688,
+        "max_normal_deg": 0.34500105041283485,
+        "moving_samples": 75,
+        "moving_missing": 0
+      },
+      {
+        "case": 14,
+        "stage": 0,
+        "samples": 101,
+        "valid": 101,
+        "max_offset_mm": 2.0262765884399014,
+        "max_normal_deg": 0.3234206628307116,
+        "moving_samples": 100,
+        "moving_missing": 0
+      },
+      {
+        "case": 15,
+        "stage": 0,
+        "samples": 101,
+        "valid": 101,
+        "max_offset_mm": 2.026634216308554,
+        "max_normal_deg": 0.32332417722586043,
+        "moving_samples": 100,
+        "moving_missing": 0
+      },
+      {
+        "case": 16,
+        "stage": 0,
+        "samples": 101,
+        "valid": 101,
+        "max_offset_mm": 2.0378104797790786,
+        "max_normal_deg": 0.2935678288222489,
+        "moving_samples": 102,
+        "moving_missing": 0
+      },
+      {
+        "case": 17,
+        "stage": 0,
+        "samples": 101,
+        "valid": 101,
+        "max_offset_mm": 2.0379142788031213,
+        "max_normal_deg": 0.2938478335360489,
+        "moving_samples": 101,
+        "moving_missing": 0
+      }
+    ]
+  },
+  "startups": {
+    "root": 0.0,
+    "q": 0.0,
+    "command": 0.0,
+    "geometry": 0.0,
+    "sensor_history": 0.0
+  },
+  "retention": {
+    "eligible": true,
+    "lost_success_conditions": [],
+    "new_physical_failures": [],
+    "successes": 8,
+    "reference_common_count": 8,
+    "mean_squared_torque": 563.18065234375
+  }
+}

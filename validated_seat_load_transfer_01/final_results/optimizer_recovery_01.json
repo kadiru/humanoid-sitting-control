@@ -1,0 +1,6 @@
+{
+  "issue": "RSL-RL allocates rollout advantages in inference mode; in-place active-only normalization initially ran outside inference mode.",
+  "repair": "Wrap only advantage normalization in inference_mode. Losses, gradients, masks, rewards and budgets unchanged. Initial failed2880-target smoke preserved; it collected1440 transitions and made zero optimizer updates. Fresh smoke02 repeats the2-update test.",
+  "preserved_source": "active_sample_ppo_before_inference_fix.py",
+  "regression": "optimizer_regression_02.json"
+}

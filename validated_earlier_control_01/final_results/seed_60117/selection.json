@@ -1,0 +1,31 @@
+{
+  "checkpoint": "/data/humanoid-sitting-perception/earlier_control_01/ppo_01/seed_60117/block_03/train/final.pt",
+  "sha256": "399a4fb3dd98a23a34e3a08073de8659c59ec9751b8a29dc4552b355917a2c7c",
+  "start_s": 10.0,
+  "evaluation": "/data/humanoid-sitting-perception/earlier_control_01/ppo_01/seed_60117/block_03/current_eval",
+  "gate": {
+    "passed": true,
+    "reasons": [],
+    "effort": {
+      "metrics_whole_trial": {
+        "policy": 593.0571770833334,
+        "parent": 593.0372048611111,
+        "reference": 598.8959201388889,
+        "parent_ratio": 1.0000336778570695,
+        "reference_ratio": 0.9902508217885314
+      },
+      "metrics_last5s": {
+        "policy": 205.29272743055557,
+        "parent": 205.24874001736111,
+        "reference": 215.19404817708335,
+        "parent_ratio": 1.0002143127075505,
+        "reference_ratio": 0.9539888726923341
+      }
+    },
+    "stable": 18,
+    "strict": 18
+  },
+  "block": 3,
+  "selection_timestamp": 1792117438.9360974,
+  "selection": "Development only: earliest passing time, whole-motion effort, resting effort; parent fallback if no candidate"
+}

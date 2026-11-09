@@ -1,0 +1,142 @@
+{
+  "utc": "2026-10-23T23:48:39.892907+00:00",
+  "classification": "Terminal solver deadline failure of one substantively new current-state two-gap construction; no candidate",
+  "folder": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/targeted_gap_primary_20261023_v1",
+  "contract_sha256": "9b7b765080fd47465b154e989acbfe8b28d5cbf1b93c2bbfdaad99dc6ba8d4f2",
+  "manifest_sha256": "d538c0327e14f9bb3232019404b5268a49d9286b65d3a28395acc46e6098eabe",
+  "result_sha256": "37080560db4ba0309bf5fbad30a52cb23aaabec9d3e4e36ad4038c82e16970b8",
+  "audit_sha256": "22ea815c2a494a01d1e8ac236b590f885bf7cc7d11e996b6cfdcd9b745618030",
+  "archive_sha256": "a2685805976f93722097512d1c7cd1310b3319e7cab67b2963f58f6ac5500bec",
+  "authorization_basis": "Standing continuation under all inherited gates and45s cap; no previously consumed waiver/budget allowance used",
+  "execution": {
+    "launch_tool": "1ff1a8",
+    "completion_tool": "1352e3",
+    "local_session_id": 16342,
+    "actual_exit": 0,
+    "owner_process_seconds": 32.85,
+    "total_cap_seconds": 45,
+    "producer_hard_limit_seconds": 37,
+    "audit_hard_limit_seconds": 44,
+    "solver_soft_absolute_deadline_seconds": 32,
+    "no_total_deadline_overshoot": true,
+    "producer": {
+      "stage": "producer",
+      "actual_exit": 0,
+      "elapsed_s": 32.35720207984559,
+      "total_elapsed_s": 32.39693635585718,
+      "completed_within_deadline": true,
+      "stage_deadline_s": 37.0,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "overshoot_s": 0.0,
+      "peak_rss_bytes": 860045312,
+      "worker_pid": 2015930,
+      "supervisor_error": null
+    },
+    "audit": {
+      "stage": "audit",
+      "actual_exit": 0,
+      "elapsed_s": 0.39499868801794946,
+      "total_elapsed_s": 32.792352478951216,
+      "completed_within_deadline": true,
+      "stage_deadline_s": 44.0,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "overshoot_s": 0.0,
+      "peak_rss_bytes": 25747456,
+      "worker_pid": 2016036,
+      "supervisor_error": null
+    },
+    "solver_marker": {
+      "method": "highs-ipm",
+      "options": {
+        "time_limit": 25.828074011020362,
+        "maxiter": 4096,
+        "presolve": true,
+        "primal_feasibility_tolerance": 1e-09,
+        "dual_feasibility_tolerance": 1e-09,
+        "ipm_optimality_tolerance": 1e-09
+      },
+      "cold": true,
+      "x0_or_basis": false,
+      "elapsed_s": 6.171935526886955
+    },
+    "backend": {
+      "status": 1,
+      "success": false,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "candidate_returned": false,
+      "iterations": 8,
+      "crossover_iterations": 0,
+      "total_elapsed_s": 32.33349334192462
+    }
+  },
+  "scientific_result": {
+    "new_state_input_proved": true,
+    "new_consistency_rows": 68250,
+    "new_exact_interval_rows": 92267,
+    "full_original_shape": [
+      652529,
+      78791
+    ],
+    "full_original_nnz": 2614306,
+    "augmented_shape": [
+      652531,
+      78791
+    ],
+    "augmented_nnz": 2614318,
+    "target_rows": [
+      214643,
+      215327
+    ],
+    "added_target_nonzeros": [
+      6,
+      6
+    ],
+    "original_cost_bounds_rows_and_both_consistency_signs_retained": true,
+    "solves": 1,
+    "IPM_iterations": 8,
+    "crossover_iterations": 0,
+    "candidate_returned": false,
+    "candidate_accepted": false,
+    "return_KKT_executed": false,
+    "zero_added_marginal_gate_executed_on_study_point": false,
+    "interior_calls": 0,
+    "finite_maps": 0,
+    "model_calls": 0,
+    "Jacobian_calls": 0,
+    "physical_trials": 0,
+    "PPO_updates": 0,
+    "holdout_trials": 0
+  },
+  "result_interpretation": "The source/input/target audits passed and the single cold solver returned its time-limit status without a point. The new actual-gap constraints are not validated as a repair or proved infeasible. No global feasibility, exact optimality, conditioning, speed gain or physical improvement follows from this timeout. Process exit0 and independent failure audit PASS are accounting outcomes.",
+  "terminal_rules": [
+    "Do not restart/extend this solver, continue its8IPM iterations, change backend/options/presolve/crossover to retry, or select internal vectors.",
+    "Do not rerun the completed new-state assembly, interval/full-input proof or two target constructions to obtain a second attempt.",
+    "Saved artifacts may be inherited by hash only for a genuinely substantive new construction with complete sources/resources/independent audits.",
+    "No automatic budget exception, certificate waiver, finite map, model replay, simulation or PPO."
+  ],
+  "source_preparation_failure": {
+    "tool": "417444",
+    "actual_exit": 1,
+    "scope": "Metadata authoring assumed prior SHA256.json filename; current finite output uses manifest.json. Occurred before frozen scientific launch. Corrected metadata only; no scientific work replayed.",
+    "record": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/targeted_gap_primary_20261023_v1/preparation_failure.json"
+  },
+  "current_accepted_model": "finite_model_step_20261023_v1; research merit.08605330623059242; actual motion admission FAILED",
+  "physical_status": "best09:64/72clean,70stable,8slipping,2housing-contact;categories overlap;all64protected/all8unresolved",
+  "physical_success": false,
+  "completion": false,
+  "automation": "ACTIVE",
+  "last_worker_check": {
+    "utc": "2026-10-23T23:47:34.744217+00:00",
+    "workers": [],
+    "tool": "aed711"
+  },
+  "evidence_verification": {
+    "source_compile_and_workers_tool": "786312",
+    "synthetic_tests_tool": "50613d",
+    "remote_preservation_tool": "aed711",
+    "local_copy_verification_tool": "34e791",
+    "local_verified_manifest_entries": 44
+  }
+}

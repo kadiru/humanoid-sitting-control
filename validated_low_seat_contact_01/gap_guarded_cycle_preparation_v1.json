@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "utc": "2026-10-24T06:54:06.748275+00:00",
+  "classification": "Source preparation and synthetic verification completed; no scientific experiment",
+  "source_directory": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/gap_guarded_cycle_v1",
+  "freeze": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/gap_guarded_cycle_v1/freeze.json",
+  "freeze_sha256": "419ba7c90c232439c506c9fd9c461beb47e0150f69a13f27b218911b70729ecf",
+  "source_review": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/gap_guarded_cycle_v1/source_review.json",
+  "source_review_sha256": "caa16e51a3fc53b43ab91ca245ac332a3c59de33b9c14b6742e635c49ab7bd08",
+  "synthetic_result": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/gap_guarded_cycle_v1/synthetic_result.json",
+  "synthetic_result_sha256": "ea3e3dd8f7fe500ee22aa19eb1c8bfc3dfeaf3fee092dbc389a2d2b4e0522374",
+  "synthetic_tests_passed": 21,
+  "synthetic_test_seconds": 0.3340594309847802,
+  "study_data_access_blocked_in_tests": true,
+  "scientific_launches": 0,
+  "solver_calls": 0,
+  "model_calls": 0,
+  "proposal": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_proposal_v1.json",
+  "proposal_sha256": "72c4aafa098419ba2ee69623ff5597b4fab14fd8626befb5a99a835f975253b2",
+  "approval_received": false,
+  "launch_ready": false,
+  "source_preparation_complete": true,
+  "pending": "Same previously asked three-exception approval; no new approval request and no prior waiver reused.",
+  "changes": [
+    "Saved augmented primary input reused by hash; strengthened KKT and separate original primal checks.",
+    "Both actual-gap rows retained through the newly assembled interior; independent coefficient/RHS check and unscaled exact margin audit.",
+    "Finite map keeps all original invariants; separate nonlinear gates demand1%actual improvement,both target rows>=0,no new hard-row violation,worst hard violation not increased.",
+    "One exclusive owner,stage clocks includingaudits,kill/reap and failed-stage termination; false approval preventslaunch."
+  ],
+  "runtime_input_bindings": {
+    "A": {
+      "inputs": 40,
+      "runtime": 2362
+    },
+    "B": {
+      "inputs": 40,
+      "runtime": 2362
+    },
+    "C": {
+      "inputs": 54,
+      "runtime": 6701
+    }
+  },
+  "launch_preconditions": [
+    "Explicit human approval receipt",
+    "Consult unchanged full governing context and latest checkpoint",
+    "Deploy exactly this freeze to remote scripts/gap_guarded_cycle_v1",
+    "One owner; no active workers; no existing owner claim/output;3GiB disk",
+    "Runtime/input hash verification inside stage clocks"
+  ],
+  "physical": {
+    "clean": "64/72",
+    "stable": 70,
+    "slipping": 8,
+    "housing_contact": 2,
+    "categories_overlap": true,
+    "all64_protected": true,
+    "all8_unresolved": true,
+    "main_PPO": "unstarted",
+    "fresh_holdout": "closed"
+  },
+  "automation": "ACTIVE",
+  "latest_science_unchanged": true
+}

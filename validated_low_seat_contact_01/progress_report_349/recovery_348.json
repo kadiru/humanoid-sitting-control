@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-17T23:45:16.226860+00:00",
+  "failure": "Original348 asserted every saved record column identical across fixture modes. The requested load-permission field intentionally differs for no_load, although applied commands/targets/positions remain equal before the early stall.",
+  "repair": "Compare exact applied/target/position arrays and all record columns except requested load permission; independently verify that permission field is0 for no_load and.1 otherwise. Preserve all original source/log/output. No schedule/optimizer/physics/audit rerun or threshold change.",
+  "physics_ticks": 0
+}

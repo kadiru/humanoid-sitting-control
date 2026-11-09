@@ -1,0 +1,46 @@
+{
+  "classification": "Input representation/resource accounting only; no scientific point evaluation",
+  "utc": "2026-10-20T10:33:47.866859+00:00",
+  "interval_rows": 92267,
+  "H_coefficient_slots_from_header": 125867,
+  "maximum_integer_bits_in_saved_lower_upper_width_pairs": 1075,
+  "exact_dyadic_dot_derivation": [
+    "Every finite binary64 coordinate/coefficient has magnitude less than2^1024 and is an integer multiple of2^-1074.",
+    "Each product is an integer over2^2148 with numerator magnitude less than2^4196.",
+    "At most125867<2^17 products can appear in one H row, so a row numerator needs at most4213bits and denominator at most2149bits.",
+    "If interval numerator/denominator components use at mostBbits, subtracting a bound and dividing by a width uses at most4214+2B numerator bits and2149+2B denominator bits before reduction.",
+    "Comparing two clearances needs products of at most6363+4B bits. These are conservative mathematical size bounds, not observed runtime/RSS or exact-point results."
+  ],
+  "dot_numerator_bits_upper_bound": 4213,
+  "dot_denominator_bits_upper_bound": 2149,
+  "clearance_numerator_bits_upper_bound": 6364,
+  "clearance_denominator_bits_upper_bound": 4299,
+  "clearance_comparison_integer_bits_upper_bound": 10663,
+  "exact_trace_bytes_per_row_upper_bound": 2048,
+  "exact_trace_total_bytes_upper_bound": 188962816,
+  "proof_of_trace_bound": "Decimal encoding of a signed4213-bit numerator, positive2149-bit denominator,5-digit row index and JSON punctuation is less than2048bytes. Trace contains only exact H*d, not clearance fractions.",
+  "CSR_storage_bytes": {
+    "M": 36209272,
+    "A": 7952564,
+    "C": 9262996,
+    "H": 1879476
+  },
+  "pre_backend_new_point_sparse_products_per_implementation": 1301250,
+  "pre_backend_new_point_sparse_products_producer_plus_auditor": 2602500,
+  "post_backend_full_M_products_per_implementation": 5476836,
+  "post_backend_full_M_products_producer_plus_auditor": 10953672,
+  "post_backend_exact_H_products_producer_plus_auditor": 251734,
+  "additional_charged_costs": [
+    "Complete immutable input/source/runtime hashing and preservation",
+    "All input JSON/NPZ parsing, duplicate identity loads, imports and vector storage",
+    "Fresh467995 RHS entries in producer and independent input audit",
+    "Full row/bounds/equality/dual stationarity/absolute-gap work, exact interval clearances and comparisons",
+    "Output NPZ/JSON/trace writes and independent exact-trace reads",
+    "HiGHS internal factorization/crossover memory and iteration work, with no finite count or runtime guarantee beyond frozen maxiter and external caps"
+  ],
+  "memory_runtime_policy": "40GiB address-space cap per worker;5min preflight;10min numerical, backend return before minute5;10min audit. CPU/native allocations count; deadline failure or allocation failure means unaccepted and no retry.",
+  "storage_policy": "Reserve10GiB available disk at preflight; exact trace upper bound below181MiB, ordinary output arrays/dimensions known; no input dataset copied into output. Backend native working memory is not treated as a predicted bound.",
+  "primary_point_evaluations": 0,
+  "solver_calls": 0,
+  "exact_point_certificates": 0
+}

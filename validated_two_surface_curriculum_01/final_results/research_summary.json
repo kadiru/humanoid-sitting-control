@@ -1,0 +1,44 @@
+{
+  "result": "Validated 14 static poses, but residual PPO did not improve overall transition reliability over the reference.",
+  "training_transitions": 294912,
+  "active_transitions": 288000,
+  "warmup_transitions": 6912,
+  "static_retention": "14/14 poses, full20 seconds",
+  "last_policies": {
+    "54911": {
+      "support_successes": 6,
+      "physical_failures": 3,
+      "standing_sitting": false,
+      "standing_leaning": false,
+      "trained_stages": [
+        4,
+        5,
+        6
+      ]
+    },
+    "54917": {
+      "support_successes": 9,
+      "physical_failures": 3,
+      "standing_sitting": false,
+      "standing_leaning": true,
+      "trained_stages": [
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  "reference": {
+    "support_successes": 9,
+    "physical_failures": 2,
+    "standing_successes": 0
+  },
+  "fixed": "All14 retain posture without physical failure;7 are already-supported starts.",
+  "effort": "On common successful sitting starts5/6, last-policy whole-trial total squared torque is18.96%/19.11% lower than holding fixed posture. Against reference motion, the corresponding common sitting transitions3\u20136 improve only1.97%/1.58%. Most of the improvement over fixed posture comes from the reference movement.",
+  "leaning_effort": "On each policy\u2019s common successes, whole-trial squared torque is11.69%/28.62% higher than fixed posture. Against reference it changes+1.14%/\u22121.56%; case sets differ.",
+  "reproducibility": "Seed54917 stage3 lean fails the2-environment GPU1 gate but passes the14-environment GPU0 final evaluation. Starts differ by up to11.27 micrometers in translation,17.70 microradians in joint position and0.000675 in normalized observation components. This does not establish the cause of the outcome change; robust repeatability is unproven. Within the final comparison every controller has bitwise-identical starts.",
+  "perception": "100% availability in recorded audit samples before physical failure; no missing motion samples at10Hz; worst plane offset error2.104mm and normal error0.365degrees, rounded upward.",
+  "next": "Use separate sitting and leaning curricula, so leaning cannot block sitting progress. Validate contact-safe weight transfer between poses across environment placements before a larger run; keep the same physical acceptance gates and compare against reference-only motion. Any further run requires a new recorded protocol; none is launched here.",
+  "promotion": "No policy promoted."
+}

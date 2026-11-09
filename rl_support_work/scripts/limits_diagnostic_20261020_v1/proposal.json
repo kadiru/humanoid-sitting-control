@@ -1,0 +1,112 @@
+{
+  "kind": "limits_review_proposal",
+  "version": 1,
+  "date": "2026-10-20",
+  "authorization": {
+    "user_authorized": "Prepare a limits-review proposal.",
+    "execution_approved": false,
+    "current_rules_remain_in_force": true,
+    "implementation_and_source_input_audit_freeze_required_before_launch": true
+  },
+  "recommendation": "One separately recorded cold diagnostic of the identical initial598 linear problem, with a larger fixed time allowance and reserved validation time. This is a scoped exception request, not a new mathematical construction or a repair claim.",
+  "question_to_resolve": "Can the existing certified initial input produce a complete primary vector that passes all required return checks and an independent audit when given more computation time?",
+  "why_this_test": {
+    "prior_run": 598,
+    "prior_total_limit_seconds": 45,
+    "prior_backend_allowance_seconds": 26.87753807194531,
+    "prior_backend_elapsed_seconds": 27.560491129988804,
+    "prior_charged_total_seconds": 45.68326182605233,
+    "prior_ipm_iterations": 6,
+    "prior_candidate_returned": false,
+    "evidence": [
+      "balance_path_598/major_00/primary/lp/backend_result.json",
+      "balance_path_598/major_00/primary/lp/result.json",
+      "balance_path_launch_598.json"
+    ],
+    "interpretation": "The timeout left feasibility unresolved. The new allowance is a bounded research choice, not a prediction that the problem will solve or validate within that time."
+  },
+  "requested_rule_exceptions": [
+    "Permit exactly one new cold invocation of the same initial certified numerical problem despite the inherited terminal-solver no-restart rule. Never resume internal iterates or overwrite598.",
+    "Replace the45-second total numerical-construction deadline with600 seconds for this diagnostic only.",
+    "Replace the inherited120-second child-wall supervisor with supervision enforcing the new absolute phase deadlines. Do not leave an old120-second kill limit silently active."
+  ],
+  "budget": {
+    "prelaunch_stage": {
+      "maximum_seconds": 300,
+      "scope": "After implementation is prepared: worker ownership, preservation/source/input identity checks, compile checks and final source/input/resource/auditor manifest. Stop before numerical work if incomplete. This stage performs no model, matrix reconstruction, completed proof replay or optimization."
+    },
+    "numerical_stage": {
+      "maximum_seconds": 600,
+      "origin": "Main entry before scientific imports, charged input/global checks and preparation.",
+      "backend_absolute_deadline_seconds_from_origin": 300,
+      "backend_policy": "Exactly one cold HiGHS-IPM call. Pass only the time remaining until the300-second absolute deadline; abort without calling if setup exhausted it. No warm start, fallback, method change or automatic repeat.",
+      "return_policy": "If a complete backend vector arrives before that deadline, perform the inherited exact reconstruction and all nine-system return checks within the same600-second total allowance. Earlier solver completion leaves more time for validation.",
+      "hard_supervision": "A supervisor must enforce the phase deadlines even if a backend or arithmetic operation does not return promptly. Any overshoot, termination, partial output or nonzero actual exit is recorded and cannot count as successful completion."
+    },
+    "independent_audit_stage": {
+      "maximum_seconds": 600,
+      "scope": "One separately bounded independent audit of the new run's input associations, solver settings, timing, actual exit, new point/rounding/residual arithmetic and all required acceptance gates. Inherit completed coefficient/proof certificates by verified identity; do not recompute them.",
+      "incomplete_audit": "Candidate remains unaccepted. No automatic extension or rerun."
+    },
+    "maximum_scientific_and_prelaunch_stage_seconds": 1500,
+    "plain_language": "At most25 minutes across5-minute prelaunch,10-minute calculation/validation and10-minute independent audit stages. Report compilation, transport and post-termination status-recording time separately; they cannot perform additional science or admit a late result.",
+    "address_space_bytes_per_scientific_worker": 42949672960,
+    "max_backend_iterations": 4096,
+    "primary_optimizer_invocations": 1,
+    "interior_optimizer_invocations": 0,
+    "nonlinear_model_updates": 0,
+    "physical_trials": 0,
+    "policy_updates": 0,
+    "holdout_trials": 0
+  },
+  "fixed_inputs_and_algorithm": {
+    "problem": "Initial596 compensated inner representation of exact594/586/578/572 zero face, with10541 original retained coordinates,265967 inequalities and explicit finite bounds.",
+    "state": "Inherited472 INITIAL X/Y/J,490 canonical auxiliary values and unchanged exact drops; no old internal or rejected solution vector.",
+    "backend": "The installed SciPy/HiGHS-IPM version and existing cold settings, presolve enabled, maxiter4096 and primal/dual/IPM tolerances1e-9.",
+    "validation": "Use the original materialized exact-row return and independent audit arithmetic. Do not combine this timing diagnostic with the unvalidated source-row evaluator proposed in return_design_20261020_0822.json.",
+    "gates": "Keep all nine systems, full original bounds and constraints, bitwise retained coordinates, exact unrounded graph intermediates, once-only rounding of68250 eliminated coordinates, required primal/equality/stationarity/absolute-gap checks, and all physical criteria.",
+    "original_manifest": {
+      "path": "balance_path_launch_598.json",
+      "sha256": "9737d66275ca694e0260114915fd8a8759a929f2f6d6fd09d0880a6ab06e0677",
+      "status": "Recorded inherited manifest identity. Full live source/input verification is a prelaunch requirement, not claimed completed by this proposal."
+    },
+    "output": "A new non-overwriting diagnostic directory and immutable source/input/resource manifest. Existing598 results and all historical failures remain preserved."
+  },
+  "outcome_rules": [
+    {
+      "outcome": "Complete primary vector passes every return gate and independent audit before deadlines.",
+      "meaning": "A checked linear primary result under the frozen criteria. It does not establish an executable motion or physical sitting success.",
+      "next": "Report the result and prepare the mandatory interior/finite-motion step for separate review. Never decode the primary direction directly."
+    },
+    {
+      "outcome": "Backend returns no complete successful vector, including a time limit.",
+      "meaning": "No admissible primary result. Time limits do not prove infeasibility.",
+      "next": "Close this diagnostic. No automatic retry or additional time allowance."
+    },
+    {
+      "outcome": "Backend reports infeasibility.",
+      "meaning": "Report its exact numerical status and any available certificate. Any justified conclusion is limited to this inner zero-face input; it is not original-LP or physical impossibility.",
+      "next": "Review the representation before proposing another experiment."
+    },
+    {
+      "outcome": "Backend vector exists but reconstruction, original checks or independent audit fail or run out of time.",
+      "meaning": "An unaccepted result. Separate solver completion from validation completion and identify the failed stage.",
+      "next": "Preserve evidence and timings; do not repair, select, resume or promote the failed/partial vector."
+    }
+  ],
+  "required_report": [
+    "Physical state first: best0964/72clean,70stable,8slipping and2housing-contact cases, with overlap, unless new authorized physical evidence changes it.",
+    "Actual preprocessing, backend, reconstruction, each validation stage and independent-audit elapsed time; charged total and any overshoot.",
+    "Backend status, iterations/crossover, actual process exits, completed point/reconstruction counts and exact stage of any failure.",
+    "Peak resident memory when successfully instrumented, distinguished from the40GiB virtual address-space limit; unavailable measurements labeled unavailable.",
+    "Candidate and audit acceptance separately. No primary result described as a controller repair.",
+    "Confirmation that no simulation, PPO, fresh holdout, automatic promotion or video change occurred."
+  ],
+  "scope_after_proposal": {
+    "needs_user_decision": "Approve or revise this one diagnostic exception. Preparing this proposal was not approval to execute it.",
+    "before_any_launch": "Prepare and compile isolated diagnostic and auditor sources, complete the independent audit design and resource/input freeze, consult the full governing context and check live execution ownership.",
+    "automation": "Existing automation remains active under current instructions. No duplicate automation and no silent change to its permissions.",
+    "current_scientific_state_unchanged": true,
+    "new_scientific_execution_by_this_proposal": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "valid_samples": 32528,
+    "missing_patch_samples": 745,
+    "clearance_plus_1cm_max_residual_target_change_rad": 0.0,
+    "clearance_plus_1cm_missing_patch_max_residual_target_change_rad": 0.0,
+    "new_column_max_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "trained": {
+    "valid_samples": 32528,
+    "missing_patch_samples": 745,
+    "clearance_plus_1cm_max_residual_target_change_rad": 3.002583923716884e-07,
+    "clearance_plus_1cm_missing_patch_max_residual_target_change_rad": 2.7731059049074247e-07,
+    "new_column_max_weights": [
+      0.0017089383909478784,
+      0.0023200437426567078,
+      0.0017652865499258041,
+      0.0020849851425737143,
+      0.002074203919619322,
+      0.0016341590089723468,
+      0.002028544433414936
+    ]
+  },
+  "normalization_bitwise_unchanged": true,
+  "accounted_transitions": 32768,
+  "declared_transitions": 32768,
+  "note": "Counterfactual scalar-only perturbation on recorded training observations. Does not establish a causal success improvement; final motor slew limits are not modeled here."
+}

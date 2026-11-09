@@ -1,0 +1,72 @@
+{
+  "utc": "2026-10-23T22:55:01.879564+00:00",
+  "classification": "Executed single named certificate revalidation; audited numerical and strict exact rounding-margin success; no encoding/model/physical success",
+  "candidate_accepted": true,
+  "physical_success": false,
+  "summary": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_certificate_revalidation_20261023_v1/summary.json",
+  "summary_sha256": "7a2676b78bd010ce4de55a5c74904ae1bf78cd512c3a8349b0d41d8f81ec517b",
+  "manifest_sha256": "ecd439323df7f6ce17db8e226a1caac7af1864bf0bf0eff91d118ebaa44e9000",
+  "approved_contract_sha256": "d8d1c0623c0fe5aabfe96c44e2a7cb0f19b1925ad7b3fefcae8a4b445a4585f7",
+  "human_approval_receipt_sha256": "91c5010f7f74d829b980468f59044ed70a517e6bd00c1fd3fd64c5da2f2504dc",
+  "owner_process_wall_s": 3.02,
+  "total_cap_s": 45,
+  "full_original_numerical_checks": {
+    "primal": 7.0150205089269946e-12,
+    "dual": 1.4210854715202004e-14,
+    "absolute_gap": 8.390857453299816e-15,
+    "finite": true,
+    "dual_signs": true,
+    "passed": true
+  },
+  "exact_margin": {
+    "passed": true,
+    "exact_eta": [
+      228304098722825,
+      23058430092136896
+    ],
+    "nonpositive": [],
+    "limiting_row": 72828,
+    "rows": 92267,
+    "coefficient_products": 125867,
+    "observed_max_rational_bits": 1070,
+    "direction_scaled": false,
+    "finite_map_performed": false,
+    "rows_sha256": "c431ff256bfa0081e45c77ddbad35eeb430ebe090b32970cf884d1079689583d"
+  },
+  "independent_audit_passed": true,
+  "single_dual_change": {
+    "row": 753917,
+    "source_hex": "0x1.d500000000000p-49",
+    "replacement_hex": "0x0.0p+0",
+    "changed_dual_values": 1,
+    "changed_primal_values": 0,
+    "source_primal_sha256": "c16f1f5092ba4a025e7b8356a14ba2dde4fe38ce7ff895de2569e93c4d9e8322",
+    "policy": "One specifically authorized dual entry; no threshold-based/general clipping",
+    "no_optimum_claim_from_correction_alone": true
+  },
+  "witness": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_certificate_revalidation_20261023_v1/witness.npy",
+  "witness_sha256": "c16f1f5092ba4a025e7b8356a14ba2dde4fe38ce7ff895de2569e93c4d9e8322",
+  "scientific_launches": 1,
+  "solvers": 0,
+  "retries": 0,
+  "finite_maps": 0,
+  "model_calls": 0,
+  "physical_trials": 0,
+  "PPO_updates": 0,
+  "authorization_consumed": true,
+  "no_automatic_downstream": true,
+  "original_failed_interior_evidence_immutable": true,
+  "physical": {
+    "clean": "64/72",
+    "stable": 70,
+    "slipping": 8,
+    "housing_contact": 2,
+    "categories_overlap": true,
+    "all64_protected": true,
+    "all8_unresolved": true,
+    "main_PPO": "unstarted",
+    "fresh_holdout": "closed"
+  },
+  "next_work": "Prepare frozen current-state finite encoding plus fresh nonlinear-model validation and independent audit using the accepted unchanged witness and exact interval trace. No repeat of primary, interior solve, certificate correction or exact interval arithmetic; no launch authorized by this consumed revalidation approval.",
+  "metadata_correction": "Before launch only, corrected stale initialization description to match unchanged zero-solver scientific code"
+}

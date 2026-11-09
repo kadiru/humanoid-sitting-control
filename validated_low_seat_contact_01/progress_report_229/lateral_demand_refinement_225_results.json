@@ -1,0 +1,259 @@
+{
+  "utc": "2026-10-17T15:51:37.670549+00:00",
+  "rows": [
+    {
+      "case": 0,
+      "evaluations": 30,
+      "budget_reached": false,
+      "optimizer_message": "Optimization terminated successfully",
+      "original_endpoint_parameters": [
+        -0.13385774607534348,
+        0.04999999999999737,
+        -0.004847802049077756,
+        0.2589111692590591,
+        -0.01114490667389499
+      ],
+      "best_coarse": {
+        "index": 29,
+        "parameters": [
+          -0.1336152623194526,
+          0.029238330913226744,
+          -0.004847802049077756,
+          0.2539929270149322,
+          -0.01114490667389499
+        ],
+        "optimization_variables": [
+          -0.1336152623194526,
+          0.2539929270149322,
+          0.029238330913226744
+        ],
+        "model_passed": true,
+        "research_constraints_passed": true,
+        "constraints": [
+          8.113033982603754e-08,
+          0.032743405592290144,
+          4.9057979900624105e-14,
+          0.10266741514879604,
+          0.002999996227366522,
+          0.008726637977395929,
+          0.14493295926651303,
+          0.633867856479161,
+          0.015703092011598984
+        ],
+        "lateral_demand_m": 0.029238330913226744,
+        "maximum_assumed_foot_load_difference_BW": 0.21394927249314866,
+        "maximum_ankle_roll_command_change_rad": 0.08686701109912486,
+        "summary": {
+          "geometry_passed": true,
+          "failed_geometry_knots": [],
+          "knots": 19,
+          "minimum_housing_clearance_mm": 3.200081130339826,
+          "max_foot_position_error_mm": 3.772633478314025e-06,
+          "max_foot_orientation_error_deg": 4.7455663215988974e-07,
+          "minimum_command_margin_rad": 0.17493295926651303,
+          "commands_passed": true,
+          "command_polyline_time_s": 9.029248656027551,
+          "time_gate_passed": true,
+          "endpoint_model_passed": true,
+          "actual_filter_checked": false,
+          "load_is_measured": false,
+          "whole_sampled_path_checked": true,
+          "case": -1,
+          "geometry_unchanged": true,
+          "failed_knots": [],
+          "maximum_effort_utilization": 0.366132143520839,
+          "first_command_change_max_rad": 0.019398433079688138,
+          "max_adjacent_ankle_torque_change_Nm": 1.566688268757055,
+          "first_ankle_pitch_torque_Nm": [
+            [
+              7.32264287041678,
+              7.235171311095194
+            ],
+            [
+              7.190357455528674,
+              7.066122047101955
+            ]
+          ]
+        }
+      },
+      "dense_summary": {
+        "geometry_passed": true,
+        "failed_geometry_knots": [],
+        "knots": 91,
+        "minimum_housing_clearance_mm": 3.2000811303432286,
+        "max_foot_position_error_mm": 3.477595630355961e-06,
+        "max_foot_orientation_error_deg": 1.271377767300075e-07,
+        "minimum_command_margin_rad": 0.17493295926650226,
+        "commands_passed": true,
+        "command_polyline_time_s": 9.040094028770659,
+        "time_gate_passed": true,
+        "endpoint_model_passed": true,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": -1,
+        "geometry_unchanged": true,
+        "failed_knots": [],
+        "maximum_effort_utilization": 0.366132143520839,
+        "first_command_change_max_rad": 0.0008096508351073672,
+        "max_adjacent_ankle_torque_change_Nm": 0.46373972755202786,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.32264287041678,
+            7.235171311095194
+          ],
+          [
+            7.317145670770011,
+            7.228139329093742
+          ]
+        ]
+      },
+      "model_passed": true,
+      "research_pass": true,
+      "schedule": {
+        "checked": true,
+        "synthetic_quiet_and_load": true,
+        "duration_s": 11.26,
+        "ticks": 563,
+        "complete": true,
+        "time_gate_passed": true,
+        "physical_admission": false
+      }
+    },
+    {
+      "case": 6,
+      "evaluations": 40,
+      "budget_reached": true,
+      "optimizer_message": "zero lateral is feasible or bounded cap",
+      "original_endpoint_parameters": [
+        -0.13315312036325738,
+        -0.05,
+        -0.016534017848286894,
+        0.27247172735021974,
+        -0.048702351910830374
+      ],
+      "best_coarse": {
+        "index": 4,
+        "parameters": [
+          -0.13315312036325738,
+          -0.04999,
+          -0.016534017848286894,
+          0.27247172735021974,
+          -0.048702351910830374
+        ],
+        "optimization_variables": [
+          -0.13315312036325738,
+          0.27247172735021974,
+          -0.04999
+        ],
+        "model_passed": true,
+        "research_constraints_passed": true,
+        "constraints": [
+          9.181567439950095e-06,
+          0.033957763292251114,
+          0.0009801409168338354,
+          0.10247320662914808,
+          0.002999994116040163,
+          0.008726637228433632,
+          0.08632952082503631,
+          0.6338398131710916,
+          0.002457708307623448
+        ],
+        "lateral_demand_m": 0.04999,
+        "maximum_assumed_foot_load_difference_BW": 0.3534529864931713,
+        "maximum_ankle_roll_command_change_rad": 0.1454704495406016,
+        "summary": {
+          "geometry_passed": true,
+          "failed_geometry_knots": [],
+          "knots": 19,
+          "minimum_housing_clearance_mm": 3.20918156743995,
+          "max_foot_position_error_mm": 5.883959837242648e-06,
+          "max_foot_orientation_error_deg": 5.174690108005667e-07,
+          "minimum_command_margin_rad": 0.11632952082503631,
+          "commands_passed": true,
+          "command_polyline_time_s": 9.199049712426762,
+          "time_gate_passed": true,
+          "endpoint_model_passed": true,
+          "actual_filter_checked": false,
+          "load_is_measured": false,
+          "whole_sampled_path_checked": true,
+          "case": -1,
+          "geometry_unchanged": true,
+          "failed_knots": [],
+          "maximum_effort_utilization": 0.36616018682890833,
+          "first_command_change_max_rad": 0.019385296880849834,
+          "max_adjacent_ankle_torque_change_Nm": 1.6320056648527554,
+          "first_ankle_pitch_torque_Nm": [
+            [
+              7.323203736578167,
+              7.235786616952473
+            ],
+            [
+              7.141707656700178,
+              7.117708357201648
+            ]
+          ]
+        }
+      },
+      "dense_summary": {
+        "geometry_passed": true,
+        "failed_geometry_knots": [],
+        "knots": 91,
+        "minimum_housing_clearance_mm": 3.2091815674428923,
+        "max_foot_position_error_mm": 3.0524767020679036e-06,
+        "max_foot_orientation_error_deg": 1.9277391444782834e-07,
+        "minimum_command_margin_rad": 0.11632952082502013,
+        "commands_passed": true,
+        "command_polyline_time_s": 9.205275114205905,
+        "time_gate_passed": true,
+        "endpoint_model_passed": true,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": -1,
+        "geometry_unchanged": true,
+        "failed_knots": [],
+        "maximum_effort_utilization": 0.36616018682890833,
+        "first_command_change_max_rad": 0.0008086591913702423,
+        "max_adjacent_ankle_torque_change_Nm": 0.4829465667804502,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.323203736578167,
+            7.235786616952473
+          ],
+          [
+            7.315649932433894,
+            7.230879313071498
+          ]
+        ]
+      },
+      "model_passed": true,
+      "research_pass": true,
+      "schedule": {
+        "checked": true,
+        "synthetic_quiet_and_load": true,
+        "duration_s": 11.42,
+        "ticks": 571,
+        "complete": true,
+        "time_gate_passed": true,
+        "physical_admission": false
+      }
+    }
+  ],
+  "scope": "Bounded OFFLINE reduction of lateral stance demand, motivated by recorded219.\nKeep old complete fixed-foot path family, roll/yaw, arms and force objective. Vary\nONLY root-x/pitch within existing bounds and root-y BETWEEN center and the old\n50mm endpoint. Minimize squared lateral shift subject to ALL existing path gates\nand a separate 3.2mm model clearance reserve. No physical threshold is changed.\nTwo geometries, max40 unique19-knot candidates/10iterations plus one91-knot dense\ncheck each. No physics, runtime installation, training, holdout or admission.\n",
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/refine_low_seat_lateral_demand_225.py": "42b549bd86eb7194d7cbe3830e60374760d574de3e0f65d2f07fb363e72081ae",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+    "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json": "69e0920e2bec88a43b7a6dc41d0fc361500d060ef09e3e3a07bb04cdaf569584",
+    "/data/humanoid-sitting-perception/contact_effort_repair_01/plane_calibration.json": "6a6a0f078ced3d3510897e96670c26226dee25d495653a222cf1dd52e97a8009",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/bias_probe_210/candidate/fixed_plans_132.json": "1736ec0028e765fa3098490fc0751a778606decffd95ae081b69fbe6c7889a66",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/stance_diagnosis_219/results.json": "d4c2765e21f82e39e0daaf37a5f83132ed635f1932692b702d6ed94842e6b722",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_centered_coarse_223.py": "57bf0408d2d4ad44927a267e199d08158ef3c259b6e8ed970cfbec388fa92d30",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_fixed_foot_plan_126.py": "1ebd0014cff6bf3558daf406a304aa523d20143f1d6f4ceeecd14eed27896b63",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_balanced_force_v2_145.py": "d48a9422da8570c69077edbcfe50d79f3f59453541b4128c292e176d49d12425",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_touchdown_path_175.py": "31c0fd2caf366b85249c05b56197722d95bc792269b894cbe538b3d1e8002a7e"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}

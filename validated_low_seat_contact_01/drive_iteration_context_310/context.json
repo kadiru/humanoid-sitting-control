@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-17T20:21:32.705842+00:00",
+  "source": "https://nvidia-omniverse.github.io/PhysX/physx/5.8.0/_downloads/6acf3afb8f69452757e0e766b5a22978/implicitDrives.pdf",
+  "title": "Implicit Spring Joint Drives",
+  "author": "PhysX Team",
+  "document_date": "2024-04-23",
+  "pages": [
+    4,
+    5,
+    6
+  ],
+  "summary": "NVIDIA describes TGS position substeps accumulating drive impulse, then holding that accumulated drive force fixed during velocity iterations. Thus reported endpoint velocity and a full-step pose difference need not agree; inserting that final velocity into an explicit PD formula need not recover accumulated drive effort.",
+  "limits": "Read-only primary documentation, not captured solver iterations or proof of this installed GPU binary behavior. No solver flag, controller, gain, material, physical or quiet guard changed. Does not certify a proposed motion or waive raw-speed settling.",
+  "physics_ticks": 0
+}

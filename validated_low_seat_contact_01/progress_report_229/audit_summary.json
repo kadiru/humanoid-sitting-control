@@ -1,0 +1,80 @@
+[
+  {
+    "folder": "stance_audit_220",
+    "records": 144,
+    "max_geometry_error": null,
+    "max_work_error_Nm": null,
+    "filter_replay": null,
+    "unavailable_force_records": 0
+  },
+  {
+    "folder": "centered_path_audit_222",
+    "records": 364,
+    "max_geometry_error": 2.2298248126280723e-16,
+    "max_work_error_Nm": 6.3664513660910416e-09,
+    "filter_replay": null,
+    "unavailable_force_records": 0
+  },
+  {
+    "folder": "centered_contact_audit_224",
+    "records": 980,
+    "max_geometry_error": 2.219180272661566e-16,
+    "max_work_error_Nm": 7.696540738066915e-09,
+    "filter_replay": null,
+    "unavailable_force_records": 0
+  },
+  {
+    "folder": "lateral_demand_audit_226",
+    "records": 1512,
+    "max_geometry_error": 2.2251462921500895e-16,
+    "max_work_error_Nm": 7.777107402517913e-09,
+    "filter_replay": [
+      {
+        "case": 0,
+        "ticks": 563,
+        "exact_torch_cpu_replay": true,
+        "fixed_commands_exact": true,
+        "endpoint_exact": true,
+        "clipped_targets": 0,
+        "max_applied_step_rad": 0.0029999911785125732,
+        "duration_s": 11.26,
+        "synthetic_quiet_load": true,
+        "physical_admission": false
+      },
+      {
+        "case": 6,
+        "ticks": 571,
+        "exact_torch_cpu_replay": true,
+        "fixed_commands_exact": true,
+        "endpoint_exact": true,
+        "clipped_targets": 0,
+        "max_applied_step_rad": 0.0029999911785125732,
+        "duration_s": 11.42,
+        "synthetic_quiet_load": true,
+        "physical_admission": false
+      }
+    ],
+    "unavailable_force_records": 0
+  },
+  {
+    "folder": "centered_orientation_audit_v2_228",
+    "records": 3385,
+    "max_geometry_error": 2.2258523895142617e-16,
+    "max_work_error_Nm": 7.787536837611242e-09,
+    "filter_replay": [
+      {
+        "case": 0,
+        "ticks": 552,
+        "exact_torch_cpu_replay": true,
+        "fixed_commands_exact": true,
+        "endpoint_exact": true,
+        "clipped_targets": 0,
+        "max_applied_step_rad": 0.0029999911785125732,
+        "duration_s": 11.040000000000001,
+        "synthetic_quiet_load": true,
+        "physical_admission": false
+      }
+    ],
+    "unavailable_force_records": 76
+  }
+]

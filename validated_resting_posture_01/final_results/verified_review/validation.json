@@ -1,0 +1,262 @@
+{
+  "verified_utc": "2026-10-12T08:03:25.702158+00:00",
+  "passed": true,
+  "frozen_files_verified": 34,
+  "budgets": [
+    {
+      "seed": 52911,
+      "arm": "stability",
+      "updates": 128,
+      "transitions": 131072,
+      "finite": true,
+      "active_transitions": 110310,
+      "warmup_transitions": 20762,
+      "unfinished_episode_steps": [
+        0,
+        74,
+        10,
+        83,
+        11,
+        40,
+        242,
+        88,
+        105,
+        581,
+        66,
+        156,
+        260,
+        234,
+        229,
+        216
+      ],
+      "actor_max_change": 0.03948685899376869,
+      "initial_sha256": "d875f068ecc2e5f123f4a92d9504bfc50b87a05e13678be0adeb9dffcca93c45",
+      "final_sha256": "9b12d7b8010f09f1841d2cb87d451cf9b71e1a70326022a9c953d8d522a92cba",
+      "training_successes": 0,
+      "completed_attempts": 831,
+      "completed_active_ticks": 107915
+    },
+    {
+      "seed": 52911,
+      "arm": "effort",
+      "updates": 128,
+      "transitions": 131072,
+      "finite": true,
+      "active_transitions": 107611,
+      "warmup_transitions": 23461,
+      "unfinished_episode_steps": [
+        0,
+        28,
+        8,
+        0,
+        3,
+        48,
+        0,
+        0,
+        24,
+        129,
+        436,
+        95,
+        29,
+        147,
+        249,
+        458
+      ],
+      "actor_max_change": 0.03521840646862984,
+      "initial_sha256": "d875f068ecc2e5f123f4a92d9504bfc50b87a05e13678be0adeb9dffcca93c45",
+      "final_sha256": "edd22b2261d2e3ca1ff931a92579b6d5de7fce6bb9b78f9e5de7b7beb5e6640a",
+      "training_successes": 1,
+      "completed_attempts": 941,
+      "completed_active_ticks": 105957
+    },
+    {
+      "seed": 52917,
+      "arm": "stability",
+      "updates": 128,
+      "transitions": 131072,
+      "finite": true,
+      "active_transitions": 108943,
+      "warmup_transitions": 22129,
+      "unfinished_episode_steps": [
+        0,
+        0,
+        24,
+        0,
+        371,
+        81,
+        0,
+        89,
+        16,
+        310,
+        139,
+        66,
+        88,
+        399,
+        298,
+        254
+      ],
+      "actor_max_change": 0.03406018763780594,
+      "initial_sha256": "eeffaf80b380fc0f210205aec78003869eaae1aa324a0ddd4ffbda9877e23067",
+      "final_sha256": "f52654e06e5499a184f756683cd863fa987be436ba2d52bb6dc65daae601f427",
+      "training_successes": 0,
+      "completed_attempts": 887,
+      "completed_active_ticks": 106808
+    },
+    {
+      "seed": 52917,
+      "arm": "effort",
+      "updates": 128,
+      "transitions": 131072,
+      "finite": true,
+      "active_transitions": 109797,
+      "warmup_transitions": 21275,
+      "unfinished_episode_steps": [
+        0,
+        0,
+        0,
+        4,
+        165,
+        68,
+        103,
+        193,
+        207,
+        250,
+        613,
+        51,
+        107,
+        60,
+        0,
+        7
+      ],
+      "actor_max_change": 0.03486943989992142,
+      "initial_sha256": "eeffaf80b380fc0f210205aec78003869eaae1aa324a0ddd4ffbda9877e23067",
+      "final_sha256": "49595c218596b50a2bc91e33bf132ff6e0937f2ac3bcd0a42c7754ba78d5a05e",
+      "training_successes": 0,
+      "completed_attempts": 852,
+      "completed_active_ticks": 107969
+    }
+  ],
+  "total_transitions": 524288,
+  "total_active_transitions": 436661,
+  "total_warmup_transitions": 87627,
+  "matched_initial_arm_weights": true,
+  "constant_baseline_commands": true,
+  "evaluations": [
+    {
+      "run": "starts_52911_stability",
+      "startup_max_error": 0.0,
+      "full_20_seconds": true,
+      "disturbances_match": true,
+      "geometry_matches": true,
+      "loaded_final_weights_match": true
+    },
+    {
+      "run": "heights_52911_stability",
+      "startup_max_error": 0.0,
+      "full_20_seconds": true,
+      "disturbances_match": true,
+      "geometry_matches": true,
+      "loaded_final_weights_match": true
+    },
+    {
+      "run": "impulse_52911_stability",
+      "startup_max_error": 0.0,
+      "full_20_seconds": true,
+      "disturbances_match": true,
+      "geometry_matches": true,
+      "loaded_final_weights_match": true
+    },
+    {
+      "run": "starts_52911_effort",
+      "startup_max_error": 0.0,
+      "full_20_seconds": true,
+      "disturbances_match": true,
+      "geometry_matches": true,
+      "loaded_final_weights_match": true
+    },
+    {
+      "run": "heights_52911_effort",
+      "startup_max_error": 0.0,
+      "full_20_seconds": true,
+      "disturbances_match": true,
+      "geometry_matches": true,
+      "loaded_final_weights_match": true
+    },
+    {
+      "run": "impulse_52911_effort",
+      "startup_max_error": 0.0,
+      "full_20_seconds": true,
+      "disturbances_match": true,
+      "geometry_matches": true,
+      "loaded_final_weights_match": true
+    },
+    {
+      "run": "starts_52917_stability",
+      "startup_max_error": 0.0,
+      "full_20_seconds": true,
+      "disturbances_match": true,
+      "geometry_matches": true,
+      "loaded_final_weights_match": true
+    },
+    {
+      "run": "heights_52917_stability",
+      "startup_max_error": 0.0,
+      "full_20_seconds": true,
+      "disturbances_match": true,
+      "geometry_matches": true,
+      "loaded_final_weights_match": true
+    },
+    {
+      "run": "impulse_52917_stability",
+      "startup_max_error": 0.0,
+      "full_20_seconds": true,
+      "disturbances_match": true,
+      "geometry_matches": true,
+      "loaded_final_weights_match": true
+    },
+    {
+      "run": "starts_52917_effort",
+      "startup_max_error": 0.0,
+      "full_20_seconds": true,
+      "disturbances_match": true,
+      "geometry_matches": true,
+      "loaded_final_weights_match": true
+    },
+    {
+      "run": "heights_52917_effort",
+      "startup_max_error": 0.0,
+      "full_20_seconds": true,
+      "disturbances_match": true,
+      "geometry_matches": true,
+      "loaded_final_weights_match": true
+    },
+    {
+      "run": "impulse_52917_effort",
+      "startup_max_error": 0.0,
+      "full_20_seconds": true,
+      "disturbances_match": true,
+      "geometry_matches": true,
+      "loaded_final_weights_match": true
+    }
+  ],
+  "reset_probe": {
+    "passed": true,
+    "errors": {
+      "q": 0.0,
+      "qd": 0.0,
+      "root": 0.0,
+      "velocity": 0.0,
+      "obs": 0.0,
+      "command": 0.0,
+      "length": 0.0
+    },
+    "physics_clock_unchanged": true,
+    "selected_geometry_invalidated": true,
+    "selected_sensor_history_reinitialized": true
+  },
+  "tests": 12,
+  "original_report_sha256": "4512d4c3695adaca756c2a5938b809a969973fa81d325abe1b6f498a2a65c9dc",
+  "original_results_sha256": "e7f407f00153bd444e1db5e22478c98cbc550ba857db7aefeb48910600fbf683",
+  "verifier_sha256": "ba3f5cb08da2bbde2907290f47abccf8f46711d08e27fb37470caa99241a1829",
+  "promoted": false
+}

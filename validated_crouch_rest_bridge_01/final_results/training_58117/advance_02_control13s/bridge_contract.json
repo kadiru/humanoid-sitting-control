@@ -1,0 +1,41 @@
+{
+  "args": {
+    "learning_start": 13.0,
+    "eligible_indices": "0,1,2,4,5,8",
+    "bridge_inertial": "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json"
+  },
+  "observations": 406,
+  "actions": 23,
+  "span": [
+    0.012000000104308128,
+    0.012000000104308128,
+    0.014999999664723873,
+    0.00800000037997961,
+    0.00800000037997961,
+    0.07999999821186066,
+    0.07999999821186066,
+    0.00800000037997961,
+    0.00800000037997961,
+    0.07999999821186066,
+    0.07999999821186066,
+    0.012000000104308128,
+    0.012000000104308128,
+    0.07999999821186066,
+    0.07999999821186066,
+    0.012000000104308128,
+    0.012000000104308128,
+    0.07999999821186066,
+    0.07999999821186066,
+    0.00800000037997961,
+    0.00800000037997961,
+    0.07999999821186066,
+    0.07999999821186066
+  ],
+  "initial_state": "standing every episode",
+  "control_window_start_s": 13.0,
+  "approach_locked_until_s": 10.0,
+  "geometry_mask_training_only": true,
+  "evaluation_all_conditions": true,
+  "reward": "unchanged run_progressive_seat_ppo physics reward; effort over all37joints, target65percent seat load is a soft reward, not a restored old-study60percent advancement gate",
+  "admission": "whole20s success and zero all-tick slip, traction or illegal-contact violations on six development surfaces; three failed surfaces excluded from learning and reported as stress tests"
+}

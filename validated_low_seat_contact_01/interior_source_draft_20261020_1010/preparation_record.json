@@ -1,0 +1,212 @@
+{
+  "classification": "LOCAL ONLY executable source draft; pending approval; not a scientific result or launch freeze",
+  "utc": "2026-10-20T10:11:21.114382+00:00",
+  "source_directory": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_diagnostic_20261020_v1",
+  "proposal": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_diagnostic_proposal_20261020_v1.json",
+  "authorization": "Existing separate interior-diagnostic approval request remains unanswered; primary exception consumed. No new question sent.",
+  "implemented": [
+    "Pending-approval guard before supervisor launch, source contract and unique output directory; every child requires supervised phase admission.",
+    "One cold full-original interior LP, actual accepted-primary modeled merit and fresh RHS blocks at unchanged initial state.",
+    "Independent input identity and new ceiling/RHS audit before optimizer; post-return audit inherits this certificate rather than repeating it.",
+    "Complete full-original primal/equality/bounds/stationarity/absolute-gap/nonnegative-dual checks at unchanged 1e-9.",
+    "All92267 exact unscaled interval checks; separate auditor uses dyadic integer accumulation instead of producer Fraction dot products.",
+    "External process-group deadlines, actual exit/peak RSS records, no retry, no decode/model/physics/PPO/holdout paths."
+  ],
+  "local_validation": {
+    "utc": "2026-10-20T10:10:07.303909+00:00",
+    "scope": "LOCAL ONLY: source compilation, static review and pending-approval negative test; no scientific imports or input arrays evaluated",
+    "compile": {
+      "actual_exit": 0,
+      "stderr": ""
+    },
+    "pending_approval_guard": {
+      "actual_exit": 1,
+      "expected_exit": 1,
+      "passed": true,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_diagnostic_20261020_v1/supervise.py\", line 92, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_diagnostic_20261020_v1/supervise.py\", line 69, in main\n    contract()\n    ~~~~~~~~^^\n  File \"/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_diagnostic_20261020_v1/common.py\", line 48, in contract\n    raise PermissionError(\"Separate interior diagnostic approval is pending\")\nPermissionError: Separate interior diagnostic approval is pending\n"
+    },
+    "independent_auditor_imports": [
+      "common",
+      "fractions",
+      "json",
+      "numpy",
+      "resource",
+      "scipy",
+      "sys",
+      "time"
+    ],
+    "single_linprog_call_site": true,
+    "scientific_runs": 0,
+    "remote_source_uploads": 0,
+    "launch_ready": false,
+    "source_sha256": {
+      "common.py": "6366029f1b0837d5efdfaab3da28a9f15c40b8c82551d61291d87dad56f9ffef",
+      "independent.py": "461814015cb09df4bbdfdb27ebdd00462a05059602a60c78a693066c35e8ef44",
+      "preflight.py": "6006c0b6f6341cbf1352b72f23295053b7f17a82e57c35140e1e8f33b7f2b222",
+      "producer.py": "eb95d7c17c219e76218d14834156701f73a0ed77fdf6a82859f85ba42800beae",
+      "supervise.py": "3056153e3b3b365adf364fce6bd3d44737692f971f5d0e935889a60641138e6a"
+    },
+    "proposal_sha256": "31d10659f2db4f08062746a0b5493a69627be7c343e6d2f0c36a3e3dda2f9d5f"
+  },
+  "source_review_findings": [
+    "Deadline options bind exact configured elapsed time; no runtime grace added.",
+    "Backend and total deadlines are separately checked; late, killed or nonzero-exit candidate never accepted.",
+    "Numerical eta and exact clearance are kept distinct; no positive-margin inference from LP status or rounded scalar.",
+    "Original closed/inward interval RHS, matrix, equality, objective and bounds remain inherited by identity. New RHS is never formed by subtracting a rounded old ceiling.",
+    "Independent audit imports neither producer nor optimizer. Its new-point input audit is called only once."
+  ],
+  "resource_metadata": {
+    "lifted_feasibility_preparation_490/witness/matrix.npz": {
+      "compressed_bytes": 15374681,
+      "headers_only": {
+        "data.npy": {
+          "descr": "<f8",
+          "fortran_order": false,
+          "shape": [
+            2738418
+          ]
+        },
+        "indices.npy": {
+          "descr": "<i4",
+          "fortran_order": false,
+          "shape": [
+            2738418
+          ]
+        },
+        "indptr.npy": {
+          "descr": "<i4",
+          "fortran_order": false,
+          "shape": [
+            837064
+          ]
+        }
+      }
+    },
+    "torque_path_524/major_00/A.npz": {
+      "compressed_bytes": 954159,
+      "headers_only": {
+        "data.npy": {
+          "descr": "<f8",
+          "fortran_order": false,
+          "shape": [
+            552084
+          ]
+        },
+        "indices.npy": {
+          "descr": "<i4",
+          "fortran_order": false,
+          "shape": [
+            552084
+          ]
+        },
+        "indptr.npy": {
+          "descr": "<i4",
+          "fortran_order": false,
+          "shape": [
+            331889
+          ]
+        }
+      }
+    },
+    "torque_path_524/major_00/C.npz": {
+      "compressed_bytes": 5536686,
+      "headers_only": {
+        "data.npy": {
+          "descr": "<f8",
+          "fortran_order": false,
+          "shape": [
+            749166
+          ]
+        },
+        "indices.npy": {
+          "descr": "<i4",
+          "fortran_order": false,
+          "shape": [
+            749166
+          ]
+        },
+        "indptr.npy": {
+          "descr": "<i4",
+          "fortran_order": false,
+          "shape": [
+            68251
+          ]
+        }
+      }
+    },
+    "torque_path_524/major_00/H.npz": {
+      "compressed_bytes": 282333,
+      "headers_only": {
+        "data.npy": {
+          "descr": "<f8",
+          "fortran_order": false,
+          "shape": [
+            125867
+          ]
+        },
+        "indices.npy": {
+          "descr": "<i4",
+          "fortran_order": false,
+          "shape": [
+            125867
+          ]
+        },
+        "indptr.npy": {
+          "descr": "<i4",
+          "fortran_order": false,
+          "shape": [
+            92268
+          ]
+        }
+      }
+    }
+  },
+  "resource_scope": {
+    "metadata_only": true,
+    "full_original_rows": 837063,
+    "full_original_columns": 78791,
+    "full_original_coefficient_slots": 2738418,
+    "changed_rhs_entries": 467995,
+    "exact_rows_per_implementation": 92267,
+    "exact_H_products_per_implementation": 125867,
+    "producer_and_independent_exact_products_total": 251734,
+    "address_space_per_worker_bytes": 42949672960,
+    "preflight_seconds": 300,
+    "numerical_seconds": 600,
+    "backend_absolute_from_numerical_origin_seconds": 300,
+    "independent_audit_seconds": 600,
+    "phase_total_max_seconds": 1500,
+    "free_disk_prelaunch_minimum_bytes": 10737418240,
+    "return_cost": "Every import/hash/load/copy, new primary-point association, new RHS/input audit, backend call, full residual/dual check, exact row product, rational clearance, trace output and cleanup stays inside its external phase cap. Runtime and rational-bit growth not measured; no speedup guarantee.",
+    "additional_witness_mechanism": "Maximize strict normalized clearance over every original interval while retaining half the ACTUAL accepted-primary modeled improvement. No condensed zero-face interior shortcut."
+  },
+  "before_any_launch": [
+    "Receive the answer to the existing separate interior-diagnostic approval request.",
+    "Finish independent source review and resource/bit/output accounting; this record is not that completed freeze.",
+    "Create an approved complete launch_contract.json binding source, all relevant immutable inputs/proofs, installed SciPy/HiGHS runtime and exact limits. That file deliberately does not exist.",
+    "Check current workers and governing instructions, upload the isolated sources, and run bounded preservation/compilation/preflight before any new scientific arithmetic."
+  ],
+  "no_scientific_work_performed": {
+    "primary_point_evaluations": 0,
+    "RHS_assemblies": 0,
+    "solver_calls": 0,
+    "exact_point_certificates": 0,
+    "finite_maps": 0,
+    "model_calls": 0,
+    "physical_trials": 0,
+    "PPO_updates": 0,
+    "holdout_trials": 0,
+    "remote_uploads": 0
+  },
+  "physical_state_unchanged": {
+    "clean": "64/72",
+    "stable": 70,
+    "slipping": 8,
+    "housing_contact": 2,
+    "categories_overlap": true,
+    "all8_unresolved": true,
+    "main_PPO_and_fresh_holdout": "unstarted",
+    "automation": "ACTIVE"
+  },
+  "launch_ready": false
+}

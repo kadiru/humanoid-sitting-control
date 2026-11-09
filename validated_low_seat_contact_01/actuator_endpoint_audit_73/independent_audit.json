@@ -1,0 +1,66 @@
+{
+  "utc": "2026-10-17T09:28:23.006749+00:00",
+  "passed": true,
+  "scope": "Independent corrected-model endpoint arithmetic replay, actual1s sensor mapping, nominal non-leg/finger pose preservation, source hashes and best-of-recorded-search rank. Added independent static force balance,16joint finite-difference virtual work and anchored command/joint/effort checks. No whole path, sensed load, dynamics or physical admission is claimed.",
+  "rows": [
+    {
+      "case": 2,
+      "endpoint": "best",
+      "max_replay_error": 1.734723475976807e-18,
+      "max_virtual_work_error_Nm": 2.417879230165454e-09,
+      "model_geometry_passed": true,
+      "model_command_passed": true,
+      "all_endpoint_model_checks_passed": true,
+      "command_margin_rad": 0.03049947459522301,
+      "effort_utilization": 0.8162820530799308,
+      "clearance_mm": 3.4429847449725175,
+      "model_tilt_deg": 21.030223285601327
+    },
+    {
+      "case": 2,
+      "endpoint": "start_0",
+      "max_replay_error": 1.1102230246251565e-16,
+      "max_virtual_work_error_Nm": 2.5508852807831772e-09,
+      "model_geometry_passed": true,
+      "model_command_passed": true,
+      "all_endpoint_model_checks_passed": true,
+      "command_margin_rad": 0.03049904558354774,
+      "effort_utilization": 0.8133964313117303,
+      "clearance_mm": 3.409335154291991,
+      "model_tilt_deg": 23.06535448512783
+    },
+    {
+      "case": 2,
+      "endpoint": "start_1",
+      "max_replay_error": 0.0,
+      "max_virtual_work_error_Nm": 1.9384671645639173e-09,
+      "model_geometry_passed": false,
+      "model_command_passed": true,
+      "all_endpoint_model_checks_passed": false,
+      "command_margin_rad": 0.07463531022554351,
+      "effort_utilization": 0.8268347372819562,
+      "clearance_mm": 2.840871348361837,
+      "model_tilt_deg": 22.498890763520635
+    },
+    {
+      "case": 2,
+      "endpoint": "start_2",
+      "max_replay_error": 5.551115123125783e-17,
+      "max_virtual_work_error_Nm": 4.8123816043244005e-09,
+      "model_geometry_passed": true,
+      "model_command_passed": true,
+      "all_endpoint_model_checks_passed": true,
+      "command_margin_rad": 0.030528072976376303,
+      "effort_utilization": 0.8144090470807441,
+      "clearance_mm": 3.4416978686530646,
+      "model_tilt_deg": 21.12609085787967
+    }
+  ],
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/actuator_endpoint_screen_72/results.json": "86e96051931b9261d7d610a45332aa33b895cac714197424f2cad5db92c6d117",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_actuator_endpoint_73.py": "900ea0131653049ed2695189eb5ced3166b94206281dfe5def34f8b647657ce3"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}

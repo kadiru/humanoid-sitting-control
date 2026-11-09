@@ -1,0 +1,39 @@
+{
+  "utc": "2026-10-17T09:10:48.436481+00:00",
+  "passed": true,
+  "scope": "Independent arithmetic replay of all105 trajectory knots and1endpoint, source hashes, frozen1s inputs, static support, cooked clearance, fixed stance foot/35mm swing targets, nominal pose preservation and schedule arithmetic. The failed model path remains failed. Bounded unloaded swing attitude and exact flat landing independently checked; joint reserves unchanged. No simulator/optimizer. Pose-only arc/.15 is a nominal reference schedule metric, NOT a proven lower bound on actual PD command time or a dynamic/actuator certificate. Actual fixed-finger COMMAND and command-rate validation remain unperformed.",
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/single_step_spatial_screen_65/results.json": "a1e1866e29c53a9d7c738f22b4534c1c8e9abd20bac8d06384fa538dd634cb3a",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_single_step_spatial_66.py": "eb1f829e4dbecad033f5fe427d64f3a470910132dfb6c9a0b35608a6fac92f6a"
+  },
+  "rows": [
+    {
+      "length_m": 0.1,
+      "knots": 105,
+      "max_replay_error": 1.6653345369377348e-16,
+      "failed_knots": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "model_screen_passed": false,
+      "min_clearance_mm": 3.624137048070023,
+      "max_foot_position_error_mm": 5.4618457318923594,
+      "max_foot_orientation_error_deg": 2.4047853723580612,
+      "nominal_pose_schedule_at_0_15_rad_s": 14.855889664194008,
+      "min_actual_swing_sole_height_m": 0.022258226839177206
+    }
+  ],
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}

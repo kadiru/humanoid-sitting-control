@@ -1,0 +1,44 @@
+{
+  "utc": "2026-10-17T14:40:37.960801+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "device": "cpu",
+      "mode": "good",
+      "passed": true
+    },
+    {
+      "device": "cpu",
+      "mode": "alias",
+      "passed": true
+    },
+    {
+      "device": "cpu",
+      "mode": "mutate",
+      "passed": true
+    },
+    {
+      "device": "cuda:1",
+      "mode": "good",
+      "passed": true
+    },
+    {
+      "device": "cuda:1",
+      "mode": "alias",
+      "passed": true
+    },
+    {
+      "device": "cuda:1",
+      "mode": "mutate",
+      "passed": true
+    }
+  ],
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false,
+  "sources": {
+    "/home/kadir/humanoid-sitting/scripts/check_low_seat_passive_recorder_v2_196.py": "0bf1b9361fa9a1b924b0425a70a761be7401eca40e662ab1c2ec8482391058b7",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_passive_recorder_196.py": "f9d535c35c404ce99de7271784e943bd55c239c71b51bb1e7f106fefcdf2471b"
+  },
+  "interpretation": "Synthetic CPU/GPU storage checks, not runtime replay or physical admission. Real ordering, pointer separation, cache preservation and full prefix exactness remain required."
+}

@@ -1,0 +1,142 @@
+{
+  "utc": "2026-10-17T06:56:40.633578+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "ppo_started": false,
+  "fresh_holdout_started": false,
+  "new_physical_episodes": 24,
+  "active": 24000,
+  "initial_settling_excluded": 600,
+  "optimizer_updates": 0,
+  "counts": {
+    "Original parent": {
+      "stable": 22,
+      "clean": 8,
+      "slip": 16,
+      "contact": 2,
+      "physical": 2,
+      "warnings": 21
+    },
+    "Best normal3s": {
+      "stable": 22,
+      "clean": 14,
+      "slip": 10,
+      "contact": 2,
+      "physical": 2,
+      "warnings": 21
+    },
+    "Rejected joint17": {
+      "stable": 16,
+      "clean": 14,
+      "slip": 6,
+      "contact": 8,
+      "physical": 8,
+      "warnings": 16
+    },
+    "Rate headroom31": {
+      "stable": 16,
+      "clean": 14,
+      "slip": 5,
+      "contact": 8,
+      "physical": 8,
+      "warnings": 17
+    },
+    "Staged approach36": {
+      "stable": 16,
+      "clean": 14,
+      "slip": 2,
+      "contact": 3,
+      "physical": 3,
+      "warnings": 14
+    }
+  },
+  "lost_best_probe_clean": [],
+  "gained_best_probe_clean": [],
+  "remaining_target_cases": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    7,
+    10,
+    11
+  ],
+  "added_physical_cases": [
+    1,
+    6,
+    7
+  ],
+  "software_audit_passed": true,
+  "unselected_full20_exact": false,
+  "geometry_pause_audit": {
+    "passed": true,
+    "paused_env_ticks": 2936,
+    "per_case": [
+      367,
+      367,
+      367,
+      367,
+      0,
+      0,
+      367,
+      367,
+      0,
+      0,
+      367,
+      367,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "physics_clock_not_paused": true
+  },
+  "best_full72_unchanged": {
+    "clean": 64,
+    "stable": 70,
+    "slip": 8,
+    "housing": 2,
+    "original_retained": 60,
+    "warnings": 50,
+    "strict_clean": 22
+  },
+  "source_hashes": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/independent_staged_audit_36.json": "bef006e481e5c04cef392b98b628dfe0af55d9a09018b60ff1916b52f9324785",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/revision.json": "60dda1caf2cf86f5b42773a044bc678ebc49b8cc664e08eedbaebf207fb63634",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate/sensor_control_audit.json": "7ba7e48c8e5a6af412baa7a92aafd1e527d7f8b66b9168978aa06c8d96c6eb2a",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/support_posture_screen_33/results.json": "5816ed35f2ede723a02ff041d18508f202ae67f1a0a663a0c48e63cee9d09d3d",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/support_posture_envelope_34/results.json": "359350fb960ca245e3fcb84ada3a8d3c590923174c0d01ec9a73a97b252e16fb",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/staged_headroom_screen_35/results.json": "e5693432726d8f21f5cae3b1723b1c63b7c1838bfc89a23cf9efcc754f9ddbb6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/staged_preparation_36/preparation.json": "0673132ae750ff85980952cfac44dc30286ffda83ca72ffb421ea3386171845f",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/staged_preparation_36/source_clock_checks.json": "078bbdcc8b9015fd60fb423c8ebaeb3f3101acc5578b7c6d66d73d6015a16dd8",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/prior_recheck_during_staged_36.json": "1b7927ee0e65a68e37d6044f520994a4d972863c83dfb5f93d06ef1c401ed95a"
+  },
+  "lost_best_probe_stable_cases": [
+    0,
+    1,
+    6,
+    7,
+    10,
+    11
+  ],
+  "targeted_final_seat_support": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "10": 0.0,
+    "11": 0.0
+  },
+  "visibility_diagnostic_sha256": "f863fe17ac38a4a000a3925aa35bc3722cc0ae4a3cc866de07675638322e9521"
+}

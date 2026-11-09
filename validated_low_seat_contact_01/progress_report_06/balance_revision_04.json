@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-17T03:16:39.228055+00:00",
+  "reason": "Normal approach gained four clean cases but retained touchdown oscillation. Timed ankle-to-hip balance change is a hypothesis, not a proven cause.",
+  "variants": [
+    "normal_ankle_balance_04",
+    "normal_load_balance_04"
+  ],
+  "changed": "Only balance authority blend for measured-plane-selected normal-descent rows. Ankle-only versus torque/encoder/IMU-estimated-load blend.",
+  "preserved": "Normal path, load feedforward, damping, parent checkpoint and physical criteria/materials unchanged. First10s unchanged. No actor training.",
+  "software_identity_check_passed": true,
+  "budget": {
+    "trials_per_variant": 24,
+    "active_ticks_per_variant": 24000,
+    "initial_settling_ticks_per_variant": 600,
+    "optimizer_updates": 0
+  },
+  "fresh_holdout_opened": false,
+  "sources": {
+    "/home/kadir/humanoid-sitting/scripts/low_seat_balance_controller.py": "51734fc9601bf9dc0b43f404cc6a79ce3b5ffb0ef686b705371b4eb585dbed7e",
+    "/home/kadir/humanoid-sitting/scripts/run_low_seat_balance_probe.py": "b3dc0433388496d1d9c6e7fa5bfd999c673c6b0d0e8e319195eb213e6189fcb7",
+    "/home/kadir/humanoid-sitting/scripts/launch_low_seat_balance_probe.py": "c667b6351b5a6e17c51bf272ca27fc0c3ad4e93722f5da8cecabd3244fa4e950",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_normal_controller.py": "6cfb8aabd61dbc63b8b2a9543c693910926d38b4d87f1dbc43e8a249587cd590",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_load_controller.py": "510b8644cdb99a3910e1a2f4bdb7f941dcb6a3d3ddb70af0b2092397ed605dcf",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_contact_controller.py": "b14886026d552e098f296a362f404bc616ba33daf99de3bee6e1eac21e2fe5c2"
+  },
+  "preserved_probe_files": 489
+}

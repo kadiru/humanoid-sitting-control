@@ -1,0 +1,106 @@
+{
+  "utc": "2026-10-19T00:39:57.483308+00:00",
+  "passed": true,
+  "specification": {
+    "scope": "NEW complete bounded LP SUBSOLVER: homogeneous self-dual Douglas-Rachford splitting with state-local Schur/PCG resolvents. Preparation and two new small LP tests only; no full-size LP or robot trajectory launcher.",
+    "reference": "Algorithmic starting point: O Donoghue,Chu,Parikh,Boyd2016 https://web.stanford.edu/~boyd/papers/pdf/scs.pdf sections2-4. Official linear-system context https://www.cvxgrp.org/scs/linear_solver/index.html . This custom implementation is not SCS or HiGHS, and no performance/convergence claim is inherited from those implementations.",
+    "cone": "Append EVERY finite source variable upper/lower bound as an unchanged signed inequality. Source equality must have literally zero stored coefficients and zero RHS; otherwise reject unsupported input, never drop nonzero equalities. Their source provenance and final original checks remain. For A*x+s=b,s>=0,dual A.T*y+c=0,y>=0.",
+    "scaling": "One deterministic positive dyadic row scaling based on max(1,rowL1,abs(b)), then dyadic column scaling based on columnL2 norm. No iterative balancing, tuning or coefficient threshold. Preserve every nonzero exactly under each power-of-two multiplication; reject nonfinite/underflow/inexact scale. x_original=column_scale*x_scaled, y_original=row_scale*y_scaled. All final tolerances use ORIGINAL unscaled cone rows/cost, not just scaled residuals.",
+    "embedding": "u=(x,y,tau),v=(r,s,kappa);Q=[[0,A.T,c],[-A,0,b],[-c.T,-b.T,0]]. C=R^n x nonnegative^m x nonnegative. Q is skew. For tau>0,exact v=Q*u,u in C,v in Cdual implies primal/dual feasibility and zero gap after division by tau. Finite residuals are checked explicitly; zero/tiny tau never certifies a witness.",
+    "initialization": "All x,y,r,s zero; u_tau=v_kappa=1. No old primary,partial,rejected/internal vector or saved528 example input. Fixed alpha1, identity DR metric; no adaptive relaxation,barrier parameters,regularization or restart.",
+    "iteration": "tilde=(I+Q)^-1(u+v);newu=projection_C(tilde-v);newv=v-tilde+newu. The projection only sets solver cone coordinates y,tau nonnegative; it NEVER clips returned retained primal coordinates, physical loads,torques,gaps or commands. No iterate normalization or post-hoc witness repair.",
+    "resolvent": "Let M=[[I,A.T],[-A,I]],q=(c,b). Solve M*p=(rx,ry) using K=I+A.T*A: px=K^-1(rx-A.T*ry),py=ry+A*px. Cache z=M^-1*q once. tau=(rtau+q.T*p)/(1+q.T*z),xy=p-z*tau. Check the FULL original (I+Q)*tilde-r residual, including cached z error, before every DR step. No unchecked rank-one shortcut.",
+    "factorization": "Use inherited528 local/separator columns and17-block support after positive column/row scaling. Appended finite bounds on epigraph/eta are separator-only. New local Gram blocks I+B.T*B are factorized once for each NEW solver input, not old mechanics L/K/Q. No changing barrier weights: this fixed resolvent identity needs no regularization-to-zero schedule. S uses sparse B,C products plus local Cholesky solves, never forms K,V,T orS.",
+    "separator": "Zero-start preconditioned CG solves each separator equation. Fixed positive preconditioner diag(T)=1+column_sum(C^2), not a claimed Schur diagonal. Check positive finite curvature and stop on nonpositive/nonfinite arithmetic. Check FULL recovered K equation residual; no inexact-solve refinement/retry. Every inner product/matvec and local solve is accounted.",
+    "inexactness": "DR step k requires Euclidean FULL resolvent residual <=2^-20/(k+1)^2; this sequence is summable. Cached q solve is checked at1e-12. Inner K solve targets full residual <=eps/8 and CG recurrence eps/64; independently recomputed K/resolvent residuals govern. Floating failure stops, not a claim of global convergence. No infinite-iteration or accuracy guarantee under finite resources.",
+    "termination": "Only return a candidate when ORIGINAL unscaled cone primal equality residual,dual equality residual and absolute duality gap are ALL<=1e-9, with finite x,y,s and y,s>=0. Also test original inequalities/bounds<=1e-7. These are numerical KKT checks, not exact rational optimality. No infeasibility/unboundedness/global impossibility claim is produced. First nonfinite,linear-solve failure,iteration/time cap terminates without candidate; internal vectors saved only as rejected diagnostics.",
+    "budget": {
+      "seconds_total": 45.0,
+      "maximum_DR_iterations": 4096,
+      "maximum_CG_iterations_per_K_solve": 256,
+      "maximum_total_CG_iterations": 16384,
+      "maximum_LP_calls_per_invocation": 1,
+      "parent_wall_seconds": 120,
+      "address_space_GiB": 40
+    },
+    "budget_scope": "45s includes scaling,local factors,cached q solve and all DR/CG work; no separate extra linear-solver budget. Parent120s/40GiB are required for a future full-size child. Preparation invokes only two declared small tests with the same45s/caps, once each. No main full-size solve or new trajectory loop launched.",
+    "admission": "A numerical KKT return is only a projected LP result. Unmodified retained coordinates still require522 exact endpoint/midpoint binary64 torque backsubstitution,source and FULL ORIGINAL490<=1e-7,actual-primary-derived witness ceiling,exact original interval eta>0 and immutable490 finite encoding. Actual mechanics/geometry/filter/runtime/physics/PPO criteria unchanged. Complete full-path wrapper and independent actual-step auditor must be frozen separately.",
+    "tests": "Two NEW small analytically bounded LPs with explicit exact primal/dual certificates. They test infeasible-start primary-like minimization and clearance-like maximization; NOT actual robot LPs,old522 interval examples,old516 fixture,actual candidate vectors or newphysical evidence.",
+    "physical_admission": false
+  },
+  "systems": {
+    "primary": {
+      "shape": [
+        408844,
+        56951
+      ],
+      "nnz": 2147927,
+      "added_bound_rows": 2,
+      "local_columns": 23205,
+      "separator_columns": 33746,
+      "new_full_size_LP_calls": 0,
+      "new_full_size_local_factors": 0,
+      "reference_witness_only": false
+    },
+    "witness": {
+      "shape": [
+        577757,
+        56951
+      ],
+      "nnz": 2697206,
+      "added_bound_rows": 2,
+      "local_columns": 23205,
+      "separator_columns": 33746,
+      "new_full_size_LP_calls": 0,
+      "new_full_size_local_factors": 0,
+      "reference_witness_only": true
+    }
+  },
+  "small_LP_tests": {
+    "infeasible_start_primary": {
+      "status": 0,
+      "reason": "numerical primal-dual witness",
+      "elapsed": 0.029456538031809032,
+      "statistics": {
+        "local_cholesky_blocks": 2,
+        "local_rhs_blocks": 790,
+        "K_solves": 132,
+        "CG_iterations": 131,
+        "schur_matvecs": 131,
+        "maximum_K_residual": 1.8253379971363983e-16,
+        "DR_iterations": 131
+      },
+      "candidate_returned": true,
+      "problem_scope": "small_arithmetic_fixture",
+      "full_size_robot_LP": false,
+      "physical_admission": false
+    },
+    "clearance_maximization": {
+      "status": 0,
+      "reason": "numerical primal-dual witness",
+      "elapsed": 0.030976712005212903,
+      "statistics": {
+        "local_cholesky_blocks": 2,
+        "local_rhs_blocks": 736,
+        "K_solves": 123,
+        "CG_iterations": 122,
+        "schur_matvecs": 122,
+        "maximum_K_residual": 2.7755575615628914e-17,
+        "DR_iterations": 122
+      },
+      "candidate_returned": true,
+      "problem_scope": "small_arithmetic_fixture",
+      "full_size_robot_LP": false,
+      "physical_admission": false
+    }
+  },
+  "new_small_LP_calls": 2,
+  "new_full_size_LP_calls": 0,
+  "new_full_size_local_factors": 0,
+  "old528_partitions_factors_examples_repeated": false,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "new_actual_path": false,
+  "physical_admission": false
+}

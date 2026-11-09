@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-17T19:20:10.377009+00:00",
+  "passed": true,
+  "records": 3800,
+  "body_tensors": 44,
+  "authored_mass_exact_frozen": false,
+  "mass_mismatch_bodies": [
+    "left_five_link",
+    "left_three_link",
+    "right_five_link",
+    "right_three_link",
+    "left_one_link",
+    "right_one_link"
+  ],
+  "maximum_errors": {
+    "mass_matrix": 1.7763568394002505e-15,
+    "contact_matrix": 3.3306690738754696e-16,
+    "velocity_response": 1.7541523789077473e-14,
+    "position_response": 3.608224830031759e-16,
+    "saddle_residual": 1.3322676295501878e-14,
+    "contact_response": 1.7563554483920305e-15
+  },
+  "finite_difference_records": 16,
+  "finite_difference_joint_body_columns": 26048,
+  "maximum_finite_difference_error": 1.8344081809118506e-10,
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false,
+  "repair_complete": false,
+  "scope": "Independent recursive body twists/energy assembly, direct55x55 saddle solve vs Schur elimination for all3800 records;16 stratified FK finite-difference fixtures. Confirms specified approximate model arithmetic, not actual PhysX response or mass equality.",
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_contact_dynamics_v3_291.py": "cae79d41a75995728c9159f2e5db9c0657cf435dcc75630a2b9a9bc1f400b8be",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_dynamics_screen_v3_290/results.json": "a7205b661c7f18ba500661b0f645ba87d54dee93f14258700a42a87aaaab8ce9",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_dynamics_screen_v3_290/arrays.npz": "575bae26902bafbd7e03daa6c84d10c22145fe1b01a06611a6f10aa32d62a726",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_dynamics_screen_v3_290/inertial_model.json": "1ffd883425d2ecf8d80f50796883d33f1373e4419e15d41667431fe2935eb117"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-23T17:41:16.407730+00:00",
+  "status": "READY_FOR_SCOPED_POLICY_APPROVAL",
+  "classification": "Source preparation and synthetic checks only",
+  "proposal": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_certificate_revalidation_20261023_v1/proposal.txt",
+  "source_directory": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_certificate_revalidation_20261023_v1",
+  "contract": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_certificate_revalidation_20261023_v1/contract.json",
+  "contract_sha256": "15227b32ff0e39b516a5f13f8a29b4304b3873f577cd488a49e35ae1c1c659fa",
+  "source_review_sha256": "e73948be975712ef7d625c592cbc7a0136bc9bf62330f2d08ea29fa0f5afb6fb",
+  "execution_approved": false,
+  "scientific_launches": 0,
+  "source_files": 12,
+  "inputs": 51,
+  "runtime_files": 2362,
+  "synthetic_checks_passed": 9,
+  "total_seconds": 45,
+  "address_space_gib": 40,
+  "solver_calls": 0,
+  "named_dual_row": 753917,
+  "named_raw_hex": "0x1.d500000000000p-49",
+  "primal_unchanged": true,
+  "requested_policy_exceptions": [
+    "Revisit the one named rejected primal unchanged, without warm starting any optimizer.",
+    "Replace one identified returned dual multiplier by exact positive zero; all other dual and primal bytes unchanged.",
+    "Repeat only the original full numerical checks needed to validate the changed certificate; no prior model/proof/solver replay."
+  ],
+  "no_automatic_downstream": true
+}

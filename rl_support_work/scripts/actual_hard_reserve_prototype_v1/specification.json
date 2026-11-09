@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "utc": "2026-10-24T08:24:20.449803+00:00",
+  "classification": "Unexecuted actual-hard error-reserve construction with data-free exact reference components",
+  "scientific_launch_ready": false,
+  "prior_design": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/actual_hard_feasibility_next_experiment_20261024_v1.json",
+  "prior_design_sha256": "3c46bfbb39a9189ac1b94661178ca502ad8477c9397ba9f0134e087149622607",
+  "latest_result": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_closure_20261024_v1.json",
+  "latest_result_sha256": "578c311ed9b977dd9294941f2d6eced9524a4f04e8052f88a42766624a47c04b",
+  "scope_change": "Replace the unestablished global Taylor-remainder premise with a conditional exact return certificate. The new interior maximizes reserve for actual-feature prediction error; one fresh nonlinear evaluation must demonstrate that its finite encoded error lies inside that reserve. This does not establish any all-trust-box smoothness or error bound.",
+  "source_finding": {
+    "path": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/low_seat_clock_transcription_444.py",
+    "sha256": "a08170272855bfe2460b3ce11ed44418cbe5e792d4ed61daa4fd34694b3d28dd",
+    "operation": "gap=(pelvis@self.n+s[plane_d]).min(1).values",
+    "implication": "The active pelvis vertex may switch. A smooth Hessian bound requires branch treatment; the posterior error certificate instead measures the realized error and makes no smoothness assumption."
+  },
+  "initialization": {
+    "accepted_origin": "finite_model_step_20261023_v1",
+    "mu": 0.08605330623059242,
+    "accepted_derivatives_only": true,
+    "rejected_gap_guarded_C_is_evidence_only": true,
+    "input_identity_bindings_for_future_loader": {
+      "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/feature_basis.npz": "b56c01474f00345e49ab68bc76eb3a0c742f73118a8fa10e6ecd04cb2dde58ac",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/clock_row_preparation_v2_446/row_arrays.npz": "9358f7d85871e59fbad045cb829ccab8ef4e9b6a9b195a35e413353a1f77ba85",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/clock_row_preparation_v2_446/all_rows_matrix.npz": "11b9a7a6f5c9ac5f79d10ff37b83ff1e68d5a2d13eaf7da465846c71aacf2fc5",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/finite_model_step_20261023_v1/mapped.npz": "a5de4d3bcf43addf6116e49723416c7df86ce38ba33988f76ac3df2d394fc984",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/finite_model_step_20261023_v1/actual.npz": "222f3db712851263811d0c0e90d151c39bfd850976a38bdf4442dfcc43573324",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/finite_model_step_20261023_v1/accepted_J.npz": "1a16ca4278f665bb8ea108b518f4c08614730a86b1ec4c5446df29c78daedf13",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/targeted_gap_primary_20261023_v1/state.npz": "973873d0a4a6521a55cf6cf07c8439c953b12c7829acdd5e2eaa3a12fd7a7bef"
+    },
+    "new_J_before_solve": false
+  },
+  "coverage": {
+    "mask": "original row.keep AND NOT row.soft",
+    "hard_rows": 156647,
+    "all_hard_rows_required": true,
+    "fixed_and_constant_rows": "Retained and individually certified, not silently removed. A negative constant actual row fails.",
+    "observed_failures": "All nine families and the188 newly negative rows are included through complete hard-row coverage.",
+    "existing_two_target_constraints": "Retained unchanged in addition to complete actual-row guards."
+  },
+  "equations": {
+    "actual_features": "z=[X24,Y51]; Y is actual Mechanics(X), not an auxiliary output vector.",
+    "predictor": "zhat(d)=z0+T*d, where T_X=P_X and T_Y=J_accepted*P_X.",
+    "signed_row": "r_i(z)=(c_i+sum_j M_ij*z_j)/scale_i, scale_i>0; all stored constants and reserves retained.",
+    "profile": "s_X = existing feature_scale for physical coordinates; s_Y = existing sigma; fixed-state profiles are exactly0. The profile is fixed before solving, and is a numerical uncertainty unit, not a changed physical tolerance.",
+    "weight": "kappa_i=sum_j abs(M_ij)*s_j/scale_i, after exact alias combination.",
+    "primary_addition": "For every kept hard row impose r_i(zhat(d))>=0. Retain the two pre-existing buffered gap inequalities, every original primal row, and original t objective.",
+    "interior_addition": "With the newly derived ceiling and original interval eta in[0,1/2], impose r_i(zhat(d))>=kappa_i*eta for every kept hard row while retaining the complete original interior and both buffered gap constraints. Maximize the same eta; no extra optimization variable is necessary.",
+    "return_error": "e_j = z_finite_actual_j - zhat_j(d), using the exact dyadic physical increments inherited from the NEW interior H trace. e includes finite encoding, nonsmooth changes and floating model-output differences.",
+    "return_certificate": "Verify abs(e_j)<=s_j*eta for every feature used by a protected row; s_j=0 requires e_j=0 exactly. Independently verify every exact tangent row reserve. Then r_i(z_finite_actual)>=r_i(zhat)-kappa_i*eta>=0.",
+    "remaining_gates": "Original actual floating row checks, all numerical/finite/mechanical/runtime gates and original research merit/progress filter remain. Certificate success is not physical repair."
+  },
+  "new_row_numeric_encoding": {
+    "mechanism": "For exact A*x<=b with proven finite parameter boxes, encode A nearest binary64 and b downward after adding min_box((A_encoded-A_exact)*x). This gives a sufficient inner inequality.",
+    "box_premise": "Every parameter used by actual physical tangents must be tied to a proven direct unit row in the existing feature/control interval system; eta uses[0,1/2]. Do not infer free-coordinate bounds from a norm.",
+    "limitation": "Inner encoding may exclude feasible points; no equivalence, conditioning, or convergence claim."
+  },
+  "component_scope": {
+    "reserve.py": "Exact row composition and posterior reserve implication",
+    "independent.py": "Independent integer-ratio interval-endpoint check",
+    "encoding.py": "Exact-box compensated inward binary64 row encoding",
+    "audit_encoding.py": "Independent nearest-even cell, support and downward-RHS check",
+    "block.py": "X24/Y51 physical tangent adapter, including conserved-load pivot and fixed states"
+  },
+  "source_references": {
+    "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/low_seat_clock_transcription_444.py": "a08170272855bfe2460b3ce11ed44418cbe5e792d4ed61daa4fd34694b3d28dd",
+    "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/low_seat_clock_rows_v2_446.py": "9502e1e4fbcbec6ce440373e24839727c10635f08c1666ebf1e70ab841fc1f9a",
+    "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/low_seat_lifted_feasibility_490.py": "04d675594cc2c72a08a1acf12a3d189aebf854f1857c2adbcc96d1a8f3cf0150",
+    "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/prepare_low_seat_gap_coordinates_v3_466.py": "baef5b402728ed3f70a46664ae276d1d106b9f899c40ad50ad66cbc2701d1f14"
+  },
+  "unresolved_launch_requirements": [
+    "Freeze the full study loader, source/input/runtime identities and original prefix inheritance; the prototypes have not read scientific arrays.",
+    "Implement a streaming exact/dyadic assembly and independent audit with source-verified coverage and finite-parameter-box witnesses.",
+    "Complete rational bit-size, temporary/output size, import/hash/load/assembly/solve/return/finite/model/audit/finalization accounting. Operation and matrix bounds alone do not certify wall time.",
+    "Freeze the complete no-retry runner and return gates; obtain any explicit new time/strengthened-optimality exceptions only after preparation. No previous600/600/45 waiver carries forward."
+  ],
+  "no_solver_calls": true,
+  "no_model_calls": true,
+  "no_simulation_PPO_holdout": true,
+  "no_permission_question_pending": true
+}

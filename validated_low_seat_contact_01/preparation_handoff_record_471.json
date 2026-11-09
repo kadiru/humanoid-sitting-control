@@ -1,0 +1,251 @@
+{
+  "utc": "2026-10-18T14:49:58.572289+00:00",
+  "scope": "Preserve new finite gap chart and LP assembly ONLY; sealed closure465 unchanged.",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "gap_evidence_preservation_467.json",
+      "files": 9194,
+      "passed": true
+    },
+    {
+      "manifest": "gap_supplemental_467.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 9256,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/free_gap_evidence_preservation_471.json",
+  "manifest_sha256": "d3b8f6f2ed2497fdf53fa6adc1f7a49e2284cdc692d4858582e4c006ce6b2413",
+  "workers": [],
+  "actual_exits": {
+    "utc": "2026-10-18T14:45:42.894850+00:00",
+    "compile468_469_actual_exit": 0,
+    "compile468_evidence": "334055",
+    "input_freeze_actual_exit": 0,
+    "input_freeze_evidence": "2e8ec9/session96016",
+    "chart468_actual_exit": 0,
+    "chart468_evidence": "f67a95/session17492",
+    "original_audit469_actual_exit": 1,
+    "original_audit469_evidence": "7788c4/session39562",
+    "staged_audit469v2_actual_exit": 0,
+    "staged_audit469v2_evidence": "28ad26/immediate",
+    "compile470_471_actual_exit": 0,
+    "compile470_evidence": "8b1158",
+    "assembly470_actual_exit": 0,
+    "assembly470_evidence": "a91d8d/session32786",
+    "audit471_actual_exit": 0,
+    "audit471_evidence": "c3742d/session94077",
+    "new_model_calls": 0,
+    "new_root_calls": 0,
+    "new_optimizer_calls": 0,
+    "new_complete_paths": 0
+  },
+  "finite_chart_preparation": {
+    "utc": "2026-10-18T14:38:24.235304+00:00",
+    "scope": "New normal-drop finite-chart arithmetic fixtures ONLY. No mechanics or optimizer.",
+    "passed": true,
+    "normal_edges": 206,
+    "independent_drops": 205,
+    "ray_fixtures": 205,
+    "new_joint_maps": 3,
+    "derivative_error": 6.275384767384651e-09,
+    "unchanged_bound": 2e-06,
+    "maximum_finite_rounding_error_m": 6.0233454026972465e-21,
+    "exact_sum_every_map": true,
+    "zero_tangent_exact": true,
+    "initial_representation_maximum_drop_change_m": 8.951159222690697e-20,
+    "independent_rounding_bound_m": 1.734723475976807e-18,
+    "pivot_rounding_bound_m": 3.5561831257524545e-16,
+    "decoded_gap_rounding_bound_m": 1.734723475976807e-18,
+    "no_cumulative_endpoint_sum_error": true,
+    "continuous_derivative_scope": "Before finite rounding only; numerical stored map not literally differentiable. Future solver must use recentered tangent and actual nonlinear checks, never a finite-map Jacobian shortcut.",
+    "normal_drop_bounds_tightened_only": true,
+    "all_old_rows_and_buffers_retained": true,
+    "model_calls": 0,
+    "root_calls": 0,
+    "trajectory_optimizers": 0,
+    "new_complete_paths": 0,
+    "physical_admission": false
+  },
+  "staged_chart_audit": {
+    "utc": "2026-10-18T14:42:51.685394+00:00",
+    "scope": "Staged469 completion: sparse-chain association only; NO repeat of618 finite maps.\nOriginal469 completed all exact map/ray/conditional interval replays, then failed\nan exact-equality assertion with differently associated sparse products. Its\nclosed traceback/source establish that prefix; independent aggregate rounding\nerror was never persisted and remains unavailable. No criterion is relaxed.\n",
+    "passed": true,
+    "arithmetic_only": true,
+    "full331888_reference_row_chain_error": 0.0,
+    "all11906_original_box_chain_error": 0.0,
+    "equality_chain_nonzeros": 0,
+    "original_association_maximum_difference": 1.1368683772161603e-13,
+    "inherited_completed_finite_maps": 618,
+    "inherited_ray_fixtures": 205,
+    "inherited_joint_maps": 3,
+    "inherited_conditional_interval_checks": 127308,
+    "inherited_derivative_error": 6.275384767384651e-09,
+    "unchanged_derivative_bound": 2e-06,
+    "repeated_finite_maps": 0,
+    "independent_rounding_aggregate_unavailable": true,
+    "finite_map_is_quantized": true,
+    "no_literal_stored_map_derivative_claim": true,
+    "model_calls": 0,
+    "root_calls": 0,
+    "optimizer_calls": 0,
+    "new_complete_path": false,
+    "physical_admission": false
+  },
+  "whole_row_preparation": {
+    "utc": "2026-10-18T14:44:27.392613+00:00",
+    "scope": "Saved-matrix preparation for new free-gap JOINT LPs; NO root/optimizer/candidate.",
+    "passed": true,
+    "reference": "Original440 saved mechanics/J only. New target gaps are NOT yet lifted; this is LP assembly validation, not candidate feasibility.",
+    "predictor_shape": [
+      355719,
+      10541
+    ],
+    "corrector_shape": [
+      379531,
+      10541
+    ],
+    "homogeneous_equalities": 1366,
+    "independent_coordinates": 10540,
+    "full_control_bound_rows": 23812,
+    "dependent_f_bounds_retained": true,
+    "normal_drop_bound_rows": 412,
+    "all331888_final_rows_retained": true,
+    "all_buffers_retained": true,
+    "specification": {
+      "max_predictors": 24,
+      "max_corrections_per_predictor": 4,
+      "max_linear_programs": 120,
+      "lp_time_limit_s": 45.0,
+      "lp_method": "highs",
+      "lp_primal_dual_tolerance": 1e-09,
+      "independent_linear_bound": 1e-07,
+      "coordinate_domain_radius": 0.02,
+      "initial_trust_fraction": 1.0,
+      "minimum_trust_fraction": 0.03125,
+      "root_max_updates": 10,
+      "root_max_halvings": 9,
+      "root_absolute_tolerance": 1e-13,
+      "hover_numerical_bound": 1e-08,
+      "strict_inequality_bound": 0.0,
+      "predictor_guard": 9.5367431640625e-07,
+      "acceptance_ratio": 0.1,
+      "correction_radius_fraction": 0.25,
+      "max_consecutive_load_roundings": 120,
+      "seed": "Original440 plus newly encoded466/468 gap targets; first complete lift is NEW and may be infeasible.",
+      "budget_justification": "18 half-reductions from source440 merit to unchanged2^-20 guard plus6 bounded rejection opportunities; at most4 corrections each. This is a separate free-gap formulation, never an extension of462.",
+      "coordinate_domain": "Original11906 f/p/load +/- .02 box around440 unchanged; dependent f bounds explicit. New206 normal-drop bounds retain all original caps plus prepared root/roundoff guard. No extra gap or allocation sweep.",
+      "normal_drop_map": "Audited468 exact residual pivot with bounded joint rounding; no endpoint-sum accumulation.",
+      "equality_policy": "All original normal/hover primal rows still checked. Their analytic zero tangent rows impose homogeneous conservation, not restoration of admissible floating residuals.",
+      "physical_admission": false
+    },
+    "model_calls": 0,
+    "root_calls": 0,
+    "lp_calls": 0,
+    "new_complete_paths": 0,
+    "physical_admission": false
+  },
+  "independent_assembly_audit": {
+    "utc": "2026-10-18T14:44:59.525953+00:00",
+    "scope": "Independent saved-array assembly audit of prospective free-gap LPs only.\nNo new mechanics/J/root or trajectory optimizer. Reference remains immutable440;\nnew gap targets are NOT yet lifted and no candidate feasibility is implied.\n",
+    "passed": true,
+    "checks": {
+      "predictor": {
+        "shape": [
+          355719,
+          10541
+        ],
+        "errors": {
+          "matrix": 0.0,
+          "all_rows": 0.0,
+          "full_control": 0.0
+        },
+        "full_old_control_bound_rows": 23812,
+        "normal_drop_bound_rows": 412
+      },
+      "correction": {
+        "shape": [
+          379531,
+          10541
+        ],
+        "errors": {
+          "matrix": 0.0,
+          "all_rows": 0.0,
+          "full_control": 0.0
+        },
+        "full_old_control_bound_rows": 23812,
+        "normal_drop_bound_rows": 412
+      }
+    },
+    "all331888_final_rows_retained": true,
+    "all11906_original_boxes_including_dependent_f_retained": true,
+    "normal_drop_pivot_bounds_retained": true,
+    "all_original_normal_hover_primal_tolerances_retained": true,
+    "zero_equality_tangent_analytic": true,
+    "model_calls": 0,
+    "root_calls": 0,
+    "optimizer_calls": 0,
+    "new_complete_path": false,
+    "physical_admission": false
+  },
+  "local_hash_review": {
+    "utc": "2026-10-18T14:46:09.214293+00:00",
+    "all_hashes_verified": true,
+    "visual_review_claimed": false,
+    "new_complete_path_claimed": false,
+    "manifests": [
+      {
+        "folder": "exact_gap_chart_preparation_468",
+        "entries": 7,
+        "manifest_sha256": "bb88d24d9b8d3dfbabb5b0eabbd839accfd11b4b3fa8be07cf4598f5f8bbd3da"
+      },
+      {
+        "folder": "exact_gap_chart_audit_v2_469",
+        "entries": 1,
+        "manifest_sha256": "651ce4c9a6c4e5eeab7a65a765c02e5dfcf0dbd1a81c55d8554fb0797b56bb91"
+      },
+      {
+        "folder": "exact_gap_audit_association_recovery_469",
+        "entries": 4,
+        "manifest_sha256": "a48e6c189ea366f4b6511198d221bc17966654bd1f9193250d04e36b1c8d5592"
+      },
+      {
+        "folder": "free_gap_solver_preparation_470",
+        "entries": 15,
+        "manifest_sha256": "dc3d11f74d108ec88974d555127b641e35898e2ad0fde98a31991173b57687ca"
+      },
+      {
+        "folder": "free_gap_assembly_audit_471",
+        "entries": 1,
+        "manifest_sha256": "b3590d4a9eb4ce27f59f1a1401eb3cce3388d772325f4f5f4a4cc76bd2dcb3a3"
+      }
+    ],
+    "manifest_count": 5,
+    "entries": 28
+  },
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_465.json",
+  "new_closure": false,
+  "new_solver_exists": false,
+  "prospective_joint_solver_assembly_exists": true,
+  "new_executable_whole_path_wrapper_exists": false,
+  "new_candidate": false,
+  "model_calls": 0,
+  "root_calls": 0,
+  "geometry_calls": 0,
+  "finite_work_columns": 0,
+  "optimizer_calls": 0,
+  "actual_forward_filter_ticks": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "best_clean": "64/72",
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}

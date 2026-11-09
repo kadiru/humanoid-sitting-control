@@ -1,0 +1,6 @@
+{
+  "reason": "Independent quaternion formula accidentally retained USD float32 arrays whereas model uses float64; max tensor discrepancy2.5821e-9.",
+  "change": "Cast authored diagonals and quaternions to float64 before independent normalization/formula. Existing1e-15 tensor tolerance unchanged. No model/result/physical rerun.",
+  "original_response_records": 0,
+  "physics_ticks": 0
+}

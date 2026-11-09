@@ -1,0 +1,45 @@
+{
+  "scope": "LOCAL process-control fixtures only; no study arrays, maps, model calls or solver",
+  "passed": true,
+  "results": [
+    {
+      "stage": "zero",
+      "actual_exit": 0,
+      "elapsed_s": 0.016045374795794487,
+      "total_elapsed_s": 0.01607033284381032,
+      "completed_within_deadline": true,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "overshoot_s": 0.0,
+      "peak_rss_bytes": 15334375424,
+      "worker_pid": 45606,
+      "supervisor_error": null
+    },
+    {
+      "stage": "nonzero",
+      "actual_exit": 7,
+      "elapsed_s": 0.015938375145196915,
+      "total_elapsed_s": 0.01598116708919406,
+      "completed_within_deadline": false,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "overshoot_s": 0.0,
+      "peak_rss_bytes": 15284043776,
+      "worker_pid": 45607,
+      "supervisor_error": null
+    },
+    {
+      "stage": "timeout",
+      "actual_exit": -9,
+      "elapsed_s": 0.14940725034102798,
+      "total_elapsed_s": 0.1494546253234148,
+      "completed_within_deadline": false,
+      "hard_termination_reason": "shared_total_deadline",
+      "termination_signal_sent_at": 2187741.252686375,
+      "overshoot_s": 0.029454625323414807,
+      "peak_rss_bytes": 15300820992,
+      "worker_pid": 45608,
+      "supervisor_error": null
+    }
+  ]
+}

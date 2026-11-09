@@ -1,0 +1,488 @@
+[
+  {
+    "name": "deferred_original_row",
+    "rows": [
+      0,
+      4,
+      5,
+      6
+    ],
+    "original": [
+      0.0,
+      0.0,
+      0.25,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "transformed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "other": 0.0,
+    "status": 0,
+    "finite": true,
+    "result": {
+      "action": "add_all_violated_rows",
+      "status": 0,
+      "finite": true,
+      "active_violation": 0.0,
+      "full_violation": 0.25,
+      "omitted_positive_original": 1,
+      "omitted_positive_transformed": 0,
+      "new_rows": [
+        2
+      ],
+      "next_rows": [
+        0,
+        2,
+        4,
+        5,
+        6
+      ],
+      "full_witness": false
+    }
+  },
+  {
+    "name": "transformed_only_smallest_positive",
+    "rows": [
+      0,
+      4,
+      5,
+      6
+    ],
+    "original": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "transformed": [
+      0.0,
+      5e-324,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "other": 0.0,
+    "status": 0,
+    "finite": true,
+    "result": {
+      "action": "add_all_violated_rows",
+      "status": 0,
+      "finite": true,
+      "active_violation": 0.0,
+      "full_violation": 5e-324,
+      "omitted_positive_original": 0,
+      "omitted_positive_transformed": 1,
+      "new_rows": [
+        1
+      ],
+      "next_rows": [
+        0,
+        1,
+        4,
+        5,
+        6
+      ],
+      "full_witness": false
+    }
+  },
+  {
+    "name": "active_failure_terminal",
+    "rows": [
+      0,
+      4,
+      5,
+      6
+    ],
+    "original": [
+      2e-07,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "transformed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "other": 0.0,
+    "status": 0,
+    "finite": true,
+    "result": {
+      "action": "terminal",
+      "status": 0,
+      "finite": true,
+      "active_violation": 2e-07,
+      "full_violation": 2e-07,
+      "omitted_positive_original": 0,
+      "omitted_positive_transformed": 0,
+      "new_rows": [],
+      "next_rows": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "full_witness": false
+    }
+  },
+  {
+    "name": "nonoptimal_never_certifies",
+    "rows": [
+      0,
+      4,
+      5,
+      6
+    ],
+    "original": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "transformed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "other": 0.0,
+    "status": 1,
+    "finite": true,
+    "result": {
+      "action": "terminal",
+      "status": 1,
+      "finite": true,
+      "active_violation": 0.0,
+      "full_violation": 0.0,
+      "omitted_positive_original": 0,
+      "omitted_positive_transformed": 0,
+      "new_rows": [],
+      "next_rows": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "full_witness": false
+    }
+  },
+  {
+    "name": "original_smallest_positive_not_waived",
+    "rows": [
+      0,
+      4,
+      5,
+      6
+    ],
+    "original": [
+      0.0,
+      0.0,
+      0.0,
+      5e-324,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "transformed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "other": 0.0,
+    "status": 0,
+    "finite": true,
+    "result": {
+      "action": "add_all_violated_rows",
+      "status": 0,
+      "finite": true,
+      "active_violation": 0.0,
+      "full_violation": 5e-324,
+      "omitted_positive_original": 1,
+      "omitted_positive_transformed": 0,
+      "new_rows": [
+        3
+      ],
+      "next_rows": [
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "full_witness": false
+    }
+  },
+  {
+    "name": "complete_zero_residual",
+    "rows": [
+      0,
+      4,
+      5,
+      6
+    ],
+    "original": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "transformed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "other": 0.0,
+    "status": 0,
+    "finite": true,
+    "result": {
+      "action": "full_witness",
+      "status": 0,
+      "finite": true,
+      "active_violation": 0.0,
+      "full_violation": 0.0,
+      "omitted_positive_original": 0,
+      "omitted_positive_transformed": 0,
+      "new_rows": [],
+      "next_rows": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "full_witness": true
+    }
+  },
+  {
+    "name": "unchanged_active_numerical_tolerance",
+    "rows": [
+      0,
+      4,
+      5,
+      6
+    ],
+    "original": [
+      5e-08,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "transformed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "other": 0.0,
+    "status": 0,
+    "finite": true,
+    "result": {
+      "action": "full_witness",
+      "status": 0,
+      "finite": true,
+      "active_violation": 5e-08,
+      "full_violation": 5e-08,
+      "omitted_positive_original": 0,
+      "omitted_positive_transformed": 0,
+      "new_rows": [],
+      "next_rows": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "full_witness": true
+    }
+  },
+  {
+    "name": "bound_failure_terminal",
+    "rows": [
+      0,
+      4,
+      5,
+      6
+    ],
+    "original": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "transformed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "other": 2e-07,
+    "status": 0,
+    "finite": true,
+    "result": {
+      "action": "terminal",
+      "status": 0,
+      "finite": true,
+      "active_violation": 2e-07,
+      "full_violation": 2e-07,
+      "omitted_positive_original": 0,
+      "omitted_positive_transformed": 0,
+      "new_rows": [],
+      "next_rows": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "full_witness": false
+    }
+  },
+  {
+    "name": "monotone_second_cut",
+    "rows": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "original": [
+      0.0,
+      0.0,
+      0.0,
+      0.125,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "transformed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "other": 0.0,
+    "status": 0,
+    "finite": true,
+    "result": {
+      "action": "add_all_violated_rows",
+      "status": 0,
+      "finite": true,
+      "active_violation": 0.0,
+      "full_violation": 0.125,
+      "omitted_positive_original": 1,
+      "omitted_positive_transformed": 0,
+      "new_rows": [
+        3
+      ],
+      "next_rows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "full_witness": false
+    }
+  },
+  {
+    "name": "nonfinite_flag_terminal",
+    "rows": [
+      0,
+      4,
+      5,
+      6
+    ],
+    "original": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "transformed": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "other": 0.0,
+    "status": 0,
+    "finite": false,
+    "result": {
+      "action": "terminal",
+      "status": 0,
+      "finite": false,
+      "active_violation": null,
+      "full_violation": null,
+      "omitted_positive_original": 0,
+      "omitted_positive_transformed": 0,
+      "new_rows": [],
+      "next_rows": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "full_witness": false
+    }
+  }
+]

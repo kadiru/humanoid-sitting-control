@@ -1,0 +1,37 @@
+{
+  "scope": "No primary arithmetic replay. Original failed traceback is at print AFTER one(primary) returned. Frozen source places every primary assertion before both verified-array saves. Numeric counts reconstructed from immutable source dimensions; original summary/timer were not serialized.",
+  "original_exit": {
+    "actual_exit": 1,
+    "observed_chunk": "59d72a",
+    "session": 79006,
+    "utc": "2026-10-19T06:46:00.563279+00:00",
+    "failure": "TypeError numpy.int32 not JSON serializable in first-role print AFTER one(primary) returned and saved BOTH verified arrays; before witness role. Primary arithmetic completed and must not be repeated. Its returned summary was not serialized.",
+    "preserved_sha256": {
+      "/home/kadir/humanoid-sitting/scripts/audit_low_seat_dual_balance_565.py": "28650e9322f59553b167397eab772d2466f232eac8b3445abddc159c191c7e56",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/dual_balance_audit_565.log": "a88aa21e7c064eaa4265493faf1c774a0c482e9ef4a932fdbddaf529e6757049",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/dual_balance_audit_565/primary_verified_original_coordinate_slots.npy": "a4c9209de3ad230796dac0db0ba21f7161e68c744590f6a896870b993dfef9fc",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/dual_balance_audit_565/primary_verified_source_row_multiplier_slots.npy": "7ba06b0a12ceafaf6bf10626618a9b1ca815eda7a2d264183fb8638fa64d8306"
+    }
+  },
+  "primary": {
+    "passed": true,
+    "dual_shape": [
+      78791,
+      402489
+    ],
+    "dual_nonzeros": 2049087,
+    "original_stationarity_coefficient_identities": 2049085,
+    "original_slack_coefficient_identities": 2049085,
+    "scalar_bound_column_identities": 4,
+    "signed_gap_coordinate_coefficient_identities": 78791,
+    "signed_gap_multiplier_coefficient_identities": 402489,
+    "retained_copy_error_exact": 0,
+    "original_primal_from_equality_marginals": true,
+    "optimizer_primal_is_multiplier_vector": true,
+    "original_domain_unchanged": true,
+    "candidate_evaluated": false,
+    "inherited_completed_arithmetic": true,
+    "summary_reconstructed_from_frozen_control_flow_and_saved_dimensions": true,
+    "original_serialized_summary_available": false
+  }
+}

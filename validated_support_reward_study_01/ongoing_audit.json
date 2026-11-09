@@ -1,0 +1,77 @@
+{
+  "gentle": {
+    "checkpoint": "final.pt",
+    "exact_initial_weights": true,
+    "frozen_normalization": true,
+    "finite": true,
+    "progress": {
+      "update": 128,
+      "transitions": 131072,
+      "elapsed_training_s": 2252.9415443930193,
+      "losses": {
+        "value": 88.0275109608968,
+        "surrogate": -0.014822305645793676,
+        "entropy": -41.392120997111,
+        "parent_kl": 1.5589710970719655
+      },
+      "reward_contributions": {
+        "approach": 9.906109037399297,
+        "support": 4.4739975929260245,
+        "hold": 9.360000000000007,
+        "seat_load_share": 1.2600939354300502,
+        "upright": 1.273462157845497,
+        "quiet": 1.1462853509187703,
+        "leg_economy": 4.414621539115905,
+        "impact": -148.445576171875,
+        "descent": -0.29108742596581577,
+        "effort": -0.028486108481883994,
+        "command_slew": -0.12414988920092583,
+        "correction_size": -0.0009656482585705817,
+        "failure": -15.0,
+        "actual_total": -132.05570697784424
+      },
+      "completed_attempts": 212,
+      "completed_successes": 37,
+      "new_distance_weight_max": 0.007147785276174545
+    },
+    "max_reward_accounting_error": 7.197577508577524e-05
+  },
+  "sources_unchanged": true,
+  "legacy": {
+    "checkpoint": "model_96.pt",
+    "exact_initial_weights": true,
+    "frozen_normalization": true,
+    "finite": true,
+    "progress": {
+      "update": 124,
+      "transitions": 126976,
+      "elapsed_training_s": 2176.5717306529987,
+      "losses": {
+        "value": 1.0619431485732396,
+        "surrogate": -0.013510710715005795,
+        "entropy": -41.420993169148765,
+        "parent_kl": 1.7534355024496715
+      },
+      "reward_contributions": {
+        "approach": 9.879013271331784,
+        "support": 14.950398159027104,
+        "hold": 21.71999999999998,
+        "seat_load_share": 6.1701758146286005,
+        "upright": 2.223462419509888,
+        "quiet": 2.9109363174438467,
+        "leg_economy": 5.39888398170471,
+        "impact": -2.1759901428222657,
+        "descent": -0.16387071775916412,
+        "effort": -0.02595916587859393,
+        "command_slew": -0.1196124276518822,
+        "correction_size": -0.0009367584658320994,
+        "failure": -10.0,
+        "actual_total": 50.76649987697601
+      },
+      "completed_attempts": 197,
+      "completed_successes": 42,
+      "new_distance_weight_max": 0.008000549860298634
+    },
+    "max_reward_accounting_error": 4.2863144642524276e-06
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "utc": "2026-10-18T12:47:41.883472+00:00",
+  "scope": "Conditional result audit: new final states get new checks; exact old input\ninherits sealed441 geometry/work without repeating that completed model loop.\nThe frozen full-state auditor remains unchanged and is invoked only if needed.\n",
+  "passed": true,
+  "arithmetic_only": true,
+  "records": 1467,
+  "new_full_geometry_records": 0,
+  "new_finite_work_columns": 0,
+  "inherited441_exact_records": 1467,
+  "duplicate_new_records": 0,
+  "maximum_errors": {
+    "geometry": 2.584328882716121e-16,
+    "equilibrium": 2.220446049250313e-16,
+    "frame": 1.1102230246251565e-15,
+    "force_interpolation": 1.1102230246251565e-16,
+    "work": 6.276646757896742e-09,
+    "command": 4.184430579812215e-11,
+    "source_equivalence": 2.8606450541701633e-11,
+    "clock": 0.0,
+    "prior_rows": 0.0
+  },
+  "maximum_errors_scope": "inherited441, not new finite-work measurements",
+  "sampled_geometry_passed": true,
+  "sampled_geometry_failures": [],
+  "minimum_housing_m": 0.003731078343242842,
+  "minimum_cop_m": 0.00500095427236287,
+  "moving_command_margin_rad": 0.030147325375236594,
+  "maximum_static_effort_utilization": 0.938187298286034,
+  "original_clock_rate_minimum": -0.00043837897576593215,
+  "original_clock_target_minimum": 3.477566778986585e-06,
+  "prior_clock_rate_minimum": -0.0004393326500823384,
+  "prior_clock_target_minimum": 3.5762788286319847e-09,
+  "step_audit": {
+    "passed": true,
+    "linear_programs": 27,
+    "linear_witness_worst_violation": 9.65907187566728e-10,
+    "nonlinear_trial_paths": 26,
+    "accepted_steps": 0,
+    "maximum_saved_row_replay": 0.0,
+    "all_executed_coordinate_maps_exact_rational_replay": true,
+    "final_selection_exact": true,
+    "details": [
+      {
+        "linear": 0,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 6.585294531902264e-10,
+        "hard_pass": false,
+        "maximum_total_normal": 0.007593021032425207,
+        "hover_error": 0.019525497802350467,
+        "accepted": false
+      },
+      {
+        "linear": 1,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 3.9745984281580604e-13,
+        "hard_pass": false,
+        "maximum_total_normal": 0.0008843481931726238,
+        "hover_error": 0.0011797099587678161,
+        "accepted": false
+      },
+      {
+        "linear": 2,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 2.468858451010192e-14,
+        "hard_pass": false,
+        "maximum_total_normal": 0.00013181864264200094,
+        "hover_error": 2.7566571921822103e-05,
+        "accepted": false
+      },
+      {
+        "linear": 3,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 1.915134717478395e-14,
+        "hard_pass": false,
+        "maximum_total_normal": 1.3578819385129393e-05,
+        "hover_error": 8.478021357616328e-06,
+        "accepted": false
+      },
+      {
+        "linear": 4,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 3.671440929053915e-11,
+        "hard_pass": false,
+        "maximum_total_normal": 1.8323578914181127e-06,
+        "hover_error": 3.0942766897634755e-06,
+        "accepted": false
+      },
+      {
+        "linear": 5,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 6.585865715627581e-10,
+        "hard_pass": false,
+        "maximum_total_normal": 0.0031518930156264613,
+        "hover_error": 0.007780114820456152,
+        "accepted": false
+      },
+      {
+        "linear": 6,
+        "solver_status": 1,
+        "candidate": false
+      },
+      {
+        "linear": 7,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 6.585253358240561e-10,
+        "hard_pass": false,
+        "maximum_total_normal": 0.0018042797199973037,
+        "hover_error": 0.0042223418812237234,
+        "accepted": false
+      },
+      {
+        "linear": 8,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 7.394085344003543e-14,
+        "hard_pass": false,
+        "maximum_total_normal": 0.0002932782306992454,
+        "hover_error": 0.00037031690452371535,
+        "accepted": false
+      },
+      {
+        "linear": 9,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 2.886579864025407e-15,
+        "hard_pass": false,
+        "maximum_total_normal": 4.006072705409203e-05,
+        "hover_error": 2.969017221055026e-05,
+        "accepted": false
+      },
+      {
+        "linear": 10,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 6.8833827526759706e-15,
+        "hard_pass": false,
+        "maximum_total_normal": 3.968471051107869e-06,
+        "hover_error": 8.783611540330583e-06,
+        "accepted": false
+      },
+      {
+        "linear": 11,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 1.4856649244165965e-10,
+        "hard_pass": false,
+        "maximum_total_normal": 2.8103119875666493e-07,
+        "hover_error": 3.833257169461035e-07,
+        "accepted": false
+      },
+      {
+        "linear": 12,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 9.65907187566728e-10,
+        "hard_pass": false,
+        "maximum_total_normal": 0.0007999374810299109,
+        "hover_error": 0.0022331241394260015,
+        "accepted": false
+      },
+      {
+        "linear": 13,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 1.7430501486614958e-14,
+        "hard_pass": false,
+        "maximum_total_normal": 0.00013124040950418525,
+        "hover_error": 0.0002444107671490947,
+        "accepted": false
+      },
+      {
+        "linear": 14,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 9.020562075079397e-16,
+        "hard_pass": false,
+        "maximum_total_normal": 1.5054039962159038e-05,
+        "hover_error": 2.6955341411172284e-05,
+        "accepted": false
+      },
+      {
+        "linear": 15,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 2.6229018956769323e-15,
+        "hard_pass": false,
+        "maximum_total_normal": 9.038929325022593e-07,
+        "hover_error": 1.732837522361308e-06,
+        "accepted": false
+      },
+      {
+        "linear": 16,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 1.7614443237334854e-10,
+        "hard_pass": false,
+        "maximum_total_normal": 7.773030796798253e-08,
+        "hover_error": 1.334605419511803e-07,
+        "accepted": false
+      },
+      {
+        "linear": 17,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 2.8189256484623115e-13,
+        "hard_pass": false,
+        "maximum_total_normal": 0.0003492020812860819,
+        "hover_error": 0.001029135422199401,
+        "accepted": false
+      },
+      {
+        "linear": 18,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 2.760014439218139e-13,
+        "hard_pass": false,
+        "maximum_total_normal": 4.658792095080244e-05,
+        "hover_error": 0.00012852168260035768,
+        "accepted": false
+      },
+      {
+        "linear": 19,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 2.042810365310288e-14,
+        "hard_pass": false,
+        "maximum_total_normal": 3.9954912744999405e-06,
+        "hover_error": 8.639960028311577e-06,
+        "accepted": false
+      },
+      {
+        "linear": 20,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 9.106049247975534e-12,
+        "hard_pass": false,
+        "maximum_total_normal": 4.836413145525853e-07,
+        "hover_error": 4.834008733300976e-07,
+        "accepted": false
+      },
+      {
+        "linear": 21,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 2.1345281098206215e-10,
+        "hard_pass": false,
+        "maximum_total_normal": 4.4260479947766385e-08,
+        "hover_error": 9.510038911919594e-08,
+        "accepted": false
+      },
+      {
+        "linear": 22,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 5.7637228323415e-13,
+        "hard_pass": false,
+        "maximum_total_normal": 0.00019133743512478318,
+        "hover_error": 0.0008129815606396917,
+        "accepted": false
+      },
+      {
+        "linear": 23,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 1.801891968966629e-13,
+        "hard_pass": false,
+        "maximum_total_normal": 1.8942955897660596e-05,
+        "hover_error": 0.00010409154845336666,
+        "accepted": false
+      },
+      {
+        "linear": 24,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 1.4607648424203035e-11,
+        "hard_pass": false,
+        "maximum_total_normal": 2.0165800846960735e-06,
+        "hover_error": 4.267251444201037e-06,
+        "accepted": false
+      },
+      {
+        "linear": 25,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 3.8191672047105385e-13,
+        "hard_pass": false,
+        "maximum_total_normal": 1.7254815976031068e-07,
+        "hover_error": 3.3075133232252085e-07,
+        "accepted": false
+      },
+      {
+        "linear": 26,
+        "solver_status": 0,
+        "candidate": true,
+        "independent_linear_violation": 9.383716026434286e-11,
+        "hard_pass": false,
+        "maximum_total_normal": 6.853772660520008e-09,
+        "hover_error": 1.4325525432568043e-08,
+        "accepted": false
+      }
+    ],
+    "optimizer_calls": 0,
+    "root_calls": 0,
+    "model_calls": 0,
+    "physical_admission": false
+  },
+  "inheritance": {
+    "final_X_exact_initial": true,
+    "final_Y_exact_initial": true,
+    "final_features_exact_saved444": true,
+    "source440_manifest_sha256": "c82deffbf3edced7d28e1887f374436fe1b1388abc3e64f76b3ff51eb47b6a3a",
+    "source441_manifest_sha256": "c3410af58863420bb648af06eb90a5d87b3d5db8a9374511f83ab0ef4f0a44b8",
+    "preparation444_manifest_sha256": "d2d0146aa5f00ba9a0b468fc36e6bc9bac7ad5f2899109a81aba6e07484d07fe",
+    "new_full_geometry_records": 0,
+    "new_finite_work_columns": 0,
+    "details": "All1467 geometry/work records inherit sealed441; no completed geometry/root/finite-work loop repeated. Independent trial and row audits are new saved-array calculations."
+  },
+  "actual_forward_filter_ticks": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "physical_admission": false
+}

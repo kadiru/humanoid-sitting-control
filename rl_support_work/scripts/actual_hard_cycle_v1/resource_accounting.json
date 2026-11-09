@@ -1,0 +1,88 @@
+{
+  "classification": "Complete integrated accounting for the proposed single cycle; resource caps are not success or runtime predictions",
+  "stage_caps_seconds": [
+    600,
+    600,
+    45
+  ],
+  "maximum_combined_stage_seconds": 1245,
+  "aggregate_address_space_bytes": 42949672960,
+  "worker_address_space_bytes": 42412802048,
+  "helper_address_space_bytes": 268435456,
+  "stage_output_bytes": {
+    "A": 1073741824,
+    "B": 1073741824,
+    "C": 536870912
+  },
+  "maximum_combined_output_bytes": 2684354560,
+  "free_disk_admission_bytes": 4294967296,
+  "layout": {
+    "states": 1410,
+    "active": 1365,
+    "X": 24,
+    "Y": 51,
+    "feature_columns": 105750,
+    "parameters": 78790,
+    "hard_rows": 156647
+  },
+  "per_composition_bounds": {
+    "physical_tangent_cache_products": 11695320,
+    "cached_output_coefficients": 1601145,
+    "composed_row_tangent_products": 36028810,
+    "composed_row_intercept_products": 1566470,
+    "composed_row_profile_products": 1566470,
+    "primary_new_coefficients": 7205762,
+    "interior_new_coefficients": 7362409,
+    "new_point_row_dot_products": 7205762,
+    "posterior_J_times_physical_trace_products": 1725840,
+    "posterior_original_row_feature_terms": 1566470,
+    "explicit_physical_box_witnesses": 31395
+  },
+  "arithmetic": {
+    "input_premise": "Every scientific scalar is finite binary64; physical basis entries are exact signed units. These are runtime assertions in the adapter/assembly. Synthetic integer fixtures are outside this premise.",
+    "binary64_absolute_bound": "abs(x)<2^1024; exact grid2^-1074",
+    "canonical_M_bound": "At most10 raw terms; aliases combined exactly; abs(combined)<2^1028 on grid2^-1074.",
+    "physical_output_tangent_bound": "At most24 signed J terms per coefficient: abs(T)<2^1029 on grid2^-1074.",
+    "raw_tangent_bound": "At most10 terms: abs(sum M*T)<2^2061 on grid2^-2148; mantissa bits<=4210.",
+    "raw_intercept_and_kappa_bound": "abs(value)<2^2056 on grid2^-2148; mantissa bits<=4205.",
+    "inward_compensation_bound": "Finite encoded coefficients and box endpoints required. Each raw error numerator is <2^2062 on grid2^-2148. Sum of <=47 error*endpoint terms plus intercept is <2^3093 on grid2^-3222; mantissa bits<=6316.",
+    "division_policy": "Divide only for nearest/downward binary64 conversion with the single positive source row scale. Nonfinite conversion terminates; never rescale the row or point.",
+    "producer_hard_caps": {
+      "mantissa_bits": 32768,
+      "absolute_exponent": 16384
+    },
+    "independent_audit": "Fraction operations use the same exact binary64 inputs but no producer arithmetic. Its allocation and CPU time must be included separately."
+  },
+  "pass_correction": "Earlier component ledger described A and B repeating composition. Integrated runner assembles/audits only once in A, then preserves the encoded guard matrix and adds independently audited upward kappa in B. Exact returned new rows are separately checked in each stage and each return auditor.",
+  "cache_proof": "For all d in explicit finite boxes, encoded A row implies raw_tangent(d)>=0. B keeps encoded coefficients/RHS and adds kappa_upper*eta with kappa_upper>=kappa/scale, eta>=0. Thus encoded B implies raw_tangent(d)>=kappa*eta. Positive source scale and unchanged box intersection are independently checked.",
+  "stages": {
+    "A": {
+      "resource_file": "A/resources.json",
+      "sha256": "564c321426486b235119dfcbbff8869b59f0fd5136e97dcddec1c8a438d55c31"
+    },
+    "B": {
+      "resource_file": "B/resources.json",
+      "sha256": "2f688bf2cb2f978a91cd554f1a44aba4479b51bf9b2a667a2c78b68d681f3103"
+    },
+    "C": {
+      "resource_file": "C/resources.json",
+      "sha256": "30d9f897fd97688dc51644cf09869cc56600b9d6de73fa35eb50a38a47da15ed"
+    }
+  },
+  "finite_return_limits": {
+    "original_interval_components_bits": 4096,
+    "exact_trace_numerator_bits": 4213,
+    "exact_trace_denominator_bits": 2149,
+    "new_encoded_row_margin_numerator_bits": 4220,
+    "new_encoded_row_margin_denominator_bits": 2150,
+    "posterior_raw_mantissa_bits": 8450,
+    "producer_dyadic_mantissa_cap": 32768,
+    "producer_dyadic_abs_exponent_cap": 16384
+  },
+  "timing": "One monotonic clock per stage, origin before owner startup for A. Imports, hashes, loads, construction, all exact arithmetic, independent input/return audits, solver presolve/factorization/crossover, serialization and finalization included. A/B absolute solver deadline420s, producer480s, auditor598s, owner<600s. C producer30s,auditor44s,owner<45s. Parent kill/reap and late-success rejection; no retry or independent second allowance.",
+  "failure": "Any missing/source-changed/oversized input, nonfinite value, exact arithmetic overflow, invalid return, deadline/allocation/output limit or audit disagreement closes the single cycle. A failed stage never advances. Backend convergence, positive eta and nonlinear improvement are not guaranteed.",
+  "scientific_executions_during_preparation": 0,
+  "scientific_runtime_prediction": null,
+  "synthetic_timing_extrapolated": false,
+  "old_proofs_or_rejected_points_recomputed": false
+}

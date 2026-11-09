@@ -1,0 +1,136 @@
+{
+  "utc": "2026-10-19T01:41:39.693999+00:00",
+  "scope": "Index saved536/537 negative evidence only; no matrix or arithmetic replay.",
+  "systems": {
+    "primary": {
+      "source_shape": [
+        408842,
+        56951
+      ],
+      "source_nnz": 2147925,
+      "shape": [
+        408842,
+        56951
+      ],
+      "nnz": 2147925,
+      "command_columns": 21840,
+      "directed_edge_rows": 96832,
+      "bidirected_pairs": 43648,
+      "forest_pairs": 21824,
+      "forest_components": 16,
+      "candidates": 44256,
+      "implied_rows": 0,
+      "path_source_row_uses": 0,
+      "unary_source_row_uses": 0,
+      "decisions": {
+        "not_implied": 9920,
+        "path_limit": 34336
+      },
+      "maximum_proved_path": 0,
+      "lp_columns_unchanged": true
+    },
+    "witness": {
+      "source_shape": [
+        577755,
+        56951
+      ],
+      "source_nnz": 2697204,
+      "shape": [
+        577755,
+        56951
+      ],
+      "nnz": 2697204,
+      "command_columns": 21840,
+      "directed_edge_rows": 96832,
+      "bidirected_pairs": 43648,
+      "forest_pairs": 21824,
+      "forest_components": 16,
+      "candidates": 44256,
+      "implied_rows": 0,
+      "path_source_row_uses": 0,
+      "unary_source_row_uses": 0,
+      "decisions": {
+        "not_implied": 9920,
+        "path_limit": 34336
+      },
+      "maximum_proved_path": 0,
+      "lp_columns_unchanged": true
+    }
+  },
+  "audit_systems": {
+    "primary": {
+      "passed": true,
+      "source_rows": 408842,
+      "kept_rows": 408842,
+      "proved_removed_rows": 0,
+      "path_row_uses": 0,
+      "unary_row_uses": 0,
+      "exact_coefficient_additions": 0,
+      "coefficient_copy_error": 0,
+      "rhs_copy_error": 0,
+      "all_proof_rows_explicitly_retained": true,
+      "cost_bounds_equalities_unchanged": true,
+      "new_graph_edge_classification": 96832,
+      "old_proofs_repeated": false,
+      "lp_calls": 0,
+      "model_calls": 0,
+      "physical_admission": false,
+      "negative_decision_audit": {
+        "exact_tested_decisions": 9920,
+        "negative_endpoint_decisions": 9920,
+        "path_cap_decisions": 34336,
+        "longest_forest_path": 1063,
+        "coefficient_additions": 1942020,
+        "scope": "Negative decisions refer ONLY to the fixed forest path and fixed unary choices. They do not prove global nonredundancy, LP infeasibility or physical impossibility. Long paths were not arithmetically tested."
+      }
+    },
+    "witness": {
+      "passed": true,
+      "source_rows": 577755,
+      "kept_rows": 577755,
+      "proved_removed_rows": 0,
+      "path_row_uses": 0,
+      "unary_row_uses": 0,
+      "exact_coefficient_additions": 0,
+      "coefficient_copy_error": 0,
+      "rhs_copy_error": 0,
+      "all_proof_rows_explicitly_retained": true,
+      "cost_bounds_equalities_unchanged": true,
+      "new_graph_edge_classification": 96832,
+      "old_proofs_repeated": false,
+      "lp_calls": 0,
+      "model_calls": 0,
+      "physical_admission": false,
+      "negative_decision_audit": {
+        "exact_tested_decisions": 9920,
+        "negative_endpoint_decisions": 9920,
+        "path_cap_decisions": 34336,
+        "longest_forest_path": 1063,
+        "coefficient_additions": 1296608,
+        "scope": "Negative decisions refer ONLY to the fixed forest path and fixed unary choices. They do not prove global nonredundancy, LP infeasibility or physical impossibility. Long paths were not arithmetically tested."
+      }
+    }
+  },
+  "new_graph_systems": 2,
+  "new_exact_path_decisions": 19840,
+  "new_negative_path_decisions": 19840,
+  "new_path_cap_decisions": 68672,
+  "new_proved_implications": 0,
+  "new_removed_rows": 0,
+  "new_lp_variables_removed": 0,
+  "independent_negative_coefficient_additions": 3238628,
+  "successful_reduction": false,
+  "full_projected_matrices_unchanged": true,
+  "empty_success_proof_scope": "No removed rows; all_proof_rows_explicitly_retained and zero positive-certificate additions describe EMPTY successful-proof sets. Separately audited19840 negative path decisions are actual new evidence.",
+  "negative_scope": "The fixed forest and fixed unary choices failed every tested endpoint implication.68672 candidate paths exceeded128-edge arithmetic cap and were retained untested. No global nonredundancy/infeasibility claim. No cap extension, alternate forest or unary-selection retry.",
+  "lp_calls": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "physical_admission": false,
+  "new_candidate": false,
+  "new_solver": false,
+  "task_complete": false
+}

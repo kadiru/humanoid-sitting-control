@@ -1,0 +1,66 @@
+{
+  "utc": "2026-10-19T01:40:48.646169+00:00",
+  "passed": true,
+  "arithmetic_only": true,
+  "removed_row_certificates_empty": true,
+  "systems": {
+    "primary": {
+      "passed": true,
+      "source_rows": 408842,
+      "kept_rows": 408842,
+      "proved_removed_rows": 0,
+      "path_row_uses": 0,
+      "unary_row_uses": 0,
+      "exact_coefficient_additions": 0,
+      "coefficient_copy_error": 0,
+      "rhs_copy_error": 0,
+      "all_proof_rows_explicitly_retained": true,
+      "cost_bounds_equalities_unchanged": true,
+      "new_graph_edge_classification": 96832,
+      "old_proofs_repeated": false,
+      "lp_calls": 0,
+      "model_calls": 0,
+      "physical_admission": false,
+      "negative_decision_audit": {
+        "exact_tested_decisions": 9920,
+        "negative_endpoint_decisions": 9920,
+        "path_cap_decisions": 34336,
+        "longest_forest_path": 1063,
+        "coefficient_additions": 1942020,
+        "scope": "Negative decisions refer ONLY to the fixed forest path and fixed unary choices. They do not prove global nonredundancy, LP infeasibility or physical impossibility. Long paths were not arithmetically tested."
+      }
+    },
+    "witness": {
+      "passed": true,
+      "source_rows": 577755,
+      "kept_rows": 577755,
+      "proved_removed_rows": 0,
+      "path_row_uses": 0,
+      "unary_row_uses": 0,
+      "exact_coefficient_additions": 0,
+      "coefficient_copy_error": 0,
+      "rhs_copy_error": 0,
+      "all_proof_rows_explicitly_retained": true,
+      "cost_bounds_equalities_unchanged": true,
+      "new_graph_edge_classification": 96832,
+      "old_proofs_repeated": false,
+      "lp_calls": 0,
+      "model_calls": 0,
+      "physical_admission": false,
+      "negative_decision_audit": {
+        "exact_tested_decisions": 9920,
+        "negative_endpoint_decisions": 9920,
+        "path_cap_decisions": 34336,
+        "longest_forest_path": 1063,
+        "coefficient_additions": 1296608,
+        "scope": "Negative decisions refer ONLY to the fixed forest path and fixed unary choices. They do not prove global nonredundancy, LP infeasibility or physical impossibility. Long paths were not arithmetically tested."
+      }
+    }
+  },
+  "proof": "No rows were omitted: the removed-row proof set is EMPTY. Independently verify all saved tested negative endpoint decisions and combinatorial path-cap decisions, as well as exact full source copies. The fixed forest did not establish any new implication. No production code imported; no solver, model, old grouping/projection proof or fixture repeated.",
+  "lp_calls": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physical_admission": false
+}

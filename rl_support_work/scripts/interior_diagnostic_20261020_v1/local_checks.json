@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-20T10:10:07.303909+00:00",
+  "scope": "LOCAL ONLY: source compilation, static review and pending-approval negative test; no scientific imports or input arrays evaluated",
+  "compile": {
+    "actual_exit": 0,
+    "stderr": ""
+  },
+  "pending_approval_guard": {
+    "actual_exit": 1,
+    "expected_exit": 1,
+    "passed": true,
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_diagnostic_20261020_v1/supervise.py\", line 92, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_diagnostic_20261020_v1/supervise.py\", line 69, in main\n    contract()\n    ~~~~~~~~^^\n  File \"/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_diagnostic_20261020_v1/common.py\", line 48, in contract\n    raise PermissionError(\"Separate interior diagnostic approval is pending\")\nPermissionError: Separate interior diagnostic approval is pending\n"
+  },
+  "independent_auditor_imports": [
+    "common",
+    "fractions",
+    "json",
+    "numpy",
+    "resource",
+    "scipy",
+    "sys",
+    "time"
+  ],
+  "single_linprog_call_site": true,
+  "scientific_runs": 0,
+  "remote_source_uploads": 0,
+  "launch_ready": false,
+  "source_sha256": {
+    "common.py": "6366029f1b0837d5efdfaab3da28a9f15c40b8c82551d61291d87dad56f9ffef",
+    "independent.py": "461814015cb09df4bbdfdb27ebdd00462a05059602a60c78a693066c35e8ef44",
+    "preflight.py": "6006c0b6f6341cbf1352b72f23295053b7f17a82e57c35140e1e8f33b7f2b222",
+    "producer.py": "eb95d7c17c219e76218d14834156701f73a0ed77fdf6a82859f85ba42800beae",
+    "supervise.py": "3056153e3b3b365adf364fce6bd3d44737692f971f5d0e935889a60641138e6a"
+  },
+  "proposal_sha256": "31d10659f2db4f08062746a0b5493a69627be7c343e6d2f0c36a3e3dda2f9d5f"
+}

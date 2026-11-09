@@ -1,0 +1,710 @@
+{
+  "utc": "2026-10-17T10:55:57.961004+00:00",
+  "passed": true,
+  "scope": "Independent finite-difference virtual work, force balance, fixed/finger commands and model timing for every115 saved node. Verify unchanged foot/seat loads except revised double-support split, zero swing-foot force, same stationary landing foot targets before redistribution and exact endpoint forces. The filter feasibility result is separate and may fail; an audit pass never admits physics.",
+  "nodes": 115,
+  "max_virtual_work_error_Nm": 6.77515954450314e-09,
+  "max_equilibrium_residual": 8.881784197001252e-16,
+  "minimum_command_margin_rad": 0.03000999999999998,
+  "maximum_static_effort_utilization": 0.8494429519600999,
+  "model_command_gate": true,
+  "specific_command_time_s": 14.50802268239169,
+  "command_time_gate": false,
+  "command_only_filter": {
+    "scope": "CPUfloat32 command arithmetic only, no physical integration or GPU exactness claim. Diagnostic inverse-filter targets expose clamping; no runtime target is installed.",
+    "sample_period_s": 0.02,
+    "alpha": 0.1,
+    "increment_cap_rad": 0.003,
+    "schedule_duration_s": 14.52,
+    "inverse_target_clipped_ticks": 88,
+    "events": [
+      {
+        "t": 5.7,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.0008524060249328613
+      },
+      {
+        "t": 5.72,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.004620075225830078
+      },
+      {
+        "t": 5.74,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.011010944843292236
+      },
+      {
+        "t": 5.76,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.01948016881942749
+      },
+      {
+        "t": 5.78,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.012148737907409668
+      },
+      {
+        "t": 5.8,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.006730318069458008
+      },
+      {
+        "t": 5.82,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.003008902072906494
+      },
+      {
+        "t": 7.58,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.00039970874786376953
+      },
+      {
+        "t": 7.6000000000000005,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.0019553303718566895
+      },
+      {
+        "t": 7.62,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.0045511722564697266
+      },
+      {
+        "t": 7.640000000000001,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.0008726716041564941
+      },
+      {
+        "t": 8.32,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.0005660057067871094
+      },
+      {
+        "t": 8.34,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.0026006698608398438
+      },
+      {
+        "t": 8.36,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.005957186222076416
+      },
+      {
+        "t": 8.38,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.010502934455871582
+      },
+      {
+        "t": 8.4,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.016118884086608887
+      },
+      {
+        "t": 8.42,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.02269887924194336
+      },
+      {
+        "t": 8.44,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.03014516830444336
+      },
+      {
+        "t": 8.46,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.0383719801902771
+      },
+      {
+        "t": 8.48,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.04730212688446045
+      },
+      {
+        "t": 8.5,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.04958111047744751
+      },
+      {
+        "t": 8.52,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.040435075759887695
+      },
+      {
+        "t": 8.540000000000001,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.03180193901062012
+      },
+      {
+        "t": 8.56,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.023629605770111084
+      },
+      {
+        "t": 8.58,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.01587134599685669
+      },
+      {
+        "t": 8.6,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.008487045764923096
+      },
+      {
+        "t": 8.620000000000001,
+        "joint_names": [
+          "right_ankle_pitch_joint"
+        ],
+        "maximum_target_excess_rad": 0.0014379620552062988
+      },
+      {
+        "t": 13.32,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.002566516399383545
+      },
+      {
+        "t": 13.34,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.007876291871070862
+      },
+      {
+        "t": 13.36,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.008879035711288452
+      },
+      {
+        "t": 13.38,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.01179078221321106
+      },
+      {
+        "t": 13.4,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.01670236885547638
+      },
+      {
+        "t": 13.42,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.023414000868797302
+      },
+      {
+        "t": 13.44,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.03174541890621185
+      },
+      {
+        "t": 13.46,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.04153488576412201
+      },
+      {
+        "t": 13.48,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.05192689597606659
+      },
+      {
+        "t": 13.5,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.0489545613527298
+      },
+      {
+        "t": 13.52,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.04704506695270538
+      },
+      {
+        "t": 13.540000000000001,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.0460921972990036
+      },
+      {
+        "t": 13.56,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.0460001677274704
+      },
+      {
+        "t": 13.58,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.04668299853801727
+      },
+      {
+        "t": 13.6,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.048063114285469055
+      },
+      {
+        "t": 13.620000000000001,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.0500708669424057
+      },
+      {
+        "t": 13.64,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.040028586983680725
+      },
+      {
+        "t": 13.66,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.029703959822654724
+      },
+      {
+        "t": 13.68,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.01983688771724701
+      },
+      {
+        "t": 13.700000000000001,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.010381549596786499
+      },
+      {
+        "t": 13.72,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.002793744206428528
+      },
+      {
+        "t": 13.74,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.008308187127113342
+      },
+      {
+        "t": 13.76,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.00908215343952179
+      },
+      {
+        "t": 13.780000000000001,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.00396515429019928
+      },
+      {
+        "t": 13.8,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.006941735744476318
+      },
+      {
+        "t": 13.82,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.010894834995269775
+      },
+      {
+        "t": 13.84,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.015127018094062805
+      },
+      {
+        "t": 13.86,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.019610390067100525
+      },
+      {
+        "t": 13.88,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.018208786845207214
+      },
+      {
+        "t": 13.9,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.017839372158050537
+      },
+      {
+        "t": 13.92,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.028028294444084167
+      },
+      {
+        "t": 13.94,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.039175912737846375
+      },
+      {
+        "t": 13.96,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.048900291323661804
+      },
+      {
+        "t": 13.98,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.04747040569782257
+      },
+      {
+        "t": 14.0,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.046739622950553894
+      },
+      {
+        "t": 14.02,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.04663766920566559
+      },
+      {
+        "t": 14.040000000000001,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.04382471740245819
+      },
+      {
+        "t": 14.06,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.03121335804462433
+      },
+      {
+        "t": 14.08,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.019060656428337097
+      },
+      {
+        "t": 14.1,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.018772169947624207
+      },
+      {
+        "t": 14.120000000000001,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.027984485030174255
+      },
+      {
+        "t": 14.14,
+        "joint_names": [
+          "left_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.023289844393730164
+      },
+      {
+        "t": 14.16,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.010538652539253235
+      },
+      {
+        "t": 14.18,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.003170296549797058
+      },
+      {
+        "t": 14.200000000000001,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.016547992825508118
+      },
+      {
+        "t": 14.22,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.033549174666404724
+      },
+      {
+        "t": 14.24,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.016064316034317017
+      },
+      {
+        "t": 14.26,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.018704786896705627
+      },
+      {
+        "t": 14.280000000000001,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.03237079083919525
+      },
+      {
+        "t": 14.3,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.045877113938331604
+      },
+      {
+        "t": 14.32,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.03259681165218353
+      },
+      {
+        "t": 14.34,
+        "joint_names": [
+          "left_hip_roll_joint",
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.009583964943885803
+      },
+      {
+        "t": 14.36,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.01380208134651184
+      },
+      {
+        "t": 14.38,
+        "joint_names": [
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.020645901560783386
+      },
+      {
+        "t": 14.4,
+        "joint_names": [
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.013290464878082275
+      },
+      {
+        "t": 14.42,
+        "joint_names": [
+          "left_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.03710721433162689
+      },
+      {
+        "t": 14.44,
+        "joint_names": [
+          "left_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.04998384416103363
+      },
+      {
+        "t": 14.46,
+        "joint_names": [
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.04497547447681427
+      },
+      {
+        "t": 14.48,
+        "joint_names": [
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.03262721002101898
+      },
+      {
+        "t": 14.5,
+        "joint_names": [
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.03735341131687164
+      },
+      {
+        "t": 14.52,
+        "joint_names": [
+          "left_ankle_roll_joint",
+          "right_ankle_roll_joint"
+        ],
+        "maximum_target_excess_rad": 0.024704858660697937
+      }
+    ],
+    "max_command_path_difference_rad": 0.005192682147026062,
+    "final_command_difference_rad": 0.0024704784154891968,
+    "max_applied_increment_rad": 0.003000020980834961,
+    "unclipped_inverse_filter_gate": false,
+    "physical_admission": false
+  },
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_load_sharing_106/results.json": "4ec14cba61a03b0630ce1d07be27182c39f90dfd1991424c6e25f8c533e45d75",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/stance_com_path_v2_98/results.json": "cd70ad73525155d2db0974d9ddc0ba6b55a42063274d89011f4aaf3352621468",
+    "/home/kadir/humanoid-sitting/scripts/run_seat_load_ppo.py": "c374e91f3989151b46dd60e87e08bea55092b6a4acdf38993b7b54ebac1ed38f",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_load_filter_107.py": "cd968b5ec8bd52fb0c59b44a04430cb0d477379d3ff089855b2910802d363812"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "holdout_used": false,
+  "physical_admission": false
+}

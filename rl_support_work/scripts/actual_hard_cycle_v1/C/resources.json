@@ -1,0 +1,121 @@
+{
+  "scope": "One new current-state unscaled finite map and conditional model/J step; zero optimizer calls",
+  "shared_total_wall_seconds": 45,
+  "clock_origin": "supervisor module entry before imports, source hashes, runtime/input hashes, all loading, finite map, new mechanics/J, independent audit and final decision; parent hard kill/reap, late zero exits reject",
+  "concurrent_scientific_workers": 1,
+  "stages": "Producer hard30s, independent audit hard44s, outer termination44.5s; startup through result/finalization strictly below45s.",
+  "counts": {
+    "finite_maps": 1,
+    "shared_alpha": [
+      1,
+      1
+    ],
+    "other_dyadics": 0,
+    "solver_calls": 0,
+    "certificate_recomputations": 0,
+    "value_batches_max": 1,
+    "value_records_max": 1365,
+    "jacobian_batches_max": 1,
+    "jacobian_records_max": 1365,
+    "jacobian_columns_per_record": 24,
+    "audit_model_calls": 0,
+    "root_solves": 0,
+    "simulations": 0,
+    "PPO": 0,
+    "holdout": 0,
+    "posterior_J_trace_products_each_implementation": 1725840,
+    "posterior_original_row_terms_each_implementation_max": 1566470,
+    "posterior_feature_error_checks_each_implementation_max": 105750,
+    "posterior_physical_trace_bindings_each_implementation": 33840,
+    "posterior_sparse_P_H_association_coefficients_each_implementation_max": 473760
+  },
+  "target_associations": {
+    "H_rows": 92267,
+    "control_rows": [
+      0,
+      11906
+    ],
+    "varying_feature_rows": [
+      11906,
+      92061
+    ],
+    "drop_rows": [
+      92061,
+      92267
+    ],
+    "varying_feature_ids": "reference.npz varying; owners must agree exactly",
+    "initial_features": [
+      1410,
+      75
+    ],
+    "initial_outputs": [
+      1410,
+      51
+    ],
+    "initial_J": [
+      1410,
+      51,
+      24
+    ],
+    "all_signed_rows": 331888,
+    "full_original_boxes": 11906,
+    "fixed_states": 45,
+    "exact_pivot": 203,
+    "independent_binary64_drops": 205
+  },
+  "net_savings": "Inherit only the NEW successful B exact trace: no H*d, P*d or N*d. New posterior adds J*physical_trace twice, and loads P/H only to verify exact trace-row associations. No J*P rebuild.",
+  "rational_accounting": {
+    "trace_numerator_bits_max": 4213,
+    "trace_denominator_bits_max": 2149,
+    "original_interval_components_bits_max": 4096,
+    "feature_sum_numerator_bits_max": 5289,
+    "feature_sum_denominator_bits_max": 3224,
+    "raw_drop_component_bits_conservative_max": 8320,
+    "206_term_fraction_accumulation_component_bits_conservative_max": 1713928,
+    "cross_comparison_component_bits_conservative_max": 3427856,
+    "explanation": "These source-derived bounds replace the older observed1070-bit trace assumption. Binary64 plus dyadic trace uses product-denominator addition bounds. Raw drop uses original<=4096-bit component plus trace; generic206-term fraction accumulation is bounded by206*8320+8bits even without dyadic cancellations. Actual clocks and40GiB still cap native arithmetic; no success/time prediction.",
+    "posterior_J_trace_mantissa_bits_upper_bound": 6320,
+    "posterior_raw_row_mantissa_bits_upper_bound": 8450,
+    "posterior_derivation": "B trace numerator<=4213bits, denominator power<=2148. Binary64 J multiplies add <=1024 high bits and <=1074 denominator bits; summing24terms and an intercept fits6320mantissa bits. Multiplying <=10 canonical M terms adds <=1028 high bits and <=1074 denominator bits; with margin/eta terms the raw posterior fits8450bits. Independent Fraction uses the same dyadic denominators. Producer cap32768bits and|exponent|16384 fails closed."
+  },
+  "storage": {
+    "runtime_bytes_hashed": 3417181178,
+    "runtime_file_bindings": 6702,
+    "output_bound_bytes": 536870912,
+    "working_memory_policy": "Worker39.5GiB RLIMIT_AS plus two256MiB helpers; all sparse matrices, Fraction/dyadic objects, model buffers and runtime mappings included.",
+    "return_arrays": "Prior finite outputs plus immediate fresh_values.npz backup before posterior work; exact posterior compact report; conditional accepted J. Backup is diagnostic evidence only and is never accepted on timeout.",
+    "runtime_bytes_hashed_twice": 6834362356,
+    "working_output_and_source_limit_bytes": 536870912
+  },
+  "success": "All original finite checks and filter, at least1%actual mismatch reduction, both target actual rows nonnegative, no newly negative formerly nonnegative actual kept-hard row, and worst actual hard violation not increased. In addition, every actual kept-hard row must be exactly nonnegative, every predicted row reserve must be nonnegative, and every used feature finite/nonlinear error must fit eta times its frozen profile.",
+  "failure": "Any failed finite invariant, absent/nonfinite model, deadline/resource/process failure or audit mismatch closes this single execution. A valid finite map whose merit is rejected remains a rejected trial; no automatic second scale or solver.",
+  "current_state_source": "targeted_gap_primary_20261023_v1/state.npz exactly matched to finite_model_step_20261023_v1 map/Y/J.",
+  "numerical_audit_counts": {
+    "M_sparse_products_max": 8,
+    "E_sparse_products_max": 8,
+    "J_prediction_scalar_products_max": 3451680,
+    "new_oracle_graph": "Frozen444: one batch up to1365 states; one optional24-column JVP batch; no root solve or model modification",
+    "exact_feature_sums_each_worker": 105750,
+    "adjacent_float_audit_max": 107528,
+    "drop_coordinate_count": 206,
+    "full_original_control_bounds": 11906
+  },
+  "classification": "Integrated source-derived total-resource accounting; no scientific array evaluation or runtime prediction",
+  "aggregate_address_space_bytes": 42949672960,
+  "worker_address_space_bytes": 42412802048,
+  "owner_address_space_bytes": 268435456,
+  "supervisor_address_space_bytes": 268435456,
+  "output_bound_bytes": 536870912,
+  "disk_free_required_bytes": 4294967296,
+  "static_input_and_runtime_metadata": {
+    "runtime_files": 6702,
+    "runtime_bytes": 3417181178,
+    "input_files": 54,
+    "input_bytes": 156764416
+  },
+  "static_bytes_hashed_by_producer_and_auditor": 7147891188,
+  "source_hashing": "Owner and every child verify the complete source freeze. Generated predecessor files are additionally hashed by manifest and each referenced cache proof; all I/O is charged to the same stage clock.",
+  "memory_policy": "One scientific worker plus owner and supervisor. Worker RLIMIT_AS hard39.5GiB, each helper soft256MiB with no helper-side increase. Worker inherits a40GiB hard ceiling and lowers it before import. Producer and auditor are sequential. All Python objects, sparse copies, native solver/model allocation and imported runtimes count; allocation failure is terminal.",
+  "disk_policy": "Monitor total stage output and reject/kill on cap crossing; RLIMIT_FSIZE additionally caps each file. Polling can overshoot aggregate cap before rejection. Source-derived output arrays/trace are below cap; acceptance requires aggregate within cap. No retry.",
+  "finite_return": "Untouched binary64 primal/marginals and exact certificates; all failure, timeout, representation overflow, source/input/audit mismatch terminate without reuse or retry."
+}

@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-17T14:18:00.216255+00:00",
+  "original_failure": "After all130 control steps, accounting and env.close() saved outputs, finally tried restoring raw.scene.update after env.close had deleted raw.scene.",
+  "all_recorded_outputs_preserved": true,
+  "original_failed_exit_preserved": true,
+  "physics_rerun": false,
+  "new_physics_ticks": 0,
+  "post_run_source_hashes_verified": true,
+  "action": "Audit existing saved prefix and substeps; no runtime modification, resimulation or tolerance change. Independent replay still required.",
+  "accounting": {
+    "elapsed_s": 13.0,
+    "physics_substeps": 2600,
+    "physics_dt": 0.005,
+    "active_ticks": 15600,
+    "initial_settling_excluded": 600,
+    "indexed_warmup": 0,
+    "complete20s_episodes": 0,
+    "optimizer_updates": 0,
+    "fresh_holdout": false,
+    "recording_control_use": false,
+    "substep_records": 1001,
+    "scene_update_callbacks": 2600
+  }
+}

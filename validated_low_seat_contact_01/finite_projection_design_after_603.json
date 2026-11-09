@@ -1,0 +1,72 @@
+{
+  "scope": "Post603 mathematical design of the prerequisites for an existential projection; no selected604 formulation, executable algorithm, resource freeze or scientific launch",
+  "status": "Design only. No target columns have been selected or inspected for eligibility. No projection, new coefficient arithmetic, incidence/sign-count scan, finite reconstruction, candidate or solver run occurred.",
+  "inherits": {
+    "affine_dimension_design_after_603.json": "b56d4ebb28dda53be7bd38533fe0ace1865caa59b96c6a04eb79b97cbaa514c6",
+    "pressure_quotient_supplemental_603.json": "f93eb4729634a29460b50d115442725a7f31a2517532f54ebc66c6cd7d1f311f",
+    "supplemental_design_review_603.json": "d6e81b4d4dde6ac475312854957759221ecc814b2867d9f7cace561af7fe7f0a"
+  },
+  "source_review": {
+    "remote_hash_read": "693629",
+    "matching_local_hash_read": "6017a8",
+    "local_source_reads": ["14398f", "4783c0", "1a08e8"],
+    "source_sha256": {
+      "scripts/low_seat_clock_rows_v2_446.py": "9502e1e4fbcbec6ce440373e24839727c10635f08c1666ebf1e70ab841fc1f9a",
+      "scripts/low_seat_command_forest_536.py": "c31a10520274a41d2d5b3e5f2c1604d959c6b7665bfd31c5a56d7e7feaa13199",
+      "scripts/low_seat_lifted_feasibility_490.py": "04d675594cc2c72a08a1acf12a3d189aebf854f1857c2adbcc96d1a8f3cf0150"
+    },
+    "limitations": "Source text was read without importing its modules or calling any assembly. These matching source hashes are provenance for the design discussion, not a new audit of stored matrices or a proof of projected sparsity."
+  },
+  "wholeclock_observation": [
+    "Saved446 source constructs adjacent-state command rates, original-vertex rate/ramp rows, inverse-filter clock targets 10*c_next-9*c_previous, and mesh-window expressions 10*c(t)-9*c(t-1/50) from interpolation at two query times. Therefore a reduction based only on individual-state local mechanics would need to account for all these cross-state rows as well.",
+    "The eliminated physical/output graphs do not by themselves make inequalities separable across states. No assertion about the exact support, incidence degree or signs of the saved594 or596 rows was computed in this review. A proposed independent set of eliminable columns would require its own complete source-row incidence certificate, including original rows, interval/box rows and the explicit finite domain.",
+    "The completed536 forest and its capped/unmatched cases remain terminal. Reading its source identifies the boundary of that earlier work; no graph, forest, path, gain, endpoint or implication calculation was repeated or extended."
+  ],
+  "conditional_separable_projection_theorem": [
+    "Consider a finite exact-real inequality system with retained coordinates y and selected scalar coordinates x_j. Require every inequality to involve at most one selected x_j, and every retained equality to have zero coefficient on all selected coordinates. Include the selected coordinates' explicit finite lower and upper bounds as rows before partitioning. This is a conditional hypothesis, not a claim about any selected columns in this problem.",
+    "For one selected coordinate write each incident row as a_i*x_j+r_i(y)<=b_i. A positive a_i gives U_i(y)=(b_i-r_i(y))/a_i; a negative a_k gives L_k(y)=(b_k-r_k(y))/a_k. All zero-selected-coordinate rows remain unchanged. For every positive/negative pair retain (-a_k)*r_i(y)+a_i*r_k(y)<=(-a_k)*b_i+a_i*b_k. Both row multipliers are strictly positive, and the selected coefficient cancels exactly.",
+    "These pair rows are equivalent to L_k(y)<=U_i(y) for every pair. Thus the real projection is exact: a retained y satisfies all projected rows if and only if every selected coordinate has a nonempty real interval [max L,min U]. Since no source row contains two selected coordinates, choices from those intervals can be made independently. This theorem gives neither existence of any projected y nor a finite-valued extension.",
+    "With p_j positive and q_j negative incident rows, and M0 rows involving no selected coordinate, the source augmented row count is M0+sum(p_j+q_j), whereas direct pair generation gives M0+sum(p_j*q_j). Counts include the explicit selected-coordinate bounds; this is not a comparison to a source matrix that omits bound rows. Pair counts are before any additional independently proved redundancy reduction.",
+    "Because the explicit finite bounds imply p_j>=1 and q_j>=1, a column's direct pair count does not exceed its incident source count exactly when (p_j-1)*(q_j-1)<=1. For integer counts this requires one side to have a single row, or both sides to have two rows. This is only a symbolic counting criterion; no column has been found to satisfy it. Net growth across a set must be computed from the full sum, and even nonincreasing row count would not establish runtime, conditioning or feasibility.",
+    "If source-row support sizes including the selected coordinate are s_i and s_k, a generated pair has at most s_i+s_k-2 retained coefficient positions before exact cancellation. A defensible implementation needs explicit upper bounds on total pair slots, rational bit growth, stored bytes and the cost of independent arithmetic and return checks. These bounds have not been established for any concrete target set."
+  ],
+  "finite_reconstruction_boundary": [
+    "Exact-real interval nonemptiness is insufficient for a binary64 direction. For fixed retained binary64 y evaluated as exact dyadic rationals, compute L=max L_k(y) and U=min U_i(y) exactly. Define ceil64(L) as the least finite binary64 value greater than or equal to L and floor64(U) as the greatest finite binary64 value less than or equal to U, respecting the explicit finite original-coordinate domain. A finite extension exists exactly when ceil64(L)<=floor64(U). If no such values exist or the inequality fails, reject the entire proposed construction under its frozen policy; do not widen the interval or alter retained coordinates.",
+    "Proof: every finite admissible x is at least ceil64(L) and at most floor64(U). Conversely, if those endpoints exist and are ordered, ceil64(L) belongs to the source interval and is a finite witness for this coordinate. This is a mathematical existence and selection statement only. It does not choose a robot or LP point in this review and does not certify downstream graph rounding or actual finite feature encoding.",
+    "For example, a nonempty rational interval strictly between two adjacent binary64 values has no binary64 member. Therefore no universal finite lift follows merely from exact projection, boundedness, real feasibility, or small numerical residuals. No numerical example or fixture was executed.",
+    "Any eventual eliminated-coordinate selection must be specified before launch and recorded separately from the backend-returned retained coordinates. The latter must remain bitwise unchanged. A future algorithm must certify all source rows and the finite endpoint comparisons; numerical projected-row tolerances cannot replace these checks.",
+    "If new projected rational rows were subsequently rounded, they would require their own complete conservative encoding and independent certificate over the correctly associated finite retained domain. Source596's encoding proof cannot automatically certify new pair rows. This note does not authorize reencoding the unchanged596 matrix or changing any existing guard, box, trust limit or tolerance.",
+    "After any hypothetical reconstruction of all10540 prior coordinates and t=0, the inherited exact594-rootxy/f, then586-leg, then578-auxiliary graphs would still require unrounded intermediate evaluation and once-only rounding of68250 eliminated original coordinates. All retained values would be preserved; all existing exact-point, final-rounded586/578, full original systems, KKT, finite encoder, actual mechanics, geometry, filter/runtime and physical gates would remain mandatory. Nothing in this design executes or waives those return branches."
+  ],
+  "launch_boundary": [
+    "This design narrows what an admissible existential reduction would need to prove. It does not select an independent set, a column ordering, a time partition, a new matrix, a scientific eligibility scan, an algorithm or a budget. The symbolic row-count criterion is not an observed result and does not justify a generic Fourier-Motzkin sweep or another LP retry.",
+    "Before a scientific launch, derive one concrete, substantive construction from the saved wholeclock/local-mechanics structure; freeze target selection, all initialization/equations, finite policy, resources, source/input identity and the independent audit. No old522/536/546/570 calculation, equality graph proof,602/603 pressure test, terminal LP or unchanged return audit may be repeated.",
+    "No604 formulation or executable method is ready. The pressure quotient remains rejected, the equality-only nullity10540 remains an inherited design inference, and inequality/bound feasibility is still unknown."
+  ],
+  "accounting": {
+    "new_scientific_execution": false,
+    "new_coefficient_arithmetic": false,
+    "new_incidence_or_sign_count_scan": false,
+    "new_rank_or_projection_audit": false,
+    "new_reduced_system": false,
+    "new_algorithm_or_budget_frozen": false,
+    "new_lp": false,
+    "new_primal_point_or_finite_reconstruction": false,
+    "new_graph_point_lift": false,
+    "new_actual_mechanics_or_physics": false,
+    "completed_arithmetic_replayed": false,
+    "scientific_launches_this_review": 0,
+    "prior_failures_preserved": true
+  },
+  "last_sealed_closure": "closure_record_601.json",
+  "last_completed_preparation": "preparation_handoff_record_603.json",
+  "current_reviewed_report": "progress_report_600/findings.html",
+  "video_unchanged": "all_attempts_video_307/all_attempts.mp4",
+  "all64_protected": true,
+  "all8_unresolved": true,
+  "ppo_unstarted": true,
+  "fresh_holdout_unstarted": true,
+  "task_complete": false,
+  "automation_status": "ACTIVE",
+  "user_input_needed": false
+}

@@ -1,0 +1,58 @@
+{
+  "utc": "2026-10-17T11:04:44.528868+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_physical_ticks": 0,
+  "new_optimizer_updates": 0,
+  "holdout_started": false,
+  "prior_recheck": {
+    "utc": "2026-10-17T11:04:43.961901+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "mismatches": [],
+        "passed": true
+      },
+      {
+        "manifest": "completed_probes_preservation_101.json",
+        "checked": 3031,
+        "mismatches": [],
+        "passed": true
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_111.json",
+  "protected_completed_files": 3099,
+  "manifest_sha256": "414e4b375aec330af48f384eccb9e282ca4d79666b26c72f99b804fac9f9db13",
+  "pending98_sources_rechecked": true,
+  "physical_workers_running": false,
+  "model_workers_running": false,
+  "audit_workers_running": false,
+  "report": "progress_report_110",
+  "local_review": {
+    "utc": "2026-10-17T11:03:07.988433+00:00",
+    "verified_sha_entries": {
+      "progress_report_110": 12,
+      "stance_com_path_v2_98": 1,
+      "stance_com_path_audit_v2_99": 1,
+      "contact_force_schedule_102": 1,
+      "contact_force_authority_104": 2,
+      "contact_force_authority_audit_105": 1,
+      "contact_load_sharing_106": 1,
+      "contact_load_filter_audit_107": 2,
+      "contact_filtered_schedule_108": 2,
+      "contact_filtered_schedule_audit_109": 1
+    },
+    "force_constraints_plot_visually_inspected": true,
+    "filter_timing_plot_visually_inspected": true,
+    "html_and_failed_gate_table_visually_inspected": true,
+    "all_gates_honestly_reported": true,
+    "video_current_no_new_physics": true,
+    "physical_repair_complete": false,
+    "task_complete": false
+  },
+  "handoff_sha256": "9a33acffa6fadf2e375e7d67331954104151907bb576602a0fd3e4dfc70b082e",
+  "next": "Do not repeat98\u2013109. Jointly plan command headroom/load transfer/transition timing under unchanged physical criteria; static force sharing and slowing this fixed path do not admit physics. All72 matched physical gates remain beforePPO. Video59 current; no new motion."
+}

@@ -1,0 +1,39 @@
+{
+  "total_owner_seconds": 45,
+  "backend_soft_absolute_deadline": 32,
+  "producer_hard_absolute_deadline": 37,
+  "audit_hard_absolute_deadline": 44,
+  "outer_supervisor_deadline": 44.5,
+  "address_space_bytes_each": 42949672960,
+  "maximum_active_scientific_workers": 1,
+  "new_full_matrix_shape": [
+    652529,
+    78791
+  ],
+  "new_augmented_matrix_shape": [
+    652531,
+    78791
+  ],
+  "full_matrix_nnz_cap": 12000000,
+  "consistency_nnz_cap": 6000000,
+  "target_nnz_upper_bound": 157580,
+  "exact_intervals": 92267,
+  "maximum_fraction_component_bits": 2304,
+  "output_design_upper_bound_bytes": 2147483648,
+  "required_free_disk_bytes": 3221225472,
+  "charged": [
+    "scientific imports",
+    "all frozen source/input/runtime hashing",
+    "new-state assembly",
+    "new interval encoding",
+    "new input proofs",
+    "two fixed target derivatives composed with original basis",
+    "one backend call with only remaining allowance",
+    "full-original and augmented return checks",
+    "independent audit",
+    "result and process finalization"
+  ],
+  "finite_return": "Only unchanged78791-entry backend point and raw marginal arrays, full original/augmented checks, two predicted target slacks, modeled merit and cold-solve records. On failure retain available evidence; no iterate admitted or recovered from internals. No successful witness is guaranteed.",
+  "cost_bound": "CSR storage with capped original12m and augmented<=12,157,580 slots plus capped6m C, immutable A/P/H, fixed-size vectors,1410x51x24 J and two input proofs. At most92267*5 fraction pairs with numerator/denominator <=2304bits. No global dense Hessian/inverse, new factorization benchmark, model calls or rational projection. Backend internals are bounded by hard process clock and40GiB AS; factor counts remain unavailable unless backend reports them.",
+  "no_budget_increase": true
+}

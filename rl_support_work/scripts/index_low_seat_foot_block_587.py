@@ -1,0 +1,10 @@
+"""Saved-only exact foot-block preparation index; no arithmetic replay."""
+from pathlib import Path
+import json,datetime
+D=Path('/data/humanoid-sitting-perception/low_seat_contact_01');read=lambda p:json.loads(Path(p).read_text())
+def main():
+ assert read(D/'foot_block_preparation_exit_586.json')['actual_exit']==read(D/'foot_block_audit_exit_587.json')['actual_exit']==0
+ p=read(D/'foot_block_preparation_586/preparation.json');a=read(D/'foot_block_audit_587/independent_audit.json');assert p['passed'] and a['passed'] and p['primary']==a['primary']
+ r=dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),preparation_only=True,last_sealed_closure='closure_record_585.json',primary=p['primary'],preparation_elapsed_s=p['elapsed_s'],audit_elapsed_s=a['elapsed_s'],independent_products=a['independent_products'],exact_copy_error=0,numerical_lp_calls=0,numerical_linear_system_solves=0,exact_leg_block_inverses_constructed=2730,exact_block_coefficient_solves=2730,model_calls=0,root_calls=0,finite_maps=0,physics_ticks=0,policy_updates=0,primal_vectors_constructed=0,analytic_dual_vectors_constructed=0,rounded_coefficients_created=0,physical_admission=False,complete_numerical_algorithm_exists=False,old_proofs_repeated=False,scientific_execution_recovery=False,scope='NEW exact coupled6x6 bilateral-foot graph dimension reduction:16380 physicalleg columns/equalities eliminated,14636 originalretainedcoordinates,all265967inequalities and5462remainingequalities. Originalphysicalconstraints representedbyexactgraphs,notwaived. ExactREAL projectionto578/572zeroFACEonly,possiblyempty/proper; no finiteextension/feasibility/performance claim. New2730exactblockinverses/solves counted;no numericalLP/primalpoint/actualmodel/root. Newnumericencoding andcompleteboundedpathalgorithm/auditor neededbeforeLP. All64protected/all8unresolved;PPO/holdout unstarted.')
+ out=D/'foot_block_scope_587.json';assert not out.exists();out.write_text(json.dumps(r,indent=2));print(json.dumps(r,indent=2))
+if __name__=='__main__':main()

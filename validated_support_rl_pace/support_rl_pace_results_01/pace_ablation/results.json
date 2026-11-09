@@ -1,0 +1,89 @@
+{
+  "summary": [
+    {
+      "run": "support_rl_pace_easy_prior_01",
+      "successes": 16,
+      "worst_impact_N": 570.1217041015625,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 0,
+        "pelvis_floor": 0,
+        "impact": 0,
+        "fast_descent": 0,
+        "torque": 0,
+        "perception_unavailable": 0
+      },
+      "failed_cases": []
+    },
+    {
+      "run": "support_rl_pace_easy_candidate_01",
+      "successes": 8,
+      "worst_impact_N": 781.1798706054688,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 7,
+        "pelvis_floor": 0,
+        "impact": 4,
+        "fast_descent": 0,
+        "torque": 0,
+        "perception_unavailable": 0
+      },
+      "failed_cases": [
+        2,
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "run": "support_rl_pace_easy_neutral_01",
+      "successes": 7,
+      "worst_impact_N": 775.8380126953125,
+      "failures": {
+        "fall": 0,
+        "wrong_contact": 7,
+        "pelvis_floor": 0,
+        "impact": 4,
+        "fast_descent": 0,
+        "torque": 0,
+        "perception_unavailable": 0
+      },
+      "failed_cases": [
+        2,
+        4,
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        15
+      ]
+    }
+  ],
+  "identical_actor_and_critic_weights": true,
+  "full_horizon_attempts": 48,
+  "source_hashes_verified": true,
+  "pace_exactly_one": true,
+  "extra_evaluation_attempts": 16,
+  "regained_by_disabling_pace": [],
+  "lost_by_disabling_pace": [
+    4
+  ],
+  "still_lost_vs_previous": [
+    2,
+    4,
+    6,
+    7,
+    9,
+    12,
+    13,
+    14,
+    15
+  ],
+  "limitations": "Diagnostic on one known regression bank; not a new holdout, additional training, or promotion decision. Fixing pace also fixes its correctly observed actuator state."
+}

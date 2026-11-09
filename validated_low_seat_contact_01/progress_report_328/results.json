@@ -1,0 +1,257 @@
+{
+  "utc": "2026-10-17T22:11:28.491712+00:00",
+  "scope": "Source/configuration/asset provenance only; no physics, new trajectory or fitted internal quantities.",
+  "source_commit": "fc1018a3745664a1db2b95ce03fb5e91eb585f2e",
+  "installed_extension": "110.3.2",
+  "binary_equivalence_proven": false,
+  "rows": [
+    {
+      "parameter": "Per-link CFM",
+      "supplied": "Installed schema fallback cfmScale=0.025; absent as authored opinion in preserved robot asset.",
+      "source_rule": "Pinned forwardDynamic2.cu scales cfmScale by inverse length, then maximum linear articulated impulse response; artiConstraintPrep2 uses max(link CFM).",
+      "live": "Neither live cfmScale nor prepared link/row CFM captured.",
+      "recoverable": false
+    },
+    {
+      "parameter": "Contact / rest offsets",
+      "supplied": "Installed schema sentinel -inf delegates contact offset to shape extent and rest offset to simulation; schema documentation says rigid-body rest default zero. Preserved asset has no authored offsets.",
+      "source_rule": "PxShape documents sums of shape offsets; articulation preparation uses separation minus pair restDistance.",
+      "live": "Actual collider offsets, pair restDistance and prepared separation unavailable. Default text is not a measured zero offset.",
+      "recoverable": false
+    },
+    {
+      "parameter": "Normal row response and bias",
+      "supplied": "G1 config max_depenetration_velocity=1 m/s; stage state and response evolve inside solver.",
+      "source_rule": "Articulation branch uses reciprocal(response+CFM); separation sign selects bias scaling; impulse is bounded nonnegative. Restitution/compliance branches remain distinct.",
+      "live": "Per-stage response, bias clamp, prepared separation, target velocity and accumulated motion absent.",
+      "recoverable": false
+    },
+    {
+      "parameter": "Friction material and patch",
+      "supplied": "Seat/floor config static/dynamic 0.8/0.6; installed material defaults 0.5/0.5, schema combine average. Existing study robot 0.5/0.5 unchanged.",
+      "source_rule": "Pinned combiner chooses higher-priority pair mode; patch preparation uses cached anchors and scales coefficients for two anchors. Query points do not identify patch rows.",
+      "live": "Captured scene patch friction, offset threshold 0.03999999910593033 m and correlation distance 0.02500000037252903 m. Pair combined coefficients/patch IDs/anchors/broken flags absent.",
+      "recoverable": false
+    },
+    {
+      "parameter": "Ordering / iterations",
+      "supplied": "Installed solveArticulationContactLast fallback false. Configured articulation 8 position / 4 velocity.",
+      "source_rule": "Pinned GPU core has ordering branches and effective island iteration counts.",
+      "live": "Captured authored TGS, 8/4 and external-forces-every-iteration true; effective counts/traversal/contact-last backend value absent.",
+      "recoverable": false
+    },
+    {
+      "parameter": "Asset versus instantiated stage",
+      "supplied": "Preserved source asset authors enableStabilization=True.",
+      "source_rule": "Instantiation and configuration can override asset opinions.",
+      "live": "Recorded instantiated scene enableStabilization=False. This is a provenance counterexample, not a changed setting or cause claim.",
+      "recoverable": true
+    }
+  ],
+  "evidence": [
+    {
+      "file": "schema.usda",
+      "line": 733,
+      "token": "float physxRigidBody:cfmScale = 0.025"
+    },
+    {
+      "file": "schema.usda",
+      "line": 781,
+      "token": "float physxCollision:contactOffset = -inf"
+    },
+    {
+      "file": "schema.usda",
+      "line": 793,
+      "token": "float physxCollision:restOffset = -inf"
+    },
+    {
+      "file": "schema.usda",
+      "line": 285,
+      "token": "bool physxScene:solveArticulationContactLast = false"
+    },
+    {
+      "file": "schema.usda",
+      "line": 1231,
+      "token": "uniform token physxMaterial:frictionCombineMode = \"average\""
+    },
+    {
+      "file": "artiConstraintPrep2.cu",
+      "line": 74,
+      "token": "b.cfm = artic.cfms[linkID]"
+    },
+    {
+      "file": "artiConstraintPrep2.cu",
+      "line": 229,
+      "token": "const PxReal cfm = PxMax(b0.cfm, b1.cfm)"
+    },
+    {
+      "file": "artiConstraintPrep2.cu",
+      "line": 337,
+      "token": "const float penetration = separation - restDistance"
+    },
+    {
+      "file": "artiConstraintPrep2.cu",
+      "line": 358,
+      "token": "(1.f / (unitResponse + cfm))"
+    },
+    {
+      "file": "artiConstraintPrep2.cu",
+      "line": 819,
+      "token": "scaledBias = isSeparated ? -invDt : -invDtWithBiasCoefficient"
+    },
+    {
+      "file": "artiConstraintPrep2.cu",
+      "line": 1144,
+      "token": "frictionPatch, prevFrictionPatches, fAnchor, prevFrictionAnchors, prevFrictionIndices"
+    },
+    {
+      "file": "PxsMaterialCombiner.h",
+      "line": 115,
+      "token": "PxMax(mat0Data.getFrictionCombineMode(), mat1Data.getFrictionCombineMode())"
+    },
+    {
+      "file": "unitree.py",
+      "line": 76,
+      "token": "max_depenetration_velocity=1.0"
+    },
+    {
+      "file": "unitree.py",
+      "line": 309,
+      "token": "solver_position_iteration_count=8, solver_velocity_iteration_count=4"
+    },
+    {
+      "file": "run_resting_posture.py",
+      "line": 134,
+      "token": "static_friction=.8,dynamic_friction=.6"
+    }
+  ],
+  "inventory": {
+    "prim_count": 378,
+    "instance_proxy_count": 208,
+    "rigid_body_count": 44,
+    "collision_count": 38,
+    "meters_per_unit": 1.0,
+    "authored": [
+      {
+        "path": "/physicsScene",
+        "attribute": "physxScene:enableStabilization",
+        "value": "True",
+        "provenance": "preserved asset; not live stage"
+      }
+    ],
+    "rigid_bodies": [
+      "/g1/pelvis",
+      "/g1/left_hip_pitch_link",
+      "/g1/left_hip_roll_link",
+      "/g1/left_hip_yaw_link",
+      "/g1/left_knee_link",
+      "/g1/left_ankle_pitch_link",
+      "/g1/left_ankle_roll_link",
+      "/g1/pelvis_contour_link",
+      "/g1/right_hip_pitch_link",
+      "/g1/right_hip_roll_link",
+      "/g1/right_hip_yaw_link",
+      "/g1/right_knee_link",
+      "/g1/right_ankle_pitch_link",
+      "/g1/right_ankle_roll_link",
+      "/g1/torso_link",
+      "/g1/head_link",
+      "/g1/imu_link",
+      "/g1/left_shoulder_pitch_link",
+      "/g1/left_shoulder_roll_link",
+      "/g1/left_shoulder_yaw_link",
+      "/g1/left_elbow_pitch_link",
+      "/g1/left_elbow_roll_link",
+      "/g1/left_palm_link",
+      "/g1/left_five_link",
+      "/g1/left_six_link",
+      "/g1/left_three_link",
+      "/g1/left_four_link",
+      "/g1/left_zero_link",
+      "/g1/left_one_link",
+      "/g1/left_two_link",
+      "/g1/logo_link",
+      "/g1/right_shoulder_pitch_link",
+      "/g1/right_shoulder_roll_link",
+      "/g1/right_shoulder_yaw_link",
+      "/g1/right_elbow_pitch_link",
+      "/g1/right_elbow_roll_link",
+      "/g1/right_palm_link",
+      "/g1/right_five_link",
+      "/g1/right_six_link",
+      "/g1/right_three_link",
+      "/g1/right_four_link",
+      "/g1/right_zero_link",
+      "/g1/right_one_link",
+      "/g1/right_two_link"
+    ],
+    "collisions": [
+      "/g1/pelvis/collisions/mesh_0",
+      "/g1/left_hip_pitch_link/collisions/mesh_0",
+      "/g1/left_hip_roll_link/collisions/mesh_0",
+      "/g1/left_hip_yaw_link/collisions/mesh_0",
+      "/g1/left_knee_link/collisions/mesh_0",
+      "/g1/left_ankle_roll_link/Cube",
+      "/g1/right_hip_pitch_link/collisions/mesh_0",
+      "/g1/right_hip_roll_link/collisions/mesh_0",
+      "/g1/right_hip_yaw_link/collisions/mesh_0",
+      "/g1/right_knee_link/collisions/mesh_0",
+      "/g1/right_ankle_roll_link/Cube",
+      "/g1/torso_link/collisions/mesh_0",
+      "/g1/head_link/collisions/mesh_0",
+      "/g1/left_shoulder_pitch_link/collisions/mesh_0",
+      "/g1/left_shoulder_roll_link/collisions/mesh_0",
+      "/g1/left_shoulder_yaw_link/collisions/mesh_0",
+      "/g1/left_elbow_pitch_link/collisions/mesh_0",
+      "/g1/left_elbow_roll_link/collisions/mesh_0",
+      "/g1/left_palm_link/collisions/mesh_0",
+      "/g1/left_five_link/collisions/mesh_0",
+      "/g1/left_six_link/collisions/mesh_0",
+      "/g1/left_three_link/collisions/mesh_0",
+      "/g1/left_four_link/collisions/mesh_0",
+      "/g1/left_one_link/collisions/mesh_0",
+      "/g1/left_two_link/collisions/mesh_0",
+      "/g1/logo_link/collisions/mesh_0",
+      "/g1/right_shoulder_pitch_link/collisions/mesh_0",
+      "/g1/right_shoulder_roll_link/collisions/mesh_0",
+      "/g1/right_shoulder_yaw_link/collisions/mesh_0",
+      "/g1/right_elbow_pitch_link/collisions/mesh_0",
+      "/g1/right_elbow_roll_link/collisions/mesh_0",
+      "/g1/right_palm_link/collisions/mesh_0",
+      "/g1/right_five_link/collisions/mesh_0",
+      "/g1/right_six_link/collisions/mesh_0",
+      "/g1/right_three_link/collisions/mesh_0",
+      "/g1/right_four_link/collisions/mesh_0",
+      "/g1/right_one_link/collisions/mesh_0",
+      "/g1/right_two_link/collisions/mesh_0"
+    ],
+    "live_hits": {
+      "physxRigidBody:cfmScale": [],
+      "physxCollision:contactOffset": [],
+      "physxCollision:restOffset": [],
+      "physxScene:solveArticulationContactLast": [],
+      "physxMaterial:frictionCombineMode": [],
+      "physxScene:enableStabilization": [
+        {
+          "path": "/physicsScene",
+          "value": "False"
+        }
+      ]
+    },
+    "searched_config_overrides": [],
+    "source_asset_sha256": "8a86fa451cfcf2743ec31e7dfaefe25b3d3583c891bc9f1813d7525f534252bf",
+    "live_stage_sha256": "c18bad51ad50196c0cf917743ed7597882ab96e75533246221fa03b49489eb61"
+  },
+  "exact_internal_stages_recoverable_from_saved_evidence": false,
+  "physical_admission": false,
+  "repair_complete": false,
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "conclusions": [
+    "Defaults and source algorithms do not supply the uncaptured effective contact rows or internal iteration history.",
+    "CFM is not an established cause of the raw-velocity/pose discrepancy. No CFM, offset, friction, ordering or iteration setting was changed or fitted.",
+    "Endpoint contact separation and force cannot be substituted into a prepared-row update to recover actual stage velocity.",
+    "A new complete approach remains possible, but no specific alternate motion is admitted by this trace. Missing internal states are not an impossibility proof.",
+    "Keep current raw quiet/support guards and measured-sensor control; no predicted or conditional velocity replacement."
+  ]
+}

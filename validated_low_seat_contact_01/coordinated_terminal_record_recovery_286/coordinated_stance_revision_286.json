@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-17T18:43:31.994528+00:00",
+  "scope": "One offline kinematic requirement screen using all3800 saved selected raw observations from234/273, bothfeet;7600 solves. No simulation, optimizer, parameter search or runtime installation.",
+  "hypothesis": "A coordinated six-joint correction with fixed pelvis and fixed sole centre may require sole rotation, additional joint authority or pitch-priority changes. Quantify these requirements before considering any new controller.",
+  "construction": "J maps six leg velocities to sole-centre linear and foot angular velocity in gravity-aligned frame. Angular estimate=Rgyro+Jangular*qd. Solve J*delta=[0,0,0,-.025*omega_x,0,0];.025s is the existing273 scale, no sweep. Also evaluate full four-material-corner constraint rank and finite forward-kinematic changes.",
+  "constraints": "All existing physical/material/quiet/command/feedback criteria unchanged. Required corrections are not authorized runtime controls; raw velocity unmodified, no torque/force truth or saved input fed to runtime.",
+  "budget": {
+    "saved_observations": 3800,
+    "foot_records": 7600,
+    "physics": 0,
+    "optimizer": 0
+  },
+  "source_sha256": {
+    "rl_support_work/scripts/diagnose_low_seat_coordinated_stance_286.py": "5f4d55c72276ade31a25f777f35ceae557e50e34d9328c478692355200a8fc91"
+  }
+}

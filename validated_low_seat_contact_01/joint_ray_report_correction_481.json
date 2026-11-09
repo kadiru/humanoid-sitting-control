@@ -1,0 +1,53 @@
+{
+  "utc": "2026-10-18T15:54:37.050407+00:00",
+  "scope": "Derived display/prose correction only; no report, model, audit, optimizer or numerical calculation rerun",
+  "original_findings_sha256": "9d96727dbd8d41e79a98246a63cacd67d6609931f717b01a8086f174092e7db8",
+  "derived_readable_sha256": "00e95a2617f0330112d8210017353688784d9ead96abb47de11339880f94014c",
+  "changes": [
+    [
+      "Predictor 10 was the only accepted step",
+      "The predictor at linear index 10 was the only accepted step"
+    ],
+    [
+      "float 32",
+      "float32"
+    ],
+    [
+      "binary 64",
+      "binary64"
+    ],
+    [
+      "207v 2",
+      "207v2"
+    ],
+    [
+      "<h 1>",
+      "<h1>"
+    ],
+    [
+      "</h 1>",
+      "</h1>"
+    ],
+    [
+      "<h 2>",
+      "<h2>"
+    ],
+    [
+      "</h 2>",
+      "</h2>"
+    ],
+    [
+      "all_attempts.mp 4",
+      "all_attempts.mp4"
+    ]
+  ],
+  "reason": "Pre-execution broad prose-spacing regex inadvertently split h1/h2 tag names and technical names; original completed HTML preserved. Accepted step is linear index10 among8 predictors, not predictor10.",
+  "numeric_tokens_exact": true,
+  "table_cells_exact": true,
+  "heading_tags_repaired": true,
+  "original_files_unchanged": true,
+  "preserved_first_derived": "edae5840f6499a2afbde332d63bdc7320854e1bd83b15f48ecba321c00099d79",
+  "video_attribute_repaired": true,
+  "all_local_link_targets_exist": true,
+  "local_link_count": 15
+}

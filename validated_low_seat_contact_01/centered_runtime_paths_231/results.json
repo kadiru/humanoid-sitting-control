@@ -1,0 +1,104 @@
+{
+  "utc": "2026-10-17T16:13:12.327797+00:00",
+  "passed": true,
+  "scope": "Reconstruct the complete227 centered path with the live-input148 planner.\nTwo saved development placements only; fixture inputs never enter runtime.\nNo optimization, physics, relaxed criteria or automatic physical launch.\n",
+  "rows": [
+    {
+      "case": 0,
+      "model_passed": true,
+      "summary": {
+        "geometry_passed": true,
+        "failed_geometry_knots": [],
+        "knots": 91,
+        "minimum_housing_clearance_mm": 3.111534417591836,
+        "max_foot_position_error_mm": 3.6169163155608815e-06,
+        "max_foot_orientation_error_deg": 1.121938772598035e-07,
+        "minimum_command_margin_rad": 0.2544491398275493,
+        "commands_passed": true,
+        "command_polyline_time_s": 8.821610312854167,
+        "time_gate_passed": true,
+        "endpoint_model_passed": true,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": 0,
+        "geometry_unchanged": true,
+        "failed_knots": [],
+        "maximum_effort_utilization": 0.366132143520839,
+        "first_command_change_max_rad": 0.0008048151056797015,
+        "max_adjacent_ankle_torque_change_Nm": 0.4455075560495749,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.32264287041678,
+            7.235171311095194
+          ],
+          [
+            7.316350693846302,
+            7.228878320165646
+          ]
+        ]
+      },
+      "maximum_assumed_foot_difference_BW": 0.007711138726115951,
+      "maximum_ankle_roll_command_change_rad": 0.00024330754578564092
+    },
+    {
+      "case": 1,
+      "model_passed": true,
+      "summary": {
+        "geometry_passed": true,
+        "failed_geometry_knots": [],
+        "knots": 91,
+        "minimum_housing_clearance_mm": 3.1115694908679172,
+        "max_foot_position_error_mm": 3.6165742419313596e-06,
+        "max_foot_orientation_error_deg": 1.1229140002332893e-07,
+        "minimum_command_margin_rad": 0.2544488774890853,
+        "commands_passed": true,
+        "command_polyline_time_s": 8.82163843363911,
+        "time_gate_passed": true,
+        "endpoint_model_passed": true,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": 1,
+        "geometry_unchanged": true,
+        "failed_knots": [],
+        "maximum_effort_utilization": 0.36614376446252944,
+        "first_command_change_max_rad": 0.0008048157485450735,
+        "max_adjacent_ankle_torque_change_Nm": 0.44550574260192155,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.322875289250589,
+            7.235543132059802
+          ],
+          [
+            7.3165829222892,
+            7.229249944665404
+          ]
+        ]
+      },
+      "maximum_assumed_foot_difference_BW": 0.00769887250773027,
+      "maximum_ankle_roll_command_change_rad": 0.0002416401391959343
+    }
+  ],
+  "case0_original227_exact": true,
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/prepare_low_seat_centered_paths_231.py": "3ed4a64d1f3efae236e22f1ab6577fc9d890278e80d57717ffe4d7ff24d713a3",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_orientation_refinement_v2_227/case_0.json": "5d9fd4b529bfccd92c2c8226da5fcbf7ef1a747249fb09a1be4ac44cde4bda5d",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_orientation_audit_v2_228/independent_audit.json": "073b97f12b105f986fd6888535865b7995a854e051eb8c0f37651201b4b6e651",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+    "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json": "69e0920e2bec88a43b7a6dc41d0fc361500d060ef09e3e3a07bb04cdaf569584",
+    "/data/humanoid-sitting-perception/contact_effort_repair_01/plane_calibration.json": "6a6a0f078ced3d3510897e96670c26226dee25d495653a222cf1dd52e97a8009",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/bias_probe_210/candidate/trace.npz": "6cb5410e3109ec2ef7cae160b95dc16124e4884a35349d2871fd9fce3c2c98f0",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/bias_probe_210/candidate/sensor_inputs.npz": "a90b411c167a65c4371104d0a55bff98e457b5465a144b1f93446b825e46cde5",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_runtime_paths_231/candidate_config.json": "603341b38fb541a7c9dccbabe3ac37c1f770ce9ddbdcff2c433e6343aa056459",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_balanced_runtime_v2_148.py": "56a879d054c89426103ccfcf4f57a4c26f81af3101fffcd511494696baa43acd",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_balanced_force_v2_145.py": "d48a9422da8570c69077edbcfe50d79f3f59453541b4128c292e176d49d12425",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_fixed_foot_plan_126.py": "1ebd0014cff6bf3558daf406a304aa523d20143f1d6f4ceeecd14eed27896b63",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_bias_runtime_v2_208.py": "1c93ecb812b46cd94d28196e29b68d667b2e253a9d1c49bc476118008c3e44f2",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_bias_feedback_v2_207.py": "8e32b484addcf8629f924f28e26dc826a1df550e80c33948ee6fcc5edbbcd37d",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_touchdown_path_175.py": "31c0fd2caf366b85249c05b56197722d95bc792269b894cbe538b3d1e8002a7e"
+  }
+}

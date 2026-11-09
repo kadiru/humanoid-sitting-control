@@ -1,0 +1,99 @@
+{
+  "utc": "2026-10-18T05:07:34.541592+00:00",
+  "scope": "Index SAVED final arrays only. No model/projection/derivative/optimizer/physics repeated. Different units are not a severity ranking.",
+  "continuous": [
+    {
+      "name": "increasing_rate",
+      "unit": "rad_per_segment",
+      "negative": 54,
+      "minimum": -4.36983478350637e-06,
+      "knot": 27,
+      "joint": "right_knee_joint",
+      "tightened_minimum": -5.323562606760519e-06
+    },
+    {
+      "name": "decreasing_rate",
+      "unit": "rad_per_segment",
+      "negative": 116,
+      "minimum": -4.369834761968044e-06,
+      "knot": 27,
+      "joint": "left_hip_pitch_joint",
+      "tightened_minimum": -5.326539054916446e-06
+    },
+    {
+      "name": "upper_linear_headroom",
+      "unit": "rad_s",
+      "negative": 0,
+      "minimum": 0.00039894021316717757,
+      "knot": 54,
+      "joint": "left_ankle_roll_joint",
+      "tightened_minimum": 0.00039893065652163266
+    },
+    {
+      "name": "lower_linear_headroom",
+      "unit": "rad_s",
+      "negative": 41,
+      "minimum": -1.0551741401951493e-06,
+      "knot": 105,
+      "joint": "left_ankle_roll_joint",
+      "tightened_minimum": -1.0651187568797469e-06
+    }
+  ],
+  "clock": [
+    {
+      "name": "increasing_clock_increment",
+      "unit": "rad_per_tick",
+      "negative": 169,
+      "minimum": -4.3696187330714495e-06,
+      "tick": 93,
+      "time_s": 1.86,
+      "joint": "left_knee_joint",
+      "construction_minimum": -5.3232930494776995e-06
+    },
+    {
+      "name": "decreasing_clock_increment",
+      "unit": "rad_per_tick",
+      "negative": 410,
+      "minimum": -4.3696182838197026e-06,
+      "tick": 93,
+      "time_s": 1.86,
+      "joint": "right_hip_pitch_joint",
+      "construction_minimum": -5.3232926002259526e-06
+    },
+    {
+      "name": "upper_clock_target",
+      "unit": "rad",
+      "negative": 0,
+      "minimum": 0.010229415162199773,
+      "tick": 92,
+      "time_s": 1.84,
+      "joint": "left_ankle_roll_joint",
+      "construction_minimum": 0.01022893832504157
+    },
+    {
+      "name": "lower_clock_target",
+      "unit": "rad",
+      "negative": 49,
+      "minimum": -5.2755841526863634e-05,
+      "tick": 660,
+      "time_s": 13.200000000000001,
+      "joint": "right_ankle_roll_joint",
+      "construction_minimum": -5.323267868506676e-05
+    }
+  ],
+  "negative_corner_rows": 0,
+  "minimum_corner_fraction": 0.0,
+  "negative_phase_increments": 0,
+  "minimum_phase_increment": 9.536743154070493e-07,
+  "normal_descent_negative_rows": 3,
+  "maximum_normal_deficit_m": 2.6059892091478964e-11,
+  "negative_tightened_contact_rows": 11,
+  "minimum_original_command_lower_rad": -2.095083086448013e-05,
+  "minimum_original_command_upper_rad": 0.021694887694834297,
+  "source_sha256": {
+    "final.npz": "1626752a2bbbfa38e9430e2c3daf383d7ce8599f1ff7b67b2d34e4b38c84483f",
+    "event_clock.npz": "0af748ecbb71a0c67ef2fc4b99b39d68d70af0d3677a265fd24591901a11c752",
+    "results.json": "396428d465750ba74a559f65c530d237dfcff7051a255501ef3e723ccc6c21d5"
+  },
+  "physical_admission": false
+}

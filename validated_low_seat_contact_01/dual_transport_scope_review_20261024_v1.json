@@ -1,0 +1,62 @@
+{
+  "utc": "2026-10-24T00:08:54.715372+00:00",
+  "classification": "Source-only assessment of transporting the accepted earlier primary dual; no scientific arithmetic",
+  "local_only": true,
+  "launch_ready": false,
+  "proposal": "Use the accepted Oct23 primary dual from the preceding nonlinear origin to avoid a new full primary solve at finite_model_step_20261023_v1.",
+  "source_associations": {
+    "old_certificate": "full_minimax_budget_review_20261023_v1; its independent_return.py checks the old full matrix, old RHS and returned original multipliers.",
+    "new_input": "targeted_gap_primary_20261023_v1/input_proof.json binds freshly derived C, intervals, RHS and full matrix at finite_model_step_20261023_v1; unchanged A/P/H alone do not bind this KKT system.",
+    "new_target_rows": [
+      214643,
+      215327
+    ],
+    "target_state_pairs": [
+      [
+        622,
+        1273
+      ],
+      [
+        1400,
+        631
+      ]
+    ],
+    "target_added_dual_gate": "numerical_checks.added_duals_zero requires both raw added marginals already exactly zero."
+  },
+  "conditional_derivation": [
+    "For an unchanged candidate multiplier y, with unchanged objective and bound multipliers and aligned original row ordering, current stationarity is s_new = s_old + (M_new-M_old)^T y. Changed RHS also changes the dual objective. Passing the old numerical checks alone proves neither new condition.",
+    "Appending the two gap rows would add G^T z to stationarity. The completed target construction requires z=0, so those rows cannot cancel any transported stationarity defect under its unchanged return gate.",
+    "Even without that restriction, cancellation would require the full defect to lie in the span of the two target row vectors with admissible multiplier signs. No such premise has been established. The two identified failing primal rows do not establish a dual-defect support or span.",
+    "A current dual certificate alone would still require a new current primal witness with all full-original primal, sign, stationarity and absolute-gap tests. No saved current primary candidate exists."
+  ],
+  "decision": "Do not select direct certificate transport or correction by the two added row multipliers as the next launch. No actual multiplier values, defects, support sets, rank tests or products were read/evaluated, and no claim that the old dual numerically fails at the new state is made. A useful transport construction would need a separately justified concrete correction/witness mechanism and full resource accounting; relabeling the old certificate is insufficient.",
+  "resource_status": "No smaller verified solve, net savings, finite-return cost or independent implementation established. Scientific allocation is zero; unchanged45s cap and all inherited gates remain.",
+  "source_sha256": {
+    "rl_support_work/scripts/targeted_gap_primary_20261023_v1/builder.py": "076568b6abeeab437df567d3616424272d46b121fd61acb1a3722e37d343fa76",
+    "rl_support_work/scripts/targeted_gap_primary_20261023_v1/numerical_checks.py": "b4fb9f775d8f26b45932bc42f3813376422ff310d5f6b012379695eb2696fe3d",
+    "rl_support_work/scripts/targeted_gap_primary_20261023_v1/target_rows.py": "d65e56aae0774bbf4b6b89e88de6fa75366658d97019dad469761a39d5e2d4f2",
+    "rl_support_work/scripts/full_minimax_budget_review_20261023_v1/independent_return.py": "ab9125647690f2b8d9fdea99ef5c3387c0fdfedf6877e081f4bc838a85776caf",
+    "validated_low_seat_contact_01/targeted_gap_primary_20261023_v1/input_proof.json": "1799c6ad773d1904c2842c1fc33ac26c21a70eab738fa95793b693e807454b45",
+    "validated_low_seat_contact_01/full_minimax_budget_review_20261023_v1/original_checks.json": "4e455008e3f78fb82f8d957364efb322906e87f13e2e74d41803f87d1b9c1dbe"
+  },
+  "operational_reads": {
+    "remote_rg_exit": 127,
+    "reason": "rg unavailable on remote; ps+grep fallback exited1 with empty output, indicating no matched study processes.",
+    "worker_check_tool": "e7b0b7",
+    "local_agents_discovery_exit": 1,
+    "local_agents_discovery": "No AGENTS.md match; source reads in the same call succeeded."
+  },
+  "scientific_execution": {
+    "array_loads": 0,
+    "matrix_products": 0,
+    "solver_calls": 0,
+    "model_calls": 0,
+    "simulation_trials": 0,
+    "PPO_updates": 0,
+    "completed_proofs_replayed": false
+  },
+  "physical_status_unchanged": true,
+  "authorizations_unchanged": true,
+  "automation": "ACTIVE",
+  "prior_checkpoint_sha256": "73e82bec045a7eeb485e7fa1525332877057d754a56cbce02d72af16c557e40e"
+}

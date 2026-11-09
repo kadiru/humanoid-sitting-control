@@ -1,0 +1,7675 @@
+{
+  "utc": "2026-10-18T12:45:35.996494+00:00",
+  "scope": "Saved-only row/acceptance localization; no model, root, AD or optimizer.",
+  "final_groups": [
+    {
+      "group": "clock_target_lower",
+      "rows": 10800,
+      "negative": 0,
+      "minimum": {
+        "row": 238433,
+        "group": "clock_target_lower",
+        "scaled_residual": 4.625929269271486e-15,
+        "unscaled_residual": 1.3877787807814457e-16,
+        "scale": 0.03,
+        "states": [
+          649,
+          650
+        ],
+        "labels": [
+          674,
+          675
+        ],
+        "times_s": [
+          13.48,
+          13.5
+        ]
+      }
+    },
+    {
+      "group": "clock_target_upper",
+      "rows": 10800,
+      "negative": 0,
+      "minimum": {
+        "row": 224443,
+        "group": "clock_target_upper",
+        "scaled_residual": 0.010197380637186337,
+        "unscaled_residual": 0.0003059214191155901,
+        "scale": 0.03,
+        "states": [
+          237,
+          238
+        ],
+        "labels": [
+          237,
+          238
+        ],
+        "times_s": [
+          4.74,
+          4.76
+        ]
+      }
+    },
+    {
+      "group": "mesh_approach_order",
+      "rows": 725,
+      "negative": 0,
+      "minimum": {
+        "row": 191045,
+        "group": "mesh_approach_order",
+        "scaled_residual": 0.00013125126725281136,
+        "unscaled_residual": 1.5750152070337364e-06,
+        "scale": 0.012,
+        "states": [
+          954,
+          1367
+        ],
+        "labels": [
+          979,
+          1420
+        ],
+        "times_s": [
+          6.07,
+          6.068422223232387
+        ]
+      }
+    },
+    {
+      "group": "mesh_command_lower",
+      "rows": 22560,
+      "negative": 0,
+      "minimum": {
+        "row": 93370,
+        "group": "mesh_command_lower",
+        "scaled_residual": 0.00491027311441683,
+        "unscaled_residual": 0.0001473081934325049,
+        "scale": 0.03,
+        "states": [
+          650
+        ],
+        "labels": [
+          675
+        ],
+        "times_s": [
+          13.5
+        ]
+      }
+    },
+    {
+      "group": "mesh_command_upper",
+      "rows": 22560,
+      "negative": 0,
+      "minimum": {
+        "row": 162821,
+        "group": "mesh_command_upper",
+        "scaled_residual": 0.4195714130835878,
+        "unscaled_residual": 0.012587142392507633,
+        "scale": 0.03,
+        "states": [
+          1354
+        ],
+        "labels": [
+          1406
+        ],
+        "times_s": [
+          4.800777410225089
+        ]
+      }
+    },
+    {
+      "group": "mesh_effort_lower",
+      "rows": 22560,
+      "negative": 0,
+      "minimum": {
+        "row": 162402,
+        "group": "mesh_effort_lower",
+        "scaled_residual": 0.06181258250467732,
+        "unscaled_residual": 1.2362516500935463,
+        "scale": 20.0,
+        "states": [
+          1350
+        ],
+        "labels": [
+          1402
+        ],
+        "times_s": [
+          4.717660008480536
+        ]
+      }
+    },
+    {
+      "group": "mesh_effort_upper",
+      "rows": 22560,
+      "negative": 0,
+      "minimum": {
+        "row": 159953,
+        "group": "mesh_effort_upper",
+        "scaled_residual": 0.4651354385130276,
+        "unscaled_residual": 9.302708770260551,
+        "scale": 20.0,
+        "states": [
+          1325
+        ],
+        "labels": [
+          1377
+        ],
+        "times_s": [
+          2.86824900007087
+        ]
+      }
+    },
+    {
+      "group": "mesh_gap_nonnegative",
+      "rows": 1410,
+      "negative": 0,
+      "minimum": {
+        "row": 92228,
+        "group": "mesh_gap_nonnegative",
+        "scaled_residual": 9.527756237619656e-07,
+        "unscaled_residual": 1.1433307485143587e-08,
+        "scale": 0.012,
+        "states": [
+          633
+        ],
+        "labels": [
+          658
+        ],
+        "times_s": [
+          13.16
+        ]
+      }
+    },
+    {
+      "group": "mesh_normal_descent",
+      "rows": 206,
+      "negative": 59,
+      "minimum": {
+        "row": 213239,
+        "group": "mesh_normal_descent",
+        "scaled_residual": -1.1360366337782925e-07,
+        "unscaled_residual": -6.8162198026697554e-12,
+        "scale": 6e-05,
+        "states": [
+          603,
+          1253
+        ],
+        "labels": [
+          628,
+          1303
+        ],
+        "times_s": [
+          12.56,
+          12.55
+        ]
+      }
+    },
+    {
+      "group": "mesh_phase",
+      "rows": 2732,
+      "negative": 22,
+      "minimum": {
+        "row": 211476,
+        "group": "mesh_phase",
+        "scaled_residual": -9.788228589879822e-07,
+        "unscaled_residual": -9.788228589879822e-07,
+        "scale": 1.0,
+        "states": [
+          579,
+          1230
+        ],
+        "labels": [
+          604,
+          1280
+        ],
+        "times_s": [
+          12.08,
+          12.09
+        ]
+      }
+    },
+    {
+      "group": "mesh_planning_lower",
+      "rows": 19110,
+      "negative": 1,
+      "minimum": {
+        "row": 156337,
+        "group": "mesh_planning_lower",
+        "scaled_residual": -4.4370270485538654e-08,
+        "unscaled_residual": -4.4370270485538654e-08,
+        "scale": 1.0,
+        "states": [
+          1283
+        ],
+        "labels": [
+          1333
+        ],
+        "times_s": [
+          13.15
+        ]
+      }
+    },
+    {
+      "group": "mesh_planning_upper",
+      "rows": 19110,
+      "negative": 0,
+      "minimum": {
+        "row": 162867,
+        "group": "mesh_planning_upper",
+        "scaled_residual": 0.010905749229809636,
+        "unscaled_residual": 0.010905749229809636,
+        "scale": 1.0,
+        "states": [
+          1354
+        ],
+        "labels": [
+          1406
+        ],
+        "times_s": [
+          4.800777410225089
+        ]
+      }
+    },
+    {
+      "group": "mesh_posthover",
+      "rows": 206,
+      "negative": 0,
+      "minimum": {
+        "row": 146346,
+        "group": "mesh_posthover",
+        "scaled_residual": 0.004979835637679431,
+        "unscaled_residual": 5.975802765215318e-05,
+        "scale": 0.012,
+        "states": [
+          1183
+        ],
+        "labels": [
+          1233
+        ],
+        "times_s": [
+          11.15
+        ]
+      }
+    },
+    {
+      "group": "mesh_prehover",
+      "rows": 1159,
+      "negative": 0,
+      "minimum": {
+        "row": 146246,
+        "group": "mesh_prehover",
+        "scaled_residual": 0.040524956770024,
+        "unscaled_residual": 0.00048629948124028795,
+        "scale": 0.012,
+        "states": [
+          1182
+        ],
+        "labels": [
+          1207
+        ],
+        "times_s": [
+          10.63
+        ]
+      }
+    },
+    {
+      "group": "mesh_rate_decreasing",
+      "rows": 22544,
+      "negative": 734,
+      "minimum": {
+        "row": 174955,
+        "group": "mesh_rate_decreasing",
+        "scaled_residual": -0.14712954110494358,
+        "unscaled_residual": -0.00022069431165741538,
+        "scale": 0.0015,
+        "states": [
+          93,
+          744
+        ],
+        "labels": [
+          93,
+          769
+        ],
+        "times_s": [
+          1.86,
+          1.87
+        ]
+      }
+    },
+    {
+      "group": "mesh_rate_increasing",
+      "rows": 22544,
+      "negative": 363,
+      "minimum": {
+        "row": 174834,
+        "group": "mesh_rate_increasing",
+        "scaled_residual": -0.10601733998056895,
+        "unscaled_residual": -1.5739477684828615e-08,
+        "scale": 1.484613525269864e-07,
+        "states": [
+          92,
+          1315
+        ],
+        "labels": [
+          92,
+          1366
+        ],
+        "times_s": [
+          1.84,
+          1.8399990102576498
+        ]
+      }
+    },
+    {
+      "group": "mesh_support",
+      "rows": 7582,
+      "negative": 1,
+      "minimum": {
+        "row": 38739,
+        "group": "mesh_support",
+        "scaled_residual": -1.942890293094024e-14,
+        "unscaled_residual": -9.71445146547012e-17,
+        "scale": 0.005,
+        "states": [
+          94
+        ],
+        "labels": [
+          94
+        ],
+        "times_s": [
+          1.88
+        ]
+      }
+    },
+    {
+      "group": "mesh_window_lower",
+      "rows": 46720,
+      "negative": 1,
+      "minimum": {
+        "row": 281733,
+        "group": "mesh_window_lower",
+        "scaled_residual": -3.530339282668364e-05,
+        "unscaled_residual": -1.059101784800509e-06,
+        "scale": 0.03,
+        "states": [
+          601,
+          1252,
+          1398
+        ],
+        "labels": [
+          626,
+          1302,
+          1453
+        ],
+        "times_s": [
+          12.52,
+          12.53,
+          12.542732964244381
+        ]
+      }
+    },
+    {
+      "group": "mesh_window_upper",
+      "rows": 46720,
+      "negative": 0,
+      "minimum": {
+        "row": 255355,
+        "group": "mesh_window_upper",
+        "scaled_residual": 0.010066975302366887,
+        "unscaled_residual": 0.0003020092590710066,
+        "scale": 0.03,
+        "states": [
+          888,
+          1351,
+          1352
+        ],
+        "labels": [
+          913,
+          1403,
+          1404
+        ],
+        "times_s": [
+          4.75,
+          4.74061254825206,
+          4.76062099968955
+        ]
+      }
+    },
+    {
+      "group": "old_approach_order",
+      "rows": 39,
+      "negative": 0,
+      "minimum": {
+        "row": 19715,
+        "group": "old_approach_order",
+        "scaled_residual": 0.00665835768296034,
+        "unscaled_residual": 7.990029219552409e-05,
+        "scale": 0.012,
+        "states": [
+          1363,
+          1364
+        ],
+        "labels": [
+          1416,
+          1417
+        ],
+        "times_s": [
+          5.781202408121491,
+          5.82080046794134
+        ]
+      }
+    },
+    {
+      "group": "old_command_lower",
+      "rows": 1824,
+      "negative": 0,
+      "minimum": {
+        "row": 9041,
+        "group": "old_command_lower",
+        "scaled_residual": 0.00491027311441683,
+        "unscaled_residual": 0.0001473081934325049,
+        "scale": 0.03,
+        "states": [
+          650
+        ],
+        "labels": [
+          675
+        ],
+        "times_s": [
+          13.5
+        ]
+      }
+    },
+    {
+      "group": "old_command_upper",
+      "rows": 1824,
+      "negative": 0,
+      "minimum": {
+        "row": 4347,
+        "group": "old_command_upper",
+        "scaled_residual": 0.4195714130835878,
+        "unscaled_residual": 0.012587142392507633,
+        "scale": 0.03,
+        "states": [
+          1354
+        ],
+        "labels": [
+          1406
+        ],
+        "times_s": [
+          4.800777410225089
+        ]
+      }
+    },
+    {
+      "group": "old_coordinate_lower",
+      "rows": 786,
+      "negative": 0,
+      "minimum": {
+        "row": 27709,
+        "group": "old_coordinate_lower",
+        "scaled_residual": 0.002852192893668812,
+        "unscaled_residual": 0.002852192893668812,
+        "scale": 1.0,
+        "states": [
+          1301
+        ],
+        "labels": [
+          1352
+        ],
+        "times_s": [
+          0.036606562184446495
+        ]
+      }
+    },
+    {
+      "group": "old_coordinate_upper",
+      "rows": 786,
+      "negative": 0,
+      "minimum": {
+        "row": 29216,
+        "group": "old_coordinate_upper",
+        "scaled_residual": 0.00018879080832157058,
+        "unscaled_residual": 0.00018879080832157058,
+        "scale": 1.0,
+        "states": [
+          1400
+        ],
+        "labels": [
+          1455
+        ],
+        "times_s": [
+          13.118861132095542
+        ]
+      }
+    },
+    {
+      "group": "old_effort_lower",
+      "rows": 1824,
+      "negative": 0,
+      "minimum": {
+        "row": 4052,
+        "group": "old_effort_lower",
+        "scaled_residual": 0.06181258250467732,
+        "unscaled_residual": 1.2362516500935463,
+        "scale": 20.0,
+        "states": [
+          1350
+        ],
+        "labels": [
+          1402
+        ],
+        "times_s": [
+          4.717660008480536
+        ]
+      }
+    },
+    {
+      "group": "old_effort_upper",
+      "rows": 1824,
+      "negative": 0,
+      "minimum": {
+        "row": 2036,
+        "group": "old_effort_upper",
+        "scaled_residual": 0.4651354385130276,
+        "unscaled_residual": 9.302708770260551,
+        "scale": 20.0,
+        "states": [
+          1325
+        ],
+        "labels": [
+          1377
+        ],
+        "times_s": [
+          2.86824900007087
+        ]
+      }
+    },
+    {
+      "group": "old_force_lower",
+      "rows": 716,
+      "negative": 0,
+      "minimum": {
+        "row": 626,
+        "group": "old_force_lower",
+        "scaled_residual": 3.6550954792850462e-06,
+        "unscaled_residual": 3.6550954792850462e-06,
+        "scale": 1.0,
+        "states": [
+          1308
+        ],
+        "labels": [
+          1359
+        ],
+        "times_s": [
+          1.0606880609545897
+        ]
+      }
+    },
+    {
+      "group": "old_force_upper",
+      "rows": 716,
+      "negative": 0,
+      "minimum": {
+        "row": 5112,
+        "group": "old_force_upper",
+        "scaled_residual": 0.3533474347568726,
+        "unscaled_residual": 0.3533474347568726,
+        "scale": 1.0,
+        "states": [
+          287
+        ],
+        "labels": [
+          287
+        ],
+        "times_s": [
+          5.74
+        ]
+      }
+    },
+    {
+      "group": "old_gap_nonnegative",
+      "rows": 104,
+      "negative": 0,
+      "minimum": {
+        "row": 19714,
+        "group": "old_gap_nonnegative",
+        "scaled_residual": 9.527756237619656e-07,
+        "unscaled_residual": 1.1433307485143587e-08,
+        "scale": 0.012,
+        "states": [
+          633
+        ],
+        "labels": [
+          658
+        ],
+        "times_s": [
+          13.16
+        ]
+      }
+    },
+    {
+      "group": "old_normal_descent",
+      "rows": 5,
+      "negative": 0,
+      "minimum": {
+        "row": 19757,
+        "group": "old_normal_descent",
+        "scaled_residual": 8.3742962651151e-10,
+        "unscaled_residual": 1.004915551813812e-13,
+        "scale": 0.00012,
+        "states": [
+          1399,
+          1400
+        ],
+        "labels": [
+          1454,
+          1455
+        ],
+        "times_s": [
+          12.971768598252202,
+          13.118861132095542
+        ]
+      }
+    },
+    {
+      "group": "old_phase",
+      "rows": 208,
+      "negative": 0,
+      "minimum": {
+        "row": 12119,
+        "group": "old_phase",
+        "scaled_residual": 1.5390017415461976e-06,
+        "unscaled_residual": 1.5390017415461976e-06,
+        "scale": 1.0,
+        "states": [
+          1356,
+          1357
+        ],
+        "labels": [
+          1408,
+          1409
+        ],
+        "times_s": [
+          4.859986665024442,
+          4.9321955335968894
+        ]
+      }
+    },
+    {
+      "group": "old_planning_lower",
+      "rows": 1442,
+      "negative": 0,
+      "minimum": {
+        "row": 11989,
+        "group": "old_planning_lower",
+        "scaled_residual": 4.143907439413397e-14,
+        "unscaled_residual": 4.143907439413397e-14,
+        "scale": 1.0,
+        "states": [
+          1400
+        ],
+        "labels": [
+          1455
+        ],
+        "times_s": [
+          13.118861132095542
+        ]
+      }
+    },
+    {
+      "group": "old_planning_upper",
+      "rows": 1442,
+      "negative": 0,
+      "minimum": {
+        "row": 10659,
+        "group": "old_planning_upper",
+        "scaled_residual": 0.010905749229809636,
+        "unscaled_residual": 0.010905749229809636,
+        "scale": 1.0,
+        "states": [
+          1354
+        ],
+        "labels": [
+          1406
+        ],
+        "times_s": [
+          4.800777410225089
+        ]
+      }
+    },
+    {
+      "group": "old_posthover_gap",
+      "rows": 5,
+      "negative": 0,
+      "minimum": {
+        "row": 19606,
+        "group": "old_posthover_gap",
+        "scaled_residual": 0.46755013466173506,
+        "unscaled_residual": 0.005610601615940821,
+        "scale": 0.012,
+        "states": [
+          1397
+        ],
+        "labels": [
+          1452
+        ],
+        "times_s": [
+          12.078864444033957
+        ]
+      }
+    },
+    {
+      "group": "old_prehover_gap",
+      "rows": 98,
+      "negative": 0,
+      "minimum": {
+        "row": 19605,
+        "group": "old_prehover_gap",
+        "scaled_residual": 0.34105049704989865,
+        "unscaled_residual": 0.004092605964598784,
+        "scale": 0.012,
+        "states": [
+          1396
+        ],
+        "labels": [
+          1449
+        ],
+        "times_s": [
+          10.555891979032767
+        ]
+      }
+    },
+    {
+      "group": "old_ramp_lower",
+      "rows": 1824,
+      "negative": 0,
+      "minimum": {
+        "row": 19349,
+        "group": "old_ramp_lower",
+        "scaled_residual": 6.788551202655905e-12,
+        "unscaled_residual": 4.073130721593543e-15,
+        "scale": 0.0006,
+        "states": [
+          633,
+          1401
+        ],
+        "labels": [
+          658,
+          1457
+        ],
+        "times_s": [
+          13.16,
+          13.180001138482218
+        ]
+      }
+    },
+    {
+      "group": "old_ramp_upper",
+      "rows": 1824,
+      "negative": 0,
+      "minimum": {
+        "row": 16703,
+        "group": "old_ramp_upper",
+        "scaled_residual": 0.010071291927290598,
+        "unscaled_residual": 6.042775156374358e-06,
+        "scale": 0.0006,
+        "states": [
+          1351,
+          1352
+        ],
+        "labels": [
+          1403,
+          1404
+        ],
+        "times_s": [
+          4.74061254825206,
+          4.76062099968955
+        ]
+      }
+    },
+    {
+      "group": "old_rate_decreasing",
+      "rows": 1824,
+      "negative": 27,
+      "minimum": {
+        "row": 14298,
+        "group": "old_rate_decreasing",
+        "scaled_residual": -0.19791129319207476,
+        "unscaled_residual": -0.0005937338795762243,
+        "scale": 0.003,
+        "states": [
+          93,
+          1316
+        ],
+        "labels": [
+          93,
+          1368
+        ],
+        "times_s": [
+          1.86,
+          1.8871189352394235
+        ]
+      }
+    },
+    {
+      "group": "old_rate_increasing",
+      "rows": 1824,
+      "negative": 10,
+      "minimum": {
+        "row": 12455,
+        "group": "old_rate_increasing",
+        "scaled_residual": -0.10276745586071419,
+        "unscaled_residual": -0.00030830236758214256,
+        "scale": 0.003,
+        "states": [
+          93,
+          1315
+        ],
+        "labels": [
+          93,
+          1366
+        ],
+        "times_s": [
+          1.86,
+          1.8399990102576498
+        ]
+      }
+    },
+    {
+      "group": "old_support",
+      "rows": 524,
+      "negative": 0,
+      "minimum": {
+        "row": 19856,
+        "group": "old_support",
+        "scaled_residual": 4.000050290997592e-10,
+        "unscaled_residual": 2.000025145498796e-12,
+        "scale": 0.005,
+        "states": [
+          1316
+        ],
+        "labels": [
+          1368
+        ],
+        "times_s": [
+          1.8871189352394235
+        ]
+      }
+    },
+    {
+      "group": "old_time_identity",
+      "rows": 0,
+      "negative": 0,
+      "minimum": null,
+      "scope": "Audited constant/time rows omitted from optimizer only; unchanged full rows remain saved"
+    },
+    {
+      "group": "old_window_lower",
+      "rows": 3712,
+      "negative": 2,
+      "minimum": {
+        "row": 26577,
+        "group": "old_window_lower",
+        "scaled_residual": -1.0915065148016842e-10,
+        "unscaled_residual": -3.2745195444050523e-12,
+        "scale": 0.03,
+        "states": [
+          1395,
+          1396
+        ],
+        "labels": [
+          1448,
+          1449
+        ],
+        "times_s": [
+          10.460396269188731,
+          10.555891979032767
+        ]
+      }
+    },
+    {
+      "group": "old_window_upper",
+      "rows": 3712,
+      "negative": 0,
+      "minimum": {
+        "row": 23687,
+        "group": "old_window_upper",
+        "scaled_residual": 0.010067037829868583,
+        "unscaled_residual": 0.00030201113489605746,
+        "scale": 0.03,
+        "states": [
+          1351,
+          1352
+        ],
+        "labels": [
+          1403,
+          1404
+        ],
+        "times_s": [
+          4.74061254825206,
+          4.76062099968955
+        ]
+      }
+    }
+  ],
+  "attempts": [
+    {
+      "linear_index": 0,
+      "correction": 0,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 34758,
+        "independent_linear_violation": 6.585294531902264e-10,
+        "linear_pass": true,
+        "objective": 0.0,
+        "elapsed_s": 31.872167001944035,
+        "mode": "predictor",
+        "merit_ceiling": null
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        4.9094426275132774e-05,
+        1.16862160920439e-08,
+        4.188316360398403e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -200.16286309639028,
+        "minimum_hard_row": -2.7199570325880935,
+        "minimum_soft_row": -200.16286309639028,
+        "soft_merit": 200.16286309639028,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 2.0201224026905606e-09,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.052369602394758e-06,
+        "maximum_retained_equality": 0.019525497802350467,
+        "maximum_kinematic_residual": 4.188316360398403e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 0.007593021032425207,
+      "hover_normalized_error": 0.019525497802350467,
+      "actual_reduction": -199.9649518031982,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": -1010.3766620792596,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 42,
+        "mesh_normal_descent": 118,
+        "mesh_planning_lower": 4,
+        "mesh_posthover": 3,
+        "mesh_support": 2,
+        "old_approach_order": 1,
+        "old_normal_descent": 3,
+        "old_planning_lower": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 211943,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.7199570325880935,
+          "unscaled_residual": -0.00016319742195528562,
+          "scale": 6e-05,
+          "states": [
+            585,
+            1236
+          ],
+          "labels": [
+            610,
+            1286
+          ],
+          "times_s": [
+            12.2,
+            12.21
+          ]
+        },
+        {
+          "row": 213851,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.211174068281751,
+          "unscaled_residual": -0.00013267044409690507,
+          "scale": 6e-05,
+          "states": [
+            611,
+            1262
+          ],
+          "labels": [
+            636,
+            1312
+          ],
+          "times_s": [
+            12.72,
+            12.73
+          ]
+        },
+        {
+          "row": 213491,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.209068200261047,
+          "unscaled_residual": -0.00013254409201566284,
+          "scale": 6e-05,
+          "states": [
+            606,
+            1257
+          ],
+          "labels": [
+            631,
+            1307
+          ],
+          "times_s": [
+            12.62,
+            12.63
+          ]
+        },
+        {
+          "row": 213707,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.190833023240357,
+          "unscaled_residual": -0.0001314499813944214,
+          "scale": 6e-05,
+          "states": [
+            609,
+            1260
+          ],
+          "labels": [
+            634,
+            1310
+          ],
+          "times_s": [
+            12.68,
+            12.69
+          ]
+        },
+        {
+          "row": 211403,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.178339989795108,
+          "unscaled_residual": -0.00013070039938770648,
+          "scale": 6e-05,
+          "states": [
+            578,
+            1229
+          ],
+          "labels": [
+            603,
+            1279
+          ],
+          "times_s": [
+            12.06,
+            12.07
+          ]
+        },
+        {
+          "row": 211907,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.8857689668986635,
+          "unscaled_residual": -0.00011314613801391981,
+          "scale": 6e-05,
+          "states": [
+            585,
+            1235
+          ],
+          "labels": [
+            610,
+            1285
+          ],
+          "times_s": [
+            12.2,
+            12.19
+          ]
+        },
+        {
+          "row": 211655,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.620409454647457,
+          "unscaled_residual": -9.722456727884742e-05,
+          "scale": 6e-05,
+          "states": [
+            581,
+            1232
+          ],
+          "labels": [
+            606,
+            1282
+          ],
+          "times_s": [
+            12.12,
+            12.13
+          ]
+        },
+        {
+          "row": 210827,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.5813732432975087,
+          "unscaled_residual": -9.488239459785052e-05,
+          "scale": 6e-05,
+          "states": [
+            570,
+            1221
+          ],
+          "labels": [
+            595,
+            1271
+          ],
+          "times_s": [
+            11.9,
+            11.91
+          ]
+        },
+        {
+          "row": 211439,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.5465757736641088,
+          "unscaled_residual": -8.22572063395176e-05,
+          "scale": 5.318666420374339e-05,
+          "states": [
+            1229,
+            1397
+          ],
+          "labels": [
+            1279,
+            1452
+          ],
+          "times_s": [
+            12.07,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 211079,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.5278306792576577,
+          "unscaled_residual": -9.166984075545947e-05,
+          "scale": 6e-05,
+          "states": [
+            574,
+            1224
+          ],
+          "labels": [
+            599,
+            1274
+          ],
+          "times_s": [
+            11.98,
+            11.97
+          ]
+        },
+        {
+          "row": 214859,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.4574136125628891,
+          "unscaled_residual": -8.744481675377335e-05,
+          "scale": 6e-05,
+          "states": [
+            625,
+            1275
+          ],
+          "labels": [
+            650,
+            1325
+          ],
+          "times_s": [
+            13.0,
+            12.99
+          ]
+        },
+        {
+          "row": 215363,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.412911806663771,
+          "unscaled_residual": -8.477470839982625e-05,
+          "scale": 6e-05,
+          "states": [
+            631,
+            1282
+          ],
+          "labels": [
+            656,
+            1332
+          ],
+          "times_s": [
+            13.12,
+            13.13
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 1,
+      "correction": 1,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 50660,
+        "independent_linear_violation": 3.9745984281580604e-13,
+        "linear_pass": true,
+        "objective": 0.05095844630161328,
+        "elapsed_s": 17.564546527923085,
+        "mode": "correction",
+        "merit_ceiling": 0.09895564659603738
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        1.5835449981571603e-06,
+        5.699510308154743e-12,
+        9.991313332236018e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -16.558054095395057,
+        "minimum_hard_row": -0.2850411815632132,
+        "minimum_soft_row": -16.558054095395057,
+        "soft_merit": 16.558054095395057,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 1.0302937114570199e-09,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 3.871451412347965e-07,
+        "maximum_retained_equality": 0.0011797099587678161,
+        "maximum_kinematic_residual": 9.991313332236018e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 0.0008843481931726238,
+      "hover_normalized_error": 0.0011797099587678161,
+      "actual_reduction": -16.360142802202983,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": -82.66401850209382,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 23,
+        "mesh_normal_descent": 98,
+        "mesh_planning_lower": 4,
+        "old_planning_lower": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 211943,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.2850411815632132,
+          "unscaled_residual": -1.710247089379279e-05,
+          "scale": 6e-05,
+          "states": [
+            585,
+            1236
+          ],
+          "labels": [
+            610,
+            1286
+          ],
+          "times_s": [
+            12.2,
+            12.21
+          ]
+        },
+        {
+          "row": 211475,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.24613304305976008,
+          "unscaled_residual": -1.6769870729206315e-06,
+          "scale": 6.813335796256605e-06,
+          "states": [
+            579,
+            1397
+          ],
+          "labels": [
+            604,
+            1452
+          ],
+          "times_s": [
+            12.08,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 213707,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.22302590269871825,
+          "unscaled_residual": -1.3381554161923096e-05,
+          "scale": 6e-05,
+          "states": [
+            609,
+            1260
+          ],
+          "labels": [
+            634,
+            1310
+          ],
+          "times_s": [
+            12.68,
+            12.69
+          ]
+        },
+        {
+          "row": 212591,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.21751020276813032,
+          "unscaled_residual": -1.3050612166087819e-05,
+          "scale": 6e-05,
+          "states": [
+            594,
+            1245
+          ],
+          "labels": [
+            619,
+            1295
+          ],
+          "times_s": [
+            12.38,
+            12.39
+          ]
+        },
+        {
+          "row": 213851,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.21546983056175403,
+          "unscaled_residual": -1.2928189833705242e-05,
+          "scale": 6e-05,
+          "states": [
+            611,
+            1262
+          ],
+          "labels": [
+            636,
+            1312
+          ],
+          "times_s": [
+            12.72,
+            12.73
+          ]
+        },
+        {
+          "row": 211907,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.2064783534729459,
+          "unscaled_residual": -1.2388701208376754e-05,
+          "scale": 6e-05,
+          "states": [
+            585,
+            1235
+          ],
+          "labels": [
+            610,
+            1285
+          ],
+          "times_s": [
+            12.2,
+            12.19
+          ]
+        },
+        {
+          "row": 211403,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.19299926996526223,
+          "unscaled_residual": -1.1579956197915734e-05,
+          "scale": 6e-05,
+          "states": [
+            578,
+            1229
+          ],
+          "labels": [
+            603,
+            1279
+          ],
+          "times_s": [
+            12.06,
+            12.07
+          ]
+        },
+        {
+          "row": 213491,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.18425704393004713,
+          "unscaled_residual": -1.1055422635802828e-05,
+          "scale": 6e-05,
+          "states": [
+            606,
+            1257
+          ],
+          "labels": [
+            631,
+            1307
+          ],
+          "times_s": [
+            12.62,
+            12.63
+          ]
+        },
+        {
+          "row": 211439,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.18284031725048575,
+          "unscaled_residual": -9.724666556507496e-06,
+          "scale": 5.318666420374339e-05,
+          "states": [
+            1229,
+            1397
+          ],
+          "labels": [
+            1279,
+            1452
+          ],
+          "times_s": [
+            12.07,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 211079,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.17597823626425133,
+          "unscaled_residual": -1.055869417585508e-05,
+          "scale": 6e-05,
+          "states": [
+            574,
+            1224
+          ],
+          "labels": [
+            599,
+            1274
+          ],
+          "times_s": [
+            11.98,
+            11.97
+          ]
+        },
+        {
+          "row": 210827,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.16770302549068403,
+          "unscaled_residual": -1.0062181529441042e-05,
+          "scale": 6e-05,
+          "states": [
+            570,
+            1221
+          ],
+          "labels": [
+            595,
+            1271
+          ],
+          "times_s": [
+            11.9,
+            11.91
+          ]
+        },
+        {
+          "row": 211259,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.16429356083748797,
+          "unscaled_residual": -9.857613650249278e-06,
+          "scale": 6e-05,
+          "states": [
+            576,
+            1227
+          ],
+          "labels": [
+            601,
+            1277
+          ],
+          "times_s": [
+            12.02,
+            12.03
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 2,
+      "correction": 2,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 30194,
+        "independent_linear_violation": 2.468858451010192e-14,
+        "linear_pass": true,
+        "objective": 0.006896557046476293,
+        "elapsed_s": 4.716628753929399,
+        "mode": "correction",
+        "merit_ceiling": 0.09895564659603738
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        4.237868773265818e-08,
+        3.230055112268815e-15
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.23171887390380588,
+        "minimum_hard_row": -0.019789127566338525,
+        "minimum_soft_row": -0.23171887390380588,
+        "soft_merit": 0.23171887390380588,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 1.2137929550348758e-09,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.4242273820969593e-07,
+        "maximum_retained_equality": 0.00013181864264200094,
+        "maximum_kinematic_residual": 3.230055112268815e-15,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 0.00013181864264200094,
+      "hover_normalized_error": 2.7566571921822103e-05,
+      "actual_reduction": -0.03380758071173112,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": -0.17082188775817128,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 20,
+        "mesh_normal_descent": 108,
+        "mesh_planning_lower": 1,
+        "old_normal_descent": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 212807,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.019789127566338525,
+          "unscaled_residual": -1.1873476539803115e-06,
+          "scale": 6e-05,
+          "states": [
+            597,
+            1248
+          ],
+          "labels": [
+            622,
+            1298
+          ],
+          "times_s": [
+            12.44,
+            12.45
+          ]
+        },
+        {
+          "row": 19756,
+          "group": "old_normal_descent",
+          "scaled_residual": -0.01673814278511006,
+          "unscaled_residual": -2.0085771342132075e-06,
+          "scale": 0.00012,
+          "states": [
+            1398,
+            1399
+          ],
+          "labels": [
+            1453,
+            1454
+          ],
+          "times_s": [
+            12.542732964244381,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 211475,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.01429545037531811,
+          "unscaled_residual": -9.739970376576479e-08,
+          "scale": 6.813335796256605e-06,
+          "states": [
+            579,
+            1397
+          ],
+          "labels": [
+            604,
+            1452
+          ],
+          "times_s": [
+            12.08,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 212591,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.013512759588681415,
+          "unscaled_residual": -8.10765575320885e-07,
+          "scale": 6e-05,
+          "states": [
+            594,
+            1245
+          ],
+          "labels": [
+            619,
+            1295
+          ],
+          "times_s": [
+            12.38,
+            12.39
+          ]
+        },
+        {
+          "row": 212699,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.01138299497632764,
+          "unscaled_residual": -6.829796985796584e-07,
+          "scale": 6e-05,
+          "states": [
+            596,
+            1246
+          ],
+          "labels": [
+            621,
+            1296
+          ],
+          "times_s": [
+            12.42,
+            12.41
+          ]
+        },
+        {
+          "row": 215255,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.007933723107737224,
+          "unscaled_residual": -4.7602338646423345e-07,
+          "scale": 6e-05,
+          "states": [
+            630,
+            1281
+          ],
+          "labels": [
+            655,
+            1331
+          ],
+          "times_s": [
+            13.1,
+            13.11
+          ]
+        },
+        {
+          "row": 213095,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.006990786185212403,
+          "unscaled_residual": -4.194471711127442e-07,
+          "scale": 6e-05,
+          "states": [
+            601,
+            1252
+          ],
+          "labels": [
+            626,
+            1302
+          ],
+          "times_s": [
+            12.52,
+            12.53
+          ]
+        },
+        {
+          "row": 213059,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.006768311541412491,
+          "unscaled_residual": -4.060986924847495e-07,
+          "scale": 6e-05,
+          "states": [
+            601,
+            1251
+          ],
+          "labels": [
+            626,
+            1301
+          ],
+          "times_s": [
+            12.52,
+            12.51
+          ]
+        },
+        {
+          "row": 215039,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.006745666581893844,
+          "unscaled_residual": -4.0473999491363064e-07,
+          "scale": 6e-05,
+          "states": [
+            627,
+            1278
+          ],
+          "labels": [
+            652,
+            1328
+          ],
+          "times_s": [
+            13.04,
+            13.05
+          ]
+        },
+        {
+          "row": 213131,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.006738567664143911,
+          "unscaled_residual": -4.0431405984863464e-07,
+          "scale": 6e-05,
+          "states": [
+            602,
+            1252
+          ],
+          "labels": [
+            627,
+            1302
+          ],
+          "times_s": [
+            12.54,
+            12.53
+          ]
+        },
+        {
+          "row": 213167,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.005982123099798093,
+          "unscaled_residual": -9.809357122342658e-08,
+          "scale": 1.6397785466289953e-05,
+          "states": [
+            602,
+            1398
+          ],
+          "labels": [
+            627,
+            1453
+          ],
+          "times_s": [
+            12.54,
+            12.542732964244381
+          ]
+        },
+        {
+          "row": 214967,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.005705190492347979,
+          "unscaled_residual": -3.4231142954087876e-07,
+          "scale": 6e-05,
+          "states": [
+            626,
+            1277
+          ],
+          "labels": [
+            651,
+            1327
+          ],
+          "times_s": [
+            13.02,
+            13.03
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 3,
+      "correction": 3,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 30638,
+        "independent_linear_violation": 1.915134717478395e-14,
+        "linear_pass": true,
+        "objective": 0.0008238665165125059,
+        "elapsed_s": 8.170595030998811,
+        "mode": "correction",
+        "merit_ceiling": 0.09895564659603738
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        6.118281992151253e-10,
+        2.4841240175987878e-15
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.11695497065400588,
+        "minimum_hard_row": -0.0029131726129541084,
+        "minimum_soft_row": -0.11695497065400588,
+        "soft_merit": 0.11695497065400588,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 6.08828099046832e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 5.239439734268965e-08,
+        "maximum_retained_equality": 1.3578819385129393e-05,
+        "maximum_kinematic_residual": 2.4841240175987878e-15,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 1.3578819385129393e-05,
+      "hover_normalized_error": 8.478021357616328e-06,
+      "actual_reduction": 0.08095632253806888,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": 0.4090535776525901,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 13,
+        "mesh_command_lower": 2,
+        "mesh_normal_descent": 116,
+        "mesh_planning_lower": 2,
+        "old_normal_descent": 2
+      },
+      "worst_hard_rows": [
+        {
+          "row": 213131,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0029131726129541084,
+          "unscaled_residual": -1.747903567772465e-07,
+          "scale": 6e-05,
+          "states": [
+            602,
+            1252
+          ],
+          "labels": [
+            627,
+            1302
+          ],
+          "times_s": [
+            12.54,
+            12.53
+          ]
+        },
+        {
+          "row": 213275,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.002270177678342786,
+          "unscaled_residual": -1.3621066070056717e-07,
+          "scale": 6e-05,
+          "states": [
+            603,
+            1254
+          ],
+          "labels": [
+            628,
+            1304
+          ],
+          "times_s": [
+            12.56,
+            12.57
+          ]
+        },
+        {
+          "row": 214751,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0016118896936177054,
+          "unscaled_residual": -1.7104711769245733e-08,
+          "scale": 1.0611589513210504e-05,
+          "states": [
+            1274,
+            1399
+          ],
+          "labels": [
+            1324,
+            1454
+          ],
+          "times_s": [
+            12.97,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 19757,
+          "group": "old_normal_descent",
+          "scaled_residual": -0.0013286224540485032,
+          "unscaled_residual": -1.5943469448582038e-07,
+          "scale": 0.00012,
+          "states": [
+            1399,
+            1400
+          ],
+          "labels": [
+            1454,
+            1455
+          ],
+          "times_s": [
+            12.971768598252202,
+            13.118861132095542
+          ]
+        },
+        {
+          "row": 214859,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0012718672208939458,
+          "unscaled_residual": -7.631203325363675e-08,
+          "scale": 6e-05,
+          "states": [
+            625,
+            1275
+          ],
+          "labels": [
+            650,
+            1325
+          ],
+          "times_s": [
+            13.0,
+            12.99
+          ]
+        },
+        {
+          "row": 214643,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0010184064555550409,
+          "unscaled_residual": -6.110438733330245e-08,
+          "scale": 6e-05,
+          "states": [
+            622,
+            1273
+          ],
+          "labels": [
+            647,
+            1323
+          ],
+          "times_s": [
+            12.94,
+            12.95
+          ]
+        },
+        {
+          "row": 214607,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0009904222961208719,
+          "unscaled_residual": -5.942533776725231e-08,
+          "scale": 6e-05,
+          "states": [
+            622,
+            1272
+          ],
+          "labels": [
+            647,
+            1322
+          ],
+          "times_s": [
+            12.94,
+            12.93
+          ]
+        },
+        {
+          "row": 214571,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0009718418820616872,
+          "unscaled_residual": -5.8310512923701236e-08,
+          "scale": 6e-05,
+          "states": [
+            621,
+            1272
+          ],
+          "labels": [
+            646,
+            1322
+          ],
+          "times_s": [
+            12.92,
+            12.93
+          ]
+        },
+        {
+          "row": 214715,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0009590585423970968,
+          "unscaled_residual": -5.754351254382581e-08,
+          "scale": 6e-05,
+          "states": [
+            623,
+            1274
+          ],
+          "labels": [
+            648,
+            1324
+          ],
+          "times_s": [
+            12.96,
+            12.97
+          ]
+        },
+        {
+          "row": 208307,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0009548141098139187,
+          "unscaled_residual": -5.7288846588835125e-08,
+          "scale": 6e-05,
+          "states": [
+            535,
+            1186
+          ],
+          "labels": [
+            560,
+            1236
+          ],
+          "times_s": [
+            11.2,
+            11.21
+          ]
+        },
+        {
+          "row": 214679,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0009406881103696746,
+          "unscaled_residual": -5.644128662218048e-08,
+          "scale": 6e-05,
+          "states": [
+            623,
+            1273
+          ],
+          "labels": [
+            648,
+            1323
+          ],
+          "times_s": [
+            12.96,
+            12.95
+          ]
+        },
+        {
+          "row": 214931,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.000800783568251689,
+          "unscaled_residual": -4.8047014095101343e-08,
+          "scale": 6e-05,
+          "states": [
+            626,
+            1276
+          ],
+          "labels": [
+            651,
+            1326
+          ],
+          "times_s": [
+            13.02,
+            13.01
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 4,
+      "correction": 4,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 28763,
+        "independent_linear_violation": 3.671440929053915e-11,
+        "linear_pass": true,
+        "objective": 0.00012169178109547158,
+        "elapsed_s": 4.997878561029211,
+        "mode": "correction",
+        "merit_ceiling": 0.09895564659603738
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        1.3925187392072047e-11,
+        2.4841240175987878e-15
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.10567340375716917,
+        "minimum_hard_row": -0.0008633919620099654,
+        "minimum_soft_row": -0.10567340375716917,
+        "soft_merit": 0.10567340375716917,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 3.045464991302538e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.927482161494296e-08,
+        "maximum_retained_equality": 3.0942766897634755e-06,
+        "maximum_kinematic_residual": 2.4841240175987878e-15,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 1.8323578914181127e-06,
+      "hover_normalized_error": 3.0942766897634755e-06,
+      "actual_reduction": 0.09223788943490559,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": 0.46605672646172774,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_command_lower": 1,
+        "mesh_normal_descent": 62,
+        "old_normal_descent": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 214751,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0008633919620099654,
+          "unscaled_residual": -9.161961089855191e-09,
+          "scale": 1.0611589513210504e-05,
+          "states": [
+            1274,
+            1399
+          ],
+          "labels": [
+            1324,
+            1454
+          ],
+          "times_s": [
+            12.97,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 214715,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00036862138073435883,
+          "unscaled_residual": -2.2117282844061532e-08,
+          "scale": 6e-05,
+          "states": [
+            623,
+            1274
+          ],
+          "labels": [
+            648,
+            1324
+          ],
+          "times_s": [
+            12.96,
+            12.97
+          ]
+        },
+        {
+          "row": 214823,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00033688028024563785,
+          "unscaled_residual": -2.0212816814738272e-08,
+          "scale": 6e-05,
+          "states": [
+            624,
+            1275
+          ],
+          "labels": [
+            649,
+            1325
+          ],
+          "times_s": [
+            12.98,
+            12.99
+          ]
+        },
+        {
+          "row": 215111,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00029863088816607517,
+          "unscaled_residual": -1.791785328996451e-08,
+          "scale": 6e-05,
+          "states": [
+            628,
+            1279
+          ],
+          "labels": [
+            653,
+            1329
+          ],
+          "times_s": [
+            13.06,
+            13.07
+          ]
+        },
+        {
+          "row": 19754,
+          "group": "old_normal_descent",
+          "scaled_residual": -0.00025746482414940275,
+          "unscaled_residual": -3.089577889792833e-08,
+          "scale": 0.00012,
+          "states": [
+            532,
+            1397
+          ],
+          "labels": [
+            1450,
+            1452
+          ],
+          "times_s": [
+            10.64,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 208199,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.000249861626851527,
+          "unscaled_residual": -1.499169761109162e-08,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1184
+          ],
+          "labels": [
+            559,
+            1234
+          ],
+          "times_s": [
+            11.18,
+            11.17
+          ]
+        },
+        {
+          "row": 215183,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00019547912695932432,
+          "unscaled_residual": -1.172874761755946e-08,
+          "scale": 6e-05,
+          "states": [
+            629,
+            1280
+          ],
+          "labels": [
+            654,
+            1330
+          ],
+          "times_s": [
+            13.08,
+            13.09
+          ]
+        },
+        {
+          "row": 208235,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00016275714859168336,
+          "unscaled_residual": -9.765428915501002e-09,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1185
+          ],
+          "labels": [
+            559,
+            1235
+          ],
+          "times_s": [
+            11.18,
+            11.19
+          ]
+        },
+        {
+          "row": 214859,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0001389560060533419,
+          "unscaled_residual": -8.337360363200514e-09,
+          "scale": 6e-05,
+          "states": [
+            625,
+            1275
+          ],
+          "labels": [
+            650,
+            1325
+          ],
+          "times_s": [
+            13.0,
+            12.99
+          ]
+        },
+        {
+          "row": 208163,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00012160187125747578,
+          "unscaled_residual": -7.296112275448547e-09,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1184
+          ],
+          "labels": [
+            558,
+            1234
+          ],
+          "times_s": [
+            11.16,
+            11.17
+          ]
+        },
+        {
+          "row": 208307,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00011776963395220784,
+          "unscaled_residual": -7.066178037132471e-09,
+          "scale": 6e-05,
+          "states": [
+            535,
+            1186
+          ],
+          "labels": [
+            560,
+            1236
+          ],
+          "times_s": [
+            11.2,
+            11.21
+          ]
+        },
+        {
+          "row": 208271,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00011582423640544987,
+          "unscaled_residual": -6.949454184326993e-09,
+          "scale": 6e-05,
+          "states": [
+            535,
+            1185
+          ],
+          "labels": [
+            560,
+            1235
+          ],
+          "times_s": [
+            11.2,
+            11.19
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 5,
+      "correction": 0,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 22539,
+        "independent_linear_violation": 6.585865715627581e-10,
+        "linear_pass": true,
+        "objective": 0.0,
+        "elapsed_s": 14.675268908031285,
+        "mode": "predictor",
+        "merit_ceiling": null
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        2.105374488509809e-05,
+        1.2231482996588605e-09,
+        4.1300296516055823e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -22.422212437541866,
+        "minimum_hard_row": -2.4874407620599035,
+        "minimum_soft_row": -22.422212437541866,
+        "soft_merit": 22.422212437541866,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 3.919166102761551e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.052369602394758e-06,
+        "maximum_retained_equality": 0.007780114820456152,
+        "maximum_kinematic_residual": 4.1300296516055823e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 0.0031518930156264613,
+      "hover_normalized_error": 0.007780114820456152,
+      "actual_reduction": -22.22430114434979,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": -112.29425459203533,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 40,
+        "mesh_command_lower": 2,
+        "mesh_normal_descent": 95,
+        "mesh_posthover": 1,
+        "old_approach_order": 1,
+        "old_normal_descent": 3
+      },
+      "worst_hard_rows": [
+        {
+          "row": 211187,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.4874407620599035,
+          "unscaled_residual": -0.00014924644572359422,
+          "scale": 6e-05,
+          "states": [
+            575,
+            1226
+          ],
+          "labels": [
+            600,
+            1276
+          ],
+          "times_s": [
+            12.0,
+            12.01
+          ]
+        },
+        {
+          "row": 211511,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.3656276208688003,
+          "unscaled_residual": -0.00014193765725212801,
+          "scale": 6e-05,
+          "states": [
+            579,
+            1230
+          ],
+          "labels": [
+            604,
+            1280
+          ],
+          "times_s": [
+            12.08,
+            12.09
+          ]
+        },
+        {
+          "row": 213707,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.3295548554722965,
+          "unscaled_residual": -0.0001397732913283378,
+          "scale": 6e-05,
+          "states": [
+            609,
+            1260
+          ],
+          "labels": [
+            634,
+            1310
+          ],
+          "times_s": [
+            12.68,
+            12.69
+          ]
+        },
+        {
+          "row": 214715,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.2841025294975665,
+          "unscaled_residual": -0.000137046151769854,
+          "scale": 6e-05,
+          "states": [
+            623,
+            1274
+          ],
+          "labels": [
+            648,
+            1324
+          ],
+          "times_s": [
+            12.96,
+            12.97
+          ]
+        },
+        {
+          "row": 211007,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.259709406904897,
+          "unscaled_residual": -0.00013558256441429382,
+          "scale": 6e-05,
+          "states": [
+            573,
+            1223
+          ],
+          "labels": [
+            598,
+            1273
+          ],
+          "times_s": [
+            11.96,
+            11.95
+          ]
+        },
+        {
+          "row": 210935,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.2542604562609623,
+          "unscaled_residual": -0.00013525562737565775,
+          "scale": 6e-05,
+          "states": [
+            572,
+            1222
+          ],
+          "labels": [
+            597,
+            1272
+          ],
+          "times_s": [
+            11.94,
+            11.93
+          ]
+        },
+        {
+          "row": 213923,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.100742320514196,
+          "unscaled_residual": -0.00012604453923085177,
+          "scale": 6e-05,
+          "states": [
+            612,
+            1263
+          ],
+          "labels": [
+            637,
+            1313
+          ],
+          "times_s": [
+            12.74,
+            12.75
+          ]
+        },
+        {
+          "row": 213563,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.0420367878189642,
+          "unscaled_residual": -0.00012252220726913785,
+          "scale": 6e-05,
+          "states": [
+            607,
+            1258
+          ],
+          "labels": [
+            632,
+            1308
+          ],
+          "times_s": [
+            12.64,
+            12.65
+          ]
+        },
+        {
+          "row": 213491,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.0382015529878577,
+          "unscaled_residual": -0.00012229209317927146,
+          "scale": 6e-05,
+          "states": [
+            606,
+            1257
+          ],
+          "labels": [
+            631,
+            1307
+          ],
+          "times_s": [
+            12.62,
+            12.63
+          ]
+        },
+        {
+          "row": 213311,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.031637194824798,
+          "unscaled_residual": -0.00012189823168948788,
+          "scale": 6e-05,
+          "states": [
+            604,
+            1254
+          ],
+          "labels": [
+            629,
+            1304
+          ],
+          "times_s": [
+            12.58,
+            12.57
+          ]
+        },
+        {
+          "row": 211907,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.0070230896998553,
+          "unscaled_residual": -0.00012042138538199132,
+          "scale": 6e-05,
+          "states": [
+            585,
+            1235
+          ],
+          "labels": [
+            610,
+            1285
+          ],
+          "times_s": [
+            12.2,
+            12.19
+          ]
+        },
+        {
+          "row": 215111,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.9368482563731728,
+          "unscaled_residual": -0.00011621089538239037,
+          "scale": 6e-05,
+          "states": [
+            628,
+            1279
+          ],
+          "labels": [
+            653,
+            1329
+          ],
+          "times_s": [
+            13.06,
+            13.07
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 6,
+      "correction": 1,
+      "linear": {
+        "status": 1,
+        "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+        "candidate": false,
+        "success": false,
+        "iterations": 38706,
+        "elapsed_s": 46.10197250708006,
+        "mode": "correction",
+        "merit_ceiling": 0.09895564659603738
+      },
+      "accepted": false,
+      "rejection": "no independently feasible linear witness"
+    },
+    {
+      "linear_index": 7,
+      "correction": 0,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 18536,
+        "independent_linear_violation": 6.585253358240561e-10,
+        "linear_pass": true,
+        "objective": 0.0,
+        "elapsed_s": 8.074432958033867,
+        "mode": "predictor",
+        "merit_ceiling": null
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        5.740977505178102e-06,
+        9.004218724795177e-11,
+        3.3431590829025026e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -82.6353845016538,
+        "minimum_hard_row": -0.9924425652633553,
+        "minimum_soft_row": -82.6353845016538,
+        "soft_merit": 82.6353845016538,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 1.1499786539692636e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.052369602394758e-06,
+        "maximum_retained_equality": 0.0042223418812237234,
+        "maximum_kinematic_residual": 3.3431590829025026e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 0.0018042797199973037,
+      "hover_normalized_error": 0.0042223418812237234,
+      "actual_reduction": -82.43747320846172,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": -416.53748949260506,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 20,
+        "mesh_normal_descent": 102,
+        "old_approach_order": 1,
+        "old_normal_descent": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 208631,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.9924425652633553,
+          "unscaled_residual": -5.954655391580132e-05,
+          "scale": 6e-05,
+          "states": [
+            540,
+            1190
+          ],
+          "labels": [
+            565,
+            1240
+          ],
+          "times_s": [
+            11.3,
+            11.29
+          ]
+        },
+        {
+          "row": 215039,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.81831859360032,
+          "unscaled_residual": -4.90991156160192e-05,
+          "scale": 6e-05,
+          "states": [
+            627,
+            1278
+          ],
+          "labels": [
+            652,
+            1328
+          ],
+          "times_s": [
+            13.04,
+            13.05
+          ]
+        },
+        {
+          "row": 212375,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.8056960827443337,
+          "unscaled_residual": -4.834176496466002e-05,
+          "scale": 6e-05,
+          "states": [
+            591,
+            1242
+          ],
+          "labels": [
+            616,
+            1292
+          ],
+          "times_s": [
+            12.32,
+            12.33
+          ]
+        },
+        {
+          "row": 209855,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.7812021672998214,
+          "unscaled_residual": -4.687213003798928e-05,
+          "scale": 6e-05,
+          "states": [
+            557,
+            1207
+          ],
+          "labels": [
+            582,
+            1257
+          ],
+          "times_s": [
+            11.64,
+            11.63
+          ]
+        },
+        {
+          "row": 213131,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.7664434699277317,
+          "unscaled_residual": -4.5986608195663906e-05,
+          "scale": 6e-05,
+          "states": [
+            602,
+            1252
+          ],
+          "labels": [
+            627,
+            1302
+          ],
+          "times_s": [
+            12.54,
+            12.53
+          ]
+        },
+        {
+          "row": 209783,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.7584836415340984,
+          "unscaled_residual": -4.550901849204591e-05,
+          "scale": 6e-05,
+          "states": [
+            556,
+            1206
+          ],
+          "labels": [
+            581,
+            1256
+          ],
+          "times_s": [
+            11.62,
+            11.61
+          ]
+        },
+        {
+          "row": 211943,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.7581212210006996,
+          "unscaled_residual": -4.5487273260041975e-05,
+          "scale": 6e-05,
+          "states": [
+            585,
+            1236
+          ],
+          "labels": [
+            610,
+            1286
+          ],
+          "times_s": [
+            12.2,
+            12.21
+          ]
+        },
+        {
+          "row": 212699,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.6256119344489699,
+          "unscaled_residual": -3.7536716066938195e-05,
+          "scale": 6e-05,
+          "states": [
+            596,
+            1246
+          ],
+          "labels": [
+            621,
+            1296
+          ],
+          "times_s": [
+            12.42,
+            12.41
+          ]
+        },
+        {
+          "row": 209387,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.5933844333580461,
+          "unscaled_residual": -3.560306600148277e-05,
+          "scale": 6e-05,
+          "states": [
+            550,
+            1201
+          ],
+          "labels": [
+            575,
+            1251
+          ],
+          "times_s": [
+            11.5,
+            11.51
+          ]
+        },
+        {
+          "row": 208451,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.5451641898293612,
+          "unscaled_residual": -3.270985138976167e-05,
+          "scale": 6e-05,
+          "states": [
+            537,
+            1188
+          ],
+          "labels": [
+            562,
+            1238
+          ],
+          "times_s": [
+            11.24,
+            11.25
+          ]
+        },
+        {
+          "row": 211907,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.4941233580645538,
+          "unscaled_residual": -2.964740148387323e-05,
+          "scale": 6e-05,
+          "states": [
+            585,
+            1235
+          ],
+          "labels": [
+            610,
+            1285
+          ],
+          "times_s": [
+            12.2,
+            12.19
+          ]
+        },
+        {
+          "row": 211439,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.4641160247204501,
+          "unscaled_residual": -2.4684783158382847e-05,
+          "scale": 5.318666420374339e-05,
+          "states": [
+            1229,
+            1397
+          ],
+          "labels": [
+            1279,
+            1452
+          ],
+          "times_s": [
+            12.07,
+            12.078864444033957
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 8,
+      "correction": 1,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 30878,
+        "independent_linear_violation": 7.394085344003543e-14,
+        "linear_pass": true,
+        "objective": 0.054122398846512265,
+        "elapsed_s": 13.57285104796756,
+        "mode": "correction",
+        "merit_ceiling": 0.09895564659603738
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        1.3426978386077426e-07,
+        3.89757670582469e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -8.938273237623655,
+        "minimum_hard_row": -0.1103382609484355,
+        "minimum_soft_row": -8.938273237623655,
+        "soft_merit": 8.938273237623655,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 1.1499786539692636e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 3.871451412347965e-07,
+        "maximum_retained_equality": 0.00037031690452371535,
+        "maximum_kinematic_residual": 3.89757670582469e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 0.0002932782306992454,
+      "hover_normalized_error": 0.00037031690452371535,
+      "actual_reduction": -8.74036194443158,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": -44.163027806346435,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 21,
+        "mesh_normal_descent": 97,
+        "mesh_planning_lower": 1,
+        "old_approach_order": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 208631,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.1103382609484355,
+          "unscaled_residual": -6.620295656906131e-06,
+          "scale": 6e-05,
+          "states": [
+            540,
+            1190
+          ],
+          "labels": [
+            565,
+            1240
+          ],
+          "times_s": [
+            11.3,
+            11.29
+          ]
+        },
+        {
+          "row": 213131,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.11020809557366049,
+          "unscaled_residual": -6.612485734419629e-06,
+          "scale": 6e-05,
+          "states": [
+            602,
+            1252
+          ],
+          "labels": [
+            627,
+            1302
+          ],
+          "times_s": [
+            12.54,
+            12.53
+          ]
+        },
+        {
+          "row": 209783,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.08592179723598811,
+          "unscaled_residual": -5.155307834159287e-06,
+          "scale": 6e-05,
+          "states": [
+            556,
+            1206
+          ],
+          "labels": [
+            581,
+            1256
+          ],
+          "times_s": [
+            11.62,
+            11.61
+          ]
+        },
+        {
+          "row": 212375,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.08553899626959983,
+          "unscaled_residual": -5.13233977617599e-06,
+          "scale": 6e-05,
+          "states": [
+            591,
+            1242
+          ],
+          "labels": [
+            616,
+            1292
+          ],
+          "times_s": [
+            12.32,
+            12.33
+          ]
+        },
+        {
+          "row": 211943,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.08195471224538735,
+          "unscaled_residual": -4.917282734723241e-06,
+          "scale": 6e-05,
+          "states": [
+            585,
+            1236
+          ],
+          "labels": [
+            610,
+            1286
+          ],
+          "times_s": [
+            12.2,
+            12.21
+          ]
+        },
+        {
+          "row": 209855,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.07829833682443374,
+          "unscaled_residual": -4.6979002094660246e-06,
+          "scale": 6e-05,
+          "states": [
+            557,
+            1207
+          ],
+          "labels": [
+            582,
+            1257
+          ],
+          "times_s": [
+            11.64,
+            11.63
+          ]
+        },
+        {
+          "row": 215039,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.07707802409208823,
+          "unscaled_residual": -4.6246814455252946e-06,
+          "scale": 6e-05,
+          "states": [
+            627,
+            1278
+          ],
+          "labels": [
+            652,
+            1328
+          ],
+          "times_s": [
+            13.04,
+            13.05
+          ]
+        },
+        {
+          "row": 213167,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.07391829209391057,
+          "unscaled_residual": -1.2120962957905024e-06,
+          "scale": 1.6397785466289953e-05,
+          "states": [
+            602,
+            1398
+          ],
+          "labels": [
+            627,
+            1453
+          ],
+          "times_s": [
+            12.54,
+            12.542732964244381
+          ]
+        },
+        {
+          "row": 209387,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.061107585011173686,
+          "unscaled_residual": -3.6664551006704212e-06,
+          "scale": 6e-05,
+          "states": [
+            550,
+            1201
+          ],
+          "labels": [
+            575,
+            1251
+          ],
+          "times_s": [
+            11.5,
+            11.51
+          ]
+        },
+        {
+          "row": 208451,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0604507108926491,
+          "unscaled_residual": -3.627042653558946e-06,
+          "scale": 6e-05,
+          "states": [
+            537,
+            1188
+          ],
+          "labels": [
+            562,
+            1238
+          ],
+          "times_s": [
+            11.24,
+            11.25
+          ]
+        },
+        {
+          "row": 214715,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.056965112702015666,
+          "unscaled_residual": -3.41790676212094e-06,
+          "scale": 6e-05,
+          "states": [
+            623,
+            1274
+          ],
+          "labels": [
+            648,
+            1324
+          ],
+          "times_s": [
+            12.96,
+            12.97
+          ]
+        },
+        {
+          "row": 212699,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.05184663602525438,
+          "unscaled_residual": -3.110798161515263e-06,
+          "scale": 6e-05,
+          "states": [
+            596,
+            1246
+          ],
+          "labels": [
+            621,
+            1296
+          ],
+          "times_s": [
+            12.42,
+            12.41
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 9,
+      "correction": 2,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 23589,
+        "independent_linear_violation": 2.886579864025407e-15,
+        "linear_pass": true,
+        "objective": 0.007712971410753385,
+        "elapsed_s": 5.727608168963343,
+        "mode": "correction",
+        "merit_ceiling": 0.09895564659603738
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        3.3299935517372425e-09,
+        2.4841240175987878e-15
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.15776912355353803,
+        "minimum_hard_row": -0.004172022108352366,
+        "minimum_soft_row": -0.15776912355353803,
+        "soft_merit": 0.15776912355353803,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 5.924579576932487e-11,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.4242273820969593e-07,
+        "maximum_retained_equality": 4.006072705409203e-05,
+        "maximum_kinematic_residual": 2.4841240175987878e-15,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 4.006072705409203e-05,
+      "hover_normalized_error": 2.969017221055026e-05,
+      "actual_reduction": 0.04014216963853673,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": 0.20282910081123254,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 19,
+        "mesh_command_lower": 1,
+        "mesh_normal_descent": 102,
+        "mesh_planning_lower": 1,
+        "old_approach_order": 1,
+        "old_normal_descent": 2
+      },
+      "worst_hard_rows": [
+        {
+          "row": 214751,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.004172022108352366,
+          "unscaled_residual": -4.4271786053874345e-08,
+          "scale": 1.0611589513210504e-05,
+          "states": [
+            1274,
+            1399
+          ],
+          "labels": [
+            1324,
+            1454
+          ],
+          "times_s": [
+            12.97,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 214715,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0034802260079346034,
+          "unscaled_residual": -2.0881356047607622e-07,
+          "scale": 6e-05,
+          "states": [
+            623,
+            1274
+          ],
+          "labels": [
+            648,
+            1324
+          ],
+          "times_s": [
+            12.96,
+            12.97
+          ]
+        },
+        {
+          "row": 214607,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.003149787818161011,
+          "unscaled_residual": -1.8898726908966065e-07,
+          "scale": 6e-05,
+          "states": [
+            622,
+            1272
+          ],
+          "labels": [
+            647,
+            1322
+          ],
+          "times_s": [
+            12.94,
+            12.93
+          ]
+        },
+        {
+          "row": 19757,
+          "group": "old_normal_descent",
+          "scaled_residual": -0.003114862318402725,
+          "unscaled_residual": -3.7378347820832703e-07,
+          "scale": 0.00012,
+          "states": [
+            1399,
+            1400
+          ],
+          "labels": [
+            1454,
+            1455
+          ],
+          "times_s": [
+            12.971768598252202,
+            13.118861132095542
+          ]
+        },
+        {
+          "row": 214643,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0029409114547331986,
+          "unscaled_residual": -1.764546872839919e-07,
+          "scale": 6e-05,
+          "states": [
+            622,
+            1273
+          ],
+          "labels": [
+            647,
+            1323
+          ],
+          "times_s": [
+            12.94,
+            12.95
+          ]
+        },
+        {
+          "row": 214895,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0028709353340019687,
+          "unscaled_residual": -1.7225612004011812e-07,
+          "scale": 6e-05,
+          "states": [
+            625,
+            1276
+          ],
+          "labels": [
+            650,
+            1326
+          ],
+          "times_s": [
+            13.0,
+            13.01
+          ]
+        },
+        {
+          "row": 215327,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00282412367673247,
+          "unscaled_residual": -1.9297822881911125e-08,
+          "scale": 6.833207426750813e-06,
+          "states": [
+            631,
+            1400
+          ],
+          "labels": [
+            656,
+            1455
+          ],
+          "times_s": [
+            13.12,
+            13.118861132095542
+          ]
+        },
+        {
+          "row": 215219,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0026383197673783584,
+          "unscaled_residual": -1.5829918604270152e-07,
+          "scale": 6e-05,
+          "states": [
+            630,
+            1280
+          ],
+          "labels": [
+            655,
+            1330
+          ],
+          "times_s": [
+            13.1,
+            13.09
+          ]
+        },
+        {
+          "row": 208271,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.002575649339734655,
+          "unscaled_residual": -1.545389603840793e-07,
+          "scale": 6e-05,
+          "states": [
+            535,
+            1185
+          ],
+          "labels": [
+            560,
+            1235
+          ],
+          "times_s": [
+            11.2,
+            11.19
+          ]
+        },
+        {
+          "row": 208631,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.002444442410154266,
+          "unscaled_residual": -1.4666654460925596e-07,
+          "scale": 6e-05,
+          "states": [
+            540,
+            1190
+          ],
+          "labels": [
+            565,
+            1240
+          ],
+          "times_s": [
+            11.3,
+            11.29
+          ]
+        },
+        {
+          "row": 19754,
+          "group": "old_normal_descent",
+          "scaled_residual": -0.002442855761345825,
+          "unscaled_residual": -2.93142691361499e-07,
+          "scale": 0.00012,
+          "states": [
+            532,
+            1397
+          ],
+          "labels": [
+            1450,
+            1452
+          ],
+          "times_s": [
+            10.64,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 208451,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.002291776000084986,
+          "unscaled_residual": -1.3750656000509917e-07,
+          "scale": 6e-05,
+          "states": [
+            537,
+            1188
+          ],
+          "labels": [
+            562,
+            1238
+          ],
+          "times_s": [
+            11.24,
+            11.25
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 10,
+      "correction": 3,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 23454,
+        "independent_linear_violation": 6.8833827526759706e-15,
+        "linear_pass": true,
+        "objective": 0.0010233701460021978,
+        "elapsed_s": 2.7992577960249037,
+        "mode": "correction",
+        "merit_ceiling": 0.09895564659603738
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        6.080489584059379e-11,
+        2.4841240175987878e-15
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.10424812754029737,
+        "minimum_hard_row": -0.001179550806157731,
+        "minimum_soft_row": -0.10424812754029737,
+        "soft_merit": 0.10424812754029737,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 2.5132734782218336e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 5.239439734268965e-08,
+        "maximum_retained_equality": 8.783611540330583e-06,
+        "maximum_kinematic_residual": 2.4841240175987878e-15,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 3.968471051107869e-06,
+      "hover_normalized_error": 8.783611540330583e-06,
+      "actual_reduction": 0.09366316565177739,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": 0.4732583176083661,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 4,
+        "mesh_normal_descent": 86,
+        "old_approach_order": 1,
+        "old_normal_descent": 2
+      },
+      "worst_hard_rows": [
+        {
+          "row": 214751,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.001179550806157731,
+          "unscaled_residual": -1.2516908964922373e-08,
+          "scale": 1.0611589513210504e-05,
+          "states": [
+            1274,
+            1399
+          ],
+          "labels": [
+            1324,
+            1454
+          ],
+          "times_s": [
+            12.97,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 19757,
+          "group": "old_normal_descent",
+          "scaled_residual": -0.0011261534879186122,
+          "unscaled_residual": -1.3513841855023346e-07,
+          "scale": 0.00012,
+          "states": [
+            1399,
+            1400
+          ],
+          "labels": [
+            1454,
+            1455
+          ],
+          "times_s": [
+            12.971768598252202,
+            13.118861132095542
+          ]
+        },
+        {
+          "row": 19754,
+          "group": "old_normal_descent",
+          "scaled_residual": -0.0008235558130491431,
+          "unscaled_residual": -9.882669756589718e-08,
+          "scale": 0.00012,
+          "states": [
+            532,
+            1397
+          ],
+          "labels": [
+            1450,
+            1452
+          ],
+          "times_s": [
+            10.64,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 208163,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0006652515076772055,
+          "unscaled_residual": -3.9915090460632325e-08,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1184
+          ],
+          "labels": [
+            558,
+            1234
+          ],
+          "times_s": [
+            11.16,
+            11.17
+          ]
+        },
+        {
+          "row": 215183,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.000507927345183432,
+          "unscaled_residual": -3.047564071100592e-08,
+          "scale": 6e-05,
+          "states": [
+            629,
+            1280
+          ],
+          "labels": [
+            654,
+            1330
+          ],
+          "times_s": [
+            13.08,
+            13.09
+          ]
+        },
+        {
+          "row": 214823,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0004529249356120845,
+          "unscaled_residual": -2.717549613672507e-08,
+          "scale": 6e-05,
+          "states": [
+            624,
+            1275
+          ],
+          "labels": [
+            649,
+            1325
+          ],
+          "times_s": [
+            12.98,
+            12.99
+          ]
+        },
+        {
+          "row": 208199,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0004135136622931537,
+          "unscaled_residual": -2.4810819737589225e-08,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1184
+          ],
+          "labels": [
+            559,
+            1234
+          ],
+          "times_s": [
+            11.18,
+            11.17
+          ]
+        },
+        {
+          "row": 208271,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0002724369975909908,
+          "unscaled_residual": -1.634621985545945e-08,
+          "scale": 6e-05,
+          "states": [
+            535,
+            1185
+          ],
+          "labels": [
+            560,
+            1235
+          ],
+          "times_s": [
+            11.2,
+            11.19
+          ]
+        },
+        {
+          "row": 208235,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.000268330892782973,
+          "unscaled_residual": -1.609985356697838e-08,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1185
+          ],
+          "labels": [
+            559,
+            1235
+          ],
+          "times_s": [
+            11.18,
+            11.19
+          ]
+        },
+        {
+          "row": 214895,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0002123080207933554,
+          "unscaled_residual": -1.2738481247601325e-08,
+          "scale": 6e-05,
+          "states": [
+            625,
+            1276
+          ],
+          "labels": [
+            650,
+            1326
+          ],
+          "times_s": [
+            13.0,
+            13.01
+          ]
+        },
+        {
+          "row": 208307,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00017842020740459994,
+          "unscaled_residual": -1.0705212444275997e-08,
+          "scale": 6e-05,
+          "states": [
+            535,
+            1186
+          ],
+          "labels": [
+            560,
+            1236
+          ],
+          "times_s": [
+            11.2,
+            11.21
+          ]
+        },
+        {
+          "row": 214859,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00017284917950634166,
+          "unscaled_residual": -1.03709507703805e-08,
+          "scale": 6e-05,
+          "states": [
+            625,
+            1275
+          ],
+          "labels": [
+            650,
+            1325
+          ],
+          "times_s": [
+            13.0,
+            12.99
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 11,
+      "correction": 4,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 24304,
+        "independent_linear_violation": 1.4856649244165965e-10,
+        "linear_pass": true,
+        "objective": 9.921177627769673e-05,
+        "elapsed_s": 2.33746051392518,
+        "mode": "correction",
+        "merit_ceiling": 0.09895564659603738
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        5.815486980864648e-13,
+        9.985068327722502e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.09921807410762533,
+        "minimum_hard_row": -0.00013343374655181198,
+        "minimum_soft_row": -0.09921807410762533,
+        "soft_merit": 0.09921807410762533,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 1.2568907026277998e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.927482161494296e-08,
+        "maximum_retained_equality": 3.833257169461035e-07,
+        "maximum_kinematic_residual": 9.985068327722502e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 2.8103119875666493e-07,
+      "hover_normalized_error": 3.833257169461035e-07,
+      "actual_reduction": 0.09869321908444943,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": 0.49867401446701043,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_normal_descent": 13,
+        "old_normal_descent": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 215183,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00013343374655181198,
+          "unscaled_residual": -8.006024793108719e-09,
+          "scale": 6e-05,
+          "states": [
+            629,
+            1280
+          ],
+          "labels": [
+            654,
+            1330
+          ],
+          "times_s": [
+            13.08,
+            13.09
+          ]
+        },
+        {
+          "row": 214787,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -8.23678720904294e-05,
+          "unscaled_residual": -4.0680182777255e-09,
+          "scale": 4.93884104867895e-05,
+          "states": [
+            624,
+            1399
+          ],
+          "labels": [
+            649,
+            1454
+          ],
+          "times_s": [
+            12.98,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 208127,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -5.294990982697285e-05,
+          "unscaled_residual": -3.1769945896183713e-09,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1183
+          ],
+          "labels": [
+            558,
+            1233
+          ],
+          "times_s": [
+            11.16,
+            11.15
+          ]
+        },
+        {
+          "row": 215291,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -4.902038456966057e-05,
+          "unscaled_residual": -2.6062566182760488e-09,
+          "scale": 5.316679257324919e-05,
+          "states": [
+            1281,
+            1400
+          ],
+          "labels": [
+            1331,
+            1455
+          ],
+          "times_s": [
+            13.11,
+            13.118861132095542
+          ]
+        },
+        {
+          "row": 215255,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -4.31326526346083e-05,
+          "unscaled_residual": -2.587959158076498e-09,
+          "scale": 6e-05,
+          "states": [
+            630,
+            1281
+          ],
+          "labels": [
+            655,
+            1331
+          ],
+          "times_s": [
+            13.1,
+            13.11
+          ]
+        },
+        {
+          "row": 19757,
+          "group": "old_normal_descent",
+          "scaled_residual": -3.596447316117548e-05,
+          "unscaled_residual": -4.3157367793410575e-09,
+          "scale": 0.00012,
+          "states": [
+            1399,
+            1400
+          ],
+          "labels": [
+            1454,
+            1455
+          ],
+          "times_s": [
+            12.971768598252202,
+            13.118861132095542
+          ]
+        },
+        {
+          "row": 208163,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.628725811087373e-05,
+          "unscaled_residual": -1.5772354866524238e-09,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1184
+          ],
+          "labels": [
+            558,
+            1234
+          ],
+          "times_s": [
+            11.16,
+            11.17
+          ]
+        },
+        {
+          "row": 208199,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.0342490845095823e-05,
+          "unscaled_residual": -6.205494507057494e-10,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1184
+          ],
+          "labels": [
+            559,
+            1234
+          ],
+          "times_s": [
+            11.18,
+            11.17
+          ]
+        },
+        {
+          "row": 208235,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -4.758830921781935e-06,
+          "unscaled_residual": -2.855298553069161e-10,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1185
+          ],
+          "labels": [
+            559,
+            1235
+          ],
+          "times_s": [
+            11.18,
+            11.19
+          ]
+        },
+        {
+          "row": 208271,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -3.9487853726256584e-06,
+          "unscaled_residual": -2.369271223575395e-10,
+          "scale": 6e-05,
+          "states": [
+            535,
+            1185
+          ],
+          "labels": [
+            560,
+            1235
+          ],
+          "times_s": [
+            11.2,
+            11.19
+          ]
+        },
+        {
+          "row": 214823,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.7269997369993356e-06,
+          "unscaled_residual": -1.6361998421996014e-10,
+          "scale": 6e-05,
+          "states": [
+            624,
+            1275
+          ],
+          "labels": [
+            649,
+            1325
+          ],
+          "times_s": [
+            12.98,
+            12.99
+          ]
+        },
+        {
+          "row": 208307,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.6080795027550217e-06,
+          "unscaled_residual": -9.64847701653013e-11,
+          "scale": 6e-05,
+          "states": [
+            535,
+            1186
+          ],
+          "labels": [
+            560,
+            1236
+          ],
+          "times_s": [
+            11.2,
+            11.21
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 12,
+      "correction": 0,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 14534,
+        "independent_linear_violation": 9.65907187566728e-10,
+        "linear_pass": true,
+        "objective": 0.0,
+        "elapsed_s": 4.333302013110369,
+        "mode": "predictor",
+        "merit_ceiling": null
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        2.7290646247776773e-06,
+        1.578156182124868e-11,
+        9.98368054894172e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -18.03771879935545,
+        "minimum_hard_row": -5.84640363502312,
+        "minimum_soft_row": -18.03771879935545,
+        "soft_merit": 18.03771879935545,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 3.936208026189547e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.052369602394758e-06,
+        "maximum_retained_equality": 0.0022331241394260015,
+        "maximum_kinematic_residual": 9.98368054894172e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 0.0007999374810299109,
+      "hover_normalized_error": 0.0022331241394260015,
+      "actual_reduction": -17.839807506163375,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": -90.14042209733668,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 13,
+        "mesh_normal_descent": 102,
+        "mesh_planning_lower": 4
+      },
+      "worst_hard_rows": [
+        {
+          "row": 211475,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -5.84640363502312,
+          "unscaled_residual": -3.9833511165867754e-05,
+          "scale": 6.813335796256605e-06,
+          "states": [
+            579,
+            1397
+          ],
+          "labels": [
+            604,
+            1452
+          ],
+          "times_s": [
+            12.08,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 213023,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.8041266974059823,
+          "unscaled_residual": -4.824760184435894e-05,
+          "scale": 6e-05,
+          "states": [
+            600,
+            1251
+          ],
+          "labels": [
+            625,
+            1301
+          ],
+          "times_s": [
+            12.5,
+            12.51
+          ]
+        },
+        {
+          "row": 213203,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.623793427998377,
+          "unscaled_residual": -2.7198774872303643e-05,
+          "scale": 4.3602214533710045e-05,
+          "states": [
+            1253,
+            1398
+          ],
+          "labels": [
+            1303,
+            1453
+          ],
+          "times_s": [
+            12.55,
+            12.542732964244381
+          ]
+        },
+        {
+          "row": 212699,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.5450870664545451,
+          "unscaled_residual": -3.2705223987272705e-05,
+          "scale": 6e-05,
+          "states": [
+            596,
+            1246
+          ],
+          "labels": [
+            621,
+            1296
+          ],
+          "times_s": [
+            12.42,
+            12.41
+          ]
+        },
+        {
+          "row": 209783,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.5144368561736203,
+          "unscaled_residual": -3.086621137041722e-05,
+          "scale": 6e-05,
+          "states": [
+            556,
+            1206
+          ],
+          "labels": [
+            581,
+            1256
+          ],
+          "times_s": [
+            11.62,
+            11.61
+          ]
+        },
+        {
+          "row": 209675,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.4180267270069888,
+          "unscaled_residual": -2.5081603620419327e-05,
+          "scale": 6e-05,
+          "states": [
+            554,
+            1205
+          ],
+          "labels": [
+            579,
+            1255
+          ],
+          "times_s": [
+            11.58,
+            11.59
+          ]
+        },
+        {
+          "row": 212915,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.37769875765508704,
+          "unscaled_residual": -2.2661925459305224e-05,
+          "scale": 6e-05,
+          "states": [
+            599,
+            1249
+          ],
+          "labels": [
+            624,
+            1299
+          ],
+          "times_s": [
+            12.48,
+            12.47
+          ]
+        },
+        {
+          "row": 210215,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.3736642188816492,
+          "unscaled_residual": -2.241985313289895e-05,
+          "scale": 6e-05,
+          "states": [
+            562,
+            1212
+          ],
+          "labels": [
+            587,
+            1262
+          ],
+          "times_s": [
+            11.74,
+            11.73
+          ]
+        },
+        {
+          "row": 213419,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.3626880691619722,
+          "unscaled_residual": -2.1761284149718333e-05,
+          "scale": 6e-05,
+          "states": [
+            605,
+            1256
+          ],
+          "labels": [
+            630,
+            1306
+          ],
+          "times_s": [
+            12.6,
+            12.61
+          ]
+        },
+        {
+          "row": 211583,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.35289931262977287,
+          "unscaled_residual": -2.1173958757786374e-05,
+          "scale": 6e-05,
+          "states": [
+            580,
+            1231
+          ],
+          "labels": [
+            605,
+            1281
+          ],
+          "times_s": [
+            12.1,
+            12.11
+          ]
+        },
+        {
+          "row": 210251,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.35237647284904366,
+          "unscaled_residual": -2.114258837094262e-05,
+          "scale": 6e-05,
+          "states": [
+            562,
+            1213
+          ],
+          "labels": [
+            587,
+            1263
+          ],
+          "times_s": [
+            11.74,
+            11.75
+          ]
+        },
+        {
+          "row": 209891,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.34416058763151813,
+          "unscaled_residual": -2.064963525789109e-05,
+          "scale": 6e-05,
+          "states": [
+            557,
+            1208
+          ],
+          "labels": [
+            582,
+            1258
+          ],
+          "times_s": [
+            11.64,
+            11.65
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 13,
+      "correction": 1,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 21626,
+        "independent_linear_violation": 1.7430501486614958e-14,
+        "linear_pass": true,
+        "objective": 0.052795494043877955,
+        "elapsed_s": 3.429026373079978,
+        "mode": "correction",
+        "merit_ceiling": 0.09895564659603738
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        3.225268795786773e-08,
+        3.3306690738754696e-15
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -1.9697123646753991,
+        "minimum_hard_row": -0.5776209001559348,
+        "minimum_soft_row": -1.9697123646753991,
+        "soft_merit": 1.9697123646753991,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 3.936208026189547e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 3.871451412347965e-07,
+        "maximum_retained_equality": 0.0002444107671490947,
+        "maximum_kinematic_residual": 3.3306690738754696e-15,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 0.00013124040950418525,
+      "hover_normalized_error": 0.0002444107671490947,
+      "actual_reduction": -1.7718010714833243,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": -8.9525011074723,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 12,
+        "mesh_normal_descent": 100,
+        "mesh_planning_lower": 2,
+        "old_approach_order": 1,
+        "old_normal_descent": 2
+      },
+      "worst_hard_rows": [
+        {
+          "row": 211475,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.5776209001559348,
+          "unscaled_residual": -3.935525155698393e-06,
+          "scale": 6.813335796256605e-06,
+          "states": [
+            579,
+            1397
+          ],
+          "labels": [
+            604,
+            1452
+          ],
+          "times_s": [
+            12.08,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 213023,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.06951964298220374,
+          "unscaled_residual": -4.171178578932225e-06,
+          "scale": 6e-05,
+          "states": [
+            600,
+            1251
+          ],
+          "labels": [
+            625,
+            1301
+          ],
+          "times_s": [
+            12.5,
+            12.51
+          ]
+        },
+        {
+          "row": 213203,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0636234212477577,
+          "unscaled_residual": -2.7741220626133374e-06,
+          "scale": 4.3602214533710045e-05,
+          "states": [
+            1253,
+            1398
+          ],
+          "labels": [
+            1303,
+            1453
+          ],
+          "times_s": [
+            12.55,
+            12.542732964244381
+          ]
+        },
+        {
+          "row": 212699,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.05030370493402922,
+          "unscaled_residual": -3.0182222960417534e-06,
+          "scale": 6e-05,
+          "states": [
+            596,
+            1246
+          ],
+          "labels": [
+            621,
+            1296
+          ],
+          "times_s": [
+            12.42,
+            12.41
+          ]
+        },
+        {
+          "row": 209783,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.04688624805820871,
+          "unscaled_residual": -2.8131748834925226e-06,
+          "scale": 6e-05,
+          "states": [
+            556,
+            1206
+          ],
+          "labels": [
+            581,
+            1256
+          ],
+          "times_s": [
+            11.62,
+            11.61
+          ]
+        },
+        {
+          "row": 213419,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.04056307050905488,
+          "unscaled_residual": -2.433784230543293e-06,
+          "scale": 6e-05,
+          "states": [
+            605,
+            1256
+          ],
+          "labels": [
+            630,
+            1306
+          ],
+          "times_s": [
+            12.6,
+            12.61
+          ]
+        },
+        {
+          "row": 210251,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.03672372703443029,
+          "unscaled_residual": -2.2034236220658173e-06,
+          "scale": 6e-05,
+          "states": [
+            562,
+            1213
+          ],
+          "labels": [
+            587,
+            1263
+          ],
+          "times_s": [
+            11.74,
+            11.75
+          ]
+        },
+        {
+          "row": 212915,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.03358656488400266,
+          "unscaled_residual": -2.01519389304016e-06,
+          "scale": 6e-05,
+          "states": [
+            599,
+            1249
+          ],
+          "labels": [
+            624,
+            1299
+          ],
+          "times_s": [
+            12.48,
+            12.47
+          ]
+        },
+        {
+          "row": 210215,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0323879916738766,
+          "unscaled_residual": -1.943279500432596e-06,
+          "scale": 6e-05,
+          "states": [
+            562,
+            1212
+          ],
+          "labels": [
+            587,
+            1262
+          ],
+          "times_s": [
+            11.74,
+            11.73
+          ]
+        },
+        {
+          "row": 209675,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.031102655108453902,
+          "unscaled_residual": -1.8661593065072342e-06,
+          "scale": 6e-05,
+          "states": [
+            554,
+            1205
+          ],
+          "labels": [
+            579,
+            1255
+          ],
+          "times_s": [
+            11.58,
+            11.59
+          ]
+        },
+        {
+          "row": 211583,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.02876210369882416,
+          "unscaled_residual": -1.7257262219294497e-06,
+          "scale": 6e-05,
+          "states": [
+            580,
+            1231
+          ],
+          "labels": [
+            605,
+            1281
+          ],
+          "times_s": [
+            12.1,
+            12.11
+          ]
+        },
+        {
+          "row": 210863,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.028256039454147796,
+          "unscaled_residual": -1.6953623672488679e-06,
+          "scale": 6e-05,
+          "states": [
+            571,
+            1221
+          ],
+          "labels": [
+            596,
+            1271
+          ],
+          "times_s": [
+            11.92,
+            11.91
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 14,
+      "correction": 2,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 18963,
+        "independent_linear_violation": 9.020562075079397e-16,
+        "linear_pass": true,
+        "objective": 0.0068404205500841786,
+        "elapsed_s": 1.9292518309084699,
+        "mode": "correction",
+        "merit_ceiling": 0.09895564659603738
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        6.492614293418519e-10,
+        2.4841240175987878e-15
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.10764887257040795,
+        "minimum_hard_row": -0.004180944891026419,
+        "minimum_soft_row": -0.10764887257040795,
+        "soft_merit": 0.10764887257040795,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 1.9102655221536757e-09,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.4242273820969593e-07,
+        "maximum_retained_equality": 2.6955341411172284e-05,
+        "maximum_kinematic_residual": 2.4841240175987878e-15,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 1.5054039962159038e-05,
+      "hover_normalized_error": 2.6955341411172284e-05,
+      "actual_reduction": 0.09026242062166681,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": 0.4560751393507711,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 11,
+        "mesh_normal_descent": 97,
+        "mesh_planning_lower": 1,
+        "old_approach_order": 1,
+        "old_normal_descent": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 211475,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.004180944891026419,
+          "unscaled_residual": -2.848618148820647e-08,
+          "scale": 6.813335796256605e-06,
+          "states": [
+            579,
+            1397
+          ],
+          "labels": [
+            604,
+            1452
+          ],
+          "times_s": [
+            12.08,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 214751,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.003046023497236694,
+          "unscaled_residual": -3.2323151000269684e-08,
+          "scale": 1.0611589513210504e-05,
+          "states": [
+            1274,
+            1399
+          ],
+          "labels": [
+            1324,
+            1454
+          ],
+          "times_s": [
+            12.97,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 214715,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.002732232332602755,
+          "unscaled_residual": -1.6393393995616532e-07,
+          "scale": 6e-05,
+          "states": [
+            623,
+            1274
+          ],
+          "labels": [
+            648,
+            1324
+          ],
+          "times_s": [
+            12.96,
+            12.97
+          ]
+        },
+        {
+          "row": 19754,
+          "group": "old_normal_descent",
+          "scaled_residual": -0.002437798884206572,
+          "unscaled_residual": -2.925358661047886e-07,
+          "scale": 0.00012,
+          "states": [
+            532,
+            1397
+          ],
+          "labels": [
+            1450,
+            1452
+          ],
+          "times_s": [
+            10.64,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 214823,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.002132719227702319,
+          "unscaled_residual": -1.2796315366213915e-07,
+          "scale": 6e-05,
+          "states": [
+            624,
+            1275
+          ],
+          "labels": [
+            649,
+            1325
+          ],
+          "times_s": [
+            12.98,
+            12.99
+          ]
+        },
+        {
+          "row": 208199,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0015620657481395272,
+          "unscaled_residual": -9.372394488837163e-08,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1184
+          ],
+          "labels": [
+            559,
+            1234
+          ],
+          "times_s": [
+            11.18,
+            11.17
+          ]
+        },
+        {
+          "row": 208163,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0012041811345285568,
+          "unscaled_residual": -7.225086807171341e-08,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1184
+          ],
+          "labels": [
+            558,
+            1234
+          ],
+          "times_s": [
+            11.16,
+            11.17
+          ]
+        },
+        {
+          "row": 208235,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.001164893295342911,
+          "unscaled_residual": -6.989359772057466e-08,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1185
+          ],
+          "labels": [
+            559,
+            1235
+          ],
+          "times_s": [
+            11.18,
+            11.19
+          ]
+        },
+        {
+          "row": 214859,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0010137368200434404,
+          "unscaled_residual": -6.082420920260642e-08,
+          "scale": 6e-05,
+          "states": [
+            625,
+            1275
+          ],
+          "labels": [
+            650,
+            1325
+          ],
+          "times_s": [
+            13.0,
+            12.99
+          ]
+        },
+        {
+          "row": 214895,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0009743410755064736,
+          "unscaled_residual": -5.846046453038842e-08,
+          "scale": 6e-05,
+          "states": [
+            625,
+            1276
+          ],
+          "labels": [
+            650,
+            1326
+          ],
+          "times_s": [
+            13.0,
+            13.01
+          ]
+        },
+        {
+          "row": 213023,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0009020943382101035,
+          "unscaled_residual": -5.412566029260621e-08,
+          "scale": 6e-05,
+          "states": [
+            600,
+            1251
+          ],
+          "labels": [
+            625,
+            1301
+          ],
+          "times_s": [
+            12.5,
+            12.51
+          ]
+        },
+        {
+          "row": 208307,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0008432518508459696,
+          "unscaled_residual": -5.0595111050758174e-08,
+          "scale": 6e-05,
+          "states": [
+            535,
+            1186
+          ],
+          "labels": [
+            560,
+            1236
+          ],
+          "times_s": [
+            11.2,
+            11.21
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 15,
+      "correction": 3,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 19434,
+        "independent_linear_violation": 2.6229018956769323e-15,
+        "linear_pass": true,
+        "objective": 0.0007527019981079519,
+        "elapsed_s": 1.6233092319453135,
+        "mode": "correction",
+        "merit_ceiling": 0.09895564659603738
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        8.280903740498502e-12,
+        8.847783616872107e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.09931288768992945,
+        "minimum_hard_row": -0.0004359979288559245,
+        "minimum_soft_row": -0.09931288768992945,
+        "soft_merit": 0.09931288768992945,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 9.57972853821154e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 5.239439734268965e-08,
+        "maximum_retained_equality": 1.732837522361308e-06,
+        "maximum_kinematic_residual": 8.847783616872107e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 9.038929325022593e-07,
+      "hover_normalized_error": 1.732837522361308e-06,
+      "actual_reduction": 0.09859840550214531,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": 0.4981949433600772,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 1,
+        "mesh_normal_descent": 50,
+        "old_normal_descent": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 214787,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0004359979288559245,
+          "unscaled_residual": -2.1533244681726444e-08,
+          "scale": 4.93884104867895e-05,
+          "states": [
+            624,
+            1399
+          ],
+          "labels": [
+            649,
+            1454
+          ],
+          "times_s": [
+            12.98,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 208127,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0002495435016956792,
+          "unscaled_residual": -1.4972610101740753e-08,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1183
+          ],
+          "labels": [
+            558,
+            1233
+          ],
+          "times_s": [
+            11.16,
+            11.15
+          ]
+        },
+        {
+          "row": 208163,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00014128593859653732,
+          "unscaled_residual": -8.47715631579224e-09,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1184
+          ],
+          "labels": [
+            558,
+            1234
+          ],
+          "times_s": [
+            11.16,
+            11.17
+          ]
+        },
+        {
+          "row": 215183,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0001256122003633097,
+          "unscaled_residual": -7.536732021798582e-09,
+          "scale": 6e-05,
+          "states": [
+            629,
+            1280
+          ],
+          "labels": [
+            654,
+            1330
+          ],
+          "times_s": [
+            13.08,
+            13.09
+          ]
+        },
+        {
+          "row": 215219,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00012512328497365455,
+          "unscaled_residual": -7.507397098419273e-09,
+          "scale": 6e-05,
+          "states": [
+            630,
+            1280
+          ],
+          "labels": [
+            655,
+            1330
+          ],
+          "times_s": [
+            13.1,
+            13.09
+          ]
+        },
+        {
+          "row": 19754,
+          "group": "old_normal_descent",
+          "scaled_residual": -0.00012281939577776096,
+          "unscaled_residual": -1.4738327493331316e-08,
+          "scale": 0.00012,
+          "states": [
+            532,
+            1397
+          ],
+          "labels": [
+            1450,
+            1452
+          ],
+          "times_s": [
+            10.64,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 208199,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -7.002435122476735e-05,
+          "unscaled_residual": -4.201461073486041e-09,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1184
+          ],
+          "labels": [
+            559,
+            1234
+          ],
+          "times_s": [
+            11.18,
+            11.17
+          ]
+        },
+        {
+          "row": 208235,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -3.6891173541787904e-05,
+          "unscaled_residual": -2.2134704125072744e-09,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1185
+          ],
+          "labels": [
+            559,
+            1235
+          ],
+          "times_s": [
+            11.18,
+            11.19
+          ]
+        },
+        {
+          "row": 214823,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -3.406608523035307e-05,
+          "unscaled_residual": -2.0439651138211843e-09,
+          "scale": 6e-05,
+          "states": [
+            624,
+            1275
+          ],
+          "labels": [
+            649,
+            1325
+          ],
+          "times_s": [
+            12.98,
+            12.99
+          ]
+        },
+        {
+          "row": 215399,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -3.38567235357056e-05,
+          "unscaled_residual": -2.031403412142336e-09,
+          "scale": 6e-05,
+          "states": [
+            632,
+            1282
+          ],
+          "labels": [
+            657,
+            1332
+          ],
+          "times_s": [
+            13.14,
+            13.13
+          ]
+        },
+        {
+          "row": 208271,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.0594188946633523e-05,
+          "unscaled_residual": -1.2356513367980113e-09,
+          "scale": 6e-05,
+          "states": [
+            535,
+            1185
+          ],
+          "labels": [
+            560,
+            1235
+          ],
+          "times_s": [
+            11.2,
+            11.19
+          ]
+        },
+        {
+          "row": 208307,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.7465337139360266e-05,
+          "unscaled_residual": -1.047920228361616e-09,
+          "scale": 6e-05,
+          "states": [
+            535,
+            1186
+          ],
+          "labels": [
+            560,
+            1236
+          ],
+          "times_s": [
+            11.2,
+            11.21
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 16,
+      "correction": 4,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 19926,
+        "independent_linear_violation": 1.7614443237334854e-10,
+        "linear_pass": true,
+        "objective": 6.847042468560716e-05,
+        "elapsed_s": 1.6256610510172322,
+        "mode": "correction",
+        "merit_ceiling": 0.09895564659603738
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        1.4104689638472223e-13,
+        7.562006576478097e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.09896468267533023,
+        "minimum_hard_row": -1.5910624762003256e-05,
+        "minimum_soft_row": -0.09896468267533023,
+        "soft_merit": 0.09896468267533023,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 4.791097032996738e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.927482161494296e-08,
+        "maximum_retained_equality": 1.334605419511803e-07,
+        "maximum_kinematic_residual": 7.562006576478097e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 7.773030796798253e-08,
+      "hover_normalized_error": 1.334605419511803e-07,
+      "actual_reduction": 0.09894661051674453,
+      "predicted_reduction": 0.19791129319207476,
+      "ratio": 0.499954342780813,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_normal_descent": 7
+      },
+      "worst_hard_rows": [
+        {
+          "row": 208091,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.5910624762003256e-05,
+          "unscaled_residual": -9.546374857201953e-10,
+          "scale": 6e-05,
+          "states": [
+            532,
+            1183
+          ],
+          "labels": [
+            1450,
+            1233
+          ],
+          "times_s": [
+            10.64,
+            11.15
+          ]
+        },
+        {
+          "row": 215327,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.5755108557640142e-05,
+          "unscaled_residual": -1.0765792480533191e-10,
+          "scale": 6.833207426750813e-06,
+          "states": [
+            631,
+            1400
+          ],
+          "labels": [
+            656,
+            1455
+          ],
+          "times_s": [
+            13.12,
+            13.118861132095542
+          ]
+        },
+        {
+          "row": 215291,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.2013040606625962e-05,
+          "unscaled_residual": -6.386948381065021e-10,
+          "scale": 5.316679257324919e-05,
+          "states": [
+            1281,
+            1400
+          ],
+          "labels": [
+            1331,
+            1455
+          ],
+          "times_s": [
+            13.11,
+            13.118861132095542
+          ]
+        },
+        {
+          "row": 214787,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -8.100096191598635e-06,
+          "unscaled_residual": -4.000508756931537e-10,
+          "scale": 4.93884104867895e-05,
+          "states": [
+            624,
+            1399
+          ],
+          "labels": [
+            649,
+            1454
+          ],
+          "times_s": [
+            12.98,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 208127,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -4.882700355011071e-06,
+          "unscaled_residual": -2.9296202130066427e-10,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1183
+          ],
+          "labels": [
+            558,
+            1233
+          ],
+          "times_s": [
+            11.16,
+            11.15
+          ]
+        },
+        {
+          "row": 208163,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.0870226939440394e-06,
+          "unscaled_residual": -6.522136163664236e-11,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1184
+          ],
+          "labels": [
+            558,
+            1234
+          ],
+          "times_s": [
+            11.16,
+            11.17
+          ]
+        },
+        {
+          "row": 209171,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -2.9014752207471894e-09,
+          "unscaled_residual": -1.7408851324483138e-13,
+          "scale": 6e-05,
+          "states": [
+            547,
+            1198
+          ],
+          "labels": [
+            572,
+            1248
+          ],
+          "times_s": [
+            11.44,
+            11.45
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 17,
+      "correction": 0,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 14380,
+        "independent_linear_violation": 2.8189256484623115e-13,
+        "linear_pass": true,
+        "objective": 0.03200519107677143,
+        "elapsed_s": 3.108672638074495,
+        "mode": "predictor",
+        "merit_ceiling": null
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        7.127986811142351e-07,
+        1.4806784270904316e-12,
+        9.96425164601078e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -1.711545495175964,
+        "minimum_hard_row": -0.5636529637999869,
+        "minimum_soft_row": -1.711545495175964,
+        "soft_merit": 1.711545495175964,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 1.409575095534521e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.052369602394758e-06,
+        "maximum_retained_equality": 0.001029135422199401,
+        "maximum_kinematic_residual": 9.96425164601078e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 0.0003492020812860819,
+      "hover_normalized_error": 0.001029135422199401,
+      "actual_reduction": -1.5136342019838893,
+      "predicted_reduction": 0.16590610211530332,
+      "ratio": -9.123438997632086,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 2,
+        "mesh_normal_descent": 93,
+        "mesh_planning_lower": 11,
+        "mesh_support": 2,
+        "old_normal_descent": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 214751,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.5636529637999869,
+          "unscaled_residual": -5.98125387974996e-06,
+          "scale": 1.0611589513210504e-05,
+          "states": [
+            1274,
+            1399
+          ],
+          "labels": [
+            1324,
+            1454
+          ],
+          "times_s": [
+            12.97,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 211439,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.5461394261476145,
+          "unscaled_residual": -2.9047334266938285e-05,
+          "scale": 5.318666420374339e-05,
+          "states": [
+            1229,
+            1397
+          ],
+          "labels": [
+            1279,
+            1452
+          ],
+          "times_s": [
+            12.07,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 211475,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.4176240900283723,
+          "unscaled_residual": -2.8454131619694e-06,
+          "scale": 6.813335796256605e-06,
+          "states": [
+            579,
+            1397
+          ],
+          "labels": [
+            604,
+            1452
+          ],
+          "times_s": [
+            12.08,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 211367,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.3683206557780759,
+          "unscaled_residual": -2.2099239346684555e-05,
+          "scale": 6e-05,
+          "states": [
+            578,
+            1228
+          ],
+          "labels": [
+            603,
+            1278
+          ],
+          "times_s": [
+            12.06,
+            12.05
+          ]
+        },
+        {
+          "row": 214967,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.3625366707362316,
+          "unscaled_residual": -2.1752200244173895e-05,
+          "scale": 6e-05,
+          "states": [
+            626,
+            1277
+          ],
+          "labels": [
+            651,
+            1327
+          ],
+          "times_s": [
+            13.02,
+            13.03
+          ]
+        },
+        {
+          "row": 213671,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.3284312523685327,
+          "unscaled_residual": -1.9705875142111965e-05,
+          "scale": 6e-05,
+          "states": [
+            609,
+            1259
+          ],
+          "labels": [
+            634,
+            1309
+          ],
+          "times_s": [
+            12.68,
+            12.67
+          ]
+        },
+        {
+          "row": 209459,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.28263476951349364,
+          "unscaled_residual": -1.695808617080962e-05,
+          "scale": 6e-05,
+          "states": [
+            551,
+            1202
+          ],
+          "labels": [
+            576,
+            1252
+          ],
+          "times_s": [
+            11.52,
+            11.53
+          ]
+        },
+        {
+          "row": 209603,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.27453176171911736,
+          "unscaled_residual": -1.647190570314704e-05,
+          "scale": 6e-05,
+          "states": [
+            553,
+            1204
+          ],
+          "labels": [
+            578,
+            1254
+          ],
+          "times_s": [
+            11.56,
+            11.57
+          ]
+        },
+        {
+          "row": 213779,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.26859489461702085,
+          "unscaled_residual": -1.611569367702125e-05,
+          "scale": 6e-05,
+          "states": [
+            610,
+            1261
+          ],
+          "labels": [
+            635,
+            1311
+          ],
+          "times_s": [
+            12.7,
+            12.71
+          ]
+        },
+        {
+          "row": 209675,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.23233219743262742,
+          "unscaled_residual": -1.3939931845957646e-05,
+          "scale": 6e-05,
+          "states": [
+            554,
+            1205
+          ],
+          "labels": [
+            579,
+            1255
+          ],
+          "times_s": [
+            11.58,
+            11.59
+          ]
+        },
+        {
+          "row": 210143,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.22837216701423085,
+          "unscaled_residual": -1.3702330020853851e-05,
+          "scale": 6e-05,
+          "states": [
+            561,
+            1211
+          ],
+          "labels": [
+            586,
+            1261
+          ],
+          "times_s": [
+            11.72,
+            11.71
+          ]
+        },
+        {
+          "row": 214931,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.2109888949789842,
+          "unscaled_residual": -1.2659333698739053e-05,
+          "scale": 6e-05,
+          "states": [
+            626,
+            1276
+          ],
+          "labels": [
+            651,
+            1326
+          ],
+          "times_s": [
+            13.02,
+            13.01
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 18,
+      "correction": 1,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 16418,
+        "independent_linear_violation": 2.760014439218139e-13,
+        "linear_pass": true,
+        "objective": 0.05288708767703376,
+        "elapsed_s": 1.3021853050449863,
+        "mode": "correction",
+        "merit_ceiling": 0.1149582421344231
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        8.32851794474454e-09,
+        2.4841240175987878e-15
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.28686100692084154,
+        "minimum_hard_row": -0.05558093431402407,
+        "minimum_soft_row": -0.28686100692084154,
+        "soft_merit": 0.28686100692084154,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 8.342634916225222e-11,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 3.871451412347965e-07,
+        "maximum_retained_equality": 0.00012852168260035768,
+        "maximum_kinematic_residual": 2.4841240175987878e-15,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 4.658792095080244e-05,
+      "hover_normalized_error": 0.00012852168260035768,
+      "actual_reduction": -0.08894971372876678,
+      "predicted_reduction": 0.16590610211530332,
+      "ratio": -0.536144919292646,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 5,
+        "mesh_normal_descent": 77,
+        "mesh_planning_lower": 5,
+        "mesh_support": 2,
+        "old_normal_descent": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 211439,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.05558093431402407,
+          "unscaled_residual": -2.956164489490317e-06,
+          "scale": 5.318666420374339e-05,
+          "states": [
+            1229,
+            1397
+          ],
+          "labels": [
+            1279,
+            1452
+          ],
+          "times_s": [
+            12.07,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 214751,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.05184487440685534,
+          "unscaled_residual": -5.501565255695017e-07,
+          "scale": 1.0611589513210504e-05,
+          "states": [
+            1274,
+            1399
+          ],
+          "labels": [
+            1324,
+            1454
+          ],
+          "times_s": [
+            12.97,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 211367,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.037358371987687114,
+          "unscaled_residual": -2.2415023192612268e-06,
+          "scale": 6e-05,
+          "states": [
+            578,
+            1228
+          ],
+          "labels": [
+            603,
+            1278
+          ],
+          "times_s": [
+            12.06,
+            12.05
+          ]
+        },
+        {
+          "row": 213671,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.03575728177819986,
+          "unscaled_residual": -2.1454369066919917e-06,
+          "scale": 6e-05,
+          "states": [
+            609,
+            1259
+          ],
+          "labels": [
+            634,
+            1309
+          ],
+          "times_s": [
+            12.68,
+            12.67
+          ]
+        },
+        {
+          "row": 214967,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.03326890626838724,
+          "unscaled_residual": -1.9961343761032343e-06,
+          "scale": 6e-05,
+          "states": [
+            626,
+            1277
+          ],
+          "labels": [
+            651,
+            1327
+          ],
+          "times_s": [
+            13.02,
+            13.03
+          ]
+        },
+        {
+          "row": 214931,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.02800705666929531,
+          "unscaled_residual": -1.6804234001577186e-06,
+          "scale": 6e-05,
+          "states": [
+            626,
+            1276
+          ],
+          "labels": [
+            651,
+            1326
+          ],
+          "times_s": [
+            13.02,
+            13.01
+          ]
+        },
+        {
+          "row": 209459,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.025961248659259983,
+          "unscaled_residual": -1.557674919555599e-06,
+          "scale": 6e-05,
+          "states": [
+            551,
+            1202
+          ],
+          "labels": [
+            576,
+            1252
+          ],
+          "times_s": [
+            11.52,
+            11.53
+          ]
+        },
+        {
+          "row": 209603,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.022903780153571283,
+          "unscaled_residual": -1.374226809214277e-06,
+          "scale": 6e-05,
+          "states": [
+            553,
+            1204
+          ],
+          "labels": [
+            578,
+            1254
+          ],
+          "times_s": [
+            11.56,
+            11.57
+          ]
+        },
+        {
+          "row": 210611,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.022841713739525975,
+          "unscaled_residual": -1.3705028243715585e-06,
+          "scale": 6e-05,
+          "states": [
+            567,
+            1218
+          ],
+          "labels": [
+            592,
+            1268
+          ],
+          "times_s": [
+            11.84,
+            11.85
+          ]
+        },
+        {
+          "row": 209675,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.02241156371142921,
+          "unscaled_residual": -1.3446938226857526e-06,
+          "scale": 6e-05,
+          "states": [
+            554,
+            1205
+          ],
+          "labels": [
+            579,
+            1255
+          ],
+          "times_s": [
+            11.58,
+            11.59
+          ]
+        },
+        {
+          "row": 213779,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.022003398460756916,
+          "unscaled_residual": -1.320203907645415e-06,
+          "scale": 6e-05,
+          "states": [
+            610,
+            1261
+          ],
+          "labels": [
+            635,
+            1311
+          ],
+          "times_s": [
+            12.7,
+            12.71
+          ]
+        },
+        {
+          "row": 215219,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.02199230206658303,
+          "unscaled_residual": -1.3195381239949818e-06,
+          "scale": 6e-05,
+          "states": [
+            630,
+            1280
+          ],
+          "labels": [
+            655,
+            1330
+          ],
+          "times_s": [
+            13.1,
+            13.09
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 19,
+      "correction": 2,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 16764,
+        "independent_linear_violation": 2.042810365310288e-14,
+        "linear_pass": true,
+        "objective": 0.005583272482212465,
+        "elapsed_s": 1.3347114529460669,
+        "mode": "correction",
+        "merit_ceiling": 0.1149582421344231
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        1.1125139004475315e-10,
+        2.4841240175987878e-15
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.11694624940826191,
+        "minimum_hard_row": -0.0018438530403933858,
+        "minimum_soft_row": -0.11694624940826191,
+        "soft_merit": 0.11694624940826191,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 4.191942626352585e-11,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.4242273820969593e-07,
+        "maximum_retained_equality": 8.639960028311577e-06,
+        "maximum_kinematic_residual": 2.4841240175987878e-15,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 3.9954912744999405e-06,
+      "hover_normalized_error": 8.639960028311577e-06,
+      "actual_reduction": 0.08096504378381285,
+      "predicted_reduction": 0.16590610211530332,
+      "ratio": 0.48801727453968413,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 3,
+        "mesh_normal_descent": 76,
+        "mesh_planning_lower": 2,
+        "mesh_support": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 214787,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0018438530403933858,
+          "unscaled_residual": -9.10649708362634e-08,
+          "scale": 4.93884104867895e-05,
+          "states": [
+            624,
+            1399
+          ],
+          "labels": [
+            649,
+            1454
+          ],
+          "times_s": [
+            12.98,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 208127,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0012456386400126784,
+          "unscaled_residual": -7.47383184007607e-08,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1183
+          ],
+          "labels": [
+            558,
+            1233
+          ],
+          "times_s": [
+            11.16,
+            11.15
+          ]
+        },
+        {
+          "row": 211439,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0006052183328433441,
+          "unscaled_residual": -3.2189544238888344e-08,
+          "scale": 5.318666420374339e-05,
+          "states": [
+            1229,
+            1397
+          ],
+          "labels": [
+            1279,
+            1452
+          ],
+          "times_s": [
+            12.07,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 208163,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0005001663815524189,
+          "unscaled_residual": -3.000998289314513e-08,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1184
+          ],
+          "labels": [
+            558,
+            1234
+          ],
+          "times_s": [
+            11.16,
+            11.17
+          ]
+        },
+        {
+          "row": 208199,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0004982053668684479,
+          "unscaled_residual": -2.989232201210687e-08,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1184
+          ],
+          "labels": [
+            559,
+            1234
+          ],
+          "times_s": [
+            11.18,
+            11.17
+          ]
+        },
+        {
+          "row": 211367,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00047353507096971196,
+          "unscaled_residual": -2.841210425818272e-08,
+          "scale": 6e-05,
+          "states": [
+            578,
+            1228
+          ],
+          "labels": [
+            603,
+            1278
+          ],
+          "times_s": [
+            12.06,
+            12.05
+          ]
+        },
+        {
+          "row": 210611,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00028271596647075673,
+          "unscaled_residual": -1.6962957988245404e-08,
+          "scale": 6e-05,
+          "states": [
+            567,
+            1218
+          ],
+          "labels": [
+            592,
+            1268
+          ],
+          "times_s": [
+            11.84,
+            11.85
+          ]
+        },
+        {
+          "row": 213671,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00028088670472867553,
+          "unscaled_residual": -1.6853202283720532e-08,
+          "scale": 6e-05,
+          "states": [
+            609,
+            1259
+          ],
+          "labels": [
+            634,
+            1309
+          ],
+          "times_s": [
+            12.68,
+            12.67
+          ]
+        },
+        {
+          "row": 214967,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00027384551395009347,
+          "unscaled_residual": -1.643073083700561e-08,
+          "scale": 6e-05,
+          "states": [
+            626,
+            1277
+          ],
+          "labels": [
+            651,
+            1327
+          ],
+          "times_s": [
+            13.02,
+            13.03
+          ]
+        },
+        {
+          "row": 209603,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00026064857087472335,
+          "unscaled_residual": -1.56389142524834e-08,
+          "scale": 6e-05,
+          "states": [
+            553,
+            1204
+          ],
+          "labels": [
+            578,
+            1254
+          ],
+          "times_s": [
+            11.56,
+            11.57
+          ]
+        },
+        {
+          "row": 208235,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0002454516156064563,
+          "unscaled_residual": -1.472709693638738e-08,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1185
+          ],
+          "labels": [
+            559,
+            1235
+          ],
+          "times_s": [
+            11.18,
+            11.19
+          ]
+        },
+        {
+          "row": 212951,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00024419910963714573,
+          "unscaled_residual": -1.4651946578228744e-08,
+          "scale": 6e-05,
+          "states": [
+            599,
+            1250
+          ],
+          "labels": [
+            624,
+            1300
+          ],
+          "times_s": [
+            12.48,
+            12.49
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 20,
+      "correction": 3,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 17230,
+        "independent_linear_violation": 9.106049247975534e-12,
+        "linear_pass": true,
+        "objective": 0.0006317787441662349,
+        "elapsed_s": 1.3146495260298252,
+        "mode": "correction",
+        "merit_ceiling": 0.1149582421344231
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        1.4573689477437313e-12,
+        9.946210521860621e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.11513740370813166,
+        "minimum_hard_row": -9.121303721572189e-05,
+        "minimum_soft_row": -0.11513740370813166,
+        "soft_merit": 0.11513740370813166,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 5.803544311788755e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 5.239439734268965e-08,
+        "maximum_retained_equality": 4.836413145525853e-07,
+        "maximum_kinematic_residual": 9.946210521860621e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 4.836413145525853e-07,
+      "hover_normalized_error": 4.834008733300976e-07,
+      "actual_reduction": 0.0827738894839431,
+      "predicted_reduction": 0.16590610211530332,
+      "ratio": 0.49892010256751107,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_normal_descent": 24
+      },
+      "worst_hard_rows": [
+        {
+          "row": 215399,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -9.121303721572189e-05,
+          "unscaled_residual": -5.472782232943314e-09,
+          "scale": 6e-05,
+          "states": [
+            632,
+            1282
+          ],
+          "labels": [
+            657,
+            1332
+          ],
+          "times_s": [
+            13.14,
+            13.13
+          ]
+        },
+        {
+          "row": 214787,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -8.989648523675854e-05,
+          "unscaled_residual": -4.439844514192643e-09,
+          "scale": 4.93884104867895e-05,
+          "states": [
+            624,
+            1399
+          ],
+          "labels": [
+            649,
+            1454
+          ],
+          "times_s": [
+            12.98,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 208127,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -6.155627868529071e-05,
+          "unscaled_residual": -3.6933767211174426e-09,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1183
+          ],
+          "labels": [
+            558,
+            1233
+          ],
+          "times_s": [
+            11.16,
+            11.15
+          ]
+        },
+        {
+          "row": 208163,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.4136593377246667e-05,
+          "unscaled_residual": -8.481956026348001e-10,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1184
+          ],
+          "labels": [
+            558,
+            1234
+          ],
+          "times_s": [
+            11.16,
+            11.17
+          ]
+        },
+        {
+          "row": 215255,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.1162080148927533e-05,
+          "unscaled_residual": -6.69724808935652e-10,
+          "scale": 6e-05,
+          "states": [
+            630,
+            1281
+          ],
+          "labels": [
+            655,
+            1331
+          ],
+          "times_s": [
+            13.1,
+            13.11
+          ]
+        },
+        {
+          "row": 208199,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -7.964754874017595e-06,
+          "unscaled_residual": -4.778852924410557e-10,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1184
+          ],
+          "labels": [
+            559,
+            1234
+          ],
+          "times_s": [
+            11.18,
+            11.17
+          ]
+        },
+        {
+          "row": 208235,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -3.3881306092697124e-06,
+          "unscaled_residual": -2.0328783655618275e-10,
+          "scale": 6e-05,
+          "states": [
+            534,
+            1185
+          ],
+          "labels": [
+            559,
+            1235
+          ],
+          "times_s": [
+            11.18,
+            11.19
+          ]
+        },
+        {
+          "row": 215435,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.8714646497807515e-06,
+          "unscaled_residual": -1.1228787898684509e-10,
+          "scale": 6e-05,
+          "states": [
+            632,
+            1283
+          ],
+          "labels": [
+            657,
+            1333
+          ],
+          "times_s": [
+            13.14,
+            13.15
+          ]
+        },
+        {
+          "row": 208271,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.1910066450233584e-06,
+          "unscaled_residual": -7.146039870140151e-11,
+          "scale": 6e-05,
+          "states": [
+            535,
+            1185
+          ],
+          "labels": [
+            560,
+            1235
+          ],
+          "times_s": [
+            11.2,
+            11.19
+          ]
+        },
+        {
+          "row": 211439,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.1138550883783327e-06,
+          "unscaled_residual": -5.92422365572093e-11,
+          "scale": 5.318666420374339e-05,
+          "states": [
+            1229,
+            1397
+          ],
+          "labels": [
+            1279,
+            1452
+          ],
+          "times_s": [
+            12.07,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 208307,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.092486379003976e-06,
+          "unscaled_residual": -6.554918274023856e-11,
+          "scale": 6e-05,
+          "states": [
+            535,
+            1186
+          ],
+          "labels": [
+            560,
+            1236
+          ],
+          "times_s": [
+            11.2,
+            11.21
+          ]
+        },
+        {
+          "row": 211151,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.0697994340886877e-06,
+          "unscaled_residual": -6.418796604532127e-11,
+          "scale": 6e-05,
+          "states": [
+            575,
+            1225
+          ],
+          "labels": [
+            600,
+            1275
+          ],
+          "times_s": [
+            12.0,
+            11.99
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 21,
+      "correction": 4,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 17024,
+        "independent_linear_violation": 2.1345281098206215e-10,
+        "linear_pass": true,
+        "objective": 4.836413145525853e-05,
+        "elapsed_s": 1.3025524909608066,
+        "mode": "correction",
+        "merit_ceiling": 0.1149582421344231
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        1.0019762797242038e-13,
+        9.937883849175932e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.1150398245640238,
+        "minimum_hard_row": -8.815834266164016e-06,
+        "minimum_soft_row": -0.1150398245640238,
+        "soft_merit": 0.1150398245640238,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 3.0862323807667735e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.927482161494296e-08,
+        "maximum_retained_equality": 9.510038911919594e-08,
+        "maximum_kinematic_residual": 9.937883849175932e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 4.4260479947766385e-08,
+      "hover_normalized_error": 9.510038911919594e-08,
+      "actual_reduction": 0.08287146862805096,
+      "predicted_reduction": 0.16590610211530332,
+      "ratio": 0.49950826142884125,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_normal_descent": 3
+      },
+      "worst_hard_rows": [
+        {
+          "row": 215399,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -8.815834266164016e-06,
+          "unscaled_residual": -5.28950055969841e-10,
+          "scale": 6e-05,
+          "states": [
+            632,
+            1282
+          ],
+          "labels": [
+            657,
+            1332
+          ],
+          "times_s": [
+            13.14,
+            13.13
+          ]
+        },
+        {
+          "row": 215435,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.4441245420359402e-06,
+          "unscaled_residual": -8.664747252215641e-11,
+          "scale": 6e-05,
+          "states": [
+            632,
+            1283
+          ],
+          "labels": [
+            657,
+            1333
+          ],
+          "times_s": [
+            13.14,
+            13.15
+          ]
+        },
+        {
+          "row": 215327,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -6.096666608550243e-08,
+          "unscaled_residual": -4.165978754796921e-13,
+          "scale": 6.833207426750813e-06,
+          "states": [
+            631,
+            1400
+          ],
+          "labels": [
+            656,
+            1455
+          ],
+          "times_s": [
+            13.12,
+            13.118861132095542
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 22,
+      "correction": 0,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 11390,
+        "independent_linear_violation": 5.7637228323415e-13,
+        "linear_pass": true,
+        "objective": 0.06287713072303062,
+        "elapsed_s": 1.5013029599795118,
+        "mode": "predictor",
+        "merit_ceiling": null
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        2.4084333875157293e-07,
+        1.0563425134613169e-13,
+        9.812289869515212e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -1.1262187982439613,
+        "minimum_hard_row": -1.1262187982439613,
+        "minimum_soft_row": -0.9989038889317295,
+        "soft_merit": 0.9989038889317295,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 1.409575095534521e-10,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.052369602394758e-06,
+        "maximum_retained_equality": 0.0008129815606396917,
+        "maximum_kinematic_residual": 9.812289869515212e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 0.00019133743512478318,
+      "hover_normalized_error": 0.0008129815606396917,
+      "actual_reduction": -0.8009925957396548,
+      "predicted_reduction": 0.13503416246904415,
+      "ratio": -5.931777419090357,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 2,
+        "mesh_normal_descent": 93,
+        "mesh_planning_lower": 15,
+        "mesh_support": 1,
+        "old_normal_descent": 1,
+        "old_planning_lower": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 211475,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.1262187982439613,
+          "unscaled_residual": -7.673306852492677e-06,
+          "scale": 6.813335796256605e-06,
+          "states": [
+            579,
+            1397
+          ],
+          "labels": [
+            604,
+            1452
+          ],
+          "times_s": [
+            12.08,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 214859,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.24636634421620882,
+          "unscaled_residual": -1.4781980652972529e-05,
+          "scale": 6e-05,
+          "states": [
+            625,
+            1275
+          ],
+          "labels": [
+            650,
+            1325
+          ],
+          "times_s": [
+            13.0,
+            12.99
+          ]
+        },
+        {
+          "row": 211367,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.14235973439719038,
+          "unscaled_residual": -8.541584063831423e-06,
+          "scale": 6e-05,
+          "states": [
+            578,
+            1228
+          ],
+          "labels": [
+            603,
+            1278
+          ],
+          "times_s": [
+            12.06,
+            12.05
+          ]
+        },
+        {
+          "row": 209927,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.1305970206034548,
+          "unscaled_residual": -7.835821236207288e-06,
+          "scale": 6e-05,
+          "states": [
+            558,
+            1208
+          ],
+          "labels": [
+            583,
+            1258
+          ],
+          "times_s": [
+            11.66,
+            11.65
+          ]
+        },
+        {
+          "row": 214643,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.12755035193147862,
+          "unscaled_residual": -7.653021115888717e-06,
+          "scale": 6e-05,
+          "states": [
+            622,
+            1273
+          ],
+          "labels": [
+            647,
+            1323
+          ],
+          "times_s": [
+            12.94,
+            12.95
+          ]
+        },
+        {
+          "row": 214607,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.10949953353452561,
+          "unscaled_residual": -6.569972012071537e-06,
+          "scale": 6e-05,
+          "states": [
+            622,
+            1272
+          ],
+          "labels": [
+            647,
+            1322
+          ],
+          "times_s": [
+            12.94,
+            12.93
+          ]
+        },
+        {
+          "row": 208991,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.10783744724092885,
+          "unscaled_residual": -6.4702468344557314e-06,
+          "scale": 6e-05,
+          "states": [
+            545,
+            1195
+          ],
+          "labels": [
+            570,
+            1245
+          ],
+          "times_s": [
+            11.4,
+            11.39
+          ]
+        },
+        {
+          "row": 211547,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.10201884102463869,
+          "unscaled_residual": -6.121130461478322e-06,
+          "scale": 6e-05,
+          "states": [
+            580,
+            1230
+          ],
+          "labels": [
+            605,
+            1280
+          ],
+          "times_s": [
+            12.1,
+            12.09
+          ]
+        },
+        {
+          "row": 209387,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.09626102293010701,
+          "unscaled_residual": -5.775661375806421e-06,
+          "scale": 6e-05,
+          "states": [
+            550,
+            1201
+          ],
+          "labels": [
+            575,
+            1251
+          ],
+          "times_s": [
+            11.5,
+            11.51
+          ]
+        },
+        {
+          "row": 213203,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.09371392224310712,
+          "unscaled_residual": -4.086134542439379e-06,
+          "scale": 4.3602214533710045e-05,
+          "states": [
+            1253,
+            1398
+          ],
+          "labels": [
+            1303,
+            1453
+          ],
+          "times_s": [
+            12.55,
+            12.542732964244381
+          ]
+        },
+        {
+          "row": 210287,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.09330221811367394,
+          "unscaled_residual": -5.598133086820437e-06,
+          "scale": 6e-05,
+          "states": [
+            563,
+            1213
+          ],
+          "labels": [
+            588,
+            1263
+          ],
+          "times_s": [
+            11.76,
+            11.75
+          ]
+        },
+        {
+          "row": 211799,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.09223416862454596,
+          "unscaled_residual": -5.534050117472758e-06,
+          "scale": 6e-05,
+          "states": [
+            583,
+            1234
+          ],
+          "labels": [
+            608,
+            1284
+          ],
+          "times_s": [
+            12.16,
+            12.17
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 23,
+      "correction": 1,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 14144,
+        "independent_linear_violation": 1.801891968966629e-13,
+        "linear_pass": true,
+        "objective": 0.05279604670644922,
+        "elapsed_s": 1.1335337669588625,
+        "mode": "correction",
+        "merit_ceiling": 0.13039421195755269
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        2.0885937840331437e-09,
+        2.4841240175987878e-15
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.22162428516398613,
+        "minimum_hard_row": -0.07607498968301145,
+        "minimum_soft_row": -0.22162428516398613,
+        "soft_merit": 0.22162428516398613,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 8.16928469316025e-11,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 3.871451412347965e-07,
+        "maximum_retained_equality": 0.00010409154845336666,
+        "maximum_kinematic_residual": 2.4841240175987878e-15,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 1.8942955897660596e-05,
+      "hover_normalized_error": 0.00010409154845336666,
+      "actual_reduction": -0.023712991971911374,
+      "predicted_reduction": 0.13503416246904415,
+      "ratio": -0.1756073540082677,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_approach_order": 4,
+        "mesh_normal_descent": 90,
+        "mesh_planning_lower": 7,
+        "mesh_support": 1,
+        "old_planning_lower": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 211475,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.07607498968301145,
+          "unscaled_residual": -5.183244504071138e-07,
+          "scale": 6.813335796256605e-06,
+          "states": [
+            579,
+            1397
+          ],
+          "labels": [
+            604,
+            1452
+          ],
+          "times_s": [
+            12.08,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 214859,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.02518662385884519,
+          "unscaled_residual": -1.5111974315307116e-06,
+          "scale": 6e-05,
+          "states": [
+            625,
+            1275
+          ],
+          "labels": [
+            650,
+            1325
+          ],
+          "times_s": [
+            13.0,
+            12.99
+          ]
+        },
+        {
+          "row": 211367,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.015434588875595654,
+          "unscaled_residual": -9.260753325357392e-07,
+          "scale": 6e-05,
+          "states": [
+            578,
+            1228
+          ],
+          "labels": [
+            603,
+            1278
+          ],
+          "times_s": [
+            12.06,
+            12.05
+          ]
+        },
+        {
+          "row": 214643,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.012865028783115438,
+          "unscaled_residual": -7.719017269869262e-07,
+          "scale": 6e-05,
+          "states": [
+            622,
+            1273
+          ],
+          "labels": [
+            647,
+            1323
+          ],
+          "times_s": [
+            12.94,
+            12.95
+          ]
+        },
+        {
+          "row": 209927,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.012426789351334726,
+          "unscaled_residual": -7.456073610800836e-07,
+          "scale": 6e-05,
+          "states": [
+            558,
+            1208
+          ],
+          "labels": [
+            583,
+            1258
+          ],
+          "times_s": [
+            11.66,
+            11.65
+          ]
+        },
+        {
+          "row": 208991,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.012194229435565411,
+          "unscaled_residual": -7.316537661339247e-07,
+          "scale": 6e-05,
+          "states": [
+            545,
+            1195
+          ],
+          "labels": [
+            570,
+            1245
+          ],
+          "times_s": [
+            11.4,
+            11.39
+          ]
+        },
+        {
+          "row": 213203,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.010330277412683794,
+          "unscaled_residual": -4.504229719405779e-07,
+          "scale": 4.3602214533710045e-05,
+          "states": [
+            1253,
+            1398
+          ],
+          "labels": [
+            1303,
+            1453
+          ],
+          "times_s": [
+            12.55,
+            12.542732964244381
+          ]
+        },
+        {
+          "row": 210287,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00976711511955576,
+          "unscaled_residual": -5.860269071733456e-07,
+          "scale": 6e-05,
+          "states": [
+            563,
+            1213
+          ],
+          "labels": [
+            588,
+            1263
+          ],
+          "times_s": [
+            11.76,
+            11.75
+          ]
+        },
+        {
+          "row": 214715,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00917460390955254,
+          "unscaled_residual": -5.504762345731525e-07,
+          "scale": 6e-05,
+          "states": [
+            623,
+            1274
+          ],
+          "labels": [
+            648,
+            1324
+          ],
+          "times_s": [
+            12.96,
+            12.97
+          ]
+        },
+        {
+          "row": 209387,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.009045729518301305,
+          "unscaled_residual": -5.427437710980783e-07,
+          "scale": 6e-05,
+          "states": [
+            550,
+            1201
+          ],
+          "labels": [
+            575,
+            1251
+          ],
+          "times_s": [
+            11.5,
+            11.51
+          ]
+        },
+        {
+          "row": 211799,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.008934985489539169,
+          "unscaled_residual": -5.360991293723501e-07,
+          "scale": 6e-05,
+          "states": [
+            583,
+            1234
+          ],
+          "labels": [
+            608,
+            1284
+          ],
+          "times_s": [
+            12.16,
+            12.17
+          ]
+        },
+        {
+          "row": 214931,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.008462010446149186,
+          "unscaled_residual": -5.077206267689512e-07,
+          "scale": 6e-05,
+          "states": [
+            626,
+            1276
+          ],
+          "labels": [
+            651,
+            1326
+          ],
+          "times_s": [
+            13.02,
+            13.01
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 24,
+      "correction": 2,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 14525,
+        "independent_linear_violation": 1.4607648424203035e-11,
+        "linear_pass": true,
+        "objective": 0.006625420943606741,
+        "elapsed_s": 1.1064948559505865,
+        "mode": "correction",
+        "merit_ceiling": 0.13039421195755269
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        3.9308611921029524e-11,
+        2.4841240175987878e-15
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.17340479818310356,
+        "minimum_hard_row": -0.0008565344762151019,
+        "minimum_soft_row": -0.17340479818310356,
+        "soft_merit": 0.17340479818310356,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 4.155274041517387e-11,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 1.4242273820969593e-07,
+        "maximum_retained_equality": 4.267251444201037e-06,
+        "maximum_kinematic_residual": 2.4841240175987878e-15,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 2.0165800846960735e-06,
+      "hover_normalized_error": 4.267251444201037e-06,
+      "actual_reduction": 0.024506495008971202,
+      "predicted_reduction": 0.13503416246904415,
+      "ratio": 0.1814836672504203,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_normal_descent": 77,
+        "mesh_support": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 214787,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0008565344762151019,
+          "unscaled_residual": -4.230287630739869e-08,
+          "scale": 4.93884104867895e-05,
+          "states": [
+            624,
+            1399
+          ],
+          "labels": [
+            649,
+            1454
+          ],
+          "times_s": [
+            12.98,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 211475,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0007142368859806009,
+          "unscaled_residual": -4.866335742258475e-09,
+          "scale": 6.813335796256605e-06,
+          "states": [
+            579,
+            1397
+          ],
+          "labels": [
+            604,
+            1452
+          ],
+          "times_s": [
+            12.08,
+            12.078864444033957
+          ]
+        },
+        {
+          "row": 208127,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0005865697058625473,
+          "unscaled_residual": -3.519418235175284e-08,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1183
+          ],
+          "labels": [
+            558,
+            1233
+          ],
+          "times_s": [
+            11.16,
+            11.15
+          ]
+        },
+        {
+          "row": 208163,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0002762970024992905,
+          "unscaled_residual": -1.657782014995743e-08,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1184
+          ],
+          "labels": [
+            558,
+            1234
+          ],
+          "times_s": [
+            11.16,
+            11.17
+          ]
+        },
+        {
+          "row": 215219,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0002516926853045364,
+          "unscaled_residual": -1.5101561118272184e-08,
+          "scale": 6e-05,
+          "states": [
+            630,
+            1280
+          ],
+          "labels": [
+            655,
+            1330
+          ],
+          "times_s": [
+            13.1,
+            13.09
+          ]
+        },
+        {
+          "row": 208991,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0002133577556294485,
+          "unscaled_residual": -1.280146533776691e-08,
+          "scale": 6e-05,
+          "states": [
+            545,
+            1195
+          ],
+          "labels": [
+            570,
+            1245
+          ],
+          "times_s": [
+            11.4,
+            11.39
+          ]
+        },
+        {
+          "row": 211367,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00021076383240508598,
+          "unscaled_residual": -1.264582994430516e-08,
+          "scale": 6e-05,
+          "states": [
+            578,
+            1228
+          ],
+          "labels": [
+            603,
+            1278
+          ],
+          "times_s": [
+            12.06,
+            12.05
+          ]
+        },
+        {
+          "row": 214859,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00020499865703095394,
+          "unscaled_residual": -1.2299919421857237e-08,
+          "scale": 6e-05,
+          "states": [
+            625,
+            1275
+          ],
+          "labels": [
+            650,
+            1325
+          ],
+          "times_s": [
+            13.0,
+            12.99
+          ]
+        },
+        {
+          "row": 209927,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00020293252828138312,
+          "unscaled_residual": -1.2175951696882987e-08,
+          "scale": 6e-05,
+          "states": [
+            558,
+            1208
+          ],
+          "labels": [
+            583,
+            1258
+          ],
+          "times_s": [
+            11.66,
+            11.65
+          ]
+        },
+        {
+          "row": 209783,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0001398337955610891,
+          "unscaled_residual": -8.390027733665346e-09,
+          "scale": 6e-05,
+          "states": [
+            556,
+            1206
+          ],
+          "labels": [
+            581,
+            1256
+          ],
+          "times_s": [
+            11.62,
+            11.61
+          ]
+        },
+        {
+          "row": 210251,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.0001380791574596081,
+          "unscaled_residual": -8.284749447576485e-09,
+          "scale": 6e-05,
+          "states": [
+            562,
+            1213
+          ],
+          "labels": [
+            587,
+            1263
+          ],
+          "times_s": [
+            11.74,
+            11.75
+          ]
+        },
+        {
+          "row": 210287,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -0.00012939821168257565,
+          "unscaled_residual": -7.76389270095454e-09,
+          "scale": 6e-05,
+          "states": [
+            563,
+            1213
+          ],
+          "labels": [
+            588,
+            1263
+          ],
+          "times_s": [
+            11.76,
+            11.75
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 25,
+      "correction": 3,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 14666,
+        "independent_linear_violation": 3.8191672047105385e-13,
+        "linear_pass": true,
+        "objective": 0.00048212963674743037,
+        "elapsed_s": 1.1384167169453576,
+        "mode": "correction",
+        "merit_ceiling": 0.13039421195755269
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        2.131073095767988e-13,
+        9.98368054894172e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.13091378758223732,
+        "minimum_hard_row": -7.372054566823796e-05,
+        "minimum_soft_row": -0.13091378758223732,
+        "soft_merit": 0.13091378758223732,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 2.0816397217071625e-11,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 5.239439734268965e-08,
+        "maximum_retained_equality": 3.3075133232252085e-07,
+        "maximum_kinematic_residual": 9.98368054894172e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 1.7254815976031068e-07,
+      "hover_normalized_error": 3.3075133232252085e-07,
+      "actual_reduction": 0.06699750560983744,
+      "predicted_reduction": 0.13503416246904415,
+      "ratio": 0.4961522653587477,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_normal_descent": 5
+      },
+      "worst_hard_rows": [
+        {
+          "row": 215327,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -7.372054566823796e-05,
+          "unscaled_residual": -5.037477801643261e-10,
+          "scale": 6.833207426750813e-06,
+          "states": [
+            631,
+            1400
+          ],
+          "labels": [
+            656,
+            1455
+          ],
+          "times_s": [
+            13.12,
+            13.118861132095542
+          ]
+        },
+        {
+          "row": 208091,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -5.4718489091492675e-05,
+          "unscaled_residual": -3.2831093454895608e-09,
+          "scale": 6e-05,
+          "states": [
+            532,
+            1183
+          ],
+          "labels": [
+            1450,
+            1233
+          ],
+          "times_s": [
+            10.64,
+            11.15
+          ]
+        },
+        {
+          "row": 214787,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -9.491677072294223e-06,
+          "unscaled_residual": -4.687788434545154e-10,
+          "scale": 4.93884104867895e-05,
+          "states": [
+            624,
+            1399
+          ],
+          "labels": [
+            649,
+            1454
+          ],
+          "times_s": [
+            12.98,
+            12.971768598252202
+          ]
+        },
+        {
+          "row": 208127,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -5.824799068866751e-06,
+          "unscaled_residual": -3.494879441320051e-10,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1183
+          ],
+          "labels": [
+            558,
+            1233
+          ],
+          "times_s": [
+            11.16,
+            11.15
+          ]
+        },
+        {
+          "row": 208163,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -9.709548904275292e-07,
+          "unscaled_residual": -5.825729342565176e-11,
+          "scale": 6e-05,
+          "states": [
+            533,
+            1184
+          ],
+          "labels": [
+            558,
+            1234
+          ],
+          "times_s": [
+            11.16,
+            11.17
+          ]
+        }
+      ]
+    },
+    {
+      "linear_index": 26,
+      "correction": 4,
+      "linear": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "candidate": true,
+        "success": true,
+        "iterations": 14600,
+        "independent_linear_violation": 9.383716026434286e-11,
+        "linear_pass": true,
+        "objective": 3.4509631952062136e-05,
+        "elapsed_s": 1.1234588969964534,
+        "mode": "correction",
+        "merit_ceiling": 0.13039421195755269
+      },
+      "map_pass": true,
+      "root_pass": true,
+      "root_history": [
+        1.0036416142611415e-13,
+        9.943434964299058e-14
+      ],
+      "summary": {
+        "minimum_retained_buffered_row": -0.13039757300753257,
+        "minimum_hard_row": -1.8592082501818167e-06,
+        "minimum_soft_row": -0.13039757300753257,
+        "soft_merit": 0.13039757300753257,
+        "hard_pass": false,
+        "all_inequalities_pass": false,
+        "minimum_phase": 1.0409638429020873e-11,
+        "monotone_phase_pass": true,
+        "coordinate_bound_minimum": 3.4713986447326124e-08,
+        "maximum_retained_equality": 1.4325525432568043e-08,
+        "maximum_kinematic_residual": 9.943434964299058e-14,
+        "minimum_corner_weight": 0.0,
+        "fixed_states_exact": true,
+        "inactive_exact_zero": true
+      },
+      "total_normal_maximum": 6.853772660520008e-09,
+      "hover_normalized_error": 1.4325525432568043e-08,
+      "actual_reduction": 0.06751372018454219,
+      "predicted_reduction": 0.13503416246904415,
+      "ratio": 0.4999751096321225,
+      "accepted": false,
+      "negative_hard_groups": {
+        "mesh_normal_descent": 1
+      },
+      "worst_hard_rows": [
+        {
+          "row": 208091,
+          "group": "mesh_normal_descent",
+          "scaled_residual": -1.8592082501818167e-06,
+          "unscaled_residual": -1.11552495010909e-10,
+          "scale": 6e-05,
+          "states": [
+            532,
+            1183
+          ],
+          "labels": [
+            1450,
+            1233
+          ],
+          "times_s": [
+            10.64,
+            11.15
+          ]
+        }
+      ]
+    }
+  ],
+  "model_calls": 0,
+  "optimizer_calls": 0,
+  "physical_admission": false
+}

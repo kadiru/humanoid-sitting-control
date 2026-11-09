@@ -1,0 +1,79 @@
+{
+  "utc": "2026-10-17T19:24:16.770415+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_active_physics_ticks": 0,
+  "new_initial_settling_ticks": 0,
+  "new_optimizer_updates": 0,
+  "new_full20s_trials": 0,
+  "new_diagnostic_prefixes": 0,
+  "holdout_started": false,
+  "physical_admission_passed": false,
+  "best_verified_controller": "current_retention_09",
+  "best_development_clean": 64,
+  "latest_physical_candidate": "roll_feedback_probe_273",
+  "prior_recheck": {
+    "utc": "2026-10-17T19:24:16.770415+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "completed_probes_preservation_289.json",
+        "checked": 6161,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "supplemental_preservation_289.json",
+        "checked": 3,
+        "passed": true,
+        "mismatches": []
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_293.json",
+  "protected_completed_files": 6230,
+  "manifest_sha256": "07b88118e3a5f78bc586590d93e0d54ba06b768535f2389c74f023478944c04b",
+  "physical_workers_running": false,
+  "model_workers_running": false,
+  "audit_workers_running": false,
+  "report": "progress_report_292",
+  "video": "all_attempts_video_276/all_attempts.mp4",
+  "video_unchanged": true,
+  "local_review": {
+    "utc": "2026-10-17T19:23:48.959697+00:00",
+    "local_hashes_verified": true,
+    "manifests_verified": 7,
+    "hash_entries_verified": 30,
+    "supplemental_review_hashes": 4,
+    "plots_visually_inspected": true,
+    "plots": [
+      "velocity_and_model.png",
+      "coupled_response.png",
+      "velocity_and_model_review.png",
+      "coupled_response_review.png"
+    ],
+    "browser_visually_inspected": true,
+    "embedded_video_loaded": true,
+    "video_duration_s": 58.4,
+    "video_unchanged": true,
+    "url": "http://127.0.0.1:8807/progress_report_292/review.html",
+    "tables_inspected": [
+      "source mass/COM discrepancy",
+      "model assumptions and derivative limits",
+      "independent audit and all recoveries",
+      "all16case-window rows",
+      "physical/effort/PPO status",
+      "current embedded complete-attempt video"
+    ],
+    "repair_complete": false,
+    "ppo_started": false
+  },
+  "mutable_status_aliases_reconciled_to_existing_physical_273": true,
+  "next": "# Offline floating-pelvis/contact response290v3 audited \u2014 repair unfinished\n\nContinue the authorized repair in THIS chat through Mac SSH kfuUbuntu, /home/kadir/humanoid-sitting; never another coding agent. Python /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python. Read protocol/status, study status.json and closure_record_293.json. Check actual workers before launching. Completed290/291/292 are OFFLINE; do not repeat them or physical273. Stay quiet during ordinary progress; notify meaningful failure/completion/required input. No promotion.\n\nBest verified current_retention_09 remains64/72 clean,70 stable,8 slipping,2 housing-contact cases. All64 protected; all8 unresolved. Main PPO63111/63117/fresh holdout unstarted. This round adds ZERO physical/settling/optimizer ticks, full20s episodes or video motion. Latest273 remains rejected; selected36/+15 rows0/1 hover without legal load/hold/quiet release. No new72 retention.\n\nNEW contact_dynamics_screen_v3_290 uses ALL3800 saved raw234/273 selected observations, cases0/1,1.02\u201320s. Separate floating-base43-coordinate mass model:44 body masses/COM from frozen bridge export, rotational tensors read from preserved asset_contact_47/g1.usd, recorded246 armature/stiffness/damping. Original frozen mass/COM file has NO rotational tensors. No environment/reset/timeline/physics or asset edits. Cooked50 kinematics remain unchanged. Two tiny placeholder bodies have nonfinite authored COM and zero principal quaternion; existing backend COM0 retained, isotropic diagonal tensor makes orientation irrelevant. Finite authored/frozen COM maxdifference2.653690074454207e-7m.\n\nExact authored/frozen mass equality remains FALSE for six finger bodies, each3.725290298461914e-9kg difference(one float32 step). Frozen masses are used without adjustment. This authored-inertia construction is NOT a certified effective live mass matrix. Original290 stopped at this exact-equality assertion before any dynamic response calculation; preserve it. No equality tolerance was increased to pass.\n\nTwo bilateral six-axis sole constraints retain a FLOATING pelvis. Only two existing ankle-roll target derivatives are nonzero; pitch/hips/finger targets unchanged. Four5ms backward-Euler increments define a FROZEN LOCAL perturbation model. This is an explicit modeling assumption, NOT a claim about PhysX implicit-drive implementation. The independent\u00b1.00075rad-per-side box uses the existing maximum applied feedback-offset increment per20ms; remaining total authority/headroom may further restrict it. It is not a new budget or a controller. No runtime installed or command selected/applied.\n\nAt11\u201314.98s model ankle-roll incremental-velocity envelope median~.001737\u2013.001741rad/s for that one-step box; actual raw ankle-roll medians~.248\u2013.282rad/s. These cannot be subtracted to predict settling. Contact-consistent perturbation model assumes sticking, whereas recorded foot velocities do not satisfy it. Conditional pelvis increment bounds~.013164mrad roll/6.722micrometres lateral. Small one-step response is not a multi-step lower bound, gain extrapolation, physical result or impossibility proof.\n\nIndependent contact_dynamics_audit_v3_291 PASSED all3800 raw-source/mass/contact/response records using recursive body-twist energy assembly and direct55x55 saddle solve versus screen Schur elimination. All44 tensors checked with independent quaternion formula; six unequal masses explicitly retained.16 stratified poses x37joints x44bodies=26048 finite-difference columns. Maxmassmatrix1.776e-15,contactmatrix3.331e-16,velocityresponse1.754e-14,positionresponse3.608e-16,saddleresidual1.332e-14,contactresponse1.756e-15,FD1.834e-10. This passes arithmetic ONLY; physical_admission=false,repair_complete=false. All jobs complete.\n\nRecoveries: inertial_identity_recovery_290 preserves original exact-mass failure/source/log/emptyoutput. V2 reports unequal sources while retaining frozenmass; no adjustment. inertial_serialization_recovery_290 preserves NumPy Boolean JSON failure before response work;V3 casts only that reported bool. inertial_audit_precision_recovery_291 preserves original auditor's unintended float32 quaternion reconstruction;v2 casts authored arrays before normalization, retaining1e-15 tensor tolerance. inertial_audit_loading_recovery_291 preserves incompletev2 auditor interrupted because each indexed npz access repeatedly decompressed full matrices;v3 loads IDENTICAL arrays once, all arithmetic/tolerances unchanged. No completed response screen or physical run repeated. Inspect each exitstatus before dependent launches.\n\nNext: do not install290 as a velocity predictor, merely scale273 or grant extra hip/pitch authority. Before choosing a new bounded dynamic/contact revision, test model adequacy against ALREADY recorded259/246 link/drive/contact evidence. A useful separately scoped zero-physics step is whole-body external momentum-balance residuals from recorded COM velocities, authored inertia and separately recorded normal/friction application points, with explicit sampling/alignment and unavailable non-foot contacts. Internal joint efforts cancel in total momentum balance; do NOT fit truth offsets into runtime. Only selected floor-only records can initially close the external-wrench set; report others as unavailable where contacts are incomplete. Derived acceleration for OFFLINE evaluation is not a replacement for runtime rawqd or permission to loosen quiet guards. The current ideal-contact derivative alone does not justify a new physical launch.\n\nKeep164 approach balance,207v2 bounded pitch integral,175/130 quiet/load guards and all physical criteria. No solver flags, blind gain/Ki/arm/lean/rate sweeps, sensor substitution, foot drag/teleport or endpoint-only launch. Remaining36/+20,37/+16.25,36.5/+17.5 centered227 paths still fail3mm clearance; limited searches are not impossibility proofs. Preserve64/remove8 across72matched full20s BEFORE PPO. The fixed-foot estimator cannot certify common slip; approximatePD torque is not actual force control.\n\nLocal progress_report_292/review.html and all new model/audit/recovery artifacts copied/hashverified and visually checked:7original manifests/30entries +4 supplemental review entries. Both original and readable plots inspected, HTML source discrepancy/derivative/audit/recoveries/all16case-window/physical-effort tables inspected and unchanged video loaded. Formatting-only supplemental plots clear legends/margins; originalplots/HTML/data preserved. URL http://127.0.0.1:8807/progress_report_292/review.html . Interim OFFLINE evidence,not repair/PPO/unseen completion.\n\nVideo276 remains CURRENT and unchanged at /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/all_attempts_video_276/all_attempts.mp4:58.4s4K15fpsH264,43recorded sources,864full20s trials503clean361failed,168recordedprefixes,96aborted attempts without motion disclosed. Independent277 checked1032records/612firstevents.47panels in8x6grid. RecordedXYZW LINK-pose schematic withmodelheadCOM,notcamerafootage;.1sposesbracket.02sevents. Historical totalsnotcontrolleraccuracy. No newmotion290\u2013292; doNOT rerenderunchanged video. Updatecompletecoverageafter future physical/PPO,omit nofailure.\n\nNo neweffort result.273vsbestnormal14commoncompleteclean whole20 torque\u00b2+.0126472%,final10+.0264487%,final5+.0794278%;strictbothONLY1 whole20\u2212.00504478%,final5\u2212.0247301%. Unselectedsuccess differences,not repair/savings.09vs61111commoncleanexact;vs62111@8old20whole20+4.38%,final5+25.45%. ApproximplicitPD telemetry is not solver/hardware effort,energy or global optimum. No failedhover/prefix/fragmentsavings.\n\nPhysical273 remains20stable14clean8slip2hiphousing/physical0illegal19warnings,zero selectedlegal load/hold,zeroquiet. Software274v2/275v2 passed; unselected full20s exactness FAILED(body.769615mm,q.000864387rad,command.000684381rad),no waiver. Keep frozen59117@15s selected/11\u201315 elsewhere; early61111 omitted only in isolatingprobes. Best09 uses bothparents with guardednormal3s and remainsread-only.25current consecutive samples movingrawqd<=.05,pitcherror<=.5deg,abs gyro-y<=.02,freshgeometry+130guards before12mmhoverrelease; normaldescent<=.006m/s. Existing269rollcap.01insideperankle abs(pitch)+abs(roll)<=.06,feedback.0375+nominal.1125 underglobal.15; .03desiredmargin/.1filter/14fingers unchanged.\n\nPrior static255wrench feedback remainsNOTADMITTED(~1Nm estimate versus nearzero contact moment).286 sole-centre IK remains noadmission,notdynamicprediction.282 pairedpelvis/footcoupling isnotcausaltransferfunction; k*.02input vs(k+1)*.02after-command isnotidentifiedimplementationdelay. Verified259/246/198 exactprefixes remainvalid;189failedreplay remainsfailed. Authoredsolvervalues are not effectiveislandcounts; flags unchanged. Contact/bodytruth stays evaluationonly,notruntime.\n\nAutomationACTIVE; taskunfinished. PauseONLYafter actualrepair,newPPOcomparison andupdatedcomplete subminutevideo delivered. Offline model/audit/report completion is not taskcompletion.\n"
+}

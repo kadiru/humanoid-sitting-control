@@ -1,0 +1,386 @@
+{
+  "training": false,
+  "case": 14,
+  "runs": {
+    "none": {
+      "successes": 16,
+      "case14": {
+        "episode": 0,
+        "env": 14,
+        "geometry": 7,
+        "success": true,
+        "standing": true,
+        "hold_s": 6.279994964599609,
+        "peak_force_N": 455.20648193359375,
+        "reward": 95.06145477294922,
+        "seated_leg_rms_Nm": 6.7733845710754395,
+        "seated_foot_load_fraction": 0.5218653678894043,
+        "depth_availability": 0.5190000534057617,
+        "failures": {
+          "fall": false,
+          "wrong_contact": false,
+          "pelvis_floor": false,
+          "impact": false,
+          "fast_descent": false,
+          "torque": false,
+          "perception_unavailable": false
+        },
+        "duration_s": 20.0,
+        "steps": 1000,
+        "standing_checked": true,
+        "startup_ready": true,
+        "startup_refusal_reason": null,
+        "end_reason": "horizon"
+      },
+      "max_force_N": 570.1217041015625,
+      "failed_cases": [],
+      "startup_geometry": [
+        -0.4315946102142334,
+        0.011672621592879295,
+        -0.4417020380496979,
+        0.2820182740688324,
+        0.3030581474304199,
+        0.9858357310295105,
+        0.006636949721723795,
+        0.9999779462814331,
+        1.0,
+        1.0
+      ],
+      "original_trace_exact": {
+        "t": true,
+        "body": true,
+        "root": true,
+        "support": true,
+        "foot": true,
+        "torque": true,
+        "force": true,
+        "tilt": true,
+        "live": true,
+        "true_clearance": true,
+        "correction": true,
+        "alive": true
+      }
+    },
+    "startup": {
+      "successes": 15,
+      "case14": {
+        "episode": 0,
+        "env": 14,
+        "geometry": 7,
+        "success": false,
+        "standing": true,
+        "hold_s": 0.0,
+        "peak_force_N": 697.76904296875,
+        "reward": -2.71062970161438,
+        "seated_leg_rms_Nm": null,
+        "seated_foot_load_fraction": null,
+        "depth_availability": 0.5490000247955322,
+        "failures": {
+          "fall": false,
+          "wrong_contact": false,
+          "pelvis_floor": false,
+          "impact": true,
+          "fast_descent": false,
+          "torque": false,
+          "perception_unavailable": false
+        },
+        "duration_s": 20.0,
+        "steps": 1000,
+        "standing_checked": true,
+        "startup_ready": true,
+        "startup_refusal_reason": null,
+        "end_reason": "horizon"
+      },
+      "max_force_N": 697.76904296875,
+      "failed_cases": [
+        14
+      ],
+      "startup_geometry": [
+        -0.43164902925491333,
+        0.0118104862049222,
+        -0.4399300217628479,
+        0.2767990529537201,
+        0.3042451739311218,
+        0.9874279499053955,
+        -0.00011097051174147055,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "original_trace_exact": {
+        "t": true,
+        "body": false,
+        "root": false,
+        "support": false,
+        "foot": false,
+        "torque": false,
+        "force": false,
+        "tilt": false,
+        "live": false,
+        "true_clearance": false,
+        "correction": false,
+        "alive": false
+      }
+    },
+    "live": {
+      "successes": 15,
+      "case14": {
+        "episode": 0,
+        "env": 14,
+        "geometry": 7,
+        "success": false,
+        "standing": true,
+        "hold_s": 0.0,
+        "peak_force_N": 714.3941040039062,
+        "reward": -2.7998366355895996,
+        "seated_leg_rms_Nm": null,
+        "seated_foot_load_fraction": null,
+        "depth_availability": 0.5540000200271606,
+        "failures": {
+          "fall": false,
+          "wrong_contact": false,
+          "pelvis_floor": false,
+          "impact": true,
+          "fast_descent": false,
+          "torque": false,
+          "perception_unavailable": false
+        },
+        "duration_s": 20.0,
+        "steps": 1000,
+        "standing_checked": true,
+        "startup_ready": true,
+        "startup_refusal_reason": null,
+        "end_reason": "horizon"
+      },
+      "max_force_N": 714.3941040039062,
+      "failed_cases": [
+        14
+      ],
+      "startup_geometry": [
+        -0.4315946102142334,
+        0.011672621592879295,
+        -0.4417020380496979,
+        0.2820182740688324,
+        0.3030581474304199,
+        0.9858357310295105,
+        0.006636949721723795,
+        0.9999779462814331,
+        1.0,
+        1.0
+      ],
+      "original_trace_exact": {
+        "t": true,
+        "body": false,
+        "root": false,
+        "support": false,
+        "foot": false,
+        "torque": false,
+        "force": false,
+        "tilt": false,
+        "live": false,
+        "true_clearance": false,
+        "correction": false,
+        "alive": false
+      }
+    },
+    "both": {
+      "successes": 15,
+      "case14": {
+        "episode": 0,
+        "env": 14,
+        "geometry": 7,
+        "success": false,
+        "standing": true,
+        "hold_s": 0.0,
+        "peak_force_N": 729.1986694335938,
+        "reward": -2.757786989212036,
+        "seated_leg_rms_Nm": null,
+        "seated_foot_load_fraction": null,
+        "depth_availability": 0.5540000200271606,
+        "failures": {
+          "fall": false,
+          "wrong_contact": false,
+          "pelvis_floor": false,
+          "impact": true,
+          "fast_descent": false,
+          "torque": false,
+          "perception_unavailable": false
+        },
+        "duration_s": 20.0,
+        "steps": 1000,
+        "standing_checked": true,
+        "startup_ready": true,
+        "startup_refusal_reason": null,
+        "end_reason": "horizon"
+      },
+      "max_force_N": 729.1986694335938,
+      "failed_cases": [
+        14
+      ],
+      "startup_geometry": [
+        -0.43164902925491333,
+        0.0118104862049222,
+        -0.4399300217628479,
+        0.2767990529537201,
+        0.3042451739311218,
+        0.9874279499053955,
+        -0.00011097051174147055,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "original_trace_exact": {
+        "t": true,
+        "body": false,
+        "root": false,
+        "support": false,
+        "foot": false,
+        "torque": false,
+        "force": false,
+        "tilt": false,
+        "live": false,
+        "true_clearance": false,
+        "correction": false,
+        "alive": false
+      }
+    }
+  },
+  "comparisons": {
+    "none": {
+      "proprio": {
+        "first_difference_s": null,
+        "max_abs": 0.0
+      },
+      "previous_targets": {
+        "first_difference_s": null,
+        "max_abs": 0.0
+      },
+      "startup_geometry": {
+        "first_difference_s": null,
+        "max_abs": 0.0
+      },
+      "nominal": {
+        "first_difference_s": null,
+        "max_abs": 0.0
+      },
+      "live_depth": {
+        "first_difference_s": null,
+        "max_abs": 0.0
+      },
+      "learned_contact": {
+        "first_difference_s": null,
+        "max_abs": 0.0
+      },
+      "actions": {
+        "first_difference_s": null,
+        "max_abs": 0.0
+      },
+      "command_target": {
+        "first_difference_s": null,
+        "max_abs": 0.0
+      }
+    },
+    "startup": {
+      "proprio": {
+        "first_difference_s": 0.06,
+        "max_abs": 12.684102058410645
+      },
+      "previous_targets": {
+        "first_difference_s": 0.04,
+        "max_abs": 0.12544214725494385
+      },
+      "startup_geometry": {
+        "first_difference_s": 0.02,
+        "max_abs": 0.00674792006611824
+      },
+      "nominal": {
+        "first_difference_s": 0.02,
+        "max_abs": 0.12703192234039307
+      },
+      "live_depth": {
+        "first_difference_s": 0.1,
+        "max_abs": 1.0
+      },
+      "learned_contact": {
+        "first_difference_s": 0.02,
+        "max_abs": 0.9985529184341431
+      },
+      "actions": {
+        "first_difference_s": 0.02,
+        "max_abs": 0.05755975842475891
+      },
+      "command_target": {
+        "first_difference_s": 0.02,
+        "max_abs": 0.12544214725494385
+      }
+    },
+    "live": {
+      "proprio": {
+        "first_difference_s": 0.06,
+        "max_abs": 14.872868537902832
+      },
+      "previous_targets": {
+        "first_difference_s": 0.04,
+        "max_abs": 0.12316036224365234
+      },
+      "startup_geometry": {
+        "first_difference_s": null,
+        "max_abs": 0.0
+      },
+      "nominal": {
+        "first_difference_s": 0.04,
+        "max_abs": 0.12505996227264404
+      },
+      "live_depth": {
+        "first_difference_s": 0.02,
+        "max_abs": 1.0
+      },
+      "learned_contact": {
+        "first_difference_s": 0.04,
+        "max_abs": 0.9985787868499756
+      },
+      "actions": {
+        "first_difference_s": 0.02,
+        "max_abs": 0.06194853037595749
+      },
+      "command_target": {
+        "first_difference_s": 0.02,
+        "max_abs": 0.12316036224365234
+      }
+    },
+    "both": {
+      "proprio": {
+        "first_difference_s": 0.06,
+        "max_abs": 15.932098388671875
+      },
+      "previous_targets": {
+        "first_difference_s": 0.04,
+        "max_abs": 0.12633562088012695
+      },
+      "startup_geometry": {
+        "first_difference_s": 0.02,
+        "max_abs": 0.00674792006611824
+      },
+      "nominal": {
+        "first_difference_s": 0.02,
+        "max_abs": 0.12800312042236328
+      },
+      "live_depth": {
+        "first_difference_s": 0.02,
+        "max_abs": 1.0
+      },
+      "learned_contact": {
+        "first_difference_s": 0.02,
+        "max_abs": 0.998676061630249
+      },
+      "actions": {
+        "first_difference_s": 0.02,
+        "max_abs": 0.06054753065109253
+      },
+      "command_target": {
+        "first_difference_s": 0.02,
+        "max_abs": 0.12633562088012695
+      }
+    }
+  }
+}

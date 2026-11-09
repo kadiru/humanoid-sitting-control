@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "utc": "2026-10-23T17:00:55.673746+00:00",
+    "classification": "Completed new-state strict-interior validation; no finite encoding, nonlinear validation or physical success",
+    "candidate_accepted": false,
+    "physical_success": false,
+    "approved_contract_sha256": "e94d217433e790b5a1a98814b43682cd73515a90bd4d9eb55885cdef7b23e9e9",
+    "owner_process_wall_s_rounded": 175.86,
+    "total_cap_s": 600,
+    "owner_actual_exit": 0,
+    "outer_timeout": false,
+    "backend": {
+      "status": 0,
+      "success": true,
+      "candidate_returned": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "iterations": 2,
+      "crossover_iterations": 30308,
+      "seconds": 172.51397485495545,
+      "total_elapsed_s": 174.89393735211343
+    },
+    "full_original_numerical_checks": {
+      "primal": 7.0150205089269946e-12,
+      "dual": 8.135853102331227e-14,
+      "absolute_gap": 8.422082475867398e-15,
+      "finite": true,
+      "dual_signs": false,
+      "passed": false
+    },
+    "exact_margin": null,
+    "independent_input_audit_passed": true,
+    "independent_return_audit_passed": true,
+    "fixed_predicted_ceiling": 0.061901382259917585,
+    "primary_repeated": false,
+    "cold_solves": 1,
+    "retries": 0,
+    "finite_maps": 0,
+    "model_calls": 0,
+    "simulation_calls": 0,
+    "PPO_updates": 0,
+    "holdout_trials": 0,
+    "physical_status": {
+      "clean": 64,
+      "development_trials": 72,
+      "unresolved": 8,
+      "protected": 64,
+      "main_PPO": "unstarted",
+      "fresh_holdout": "closed"
+    },
+    "last_worker_check": [],
+    "authorization": "Consumed by this one validation; no retry or automatic downstream",
+    "next_gate": "This attempt is terminal; preserve failure evidence and do not retry or use its failed point"
+  },
+  "manifest_sha256": "614cf61338489fcd6f030b760de654d2eeb32e5996a1fab1b4345c7e7b6c3fd9",
+  "summary_sha256": "43255322897849feb30aca1c586b1a799be35e8079efb002c31b82f846b06202",
+  "archive": "/tmp/interior_after_minimax_completed_20261023_v1.tar.gz",
+  "archive_sha256": "4b45e0ae0b76de04828ccbadd72a298b3022ba2d80dca3985b2d9bd35ce2c41e",
+  "archive_bytes": 23115596,
+  "output_files": 43
+}

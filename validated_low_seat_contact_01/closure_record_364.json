@@ -1,0 +1,133 @@
+{
+  "utc": "2026-10-18T02:54:42.124068+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_active_physics_ticks": 0,
+  "new_initial_settling_ticks": 0,
+  "new_optimizer_updates": 0,
+  "new_full20s_trials": 0,
+  "new_diagnostic_prefixes": 0,
+  "new_aborted_case_attempts": 0,
+  "new_command_schedule_ticks": 0,
+  "holdout_started": false,
+  "physical_admission_passed": false,
+  "best_verified_controller": "current_retention_09",
+  "best_development_clean": 64,
+  "latest_physical_candidate": "roll_feedback_probe_273",
+  "offline_optimizer": {
+    "success": false,
+    "message": "Iteration limit reached",
+    "iterations": 30,
+    "evaluations": 125,
+    "objective_time_s": 13.637730968010088,
+    "max_equality_residual": 0.002845536566036845,
+    "minimum_inequality": -0.13773096801008755,
+    "numerical_constraints_passed": false,
+    "local_not_global": true
+  },
+  "offline_geometry_passed": true,
+  "offline_static_commands_passed": false,
+  "actual_schedule_executed": false,
+  "hover_guard_exercised": false,
+  "observed_solver_process_exit": {
+    "utc": "2026-10-18T02:49:16.889696+00:00",
+    "observed_exit_code": 0,
+    "session_id": 73038,
+    "observation": "write_stdin completion chunk9adf6e",
+    "model_results_complete": true,
+    "source_hashes_intact": true,
+    "optimizer_success": false,
+    "optimizer": {
+      "success": false,
+      "message": "Iteration limit reached",
+      "iterations": 30,
+      "evaluations": 125,
+      "objective_time_s": 13.637730968010088,
+      "max_equality_residual": 0.002845536566036845,
+      "minimum_inequality": -0.13773096801008755,
+      "numerical_constraints_passed": false,
+      "local_not_global": true
+    }
+  },
+  "postprocessing_exit_evidence": {
+    "utc": "2026-10-18T02:49:59.774513+00:00",
+    "audit_exit_code": 0,
+    "audit_session": 75677,
+    "audit_completion_chunk": "2f51e7",
+    "report_exit_code": 0,
+    "report_completion_chunk": "ccd642",
+    "audit_executions": 1,
+    "report_executions": 1,
+    "report_source": "scripts/report_low_seat_constraint_reduction_v2_363.py",
+    "report_draft_original_preserved": true,
+    "source_revision_before_first_execution": true,
+    "new_physics_ticks": 0
+  },
+  "independent_audit_passed": true,
+  "prior_recheck": {
+    "utc": "2026-10-18T02:54:42.124068+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "coordinate_evidence_preservation_361.json",
+        "checked": 6930,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "supplemental_preservation_356.json",
+        "checked": 3,
+        "passed": true,
+        "mismatches": []
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_364.json",
+  "protected_completed_files": 6976,
+  "manifest_sha256": "637c42e679cfc59e5ca4b69be2d896b8c14e2a3e7efede7920e096377facc2dd",
+  "physical_workers_running": false,
+  "model_workers_running": false,
+  "audit_workers_running": false,
+  "report": "progress_report_363/readable.html",
+  "video": "all_attempts_video_307/all_attempts.mp4",
+  "video_unchanged": true,
+  "original_folder_manifests": 10,
+  "original_manifest_entries": 35,
+  "local_review": {
+    "utc": "2026-10-18T02:54:07.252138+00:00",
+    "local_hashes_verified": true,
+    "original_manifests": 10,
+    "original_entries": 35,
+    "supplemental_manifests": [
+      "review_SHA256.json"
+    ],
+    "supplemental_entries": 2,
+    "visual_layout_inspected": true,
+    "browser_visually_inspected": true,
+    "embedded_video_loaded": true,
+    "embedded_video_duration_s": 58.4,
+    "embedded_video_ready_state": 4,
+    "plots": [
+      "coordinates_and_geometry.png",
+      "reduced_path_gates.png"
+    ],
+    "sections_reviewed": [
+      "scope and local kinematic claims",
+      "reduced formulation and failed gates",
+      "independent audit and recoveries",
+      "115-knot table and CSV link",
+      "physical/effort limitations",
+      "unchanged complete video"
+    ],
+    "report_url": "http://127.0.0.1:8807/progress_report_363/readable.html",
+    "report_draft_revision": "Original unexecuted draft retained; before execution, v2 subtitle clarifies model objective is not an executed schedule.",
+    "readability": "Whitespace only, exact numeric tokens, tags/attributes and canonical nonwhitespace; original HTML/plots/data retained."
+  },
+  "next": "# Reduced complete-path361 finished: geometry passes, command/headroom/timing fail \u2014 repair unresolved\n\nContinue the authorized low-seat repair in THIS chat, directly Mac SSH kfuUbuntu, /home/kadir/humanoid-sitting. Never another coding agent. Python /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python. Read docs protocol/status, study status.json, handoff_update_364.txt and closure_record_364.json first. Check actual workers before launches. All357\u2013363 work is COMPLETE. Session73038 returned ACTUALexit0; PID1243593 ended. The active_run_361/handoff_running_361 snapshots are preserved HISTORY, no longer live. Do NOT restart/extend361, rerun357\u2013360/362, run failed-path353, repeat351/344\u2013348/330\u2013340, passive303v2, physical273 or completed investigations. User renewed continuation after subscription upgrade. Ordinary progress quiet; notify meaningful failure/completion/input. No promotion. Inspect compilation/exit status before dependent steps.\n\nBest verified current_retention_09 remains64/72clean,70stable,8slipping,2housing. All64protected; all8unresolved. MainPPO63111/63117 and freshholdout UNSTARTED. This round adds ZERO physics, settling, full20s episodes, diagnostic prefixes, aborted physical attempts, actual command-schedule ticks, policy-optimizer updates or video motion. Latestphysical273 remains rejected; selected36/+15 cases0/1 hover withZEROlegal load/hold/quiet release. No-slip hover is NOT sitting. No new72-case retention.\n\n361v2 ended2026-10-18T02:49:05.214773UTC after ONE30-iteration/125-evaluation reduced-coordinate SLSQP run: successFALSE, Iteration limit reached. No restart/extension/domain-failure recovery. 28 callback records include an infeasible short-time trial; never select a callback by time alone. Final objective13.637730968010088s FAILS13.5 and is INFEASIBLE, neither an executed schedule nor an optimized lower bound. reduced_path_exit_361.json records actual process exit0 separately from optimizer failure. Audit362 and report363 each executedONCE with actualexit0; postprocessing evidence in reduced_path_postprocessing_363.json.\n\nNEW361 result: all115 sampled geometry knots PASS, housing3.731078343mm, CoP5.499967119mm, maxfootposition.841101836mm, maxorientation.498543667deg, interior modeled swingsole13mm. These are sampled offline cooked50 screens, not continuous/live-shape or physical support certificates. Commands FAIL: margin.029974959447142013rad<.03 (doNOTround), effortutilization.815801913;14 knots have negative corner fractions retained. Reduced NLP/time FAIL: normalized hover residual.002845536566, mininequality\u2212.137730968010. Actual hover12.034146438792mm instead of12mm. Linear desiredtarget lower headroom\u2212.007140508953rad at99leftankleroll. Dependent lefthiproll lower planningbound fails by4.452581849e\u22127rad at98. No actual float32 filter/runtime/second-placement/parent/balance/bias preparation or physicaltrial followed failed gates.\n\nIndependent362 PASSED arithmetic only:115geometry/command knots,16jointfinite-difference work each, all19760inequalities and1normalizedhovereq, initial/fixed commands/fingers/12unchangedposes, force-null/equilibrium and dependentplanning bounds. Maxgeometry2.151057e\u221216,work6.608967e\u22129Nm,equilibrium6.106227e\u221215,eqreplay6.938894e\u221215,ineq2.220446e\u221216,local5.481726e\u221216. Maxkinematic residual7.571721e\u221214. PhysicaladmissionFALSE. Audit reports .15-only pose/command metrics13.457874/11.536237s; those omit reserved/quiet/normal/headroom requirements and are NOT admission.\n\nreduced_saved_constraint_groups_364.json only indexes already-audited final arrays; no model/projection/optimizer/audit repeated. All13groups cover19760ineq. Increasing/decreasing rate residual minima\u22125.152892e\u22125/\u22128.969033e\u22125rad persegment; lowerlinearheadroom residual\u2212.000709023282rad*s; normaldescent violation8.690609533micrometres; phase-order\u22121.138488968e\u22127. Raw target expression and mixed-unit residual groups are distinct; don't rank unlike units or fit control offsets. Explicit source arrays remain unchanged.\n\n361 formulation retained COMPLETE115knots for36cm/+20 case2, ONEplacement;206independent descent/orientation phases plus force-null coordinates/114times,912declared694freevars. It eliminates1442fixed-foot/COM equations by14dependentcoordinates(rootxy+12legangles) per103poseknots inside every evaluation; implicit-function derivatives. Originalfeet/COM/140mmstep/24.2745826mmlift/endpoint/\u2212.35armrule remain. Initial/104\u2013114 endpoint-loadposes exact330. InternalNewton max10iterations/9halvings,1e\u221213 residual; internal trialplanningbound violations are not commands and outerbounds remain. Fullgeometry final mandatory rejection, not differentiatedNLP. Anklepitch ANDroll nominal.1125 +.0375feedback,others.15; .03desiredmargin/.1filter,12mmhover/.5syntheticquiet/6mm/sdescent retained. Linear u_end=cmd_end+.18*slope and onefloat32ULP interior research envelope do not change physical limits or certify exactfilter. Assumed seatloadZEROpositivegap/0\u2013.1BWonlyzero-gap; rightfootzero prelift/swing. No extra feedbackauthority. Saved1s developmentfixture is offlineONLY, never runtimeinput.\n\nCompleted357/358: all103poseknots each330/344/351=309local14x14 Jacobians; explicit nondimensionalization root.1m/joint1rad,position/COM.1m/orientation.2. Allrank14, maxcondition11.213659815; numericalrank1e\u221210only. Each saved351knot projected once atfixedphases with boundedNewton12iterations/9halvings,tol1e\u221210 and originalplanningbounds; all103 locally pass. Independent358 analyticalbody-twist4326dependent+618phasecolumns and all103savedoutputs, no projectionrerun. Errors2.036e\u221210/1.185e\u221210,tangent2.857e\u22129,condition2.265e\u22129. Local kinematic feasibility is not dynamics/global feasibility or proven cause of dense351failure.\n\nCompleted359v2/360 evaluates saved357projection with351phases/cornerforcesEXACT,115knots, no newprojection/optimization. Geometrypasses, commands.029961109rad and reserved/normal/quiet13.843043118s FAIL. Hover/headroom/rate/negativeforce violations preserved. Original359 firstmetric missing-helper-sides failure is preserved;v2 defines unchanged two-side list. Original361preparation failed derivativeassert BEFOREanyoptimizer because fixture included fixedpadding/endpointslots; original error magnitude UNAVAILABLE. V2 fixture uses freecoords only, tighter inner1e\u221213 tolerance, unchanged2e\u22126 derivative acceptance/physicalcriteria. Preparation361 passed4.364948e\u22128 directionalerror, initialeq9.361e\u221214/command7.042e\u221210. No completed scientific/physical run repeated. Original failures protected in projected_helper_scope_recovery_359 and reduced_preflight_recovery_361.\n\nNEXT: kinematic elimination restored sampled geometry but did NOT make the outer constrained optimization feasible. Use saved reduced final/primal arrays and source to distinguish physical/command feasibility from numerical conditioning before ONE separately bounded formulation. A feasibility-first formulation with explicit dimensionless row scales and justified removal of only structurally constant/padded equations is a possible direction, NOT yet designed or admitted. It must retain/recheck every original nonconstant constraint, full geometry, command margin, reserved rates, exact forward-filter headroom, hover/normal timing and13.5 limit. DoNOT restart/extend361, select its infeasible short-time callback, force-only tune these fixed poses, round residuals into pass or blindly retune weights. No local failure is global impossibility. Before physical trial require completepath geometry/command/time AND bothplacements/current-inputruntime/filter/frozenparent/balance/bias prep. Preserve164/207v2/175/130/currentvalidity/totalfeedbackauthority/rates/fingers. No gain/Ki scaling, extra hip/pitchFEEDBACKauthority, FDqd/sensor/truth substitution, solver/materialchange, footdrag/teleport, blind pose/arm/rate sweep or endpoint-only launch. Missing internal solver stages must NOT restart endless passive diagnostics.\n\nEarlier351/344/330 timing failures and prior326v2/327 source provenance remain complete/read-only. All unknown preparedCFM/rest/bias/frictionpatch/stagevelocity/impulse/effectivecounts cannot be recovered from259/303endpoint records; don't fit them/defaultzero/changeflags. Public110.0/PhysX5.8 notproveninstalled110.3.2. 303v2/259/246/198exactprefixes and failed189 remain unchanged; all37backendgains/armature/limits matchedconfigured, ankle160/4,.01,20Nm,friction0. IncomingwrenchTOTALtransmitted notmotoronly. Conditional312velocitynotmeasuredstage/quietpass; ideal317/290failedrawvelocityprediction; static255rollwrenchNOTfeedbackadmitted. Authored290inertia notliveeffective,sixfinger1ULPmassdifferencesretained. Contact/bodytruth evaluationONLY. No source/passive reruns.\n\nLocal report /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_363/readable.html, URLhttp://127.0.0.1:8807/progress_report_363/readable.html. 10originalmanifests/35entries +2supplemental readableentries locallyhashverified; bothplots, scope/formulation/failedgates/audit/recoveries/115table/CSV/physicaleffort and loaded58.4svideo visuallyinspected. Unexecuted original363draft retained; v2 subtitle corrected BEFOREfirst reportexecution to avoid callingmodelobjective executable. Supplementalreadable insertswhitespaceONLY, numeric tokens/tags/attributes/canonicalnonwhitespace exact; originalHTML/plots/data unchanged. One localSCPsandbox denial occurred BEFOREcopy, authorized escalation succeeded. No new calculation/audit/physics recovery this turn.\n\nVideo307 CURRENTunchanged: /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/all_attempts_video_307/all_attempts.mp4;58.4s4K15fpsH264,44sources864full20strials503clean361failed,192prefixes120abortednomotion49panels. Independent3081056records624firstevents. XYZWLINKpose schematic+modelheadCOM,notcamera;.1sposesbracket.02slabels. Historical repeated totalsnotcontrolleraccuracy. No newmotion357\u2013363;doNOTrerenderunchangedvideo. Futurephysical/PPOmustupdateALLattemptcoverage.\n\nNo new effort result. Approximate implicit-PD telemetry is NOT actual solver/hardware motor effort, energy or global optimum; no failedhover/prefix/fragmentsavings. Best64protected/all8unresolved. No policy promotion. AutomationACTIVE; taskunfinished. Offline path/audit/report completion is not taskcompletion. Closure364 records exact finalcounts/workers; check actualprocesses before nextlaunch.\n\nGoverning requirements remain unchanged:\n\nController/physical constraints remain exact. Quiet175 requires25 consecutive CURRENT samples with moving raw qd<=.05rad/s, pitch error<=.5deg, abs gyro-y<=.02rad/s, fresh geometry and130 guards before12mm hover release; normal descent<=.006m/s. No finite-difference velocity substitution, timer release or early unloading. Desired margin.03, filter.1, global rate.15rad/s and14fixed fingers remain. Existing269 roll gain.025s,cap.01 inside per-ankle abs(pitch)+abs(roll)<=.06;207 pitch priority; feedback.0375 plus nominal.1125 stays within.15. Frozen59117 acts at15s selected/11\u201315 elsewhere; early61111 is omitted only in isolating probes. Physical273's unselected full20s exactness FAILED (body.769615mm,q.000864387rad,command.000684381rad); no equality waiver. Static force/foot estimates do not establish realized forces or common-slip detection.\n\nBest09 uses frozen early61111 at6\u20137s and resting59117 at11/15s with guardednormal3s. Routing: measured height<38cm and slope>10.5deg OR height<41.5cm and slope>18deg. Old bank22stable/20clean/4slip/2housing; transfer24/22/2/0; recent24/22/2/0. Four gains beyond original60 union are37/+11.25 and36.5/+12.5, twice each. Eight remaining cases are36/+15,+20;37/+16.25;36.5/+17.5, twice each. Fifty warnings and22strict-clean cases. Isolating mild slips are not current-policy regressions.\n\nNever relax materials, all-tick slip, forbidden-body OR illegal-patch contact UNION, physical failure or stable support. Rest requires tilt<=40deg AND legal seat normal load>=.05BW plus original criteria;55deg fall and38deg model reserve are separate. Robot friction.5/.5, seat/floor.8/.6; legacy.6 ratio is NOT capacity and.90 warnings stay separate. Runtime uses current measured sensors/reference/static model only; truth is reset/reward/evaluation only. Cooked50 offline collision is not a live-shape certificate or perception self-mask; frozen bridge inertia, raw/cooked5\u20136mm difference and unknown offsets remain. Render-coupling27 exactness failure remains unwaived.\n\nPPO is gated on ALL8 failures removed AND ALL64 successes retained in72 matched full20s development trials. Then freeze63111/63117: eight complete-episode updates per seed, ONE uninterrupted optimizer per seed;24envs192,000active+4,200indexed warmup=196,200/seed,392,400total;1,200initial settling separate. Document exact controls/windows/rewards/sensor inputs/accounting. Verify zero/global/indexed replay, actual channels, finite changed actor/critic, CPU optimizer replay, fingers/bounds, smoke retention and fresh main exactly smoke INITIAL, not trained smoke weights. No extra/post-freeze training or promotion. Both full-budget finals and development selections precede ANY fresh holdout. Fresh24 stays CLOSED through repair/normalization/training/selection:36.75/37.75/39.5/41.5cm \u00d7positive8.75/13.75/18.75deg, twice. Prior holdouts are development; negative slopes excluded.\n\nCompare matched starts/full20s with physical failure/slip/contact union/clean/stable/lost-gained first, warnings separate. Effort ONLY common COMPLETE clean successes in BOTH controllers and strict subsets: all37joints whole20/final10/final5 squared/absolute/time-mean instantaneous RMS, leg/upper contributions. Applied torque is approximate implicit-PD telemetry, NOT solver/hardware effort, energy or global optimum. No failed-hover/prefix/fragment savings. No new effort result this round; old273 versus bestnormal14 common-clean whole20+0.0126472%,final10+0.0264487%,final5+0.0794278% are unselected-success differences, not repair/PPO gains. Reference-assisted simulation, two seeds and nearby rigid slabs do not establish unassisted/real-robot/anywhere sitting or leaning; leaning has not broadened.\n\n\n\n\nAutomation ACTIVE; task unfinished. Pause ONLY after actual repair, new PPO comparison and updated complete subminute video delivered. Offline path/audit/report completion is NOT task completion. Closure356 records preservation counts and worker state.\n"
+}

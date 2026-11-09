@@ -1,0 +1,119 @@
+{
+  "kind": "source_only_return_design",
+  "heartbeat_utc": "2026-10-20T08:22:21.691Z",
+  "status": "A candidate exact residual evaluator is specified algebraically. No implementation, point evaluation, independent audit, complete resource freeze or new witness construction exists.",
+  "purpose": "Address the finite-return cost identified in continuation_assessment_20261020_0752.json. This is enabling design, not a repaired controller or permission to restart a terminal solver.",
+  "current_state": {
+    "remote_checkpoint_utc": "2026-10-20T08:22:40.278741+00:00",
+    "remote_tool_chunk": "0f6b04",
+    "actual_exit": 0,
+    "workers": [],
+    "protocol_status_handoff_hashes_match_transfer_checkpoint": true,
+    "scientific_checkpoint": 603,
+    "last_sealed": 601,
+    "report": 600,
+    "video": 307,
+    "clean": "64/72",
+    "stable": 70,
+    "slipping": 8,
+    "housing_contacts": 2,
+    "counts_overlap": true,
+    "ppo_and_fresh_holdout_started": false,
+    "repair_complete": false
+  },
+  "observed_return_workload": {
+    "method": "Read source text and remote file stat metadata only. No large coefficient file was parsed or scanned.",
+    "stat_utc": "2026-10-20T08:25:17.394337+00:00",
+    "stat_tool_chunk": "576394",
+    "stat_actual_exit": 0,
+    "bytes": {
+      "balance_block_preparation_594/rational_inequalities.jsonl": 5066642261,
+      "balance_block_preparation_594/rational_equalities.jsonl": 20774,
+      "balance_block_preparation_594/block_graphs.jsonl": 71461140,
+      "foot_block_preparation_586/rational_inequalities.jsonl": 478114186,
+      "foot_block_preparation_586/rational_equalities.jsonl": 9843923,
+      "foot_block_preparation_586/block_graphs.jsonl": 50100271,
+      "affine_output_preparation_578/rational_inequalities.jsonl": 195471723,
+      "affine_output_preparation_578/affine_graph.jsonl": 24370901
+    },
+    "scope": "On its unexecuted successful-return branch, 598 reads these eight text files for three exhaustive exact residual evaluations and the composite lift. This excludes array/map reads, input hashing, residual serialization and the remaining system checks.",
+    "conclusion": "A solver-row reduction does not automatically reduce the inherited exhaustive return workload. File sizes do not prove that the 45-second allowance is impossible; no return timing or speedup has been measured."
+  },
+  "candidate": {
+    "name": "Evaluate reduced inequality residuals through exact source-row identities",
+    "symbols": {
+      "T578": "The saved exact affine map from 31016 retained coordinates to all 78791 source572 coordinates.",
+      "T586": "The saved exact affine foot map from 14636 coordinates to the 31016 coordinates of 578.",
+      "T594": "The saved exact affine moment/gap map from 10541 coordinates to the 14636 coordinates of 586.",
+      "A572_b572": "Immutable zero_face_preparation_572/matrix.npz and arrays.npz rhs, interpreted as exact binary64 rationals.",
+      "P586_P578": "Projection by foot_block_preparation_586/maps.npz original_columns and affine_output_preparation_578/maps.npz retained_columns."
+    },
+    "premises": [
+      "Inherited 579, 587 and 595 audits establish exact affine substitution and preservation of every inequality row in its source order.",
+      "The maps, source rows and certificates belong to the same immutable initial zero-face system. No changed-state or nonzero-ceiling extrapolation is permitted.",
+      "Every map and dot product in the proposed evaluator uses exact rational intermediates. No float matrix product or rounded intermediate stands in for an exact identity."
+    ],
+    "identities": [
+      "A594*u-b594 = A572*T578(T586(T594(u)))-b572.",
+      "A586*v-b586 = A572*T578(T586(v))-b572.",
+      "A578*z-b578 = A572*T578(z)-b572."
+    ],
+    "fixed_target_associations": "All 265967 inequalities, in preserved source572 order; original_row_ids.npy propagates unchanged through 578, 586 and 594. These are the complete existing target sets, not a selected row-family or eligibility scan. Runtime associations would still need explicit frozen verification.",
+    "evaluation_sequence": [
+      "For a new admissible backend u, form the exact composite extension x_star=T578(T586(T594(u))). Preserve u bitwise. Its source572 residual vector gives the exact594 inequality residuals.",
+      "Construct w by rounding each of the 68250 eliminated coordinates of x_star once, retaining all backend coordinates unchanged. Apply every existing finite-return rejection rule.",
+      "Set v=P586*w and form the separate exact check vector T578(T586(v)). Its source572 residuals give exact586 inequality residuals at the FINAL once-rounded projection v.",
+      "Set z=P578*w and form the separate exact check vector T578(z). Its source572 residuals give exact578 inequality residuals at the FINAL once-rounded projection z.",
+      "The two separate check vectors are only algebraic evaluation objects. Never substitute either for w, select it as a candidate, or use x_star's residuals to certify the rounded586/578 projections.",
+      "Keep equality, bound, sign, stationarity and absolute-gap checks, numeric596 checks, and all source572/570/546/516/full490 checks at their required points. Keep the mandatory interior solve, exact positive eta, finite encoder, model, runtime and physical gates."
+    ],
+    "success_test": "For every required row and point, a separately frozen independent direct evaluator must obtain the identical exact rational residual, with identical row associations and unchanged rounded candidate bytes. All original admission gates must still pass.",
+    "failure_test": "Any missing association/certificate, mismatched residual, changed candidate byte, nonfinite conversion, incomplete coverage or resource-limit failure rejects the evaluator or candidate. No fallback to rounded residuals, tolerances, clipping or solver retries."
+  },
+  "cost_assessment": {
+    "possible_saving": "Avoid materialized reduced-inequality JSON parsing and dense exact dot products during the return evaluation. Initial input-integrity reads remain charged; no requirement is moved outside the clock.",
+    "additional_work": "Beyond the exact composite lift needed for the original return, the rounded586 check needs another foot-plus-auxiliary extension, and the rounded578 check needs another auxiliary extension. Three exhaustive source572 sparse inequality evaluations are required.",
+    "symbolic_product_count": "3*N572 + G594 + 2*G586 + 3*G578, where N572 is the number of source572 inequality coefficient terms and each G is the number of coefficient terms actually visited by its exact map evaluator. This excludes divisions, additions, conversions, equality/KKT checks, hashing, allocations and serialization.",
+    "unresolved": [
+      "Complete operation counts for a specific implementation, including stored zero graph entries.",
+      "Rational bit growth at actual finite inputs, peak memory and output storage.",
+      "Independent direct-audit resource cost and complete total wall-clock accounting.",
+      "A substantively new primary/interior witness construction. A cheaper checker alone does not supply a candidate or justify an old solver restart."
+    ],
+    "measured_wall_time_or_speedup": null,
+    "full_resource_freeze_complete": false
+  },
+  "source_checks": {
+    "local_tool_chunk": "2b3466",
+    "remote_tool_chunk": "576394",
+    "matching_hashes": {
+      "low_seat_balance_return_598.py": "52e1fac5b69077a513391cf6f31551f6d4ce37414457ac5356bb90722741168f",
+      "solve_low_seat_balance_path_lp_598.py": "6b6ecc3e1b689040ae6c3c82d9efff42bbd7f28be0300a394f6ca3e4ff381477"
+    },
+    "additional_source_text": [
+      "low_seat_affine_output_578.py",
+      "low_seat_foot_block_586.py",
+      "low_seat_balance_block_594.py"
+    ]
+  },
+  "preservation": {
+    "prior_assessment": "continuation_assessment_20261020_0752.json",
+    "governing_context": "../task_transfer_2026-10-20/governing_context.txt",
+    "historical_failures_and_all_constraints_inherited": true,
+    "scientific_sources_results_status_unchanged": true,
+    "automation_unchanged_active": true,
+    "local_only": true,
+    "remote_metadata_writes": 0
+  },
+  "accounting": {
+    "scientific_imports": 0,
+    "saved_coefficient_or_certificate_tests": 0,
+    "new_point_or_graph_evaluations": 0,
+    "matrix_assemblies": 0,
+    "solver_model_physics_policy_runs": 0,
+    "completed_scientific_arithmetic_replayed": 0,
+    "new_execution_failure": false,
+    "launch_ready": false,
+    "task_complete": false
+  }
+}

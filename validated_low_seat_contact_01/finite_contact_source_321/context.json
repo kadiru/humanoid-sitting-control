@@ -1,0 +1,30 @@
+{
+  "scope": "Read-only public finite unilateral normal/friction contact equations; no installed binary equivalence or internal-state capture.",
+  "commit": "fc1018a3745664a1db2b95ce03fb5e91eb585f2e",
+  "installed_extension": "110.3.2; equivalence unproven",
+  "articulation_call": "solverMultiBlockTGS.cu:916 -> solver.cuh:421",
+  "normal": "solver.cuh:486-544: effective response includes CFM; separation plus accumulated spatial motion minus target-velocity elapsed-time bias; nonnegative bounded accumulated normal impulse.",
+  "friction": "solver.cuh:556-648: patch normal impulse bounds paired tangential impulse norm; static/dynamic friction and anchor drift enter. Query points do not expose this patch pairing.",
+  "query_scaling": "Installed API dt=.005 converts impulses to forces; returned arrays contain end-of-step contact report, not each internal iteration.",
+  "installed_api_path": "/home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/isaacsim/extscache/omni.physics.tensors-110.3.2+110.3.0.lx64.r.cp312.u7f4/omni/physics/tensors/api.py",
+  "installed_api_sha256": "1ba654210857a63b98236512e5f225723c3eb1dee64e867eaa4fade0578ccb7b",
+  "unavailable": [
+    "Effective internal position/velocity stages and ordering",
+    "Per-stage response/delta motion/velocity",
+    "Prepared separation/rest-distance/bias coefficient/maxPenBias/minPen",
+    "CFM and response columns used internally",
+    "Normal/friction patch membership and cached anchors",
+    "Per-stage accumulated impulses and friction broken flags",
+    "Exact friction combine parameters for each solver patch",
+    "Installed binary equivalence to pinned source"
+  ],
+  "not_admitted": [
+    "Treating endstate velocity with reported impulse as a per-stage complementarity certificate",
+    "Matching each friction point to a normal point by array order",
+    "Calling sum tangential/normal force a capacity utilization without patch coefficients",
+    "Using source equations as a verified installed forward model"
+  ],
+  "physics_ticks": 0,
+  "controller_changes": false,
+  "transport_note": "First SSH fetch was denied by the local sandbox before remote execution; same fetch succeeded via the existing authorized SSH escalation. A later read-only source command omitted project cwd for one script read and exited2; no output or job was changed."
+}

@@ -1,0 +1,625 @@
+{
+  "utc": "2026-10-17T15:58:52.334070+00:00",
+  "rows": [
+    {
+      "case": 0,
+      "evaluations": 39,
+      "budget_reached": true,
+      "optimizer_message": "bounded evaluation cap",
+      "best_coarse": {
+        "index": 34,
+        "parameters": [
+          -0.13382720377355053,
+          0.0,
+          -0.0044589493119288675,
+          0.2525613749909242,
+          -0.008636370891299615
+        ],
+        "optimization_variables": [
+          -0.13382720377355053,
+          -0.0044589493119288675,
+          0.2525613749909242,
+          -0.008636370891299615
+        ],
+        "model_passed": true,
+        "other_research_passed": true,
+        "constraints": [
+          0.032505000567834244,
+          3.285332205588132e-07,
+          0.10276108929998859,
+          0.0029999963502223273,
+          0.008726638089843987,
+          0.22446108341531937,
+          0.633867856479161,
+          0.027659729016510263,
+          0.09228886127089206,
+          0.03975669245421583
+        ],
+        "clearance_m": 0.00311153441758859,
+        "maximum_assumed_foot_load_difference_BW": 0.007711138729107947,
+        "maximum_ankle_roll_command_change_rad": 0.00024330754578417177,
+        "summary": {
+          "geometry_passed": true,
+          "failed_geometry_knots": [],
+          "knots": 19,
+          "minimum_housing_clearance_mm": 3.11153441758859,
+          "max_foot_position_error_mm": 3.649777672844159e-06,
+          "max_foot_orientation_error_deg": 4.6811383306366586e-07,
+          "minimum_command_margin_rad": 0.25446108341531937,
+          "commands_passed": true,
+          "command_polyline_time_s": 8.812524871335235,
+          "time_gate_passed": true,
+          "endpoint_model_passed": true,
+          "actual_filter_checked": false,
+          "load_is_measured": false,
+          "whole_sampled_path_checked": true,
+          "case": -1,
+          "geometry_unchanged": true,
+          "failed_knots": [],
+          "maximum_effort_utilization": 0.366132143520839,
+          "first_command_change_max_rad": 0.019276024394390245,
+          "max_adjacent_ankle_torque_change_Nm": 1.505093094762306,
+          "first_ankle_pitch_torque_Nm": [
+            [
+              7.32264287041678,
+              7.235171311095194
+            ],
+            [
+              7.171322808570875,
+              7.083834279739847
+            ]
+          ]
+        }
+      },
+      "dense_summary": {
+        "geometry_passed": true,
+        "failed_geometry_knots": [],
+        "knots": 91,
+        "minimum_housing_clearance_mm": 3.111534417591836,
+        "max_foot_position_error_mm": 3.6169163155608815e-06,
+        "max_foot_orientation_error_deg": 1.121938772598035e-07,
+        "minimum_command_margin_rad": 0.2544491398275493,
+        "commands_passed": true,
+        "command_polyline_time_s": 8.821610312854167,
+        "time_gate_passed": true,
+        "endpoint_model_passed": true,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": -1,
+        "geometry_unchanged": true,
+        "failed_knots": [],
+        "maximum_effort_utilization": 0.366132143520839,
+        "first_command_change_max_rad": 0.0008048151056797015,
+        "max_adjacent_ankle_torque_change_Nm": 0.4455075560495749,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.32264287041678,
+            7.235171311095194
+          ],
+          [
+            7.316350693846302,
+            7.228878320165646
+          ]
+        ]
+      },
+      "model_passed": true,
+      "research_pass": true,
+      "dense_research_constraints": [
+        0.03243966918539494,
+        3.285332205588132e-07,
+        0.10272878383441805,
+        0.0029999963830836846,
+        0.00872664430181909,
+        0.2244491398275493,
+        0.633867856479161,
+        0.02765972901651032,
+        0.09228886127388405,
+        0.03975669245421436
+      ],
+      "maximum_assumed_foot_load_difference_BW": 0.007711138726115951,
+      "maximum_ankle_roll_command_change_rad": 0.00024330754578564092,
+      "schedule": {
+        "checked": true,
+        "synthetic_quiet_and_load": true,
+        "duration_s": 11.040000000000001,
+        "ticks": 552,
+        "complete": true,
+        "time_gate_passed": true,
+        "physical_admission": false
+      }
+    },
+    {
+      "case": 2,
+      "evaluations": 40,
+      "budget_reached": true,
+      "optimizer_message": "bounded evaluation cap",
+      "best_coarse": {
+        "index": 4,
+        "parameters": [
+          -0.17421941980338063,
+          0.0,
+          0.0,
+          0.33187887301558855,
+          1e-05
+        ],
+        "optimization_variables": [
+          -0.17421941980338063,
+          0.0,
+          0.33187887301558855,
+          1e-05
+        ],
+        "model_passed": false,
+        "other_research_passed": false,
+        "constraints": [
+          -0.0007270454633836352,
+          0.04871265888052202,
+          0.10554094458464683,
+          0.002999996463402053,
+          0.008726645738624389,
+          0.22976562409843007,
+          0.4776342043621249,
+          -0.005,
+          0.09229416085005296,
+          0.03936389016327962
+        ],
+        "clearance_m": -0.000573758539596466,
+        "maximum_assumed_foot_load_difference_BW": 0.007705839149947047,
+        "maximum_ankle_roll_command_change_rad": 0.0006361098367203862,
+        "summary": {
+          "geometry_passed": false,
+          "failed_geometry_knots": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "knots": 19,
+          "minimum_housing_clearance_mm": -0.5737585395964659,
+          "max_foot_position_error_mm": 3.536597947144729e-06,
+          "max_foot_orientation_error_deg": 2.9870997547384294e-08,
+          "minimum_command_margin_rad": 0.25976562409843007,
+          "commands_passed": false,
+          "command_polyline_time_s": 9.792980461372101,
+          "time_gate_passed": true,
+          "endpoint_model_passed": false,
+          "actual_filter_checked": false,
+          "load_is_measured": false,
+          "whole_sampled_path_checked": true,
+          "case": -1,
+          "geometry_unchanged": true,
+          "failed_knots": [
+            13,
+            14,
+            15,
+            16
+          ],
+          "maximum_effort_utilization": 0.5223657956378751,
+          "first_command_change_max_rad": 0.021274242884575134,
+          "max_adjacent_ankle_torque_change_Nm": 2.5936645385332593,
+          "first_ankle_pitch_torque_Nm": [
+            [
+              7.3227377675681575,
+              7.235293090202627
+            ],
+            [
+              7.0870585222247895,
+              6.999682992508072
+            ]
+          ]
+        }
+      },
+      "dense_summary": {
+        "geometry_passed": false,
+        "failed_geometry_knots": [
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90
+        ],
+        "knots": 91,
+        "minimum_housing_clearance_mm": -0.5737585395896595,
+        "max_foot_position_error_mm": 3.8093151596236815e-06,
+        "max_foot_orientation_error_deg": 3.994670290598473e-08,
+        "minimum_command_margin_rad": 0.25976562409843007,
+        "commands_passed": false,
+        "command_polyline_time_s": 9.879527357617881,
+        "time_gate_passed": true,
+        "endpoint_model_passed": false,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": -1,
+        "geometry_unchanged": true,
+        "failed_knots": [
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81
+        ],
+        "maximum_effort_utilization": 0.5253098402637211,
+        "first_command_change_max_rad": 0.0008875081275368513,
+        "max_adjacent_ankle_torque_change_Nm": 1.4147043524327678,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.3227377675681575,
+            7.235293090202627
+          ],
+          [
+            7.312917851941564,
+            7.22547607051943
+          ]
+        ]
+      },
+      "model_passed": false,
+      "research_pass": false,
+      "dense_research_constraints": [
+        -0.000727045463325973,
+        0.04871265888052202,
+        0.10554094458471552,
+        0.0029999961906848403,
+        0.008726645562770157,
+        0.22976562409843007,
+        0.4746901597362789,
+        -0.005000000000000007,
+        0.09229416085005296,
+        0.039363890163286445
+      ],
+      "maximum_assumed_foot_load_difference_BW": 0.007705839149947047,
+      "maximum_ankle_roll_command_change_rad": 0.0006361098367135545,
+      "schedule": {
+        "checked": false,
+        "physical_admission": false
+      }
+    },
+    {
+      "case": 6,
+      "evaluations": 40,
+      "budget_reached": true,
+      "optimizer_message": "bounded evaluation cap",
+      "best_coarse": {
+        "index": 30,
+        "parameters": [
+          -0.13151084194018772,
+          0.0,
+          -0.0034579573418886,
+          0.27773314226451135,
+          -0.004534164463123436
+        ],
+        "optimization_variables": [
+          -0.13151084194018772,
+          -0.0034579573418886,
+          0.27773314226451135,
+          -0.004534164463123436
+        ],
+        "model_passed": false,
+        "other_research_passed": true,
+        "constraints": [
+          0.035750258696076495,
+          8.989934403985655e-07,
+          0.1031184240309205,
+          0.00299999497970772,
+          0.008726637048574473,
+          0.2281658942905204,
+          0.6338398131710916,
+          0.027653538098265696,
+          0.09200969099615611,
+          0.03984270368976535
+        ],
+        "clearance_m": 0.0029279878564556975,
+        "maximum_assumed_foot_load_difference_BW": 0.007990309003843898,
+        "maximum_ankle_roll_command_change_rad": 0.00015729631023465138,
+        "summary": {
+          "geometry_passed": false,
+          "failed_geometry_knots": [
+            16,
+            17,
+            18
+          ],
+          "knots": 19,
+          "minimum_housing_clearance_mm": 2.9279878564556974,
+          "max_foot_position_error_mm": 5.020292279847571e-06,
+          "max_foot_orientation_error_deg": 5.277741815005409e-07,
+          "minimum_command_margin_rad": 0.2581658942905204,
+          "commands_passed": true,
+          "command_polyline_time_s": 8.878683942302953,
+          "time_gate_passed": true,
+          "endpoint_model_passed": false,
+          "actual_filter_checked": false,
+          "load_is_measured": false,
+          "whole_sampled_path_checked": true,
+          "case": -1,
+          "geometry_unchanged": true,
+          "failed_knots": [],
+          "maximum_effort_utilization": 0.36616018682890833,
+          "first_command_change_max_rad": 0.019337189739746574,
+          "max_adjacent_ankle_torque_change_Nm": 1.5255022225359332,
+          "first_ankle_pitch_torque_Nm": [
+            [
+              7.323203736578167,
+              7.235786616952473
+            ],
+            [
+              7.177979978224912,
+              7.090480081989937
+            ]
+          ]
+        }
+      },
+      "dense_summary": {
+        "geometry_passed": false,
+        "failed_geometry_knots": [
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90
+        ],
+        "knots": 91,
+        "minimum_housing_clearance_mm": 2.9279878564589734,
+        "max_foot_position_error_mm": 3.583850619243588e-06,
+        "max_foot_orientation_error_deg": 1.1633235203867e-07,
+        "minimum_command_margin_rad": 0.2581653866280561,
+        "commands_passed": true,
+        "command_polyline_time_s": 8.88688485115692,
+        "time_gate_passed": true,
+        "endpoint_model_passed": false,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": -1,
+        "geometry_unchanged": true,
+        "failed_knots": [],
+        "maximum_effort_utilization": 0.36616018682890833,
+        "first_command_change_max_rad": 0.0008070889132569259,
+        "max_adjacent_ankle_torque_change_Nm": 0.45154865787057386,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.323203736578167,
+            7.235786616952473
+          ],
+          [
+            7.317162313760454,
+            7.229741692663381
+          ]
+        ]
+      },
+      "model_passed": false,
+      "research_pass": false,
+      "dense_research_constraints": [
+        0.03566574136847238,
+        8.989934403985655e-07,
+        0.1030860794471826,
+        0.002999996416149381,
+        0.008726644229589077,
+        0.2281653866280561,
+        0.6338398131710916,
+        0.027653538098265738,
+        0.09200969099615589,
+        0.03984270368976354
+      ],
+      "maximum_assumed_foot_load_difference_BW": 0.00799030900384412,
+      "maximum_ankle_roll_command_change_rad": 0.00015729631023645997,
+      "schedule": {
+        "checked": false,
+        "physical_admission": false
+      }
+    },
+    {
+      "case": 10,
+      "evaluations": 40,
+      "budget_reached": true,
+      "optimizer_message": "bounded evaluation cap",
+      "best_coarse": {
+        "index": 35,
+        "parameters": [
+          -0.1315430920872243,
+          0.0,
+          -0.0019125385329833607,
+          0.28763011366846214,
+          0.0017310072522936245
+        ],
+        "optimization_variables": [
+          -0.1315430920872243,
+          -0.0019125385329833607,
+          0.28763011366846214,
+          0.0017310072522936245
+        ],
+        "model_passed": false,
+        "other_research_passed": true,
+        "constraints": [
+          0.036346319782754065,
+          9.602988211565577e-08,
+          0.1028942963100283,
+          0.0029999948921810935,
+          0.008726635228164187,
+          0.2293778094092169,
+          0.6338412616545049,
+          0.02764177588137164,
+          0.0909055852315254,
+          0.03991217529156294
+        ],
+        "clearance_m": 0.0017000819850018591,
+        "maximum_assumed_foot_load_difference_BW": 0.009094414768474612,
+        "maximum_ankle_roll_command_change_rad": 8.782470843705908e-05,
+        "summary": {
+          "geometry_passed": false,
+          "failed_geometry_knots": [
+            16,
+            17,
+            18
+          ],
+          "knots": 19,
+          "minimum_housing_clearance_mm": 1.7000819850018591,
+          "max_foot_position_error_mm": 5.107818906624663e-06,
+          "max_foot_orientation_error_deg": 6.320760078914863e-07,
+          "minimum_command_margin_rad": 0.2593778094092169,
+          "commands_passed": true,
+          "command_polyline_time_s": 9.141843784253528,
+          "time_gate_passed": true,
+          "endpoint_model_passed": false,
+          "actual_filter_checked": false,
+          "load_is_measured": false,
+          "whole_sampled_path_checked": true,
+          "case": -1,
+          "geometry_unchanged": true,
+          "failed_knots": [],
+          "maximum_effort_utilization": 0.36615873834549506,
+          "first_command_change_max_rad": 0.019837396939480723,
+          "max_adjacent_ankle_torque_change_Nm": 1.54762373273588,
+          "first_ankle_pitch_torque_Nm": [
+            [
+              7.323174766909902,
+              7.235459298251309
+            ],
+            [
+              7.18246138263626,
+              7.094550912901449
+            ]
+          ]
+        }
+      },
+      "dense_summary": {
+        "geometry_passed": false,
+        "failed_geometry_knots": [
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90
+        ],
+        "knots": 91,
+        "minimum_housing_clearance_mm": 1.700081985006519,
+        "max_foot_position_error_mm": 3.838850257822555e-06,
+        "max_foot_orientation_error_deg": 1.3373877911613727e-07,
+        "minimum_command_margin_rad": 0.2593778094092159,
+        "commands_passed": true,
+        "command_polyline_time_s": 9.153040230816401,
+        "time_gate_passed": true,
+        "endpoint_model_passed": false,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": -1,
+        "geometry_unchanged": true,
+        "failed_knots": [],
+        "maximum_effort_utilization": 0.36615873834549506,
+        "first_command_change_max_rad": 0.000827991469466105,
+        "max_adjacent_ankle_torque_change_Nm": 0.4580966248897256,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.323174766909902,
+            7.235459298251309
+          ],
+          [
+            7.3173229412249485,
+            7.229599389739946
+          ]
+        ]
+      },
+      "model_passed": false,
+      "research_pass": false,
+      "dense_research_constraints": [
+        0.03628851503802192,
+        9.602988211565577e-08,
+        0.10285583379348007,
+        0.0029999961611497424,
+        0.008726643925789614,
+        0.2293778094092159,
+        0.6338412616545049,
+        0.027641775881371598,
+        0.09090558523152628,
+        0.03991217529155772
+      ],
+      "maximum_assumed_foot_load_difference_BW": 0.009094414768473724,
+      "maximum_ankle_roll_command_change_rad": 8.78247084422867e-05,
+      "schedule": {
+        "checked": false,
+        "physical_admission": false
+      }
+    }
+  ],
+  "scope": "Bounded OFFLINE centered-stance contact planning, after219\u2013226.\nFixed y=0. Vary root-x/roll/pitch/yaw ONLY within previously documented58 bounds.\nMaximize minimum whole-path housing clearance while enforcing existing gates plus\nseparate research limits on assumed L/R foot-load difference<=.1BW and ankle-roll\ncommand change<=.04rad. This targets the recorded lateral stance/roll association,\nnot a proven cause. Static loads remain assumptions. Max40 unique19-knot checks,\n10 SLSQP iterations, ONE91-knot check for each of four known failing geometries.\nNo simulation, runtime/control modification, optimizer learning, holdout or admission.\n",
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_orientation_refinement_227/revision.json": "3b0bcd4ebf9ed446091c713f3a0efedf8153e6867fa3ae882b228f2bc7d1ab51",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_orientation_227.log": "b6b8dad710267f56bbde6d30895a0a335dc6d74cd424344cf6273fe5a130ae42",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_orientation_refinement_227/coarse_0_00.json": "ae9ddd4e5518e8d9854c9988e21c0f242341696382dad1f022ff97680e7e77e9",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_orientation_refinement_227/coarse_0_01.json": "5b394b1afc0974561b487213cf8910b93bffa2a8d2e6e020749a66177642e26b",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_orientation_refinement_227/coarse_0_02.json": "633eedf9914a77c74bf24b4ec92128774321cf09c2d376d84dd7089446abe9f6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_orientation_refinement_227/coarse_0_03.json": "5eaf9efa3bb48b3b1b498eeffb02f9665c77362f77d31c802b87b60141a962a8",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_orientation_refinement_227/coarse_0_04.json": "33c92fcdba11b778bf73a7deded56172a93acf140d8b60f4bb478cf6b2a465b1",
+    "/home/kadir/humanoid-sitting/scripts/refine_low_seat_centered_orientation_v2_227.py": "fd2541a401a46220a2c24969ff81e686cae86c8b3ac07b0c5ff79a7ced54ae3b",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+    "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json": "69e0920e2bec88a43b7a6dc41d0fc361500d060ef09e3e3a07bb04cdaf569584",
+    "/data/humanoid-sitting-perception/contact_effort_repair_01/plane_calibration.json": "6a6a0f078ced3d3510897e96670c26226dee25d495653a222cf1dd52e97a8009",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/stance_diagnosis_219/results.json": "d4c2765e21f82e39e0daaf37a5f83132ed635f1932692b702d6ed94842e6b722",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_centered_coarse_223.py": "57bf0408d2d4ad44927a267e199d08158ef3c259b6e8ed970cfbec388fa92d30",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_fixed_foot_plan_126.py": "1ebd0014cff6bf3558daf406a304aa523d20143f1d6f4ceeecd14eed27896b63",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_balanced_force_v2_145.py": "d48a9422da8570c69077edbcfe50d79f3f59453541b4128c292e176d49d12425",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_touchdown_path_175.py": "31c0fd2caf366b85249c05b56197722d95bc792269b894cbe538b3d1e8002a7e",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_path_check_221/case_0.json": "2f63c861c67f345ab2247bef5c571ec94e55d5519091cd831d3ed5077311a5c3",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_path_check_221/case_2.json": "6d44d84ce386b914aad25647692cb70a08ad72b90d98aa28d1fdd3a5a0f041eb",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_path_check_221/case_6.json": "a8af75aa47d09cb67ad8155f9f2fb2e57af7ae7d90d14373911b9c3fccfb0f5f",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_path_check_221/case_10.json": "678cda624fa957b2078a3e93cc745736f5a8a7f7ee21cdaf05b874fcc68971de"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "reporting only; no simulation or training change",
+  "failure": "KeyError resolving frozen hash for path /home/kadir/humanoid-sitting/IsaacLab/../scripts/run_supported_transition.py",
+  "cause": "Runner manifest records a path containing ..; protocol keys are canonical absolute paths. The first independent verifier already validated all canonical source hashes.",
+  "repair": "Resolve manifest source and bank paths before lookup; preserve exact bytes and expected hash comparisons. No tolerance change.",
+  "original_sha256": "9045e0644a73f20c943befa5bca285afb3aa8deb4df535aa83c6730079b26524",
+  "repaired_sha256": "79c6c44a7faf8ceef89d4546102446e1e1841aafe6f8af98e0f4d2663f08cbcf",
+  "result": "passed; full supplementary audit saved with strict hash and exact startup comparisons"
+}

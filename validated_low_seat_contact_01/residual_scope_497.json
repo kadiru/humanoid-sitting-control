@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-18T18:38:38.263826+00:00",
+  "scope": "Saved-only implementation and future-use limits; no further matrix/model/map/LP calculation.",
+  "not_dimension_reduction": true,
+  "coordinate_count": 78790,
+  "primary_nnz_before": 2613498,
+  "primary_nnz_after": 32076557,
+  "witness_nnz_before": 2738418,
+  "witness_nnz_after": 38469807,
+  "performance": "Literal transformation increases sparse nonzero storage substantially. No solver, speed, conditioning-cause or feasibility improvement is established; do not call it condensed or sparse-size reduction.",
+  "algebra": "The stored binary64 S is provably nonsingular as a real matrix. Sparse products and shift construction are rounded, so transformed and original binary64 LPs are not asserted exactly identical. Literal closure defects and every small nonzero remain.",
+  "origin": "The formal affine residual coordinate includes nonzero h. New-variable zero is not old-direction zero. A future wrapper must reconstruct the original full direction BEFORE any dyadic scaling, then recertify and decode that unchanged scaled original direction. Do not scale residual coordinates about zero or assume exact finite zero identity from this algebra.",
+  "certificate": "Original untransformed primary/witness inequalities at unchanged1e-7, exact unscaled interval eta>0 and all actual nonlinear tests remain mandatory. No coefficient-comparison bound waives a physical or signed-row deficit.",
+  "scope_of_vectors": "Two new simultaneous affine-vector algebra comparisons only; they are not primal witnesses, states, finite maps, derivative/root fixtures, trajectories or solver iterates.",
+  "source": "Reference matrix only at sealed472INITIAL; fresh changed-state mechanics/J and a new validated substitution would be required in any future run.",
+  "no_next_run": true,
+  "model_calls": 0,
+  "root_calls": 0,
+  "lp_calls": 0,
+  "finite_maps": 0,
+  "physical_admission": false
+}

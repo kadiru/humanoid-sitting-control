@@ -1,0 +1,54 @@
+{
+  "node": 4,
+  "parent": 1,
+  "kind": "branch_upper",
+  "optimizer": {
+    "success": true,
+    "status": 0,
+    "message": "Optimization terminated successfully",
+    "iterations": 1,
+    "objective_nfev": 1,
+    "jacobian_njev": 1
+  },
+  "decision": "branched_fractional_relaxation",
+  "branch": {
+    "budget": 0,
+    "value": 92.88697088301092,
+    "floor": 92.0,
+    "ceil": 93.0
+  },
+  "slack": 5.310016605258971e-17,
+  "soft_merit": 3.010169806084571e-12,
+  "minimum_augmented": -3.0101167059185187e-12,
+  "minimum_hard": -5.551115123125783e-17,
+  "coordinate_margin": 0.0001889191323538597,
+  "box_margin": 0.0,
+  "budgets": [
+    92.88697088301092,
+    194.0,
+    245.0,
+    101.00000329460725,
+    17.113025822381815
+  ],
+  "integer_error": 0.11302911698908247,
+  "numerical_branching_gate_passed": true,
+  "strict_model_point": false,
+  "callback_count": 1,
+  "history": [
+    {
+      "callback": 0,
+      "slack": 5.310016605258971e-17,
+      "soft_merit": 3.010169806084571e-12,
+      "minimum_hard": -5.551115123125783e-17,
+      "minimum_augmented": -3.0101167059185187e-12,
+      "budgets": [
+        92.88697088301092,
+        194.0,
+        245.0,
+        101.00000329460725,
+        17.113025822381815
+      ],
+      "not_selected": true
+    }
+  ]
+}

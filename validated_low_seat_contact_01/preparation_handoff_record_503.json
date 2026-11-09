@@ -1,0 +1,277 @@
+{
+  "utc": "2026-10-18T19:42:00.517013+00:00",
+  "scope": "Preserve completed502/503 preparation; last sealed closure501 unchanged.",
+  "preparation_only": true,
+  "new_closure": false,
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_501.json",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_501.json",
+      "files": 11067,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_501.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 11113,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/sparse_gap_evidence_preservation_503.json",
+  "manifest_sha256": "971cdb12ea564c98d0573007c63d206c64688e7b616ee8b21f68c32cfbcb938a",
+  "workers": [],
+  "preparation": {
+    "utc": "2026-10-18T19:37:54.519529+00:00",
+    "passed": true,
+    "specification": {
+      "scope": "NEW saved-matrix sparse normal-gap incidence preparation; no execution algorithm, LP, candidate or finite decoder.",
+      "motivation": "498 residual-coordinate primary returned no witness and has32076557 nonzeros. Cumulative normal-drop incidence spreads a local gap through many coordinate columns. Replace that incidence with interior-gap increments before multiplying original rows. This is an algebraically justified new representation, not a retry, claimed timeout cause or demonstrated solver speedup.",
+      "seed": "ONLY immutable490 canonical reference and EXACTsealed472INITIAL actualX/Y/J;496stored S/a and497nonsingularity proof inherited, no local inverse/root repeated. No old accepted/rejected path or internal solver vector.",
+      "coordinates": "78790 coordinates remain. Only205 independent normal-drop coordinates become205 interior normal-gap increments; the other10335 old joint coordinates and68250 local residual coordinates retain their identities. This is NOT dimension reduction or extra physical authority.",
+      "difference": "For207ordered normal states, set delta_g0=delta_g206=0 and delta_dj=delta_gj-delta_g(j+1). Store all independent drops except original fixedpivot203. Missing pivot is exactly minus their sum, giving the same206differences and exactly zero total increment.",
+      "inverse": "Recover interior delta_gi as negative prefix sum of ALL drops including the dependentpivot. Integer coefficients {-1,0,1}; both205x205 products are exactly identity. No matrix inverse or old solve is performed.",
+      "composition": "Form NEW stored Sn=Sold*T from the SAVED496transform, then compose each ORIGINAL490matrix with Sn. No old32M primary is rerun or selected. Every computed nonzero, including tiny literal closure defects, is retained. No thresholding or idealized closure replacement.",
+      "invertibility": "Sn has upper-left integer invertible T0, lower-right unchanged blockQ, and zero upper-right. Its rounded lower-left block does not affect invertibility. Prior497 directed proof of each exact-binary-rational Q nonsingular is inherited; no second proof/solve. Formal exact-real affine substitution is bijective even though sparse products round.",
+      "numerical": "The new binary64 row matrices are not asserted bitwise-equivalent to old496/498 binary64 products with a different association. A future returned direction must reconstruct ORIGINALt=Sn*z+a, without editing, and pass original UNTRANSFORMED LP at unchanged1e-7, plus exact unscaled positive interval certification before any immutable490 finite map.",
+      "line_search": "Nonzero affine a remains; newzero is NOT olddirectionzero. Reconstruct original complete direction BEFORE dyadic scaling and recertify that same scaled direction. No direct finite gap-state assignment or new rounding contract is asserted here.",
+      "constraints": "ALL331888final/331495retained rows,156647HARD/noepigraph and174848rate/window labels,68250two-sided normalizedconsistency rows,1411normal/hoverfinal and1366homogeneousequalities,11906fullboxes,80155featuretrust and206dropintervals includingpivot,27708old/support/window+1572bounds retained. Original440 +/- .02globalbox and all8eps/4ULP/32ULP/4302^-23reserves unchanged.",
+      "bounds": "Normal-gap increments are free coordinates only inside the complete transformed original domain. No independent gap-only box substitutes for drop bounds, full phase/kinematic/planning/command/rate/target constraints or exact finite-domain certificate.",
+      "reference_only": "SavedS andJ valid only for the exact inherited initial state. FuturechangedX requiresfreshmechanics/J and fresh valid residual transform; no posthoc15root, force-only solve, coefficient deletion or physical criterion change.",
+      "witness": "Both primary and illustrative witness matrices transformed as arithmetic.490fixtureceiling.09895564659603738 is not a solved primary result. Futurewrapper must use actual primary reduction.",
+      "admission": "No new actualX/Y/J, gap/drop/force target, complete path or scientific fixture. Sparse size reduction if observed is storage arithmetic only; no computational speed or feasibility claim. All original actual gates and physical/PPO restrictions remain.",
+      "model_calls": 0,
+      "root_calls": 0,
+      "ad_calls": 0,
+      "local_inverse_solves": 0,
+      "directed_inverse_certificates": 0,
+      "lp_calls": 0,
+      "finite_maps": 0,
+      "new_actual_path": false,
+      "physical_admission": false
+    },
+    "coordinates": 78790,
+    "new_normal_gap_coordinates": 205,
+    "normal_anchor_increments_exact_zero": true,
+    "normal_drop_incidence_exact": true,
+    "integer_inverse_error": 0.0,
+    "stored_Q_unchanged": true,
+    "prior_nonsingular_Q_bound": 3.508583623410075e-14,
+    "source_transform_nnz": 4962952,
+    "new_transform_nnz": 2137638,
+    "literal_closure_identity_defect": 5.684341886080802e-14,
+    "literal_closure_shift_defect": 2.4233807008389483e-27,
+    "chains": {
+      "feature_basis": {
+        "shape": [
+          105750,
+          78790
+        ],
+        "original_nnz": 107105,
+        "prior_residual_nnz": 3180878,
+        "new_nnz": 2145246
+      },
+      "all_rows_chain": {
+        "shape": [
+          331888,
+          78790
+        ],
+        "original_nnz": 552084,
+        "prior_residual_nnz": 19789289,
+        "new_nnz": 15248813
+      },
+      "consistency_chain": {
+        "shape": [
+          68250,
+          78790
+        ],
+        "original_nnz": 749166,
+        "prior_residual_nnz": 2727928,
+        "new_nnz": 1862004
+      },
+      "interval_matrix": {
+        "shape": [
+          92267,
+          78790
+        ],
+        "original_nnz": 125867,
+        "prior_residual_nnz": 3260032,
+        "new_nnz": 2203896
+      },
+      "normal_drop_chain": {
+        "shape": [
+          206,
+          78790
+        ],
+        "original_nnz": 410,
+        "prior_residual_nnz": 410,
+        "new_nnz": 410
+      },
+      "primary": {
+        "shape": [
+          652529,
+          78791
+        ],
+        "original_nnz": 2613498,
+        "prior_residual_nnz": 32076557,
+        "new_nnz": 23691961,
+        "rows_preserved": true
+      },
+      "witness": {
+        "shape": [
+          837063,
+          78791
+        ],
+        "original_nnz": 2738418,
+        "prior_residual_nnz": 38469807,
+        "new_nnz": 27972939,
+        "rows_preserved": true
+      }
+    },
+    "original_reconstructed_witness_still_required": true,
+    "actual_X_Y_J_changed": false,
+    "reference_auxiliary_changed": false,
+    "new_solver_exists": false,
+    "model_calls": 0,
+    "root_calls": 0,
+    "lp_calls": 0,
+    "finite_maps": 0,
+    "new_complete_path": false,
+    "physical_admission": false
+  },
+  "independent_audit": {
+    "utc": "2026-10-18T19:38:26.444303+00:00",
+    "passed": true,
+    "scope": "Independent NEW integer incidence and whole-row sparse-basis audit.\nNo repeated local inverse, directed inverse proof, old vector fixture, finite\nmap, LP, mechanics, derivative, root or virtual-work evaluation.\n",
+    "new_integer_incidence_inverse_error": 0.0,
+    "new_gap_feature_identity_error": 0.0,
+    "all206_drop_differences_and_endpoint_sum_exact": true,
+    "coordinate_transform_independent_column_rebuild_error": 0.0,
+    "unchanged_Q_and_shift": true,
+    "inherited_Q_nonsingularity_bound": 3.508583623410075e-14,
+    "invertibility": "Block triangular: NEW exact integer invertible205gap incidence, identity other joint directions, unchanged prior certifiedQ; rounded lower-left does not affect invertibility.",
+    "checks": {
+      "feature_basis": {
+        "error": 0.0,
+        "rows": 105750,
+        "new_nnz": 2145246,
+        "no_thresholding": true
+      },
+      "all_rows_chain": {
+        "error": 0.0,
+        "rows": 331888,
+        "new_nnz": 15248813,
+        "no_thresholding": true
+      },
+      "consistency_chain": {
+        "error": 0.0,
+        "rows": 68250,
+        "new_nnz": 1862004,
+        "no_thresholding": true
+      },
+      "interval_matrix": {
+        "error": 0.0,
+        "rows": 92267,
+        "new_nnz": 2203896,
+        "no_thresholding": true
+      },
+      "normal_drop_chain": {
+        "error": 0.0,
+        "rows": 206,
+        "new_nnz": 410,
+        "no_thresholding": true
+      },
+      "primary": {
+        "error": 0.0,
+        "rhs_error": 0.0,
+        "shape": [
+          652529,
+          78791
+        ],
+        "new_nnz": 23691961,
+        "cost_bounds_equalities_exact": true
+      },
+      "witness": {
+        "error": 0.0,
+        "rhs_error": 0.0,
+        "shape": [
+          837063,
+          78791
+        ],
+        "new_nnz": 27972939,
+        "cost_bounds_equalities_exact": true
+      }
+    },
+    "literal_closure_identity_defect_retained": 5.684341886080802e-14,
+    "all_original_rows_and_both_consistency_signs_retained": true,
+    "original_witness_and_exact_interval_checks_still_required": true,
+    "solver_speedup_demonstrated": false,
+    "actual_model_calls": 0,
+    "local_inverse_calls": 0,
+    "directed_inverse_proof_calls": 0,
+    "lp_calls": 0,
+    "finite_maps": 0,
+    "new_complete_path": false,
+    "physical_admission": false
+  },
+  "local_verification": {
+    "utc": "2026-10-18T19:41:01.921608+00:00",
+    "all_hashes_verified": true,
+    "manifests": [
+      {
+        "folder": "sparse_gap_residual_preparation_502",
+        "entries": 21,
+        "all_match": true
+      },
+      {
+        "folder": "sparse_gap_residual_audit_503",
+        "entries": 1,
+        "all_match": true
+      }
+    ],
+    "total_entries": 22,
+    "scope": "New arithmetic preparation/audit only; no new HTML visual review/model/LP/map/physics. Existing report500/video307 unchanged."
+  },
+  "actual_exits": {
+    "sparse_gap_compile_exit_502.json": {
+      "actual_exit": 0,
+      "observed_tool": "19f561"
+    },
+    "sparse_gap_freeze_exit_502.json": {
+      "utc": "2026-10-18T19:37:39.878706+00:00",
+      "actual_exit": 0,
+      "observed_tool": "e9d08b",
+      "session_id": 54342
+    },
+    "sparse_gap_preparation_exit_502.json": {
+      "utc": "2026-10-18T19:38:23.000823+00:00",
+      "actual_exit": 0,
+      "observed_tool": "f94837",
+      "session_id": 39409
+    },
+    "sparse_gap_audit_exit_503.json": {
+      "utc": "2026-10-18T19:39:00.886232+00:00",
+      "actual_exit": 0,
+      "observed_tool": "e027eb",
+      "session_id": 29894
+    }
+  },
+  "new_solver_exists": false,
+  "new_complete_path": false,
+  "model_calls": 0,
+  "root_calls": 0,
+  "lp_calls": 0,
+  "finite_maps": 0,
+  "physical_admission": false,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}

@@ -1,0 +1,104 @@
+{
+  "Original camera": {
+    "samples": 161,
+    "alignment_valid": 0,
+    "quantities": {
+      "clearance": {
+        "available": 161,
+        "p95": 0.10964863054667151,
+        "max": 0.10978851597216732,
+        "violations": 0
+      },
+      "forward": {
+        "available": 0,
+        "p95": null,
+        "max": null,
+        "violations": 0
+      },
+      "lateral": {
+        "available": 32,
+        "p95": 0.19454532941923314,
+        "max": 0.24865528031008283,
+        "violations": 0
+      },
+      "yaw": {
+        "available": 32,
+        "p95": 0.10563651945611527,
+        "max": 0.11811728308938106,
+        "violations": 0
+      }
+    },
+    "root_travel_cm": [
+      28.313404083251953,
+      0.5248096585273743,
+      25.94864273071289
+    ]
+  },
+  "Rear vertical camera": {
+    "samples": 161,
+    "alignment_valid": 119,
+    "quantities": {
+      "clearance": {
+        "available": 161,
+        "p95": 0.05795231942918311,
+        "max": 0.059203306651609,
+        "violations": 0
+      },
+      "forward": {
+        "available": 160,
+        "p95": 0.27693919005201517,
+        "max": 0.30518954503557794,
+        "violations": 0
+      },
+      "lateral": {
+        "available": 129,
+        "p95": 0.2902196527577887,
+        "max": 0.36039793958498667,
+        "violations": 0
+      },
+      "yaw": {
+        "available": 160,
+        "p95": 0.08316189049344619,
+        "max": 0.13948235562186873,
+        "violations": 0
+      }
+    },
+    "root_travel_cm": [
+      28.313404083251953,
+      0.5248096585273743,
+      25.94864273071289
+    ]
+  },
+  "trajectory_comparison": {
+    "root_position_difference_max_cm": 0.0,
+    "root_position_difference_rms_cm": 0.0
+  },
+  "new_camera_live_replay_max_pose_difference": 0.0,
+  "calibration": [
+    [
+      0.0,
+      1.0000000000000002,
+      0.0,
+      -0.22
+    ],
+    [
+      1.0000000000000002,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0000000000000002,
+      0.55
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "scope": "One 16 s physics bench scene. Original camera retained for controller startup geometry; experimental view used only by observer. First camera probe (rear_down_01) changed controller input and is rejected as a camera-only comparison; retained for failure analysis."
+}

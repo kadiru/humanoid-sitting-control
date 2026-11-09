@@ -1,0 +1,113 @@
+{
+  "revision": {
+    "utc": "2026-10-17T12:34:34.369728+00:00",
+    "scope": "One bounded offline convex allocation per frozen pose; never runs physics.\n\nReplace maximum joint-margin allocation with minimum squared corner loads.\nRetain every original pose, assumed load, command/effort bound and initial\ncommand; add a5mm individual-foot CoP screen. No gain/rate/arm search.\n",
+    "poses": 364,
+    "solves_per_pose": 1,
+    "max_slsqp_iterations": 200,
+    "unchanged": "All364 poses and geometric records, frozen cooked model/inertia, current-input fixtures, fixed feet/arms/fingers, assumed zero-gap seat-loading schedule, initial forces/commands, actual.03 desired margin, .9999 internal effort target, .1filter and.15rad/s cap. No runtime controller installed.",
+    "change": "Strictly convex minimum squared nonnegative corner loads instead of maximizing minimum joint-command margin. Additional individual-foot5mm CoP reserve. .03001 internal command reserve protects the unchanged actual.03 bound. One allocation per pose, no parameter sweep.",
+    "physics_ticks": 0,
+    "optimizer_updates": 0,
+    "holdout_used": false,
+    "source_sha256": {
+      "/home/kadir/humanoid-sitting/scripts/reallocate_low_seat_balanced_forces_144.py": "efbe88aaa02a3017c014925f0c94fe780449a73cb600e3d0d2fed0d85d560111",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate/fixed_plans_132.json": "6c04c61a7fbb13d9a1ebfe79e225baedd600831236c6f79e2d9ff81269dc2f16",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+      "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json": "69e0920e2bec88a43b7a6dc41d0fc361500d060ef09e3e3a07bb04cdaf569584"
+    }
+  },
+  "paths": [
+    {
+      "case": 0,
+      "geometry_unchanged": true,
+      "geometry_passed": true,
+      "commands_passed": true,
+      "failed_knots": [],
+      "minimum_command_margin_rad": 0.11425354744504912,
+      "maximum_effort_utilization": 0.366132143520839,
+      "first_command_change_max_rad": 0.0008157429898498214,
+      "max_adjacent_ankle_torque_change_Nm": 0.4916073548950659,
+      "first_ankle_pitch_torque_Nm": [
+        [
+          7.32264287041678,
+          7.235171311095194
+        ],
+        [
+          7.317693215062489,
+          7.227595832818315
+        ]
+      ],
+      "command_polyline_time_s": 9.203898546599431
+    },
+    {
+      "case": 1,
+      "geometry_unchanged": true,
+      "geometry_passed": true,
+      "commands_passed": true,
+      "failed_knots": [],
+      "minimum_command_margin_rad": 0.11425508745791516,
+      "maximum_effort_utilization": 0.36614376446252944,
+      "first_command_change_max_rad": 0.0008157433706110218,
+      "max_adjacent_ankle_torque_change_Nm": 0.4915387013824337,
+      "first_ankle_pitch_torque_Nm": [
+        [
+          7.322875289250589,
+          7.235543132059802
+        ],
+        [
+          7.317925452880212,
+          7.227967477699078
+        ]
+      ],
+      "command_polyline_time_s": 9.2039078847249
+    },
+    {
+      "case": 6,
+      "geometry_unchanged": true,
+      "geometry_passed": true,
+      "commands_passed": true,
+      "failed_knots": [],
+      "minimum_command_margin_rad": 0.11629984108589905,
+      "maximum_effort_utilization": 0.36616018682890833,
+      "first_command_change_max_rad": 0.0008086605279752912,
+      "max_adjacent_ankle_torque_change_Nm": 0.48295128606434456,
+      "first_ankle_pitch_torque_Nm": [
+        [
+          7.323203736578167,
+          7.235786616952473
+        ],
+        [
+          7.315649670094046,
+          7.230879576281359
+        ]
+      ],
+      "command_polyline_time_s": 9.205333696684148
+    },
+    {
+      "case": 7,
+      "geometry_unchanged": true,
+      "geometry_passed": true,
+      "commands_passed": true,
+      "failed_knots": [],
+      "minimum_command_margin_rad": 0.11630143819696376,
+      "maximum_effort_utilization": 0.3661465497706628,
+      "first_command_change_max_rad": 0.0008086557810391692,
+      "max_adjacent_ankle_torque_change_Nm": 0.4829441193563637,
+      "first_ankle_pitch_torque_Nm": [
+        [
+          7.322930995413256,
+          7.2354108397301475
+        ],
+        [
+          7.315377398251219,
+          7.230504269372302
+        ]
+      ],
+      "command_polyline_time_s": 9.205301119736678
+    }
+  ],
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}

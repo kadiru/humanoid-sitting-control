@@ -1,0 +1,57 @@
+{
+  "utc": "2026-10-18T23:10:20.055676+00:00",
+  "saved_only": true,
+  "systems": {
+    "primary": {
+      "source_shape": [
+        452522,
+        78791
+      ],
+      "source_nnz": 2235285,
+      "shape": [
+        408842,
+        56951
+      ],
+      "nnz": 2147925,
+      "eliminated_columns": 21840,
+      "copied_rows": 365162,
+      "pair_rows": 87360,
+      "kept_pairs": 43680,
+      "constant_tautologies": 21840,
+      "bound_implied_pairs": 21840,
+      "generated_coefficients": 487890
+    },
+    "witness": {
+      "source_shape": [
+        618101,
+        78791
+      ],
+      "source_nnz": 2380700,
+      "shape": [
+        577755,
+        56951
+      ],
+      "nnz": 2697204,
+      "eliminated_columns": 21840,
+      "copied_rows": 487061,
+      "pair_rows": 196560,
+      "kept_pairs": 90694,
+      "constant_tautologies": 43680,
+      "bound_implied_pairs": 62186,
+      "generated_coefficients": 935434
+    }
+  },
+  "total_pair_checks": 283920,
+  "total_generated_coefficients": 1423324,
+  "source_direction_coordinates": 78790,
+  "remaining_direction_coordinates": 56950,
+  "eliminated_auxiliary_torque_coordinates": 21840,
+  "rounding_scope": "Exact pair coefficients and RHS round once after positive dyadic scaling; rounded LP is not claimed exactly equivalent. Full original witness and exact interval certification remain mandatory.",
+  "binary64_lift_obstruction": "The new local singleton1/3 has no exact binary64 representation; no universal exact lift is claimed.",
+  "performance_scope": "Primary nonzeros decrease2235285to2147925; witness nonzeros INCREASE2380700to2697204. No solver performance or feasibility evidence.",
+  "lp_calls": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physical_admission": false
+}

@@ -1,0 +1,80 @@
+{
+  "scope": "Post603 mathematical design only: a finite collection of inequalities valid on the same independent box cannot replace a genuine box facet without a retained copy of that facet",
+  "inherits": {
+    "supplemental_comparison_box_compatibility_design_603.json": "49fa50dd646dfa080d4586aa9f312c46ca139222d36be04f784b68b71581a6ce"
+  },
+  "status": "A conditional geometric obstruction strengthens the previous comparison-specific compatibility argument. No saved row, endpoint or coefficient was evaluated. No604 construction is selected or ready.",
+  "conditional_setup": [
+    "Let Q be a finite independent real box with endpoints l_j<=u_j. Substitute every fixed coordinate with l_j=u_j and work in the remaining free coordinates. Select a symbolic coordinate k with l_k<u_k and its upper facet x_k<=u_k. These are hypotheses, not properties newly checked on any saved system.",
+    "Let R be a finite collection of inequalities a_i*x<=b_i, each valid for EVERY point of Q. Retained ordinary box bounds are included in R when present. Equalities valid throughout Q can also be retained; after fixed-coordinate substitution their free-coordinate coefficients must all vanish.",
+    "Suppose R contains no row which, after fixed-coordinate substitution, is a positive multiple of x_k<=u_k. Then R does not imply x_k<=u_k over the reals. This is true even if every other facet of Q is retained."
+  ],
+  "symbolic_proof": [
+    "Choose the symbolic relative-interior facet point v with v_k=u_k and l_j<v_j<u_j for every other free coordinate j. No value from saved data is chosen or substituted into this symbolic point.",
+    "Write s_i=b_i-a_i*v. Validity on Q gives s_i>=0. If s_i=0, perturbing v in both directions along any free coordinate j other than k while staying in the facet shows a_ij=0. Perturbing inward in coordinate k shows a_ik>=0.",
+    "Consequently a tight row with a_ik>0 is exactly a positive multiple of the selected upper facet. Under the hypothesis that no such row remains, every row with a_ik>0 has s_i>0. Rows with a_ik<=0 cannot be violated by increasing x_k.",
+    "Because R is finite, choose a symbolic epsilon>0 smaller than every ratio s_i/a_ik for rows with a_ik>0; if that set is empty, choose any positive epsilon. Then v+epsilon*e_k satisfies every retained inequality and every box-valid equality, but violates x_k<=u_k. All other coordinates and their retained bounds stay fixed.",
+    "The lower-facet statement follows by reversing coordinate k. Deleting additional facets cannot restore the missing implication, since the same symbolic witness already satisfies every other facet."
+  ],
+  "design_consequences": [
+    "This argument does not require a comparison matrix, a sign pattern, a positive comparison vector, or a particular conic combination. Under its hypotheses it rules out ANY real implication of the deleted tight facet from those finite box-valid premises.",
+    "Therefore a restoration-only proposal using inequalities previously proved valid on the same independent box, together with its retained unary bounds, cannot replace a genuine tight endpoint unless a parallel copy of that endpoint remains. Restoring more such mixed rows cannot repair this missing premise.",
+    "The previous comparison-box compatibility identity remains valid and independently preserved. The new argument concerns the whole finite premise family under stronger shared-box validity assumptions, whereas the previous identity diagnoses individual rows in one comparison certificate.",
+    "A viable new bound-deletion argument would need information not covered by these hypotheses: for example, a retained constraint that is not valid throughout this independent box, or an independently established coupling that reduces its domain. This is a mathematical prerequisite, not selection of such a constraint, permission for a scan, or a complete method.",
+    "A looser bound whose endpoint is not a genuine facet of the governing independent box is outside this theorem. A positive-width hypothesis is essential; fixed coordinates were substituted before the proof. Neither actual target presence nor absence of a parallel retained row has been checked.",
+    "The current saved LP has other constraints, including mechanical relationships in its native representation and retained mixed inequalities. They have NOT been shown valid throughout the old independent box. Thus this theorem does not establish nonredundancy of any actual current bound, reject the whole comparison idea, or prove original or reduced-system infeasibility.",
+    "The theorem concerns real points. Its symbolic epsilon need not yield a representable binary64 point. It establishes no finite-domain nonimplication, finite reconstruction rule, feasibility witness, objective certificate, or physical result.",
+    "Association across490, exact594 and compensated596 is not automatic. No prior box or representation certificate is extended to different rows or endpoints. Scalar-zero arguments remain confined to the inherited zero face."
+  ],
+  "launch_readiness": {
+    "selected_target_ids": false,
+    "selected_premise_ids": false,
+    "saved_widths_or_coefficients_evaluated": false,
+    "dependency_closure_proved_on_saved_system": false,
+    "positive_net_row_or_nonzero_saving": false,
+    "complete_rational_bit_storage_wholeclock_and_return_bounds": false,
+    "complete_initialization_equations_independent_audit_and_source_freeze": false,
+    "scientific_launch_ready": false
+  },
+  "read_only_evidence": {
+    "orientation_tool": "c0b203",
+    "orientation_actual_exit": 0,
+    "orientation_utc": "2026-10-20T05:13:59.256032+00:00",
+    "required_records_read_and_hash_verified": 8,
+    "actual_study_workers": [],
+    "local_supplemental_verification_tool": "160e3b",
+    "local_supplemental_verification_actual_exit": 0,
+    "supplemental_entries_verified": 2,
+    "local_filename_discovery_tool": "e1d3c0",
+    "local_filename_discovery_actual_exit": 0
+  },
+  "accounting": {
+    "new_scientific_execution": false,
+    "completed_scientific_arithmetic_replayed": false,
+    "saved_coefficient_endpoint_incidence_or_certificate_arithmetic": false,
+    "scientific_source_import_or_assembly": false,
+    "eligibility_or_row_family_scan": false,
+    "new_independent_scientific_audit": false,
+    "new_formulation_algorithm_reduction_or_numeric_input": false,
+    "new_lp_primal_point_graph_lift_actual_mechanics_or_physics": false,
+    "new_execution_or_readonly_authoring_failure": false,
+    "historical_failures_preserved_transitively": true
+  },
+  "unchanged_contract": [
+    "No old solver restart, proof replay, pressure-quotient rescue, generic eligibility scan, or change to boxes, trust, guards, tolerances, budgets or physical criteria.",
+    "Any future substantive construction still requires complete initialization, equations, resources, finite return policy and independent audit before scientific launch.",
+    "All finite reconstruction, triple unrounded graph evaluation followed by once-only rounding, allNINE/fulloriginal checks, finite490 encoding, physical retention and PPO gates remain mandatory."
+  ],
+  "status_unchanged": 603,
+  "last_sealed_closure": 601,
+  "current_reviewed_report": 600,
+  "video_unchanged": 307,
+  "all64_protected": true,
+  "all8_unresolved": true,
+  "ppo_unstarted": true,
+  "fresh_holdout_unstarted": true,
+  "automation_status": "ACTIVE",
+  "task_complete": false,
+  "user_input_needed": false,
+  "recorded_utc": "2026-10-20T05:17:33.324650+00:00"
+}

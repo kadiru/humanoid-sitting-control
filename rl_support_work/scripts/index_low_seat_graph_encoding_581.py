@@ -1,0 +1,10 @@
+"""Saved-only index of compensated binary64 input preparation; no scientific replay."""
+from pathlib import Path
+import json,datetime
+D=Path('/data/humanoid-sitting-perception/low_seat_contact_01');read=lambda p:json.loads(Path(p).read_text())
+def main():
+ assert read(D/'graph_encoding_preparation_exit_580.json')['actual_exit']==0 and read(D/'graph_encoding_audit_exit_581.json')['actual_exit']==0
+ p=read(D/'graph_encoding_preparation_580/preparation.json');a=read(D/'graph_encoding_audit_581/independent_audit.json');assert p['passed'] and a['passed'] and p['primary']==a['primary']
+ r=dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),preparation_only=True,last_sealed_closure='closure_record_577.json',primary=p['primary'],preparation_elapsed_s=p['elapsed_s'],audit_elapsed_s=a['elapsed_s'],exact_copy_error=a['exact_copy_error'],independent_nearest_coefficient_certificates=a['independent_nearest_coefficient_certificates'],independent_integer_error_support_products=a['independent_integer_error_support_products'],independent_RHS_floor_certificates=a['independent_RHS_floor_certificates'],independent_outer_box_enclosures=a['independent_outer_box_enclosures'],numerical_lp_calls=0,linear_system_solves=0,model_calls=0,root_calls=0,finite_maps=0,physics_ticks=0,policy_updates=0,primal_vectors_constructed=0,analytic_dual_vectors_constructed=0,graph_point_lifts=0,physical_admission=False,new_solver=False,new_candidate=False,old_proofs_repeated=False,scientific_execution_recovery=False,rounded_numeric_input_exists=True,complete_numerical_algorithm_exists=False,scope='Explicit OUTER coordinate box and INWARD coefficient-error/RHS compensation define a sufficient REAL inner subset of578 rational zero-face projection. No equivalence/feasibility/performance/physical claim. No LP or primal graph lift. All64protected/all8unresolved; mainPPO/freshholdout unstarted.')
+ out=D/'graph_encoding_scope_581.json';assert not out.exists();out.write_text(json.dumps(r,indent=2));print(json.dumps(r,indent=2))
+if __name__=='__main__':main()

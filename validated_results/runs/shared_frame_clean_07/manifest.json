@@ -1,0 +1,28 @@
+{
+  "arguments": {
+    "capture": "../runs/shared_frame_capture_01",
+    "output": "../runs/shared_frame_clean_07",
+    "mode": "clean",
+    "max_frames": null
+  },
+  "frames": 161,
+  "cases": 6,
+  "source_sha256": {
+    "test_shared_frame.py": "c60d1fd49f26a0b68f3ca08cc8ddc4f81995e33b214956b6ffab5816baa00b3c",
+    "run_shared_frame.py": "740775c82aa64c0d5dc7b22fbbabe52cf54b7b879ab78279ebc33732e1470169",
+    "shared_frame.py": "57104ff50a64abb596543ba43ea43088a398db2006f43f4a84883576e8780033",
+    "evaluate_shared_frame.py": "6731901b33466802a47b8276f96a5f6fffe5be74c09696f2afa10033ac06721d"
+  },
+  "runtime_input_files": [
+    "sensors.npz",
+    "static joint/collision calibration"
+  ],
+  "runtime_does_not_read_truth_or_geometry_manifest": true,
+  "compute_seconds": {
+    "median": 0.12775854150822852,
+    "p95": 0.19948962124908576,
+    "total": 122.15135635944898
+  },
+  "input_sha256": "16dc17c27ee9f13985347138bf0255af350d3439686a85347b5e86fc2c0f5e6e",
+  "output_sha256": "4219fb0888d570e260d937e18bc74d811ab5e7704b2473aa20d289372662b4db"
+}

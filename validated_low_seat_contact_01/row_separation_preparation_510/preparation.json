@@ -1,0 +1,68 @@
+{
+  "utc": "2026-10-18T20:39:20.599104+00:00",
+  "passed": true,
+  "specification": {
+    "scope": "NEW bounded monotone whole-row separation method. This file prepares selection and certification arithmetic only; no optimizer or actual candidate.",
+    "rationale": "506 supplied no witness from a simultaneous652529-row LP. Change which original path rows enter each finite master, with an exhaustive separation oracle and monotone cut ledger. This changes the numerical witness method, not another coordinate basis, solver-method retry, or cause/speedup claim.",
+    "representation": "Keep the already-audited504 mixed basis unchanged. Native35auxiliary increments, all68250 two-sided unit-scaled mechanics consistency constraints, all92267 closed finite intervals, every witness interior interval row, all original equalities and auxiliary bounds are ALWAYS in each master. Only the first331495 original path rows may initially be deferred to exhaustive separation.",
+    "initial_set": "At every primary or witness construction add each top row whose ORIGINAL RHS<=0, the exact binary64 sign at ORIGINAL direction zero and epigraph/eta zero. Union with every earlier top cut in the same run. The anchor is an arithmetic selection rule, NOT a feasible path, a finite map, or zero in the affine504 coordinates. No hand-chosen proximity threshold, row scaling change or coefficient deletion.",
+    "cuts": "After an optimal master witness, reconstruct ORIGINAL t=S*z+a unmodified. Evaluate EVERY row of BOTH the full original and full transformed LP. Add ALL omitted top rows with a strictly positive signed residual in EITHER representation, including arbitrarily small positive binary64 residuals. Record both complete residual vectors and sorted global row IDs. Never remove cuts or substitute an internal solver state.",
+    "eligibility": "A master status0 is necessary but insufficient. First require finite unchanged vectors and original/transformed active inequalities, all equalities and bounds<=unchanged1e-7. Failure terminates rather than editing a vector. A full witness requires no omitted positive residual in either representation AND both complete LP violations<=1e-7. Exact original interval eta>0 remains a SEPARATE requirement before each finite map; no subset direction is decoded.",
+    "proof": "In exact arithmetic, every master is a relaxation of the fixed full LP. A master optimum satisfying every deferred full row is also a full optimum: its objective is both a lower bound on and attained by the full problem. Otherwise every unsuccessful separation adds at least one previously absent row, so there are finitely many enlargements. This exact-arithmetic statement does NOT certify the rounded transformed LP as identical to the original; original all-row certification remains mandatory and numerical optimality is not promoted to a physical result.",
+    "bounded_policy": "PROPOSED ONE new run:24major iterations,48actual LP calls TOTAL including every primary/interior separation round,120maps max5 shared dyadics per complete interior witness. Extra cuts consume the SAME48-call budget, not additional calls outside it. Two full witnesses per successful major imply at most24 majors. Reaching the LP cap with outstanding cuts yields NO certified witness, not infeasibility. Every call45s nativehighs-ipm1e-9,40GiBchild/120swall; terminal first nonoptimal/absent/uncertified active witness/resourcefailure, NO retry or timeout-driven trust reduction.",
+    "nonlinear": "After full primary certification compute theta from reconstructed ORIGINAL direction, never the master objective alone; ceiling=(mu+theta)/2. After full interior certification reconstruct ORIGINAL before any dyadic scale, then exact interval certificate and immutable490 finite encoding. SAME effective encoded-feature prediction and actual phi ratio>=.1; trust1..1/32, halve only after actual nonlinear rejection, double<=1 only ratio>.75. No15-root. Changed states require fresh mechanics/J and valid504-style basis proof. No new state is evaluated here.",
+    "all_criteria": "All331888 final and331495 optimizer path rows,156647HARD/noepigraph and174848rate/window labels,1411 original normal/hover primal tests,1366 homogeneous equalities,11906fullcontrolboxes,80155featuretrustintervals,206dropbounds includingpivot,27708old/support/window+1572bounds remain. All8eps/4ULPper20ms/32ULPtarget/4302^-23 reserves and original440 +/-.02box unchanged. Same392constantcontact/timeidentity optimizer-only omission, allfinalchecked.",
+    "final": "Auxiliary/LP/working-set success never admits actual mechanics or execution. All actual signed rows, unit-specific closures,normal1e-13,hover1e-8,kinematic/geometry/clock/window/new-state-work checks plus laterfilter/runtime/physics gates remain. No old rejected/final/internal solver vector initializes this method. Seed would be EXACTsealed472INITIAL actualX/Y/J and490canonicalauxiliary.",
+    "audit_scope": "Saved504/490 full matrices are READ, not rebuilt; new subset selection and separation arithmetic are checked. No prior basis/inverse/incidence/map/root/model/finitework fixture repeated. Witness fixture ceiling is inherited illustrative.09895564659603738, not a solved value.",
+    "executable_whole_path_wrapper": false,
+    "lp_calls": 0,
+    "finite_maps": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "physical_admission": false
+  },
+  "assemblies": {
+    "primary": {
+      "full_shape": [
+        652529,
+        78791
+      ],
+      "selected_rows": 322228,
+      "deferred_path_rows": 330301,
+      "selected_path_rows": 1194,
+      "mandatory_rows": 321034,
+      "master_nnz": 4460821,
+      "full_nnz": 6099134,
+      "all_consistency_signs_retained": true,
+      "all_intervals_retained": true,
+      "equality_source": "/data/humanoid-sitting-perception/low_seat_contact_01/mixed_coordinate_preparation_504/primary/equality.npz",
+      "equality_sha256": "c27c5897520fe7949f33e173419fc5ad3e41a9630891dd0137bae1b849163695",
+      "optimistic_witness_fixture_only": false
+    },
+    "witness": {
+      "full_shape": [
+        837063,
+        78791
+      ],
+      "selected_rows": 505601,
+      "deferred_path_rows": 331462,
+      "selected_path_rows": 33,
+      "mandatory_rows": 505568,
+      "master_nnz": 5664892,
+      "full_nnz": 7131846,
+      "all_consistency_signs_retained": true,
+      "all_intervals_retained": true,
+      "equality_source": "/data/humanoid-sitting-perception/low_seat_contact_01/mixed_coordinate_preparation_504/witness/equality.npz",
+      "equality_sha256": "c27c5897520fe7949f33e173419fc5ad3e41a9630891dd0137bae1b849163695",
+      "optimistic_witness_fixture_only": true
+    }
+  },
+  "new_separation_cases": 10,
+  "full_basis_rebuilt": false,
+  "model_calls": 0,
+  "lp_calls": 0,
+  "finite_maps": 0,
+  "actual_X_Y_J_changed": false,
+  "new_complete_path": false,
+  "physical_admission": false
+}

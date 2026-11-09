@@ -1,0 +1,157 @@
+{
+  "passed": true,
+  "rounds": {
+    "09": {
+      "known_old": {
+        "actors": {
+          "parent_exact": true,
+          "checkpoint_exact": true,
+          "smooth_bounded_offsets_verified": true,
+          "actual414_actions_verified": true
+        },
+        "physical": {
+          "trials": 24,
+          "stable": 22,
+          "clean": 20,
+          "slip": 4,
+          "illegal": 0,
+          "physical": 2,
+          "strict": 8,
+          "max_friction_utilization": 1.045393705368042,
+          "max_conservative_margin_ticks": 48,
+          "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit"
+        },
+        "matched": {
+          "max_errors": {
+            "root": 0.0,
+            "q": 0.0,
+            "command": 0.0,
+            "geometry": 0.0,
+            "observation": 0.0
+          },
+          "exact": true,
+          "tolerance": 1e-05,
+          "actual414_startup_exact": true,
+          "prefix_exact_until": 10.0
+        },
+        "sampled_command_change_rad_per_0p1s": 0.015000104904174805,
+        "initial_final_learner_identical_no_optimizer": true,
+        "sensor_control": {
+          "passed": true,
+          "uses_truth_for_this_audit_only": true,
+          "fixed_fingers_exact": true,
+          "max_damping_joint_correction_rad": 0.04064852540340536,
+          "max_load_joint_correction_rad": 0.06970300904501164,
+          "max_load_fraction_step": 0.04000000000000001,
+          "estimated_position_error_max_abs_m": [
+            0.0032544312063818026,
+            0.0034418106079101562,
+            0.003059346541810559
+          ],
+          "estimate_sample_count": 600,
+          "no_physical_success_implied": true
+        }
+      },
+      "known_transfer": {
+        "actors": {
+          "parent_exact": true,
+          "checkpoint_exact": true,
+          "smooth_bounded_offsets_verified": true,
+          "actual414_actions_verified": true
+        },
+        "physical": {
+          "trials": 24,
+          "stable": 24,
+          "clean": 22,
+          "slip": 2,
+          "illegal": 0,
+          "physical": 0,
+          "strict": 8,
+          "max_friction_utilization": 1.859113335609436,
+          "max_conservative_margin_ticks": 46,
+          "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit"
+        },
+        "matched": {
+          "max_errors": {
+            "root": 0.0,
+            "q": 0.0,
+            "command": 0.0,
+            "geometry": 0.0,
+            "observation": 0.0
+          },
+          "exact": true,
+          "tolerance": 1e-05,
+          "actual414_startup_exact": true,
+          "prefix_exact_until": 10.0
+        },
+        "sampled_command_change_rad_per_0p1s": 0.015000104904174805,
+        "initial_final_learner_identical_no_optimizer": true,
+        "sensor_control": {
+          "passed": true,
+          "uses_truth_for_this_audit_only": true,
+          "fixed_fingers_exact": true,
+          "max_damping_joint_correction_rad": 0.022235214834861072,
+          "max_load_joint_correction_rad": 0.07028055483389349,
+          "max_load_fraction_step": 0.04000000000000001,
+          "estimated_position_error_max_abs_m": [
+            0.002566839132333021,
+            0.0027963127940893173,
+            0.002088709010415468
+          ],
+          "estimate_sample_count": 400,
+          "no_physical_success_implied": true
+        }
+      },
+      "known_recent": {
+        "actors": {
+          "parent_exact": true,
+          "checkpoint_exact": true,
+          "smooth_bounded_offsets_verified": true,
+          "actual414_actions_verified": true
+        },
+        "physical": {
+          "trials": 24,
+          "stable": 24,
+          "clean": 22,
+          "slip": 2,
+          "illegal": 0,
+          "physical": 0,
+          "strict": 6,
+          "max_friction_utilization": 1.6203070878982544,
+          "max_conservative_margin_ticks": 44,
+          "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit"
+        },
+        "matched": {
+          "max_errors": {
+            "root": 0.0,
+            "q": 0.0,
+            "command": 0.0,
+            "geometry": 0.0,
+            "observation": 0.0
+          },
+          "exact": true,
+          "tolerance": 1e-05,
+          "actual414_startup_exact": true,
+          "prefix_exact_until": 10.0
+        },
+        "sampled_command_change_rad_per_0p1s": 0.015000104904174805,
+        "initial_final_learner_identical_no_optimizer": true,
+        "sensor_control": {
+          "passed": true,
+          "uses_truth_for_this_audit_only": true,
+          "fixed_fingers_exact": true,
+          "max_damping_joint_correction_rad": 0.027138225454770574,
+          "max_load_joint_correction_rad": 0.07277036484114095,
+          "max_load_fraction_step": 0.04000000000000001,
+          "estimated_position_error_max_abs_m": [
+            0.0025818788496104472,
+            0.002711004111915827,
+            0.002944233423231024
+          ],
+          "estimate_sample_count": 400,
+          "no_physical_success_implied": true
+        }
+      }
+    }
+  }
+}

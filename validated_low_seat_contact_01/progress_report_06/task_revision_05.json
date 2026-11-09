@@ -1,0 +1,87 @@
+{
+  "utc": "2026-10-17T03:26:33.285655+00:00",
+  "diagnosis": "Retiming balance authority alone worsened physical failures. Coordinate translation and pitch through a fixed-foot task Jacobian rather than separate ankle/hip heuristic and translation-only damping.",
+  "changed": "Selected rows replace inherited bridge balance and old landing correction with bounded six-joint kinematic pose correction. Path, measured geometry, load feedforward, shear feedback, parent and physical criteria unchanged.",
+  "hypothesis_only": true,
+  "software_fixed_foot_checks": [
+    {
+      "case": 0,
+      "side": "left",
+      "foot_position_error": 2.9515369541213156e-07,
+      "foot_rotation_error": 1.9845002689347254e-06,
+      "constrained_pitch_error": 8.305836018962509e-10
+    },
+    {
+      "case": 0,
+      "side": "right",
+      "foot_position_error": 2.9793480024751427e-07,
+      "foot_rotation_error": 1.9963740854328906e-06,
+      "constrained_pitch_error": 8.399803075320733e-10
+    },
+    {
+      "case": 2,
+      "side": "left",
+      "foot_position_error": 2.762108864829642e-07,
+      "foot_rotation_error": 1.958521386008871e-06,
+      "constrained_pitch_error": 8.212259761108953e-10
+    },
+    {
+      "case": 2,
+      "side": "right",
+      "foot_position_error": 2.7883023824888743e-07,
+      "foot_rotation_error": 1.970408875221493e-06,
+      "constrained_pitch_error": 8.307261545326128e-10
+    },
+    {
+      "case": 4,
+      "side": "left",
+      "foot_position_error": 4.4043545007286384e-07,
+      "foot_rotation_error": 2.8355099675312943e-06,
+      "constrained_pitch_error": 1.2425893647360908e-09
+    },
+    {
+      "case": 4,
+      "side": "right",
+      "foot_position_error": 4.444715128179552e-07,
+      "foot_rotation_error": 2.8459310975333053e-06,
+      "constrained_pitch_error": 1.2411367489306713e-09
+    },
+    {
+      "case": 12,
+      "side": "left",
+      "foot_position_error": 4.246546924117229e-07,
+      "foot_rotation_error": 2.8073657713306017e-06,
+      "constrained_pitch_error": 1.179685238383854e-09
+    },
+    {
+      "case": 12,
+      "side": "right",
+      "foot_position_error": 4.282732115773105e-07,
+      "foot_rotation_error": 2.815731103623992e-06,
+      "constrained_pitch_error": 1.1757770312925686e-09
+    }
+  ],
+  "software_initial_test": {
+    "failed": true,
+    "error": "Float32 finite-difference test rotation residual2.8386095397520448e-6 exceeded2e-6; translation4.5829501101138484e-7.",
+    "repair": "Float64 did not remove the failure. The original test incorrectly expected full orientation identity from x/z/pitch constraints. Preserved both failures in task_preparation_recovery_01. Tests now check position and represented pitch at unchanged2e-6 limits and report full orientation residual. Runtime explicitly sagittal; physical foot slip/contact criteria unchanged."
+  },
+  "sources": {
+    "/home/kadir/humanoid-sitting/scripts/prepare_low_seat_task_probes_v2.py": "bf4408821bda404461fcf0e448c2a88cca0ea149a845d88edf8bb6f5e2076e72",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_task_controller.py": "d7d5a31e35e440d8577627806c8b6e1d9e8fccb09787f56e2280d1336e401fa3",
+    "/home/kadir/humanoid-sitting/scripts/run_low_seat_task_probe.py": "c7893db58f3cb38f1ea27e7b71f011b238cd28b65e2ee291b7e79105b7c51266",
+    "/home/kadir/humanoid-sitting/scripts/launch_low_seat_task_probe.py": "a0c588cfc36e1084b890e025fc16a20dba179a7211a14d0cdd0084b6848756f8",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_normal_controller.py": "6cfb8aabd61dbc63b8b2a9543c693910926d38b4d87f1dbc43e8a249587cd590",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_load_controller.py": "510b8644cdb99a3910e1a2f4bdb7f941dcb6a3d3ddb70af0b2092397ed605dcf",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_contact_controller.py": "b14886026d552e098f296a362f404bc616ba33daf99de3bee6e1eac21e2fe5c2"
+  },
+  "budget": {
+    "variants": 2,
+    "trials_per_variant": 24,
+    "active_ticks_per_variant": 24000,
+    "initial_settling_per_variant": 600,
+    "optimizer_updates": 0
+  },
+  "preserved_rejected_files": 623,
+  "fresh_holdout_opened": false
+}

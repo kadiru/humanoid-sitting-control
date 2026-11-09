@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-18T02:20:05.285032+00:00",
+  "scope": "One reduced-coordinate COMPLETE115-knot formulation. Eliminate rootxy+12leg angles using all14 original per-knot fixed-foot/COM equations at each function evaluation; retain206 independent descent/orientation phases, force-null coordinates and114times. Initial and endpoint/load poses exact. One max30iteration SLSQP, not restarted. Dependent Newton max10iterations/9halvings,1e-13 numerical residual; domain failure terminates the one solve and preserves last valid candidate. Implicit-function derivatives, explicit original dependent joint/root bounds, original static command/effort/corner/phase/rate/headroom/hover/normal/time constraints. Hover equality divided by12mm for numerical scaling; original12mm guard unchanged. Original full geometry mandatory final rejection. No runtime, extra feedback authority, physics or policy training.",
+  "case": 2,
+  "maximum_optimizer_runs": 1,
+  "maximum_iterations": 30,
+  "declared_variables": 912,
+  "free_variables": 694,
+  "equalities": 1,
+  "inequalities": 19760,
+  "maximum_initial_kinematic_residual": 9.360567876370851e-14,
+  "maximum_initial_command_error": 7.042181282557181e-10,
+  "global_directional_derivative_error": 4.3649476089147043e-08,
+  "initial_time_s": 13.843043119742068,
+  "initial_equality": 0.0052840340151816614,
+  "initial_minimum_inequality": -0.34304311974206847,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/build_low_seat_reduced_path_v2_361.py": "9dbdb39072623305ed755bd6f72d6902685f23e0a060cdbe27ae35ae7200bd2b",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/constraint_coordinates_357/results.json": "b81b0709c3bbe4a499055f6a3f8d4e4f37cd58edfb736d8337b9052a9bd13a22",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/constraint_coordinates_audit_358/independent_audit.json": "8ab043a82de882e761a6f2d3d43bfef42c25612aaac07618200c832e8e5a10c3",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/projected_complete_path_v2_359/results.json": "3a1144fe42b3898c2f0af8f46e0341fcb7d88958ea46d805bf6bcc952023f308",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/projected_path_audit_360/independent_audit.json": "d5a55f06301cdfc328f2ac8d1d2d968cc953a85a23c6822b0fde21ce64387a9c",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_lift_path_330/results.json": "495f70a6764e7c821bc8a1f2e0ad3819d45b3841b795bbd6153410aec39f3831",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+    "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json": "69e0920e2bec88a43b7a6dc41d0fc361500d060ef09e3e3a07bb04cdaf569584",
+    "/data/humanoid-sitting-perception/contact_effort_repair_01/plane_calibration.json": "6a6a0f078ced3d3510897e96670c26226dee25d495653a222cf1dd52e97a8009",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/trace.npz": "c380356202f31c64d5667f48bd2f8d13d3391c6f751dd19db2dc002101d020d2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/sensor_inputs.npz": "468d3637bc09c404b000b15f48bdbc1f2e8c6aacc23e51d966c2604801afb6d6"
+  },
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "physical_admission": false
+}

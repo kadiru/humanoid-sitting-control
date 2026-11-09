@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-17T11:36:58.219055+00:00",
+  "passed": true,
+  "scope": "Independent vectorized source-segment reconstruction using specified a+fraction*(b-a) arithmetic is exactly equal afterfloat32 conversion. Historical np.interp exact comparison is separately retained; no tolerance changed or saved command altered. Torch CPU replay of every inherited clamp/filter/increment operation is exactly equal to saved122 applied commands. Fixed14fingers and endpoint exact. No GPU/simulation/physical feasibility or minimum-time proof.",
+  "case": 6,
+  "command_ticks": 596,
+  "duration_s": 11.92,
+  "inverse_target_clipped_ticks": 0,
+  "desired_polyline_float32_exact": true,
+  "npinterp_float32_exact": true,
+  "npinterp_max_difference_rad": 0.0,
+  "npinterp_different_entries": 0,
+  "applied_torch_cpu_exact": true,
+  "endpoint_float32_exact": true,
+  "max_float32_applied_increment_rad": 0.0029999911785125732,
+  "actual_filter_arithmetic_passed": true,
+  "time_gate": true,
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "holdout_used": false,
+  "physical_admission": false,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/staged_fixed_foot_filtered_6_122/results.json": "12457067e20db36911bc10e9fce5ff668c508ec6f1a9f5346b89df34d9a61888",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/staged_fixed_foot_filtered_6_122/command_schedule.npz": "3b677235d61733756f08cff3386f7e1a71e3e1f7bec37004537099ca313910e1",
+    "/home/kadir/humanoid-sitting/scripts/run_seat_load_ppo.py": "c374e91f3989151b46dd60e87e08bea55092b6a4acdf38993b7b54ebac1ed38f",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_staged_fixed_filter_v2_123.py": "77f1e3babd8b878e00d3cbd8328508beafcb6a0c31eb9d7e00eea35c0463d7d8"
+  }
+}

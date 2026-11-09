@@ -1,0 +1,65 @@
+{
+  "total_seconds": 600,
+  "backend_absolute_soft_deadline": 420,
+  "producer_absolute_hard_deadline": 480,
+  "audit_absolute_hard_deadline": 598,
+  "original_shape": [
+    652529,
+    78791
+  ],
+  "augmented_shape": [
+    809178,
+    78791
+  ],
+  "equality_shape": [
+    1366,
+    78791
+  ],
+  "equality_nnz": 0,
+  "initialization": "cold, no saved point or basis",
+  "output_bound_bytes": 1073741824,
+  "full_matrix_products_both_kkt_implementations": 4,
+  "independent_original_primal_products": 1,
+  "predictive_A_C_products_each_implementation": 1,
+  "targets": 2,
+  "extra_target_coefficients": 12,
+  "all_costs_charged": true,
+  "solves_max": 1,
+  "equality_bounds_and_dual_checks": "All strengthened numerical KKT<=1e-9, all original primal<=1e-9; exact signs, infinite-bound zero multipliers; no dual edit.",
+  "finite_return": "Untouched binary64 primal/marginals and exact certificates; all failure, timeout, representation overflow, source/input/audit mismatch terminate without reuse or retry.",
+  "classification": "Integrated source-derived total-resource accounting; no scientific array evaluation or runtime prediction",
+  "aggregate_address_space_bytes": 42949672960,
+  "worker_address_space_bytes": 42412802048,
+  "owner_address_space_bytes": 268435456,
+  "supervisor_address_space_bytes": 268435456,
+  "disk_free_required_bytes": 4294967296,
+  "static_input_and_runtime_metadata": {
+    "runtime_files": 2439,
+    "runtime_bytes": 203239862,
+    "input_files": 40,
+    "input_bytes": 146950852
+  },
+  "static_bytes_hashed_by_producer_and_auditor": 700381428,
+  "source_hashing": "Owner and every child verify the complete source freeze. Generated predecessor files are additionally hashed by manifest and each referenced cache proof; all I/O is charged to the same stage clock.",
+  "memory_policy": "One scientific worker plus owner and supervisor. Worker RLIMIT_AS hard39.5GiB, each helper soft256MiB with no helper-side increase. Worker inherits a40GiB hard ceiling and lowers it before import. Producer and auditor are sequential. All Python objects, sparse copies, native solver/model allocation and imported runtimes count; allocation failure is terminal.",
+  "disk_policy": "Monitor total stage output and reject/kill on cap crossing; RLIMIT_FSIZE additionally caps each file. Polling can overshoot aggregate cap before rejection. Source-derived output arrays/trace are below cap; acceptance requires aggregate within cap. No retry.",
+  "nnz_upper_bound": 9820080,
+  "original_two_gap_prefix_shape": [
+    652531,
+    78791
+  ],
+  "original_two_gap_prefix_nnz": 2614318,
+  "new_hard_rows": 156647,
+  "new_hard_nnz_upper_bound": 7205762,
+  "exact_physical_tangent_products_each_of_two_implementations": 11695320,
+  "exact_row_tangent_products_each_of_two_implementations": 36028810,
+  "exact_row_intercept_and_profile_products_each_of_two_implementations_each": 1566470,
+  "exact_new_point_products_each_of_two_implementations_upper_bound": 7205762,
+  "extra_upward_kappa_enclosures_and_predecessor_checks": 156647,
+  "explicit_parameter_box_witnesses_max": 31395,
+  "full_matrix_kkt_scalar_products_upper_bound": 39280320,
+  "matrix_CSR_bytes_upper_bound_int64": 163594712,
+  "output_inventory": "Full augmented CSR, equality and RHS/cost/bounds; separate hard CSR/RHS/kappa/original-id cache and <=31395 box records; 78791 primal, 968126 raw marginal scalars, full residuals and compact proofs/logs. No per-row exact fraction cache is serialized.",
+  "simultaneous_peak_inventory": "Original state/P/M/H; producer dyadic and independent Fraction tangent caches each <=1601145 output coefficients plus <=31395 physical coefficients; packed hard buffers, hard/full CSR and sparse-copy temporaries, RHS/bounds and exact return point. Solver factorization/internal buffers share the hard worker cap.",
+  "net_savings": "Actual J*P/row composition, finite coefficient encoding and independent input audit run only once in A. Audited encoded primary guards and upward kappa are reused in B; C uses the new B physical trace, avoiding J*P rebuilding."
+}

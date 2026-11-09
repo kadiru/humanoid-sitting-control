@@ -1,0 +1,35 @@
+{
+  "user_instruction": "We won't run anything new right now; we'll come back to this task later.",
+  "state": "PAUSED_BY_USER_NO_NEW_WORK",
+  "checked_utc": "2026-10-30T16:09:16.032764+00:00",
+  "reference": "/Users/kadir/humanoid-sitting-control/task_pause_20261030_v1/historical_transcript_oct09.txt",
+  "reference_sha256": "94a4d6f3762fd2d98f7eda5d21f936fa0b97f34ea7346f46ca1179365612af64",
+  "historical_date": "2026-10-09 America/Los_Angeles (some logs October10 UTC); October25/28 restored-terminal timestamps are not new experiment dates.",
+  "historical_takeaways": [
+    "Soft-landing gains mainly came from ankle command smoothing.",
+    "Learned contact feedback had modest force benefit without demonstrated reliability gain.",
+    "The preserved155/168 controller was not promoted;633N ceiling still violated.",
+    "Visual servoing and a common seat/floor/pelvis frame were identified as the next milestone."
+  ],
+  "latest_observed_state": {
+    "ppo": "motion_prior_ppo_20261029_v2 complete; bothseeds256updates andall128/256evaluations.",
+    "ppo_final_clean": {
+      "64111": 30,
+      "64117": 16
+    },
+    "ppo_final_repairs": 0,
+    "ppo_final_protected_regressions": {
+      "64111": 34,
+      "64117": 48
+    },
+    "furniture": "All16planned simulator process launches completed; owner stopped at report generation. Robot independent audit files are missing, so robot outcomes must not be presented as independently validated.",
+    "report_failure": "FileNotFoundError: robot_6MoOyPtetL_seat/independent_audit.json",
+    "updated_video_produced": false,
+    "matching_project_workers": [],
+    "fresh_holdout_opened": false,
+    "accepted_baseline": "best09:64/72clean;8originalfailuresunresolved"
+  },
+  "work_this_turn": "Read-only transcript/checkpoint/savedstatus/process inspection plus preservation of this pause record. No simulation,training,audit rerun,source correction,rendering or install.",
+  "resume_only_after_user_request": true,
+  "next_if_resumed": "Inspect saved results and missing independent robot audits; fix reporting from preserved data before deciding whether any additional experiment is warranted. No automatic retry or promotion."
+}

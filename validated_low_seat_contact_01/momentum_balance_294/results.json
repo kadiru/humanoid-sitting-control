@@ -1,0 +1,4141 @@
+{
+  "utc": "2026-10-17T19:44:20.037248+00:00",
+  "scope": {
+    "utc": "2026-10-17T19:44:19.237873+00:00",
+    "source_sha256": {
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/substep_states.npz": "d278effc5fee7d511d54d205d0a69c76ce0c381e41866ba8affe97cd68817cab",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/every_tick.npz": "8da334ffb6124c27055c390c4982934d11e5fac27776f68364ceb66d1a340bcc",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/contact_body_names.json": "429b8d07214132bea774304e95aaae4b700e12a909c122850e600b95710a6304",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/static_inertial_model.json": "92d77b993ef80d78af0440a1066af421555aff2794f14ff37f3df3d09669c801",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/actuator_metadata.json": "3c40b6bbea84e429bf60a0cf7bccd11e0a1e51e36ef9c1bcd105e1ec8474585b",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/diagnostic_protocol.json": "ed810155ace6b9c5421b0388a0d6efd13c75b4258b19b05ebef812fde613d5f5",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/live_stage_settings.json": "4c9a9914707a867c47cfc2b568cf1802055cc0f25d1a126689adbea025621bf2",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/contact_recorder_metadata.json": "12480d1fdc74713a1af67d621036399d32e4965b9669dbf6c2219bbb704eccc5",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_audit_260/contact_wrenches.json": "01faf7bcb0c4d0f3a66116342cf3eea91e60eddecd1cfda5581559b7a60e3996",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_audit_260/independent_audit.json": "3e9a5d1e9a75f330ad9a2cb32f5f44acca25c3f5ad477cca69d4fa293136269a",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/contact_dynamics_screen_v3_290/inertial_model.json": "1ffd883425d2ecf8d80f50796883d33f1373e4419e15d41667431fe2935eb117",
+      "/home/kadir/humanoid-sitting/scripts/diagnose_low_seat_momentum_294.py": "ef8f62bdfed643b05eb2b15fee29c90407ea196ec44180693c4aa2b1e018f63a",
+      "/home/kadir/humanoid-sitting/scripts/low_seat_contact_duration_36.py": "629469feac0a93c92b64cb31467cd837de3f0095b5708f76517506c3c6e08e9d",
+      "/home/kadir/humanoid-sitting/scripts/run_supported_postures.py": "a906a72c600f4334f1cd5b276ab7fa24ad365c5ae95284df9274424ef5dd6e7a",
+      "/home/kadir/humanoid-sitting/scripts/run_resting_posture.py": "2579e9c98a9cd7fbde8665acd542255fe0736f684b0c1d2d2f768b05a6b2fc21",
+      "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/full_transition.py": "e44f6a77f51453d47e1f2456b793b8a1eee9ba32f1c29b176ce46dce7a8f7e4c",
+      "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/config.py": "4cd8f537466bfcb4546dd0a04c9d554ae1ff9533eb5f01127ae51762734dcec7",
+      "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab/isaaclab/sim/simulation_cfg.py": "df4c2f3d8b2fb8ca639190acbed588b9d5640134b0b96c9ab9f4281da1cc8eed",
+      "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab_assets/isaaclab_assets/robots/unitree.py": "ea47505ddf82d15895fa55a0a666b5c4800eba24782ece6080061b64cd51e54b",
+      "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab_physx/isaaclab_physx/sensors/contact_sensor/contact_sensor.py": "52fd96b972b5354476f329687ee7f49eb8ec3b8069a04ae9fd6ee246fd29c5f8"
+    },
+    "scope": "Offline external impulse / whole-body momentum consistency, no control use.",
+    "physics_ticks": 0,
+    "optimizer_updates": 0,
+    "controller_installed": false,
+    "alignment": "Post-step contact query at k uses dt=.005. Its returned force is assigned to preceding interval(k-1,k]. No fitted time shift. First query at8s is excluded from impulses.",
+    "windows_steps": [
+      1,
+      4,
+      20,
+      200
+    ],
+    "gravity": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "gravity_source": "Installed configuration default, not captured live in259. G1 source linear/angular damping0; no effective-live assertion.",
+    "availability": "All non-foot normal history maxima exactly zero and wrong exactly zero for every enclosing20ms sample. Source history4, lazy_sensor_updateFalse. This is observed normal-contact coverage, not proof against cancelling resultants or unrecorded external forces. Where false, non-foot moments are unavailable.",
+    "inertia": "290 authored rotational tensors plus frozen mass/COM; six authored/frozen mass differences retained. Not certified effective live mass matrix; no fitted inertia or armature correction."
+  },
+  "body_count": 44,
+  "case_count": 24,
+  "state_samples": 1001,
+  "substep_intervals": 1000,
+  "case_intervals": 24000,
+  "observed_floor_only_case_intervals": 17144,
+  "incomplete_external_wrench_case_intervals": 6856,
+  "total_mass_kg": 32.23892676584296,
+  "summaries": [
+    {
+      "case": 0,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.993151858052995e-07,
+        3.7019663920735213e-07,
+        1.8532117497827075e-05
+      ],
+      "force_residual_RMS_N": 4.8346341319936786e-05,
+      "moment_residual_mean_Nm": [
+        -0.000331299286981792,
+        0.001081356335130305,
+        -0.00013678889810762786
+      ],
+      "moment_residual_RMS_Nm": 0.0033321778088365446
+    },
+    {
+      "case": 0,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 400,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        5.820804799249319e-07,
+        3.117195094062536e-07,
+        2.6638181909566703e-06
+      ],
+      "force_residual_RMS_N": 1.2095129360083006e-05,
+      "moment_residual_mean_Nm": [
+        6.9982604774864875e-06,
+        -0.0004472460432292271,
+        -1.5005435112613197e-05
+      ],
+      "moment_residual_RMS_Nm": 0.0011716810707501546
+    },
+    {
+      "case": 1,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -1.105121424495101e-06,
+        1.2463142776276824e-07,
+        2.0571567259276847e-05
+      ],
+      "force_residual_RMS_N": 4.748353874692226e-05,
+      "moment_residual_mean_Nm": [
+        -0.00032778322784724,
+        0.0010898830450227182,
+        -0.0001371474432792697
+      ],
+      "moment_residual_RMS_Nm": 0.0033437941927740673
+    },
+    {
+      "case": 1,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 400,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        1.731653788676606e-07,
+        4.730458122310128e-07,
+        2.559290846502224e-06
+      ],
+      "force_residual_RMS_N": 1.2090701051961475e-05,
+      "moment_residual_mean_Nm": [
+        8.88799549136028e-06,
+        -0.0004680406985678142,
+        -1.4892656086181323e-05
+      ],
+      "moment_residual_RMS_Nm": 0.0011784389567889072
+    },
+    {
+      "case": 2,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -2.669469982855011e-06,
+        6.115512684201623e-07,
+        -2.078423793424113e-05
+      ],
+      "force_residual_RMS_N": 7.999899239912506e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005399881000759946,
+        0.012135723245923666,
+        -0.0001498107663371746
+      ],
+      "moment_residual_RMS_Nm": 0.016440791206595896
+    },
+    {
+      "case": 2,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 204,
+      "incomplete_intervals": 196,
+      "force_residual_mean_N": [
+        -3.53961860128845e-07,
+        1.4686128373701685e-06,
+        4.943005708745138e-06
+      ],
+      "force_residual_RMS_N": 0.00012369624216101532,
+      "moment_residual_mean_Nm": [
+        -0.0012877668199382916,
+        0.02763499557456917,
+        0.0002247131036183294
+      ],
+      "moment_residual_RMS_Nm": 0.03504869053248601
+    },
+    {
+      "case": 3,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.616348836311789e-07,
+        6.28132352428586e-07,
+        -1.572961998318212e-05
+      ],
+      "force_residual_RMS_N": 7.655892388266263e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005402091422948557,
+        0.012150222549808277,
+        -0.0001528058960740594
+      ],
+      "moment_residual_RMS_Nm": 0.016451280507197276
+    },
+    {
+      "case": 3,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 204,
+      "incomplete_intervals": 196,
+      "force_residual_mean_N": [
+        -1.809390950631217e-05,
+        2.36899919706016e-06,
+        7.571269162685377e-06
+      ],
+      "force_residual_RMS_N": 0.00011870747067163174,
+      "moment_residual_mean_Nm": [
+        -0.001111659007815773,
+        0.02663903265386531,
+        0.0003546471274667939
+      ],
+      "moment_residual_RMS_Nm": 0.034437754867379065
+    },
+    {
+      "case": 4,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.112534950269588e-06,
+        -8.257827279399733e-07,
+        -1.1385901600136413e-05
+      ],
+      "force_residual_RMS_N": 6.530717204080579e-05,
+      "moment_residual_mean_Nm": [
+        -0.0002220079923254726,
+        0.008791380150225446,
+        -7.326044495183184e-05
+      ],
+      "moment_residual_RMS_Nm": 0.012624513464174276
+    },
+    {
+      "case": 4,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 300,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": [
+        1.795360480091913e-06,
+        -8.438539478913142e-07,
+        4.463006863292348e-06
+      ],
+      "force_residual_RMS_N": 2.826255362628087e-05,
+      "moment_residual_mean_Nm": [
+        -0.0004848801263030329,
+        0.0035837752102731144,
+        -0.0001780417879834768
+      ],
+      "moment_residual_RMS_Nm": 0.006211880038076911
+    },
+    {
+      "case": 5,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -8.81817663470588e-06,
+        -3.537443973456684e-07,
+        -1.708581621404457e-05
+      ],
+      "force_residual_RMS_N": 6.585259182308688e-05,
+      "moment_residual_mean_Nm": [
+        -0.00021704235588997542,
+        0.008792949941251363,
+        -7.132952019289167e-05
+      ],
+      "moment_residual_RMS_Nm": 0.012629473195164463
+    },
+    {
+      "case": 5,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 300,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": [
+        -6.861976146256226e-07,
+        -5.310917385773889e-07,
+        6.117292157521781e-06
+      ],
+      "force_residual_RMS_N": 2.8250789878113477e-05,
+      "moment_residual_mean_Nm": [
+        -0.00048630112485978453,
+        0.003587611963588102,
+        -0.00017299863129948835
+      ],
+      "moment_residual_RMS_Nm": 0.006211336571838302
+    },
+    {
+      "case": 6,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.333890086869569e-06,
+        6.886874642278095e-07,
+        -2.3021088150474325e-05
+      ],
+      "force_residual_RMS_N": 7.647349880307187e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005446143645111712,
+        0.010173681924731514,
+        -0.00015779944897306765
+      ],
+      "moment_residual_RMS_Nm": 0.014788518143001562
+    },
+    {
+      "case": 6,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 176,
+      "incomplete_intervals": 224,
+      "force_residual_mean_N": [
+        -5.143208267431148e-06,
+        3.672484625891905e-07,
+        1.1235652269361841e-05
+      ],
+      "force_residual_RMS_N": 6.882947753564747e-05,
+      "moment_residual_mean_Nm": [
+        -0.0010638183995479908,
+        0.020821320718637456,
+        0.00022735422361372476
+      ],
+      "moment_residual_RMS_Nm": 0.021935034918603193
+    },
+    {
+      "case": 7,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.049262244018128e-06,
+        1.2232289618846703e-06,
+        -1.7333982523842123e-05
+      ],
+      "force_residual_RMS_N": 7.213329235268337e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005436853739230288,
+        0.010166660498855451,
+        -0.00015880483736967901
+      ],
+      "moment_residual_RMS_Nm": 0.014786647565298456
+    },
+    {
+      "case": 7,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 176,
+      "incomplete_intervals": 224,
+      "force_residual_mean_N": [
+        -4.26290637012197e-06,
+        1.3167048304160564e-06,
+        9.67954451540356e-06
+      ],
+      "force_residual_RMS_N": 6.071772448803399e-05,
+      "moment_residual_mean_Nm": [
+        -0.00106208886241618,
+        0.020808874546468858,
+        0.000222799235943292
+      ],
+      "moment_residual_RMS_Nm": 0.021916549812927982
+    },
+    {
+      "case": 8,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.260865557867177e-06,
+        6.3691203880822e-07,
+        -1.7913073904117556e-05
+      ],
+      "force_residual_RMS_N": 7.236674770848519e-05,
+      "moment_residual_mean_Nm": [
+        -0.00026545229910530916,
+        0.009967884987331442,
+        -0.00012572924619734375
+      ],
+      "moment_residual_RMS_Nm": 0.013550155804698611
+    },
+    {
+      "case": 8,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 292,
+      "incomplete_intervals": 108,
+      "force_residual_mean_N": [
+        -3.172107490609779e-06,
+        -6.193031596941255e-07,
+        8.332858700661024e-06
+      ],
+      "force_residual_RMS_N": 3.113716030424044e-05,
+      "moment_residual_mean_Nm": [
+        -0.0008142374747300971,
+        0.0041502781690677965,
+        -0.00014952158089346756
+      ],
+      "moment_residual_RMS_Nm": 0.006747058930950193
+    },
+    {
+      "case": 9,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -4.30620863062419e-06,
+        -6.744115056739966e-08,
+        -1.4557586041808426e-05
+      ],
+      "force_residual_RMS_N": 6.95784512743905e-05,
+      "moment_residual_mean_Nm": [
+        -0.0002578894753228165,
+        0.009968259185428973,
+        -0.00013010338698135648
+      ],
+      "moment_residual_RMS_Nm": 0.013553972063027206
+    },
+    {
+      "case": 9,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 292,
+      "incomplete_intervals": 108,
+      "force_residual_mean_N": [
+        -1.6482146597106006e-06,
+        -3.735111522863176e-07,
+        7.484665509309288e-06
+      ],
+      "force_residual_RMS_N": 3.196799714632015e-05,
+      "moment_residual_mean_Nm": [
+        -0.0008190188945125045,
+        0.004151862303683489,
+        -0.00014994120033452358
+      ],
+      "moment_residual_RMS_Nm": 0.00674457669261926
+    },
+    {
+      "case": 10,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -2.603864654381692e-06,
+        1.1794203988906371e-06,
+        -1.7344708401711794e-05
+      ],
+      "force_residual_RMS_N": 7.462854175299001e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005286721354291438,
+        0.010825228468729535,
+        -0.00016181265043357574
+      ],
+      "moment_residual_RMS_Nm": 0.015601517813675315
+    },
+    {
+      "case": 10,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 184,
+      "incomplete_intervals": 216,
+      "force_residual_mean_N": [
+        -1.864045859339417e-05,
+        2.7372623635913006e-06,
+        1.7626515825136617e-06
+      ],
+      "force_residual_RMS_N": 9.585935722352251e-05,
+      "moment_residual_mean_Nm": [
+        -0.00037280333747692385,
+        0.022442112291117294,
+        0.0003160997460943897
+      ],
+      "moment_residual_RMS_Nm": 0.025990049686190266
+    },
+    {
+      "case": 11,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        3.4218862524167854e-06,
+        9.985376686212355e-07,
+        -1.6742049821687198e-05
+      ],
+      "force_residual_RMS_N": 7.445927657000456e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005245397094595363,
+        0.010822432074708841,
+        -0.00016531061217285267
+      ],
+      "moment_residual_RMS_Nm": 0.015598493872756759
+    },
+    {
+      "case": 11,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 184,
+      "incomplete_intervals": 216,
+      "force_residual_mean_N": [
+        -9.799470891437495e-06,
+        3.0020055178513687e-06,
+        7.410953026095396e-07
+      ],
+      "force_residual_RMS_N": 9.339403502630699e-05,
+      "moment_residual_mean_Nm": [
+        -0.0003743204753960938,
+        0.022430477430579476,
+        0.0003000489239003807
+      ],
+      "moment_residual_RMS_Nm": 0.02597475189543729
+    },
+    {
+      "case": 12,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -5.335225088516195e-06,
+        -1.4904975817116696e-06,
+        -1.168120492000952e-05
+      ],
+      "force_residual_RMS_N": 6.60933129810901e-05,
+      "moment_residual_mean_Nm": [
+        -0.00011566272249574493,
+        0.009296412344965966,
+        -6.6765275415057e-05
+      ],
+      "moment_residual_RMS_Nm": 0.013068821957603942
+    },
+    {
+      "case": 12,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 296,
+      "incomplete_intervals": 104,
+      "force_residual_mean_N": [
+        -3.9487479124739075e-06,
+        -5.792370095515791e-07,
+        1.981920897176701e-06
+      ],
+      "force_residual_RMS_N": 3.194660134255146e-05,
+      "moment_residual_mean_Nm": [
+        -0.0008351269374976187,
+        0.005372263551378024,
+        -0.0001713174854008116
+      ],
+      "moment_residual_RMS_Nm": 0.007043974365612083
+    },
+    {
+      "case": 13,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 600,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -6.519854664296814e-06,
+        -1.9398544294293246e-06,
+        -1.7707793286651773e-05
+      ],
+      "force_residual_RMS_N": 6.965745610121599e-05,
+      "moment_residual_mean_Nm": [
+        -0.00011824305475902843,
+        0.009295957770764616,
+        -6.63038105228796e-05
+      ],
+      "moment_residual_RMS_Nm": 0.013068618228616947
+    },
+    {
+      "case": 13,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 296,
+      "incomplete_intervals": 104,
+      "force_residual_mean_N": [
+        -4.024373474903147e-06,
+        -1.5672968981663585e-06,
+        1.0171657793965874e-06
+      ],
+      "force_residual_RMS_N": 3.532376264411687e-05,
+      "moment_residual_mean_Nm": [
+        -0.0008346417162931823,
+        0.005372958331844998,
+        -0.00017039346998893042
+      ],
+      "moment_residual_RMS_Nm": 0.007042747764585654
+    },
+    {
+      "case": 14,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 512,
+      "incomplete_intervals": 88,
+      "force_residual_mean_N": [
+        -8.683724748320956e-06,
+        4.627401064691107e-07,
+        -1.0115022400079406e-05
+      ],
+      "force_residual_RMS_N": 7.124475219931158e-05,
+      "moment_residual_mean_Nm": [
+        -0.0006475956150287865,
+        0.010311110733354134,
+        -4.381730376805217e-05
+      ],
+      "moment_residual_RMS_Nm": 0.01482746267007402
+    },
+    {
+      "case": 14,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 15,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 512,
+      "incomplete_intervals": 88,
+      "force_residual_mean_N": [
+        -3.8124623707534807e-06,
+        6.733875934026873e-07,
+        -1.0081983603201372e-05
+      ],
+      "force_residual_RMS_N": 6.987874676230069e-05,
+      "moment_residual_mean_Nm": [
+        -0.0006422763762344335,
+        0.010308973496754241,
+        -4.323102210892582e-05
+      ],
+      "moment_residual_RMS_Nm": 0.014814558839327948
+    },
+    {
+      "case": 15,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 16,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 504,
+      "incomplete_intervals": 96,
+      "force_residual_mean_N": [
+        -5.450902272657419e-06,
+        1.1783233564988779e-06,
+        -1.4663534498588243e-06
+      ],
+      "force_residual_RMS_N": 5.911100830854308e-05,
+      "moment_residual_mean_Nm": [
+        -0.00032871826983063817,
+        0.008618972750788007,
+        -9.152455121136289e-06
+      ],
+      "moment_residual_RMS_Nm": 0.012023429405440326
+    },
+    {
+      "case": 16,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 17,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 504,
+      "incomplete_intervals": 96,
+      "force_residual_mean_N": [
+        -7.009717390557902e-06,
+        2.8671164061554967e-07,
+        -4.119763422407982e-06
+      ],
+      "force_residual_RMS_N": 5.920876764455053e-05,
+      "moment_residual_mean_Nm": [
+        -0.00032917195601029866,
+        0.00862025516065123,
+        -8.79433038943443e-06
+      ],
+      "moment_residual_RMS_Nm": 0.012017903345691187
+    },
+    {
+      "case": 17,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 18,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 500,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": [
+        -4.500914474752345e-06,
+        1.106479749782906e-06,
+        -3.939182526978928e-06
+      ],
+      "force_residual_RMS_N": 5.2462084671470864e-05,
+      "moment_residual_mean_Nm": [
+        -0.00014596432099639274,
+        0.007805733303150792,
+        -6.8151722804363e-05
+      ],
+      "moment_residual_RMS_Nm": 0.010063187599930632
+    },
+    {
+      "case": 18,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 19,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 500,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": [
+        -1.8154070236026944e-06,
+        1.0172487971459324e-06,
+        -3.9207765721566265e-06
+      ],
+      "force_residual_RMS_N": 5.163718926182429e-05,
+      "moment_residual_mean_Nm": [
+        -0.00014520185581394735,
+        0.00780229861334099,
+        -6.708853186569853e-05
+      ],
+      "moment_residual_RMS_Nm": 0.010042361745319287
+    },
+    {
+      "case": 19,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 20,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 496,
+      "incomplete_intervals": 104,
+      "force_residual_mean_N": [
+        -1.1320219078777977e-06,
+        1.3189841061238597e-06,
+        -1.802830288566867e-06
+      ],
+      "force_residual_RMS_N": 5.1802893856429185e-05,
+      "moment_residual_mean_Nm": [
+        -0.00016989116420011344,
+        0.007559156913243939,
+        -8.297704384861528e-05
+      ],
+      "moment_residual_RMS_Nm": 0.009828503267714912
+    },
+    {
+      "case": 20,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 21,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 496,
+      "incomplete_intervals": 104,
+      "force_residual_mean_N": [
+        -3.749981118784268e-06,
+        1.124497252225088e-06,
+        -2.3075471790982906e-06
+      ],
+      "force_residual_RMS_N": 5.138621184042955e-05,
+      "moment_residual_mean_Nm": [
+        -0.0001690373671488543,
+        0.007560135946717274,
+        -7.94102916892604e-05
+      ],
+      "moment_residual_RMS_Nm": 0.00984270440537925
+    },
+    {
+      "case": 21,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 22,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 508,
+      "incomplete_intervals": 92,
+      "force_residual_mean_N": [
+        -2.6650429802933753e-06,
+        7.368314801306968e-07,
+        -3.638702793952465e-06
+      ],
+      "force_residual_RMS_N": 5.643680292881831e-05,
+      "moment_residual_mean_Nm": [
+        -0.00011620925351567731,
+        0.008388392385745385,
+        -3.475798724729599e-05
+      ],
+      "moment_residual_RMS_Nm": 0.01061580812202827
+    },
+    {
+      "case": 22,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 23,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 600,
+      "available_intervals": 508,
+      "incomplete_intervals": 92,
+      "force_residual_mean_N": [
+        -5.64050811895749e-06,
+        1.1673781048361965e-06,
+        -2.259616116804774e-06
+      ],
+      "force_residual_RMS_N": 5.6621962949509904e-05,
+      "moment_residual_mean_Nm": [
+        -0.00011801935149439278,
+        0.008387263543531856,
+        -3.481253708829805e-05
+      ],
+      "moment_residual_RMS_Nm": 0.010633136396192617
+    },
+    {
+      "case": 23,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 5.0,
+      "intervals": 400,
+      "available_intervals": 0,
+      "incomplete_intervals": 400,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 0,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.993151858008927e-07,
+        3.701966392072121e-07,
+        1.853211749780297e-05
+      ],
+      "force_residual_RMS_N": 3.598676436357125e-05,
+      "moment_residual_mean_Nm": [
+        -0.00033129928698179175,
+        0.001081356335130306,
+        -0.00013678889810762784
+      ],
+      "moment_residual_RMS_Nm": 0.0033280597102805834
+    },
+    {
+      "case": 0,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 100,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        5.820804799180337e-07,
+        3.1171950940622473e-07,
+        2.663818190966034e-06
+      ],
+      "force_residual_RMS_N": 6.8986862845194e-06,
+      "moment_residual_mean_Nm": [
+        6.998260477486371e-06,
+        -0.0004472460432292263,
+        -1.5005435112613189e-05
+      ],
+      "moment_residual_RMS_Nm": 0.0011596777195622835
+    },
+    {
+      "case": 1,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -1.1051214244931424e-06,
+        1.246314277623471e-07,
+        2.0571567259289644e-05
+      ],
+      "force_residual_RMS_N": 3.5632541458664214e-05,
+      "moment_residual_mean_Nm": [
+        -0.00032778322784724005,
+        0.001089883045022719,
+        -0.0001371474432792698
+      ],
+      "moment_residual_RMS_Nm": 0.003339914207684878
+    },
+    {
+      "case": 1,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 100,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        1.7316537887038805e-07,
+        4.73045812231108e-07,
+        2.5592908465142043e-06
+      ],
+      "force_residual_RMS_N": 6.891016258453858e-06,
+      "moment_residual_mean_Nm": [
+        8.88799549136026e-06,
+        -0.0004680406985678139,
+        -1.489265608618135e-05
+      ],
+      "moment_residual_RMS_Nm": 0.001165964065386361
+    },
+    {
+      "case": 2,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -2.6694699828645405e-06,
+        6.115512684201702e-07,
+        -2.078423793423796e-05
+      ],
+      "force_residual_RMS_N": 4.6310153776919735e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005399881000759946,
+        0.012135723245923664,
+        -0.00014981076633717477
+      ],
+      "moment_residual_RMS_Nm": 0.01643847289983681
+    },
+    {
+      "case": 2,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 51,
+      "incomplete_intervals": 49,
+      "force_residual_mean_N": [
+        -3.539618600501872e-07,
+        1.4686128373690756e-06,
+        4.94300570877336e-06
+      ],
+      "force_residual_RMS_N": 8.11682942607942e-05,
+      "moment_residual_mean_Nm": [
+        -0.0012877668199382905,
+        0.02763499557456913,
+        0.00022471310361833302
+      ],
+      "moment_residual_RMS_Nm": 0.034998129921922486
+    },
+    {
+      "case": 3,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.616348836233412e-07,
+        6.281323524270406e-07,
+        -1.5729619983170476e-05
+      ],
+      "force_residual_RMS_N": 4.4096715802384264e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005402091422948557,
+        0.012150222549808284,
+        -0.00015280589607405965
+      ],
+      "moment_residual_RMS_Nm": 0.0164487703273525
+    },
+    {
+      "case": 3,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 51,
+      "incomplete_intervals": 49,
+      "force_residual_mean_N": [
+        -1.809390950625706e-05,
+        2.36899919705968e-06,
+        7.571269162589984e-06
+      ],
+      "force_residual_RMS_N": 7.322421629803283e-05,
+      "moment_residual_mean_Nm": [
+        -0.0011116590078157707,
+        0.026639032653865278,
+        0.00035464712746679497
+      ],
+      "moment_residual_RMS_Nm": 0.03431637810240166
+    },
+    {
+      "case": 4,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.11253495026278e-06,
+        -8.257827279405022e-07,
+        -1.1385901600133207e-05
+      ],
+      "force_residual_RMS_N": 4.1086737011011356e-05,
+      "moment_residual_mean_Nm": [
+        -0.0002220079923254735,
+        0.008791380150225458,
+        -7.326044495183203e-05
+      ],
+      "moment_residual_RMS_Nm": 0.01262159932648751
+    },
+    {
+      "case": 4,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 75,
+      "incomplete_intervals": 25,
+      "force_residual_mean_N": [
+        1.7953604800936569e-06,
+        -8.438539478924792e-07,
+        4.46300686329073e-06
+      ],
+      "force_residual_RMS_N": 1.5572736614456015e-05,
+      "moment_residual_mean_Nm": [
+        -0.0004848801263030329,
+        0.0035837752102731144,
+        -0.0001780417879834767
+      ],
+      "moment_residual_RMS_Nm": 0.006208984200193533
+    },
+    {
+      "case": 5,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -8.818176634699552e-06,
+        -3.5374439734659006e-07,
+        -1.7085816214039082e-05
+      ],
+      "force_residual_RMS_N": 4.434042284726458e-05,
+      "moment_residual_mean_Nm": [
+        -0.0002170423558899764,
+        0.008792949941251354,
+        -7.13295201928917e-05
+      ],
+      "moment_residual_RMS_Nm": 0.01262669579865128
+    },
+    {
+      "case": 5,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 75,
+      "incomplete_intervals": 25,
+      "force_residual_mean_N": [
+        -6.861976146294805e-07,
+        -5.310917385771061e-07,
+        6.117292157521194e-06
+      ],
+      "force_residual_RMS_N": 1.793462437404961e-05,
+      "moment_residual_mean_Nm": [
+        -0.00048630112485978464,
+        0.003587611963588102,
+        -0.00017299863129948832
+      ],
+      "moment_residual_RMS_Nm": 0.006208798182293244
+    },
+    {
+      "case": 6,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.3338900868797e-06,
+        6.88687464226595e-07,
+        -2.3021088150486282e-05
+      ],
+      "force_residual_RMS_N": 5.1447603837025646e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005446143645111712,
+        0.010173681924731498,
+        -0.0001577994489730674
+      ],
+      "moment_residual_RMS_Nm": 0.014785595704088945
+    },
+    {
+      "case": 6,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 44,
+      "incomplete_intervals": 56,
+      "force_residual_mean_N": [
+        -5.14320826740375e-06,
+        3.6724846259149675e-07,
+        1.1235652269347894e-05
+      ],
+      "force_residual_RMS_N": 4.104452686177865e-05,
+      "moment_residual_mean_Nm": [
+        -0.0010638183995479913,
+        0.02082132071863746,
+        0.00022735422361372514
+      ],
+      "moment_residual_RMS_Nm": 0.02193056519415334
+    },
+    {
+      "case": 7,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.049262244010833e-06,
+        1.2232289618862642e-06,
+        -1.7333982523818037e-05
+      ],
+      "force_residual_RMS_N": 4.473125429140129e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005436853739230282,
+        0.010166660498855474,
+        -0.00015880483736967929
+      ],
+      "moment_residual_RMS_Nm": 0.014783857282531433
+    },
+    {
+      "case": 7,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 44,
+      "incomplete_intervals": 56,
+      "force_residual_mean_N": [
+        -4.262906370086918e-06,
+        1.3167048304320808e-06,
+        9.679544515441939e-06
+      ],
+      "force_residual_RMS_N": 3.361590064639789e-05,
+      "moment_residual_mean_Nm": [
+        -0.0010620888624161796,
+        0.020808874546468854,
+        0.00022279923594329225
+      ],
+      "moment_residual_RMS_Nm": 0.02191245755908659
+    },
+    {
+      "case": 8,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.260865557870711e-06,
+        6.369120388072912e-07,
+        -1.791307390410539e-05
+      ],
+      "force_residual_RMS_N": 4.6657645376644166e-05,
+      "moment_residual_mean_Nm": [
+        -0.0002654522991053085,
+        0.009967884987331442,
+        -0.00012572924619734378
+      ],
+      "moment_residual_RMS_Nm": 0.01354822499027276
+    },
+    {
+      "case": 8,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 73,
+      "incomplete_intervals": 27,
+      "force_residual_mean_N": [
+        -3.1721074906148137e-06,
+        -6.193031596876973e-07,
+        8.33285870066438e-06
+      ],
+      "force_residual_RMS_N": 1.990306163601553e-05,
+      "moment_residual_mean_Nm": [
+        -0.0008142374747300969,
+        0.004150278169067797,
+        -0.00014952158089346767
+      ],
+      "moment_residual_RMS_Nm": 0.006745334492053217
+    },
+    {
+      "case": 9,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -4.306208630621622e-06,
+        -6.744115057146542e-08,
+        -1.4557586041800775e-05
+      ],
+      "force_residual_RMS_N": 4.591419213104025e-05,
+      "moment_residual_mean_Nm": [
+        -0.0002578894753228169,
+        0.009968259185429002,
+        -0.00013010338698135656
+      ],
+      "moment_residual_RMS_Nm": 0.013551679523401833
+    },
+    {
+      "case": 9,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 73,
+      "incomplete_intervals": 27,
+      "force_residual_mean_N": [
+        -1.6482146597121644e-06,
+        -3.735111522943006e-07,
+        7.484665509311215e-06
+      ],
+      "force_residual_RMS_N": 2.0546415137116092e-05,
+      "moment_residual_mean_Nm": [
+        -0.0008190188945125043,
+        0.004151862303683489,
+        -0.00014994120033452366
+      ],
+      "moment_residual_RMS_Nm": 0.006742462268515189
+    },
+    {
+      "case": 10,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -2.6038646544096693e-06,
+        1.1794203988900715e-06,
+        -1.7344708401705364e-05
+      ],
+      "force_residual_RMS_N": 4.404249895470524e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005286721354291438,
+        0.010825228468729528,
+        -0.00016181265043357598
+      ],
+      "moment_residual_RMS_Nm": 0.015598705354693118
+    },
+    {
+      "case": 10,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 46,
+      "incomplete_intervals": 54,
+      "force_residual_mean_N": [
+        -1.864045859336445e-05,
+        2.7372623635899605e-06,
+        1.7626515824961754e-06
+      ],
+      "force_residual_RMS_N": 6.501290548929426e-05,
+      "moment_residual_mean_Nm": [
+        -0.00037280333747692396,
+        0.022442112291117308,
+        0.00031609974609439007
+      ],
+      "moment_residual_RMS_Nm": 0.025983121691542894
+    },
+    {
+      "case": 11,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        3.421886252414462e-06,
+        9.985376686211707e-07,
+        -1.6742049821693286e-05
+      ],
+      "force_residual_RMS_N": 4.37149398778651e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005245397094595366,
+        0.010822432074708828,
+        -0.00016531061217285288
+      ],
+      "moment_residual_RMS_Nm": 0.01559611310413226
+    },
+    {
+      "case": 11,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 46,
+      "incomplete_intervals": 54,
+      "force_residual_mean_N": [
+        -9.799470891462198e-06,
+        3.0020055178473966e-06,
+        7.410953026714575e-07
+      ],
+      "force_residual_RMS_N": 5.8205974734564584e-05,
+      "moment_residual_mean_Nm": [
+        -0.00037432047539609416,
+        0.02243047743057948,
+        0.0003000489239003805
+      ],
+      "moment_residual_RMS_Nm": 0.025967811951580638
+    },
+    {
+      "case": 12,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -5.335225088504813e-06,
+        -1.4904975817132894e-06,
+        -1.168120492000747e-05
+      ],
+      "force_residual_RMS_N": 4.052198837860988e-05,
+      "moment_residual_mean_Nm": [
+        -0.00011566272249574427,
+        0.009296412344965962,
+        -6.676527541505692e-05
+      ],
+      "moment_residual_RMS_Nm": 0.013066509502926621
+    },
+    {
+      "case": 12,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 74,
+      "incomplete_intervals": 26,
+      "force_residual_mean_N": [
+        -3.948747912468688e-06,
+        -5.792370095549352e-07,
+        1.9819208971766266e-06
+      ],
+      "force_residual_RMS_N": 2.1525491051790438e-05,
+      "moment_residual_mean_Nm": [
+        -0.0008351269374976185,
+        0.005372263551378023,
+        -0.0001713174854008116
+      ],
+      "moment_residual_RMS_Nm": 0.0070429751114717285
+    },
+    {
+      "case": 13,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 150,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -6.519854664284156e-06,
+        -1.939854429430276e-06,
+        -1.7707793286650543e-05
+      ],
+      "force_residual_RMS_N": 4.452306219627026e-05,
+      "moment_residual_mean_Nm": [
+        -0.0001182430547590287,
+        0.009295957770764621,
+        -6.630381052287986e-05
+      ],
+      "moment_residual_RMS_Nm": 0.013066177196170368
+    },
+    {
+      "case": 13,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 74,
+      "incomplete_intervals": 26,
+      "force_residual_mean_N": [
+        -4.024373474891168e-06,
+        -1.5672968981628209e-06,
+        1.0171657794033654e-06
+      ],
+      "force_residual_RMS_N": 2.4888719336085312e-05,
+      "moment_residual_mean_Nm": [
+        -0.000834641716293183,
+        0.005372958331844997,
+        -0.0001703934699889304
+      ],
+      "moment_residual_RMS_Nm": 0.007041522222784151
+    },
+    {
+      "case": 14,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 128,
+      "incomplete_intervals": 22,
+      "force_residual_mean_N": [
+        -8.683724748328552e-06,
+        4.627401064674199e-07,
+        -1.0115022400087651e-05
+      ],
+      "force_residual_RMS_N": 4.340948470588199e-05,
+      "moment_residual_mean_Nm": [
+        -0.0006475956150287859,
+        0.010311110733354152,
+        -4.381730376805209e-05
+      ],
+      "moment_residual_RMS_Nm": 0.01482269894323826
+    },
+    {
+      "case": 14,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 0,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 15,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 128,
+      "incomplete_intervals": 22,
+      "force_residual_mean_N": [
+        -3.8124623707224827e-06,
+        6.733875934006432e-07,
+        -1.0081983603202834e-05
+      ],
+      "force_residual_RMS_N": 4.07210418448433e-05,
+      "moment_residual_mean_Nm": [
+        -0.0006422763762344337,
+        0.010308973496754236,
+        -4.323102210892563e-05
+      ],
+      "moment_residual_RMS_Nm": 0.014809755092904248
+    },
+    {
+      "case": 15,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 0,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 16,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 126,
+      "incomplete_intervals": 24,
+      "force_residual_mean_N": [
+        -5.4509022726663426e-06,
+        1.178323356498722e-06,
+        -1.4663534498792607e-06
+      ],
+      "force_residual_RMS_N": 3.264316786069286e-05,
+      "moment_residual_mean_Nm": [
+        -0.00032871826983063763,
+        0.008618972750788007,
+        -9.152455121136504e-06
+      ],
+      "moment_residual_RMS_Nm": 0.012019816450364708
+    },
+    {
+      "case": 16,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 0,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 17,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 126,
+      "incomplete_intervals": 24,
+      "force_residual_mean_N": [
+        -7.009717390570014e-06,
+        2.8671164062004884e-07,
+        -4.119763422434176e-06
+      ],
+      "force_residual_RMS_N": 3.770435666185553e-05,
+      "moment_residual_mean_Nm": [
+        -0.00032917195601029844,
+        0.008620255160651227,
+        -8.794330389434236e-06
+      ],
+      "moment_residual_RMS_Nm": 0.012014484948904277
+    },
+    {
+      "case": 17,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 0,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 18,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 125,
+      "incomplete_intervals": 25,
+      "force_residual_mean_N": [
+        -4.5009144747556755e-06,
+        1.1064797497812228e-06,
+        -3.939182526981403e-06
+      ],
+      "force_residual_RMS_N": 3.1699757849644824e-05,
+      "moment_residual_mean_Nm": [
+        -0.00014596432099639328,
+        0.00780573330315079,
+        -6.815172280436299e-05
+      ],
+      "moment_residual_RMS_Nm": 0.01006004596345709
+    },
+    {
+      "case": 18,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 0,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 19,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 125,
+      "incomplete_intervals": 25,
+      "force_residual_mean_N": [
+        -1.8154070236140948e-06,
+        1.0172487971454716e-06,
+        -3.920776572139198e-06
+      ],
+      "force_residual_RMS_N": 2.8848075873106103e-05,
+      "moment_residual_mean_Nm": [
+        -0.00014520185581394808,
+        0.007802298613340987,
+        -6.708853186569834e-05
+      ],
+      "moment_residual_RMS_Nm": 0.010038893128131035
+    },
+    {
+      "case": 19,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 0,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 20,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 124,
+      "incomplete_intervals": 26,
+      "force_residual_mean_N": [
+        -1.1320219078900327e-06,
+        1.3189841061255802e-06,
+        -1.8028302885461045e-06
+      ],
+      "force_residual_RMS_N": 2.7955113873722696e-05,
+      "moment_residual_mean_Nm": [
+        -0.0001698911642001131,
+        0.007559156913243937,
+        -8.297704384861547e-05
+      ],
+      "moment_residual_RMS_Nm": 0.009824891529409437
+    },
+    {
+      "case": 20,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 0,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 21,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 124,
+      "incomplete_intervals": 26,
+      "force_residual_mean_N": [
+        -3.7499811187840954e-06,
+        1.1244972522246547e-06,
+        -2.3075471791029523e-06
+      ],
+      "force_residual_RMS_N": 2.6221618194240432e-05,
+      "moment_residual_mean_Nm": [
+        -0.00016903736714885483,
+        0.007560135946717276,
+        -7.94102916892606e-05
+      ],
+      "moment_residual_RMS_Nm": 0.009839361375441318
+    },
+    {
+      "case": 21,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 0,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 22,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 127,
+      "incomplete_intervals": 23,
+      "force_residual_mean_N": [
+        -2.665042980297676e-06,
+        7.368314801296326e-07,
+        -3.6387027939467053e-06
+      ],
+      "force_residual_RMS_N": 3.093234139190028e-05,
+      "moment_residual_mean_Nm": [
+        -0.00011620925351567739,
+        0.008388392385745382,
+        -3.47579872472961e-05
+      ],
+      "moment_residual_RMS_Nm": 0.01061265862184721
+    },
+    {
+      "case": 22,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 0,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 23,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 150,
+      "available_intervals": 127,
+      "incomplete_intervals": 23,
+      "force_residual_mean_N": [
+        -5.640508118989551e-06,
+        1.167378104837048e-06,
+        -2.2596161168106067e-06
+      ],
+      "force_residual_RMS_N": 3.184943640613977e-05,
+      "moment_residual_mean_Nm": [
+        -0.00011801935149439244,
+        0.008387263543531854,
+        -3.481253708829798e-05
+      ],
+      "moment_residual_RMS_Nm": 0.010629948043064412
+    },
+    {
+      "case": 23,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 20.0,
+      "intervals": 100,
+      "available_intervals": 0,
+      "incomplete_intervals": 100,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 0,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.993151858060968e-07,
+        3.701966392071489e-07,
+        1.8532117497774742e-05
+      ],
+      "force_residual_RMS_N": 2.844892610578423e-05,
+      "moment_residual_mean_Nm": [
+        -0.0003312992869817919,
+        0.0010813563351303034,
+        -0.00013678889810762784
+      ],
+      "moment_residual_RMS_Nm": 0.003275976936326811
+    },
+    {
+      "case": 0,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 20,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        5.82080479935923e-07,
+        3.1171950940507684e-07,
+        2.6638181909160313e-06
+      ],
+      "force_residual_RMS_N": 3.943482924557834e-06,
+      "moment_residual_mean_Nm": [
+        6.998260477486688e-06,
+        -0.0004472460432292361,
+        -1.5005435112613186e-05
+      ],
+      "moment_residual_RMS_Nm": 0.001024066939941944
+    },
+    {
+      "case": 1,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -1.1051214244894743e-06,
+        1.2463142776400756e-07,
+        2.057156725929268e-05
+      ],
+      "force_residual_RMS_N": 3.0420217606961442e-05,
+      "moment_residual_mean_Nm": [
+        -0.0003277832278472398,
+        0.001089883045022712,
+        -0.00013714744327926982
+      ],
+      "moment_residual_RMS_Nm": 0.003286500553445035
+    },
+    {
+      "case": 1,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 20,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        1.731653788872474e-07,
+        4.7304581223051506e-07,
+        2.5592908464398822e-06
+      ],
+      "force_residual_RMS_N": 4.027349517471429e-06,
+      "moment_residual_mean_Nm": [
+        8.887995491360418e-06,
+        -0.00046804069856781907,
+        -1.4892656086181283e-05
+      ],
+      "moment_residual_RMS_Nm": 0.0010341553630998795
+    },
+    {
+      "case": 2,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -2.6694699827977536e-06,
+        6.115512684169537e-07,
+        -2.0784237934165967e-05
+      ],
+      "force_residual_RMS_N": 3.48011414912935e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005399881000759941,
+        0.012135723245923663,
+        -0.0001498107663371749
+      ],
+      "moment_residual_RMS_Nm": 0.016396072322290994
+    },
+    {
+      "case": 2,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 9,
+      "incomplete_intervals": 11,
+      "force_residual_mean_N": [
+        1.0848411204720382e-05,
+        2.55181457110746e-06,
+        1.0529729206004084e-06
+      ],
+      "force_residual_RMS_N": 2.9164849131001997e-05,
+      "moment_residual_mean_Nm": [
+        -0.00031579697266686076,
+        0.024725288302942284,
+        0.00043361730746499825
+      ],
+      "moment_residual_RMS_Nm": 0.030348164055507183
+    },
+    {
+      "case": 3,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.616348837082704e-07,
+        6.281323524279396e-07,
+        -1.572961998319462e-05
+      ],
+      "force_residual_RMS_N": 3.3630987149655e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005402091422948567,
+        0.012150222549808286,
+        -0.00015280589607406006
+      ],
+      "moment_residual_RMS_Nm": 0.016406274472283624
+    },
+    {
+      "case": 3,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 9,
+      "incomplete_intervals": 11,
+      "force_residual_mean_N": [
+        -1.1791735917752856e-05,
+        2.143500437988478e-06,
+        3.074718703471251e-06
+      ],
+      "force_residual_RMS_N": 2.9064597534846945e-05,
+      "moment_residual_mean_Nm": [
+        -0.00031422994306919654,
+        0.024552739892460516,
+        0.00042577379755049673
+      ],
+      "moment_residual_RMS_Nm": 0.030214218996742606
+    },
+    {
+      "case": 4,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.11253495027514e-06,
+        -8.257827279360119e-07,
+        -1.1385901600142098e-05
+      ],
+      "force_residual_RMS_N": 3.272028934779008e-05,
+      "moment_residual_mean_Nm": [
+        -0.00022200799232547462,
+        0.008791380150225462,
+        -7.326044495183198e-05
+      ],
+      "moment_residual_RMS_Nm": 0.012581214101890476
+    },
+    {
+      "case": 4,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 15,
+      "incomplete_intervals": 5,
+      "force_residual_mean_N": [
+        1.795360480033592e-06,
+        -8.438539478945392e-07,
+        4.463006863283936e-06
+      ],
+      "force_residual_RMS_N": 1.0288286124532044e-05,
+      "moment_residual_mean_Nm": [
+        -0.00048488012630303393,
+        0.0035837752102731144,
+        -0.00017804178798347682
+      ],
+      "moment_residual_RMS_Nm": 0.006171580196526215
+    },
+    {
+      "case": 5,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -8.818176634683867e-06,
+        -3.537443973419009e-07,
+        -1.7085816214054694e-05
+      ],
+      "force_residual_RMS_N": 3.728054983338075e-05,
+      "moment_residual_mean_Nm": [
+        -0.0002170423558899761,
+        0.008792949941251358,
+        -7.13295201928915e-05
+      ],
+      "moment_residual_RMS_Nm": 0.012586317701645892
+    },
+    {
+      "case": 5,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 15,
+      "incomplete_intervals": 5,
+      "force_residual_mean_N": [
+        -6.861976146558627e-07,
+        -5.31091738564457e-07,
+        6.11729215751599e-06
+      ],
+      "force_residual_RMS_N": 1.2545905324011542e-05,
+      "moment_residual_mean_Nm": [
+        -0.0004863011248597848,
+        0.0035876119635881026,
+        -0.00017299863129948827
+      ],
+      "moment_residual_RMS_Nm": 0.006171461619112589
+    },
+    {
+      "case": 6,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.333890086776267e-06,
+        6.886874642319528e-07,
+        -2.302108815052199e-05
+      ],
+      "force_residual_RMS_N": 4.252551851554767e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005446143645111717,
+        0.010173681924731505,
+        -0.00015779944897306773
+      ],
+      "moment_residual_RMS_Nm": 0.014720282997931867
+    },
+    {
+      "case": 6,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 8,
+      "incomplete_intervals": 12,
+      "force_residual_mean_N": [
+        -7.070451600930776e-06,
+        5.54112088190558e-07,
+        9.730334208689698e-06
+      ],
+      "force_residual_RMS_N": 2.2324422462372094e-05,
+      "moment_residual_mean_Nm": [
+        -0.0013016314023404601,
+        0.019107160897536092,
+        0.00015702581264089778
+      ],
+      "moment_residual_RMS_Nm": 0.019534117902857688
+    },
+    {
+      "case": 7,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.049262244027132e-06,
+        1.2232289618842767e-06,
+        -1.7333982523871454e-05
+      ],
+      "force_residual_RMS_N": 3.2740449347873284e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005436853739230283,
+        0.010166660498855472,
+        -0.000158804837369679
+      ],
+      "moment_residual_RMS_Nm": 0.014718624445699952
+    },
+    {
+      "case": 7,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 8,
+      "incomplete_intervals": 12,
+      "force_residual_mean_N": [
+        -4.0570828572584e-06,
+        1.5373903466324272e-06,
+        6.887181258933769e-06
+      ],
+      "force_residual_RMS_N": 2.0237992662898247e-05,
+      "moment_residual_mean_Nm": [
+        -0.0013000354615767885,
+        0.0191001070808327,
+        0.0001516250426265546
+      ],
+      "moment_residual_RMS_Nm": 0.0195246324565611
+    },
+    {
+      "case": 8,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.260865557864061e-06,
+        6.369120388143385e-07,
+        -1.791307390408732e-05
+      ],
+      "force_residual_RMS_N": 3.863622732955342e-05,
+      "moment_residual_mean_Nm": [
+        -0.00026545229910530563,
+        0.009967884987331432,
+        -0.000125729246197344
+      ],
+      "moment_residual_RMS_Nm": 0.01350937384027136
+    },
+    {
+      "case": 8,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 14,
+      "incomplete_intervals": 6,
+      "force_residual_mean_N": [
+        -3.144911981506869e-06,
+        -1.0554209537453777e-06,
+        8.34678398058925e-06
+      ],
+      "force_residual_RMS_N": 1.4425600445556206e-05,
+      "moment_residual_mean_Nm": [
+        -0.0007303273985522857,
+        0.003945211304600013,
+        -0.00014710076857987428
+      ],
+      "moment_residual_RMS_Nm": 0.006572331630281452
+    },
+    {
+      "case": 9,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -4.306208630647119e-06,
+        -6.744115056024393e-08,
+        -1.4557586041851443e-05
+      ],
+      "force_residual_RMS_N": 3.5182298461159334e-05,
+      "moment_residual_mean_Nm": [
+        -0.0002578894753228206,
+        0.009968259185428992,
+        -0.00013010338698135675
+      ],
+      "moment_residual_RMS_Nm": 0.01351268354728572
+    },
+    {
+      "case": 9,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 14,
+      "incomplete_intervals": 6,
+      "force_residual_mean_N": [
+        -2.0013318565146942e-06,
+        -6.701342468093396e-07,
+        7.983137872873123e-06
+      ],
+      "force_residual_RMS_N": 1.3312476139222124e-05,
+      "moment_residual_mean_Nm": [
+        -0.0007336903824818191,
+        0.0039480339691018015,
+        -0.00014735117648662668
+      ],
+      "moment_residual_RMS_Nm": 0.006569986002271427
+    },
+    {
+      "case": 10,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -2.603864654336883e-06,
+        1.179420398885649e-06,
+        -1.7344708401690473e-05
+      ],
+      "force_residual_RMS_N": 3.3424776721934096e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005286721354291437,
+        0.010825228468729525,
+        -0.00016181265043357595
+      ],
+      "moment_residual_RMS_Nm": 0.015549409107782797
+    },
+    {
+      "case": 10,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 9,
+      "incomplete_intervals": 11,
+      "force_residual_mean_N": [
+        -1.9901462752129463e-05,
+        2.581667990122856e-06,
+        3.943616811857842e-06
+      ],
+      "force_residual_RMS_N": 4.866397784626534e-05,
+      "moment_residual_mean_Nm": [
+        -0.0003741719472765671,
+        0.021777024348696186,
+        0.0003064163421222895
+      ],
+      "moment_residual_RMS_Nm": 0.02497848896095622
+    },
+    {
+      "case": 11,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        3.421886252448723e-06,
+        9.985376686234837e-07,
+        -1.6742049821694947e-05
+      ],
+      "force_residual_RMS_N": 3.289084386436194e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005245397094595361,
+        0.010822432074708833,
+        -0.0001653106121728528
+      ],
+      "moment_residual_RMS_Nm": 0.015546914730266
+    },
+    {
+      "case": 11,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 9,
+      "incomplete_intervals": 11,
+      "force_residual_mean_N": [
+        -1.2008969106551261e-05,
+        2.9281308935854545e-06,
+        2.4488130404395593e-06
+      ],
+      "force_residual_RMS_N": 3.3562382565582e-05,
+      "moment_residual_mean_Nm": [
+        -0.00037595422223990894,
+        0.021765911021263927,
+        0.00028654911121810047
+      ],
+      "moment_residual_RMS_Nm": 0.024963985166685743
+    },
+    {
+      "case": 12,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -5.3352250884575415e-06,
+        -1.4904975817081553e-06,
+        -1.1681204920014626e-05
+      ],
+      "force_residual_RMS_N": 3.170512782607368e-05,
+      "moment_residual_mean_Nm": [
+        -0.00011566272249574362,
+        0.009296412344965957,
+        -6.676527541505768e-05
+      ],
+      "moment_residual_RMS_Nm": 0.013025590434668258
+    },
+    {
+      "case": 12,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 14,
+      "incomplete_intervals": 6,
+      "force_residual_mean_N": [
+        -4.5069125744147e-06,
+        -4.412874303434975e-07,
+        3.1002860818813268e-06
+      ],
+      "force_residual_RMS_N": 1.7115155981610415e-05,
+      "moment_residual_mean_Nm": [
+        -0.0007520658635476045,
+        0.00526659339028638,
+        -0.000168669272407308
+      ],
+      "moment_residual_RMS_Nm": 0.006985761552950904
+    },
+    {
+      "case": 13,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 30,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -6.519854664360231e-06,
+        -1.939854429445012e-06,
+        -1.7707793286606596e-05
+      ],
+      "force_residual_RMS_N": 3.681596586322889e-05,
+      "moment_residual_mean_Nm": [
+        -0.00011824305475902728,
+        0.009295957770764604,
+        -6.630381052288014e-05
+      ],
+      "moment_residual_RMS_Nm": 0.01302528846156473
+    },
+    {
+      "case": 13,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 14,
+      "incomplete_intervals": 6,
+      "force_residual_mean_N": [
+        -4.121449026660508e-06,
+        -1.1610087608814244e-06,
+        2.100651892280775e-06
+      ],
+      "force_residual_RMS_N": 1.9585209212801796e-05,
+      "moment_residual_mean_Nm": [
+        -0.0007511133550845471,
+        0.0052677949629829695,
+        -0.00016761962036023495
+      ],
+      "moment_residual_RMS_Nm": 0.00698445493060919
+    },
+    {
+      "case": 14,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 25,
+      "incomplete_intervals": 5,
+      "force_residual_mean_N": [
+        -8.193521349507578e-06,
+        3.170935901585653e-07,
+        -9.305240601262255e-06
+      ],
+      "force_residual_RMS_N": 2.906838455985056e-05,
+      "moment_residual_mean_Nm": [
+        -0.0007879613498408219,
+        0.009845027175135844,
+        -4.662927072458473e-05
+      ],
+      "moment_residual_RMS_Nm": 0.014165614546067927
+    },
+    {
+      "case": 14,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 0,
+      "incomplete_intervals": 20,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 15,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 25,
+      "incomplete_intervals": 5,
+      "force_residual_mean_N": [
+        -3.085644319480822e-06,
+        5.095438569698019e-07,
+        -8.60877883830033e-06
+      ],
+      "force_residual_RMS_N": 2.8070598612399647e-05,
+      "moment_residual_mean_Nm": [
+        -0.0007811425838616545,
+        0.009842580625690584,
+        -4.791256835697567e-05
+      ],
+      "moment_residual_RMS_Nm": 0.01415186662507036
+    },
+    {
+      "case": 15,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 0,
+      "incomplete_intervals": 20,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 16,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 25,
+      "incomplete_intervals": 5,
+      "force_residual_mean_N": [
+        -5.00546977137209e-06,
+        1.1361119737983948e-06,
+        -1.517806744964767e-06
+      ],
+      "force_residual_RMS_N": 2.2571533198860472e-05,
+      "moment_residual_mean_Nm": [
+        -0.0003656331888916889,
+        0.008531774143294453,
+        -9.20074829419304e-06
+      ],
+      "moment_residual_RMS_Nm": 0.01186298138384526
+    },
+    {
+      "case": 16,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 0,
+      "incomplete_intervals": 20,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 17,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 25,
+      "incomplete_intervals": 5,
+      "force_residual_mean_N": [
+        -6.558732759922095e-06,
+        2.1090276137048641e-07,
+        -4.128219589803056e-06
+      ],
+      "force_residual_RMS_N": 2.640850535761754e-05,
+      "moment_residual_mean_Nm": [
+        -0.0003660067792928555,
+        0.00853304031116652,
+        -9.478105946502756e-06
+      ],
+      "moment_residual_RMS_Nm": 0.011857580649951353
+    },
+    {
+      "case": 17,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 0,
+      "incomplete_intervals": 20,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 18,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 25,
+      "incomplete_intervals": 5,
+      "force_residual_mean_N": [
+        -4.5009144747778365e-06,
+        1.106479749778816e-06,
+        -3.939182526982443e-06
+      ],
+      "force_residual_RMS_N": 2.035743691374841e-05,
+      "moment_residual_mean_Nm": [
+        -0.00014596432099639207,
+        0.007805733303150806,
+        -6.81517228043629e-05
+      ],
+      "moment_residual_RMS_Nm": 0.010004537598129025
+    },
+    {
+      "case": 18,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 0,
+      "incomplete_intervals": 20,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 19,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 25,
+      "incomplete_intervals": 5,
+      "force_residual_mean_N": [
+        -1.8154070236340442e-06,
+        1.017248797162201e-06,
+        -3.920776572127055e-06
+      ],
+      "force_residual_RMS_N": 1.695950790152138e-05,
+      "moment_residual_mean_Nm": [
+        -0.00014520185581394794,
+        0.007802298613340985,
+        -6.708853186569856e-05
+      ],
+      "moment_residual_RMS_Nm": 0.009983403881085607
+    },
+    {
+      "case": 19,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 0,
+      "incomplete_intervals": 20,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 20,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 24,
+      "incomplete_intervals": 6,
+      "force_residual_mean_N": [
+        -1.96695959053621e-07,
+        1.0160957815789804e-06,
+        -1.3494797237436837e-06
+      ],
+      "force_residual_RMS_N": 1.6206444268459847e-05,
+      "moment_residual_mean_Nm": [
+        -0.00031510973571956355,
+        0.007289816263007106,
+        -8.10858953407024e-05
+      ],
+      "moment_residual_RMS_Nm": 0.009485201246282448
+    },
+    {
+      "case": 20,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 0,
+      "incomplete_intervals": 20,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 21,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 24,
+      "incomplete_intervals": 6,
+      "force_residual_mean_N": [
+        -2.6175167509184284e-06,
+        9.000714040139626e-07,
+        -2.5052607146759894e-06
+      ],
+      "force_residual_RMS_N": 1.4225129505042353e-05,
+      "moment_residual_mean_Nm": [
+        -0.00031369091722918793,
+        0.007288610764311912,
+        -7.990461185699416e-05
+      ],
+      "moment_residual_RMS_Nm": 0.009496962739500816
+    },
+    {
+      "case": 21,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 0,
+      "incomplete_intervals": 20,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 22,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 25,
+      "incomplete_intervals": 5,
+      "force_residual_mean_N": [
+        -2.0439341722647273e-06,
+        5.62175462565399e-07,
+        -3.299857515207116e-06
+      ],
+      "force_residual_RMS_N": 1.726033815992902e-05,
+      "moment_residual_mean_Nm": [
+        -0.00018118783678616675,
+        0.00819718402171321,
+        -3.5610956106537203e-05
+      ],
+      "moment_residual_RMS_Nm": 0.010317244807512975
+    },
+    {
+      "case": 22,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 0,
+      "incomplete_intervals": 20,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 23,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 30,
+      "available_intervals": 25,
+      "incomplete_intervals": 5,
+      "force_residual_mean_N": [
+        -4.641260143024156e-06,
+        9.918322263698402e-07,
+        -1.981344844589894e-06
+      ],
+      "force_residual_RMS_N": 2.084562193174766e-05,
+      "moment_residual_mean_Nm": [
+        -0.0001828786346682054,
+        0.008197362714938239,
+        -3.607562022877504e-05
+      ],
+      "moment_residual_RMS_Nm": 0.01033720656735477
+    },
+    {
+      "case": 23,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 100.0,
+      "intervals": 20,
+      "available_intervals": 0,
+      "incomplete_intervals": 20,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 0,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.993151858315395e-07,
+        3.7019663920535997e-07,
+        1.8532117497882295e-05
+      ],
+      "force_residual_RMS_N": 2.202331026490744e-05,
+      "moment_residual_mean_Nm": [
+        -0.00033129928698179175,
+        0.0010813563351302904,
+        -0.00013678889810762773
+      ],
+      "moment_residual_RMS_Nm": 0.0026183115080039183
+    },
+    {
+      "case": 0,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 2,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        5.820804799528366e-07,
+        3.1171950940606617e-07,
+        2.663818190948991e-06
+      ],
+      "force_residual_RMS_N": 2.79481657816574e-06,
+      "moment_residual_mean_Nm": [
+        6.998260477486561e-06,
+        -0.0004472460432292459,
+        -1.5005435112613104e-05
+      ],
+      "moment_residual_RMS_Nm": 0.00044848629345335905
+    },
+    {
+      "case": 1,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -1.105121424441191e-06,
+        1.2463142776113442e-07,
+        2.057156725925625e-05
+      ],
+      "force_residual_RMS_N": 2.4923440220545342e-05,
+      "moment_residual_mean_Nm": [
+        -0.00032778322784724016,
+        0.0010898830450227128,
+        -0.00013714744327926977
+      ],
+      "moment_residual_RMS_Nm": 0.0026201817130124022
+    },
+    {
+      "case": 1,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 2,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        1.7316537885428765e-07,
+        4.730458122320126e-07,
+        2.5592908465253174e-06
+      ],
+      "force_residual_RMS_N": 2.7110991784816754e-06,
+      "moment_residual_mean_Nm": [
+        8.887995491360364e-06,
+        -0.0004680406985678049,
+        -1.489265608618132e-05
+      ],
+      "moment_residual_RMS_Nm": 0.0004694248941679033
+    },
+    {
+      "case": 2,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -2.6694699829891513e-06,
+        6.115512684058225e-07,
+        -2.078423793424808e-05
+      ],
+      "force_residual_RMS_N": 2.7726833017487277e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005399881000759987,
+        0.012135723245923657,
+        -0.00014981076633717395
+      ],
+      "moment_residual_RMS_Nm": 0.01374036647132437
+    },
+    {
+      "case": 2,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 3,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.616348839204848e-07,
+        6.281323524272529e-07,
+        -1.572961998306972e-05
+      ],
+      "force_residual_RMS_N": 2.36677727613631e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005402091422948581,
+        0.012150222549808284,
+        -0.00015280589607405965
+      ],
+      "moment_residual_RMS_Nm": 0.013742184009244564
+    },
+    {
+      "case": 3,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 4,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.112534950559635e-06,
+        -8.257827279073889e-07,
+        -1.1385901600123594e-05
+      ],
+      "force_residual_RMS_N": 1.9941026812763646e-05,
+      "moment_residual_mean_Nm": [
+        -0.0002220079923254733,
+        0.008791380150225472,
+        -7.326044495183251e-05
+      ],
+      "moment_residual_RMS_Nm": 0.010573650945612073
+    },
+    {
+      "case": 4,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 1,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        1.053469025735776e-06,
+        -5.358971245650324e-07,
+        3.930119907402663e-06
+      ],
+      "force_residual_RMS_N": 4.104001121206532e-06,
+      "moment_residual_mean_Nm": [
+        -0.00048577137690193964,
+        0.0037069645062277924,
+        -0.00018327713658600935
+      ],
+      "moment_residual_RMS_Nm": 0.00374314709700875
+    },
+    {
+      "case": 5,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -8.818176634978192e-06,
+        -3.5374439732195156e-07,
+        -1.7085816213874283e-05
+      ],
+      "force_residual_RMS_N": 2.5447372868734975e-05,
+      "moment_residual_mean_Nm": [
+        -0.00021704235588996626,
+        0.008792949941251398,
+        -7.132952019289322e-05
+      ],
+      "moment_residual_RMS_Nm": 0.01057333577059544
+    },
+    {
+      "case": 5,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 1,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -3.111160141511249e-06,
+        -1.2743608177046006e-07,
+        5.864795417226398e-06
+      ],
+      "force_residual_RMS_N": 6.6401342356149e-06,
+      "moment_residual_mean_Nm": [
+        -0.000492476228230676,
+        0.0037027043404019577,
+        -0.00018076043637822465
+      ],
+      "moment_residual_RMS_Nm": 0.0037396826874968223
+    },
+    {
+      "case": 6,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.3338900865814e-06,
+        6.8868746425782e-07,
+        -2.302108815065614e-05
+      ],
+      "force_residual_RMS_N": 3.134753311938321e-05,
+      "moment_residual_mean_Nm": [
+        -0.000544614364511177,
+        0.010173681924731526,
+        -0.0001577994489730674
+      ],
+      "moment_residual_RMS_Nm": 0.01214999347281102
+    },
+    {
+      "case": 6,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 7,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.04926224393924e-06,
+        1.2232289618741936e-06,
+        -1.7333982523820568e-05
+      ],
+      "force_residual_RMS_N": 2.4011140361684597e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005436853739230258,
+        0.010166660498855439,
+        -0.0001588048373696808
+      ],
+      "moment_residual_RMS_Nm": 0.012144335158448979
+    },
+    {
+      "case": 7,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 8,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -7.260865558126005e-06,
+        6.369120388119894e-07,
+        -1.7913073904108717e-05
+      ],
+      "force_residual_RMS_N": 2.707786734177889e-05,
+      "moment_residual_mean_Nm": [
+        -0.0002654522991053128,
+        0.009967884987331399,
+        -0.0001257292461973389
+      ],
+      "moment_residual_RMS_Nm": 0.011753128304141838
+    },
+    {
+      "case": 8,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 1,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -1.4436026513076072e-06,
+        -1.3517471265100944e-06,
+        1.0435914633372123e-05
+      ],
+      "force_residual_RMS_N": 1.062165350328851e-05,
+      "moment_residual_mean_Nm": [
+        -0.0011790962530168723,
+        0.0026316568134078094,
+        -0.0001795105704115443
+      ],
+      "moment_residual_RMS_Nm": 0.0028893095372984276
+    },
+    {
+      "case": 9,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -4.306208630661575e-06,
+        -6.744115068716787e-08,
+        -1.4557586041829182e-05
+      ],
+      "force_residual_RMS_N": 2.3036092814560106e-05,
+      "moment_residual_mean_Nm": [
+        -0.000257889475322828,
+        0.009968259185428983,
+        -0.00013010338698135702
+      ],
+      "moment_residual_RMS_Nm": 0.011753011222722341
+    },
+    {
+      "case": 9,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 1,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -1.0616272203833876e-06,
+        -1.2738256209288146e-06,
+        9.397596210540538e-06
+      ],
+      "force_residual_RMS_N": 9.542772060777702e-06,
+      "moment_residual_mean_Nm": [
+        -0.0011812930452205044,
+        0.002642146476581026,
+        -0.00017989197340459407
+      ],
+      "moment_residual_RMS_Nm": 0.002899784885899515
+    },
+    {
+      "case": 10,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -2.603864654051232e-06,
+        1.1794203988990208e-06,
+        -1.7344708401945477e-05
+      ],
+      "force_residual_RMS_N": 2.3892188884577075e-05,
+      "moment_residual_mean_Nm": [
+        -0.000528672135429141,
+        0.010825228468729528,
+        -0.00016181265043357527
+      ],
+      "moment_residual_RMS_Nm": 0.012727723305698239
+    },
+    {
+      "case": 10,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 11,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        3.4218862521862015e-06,
+        9.98537668631579e-07,
+        -1.674204982165794e-05
+      ],
+      "force_residual_RMS_N": 2.4876309595246887e-05,
+      "moment_residual_mean_Nm": [
+        -0.0005245397094595371,
+        0.010822432074708841,
+        -0.00016531061217285505
+      ],
+      "moment_residual_RMS_Nm": 0.012726891668681744
+    },
+    {
+      "case": 11,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 12,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -5.335225088397982e-06,
+        -1.4904975817256472e-06,
+        -1.1681204919830601e-05
+      ],
+      "force_residual_RMS_N": 2.173050664554184e-05,
+      "moment_residual_mean_Nm": [
+        -0.0001156627224957428,
+        0.009296412344965966,
+        -6.676527541505729e-05
+      ],
+      "moment_residual_RMS_Nm": 0.010961215511904824
+    },
+    {
+      "case": 12,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 1,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -5.2767504686579425e-06,
+        -5.247755815729338e-07,
+        6.35438988573489e-06
+      ],
+      "force_residual_RMS_N": 8.27633709677336e-06,
+      "moment_residual_mean_Nm": [
+        -0.0007895473064248176,
+        0.006090996598580752,
+        -0.0001669602702160345
+      ],
+      "moment_residual_RMS_Nm": 0.006144224950702537
+    },
+    {
+      "case": 13,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 3,
+      "incomplete_intervals": 0,
+      "force_residual_mean_N": [
+        -6.5198546641831445e-06,
+        -1.939854429401644e-06,
+        -1.770779328647461e-05
+      ],
+      "force_residual_RMS_N": 2.5541594793977666e-05,
+      "moment_residual_mean_Nm": [
+        -0.00011824305475904128,
+        0.009295957770764614,
+        -6.630381052288139e-05
+      ],
+      "moment_residual_RMS_Nm": 0.01096137241108881
+    },
+    {
+      "case": 13,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 1,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -5.342740690972292e-06,
+        -1.6482345072676985e-06,
+        3.7064133531494736e-06
+      ],
+      "force_residual_RMS_N": 6.708133497950365e-06,
+      "moment_residual_mean_Nm": [
+        -0.0007881121646269654,
+        0.006093602132972501,
+        -0.00016636628284794563
+      ],
+      "moment_residual_RMS_Nm": 0.006146607639915587
+    },
+    {
+      "case": 14,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 2,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -9.60238869526786e-06,
+        5.756613889545091e-08,
+        -1.3836816720971812e-05
+      ],
+      "force_residual_RMS_N": 1.757493178040372e-05,
+      "moment_residual_mean_Nm": [
+        -0.0014611155341171034,
+        0.010389192721850266,
+        -3.229252974377906e-05
+      ],
+      "moment_residual_RMS_Nm": 0.010529708610435841
+    },
+    {
+      "case": 14,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 15,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 2,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -2.418482572846825e-06,
+        2.0121256550948569e-07,
+        -9.748283098590105e-06
+      ],
+      "force_residual_RMS_N": 1.2213726542065674e-05,
+      "moment_residual_mean_Nm": [
+        -0.0014506172328198996,
+        0.01038728155953357,
+        -3.629090693190071e-05
+      ],
+      "moment_residual_RMS_Nm": 0.010526126727711112
+    },
+    {
+      "case": 15,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 16,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 2,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -4.1067171205055875e-06,
+        6.537616122253079e-07,
+        -2.9286544092621547e-06
+      ],
+      "force_residual_RMS_N": 7.918131643254655e-06,
+      "moment_residual_mean_Nm": [
+        -0.001100963348724076,
+        0.00806110458003724,
+        3.0649745925871415e-05
+      ],
+      "moment_residual_RMS_Nm": 0.008228603164156205
+    },
+    {
+      "case": 16,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 17,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 2,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -5.777430566747399e-06,
+        4.818844685783308e-08,
+        -6.627437748429887e-06
+      ],
+      "force_residual_RMS_N": 1.403233938228303e-05,
+      "moment_residual_mean_Nm": [
+        -0.001101947712881994,
+        0.00806647447111244,
+        3.049651598832745e-05
+      ],
+      "moment_residual_RMS_Nm": 0.008234624908012744
+    },
+    {
+      "case": 17,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 18,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 2,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -2.9089824493677696e-06,
+        4.504049623543782e-07,
+        -3.775107624143237e-06
+      ],
+      "force_residual_RMS_N": 5.34419795059545e-06,
+      "moment_residual_mean_Nm": [
+        -0.0006548800023300485,
+        0.0075750177596816265,
+        -2.8236067311640913e-05
+      ],
+      "moment_residual_RMS_Nm": 0.007655419224924777
+    },
+    {
+      "case": 18,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 19,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 2,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -1.2225253555216142e-06,
+        7.070551504145817e-07,
+        -5.2237419121414774e-06
+      ],
+      "force_residual_RMS_N": 5.8484972692467485e-06,
+      "moment_residual_mean_Nm": [
+        -0.0006588528509977485,
+        0.0075794781536873135,
+        -2.4223444689034268e-05
+      ],
+      "moment_residual_RMS_Nm": 0.007660027056404405
+    },
+    {
+      "case": 19,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 20,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 2,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -3.024614265989545e-08,
+        8.95101920687924e-07,
+        -2.8444497638391297e-06
+      ],
+      "force_residual_RMS_N": 3.125044687158405e-06,
+      "moment_residual_mean_Nm": [
+        -0.0006444989409518432,
+        0.007414976366260706,
+        -3.96214565412629e-05
+      ],
+      "moment_residual_RMS_Nm": 0.007490797093289831
+    },
+    {
+      "case": 20,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 21,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 2,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -2.720042760056239e-06,
+        9.287231077653724e-07,
+        -2.6686454893953826e-06
+      ],
+      "force_residual_RMS_N": 4.531440157237063e-06,
+      "moment_residual_mean_Nm": [
+        -0.0006449638234439776,
+        0.007406078402079845,
+        -4.0214438335996736e-05
+      ],
+      "moment_residual_RMS_Nm": 0.007482018518910176
+    },
+    {
+      "case": 21,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 22,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 2,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -1.7073521064447927e-06,
+        3.3867358267825054e-07,
+        -5.850041968569197e-06
+      ],
+      "force_residual_RMS_N": 7.996038424094587e-06,
+      "moment_residual_mean_Nm": [
+        -0.000670382354186253,
+        0.008061494723241091,
+        7.296106469527103e-06
+      ],
+      "moment_residual_RMS_Nm": 0.008153304944086568
+    },
+    {
+      "case": 22,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    },
+    {
+      "case": 23,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 3,
+      "available_intervals": 2,
+      "incomplete_intervals": 1,
+      "force_residual_mean_N": [
+        -3.4264705325443012e-06,
+        5.754385601040857e-07,
+        -3.985316413740447e-06
+      ],
+      "force_residual_RMS_N": 6.525090094244295e-06,
+      "moment_residual_mean_Nm": [
+        -0.0006735030425408517,
+        0.008047268153481668,
+        7.449740322188565e-06
+      ],
+      "moment_residual_RMS_Nm": 0.008138006266988042
+    },
+    {
+      "case": 23,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "interval_ms": 1000.0,
+      "intervals": 2,
+      "available_intervals": 0,
+      "incomplete_intervals": 2,
+      "force_residual_mean_N": null,
+      "force_residual_RMS_N": null,
+      "moment_residual_mean_Nm": null,
+      "moment_residual_RMS_Nm": null
+    }
+  ],
+  "limitations": [
+    "This is a saved-data external impulse consistency check, not a dynamics certificate, new controller, simulation or physical repair.",
+    "Contact truth and derived momentum differences are evaluation only. No runtime observation or raw qd is replaced.",
+    "External-wrench availability is based on zero saved non-foot normal-force history and zero wrong resultant. Net-force cancellation and unrecorded forces are not independently ruled out. Incomplete intervals have no closed-balance statistic.",
+    "Authored rotational tensors and preserved mass/COM are not effective live inertia. Six authored finger masses differ by one float32 step; frozen masses are retained. Generalized armature has no independently specified physical rotor/spatial momentum model here.",
+    "Gravity and zero body damping follow installed configuration, not live259 capture. No gravity, tensor, alignment or truth offset is fitted.",
+    "Fixed force alignment assumes post-step returned contact force over the preceding5ms. Within-step point timing, solver impulses and solver-internal velocity/pose differences are not resolved.",
+    "Internal joint efforts cancel in the chosen physical whole-body model; approximate implicit-PD telemetry is not inserted as an external wrench. Constraint/drive implementation effects remain unmodeled.",
+    "No residual threshold is used to admit a controller or relax physical/quiet criteria. Small integrated residuals would not validate local constrained-foot response290; large residuals alone do not identify a cause."
+  ],
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/substep_states.npz": "d278effc5fee7d511d54d205d0a69c76ce0c381e41866ba8affe97cd68817cab",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/every_tick.npz": "8da334ffb6124c27055c390c4982934d11e5fac27776f68364ceb66d1a340bcc",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/contact_body_names.json": "429b8d07214132bea774304e95aaae4b700e12a909c122850e600b95710a6304",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/static_inertial_model.json": "92d77b993ef80d78af0440a1066af421555aff2794f14ff37f3df3d09669c801",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/actuator_metadata.json": "3c40b6bbea84e429bf60a0cf7bccd11e0a1e51e36ef9c1bcd105e1ec8474585b",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/diagnostic_protocol.json": "ed810155ace6b9c5421b0388a0d6efd13c75b4258b19b05ebef812fde613d5f5",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/live_stage_settings.json": "4c9a9914707a867c47cfc2b568cf1802055cc0f25d1a126689adbea025621bf2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_diagnostic_259/contact_recorder_metadata.json": "12480d1fdc74713a1af67d621036399d32e4965b9669dbf6c2219bbb704eccc5",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_audit_260/contact_wrenches.json": "01faf7bcb0c4d0f3a66116342cf3eea91e60eddecd1cfda5581559b7a60e3996",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_wrench_audit_260/independent_audit.json": "3e9a5d1e9a75f330ad9a2cb32f5f44acca25c3f5ad477cca69d4fa293136269a",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_dynamics_screen_v3_290/inertial_model.json": "1ffd883425d2ecf8d80f50796883d33f1373e4419e15d41667431fe2935eb117",
+    "/home/kadir/humanoid-sitting/scripts/diagnose_low_seat_momentum_294.py": "ef8f62bdfed643b05eb2b15fee29c90407ea196ec44180693c4aa2b1e018f63a",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_contact_duration_36.py": "629469feac0a93c92b64cb31467cd837de3f0095b5708f76517506c3c6e08e9d",
+    "/home/kadir/humanoid-sitting/scripts/run_supported_postures.py": "a906a72c600f4334f1cd5b276ab7fa24ad365c5ae95284df9274424ef5dd6e7a",
+    "/home/kadir/humanoid-sitting/scripts/run_resting_posture.py": "2579e9c98a9cd7fbde8665acd542255fe0736f684b0c1d2d2f768b05a6b2fc21",
+    "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/full_transition.py": "e44f6a77f51453d47e1f2456b793b8a1eee9ba32f1c29b176ce46dce7a8f7e4c",
+    "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/config.py": "4cd8f537466bfcb4546dd0a04c9d554ae1ff9533eb5f01127ae51762734dcec7",
+    "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab/isaaclab/sim/simulation_cfg.py": "df4c2f3d8b2fb8ca639190acbed588b9d5640134b0b96c9ab9f4281da1cc8eed",
+    "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab_assets/isaaclab_assets/robots/unitree.py": "ea47505ddf82d15895fa55a0a666b5c4800eba24782ece6080061b64cd51e54b",
+    "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab_physx/isaaclab_physx/sensors/contact_sensor/contact_sensor.py": "52fd96b972b5354476f329687ee7f49eb8ec3b8069a04ae9fd6ee246fd29c5f8"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false,
+  "repair_complete": false
+}

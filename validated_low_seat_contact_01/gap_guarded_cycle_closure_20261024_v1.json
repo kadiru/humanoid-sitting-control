@@ -1,0 +1,253 @@
+{
+  "version": 1,
+  "utc": "2026-10-24T08:07:05.821502+00:00",
+  "classification": "Completed approved scientific cycle; A/B solver and finite encoding success; nonlinear research acceptance FAILED",
+  "authorization": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_authorization_v1/human_approval_receipt.json",
+  "authorization_sha256": "51447f73465b43d9f5892eadb4954eb3b1660de460b1eab43c28b54a1f555f5d",
+  "freeze_sha256": "419ba7c90c232439c506c9fd9c461beb47e0150f69a13f27b218911b70729ecf",
+  "launch_tool": "f695f1",
+  "launch_session": 85553,
+  "actual_driver_exit": 0,
+  "completion_tool": "2c4860",
+  "remote_owner_pid": 2061496,
+  "one_cycle_launched": true,
+  "authorization_consumed": true,
+  "terminal": true,
+  "no_retry": true,
+  "stopped_on_first_acceptance_failure": "C",
+  "stage_seconds_including_audits": {
+    "A": 308.2760663391091,
+    "B": 186.17970644589514,
+    "C": 9.287899379152805
+  },
+  "sum_stage_seconds": 503.74367216415703,
+  "stage_caps_seconds": [
+    600,
+    600,
+    45
+  ],
+  "peak_worker_rss_bytes": 1158266880,
+  "solver_calls": 2,
+  "finite_maps": 1,
+  "fresh_value_state_records": 1365,
+  "fresh_jacobian_state_records": 0,
+  "primary": {
+    "accepted": true,
+    "candidate": {
+      "accepted": true,
+      "mu": 0.08605330623059242,
+      "theta": 0.010328466852877602,
+      "original_primal": 1.3167127978219728e-11,
+      "target_slacks": [
+        4.22329675953133,
+        0.9982346870908714
+      ],
+      "progress": true,
+      "optimum_scope": "strengthened_problem_only",
+      "physical_success": false
+    },
+    "numerical": {
+      "passed": true,
+      "primal": 1.3167127978219728e-11,
+      "dual": 4.440892098500626e-16,
+      "absolute_gap": 1.0408340855860843e-17,
+      "finite": true,
+      "dual_signs": true
+    },
+    "optimality_scope": "strengthened problem including the two added gap constraints"
+  },
+  "interior": {
+    "accepted": true,
+    "numerical": {
+      "primal": 3.5216482507927083e-12,
+      "dual": 3.0943130002736353e-14,
+      "absolute_gap": 2.3245294578089215e-16,
+      "finite": true,
+      "dual_signs": true,
+      "passed": true
+    },
+    "exact_margin": {
+      "passed": true,
+      "exact_eta": [
+        3652865579524439,
+        368934881474189312
+      ],
+      "nonpositive": [],
+      "limiting_row": 16722,
+      "rows": 92267,
+      "coefficient_products": 125867,
+      "observed_max_rational_bits": 1070,
+      "direction_scaled": false,
+      "finite_map_performed": false,
+      "rows_sha256": "8742fdcf9ba50ad01c8278407017b1f928f5463ad872169d119a8b95e6f44ed7"
+    },
+    "target_slacks": [
+      20.31539018429546,
+      0.0
+    ]
+  },
+  "nonlinear": {
+    "finite_encoding_passed": true,
+    "independent_audit_passed": true,
+    "research_accepted": false,
+    "motion_admission_passed": false,
+    "merit_before": 0.08605330623059242,
+    "merit_after": 0.0650078649050219,
+    "actual_reduction_percent": 24.456284421165847,
+    "predicted_encoded_merit": 0.048190886541850005,
+    "predicted_encoded_reduction_percent": 43.99879719587359,
+    "actual_to_predicted_reduction_ratio": 0.5558398406277222,
+    "primary_direction_not_encoded": true,
+    "targets_before": [
+      -27.51763860158102,
+      -304.4704805204717
+    ],
+    "targets_after": [
+      20.31599808005315,
+      -2.6143168098722076e-06
+    ],
+    "worst_actual_hard_violation_before": 304.4704805204717,
+    "worst_actual_hard_violation_after": 38.16088083475758,
+    "newly_negative_hard_row_count": 188,
+    "saved_failure_categories": {
+      "old_normal_descent": {
+        "count": 2,
+        "most_negative_stored": {
+          "row": 19754,
+          "stored_after": -16.478418121672483
+        },
+        "least_negative_stored": {
+          "row": 19757,
+          "stored_after": -7.816804321791514
+        }
+      },
+      "old_support": {
+        "count": 1,
+        "most_negative_stored": {
+          "row": 20010,
+          "stored_after": -0.1528738228898277
+        },
+        "least_negative_stored": {
+          "row": 20010,
+          "stored_after": -0.1528738228898277
+        }
+      },
+      "mesh_support": {
+        "count": 12,
+        "most_negative_stored": {
+          "row": 52165,
+          "stored_after": -0.41716893580734243
+        },
+        "least_negative_stored": {
+          "row": 45209,
+          "stored_after": -0.029806819616393088
+        }
+      },
+      "mesh_effort_lower": {
+        "count": 1,
+        "most_negative_stored": {
+          "row": 53169,
+          "stored_after": -0.00014772033693404295
+        },
+        "least_negative_stored": {
+          "row": 53169,
+          "stored_after": -0.00014772033693404295
+        }
+      },
+      "mesh_posthover": {
+        "count": 2,
+        "most_negative_stored": {
+          "row": 146846,
+          "stored_after": -0.03032782915354095
+        },
+        "least_negative_stored": {
+          "row": 82857,
+          "stored_after": -0.015469637219503306
+        }
+      },
+      "mesh_command_lower": {
+        "count": 7,
+        "most_negative_stored": {
+          "row": 91078,
+          "stored_after": -0.07975073506831243
+        },
+        "least_negative_stored": {
+          "row": 154851,
+          "stored_after": -0.0037380654208181894
+        }
+      },
+      "mesh_gap_nonnegative": {
+        "count": 1,
+        "most_negative_stored": {
+          "row": 92156,
+          "stored_after": -0.03880446542761735
+        },
+        "least_negative_stored": {
+          "row": 92156,
+          "stored_after": -0.03880446542761735
+        }
+      },
+      "mesh_approach_order": {
+        "count": 131,
+        "most_negative_stored": {
+          "row": 192585,
+          "stored_after": -0.1803040348516046
+        },
+        "least_negative_stored": {
+          "row": 194790,
+          "stored_after": -3.036212161318848e-07
+        }
+      },
+      "mesh_normal_descent": {
+        "count": 31,
+        "most_negative_stored": {
+          "row": 211439,
+          "stored_after": -38.16088083475758
+        },
+        "least_negative_stored": {
+          "row": 214031,
+          "stored_after": -1.2252605635805953
+        }
+      }
+    },
+    "full_progress_gate": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_v1/C/progress_gate.json",
+    "all_seven_consistency_units": {
+      "feet_m": 0.0037856500282813094,
+      "orientation_0_1_vee": 0.00229544876558055,
+      "moment_BW_m": 0.0023367796670563795,
+      "command_rad": 0.012959420334646532,
+      "torque_Nm": 1.2910872261035884,
+      "gap_m": 0.0011717747723823946,
+      "COM_m": 0.0023383564212641345
+    },
+    "actual_all_rows_min": -215699.8129297404,
+    "actual_hover_normalized": 0.08484978846695479,
+    "notes": [
+      "The 188 count is constraint checks, not physical trials.",
+      "Merit is the frozen auxiliary/consistency research criterion, not a physical success score or an all-row worst-error score.",
+      "Independent model audit checked frozen mechanics/provenance and replayed saved all-row metrics; it did not invoke a second model oracle."
+    ]
+  },
+  "preservation": {
+    "output_directory": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_v1",
+    "output_files": 65,
+    "stage_manifest_entries_verified": 55,
+    "cycle_result_sha256": "a432c82b32eb6d827c3332d3e11bfc47aadc3c8f33b9175bb106f71dcbcaed8d",
+    "completed_output_manifest": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_authorization_v1/completed_output_manifest.json",
+    "completed_output_manifest_sha256": "367d1beaef0c105500278646b8b4b4766adb35935fab26134de1926cddec3998",
+    "reporting_lookup": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_authorization_v1/reporting_lookup.json"
+  },
+  "last_accepted_research_origin_unchanged": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/finite_model_step_20261023_v1",
+  "rejected_C_point_must_not_be_promoted_or_warm_started": true,
+  "simulation_trials": 0,
+  "PPO_updates": 0,
+  "holdout_trials": 0,
+  "physical_clean": "64/72",
+  "all64_protected": true,
+  "all8_unresolved": true,
+  "automation": "ACTIVE",
+  "workers_after": [],
+  "worker_check_utc": "2026-10-24T08:05:28.203498+00:00",
+  "worker_check_tool": "a4e47d",
+  "repair_complete": false
+}

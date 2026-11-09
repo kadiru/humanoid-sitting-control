@@ -1,0 +1,69 @@
+{
+  "utc": "2026-10-17T12:39:28.276129+00:00",
+  "passed": true,
+  "records": 364,
+  "scope": "Independent force/command audit of144 and pure current-input implementation145.\n\nExact preserved geometry is tied to audited134, while all364 force and command\nrecords are recomputed by finite-difference virtual work. Zero physics.\n",
+  "checks": [
+    {
+      "case": 0,
+      "knots": 91,
+      "pure_current_input_replay_exact": true,
+      "all_geometry_records_exact": true,
+      "minimum_individual_foot_cop_margin_m": 0.004999999999999935,
+      "max_virtual_work_error_Nm": 6.5803007487375e-09,
+      "static_command_polyline_s": 9.203898546599431,
+      "physical_admission": false
+    },
+    {
+      "case": 1,
+      "knots": 91,
+      "pure_current_input_replay_exact": true,
+      "all_geometry_records_exact": true,
+      "minimum_individual_foot_cop_margin_m": 0.004999999999999942,
+      "max_virtual_work_error_Nm": 5.707454064918238e-09,
+      "static_command_polyline_s": 9.2039078847249,
+      "physical_admission": false
+    },
+    {
+      "case": 6,
+      "knots": 91,
+      "pure_current_input_replay_exact": true,
+      "all_geometry_records_exact": true,
+      "minimum_individual_foot_cop_margin_m": 0.007450084795572937,
+      "max_virtual_work_error_Nm": 5.941199976433609e-09,
+      "static_command_polyline_s": 9.205333696684148,
+      "physical_admission": false
+    },
+    {
+      "case": 7,
+      "knots": 91,
+      "pure_current_input_replay_exact": true,
+      "all_geometry_records_exact": true,
+      "minimum_individual_foot_cop_margin_m": 0.007454174536173981,
+      "max_virtual_work_error_Nm": 6.140006059141001e-09,
+      "static_command_polyline_s": 9.205301119736678,
+      "physical_admission": false
+    }
+  ],
+  "max_virtual_work_error_Nm": 6.5803007487375e-09,
+  "max_command_replay_error_rad": 1.5191403690550942e-10,
+  "max_equilibrium_residual": 4.440892098500626e-16,
+  "original134_physical_and_exact_gates_remain_failed": true,
+  "report_case_field_excluded_from_pure_function": true,
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "holdout_used": false,
+  "physical_admission": false,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_balanced_forces_146.py": "2ec477dec318aca2951481fa85b44ab1e08313f9e9459e6221455185add6f789",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_balanced_force_145.py": "f160224dccde51a104db8e7015275e1683fa9a836468f1901cc210d056de8357",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+    "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json": "69e0920e2bec88a43b7a6dc41d0fc361500d060ef09e3e3a07bb04cdaf569584",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate/fixed_plans_132.json": "6c04c61a7fbb13d9a1ebfe79e225baedd600831236c6f79e2d9ff81269dc2f16",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/balanced_force_revision_144.json": "d6cedf4658433ac44f7519f6fda9eb72dfb2c959991b2f30b375410220665884",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/balanced_force_paths_144/plan_0.json": "46dab090346276616eefe33c8cdc0338a8fefab93fb8d3da01b770da6f3b01eb",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/balanced_force_paths_144/plan_1.json": "fcf0a1629fbeaa50d95b0d2787220becfee570174261c5de108c726e051ce94e",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/balanced_force_paths_144/plan_6.json": "cfead9685d87d824549cee0763acdad31ac5f80716bcb399068ca264aab3064f",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/balanced_force_paths_144/plan_7.json": "78c8ee24fe37b6d03446208d9bb986358422fb6c14ff9243d29323b2817f2555"
+  }
+}

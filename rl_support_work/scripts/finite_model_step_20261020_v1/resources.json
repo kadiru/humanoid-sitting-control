@@ -1,0 +1,82 @@
+{
+  "scope": "One new unscaled finite map and conditional model/J step; zero optimizer calls",
+  "shared_total_wall_seconds": 45,
+  "clock_origin": "supervisor module entry before imports, source hashes, runtime/input hashes, all loading, finite map, new mechanics/J, independent audit and final decision; parent hard kill/reap, late zero exits reject",
+  "address_space_bytes_per_worker": 42949672960,
+  "concurrent_scientific_workers": 1,
+  "stages": "producer then independent audit, sharing a single deadline; no continuation/retry on failure",
+  "counts": {
+    "finite_maps": 1,
+    "shared_alpha": [
+      1,
+      1
+    ],
+    "other_dyadics": 0,
+    "solver_calls": 0,
+    "certificate_recomputations": 0,
+    "value_batches_max": 1,
+    "value_records_max": 1365,
+    "jacobian_batches_max": 1,
+    "jacobian_records_max": 1365,
+    "jacobian_columns_per_record": 24,
+    "audit_model_calls": 0,
+    "root_solves": 0,
+    "simulations": 0,
+    "PPO": 0,
+    "holdout": 0
+  },
+  "target_associations": {
+    "H_rows": 92267,
+    "control_rows": [
+      0,
+      11906
+    ],
+    "varying_feature_rows": [
+      11906,
+      92061
+    ],
+    "drop_rows": [
+      92061,
+      92267
+    ],
+    "varying_feature_ids": "reference.npz varying; owners must agree exactly",
+    "initial_features": [
+      1410,
+      75
+    ],
+    "initial_outputs": [
+      1410,
+      51
+    ],
+    "initial_J": [
+      1410,
+      51,
+      24
+    ],
+    "all_signed_rows": 331888,
+    "full_original_boxes": 11906,
+    "fixed_states": 45,
+    "exact_pivot": 203,
+    "independent_binary64_drops": 205
+  },
+  "net_savings": "All125867 exact H coefficient products and all92267 eta clearance calculations reused from the sealed trace; no P/N/H products or solver repeats. Work for new map and its independent output audit remains charged. This is not a claim of controller or solver speed.",
+  "rational_accounting": {
+    "saved_trace_observed_max_bits": 1070,
+    "binary64_input_numerator_bits_max": 1024,
+    "binary64_input_denominator_bits_max": 1075,
+    "all_trace_products_dyadic": true,
+    "new_feature_exact_sum_bits_upper": 2146,
+    "205_term_drop_sum_bits_upper": 2154,
+    "cross_comparison_bits_upper": 4308,
+    "explanation": "Conservative numerator/denominator product bounds for two dyadic terms; drop accumulation adds at most8 numerator bits. Independent adjacent-float midpoint tests add at most2. No new rational matrix products."
+  },
+  "storage": {
+    "runtime_bytes_hashed": 3417143031,
+    "runtime_file_bindings": 6701,
+    "output_bound_bytes": 268435456,
+    "working_memory_policy": "40GiB hard RLIMIT_AS includes imported runtime, all sparse matrices, Fraction objects and model buffers. No extrapolated success claim; observed RSS saved.",
+    "return_arrays": "one1410x75 feature map; one1410x51 Y plus all row/equality/consistency arrays; conditional1410x51x24 J; exact206-drop record; proof/metric metadata"
+  },
+  "success": "Complete within45s plus independent finite map and all-row metric audit. Iteration admission additionally requires unchanged auxiliary hard-domain pass, positive predicted and actual merit reduction, ratio>=0.1 and fresh changed-state J. Physical motion admission never follows from this step.",
+  "failure": "Any failed finite invariant, absent/nonfinite model, deadline/resource/process failure or audit mismatch closes this single execution. A valid finite map whose merit is rejected remains a rejected trial; no automatic second scale or solver."
+}

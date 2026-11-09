@@ -1,0 +1,56 @@
+{
+  "utc": "2026-10-17T10:01:45.320353+00:00",
+  "passed": true,
+  "scope": "Independent cooked geometry and full-foot/terminal/joint replay plus finite-difference16joint virtual work, balanced nonnegative foot forces and explicitly assumed vertical seat forces. Positive-gap nodes carry zero seat force. No sensor load or physical contact is certified. Failed geometric/contact/filter gates remain failed.",
+  "records": 3,
+  "max_geometry_replay_error": 1.1102230246251565e-16,
+  "max_virtual_work_error_Nm": 2.958534306429783e-09,
+  "max_equilibrium_residual": 2.220446049250313e-16,
+  "checked": [
+    {
+      "record": "best",
+      "geometry_passed": true,
+      "housing_clearance_mm": 3.7310758477406747,
+      "all_assumed_load_commands_passed": true,
+      "gap_m": -5.551115123125783e-17
+    },
+    {
+      "record": "search0",
+      "geometry_passed": true,
+      "housing_clearance_mm": 3.5400070777135086,
+      "all_assumed_load_commands_passed": true,
+      "gap_m": 0.0
+    },
+    {
+      "record": "search1",
+      "geometry_passed": true,
+      "housing_clearance_mm": 3.728994556825308,
+      "all_assumed_load_commands_passed": true,
+      "gap_m": 1.1102230246251565e-16
+    }
+  ],
+  "original_model_summary": {
+    "endpoint_model_passed": true,
+    "housing_clearance_mm": 3.7310758477406747,
+    "parameters": [
+      -0.2956155018274708,
+      -0.08954439450482572,
+      0.08778981275945698,
+      0.3568974909737395,
+      0.2694018540742854,
+      0.13999999999993848,
+      -0.010442209138118526
+    ],
+    "command_margin_rad": 0.030455892943825363,
+    "actual_command_filter_checked": false,
+    "load_is_measured": false,
+    "whole_path_checked": false
+  },
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_stance_screen_89/results.json": "3cc9f72110080a0f207c81b0f29e1c1eee60a9eff9e8323abc07a582f949cbf2",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_contact_models_90.py": "c6a9a40f69d084f1236926fec5bd1a6bc43379a86d3f6fad7b11e9ec7963c802"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}
