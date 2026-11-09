@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "bitwise_parity": {
+    "controller.npz": {
+      "t": true,
+      "policy": true,
+      "actions": true,
+      "ready": true,
+      "attempt": true
+    },
+    "rollout.npz": {
+      "t": true,
+      "body": true,
+      "root": true,
+      "support": true,
+      "foot": true,
+      "torque": true,
+      "force": false,
+      "tilt": true,
+      "live": true,
+      "true_clearance": true,
+      "correction": true,
+      "alive": true
+    },
+    "startup.npz": {
+      "case": true,
+      "t": true,
+      "attempt": true,
+      "depth": true,
+      "K": true,
+      "q": true,
+      "gravity": true,
+      "initialized": true
+    },
+    "evaluation_labels.npz": {
+      "t": true,
+      "true_clearance": true,
+      "failure": true,
+      "alive": true,
+      "support": true,
+      "force": false
+    }
+  },
+  "roundoff_exceptions": [
+    {
+      "archive": "rollout.npz",
+      "field": "force",
+      "different_values": 1,
+      "max_difference_N": 3.0517578125e-05,
+      "within_one_float32_ulp": true
+    },
+    {
+      "archive": "evaluation_labels.npz",
+      "field": "force",
+      "different_values": 3,
+      "max_difference_N": 3.0517578125e-05,
+      "within_one_float32_ulp": true
+    }
+  ],
+  "changed_cases": [
+    13
+  ],
+  "prior_successes": 9,
+  "corrected_successes": 10,
+  "exact_boundary_ticks": 150,
+  "all_other_episode_metrics_identical": true,
+  "original_failure_preserved": "original_parity_failure.json"
+}
