@@ -1,0 +1,317 @@
+{
+  "checked_utc": "2026-10-27T16:47:46.865680+00:00",
+  "classification": "Interim observed training progress and completed full 72-case development evaluations; not a completed 128-update comparison or physical repair.",
+  "live_owner_pid": 28553,
+  "live_training_pid": 59197,
+  "phase": "train_revised_63111_064",
+  "updates_produced_by_run": {
+    "original_63111": 32,
+    "original_63117": 32,
+    "revised_63111": 58,
+    "revised_63117": 32
+  },
+  "total_updates_produced": 154,
+  "requested_total_updates": 512,
+  "independently_replayed_completed_training_updates": 128,
+  "completed_audits": 33,
+  "all_completed_audits_passed": true,
+  "baseline_clean": 64,
+  "baseline_cases": 72,
+  "results": [
+    {
+      "arm": "revised",
+      "seed": 63111,
+      "updates": 16,
+      "clean": 60,
+      "stable": 68,
+      "slipping": 10,
+      "illegal": 0,
+      "physical_failures": 2,
+      "regressions": 4,
+      "repairs": 0,
+      "lost_protected": [
+        [
+          "known_old",
+          0
+        ],
+        [
+          "known_old",
+          1
+        ],
+        [
+          "known_old",
+          14
+        ],
+        [
+          "known_old",
+          15
+        ]
+      ],
+      "repaired_old_failures": []
+    },
+    {
+      "arm": "original",
+      "seed": 63111,
+      "updates": 16,
+      "clean": 58,
+      "stable": 70,
+      "slipping": 14,
+      "illegal": 0,
+      "physical_failures": 2,
+      "regressions": 6,
+      "repairs": 0,
+      "lost_protected": [
+        [
+          "known_transfer",
+          14
+        ],
+        [
+          "known_transfer",
+          15
+        ],
+        [
+          "known_transfer",
+          20
+        ],
+        [
+          "known_transfer",
+          21
+        ],
+        [
+          "known_transfer",
+          22
+        ],
+        [
+          "known_transfer",
+          23
+        ]
+      ],
+      "repaired_old_failures": []
+    },
+    {
+      "arm": "original",
+      "seed": 63117,
+      "updates": 16,
+      "clean": 56,
+      "stable": 68,
+      "slipping": 16,
+      "illegal": 0,
+      "physical_failures": 2,
+      "regressions": 8,
+      "repairs": 0,
+      "lost_protected": [
+        [
+          "known_old",
+          14
+        ],
+        [
+          "known_old",
+          15
+        ],
+        [
+          "known_transfer",
+          8
+        ],
+        [
+          "known_transfer",
+          9
+        ],
+        [
+          "known_recent",
+          8
+        ],
+        [
+          "known_recent",
+          9
+        ],
+        [
+          "known_recent",
+          10
+        ],
+        [
+          "known_recent",
+          11
+        ]
+      ],
+      "repaired_old_failures": []
+    },
+    {
+      "arm": "revised",
+      "seed": 63117,
+      "updates": 16,
+      "clean": 61,
+      "stable": 70,
+      "slipping": 11,
+      "illegal": 0,
+      "physical_failures": 2,
+      "regressions": 3,
+      "repairs": 0,
+      "lost_protected": [
+        [
+          "known_transfer",
+          20
+        ],
+        [
+          "known_transfer",
+          21
+        ],
+        [
+          "known_transfer",
+          23
+        ]
+      ],
+      "repaired_old_failures": []
+    },
+    {
+      "arm": "revised",
+      "seed": 63111,
+      "updates": 32,
+      "clean": 59,
+      "stable": 69,
+      "slipping": 13,
+      "illegal": 0,
+      "physical_failures": 2,
+      "regressions": 5,
+      "repairs": 0,
+      "lost_protected": [
+        [
+          "known_old",
+          14
+        ],
+        [
+          "known_old",
+          15
+        ],
+        [
+          "known_transfer",
+          18
+        ],
+        [
+          "known_recent",
+          6
+        ],
+        [
+          "known_recent",
+          7
+        ]
+      ],
+      "repaired_old_failures": []
+    },
+    {
+      "arm": "original",
+      "seed": 63111,
+      "updates": 32,
+      "clean": 58,
+      "stable": 70,
+      "slipping": 14,
+      "illegal": 1,
+      "physical_failures": 2,
+      "regressions": 6,
+      "repairs": 0,
+      "lost_protected": [
+        [
+          "known_old",
+          14
+        ],
+        [
+          "known_old",
+          15
+        ],
+        [
+          "known_transfer",
+          10
+        ],
+        [
+          "known_transfer",
+          11
+        ],
+        [
+          "known_recent",
+          10
+        ],
+        [
+          "known_recent",
+          11
+        ]
+      ],
+      "repaired_old_failures": []
+    },
+    {
+      "arm": "original",
+      "seed": 63117,
+      "updates": 32,
+      "clean": 57,
+      "stable": 69,
+      "slipping": 15,
+      "illegal": 1,
+      "physical_failures": 2,
+      "regressions": 7,
+      "repairs": 0,
+      "lost_protected": [
+        [
+          "known_old",
+          14
+        ],
+        [
+          "known_old",
+          15
+        ],
+        [
+          "known_recent",
+          8
+        ],
+        [
+          "known_recent",
+          9
+        ],
+        [
+          "known_recent",
+          10
+        ],
+        [
+          "known_recent",
+          14
+        ],
+        [
+          "known_recent",
+          15
+        ]
+      ],
+      "repaired_old_failures": []
+    },
+    {
+      "arm": "revised",
+      "seed": 63117,
+      "updates": 32,
+      "clean": 62,
+      "stable": 70,
+      "slipping": 10,
+      "illegal": 0,
+      "physical_failures": 2,
+      "regressions": 2,
+      "repairs": 0,
+      "lost_protected": [
+        [
+          "known_old",
+          10
+        ],
+        [
+          "known_old",
+          11
+        ]
+      ],
+      "repaired_old_failures": []
+    }
+  ],
+  "conclusion": "Revised rewards outperform original rewards on clean-case counts for both seeds at 16 and 32 updates, but all policies remain below best09, zero original failures have been repaired, and every evaluated policy has regressions. No promotion.",
+  "raw_rewards_cross_arm_comparable": false,
+  "action_limits_changed": false,
+  "holdout_opened": false,
+  "leaning_trained": false,
+  "automations": "deleted; existing finite queue only",
+  "sources": {
+    "development_comparison.json": "d69cefe1e73a2adb6c7723d6dd56d41a6e868ba8a2207c93fad8cccbee1501d9",
+    "status.json": "2dda686a4514a9581f543d01ac50df8b79f5a3413f807c800d9f728282b97647",
+    "live_check_20261027_1649.json": "894d1df829ea66bc7ddb4160f8e2934de92554728e4b6773ea4c5457935cd807"
+  }
+}

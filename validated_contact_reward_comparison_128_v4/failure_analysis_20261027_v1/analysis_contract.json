@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-27T17:41:39.086682+00:00",
+  "authorization": "Analyze whether action limits prevent repairs or more training is needed using saved trajectories without interrupting comparison.",
+  "script_sha256": "cbc44ca345acbfa157dcc04a17e5f03166b3fd5d9df0f4e79efeb2ecb97306d0",
+  "scope": "All completed 16/32 runs plus revised63111 at64, baseline72; completed audited saved files only",
+  "tests": [
+    "applied vs requested saturation at95percent envelope",
+    "slew reconstruction against saved offsets",
+    "case/profile and tick/episode alignment",
+    "first slip/contact timing",
+    "clean stochastic witnesses and strict flags",
+    "before/after critic explained variance on its own saved batch"
+  ],
+  "limits": {
+    "wall_seconds": 180,
+    "cpu_seconds": 120,
+    "threads": 1,
+    "nice": 19,
+    "cuda": false
+  },
+  "inference_limits": "Observational saved data cannot prove infeasibility or establish that a larger bound/faster control would repair a case. Clean sampled episodes are not a deterministic policy repair.",
+  "comparison_modified": false
+}
