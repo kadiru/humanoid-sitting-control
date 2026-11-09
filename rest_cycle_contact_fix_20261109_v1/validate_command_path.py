@@ -95,9 +95,11 @@ def check(plan_path, metadata_path, policy_directory):
     np.testing.assert_allclose(previous.numpy(), plan.initial, rtol=0, atol=2e-7)
     assert result['quiet_samples'] == 100 and not result['physical_success']
     files = [Path(plan_path), Path(metadata_path), policy_directory/'policy.py',
-             policy_directory/'common.py', Path(__file__), Path(__file__).with_name('cycle_executor.py')]
+             policy_directory/'common.py', Path(__file__), Path(__file__).with_name('cycle_executor.py'),
+             Path(__file__).with_name('contact_gate.py')]
     return dict(passed=True, synthetic_measurements=True, G1_trials=0, PPO_updates=0,
         physical_success=False, path_admission_changed=False, original_filter='Torch CPU float32',
+        numpy_version=np.__version__,torch_version=torch.__version__,
         command_counts=counts, stage_samples=stage_samples,
         return_start_control=returned_at, completion_control=control,
         synthetic_cycle_time_s=control*.02, maximum_command_difference_rad=max_command_error,

@@ -7,6 +7,23 @@ adapter and current geometry certificate before motion can be launched.
 """
 from dataclasses import dataclass
 import math
+import numpy as np
+
+def snapshot_numeric(value, *, vector=False):
+    """Own the values while preserving the producer's comparison precision."""
+    if hasattr(value,'detach'):
+        value=value.detach().cpu().numpy()
+    a=np.asarray(value)
+    if a.ndim!=(1 if vector else 0) or a.dtype.kind not in 'fiu':
+        raise ValueError('REAL_SENSOR_VECTOR_REQUIRED' if vector else 'REAL_SENSOR_SCALAR_REQUIRED')
+    a=a.copy()
+    return tuple(a) if vector else a[()]
+
+def snapshot_flag(value):
+    """Copy a scalar flag; NaN and arbitrary truthy objects are not admission."""
+    if value not in (False, True):
+        raise ValueError('BOOLEAN_SENSOR_FLAG_REQUIRED')
+    return bool(value)
 
 @dataclass(frozen=True)
 class Packet:
@@ -20,6 +37,18 @@ class Packet:
     load_interval_admitted: bool = False
     load_lower_bw: float | None = None
     load_upper_bw: float | None = None
+
+    def __post_init__(self):
+        if type(self.physics_step) is not int or self.physics_step < 0:
+            raise ValueError('INTEGER_PHYSICS_STEP_REQUIRED')
+        object.__setattr__(self,'raw_joint_velocity',snapshot_numeric(self.raw_joint_velocity,vector=True))
+        for name in ('pitch_error_rad','gyro_y_rad_s','geometry_age_s'):
+            object.__setattr__(self,name,snapshot_numeric(getattr(self,name)))
+        for name in ('load_lower_bw','load_upper_bw'):
+            value=getattr(self,name)
+            object.__setattr__(self,name,None if value is None else snapshot_numeric(value))
+        for name in ('geometry_valid','current_pose_admitted','load_interval_admitted'):
+            object.__setattr__(self,name,snapshot_flag(getattr(self,name)))
 
     def quiet(self):
         # Original raw thresholds; no finite differences, clipping or filtering.

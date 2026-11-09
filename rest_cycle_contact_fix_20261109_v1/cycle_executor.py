@@ -8,7 +8,7 @@ required. Historical calibration paths are not automatically admitted.
 from dataclasses import dataclass
 import math
 import numpy as np
-from contact_gate import Packet
+from contact_gate import Packet, snapshot_flag, snapshot_numeric
 
 MOVING = 23
 TOTAL = 37
@@ -88,8 +88,17 @@ class Measurements:
 
     def __post_init__(self):
         # Snapshot potentially reused numpy/torch producer buffers immediately.
-        object.__setattr__(self, 'raw_joint_velocity', tuple(self.raw_joint_velocity))
-        object.__setattr__(self, 'gravity', tuple(self.gravity))
+        # tuple(tensor) retains scalar tensor views into producer storage.
+        # Copy numeric scalars, preserving float32 threshold semantics.
+        object.__setattr__(self, 'raw_joint_velocity', snapshot_numeric(self.raw_joint_velocity,vector=True))
+        object.__setattr__(self, 'gravity', snapshot_numeric(self.gravity,vector=True))
+        for name in ('gyro_y_rad_s','geometry_age_s'):
+            object.__setattr__(self,name,snapshot_numeric(getattr(self,name)))
+        for name in ('load_lower_bw','load_upper_bw'):
+            value=getattr(self,name)
+            object.__setattr__(self,name,None if value is None else snapshot_numeric(value))
+        for name in ('geometry_valid','current_pose_admitted','load_interval_admitted','geometry_separated'):
+            object.__setattr__(self,name,snapshot_flag(getattr(self,name)))
         if type(self.physics_step) is not int or self.physics_step < 0:
             raise ValueError('INTEGER_PHYSICS_STEP_REQUIRED')
 
