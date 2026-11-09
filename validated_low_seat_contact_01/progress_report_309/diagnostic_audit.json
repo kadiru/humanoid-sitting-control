@@ -1,0 +1,540 @@
+{
+  "utc": "2026-10-17T20:17:11.198423+00:00",
+  "diagnostic_checks_passed": true,
+  "exact_prefix_replay": true,
+  "physical_admission": false,
+  "repair_complete": false,
+  "accounting": {
+    "elapsed_s": 13.0,
+    "physics_substeps": 2600,
+    "physics_dt": 0.005,
+    "active_ticks": 15600,
+    "initial_settling_excluded": 600,
+    "indexed_warmup": 0,
+    "complete20s_episodes": 0,
+    "optimizer_updates": 0,
+    "fresh_holdout": false,
+    "recording_control_use": false,
+    "substep_records": 1001,
+    "scene_update_callbacks": 2600
+  },
+  "postflight_completion_checked_from_saved_arrays": true,
+  "post_context_completion_marker_present": false,
+  "source_hashes_unchanged": true,
+  "prefix_trace": {
+    "t": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "body": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "q": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "command": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "geometry": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "reference": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "torque": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    }
+  },
+  "prefix_ticks": {
+    "t": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "force": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "slip": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "normal": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "weight": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "wrong": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "no_slip": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "traction": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "failure": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "legal": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "permitted": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "inside": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "rest_patch": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "total_squared_torque_Nm2": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "unexpected_body_normal": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "contact_position": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    }
+  },
+  "exact_starts": {
+    "startup.npz": {
+      "root": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "q": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "command": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "geometry": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "observation": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      }
+    },
+    "traction_startup.npz": {
+      "policy": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "reference": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "learn": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      }
+    },
+    "bridge_startup.npz": {
+      "policy": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "learn": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      },
+      "reference": {
+        "exact": true,
+        "changed": 0,
+        "max_finite_difference": 0.0
+      }
+    }
+  },
+  "actual414": {
+    "exact": true,
+    "changed": 0,
+    "max_finite_difference": 0.0
+  },
+  "substep_trace": {
+    "q": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "command": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "torque": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    }
+  },
+  "substep_raw_checks": 1004,
+  "all_substep_raw_exact": true,
+  "backend_to_public_order_replay": {
+    "q": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "qd": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    }
+  },
+  "public_cache_unchanged": {
+    "public_q": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "public_qd": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "cache_timestamp": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    }
+  },
+  "recorder_metadata": {
+    "nonidentity_joint_ordering": false,
+    "private_query_destinations": true,
+    "user_to_backend": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "public_pointers": [
+      12921149440,
+      12920823296
+    ],
+    "implicit_kernel_state_pointers": [
+      12921149440,
+      12920823296
+    ],
+    "backend_pointers": [
+      12920487424,
+      12920605184
+    ],
+    "records": 1001,
+    "every_read_public_cache_bytes_and_timestamps_exact": true,
+    "every_backend_query_nonoverlapping_public_storage": true,
+    "control_use": false,
+    "body_user_to_backend": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "additional_private_queries": [
+      "link_transforms",
+      "link_velocities",
+      "dof_position_targets",
+      "dof_velocity_targets",
+      "link_incoming_joint_force"
+    ],
+    "extra_backend_pointers": [
+      12924450304,
+      12920578560,
+      12920608768,
+      12920612352,
+      12924480000
+    ],
+    "all_allocated_timestamped_caches_unchanged": true,
+    "cache_count_min": 27,
+    "cache_count_max": 27,
+    "implicit_launch_records": 1000,
+    "input_replacement": false,
+    "incoming_frame": "Child incoming joint frame, force xyz then torque xyz; transmitted wrench, not isolated motor effort.",
+    "new_query_calls": 1017,
+    "property_snapshots": 3,
+    "property_read_steps": [
+      0,
+      1600,
+      2600
+    ],
+    "property_queries": [
+      "dof_stiffnesses",
+      "dof_dampings",
+      "dof_armatures",
+      "dof_max_forces",
+      "dof_friction_properties"
+    ],
+    "property_destination_devices": {
+      "dof_stiffnesses": "cpu",
+      "dof_dampings": "cpu",
+      "dof_armatures": "cpu",
+      "dof_max_forces": "cpu",
+      "dof_friction_properties": "cpu"
+    },
+    "property_buffer_checks": 1005,
+    "all_existing_property_and_view_buffers_byte_exact": true,
+    "preflight_completed": true
+  },
+  "fixed_fingers": 14,
+  "actual_parent_cpu_action_max_error": 2.384185791015625e-07,
+  "parent_tolerances": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "actuator_types": {
+    "legs": "ImplicitActuator",
+    "feet": "ImplicitActuator",
+    "arms": "ImplicitActuator"
+  },
+  "effort_semantics": "Implicit actuator applied_torque is approximate PD effort telemetry, not an independent solver joint-effort measurement. Original reward/criteria remain unchanged.",
+  "interpretation": "Diagnostic replay only. Every direct backend query checks separate storage and unchanged public cache bytes/timestamps. Full prefix must also replay exactly; no equality waiver, sensor substitution, guard or controller change. No new20s success, PPO or holdout.",
+  "additional_drive_checks": {
+    "body_transforms": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "backend_position_targets": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "launch_to_poststep_telemetry": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "implicit_launch_records": 1000,
+    "float64_formula_passed": true,
+    "formula_max_computed_error_Nm": 9.834766387939453e-07,
+    "formula_max_applied_error_Nm": 9.834766387939453e-07,
+    "formula_bound_definition": "8 float32 eps * (sum absolute input products +1)",
+    "maximum_velocity_target_rad_s": 0.0,
+    "maximum_feedforward_effort_Nm": 0.0
+  },
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_incoming_v2_305.py": "7bfff6344c8299d3772203a7fc3a7c4da7fa282f8db68c2a274f122a33dc8e9e",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/diagnostic_protocol.json": "8b36823615012a9d47a28c8cb4737f23fe8210cb7773b61b9628a8f766847734",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/substep_states.npz": "9ec8a781dc1481ff4d8f6786c00826cb44afb7d7b2ee4fea08feabdb8ec78cc8",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/actual_sensor_frames.npz": "a1a29f295a40ef3a396e1521e44fd30dfbb4821b6fec451dba22efee80667e8c",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/actuator_metadata.json": "3c40b6bbea84e429bf60a0cf7bccd11e0a1e51e36ef9c1bcd105e1ec8474585b",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/implicit_launches.npz": "48959d0cfdb3e4baf09f20bd67949df7e100a431fa79f1077876ab34159ceb73",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/live_stage_settings.json": "c18bad51ad50196c0cf917743ed7597882ab96e75533246221fa03b49489eb61",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/contact_returns.npz": "99ca3e170c4554d2120c83fa6a1b21f1aae6e52166aa4f7e73da859895b47ef6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/contact_recorder_metadata.json": "12480d1fdc74713a1af67d621036399d32e4965b9669dbf6c2219bbb704eccc5",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/backend_properties.npz": "584d7aa93eb762cd31411efb34f4932ccc6aa1d1080e9db5e9ef459657d068fc",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/backend_ordering.json": "b44bd5565b7c8d6af8e3c995605b9cf76569d72f62bc559f9bbfb4f24e680a42",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/incoming_preflight.npz": "f678bbac670a5b443c3a3d4c914451a61b0c3b561b9fdaf38d6991a0905a8477",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/recorder_metadata.json": "165eb19616aecad3b7b3be959e49ba313578984c0d386d4d07474bcd1d33d775"
+  },
+  "contact_return_checks": {
+    "passed": true,
+    "query_calls": 10400,
+    "record_count": 4004,
+    "combined_records": 2002,
+    "active_points": 284077,
+    "extra_queries": 0,
+    "maximum_resultant_force_error_N": 3.020876772552583e-05,
+    "force_roundoff_bound": "16float32eps*(abs(normal resultant)+abs(friction resultant)+1)",
+    "moment_definition": "Sum individual(p_i-link_origin)cross f_i with separate normal/friction application points; no average-point approximation. Simulation contact labels only, never controller input."
+  },
+  "incoming_checks": {
+    "passed": true,
+    "records": 1001,
+    "preflight_records": 1,
+    "frame": "Child incoming joint frame, force xyz then torque xyz; transmitted wrench, not isolated motor effort.",
+    "property_snapshots": 3,
+    "property_checks": {
+      "dof_stiffnesses": {
+        "configured_buffer": {
+          "exact": true,
+          "changed": 0,
+          "max_finite_difference": 0.0
+        },
+        "stable_readback": {
+          "exact": true,
+          "changed": 0,
+          "max_finite_difference": 0.0
+        }
+      },
+      "dof_dampings": {
+        "configured_buffer": {
+          "exact": true,
+          "changed": 0,
+          "max_finite_difference": 0.0
+        },
+        "stable_readback": {
+          "exact": true,
+          "changed": 0,
+          "max_finite_difference": 0.0
+        }
+      },
+      "dof_armatures": {
+        "configured_buffer": {
+          "exact": true,
+          "changed": 0,
+          "max_finite_difference": 0.0
+        },
+        "stable_readback": {
+          "exact": true,
+          "changed": 0,
+          "max_finite_difference": 0.0
+        }
+      },
+      "dof_max_forces": {
+        "configured_buffer": {
+          "exact": true,
+          "changed": 0,
+          "max_finite_difference": 0.0
+        },
+        "stable_readback": {
+          "exact": true,
+          "changed": 0,
+          "max_finite_difference": 0.0
+        }
+      }
+    },
+    "friction_channels": [
+      "static effort",
+      "dynamic effort",
+      "viscous coefficient"
+    ],
+    "friction_stable": {
+      "exact": true,
+      "changed": 0,
+      "max_finite_difference": 0.0
+    },
+    "new_queries": 1017,
+    "interpretation": "Private destination and buffer checks plus exact global replay required. Backend property equality is reported, not assumed. Incoming total joint wrench is not isolated motor effort."
+  }
+}
