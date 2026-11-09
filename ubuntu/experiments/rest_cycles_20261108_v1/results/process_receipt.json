@@ -1,0 +1,46 @@
+{
+  "started_utc": "2026-11-08T20:44:27.525200+00:00",
+  "wall_cap_seconds": 45,
+  "address_space_GiB": 40,
+  "CPU_threads": 1,
+  "CPU_affinity": [
+    0
+  ],
+  "commands": [
+    {
+      "args": [
+        "test_core.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_action_contract_and_invalid_inputs (__main__.CoreTests.test_action_contract_and_invalid_inputs) ... ok\ntest_audit_accepts_fixture_but_not_as_physical_evidence (__main__.CoreTests.test_audit_accepts_fixture_but_not_as_physical_evidence) ... ok\ntest_audit_rejects_each_material_failure (__main__.CoreTests.test_audit_rejects_each_material_failure) ... ok\ntest_contact_and_cycle_deadlines (__main__.CoreTests.test_contact_and_cycle_deadlines) ... ok\ntest_contact_spike_is_not_dwell (__main__.CoreTests.test_contact_spike_is_not_dwell) ... ok\ntest_event_cycle_and_no_simulated_success_claim (__main__.CoreTests.test_event_cycle_and_no_simulated_success_claim) ... ok\ntest_hold_interruption_does_not_accumulate (__main__.CoreTests.test_hold_interruption_does_not_accumulate) ... ok\ntest_invalid_load_aborts (__main__.CoreTests.test_invalid_load_aborts) ... ok\ntest_map_transform_not_false_freshness (__main__.CoreTests.test_map_transform_not_false_freshness) ... ok\ntest_standing_requires_whole_two_seconds (__main__.CoreTests.test_standing_requires_whole_two_seconds) ... ok\ntest_unknown_load_cannot_unload_or_trigger_standing (__main__.CoreTests.test_unknown_load_cannot_unload_or_trigger_standing) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.038s\n\nOK\n"
+    },
+    {
+      "args": [
+        "contact_observer_check.py",
+        "/home/kadir/humanoid-sitting/outputs/rest_cycles_20261108_v1"
+      ],
+      "returncode": 0,
+      "stdout": "{\"radius_bw\": 0.07759922929108143, \"saved_data_screen_passed\": false, \"deployment_admitted\": false, \"reason\": \"Rejected: incomplete contact/unloaded coverage or incorrect empirical intervals on disjoint saved runs.\", \"elapsed_seconds\": 5.152726567990612}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "audit_observer.py",
+        "/home/kadir/humanoid-sitting/outputs/rest_cycles_20261108_v1"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "scientific_attempts": 1,
+  "retries": 0,
+  "new_physics_steps": 0,
+  "PPO_updates": 0,
+  "status": "COMPLETED_INSPECT_SCIENTIFIC_RESULT",
+  "wall_seconds": 5.504502994008362,
+  "CPU_seconds": 5.472288,
+  "peak_child_RSS_KiB": 221764,
+  "finished_utc": "2026-11-08T20:44:33.029703+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "scope": "Pre-execution source and equation review by the single execution owner; independently coded tests/auditor, no second agent or claim of external review.",
+  "construction": "Whole-start, temporally aligned sensor-to-load empirical interval with fixed nearest-neighbour witness; no hyperparameter search.",
+  "equations": {
+    "target": "x_t=obs[t,0:333], y_t=support_bw[t-1]",
+    "fit": "5 whole starts, fixed k=16 nearest neighbours; sensor standardization floor0.01",
+    "calibration": "one held-out yaw-left start; radius=max absolute residual, distance envelope=max16th-neighbour distance",
+    "test": "disjoint yaw-right start plus all11 learned-policy challenge starts; failures retained",
+    "declarations": "geometry valid and inside calibration distance; loaded iff lower>=0.05bw, unloaded iff upper<0.01bw",
+    "decision": "zero false declarations and interval misses plus>=90percent loaded/unloaded recall on held-out teacher start; no deployment even if this screen passes"
+  },
+  "core_contracts": [
+    "load and position transitions require25consecutive qualified measurements",
+    "unknown is not unloaded and cannot advance transfer/unload/stand",
+    "sensor packet is post-step; decisions apply to the NEXT control step, preserving original20s window",
+    "surface memory requires independently supplied current uncertainty, not assumed fixed feet",
+    "return requires100continuous standing measurements",
+    "audit enforces original20s window, every-tick safety and exact action/filter/finger invariants",
+    "synthetic fixture never returns physical success"
+  ],
+  "remaining_not_implemented": [
+    "stage-specific reachable motion primitives",
+    "qualified current localization uncertainty provider",
+    "new upright-lean furniture and geometry admission",
+    "validated unloaded/stand-up sensor states",
+    "live whole-cycle IsaacLab adapter"
+  ],
+  "resource_review": "one45second total CPU validation parent,40GiBAS,1CPU,source/input hashes before tests, no simulation/GPU or retries",
+  "review_status": "READY_FOR_ONE_SAVED_DATA_VALIDATION_NOT_PHYSICS"
+}

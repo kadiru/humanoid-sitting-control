@@ -1,0 +1,66 @@
+{
+  "utc": "2026-11-08T20:50:34.232789+00:00",
+  "state": "CYCLE_CORE_TESTED_CONTACT_OBSERVER_REJECTED_NO_NEW_PHYSICAL_CYCLE",
+  "completed": [
+    "Implemented event-driven stage core with25consecutive contact/position/load qualifications, original20s rest window and separate2s standing settle",
+    "Implemented measured-surface memory with explicit current-localization uncertainty requirement",
+    "Implemented unchanged23joint action filter/rate/margins and fixed14fingers",
+    "Implemented full-cycle audit including original rest window, all-tick safety, return-to-standing and added upright-knee intent",
+    "11 software tests passed, including invalid input, isolated contact spikes, unknown load, interruptions, expiry, action/filter mutations and false-cycle scoring",
+    "Executed one frozen temporally aligned whole-start contact-observer experiment; separate arithmetic auditor verified its rejection"
+  ],
+  "not_completed": [
+    "Stage-specific reachable feedback motion primitives",
+    "Qualified localization uncertainty provider",
+    "Reliable loaded/unloaded sensing on new furniture and return states",
+    "Compatible upright-lean furniture/path selection and continuous clearance/balance admission",
+    "Live whole-cycle integration and3repeat starts per task"
+  ],
+  "contact_observer": {
+    "loaded_recall_disjoint_success": 0.9219858156028369,
+    "unloaded_recall_disjoint_success": 0.0,
+    "loaded_recognition_on_learned_challenge": 0,
+    "reported_false_declarations": 0,
+    "empirical_radius_bw": 0.07759922929108143,
+    "admitted": false,
+    "rejection_reason": "Rejected: incomplete contact/unloaded coverage or incorrect empirical intervals on disjoint saved runs."
+  },
+  "interpretation": "The interval is intentionally empirical and abstains. Zero false declarations with no unloaded coverage is not usable control. The experiment does not prove all sensor-only contact estimation impossible.",
+  "label_caveat": "The frozen script calls its targets force_truth/truth. They are simulator-reported support labels, not independently certified physical forces. A separate historical articulated run has an unresolved force/momentum mismatch. That old result does not identify a faulty producer or reclassify these runs; no force correction has been fitted.",
+  "additional_source_findings": [
+    "Current IsaacLab applied_torque accessor points to actuator applied_effort; implicit drive telemetry is not an independently measured solver torque",
+    "JointWrenchSensor exposes total incoming reaction in the child-side joint frame, not an isolated motor-current measurement"
+  ],
+  "candidate_sitting_surface": {
+    "case": "modern_coffee_table_01_top",
+    "surface_height_m": 0.3899814829287034,
+    "reason": "Broad unobstructed horizontal top near existing low-seat reference heights",
+    "status": "candidate only; placement, reachable full cycle and sensor validity not admitted"
+  },
+  "leaning_choice": "No upright-lean furniture selected yet. Existing83degree armchair squat is not promoted to an upright example.",
+  "next_required_work": "Resolve a measured contact/separation signal for safe transfer and return, rather than tuning another unconstrained load regressor. Complete bounded stage-specific approach/unload/stand primitives and a qualified current depth-map localization provider. Freeze and audit the integrated full cycle before4090 execution. Require3complete independent starts for each of sitting and upright lean before scaling/PPO.",
+  "counts": {
+    "new_simulation_steps": 0,
+    "new_demonstrations": 0,
+    "complete_sitting_cycles": 0,
+    "complete_upright_lean_cycles": 0,
+    "PPO_updates": 0,
+    "new_full72_checks": 0,
+    "physical_repairs": 0
+  },
+  "resources": {
+    "scientific_processes": 1,
+    "wall_seconds": 5.504502994008362,
+    "CPU_seconds": 5.472288,
+    "peak_child_RSS_KiB": 221764,
+    "metadata_hash_seconds": 0.05817332401056774,
+    "GPU_launches": 0,
+    "retries": 0
+  },
+  "authorization": "Latest human restart supersedes immediate200example collection with two reliable full cycles first. Original action limits/physical success criteria,4090only and4070reservation retained. Automation remains deleted.",
+  "worker_live": false,
+  "autostart": false,
+  "scientific_result": "/Users/kadir/humanoid-sitting-control/rest_cycles_20261108_v1/results/observer_result.json",
+  "source_freeze": "/Users/kadir/humanoid-sitting-control/rest_cycles_20261108_v1/freeze.json",
+  "independent_arithmetic_audit": "/Users/kadir/humanoid-sitting-control/rest_cycles_20261108_v1/results/observer_audit.json"
+}
