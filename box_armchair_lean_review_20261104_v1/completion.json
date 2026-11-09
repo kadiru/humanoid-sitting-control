@@ -1,0 +1,84 @@
+{
+  "utc": "2026-11-05T18:14:15.876680+00:00",
+  "state": "SPECIFIC_ARMCHAIR_LEAN_COMPLETE",
+  "authorization": "Go ahead and get the robot to lean against the back of the box armchair using the rear camera. Use only the 4090, keep the success criteria unchanged, and show me a video when it can repeat the five-second hold.",
+  "method": "Camera-guided model-based trajectory, static inverse dynamics, IMU feedback, torque-based load estimate and shear compensation. No PPO weight updates.",
+  "controller_source": "/Users/kadir/humanoid-sitting-control/box_armchair_lean_20261104_v4",
+  "repeatability": "/Users/kadir/humanoid-sitting-control/box_armchair_lean_20261104_v4/results/repeatability.json",
+  "trials": [
+    {
+      "seed": 64901,
+      "initial_lateral_offset_mm": 0,
+      "recorded_pelvis_y_at_start_m": 0.00033041363349184394,
+      "duration_s": 20.0,
+      "final_hold_s": 6.84,
+      "minimum_final_torso_bw": 0.2176523506641388,
+      "max_final_traction_utilization": 0.6766496300697327,
+      "max_episode_loaded_slip_m_s": 0.006076562684029341,
+      "slip_ticks": 0,
+      "illegal_ticks": 0,
+      "initial_selected_pixels": 1322,
+      "gpu": "RTX 4090",
+      "auditor_sha256": "1a18f0b460acb56d8983d358d97a75852b980a256914c662906f13ed71b41807"
+    },
+    {
+      "seed": 64902,
+      "initial_lateral_offset_mm": 15.0,
+      "recorded_pelvis_y_at_start_m": 0.015330440364778042,
+      "duration_s": 20.0,
+      "final_hold_s": 6.82,
+      "minimum_final_torso_bw": 0.21825894713401794,
+      "max_final_traction_utilization": 0.6834973096847534,
+      "max_episode_loaded_slip_m_s": 0.0060483370907604694,
+      "slip_ticks": 0,
+      "illegal_ticks": 0,
+      "initial_selected_pixels": 1319,
+      "gpu": "RTX 4090",
+      "auditor_sha256": "d8a677b8a14f85b89b70f1db9850a934be6b45ca31bb8be7b3d8ec70d78be930"
+    },
+    {
+      "seed": 64903,
+      "initial_lateral_offset_mm": -15.0,
+      "recorded_pelvis_y_at_start_m": -0.014669273048639297,
+      "duration_s": 20.0,
+      "final_hold_s": 6.84,
+      "minimum_final_torso_bw": 0.2178192436695099,
+      "max_final_traction_utilization": 0.6838483214378357,
+      "max_episode_loaded_slip_m_s": 0.0061120931059122086,
+      "slip_ticks": 0,
+      "illegal_ticks": 0,
+      "initial_selected_pixels": 1319,
+      "gpu": "RTX 4090",
+      "auditor_sha256": "9845b1fc7d2cb01e36fb49e3921e0946e4b089506f4862be48c8d0d56cef6e22"
+    }
+  ],
+  "success_criteria_unchanged": true,
+  "action_limits_unchanged": true,
+  "gpu": "4090 only;4070 untouched",
+  "video": "/Users/kadir/humanoid-sitting-control/box_armchair_lean_20261104_v4/results/video/repeatable_armchair_lean.mp4",
+  "video_sha256": "a846d486700f7ec8d2a071f1e36253c5cee0b169cae535ed5499ca9a42196043",
+  "video_duration_s": 23,
+  "decoded_frames": 230,
+  "video_visual_review": "Initial approach, contact phase, final hold, and result card inspected; all three complete 20-second trials shown simultaneously at real speed.",
+  "resource_accounting": {
+    "physics_trials": 6,
+    "predecessor_trials": {
+      "v1": 1,
+      "v2": 1,
+      "v3": 1
+    },
+    "final_v4_trials": 3,
+    "control_transitions_including_warmup": 6150,
+    "physics_steps": 24600,
+    "ppo_updates": 0,
+    "remote_evidence_roots": [
+      "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v1",
+      "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v2",
+      "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v3",
+      "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4"
+    ]
+  },
+  "limits": "One box armchair in simulation with centered and +/-15mm lateral starts. Original 72-case sitting benchmark unchanged; zero accepted repairs of its eight failures.",
+  "next_work": "Specific armchair request complete. Await further human direction; broader training pause and deleted automation unchanged.",
+  "checkpoint_backup": "/Users/kadir/humanoid-sitting-control/box_armchair_lean_review_20261104_v1/checkpoint_before_completion.json"
+}
