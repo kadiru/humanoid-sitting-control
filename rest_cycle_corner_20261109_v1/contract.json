@@ -1,0 +1,27 @@
+{
+  "utc": "2026-11-09T02:30:35.517905+00:00",
+  "authorization": "Latest human: corner or narrow edge; five-second hold and stand; 4090 only; unchanged action limits/success criteria; examine fixed-foot assumption and foot unloading.",
+  "construction": "One rigid45deg yaw of the existing50cm table; nearest corner at worldx=-.08,y=0. No collision shrink, change of height, contact material or anchoring. Current calibrated rear depth supplies two independently fitted straight flank boundaries; no true scene pose enters detection.",
+  "initialization": "Original standing reset bank and accepted known_old/16 demonstration only; no rejected vector reused.",
+  "frozen_order": [
+    "one CPU fixture construction plus four synthetic edge tests",
+    "one4090 standing capture75controls including warmup",
+    "one CPU currentdepth/mesh association audit",
+    "only ifpassed prepare a separately frozen mechanical fullcycle construction"
+  ],
+  "bounds": {
+    "each_CPU_total_s": 45,
+    "CPUcores": 1,
+    "address_space_GiB": 40,
+    "GPUchild_s": 900,
+    "max_temperature_C": 85,
+    "min_disk_GB": 20,
+    "GPU": "4090 UUID-ab1950b0-01dd-0fab-407f-2d17936b27f4",
+    "retries": 0
+  },
+  "success": "Fixture roundtrip exacttopology/unchangedmaterial/6mmstandingclearance; bothcurrentdepth edge flanks pass independenthalf agreement<=3mm,linepixelwidth<=6mm and fullmesh<=6mm; no corner motion onfailed gate.",
+  "physical_success": false,
+  "PPO_updates": 0,
+  "stepping": "No planted foot sliding; testing alternative setup is not a validated foot relocation skill.",
+  "source_review": "Separate mesh audit does not import edge estimator internals. Production detect has no furniture geometry. Unit cases cover missing flank, bent edge and nearer occluder. Preparation freeze includes this contract and audits before any scientific launch."
+}

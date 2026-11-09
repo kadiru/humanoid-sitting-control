@@ -1,0 +1,70 @@
+{
+  "passed": false,
+  "tests": {
+    "-1": true,
+    "1": false,
+    "two_distinct_forward_edges": true,
+    "tip_between_observed_flanks": true
+  },
+  "edges": [
+    {
+      "side": -1,
+      "count": 43,
+      "line": [
+        0.7061131914609468,
+        -0.7080989767291267,
+        0.06234073257638707
+      ],
+      "angle_half_difference_deg": 0.005197673407989561,
+      "half_offset_difference_m": 0.00021487865668596773,
+      "max_midpoint_residual_m": 0.0011519268376691677,
+      "max_pixel_width_m": 0.002831786923053369,
+      "max_bracket_violation_m": -0.0001851563023250874,
+      "observed_y_range": [
+        -0.2952969450977223,
+        -0.0630311010388583
+      ]
+    },
+    {
+      "side": 1,
+      "count": 55,
+      "line": [
+        0.7315173742100956,
+        0.6818228004612101,
+        0.010068942705963382
+      ],
+      "angle_half_difference_deg": 7.694870273784375,
+      "half_offset_difference_m": 0.006187864934695857,
+      "max_midpoint_residual_m": 0.017806169734144187,
+      "max_pixel_width_m": 0.0026694100997798364,
+      "max_bracket_violation_m": 0.01661255517686557,
+      "observed_y_range": [
+        0.06062509247066225,
+        0.29768071955945713
+      ]
+    }
+  ],
+  "tip_xy_m": [
+    -0.04966341041148787,
+    0.0385154395758001
+  ],
+  "outward_lines": [
+    [
+      0.7061131914609468,
+      -0.7080989767291267,
+      0.06234073257638707
+    ],
+    [
+      0.7315173742100956,
+      0.6818228004612101,
+      0.010068942705963382
+    ]
+  ],
+  "edge_uncertainty_m": 0.006,
+  "actor_truth_input": false,
+  "tip_directly_seen": false,
+  "interpretation": "Intersection of two measured straight flanks; independent mesh association required.",
+  "dropoff_segments": 211,
+  "rejected_occlusion_segments": 0,
+  "selected_plane_pixels": 23783
+}

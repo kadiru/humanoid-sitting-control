@@ -1,0 +1,199 @@
+{
+  "passed": false,
+  "frames": [
+    {
+      "tick": 0,
+      "depth": {
+        "frame": 0,
+        "input_sha256": "55a46262f8466999ddc35e8306ec58d1343992be784eaf60e75466c616978197",
+        "projected_pixels": 2650,
+        "matching_pixels": 2650,
+        "occluded_pixels": 0,
+        "mismatch_pixels": 0,
+        "geometry_pass": true,
+        "visible_target_pixels": 2632,
+        "target_observable": true,
+        "depth_p99_m": 1.977878374914697e-07,
+        "selected_point_count": 23141,
+        "selected_target_fraction": 0.994252625210665,
+        "selected_max_mesh_distance_m": 7.621573730095412e-06,
+        "original_plane_gate": true,
+        "normal_error_deg": 0.01005652680176918,
+        "offset_error_m": 2.5675853382589597e-05
+      },
+      "corner": {
+        "passed": false,
+        "tests": {
+          "-1": true,
+          "1": false,
+          "two_distinct_forward_edges": true,
+          "tip_between_observed_flanks": true
+        },
+        "edges": [
+          {
+            "side": -1,
+            "count": 43,
+            "line": [
+              0.7061131914609468,
+              -0.7080989767291267,
+              0.06234073257638707
+            ],
+            "angle_half_difference_deg": 0.005197673407989561,
+            "half_offset_difference_m": 0.00021487865668596773,
+            "max_midpoint_residual_m": 0.0011519268376691677,
+            "max_pixel_width_m": 0.002831786923053369,
+            "max_bracket_violation_m": -0.0001851563023250874,
+            "observed_y_range": [
+              -0.2952969450977223,
+              -0.0630311010388583
+            ]
+          },
+          {
+            "side": 1,
+            "count": 55,
+            "line": [
+              0.7315173742100956,
+              0.6818228004612101,
+              0.010068942705963382
+            ],
+            "angle_half_difference_deg": 7.694870273784375,
+            "half_offset_difference_m": 0.006187864934695857,
+            "max_midpoint_residual_m": 0.017806169734144187,
+            "max_pixel_width_m": 0.0026694100997798364,
+            "max_bracket_violation_m": 0.01661255517686557,
+            "observed_y_range": [
+              0.06062509247066225,
+              0.29768071955945713
+            ]
+          }
+        ],
+        "tip_xy_m": [
+          -0.04966341041148787,
+          0.0385154395758001
+        ],
+        "outward_lines": [
+          [
+            0.7061131914609468,
+            -0.7080989767291267,
+            0.06234073257638707
+          ],
+          [
+            0.7315173742100956,
+            0.6818228004612101,
+            0.010068942705963382
+          ]
+        ],
+        "edge_uncertainty_m": 0.006,
+        "actor_truth_input": false,
+        "tip_directly_seen": false,
+        "interpretation": "Intersection of two measured straight flanks; independent mesh association required.",
+        "dropoff_segments": 211,
+        "rejected_occlusion_segments": 0,
+        "selected_plane_pixels": 23783
+      },
+      "envelope": {
+        "passed": false,
+        "reason": "corner_not_qualified"
+      }
+    },
+    {
+      "tick": 50,
+      "depth": {
+        "frame": 50,
+        "input_sha256": "33e7ac3b4fcae839cda0440c873c4594bbe4a56d9a0e50b3816c3300d5ce2c84",
+        "projected_pixels": 2650,
+        "matching_pixels": 2650,
+        "occluded_pixels": 0,
+        "mismatch_pixels": 0,
+        "geometry_pass": true,
+        "visible_target_pixels": 2632,
+        "target_observable": true,
+        "depth_p99_m": 1.6092655073296459e-07,
+        "selected_point_count": 23144,
+        "selected_target_fraction": 0.9942533702039406,
+        "selected_max_mesh_distance_m": 3.7879612465638413e-06,
+        "original_plane_gate": true,
+        "normal_error_deg": 0.01160394492132932,
+        "offset_error_m": 2.552684177065112e-05
+      },
+      "corner": {
+        "passed": false,
+        "tests": {
+          "-1": true,
+          "1": false,
+          "two_distinct_forward_edges": true,
+          "tip_between_observed_flanks": true
+        },
+        "edges": [
+          {
+            "side": -1,
+            "count": 43,
+            "line": [
+              0.7061129428436116,
+              -0.708099224649155,
+              0.0623386481833805
+            ],
+            "angle_half_difference_deg": 0.005198757221433394,
+            "half_offset_difference_m": 0.00021487724296102528,
+            "max_midpoint_residual_m": 0.0011519169279755465,
+            "max_pixel_width_m": 0.0028317605981757303,
+            "max_bracket_violation_m": -0.0001851554128941002,
+            "observed_y_range": [
+              -0.29529421140590234,
+              -0.06303093394548415
+            ]
+          },
+          {
+            "side": 1,
+            "count": 55,
+            "line": [
+              0.7315165885404477,
+              0.681823643393323,
+              0.010067036899217355
+            ],
+            "angle_half_difference_deg": 7.694899948603821,
+            "half_offset_difference_m": 0.006187827906007949,
+            "max_midpoint_residual_m": 0.017806119452927406,
+            "max_pixel_width_m": 0.0026693911799308355,
+            "max_bracket_violation_m": 0.01661250812749589,
+            "observed_y_range": [
+              0.06062475962759348,
+              0.2976781437690249
+            ]
+          }
+        ],
+        "tip_xy_m": [
+          -0.049660690701259946,
+          0.03851521196366277
+        ],
+        "outward_lines": [
+          [
+            0.7061129428436116,
+            -0.708099224649155,
+            0.0623386481833805
+          ],
+          [
+            0.7315165885404477,
+            0.681823643393323,
+            0.010067036899217355
+          ]
+        ],
+        "edge_uncertainty_m": 0.006,
+        "actor_truth_input": false,
+        "tip_directly_seen": false,
+        "interpretation": "Intersection of two measured straight flanks; independent mesh association required.",
+        "dropoff_segments": 211,
+        "rejected_occlusion_segments": 0,
+        "selected_plane_pixels": 23784
+      },
+      "envelope": {
+        "passed": false,
+        "reason": "corner_not_qualified"
+      }
+    }
+  ],
+  "elapsed_seconds": 6.280555703968275,
+  "physics_steps": 0,
+  "sitting_controls": 0,
+  "complete_cycle": false
+}

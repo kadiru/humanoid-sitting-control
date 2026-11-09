@@ -1,0 +1,7 @@
+{
+  "error": "ValueError('CORNER_REGION_TOO_SMALL_FOR_COMPLETE_CONTACT_CAP_AND_RESERVE')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/rest_cycle_corner_20261109_v1/construct.py\", line 40, in main\n    result=plan.construct();write('plan.json',result);write('stage_evidence.json',plan.evidence)\n           ^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/rest_cycle_corner_20261109_v1/corner_plan.py\", line 71, in construct\n    restroot=self.corner_pose();restq=self.fit_feet(self.restq,restroot,'accepted_witness_corner_registration')\n             ^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/rest_cycle_corner_20261109_v1/corner_plan.py\", line 55, in corner_pose\n    if feasible.is_empty:raise ValueError('CORNER_REGION_TOO_SMALL_FOR_COMPLETE_CONTACT_CAP_AND_RESERVE')\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: CORNER_REGION_TOO_SMALL_FOR_COMPLETE_CONTACT_CAP_AND_RESERVE\n",
+  "elapsed_seconds": 1.7319856219692156,
+  "physical_success": false,
+  "new_physics_steps": 0
+}

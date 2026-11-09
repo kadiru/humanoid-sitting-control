@@ -1,0 +1,23 @@
+{
+  "utc": "2026-11-09T02:35:50.928784+00:00",
+  "reason": "Fresh camera shows a real clipped corner. Two-line premise rejected, evidence preserved. Represent observed tabletop as convex hull eroded6mm and independently verify entire polygon lies inside allowed actual triangle union. No raycast replay, camera rerun, hidden extrapolation or threshold relaxation.",
+  "pose": "Accepted known_old/16 body orientation. Complete lower2mm pelvis cap including clipped hull edges is placed22mm inside conservative measured polygon; two-variable LP maximizes forward translation to minimize reach. Full primal/dual residuals<=1e-9, no failed pose seed.",
+  "foot_assumption": "Current full foot poses fixed; explicit choice for first safe cycle, no feet slide. Compare full23joint torque proxy and supportBW separately. No claim of fair electrical-energy baseline.",
+  "path": "Exact pelvis-envelope rolling until zero support load,12mmnormalretraction, balancedlift; reverse forapproach. Source-witness legIK plus exact fullwrench. Samefullmesh6mm/20mmpatch/10mmfootCoP/5%BWfeet/.03desired/.003increment/.1filter and fullphysicalcriteria. Scheduler nowusesoriginal.003ceiling ratherthanpreviousconservative.0025; no command limitincrease.",
+  "bounds": {
+    "total_each_process_s": 45,
+    "cores": 1,
+    "ASGiB": 40,
+    "placementLPvariables": 2,
+    "placementLPmaxiter": 100,
+    "placementLPtimelimit_s": 2,
+    "footIKmax_nfev": 60,
+    "loadroot_maxiter": 24,
+    "rollingevents": 100000,
+    "activeintervals": 64,
+    "controls_each_direction": 1000,
+    "scienceretries": 0
+  },
+  "audit": "Existing independentfullmesh,virtualwork,footbalance,originalinversefilterandtimingaudits plus fullobservedpolygon cap audit. Predictedtotaljointtorque\u00b2<standing needed foreffortreductionhypothesis. Runtimepositive-loadobserver remainsunvalidated; evenmodelPASS isnotphysicaladmission.",
+  "actor_truth_input": false
+}
