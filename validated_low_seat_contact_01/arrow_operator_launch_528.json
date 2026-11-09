@@ -1,0 +1,76 @@
+{
+  "utc": "2026-10-19T00:11:54.532437+00:00",
+  "compile_actual_exit": 0,
+  "compile_exit_evidence": {
+    "actual_exit": 0,
+    "observation": "ed142a",
+    "utc": "2026-10-19T00:11:36.582657+00:00",
+    "scope": "All four new528/529 sources compiled before freeze/execution"
+  },
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_527.json",
+      "files": 11680,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_527.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "workers": [],
+  "source_input_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/low_seat_arrow_operator_528.py": "c66926ec74545e64771aa52caf2cf437e11377dd0f3f7f6d9eb437ba44a9bf39",
+    "/home/kadir/humanoid-sitting/scripts/prepare_low_seat_arrow_operator_528.py": "a6ba192d5be720fe1570712c4f1a36398e164e4a02206cef523987b9fc0977c4",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_arrow_operator_529.py": "af538eb4b24085f858f2ff5456d0e0fe88d693d23a7111735ad79d97b704e935",
+    "/home/kadir/humanoid-sitting/scripts/freeze_low_seat_arrow_operator_528.py": "d2ca39eb6849a0fb1992b6e19d78656dd02e9f97aaaa3dfda7ae4c677da98874",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/new_projection_examples.json": "d23a463d6b02fb8627fc432c74b702857153b45be24133e86f72199d4daaea82",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/preparation.json": "8e2c712ab648730e91d83805bd301081aaeeabe488313bc3adc318ad590e9b56",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/primary/projection_ledger.npz": "9085164c196f08c5657d0ca156fff93f88c5f849822d095820a9a0df1f032fff",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/primary/equality.npz": "73f7b0f0f50d506371f53a0aca263c19633707737c465db83833e723699b01be",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/primary/arrays.npz": "e50bc03acf198d8eaa4bc401896f376a76cf6ab464b7f9f2808468624b74640b",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/primary/matrix.npz": "d89dca75bd98755b8212c8113ee74affd456665253808dd5c5f0a91876210ec2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/primary/source_row_ids.npy": "6104c8f043686a3f53db95ef11022c53314e1bf5c68bc38e17fadb8ad90229bb",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/witness/projection_ledger.npz": "31d6a8ccec73bfc0a2215d34ac4c53c991959705ec9eecc805f71b0ca6794443",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/witness/equality.npz": "73f7b0f0f50d506371f53a0aca263c19633707737c465db83833e723699b01be",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/witness/arrays.npz": "b7b5b57d39d95cc144663894023ef29ab9e6a9d1d6d9b9dacd6446c2692c9e1c",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/witness/matrix.npz": "c2116cd22c9cbe536fe0050919b7b35f5b5d54d83312f1ce97ac1ac9e1ce9dc6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/witness/source_row_ids.npy": "b237c1366faf7c95167f6563a94a456506f72f19c981f75a0ccd04eb7ce15d31",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/SHA256.json": "5bcf77d235d9dcb57526694bd4031cd50151a601049a0a5efa926911ffab4fcc",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_audit_523/primary_pair_proof.npz": "57d62d2df60ce19cd94284134e37fab71dbf905079cd96edcf1d29ff91da8c51",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_audit_523/independent_audit.json": "10ca13df3ae24e0d4a0a6927dabd0de23b731c993f1f590c469b59ecf85ce1cb",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_audit_523/witness_pair_proof.npz": "ef7cb2beeb731f0cde5f1d7e5dde2616b30d407b73fb03d4dae84459a1f7b83f",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_audit_523/SHA256.json": "7c6f7f65b3a349710c3fa39c734188cb7c7183406fd52e5254f5d6ff76840aaa",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/reference.npz": "46bcab7048c74bb930ee72b9ac8a7b3add947d738d68a14fadbf77e791594265"
+  },
+  "specification": {
+    "scope": "NEW lossless row-local arrow factorization of weighted regularized normal operators for the two SAVED522 projected numeric matrices. Preparation only; no LP algorithm, budget, witness or candidate.",
+    "inputs": "SAVED522 primary/witness and523 proof plus490 coordinate labels. No projection, pair proof, quotient grouping, old local inverse, root, model, finite map or LP repeated. The witness remains an illustrative assembly, not an actual primary-dependent ceiling.",
+    "partition": "Candidate local variables are native rootxy/f/legs15 and COM3 per nonfixed state. Joint g/p/load/drop and all command auxiliaries plus epigraph/eta are separators. If any row touches candidate locals in multiple states, promote ALL candidate-local columns on that row to separators. This deterministic one-pass promotion cannot introduce a new multi-state local row. No variable or row is deleted.",
+    "exact_structure": "Every original stored nonzero is copied into exactly one of B=A[:,local] or C=A[:,separator]. Every row of B has support in at most one state block. Thus B.T*diag(d)*B is exactly block diagonal in real arithmetic for ANY diagonal d. Signs, tiny nonzero coefficients, all rows, bounds, objective and equalities remain unchanged.",
+    "operator": "For strictly positive finite diagonal d,w define K=diag(w)+A.T*diag(d)*A. With local first, G=diag(w_local)+B.T*diag(d)*B is block diagonal, V=B.T*diag(d)*C, T=diag(w_separator)+C.T*diag(d)*C. K is SPD since v.T*K*v=sum(w*v*v)+sum(d*(A*v)^2)>0 for v!=0. Each G block is SPD.",
+    "factorization": "K=[[I,0],[V.T*G^-1,I]]*diag(G,S)*[[I,G^-1*V],[0,I]], S=T-V.T*G^-1*V. This identity is an exact-real algebraic theorem; a rounded Cholesky solve is not an exact inverse. S is SPD by the minimization identity y.T*S*y=min_x (x,y).T*K*(x,y).",
+    "sparse_action": "S*y=w_separator*y+C.T*(d*(C*y-B*solve(G,B.T*(d*(C*y))))). Never form K, V, T, S or a dense separator Schur matrix. Store only B,C and small local Cholesky blocks. RHS condenses to b_separator-C.T*(d*(B*solve(G,b_local))); recovery is solve(G,b_local-B.T*(d*(C*y))).",
+    "numerical_example": "ONE NEW operator-action/RHS example per saved system. Deterministic algorithm-unused separator y and b. d_i=2^(-2*frexp(max(1,sum(abs(A_i)))) exponent), w=1. This dyadic weighting is ONLY an algebra exercise, not LP row scaling, guards, tolerances, an IPM iterate, barrier weights or a physical model. Cholesky factors are of NEW weighted Gram blocks, not old L/K/Q mechanics matrices. No LP or Schur equation is solved.",
+    "validation": "Independent529 must verify every copied coefficient/support, partition and equality/cost/bound provenance exactly; check the new saved factors and actions against the original matrix without repeating the local factorizations/solves. Relative algebra residual threshold1e-11 is not a physical or LP threshold, a directed-rounding proof, or a claim about future solver weights.",
+    "limitations": "This does not specify initialization, feasibility restoration, barrier/centering updates, regularization convergence, a Schur linear solver/preconditioner, stopping/budget or final LP witness construction. A future complete method must account for those and justify its resources before launch. Arbitrary changing weights need fresh factors and residual checks. No speedup, conditioning improvement, timeout cause or feasibility claim.",
+    "gates": "522 exact-real projection differs from its rounded numeric matrix. Future retained LP coordinates stay unchanged; exact endpoint/midpoint binary64 backsubstitution, all original490 checks1e-7, actual primary-derived ceiling, exact interval eta>0 and immutable490 encoding remain mandatory. Every actual mechanics/geometry/filter/runtime/physical/PPO gate remains. No command-auxiliary Fourier-Motzkin elimination is attempted.",
+    "lp_calls": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "new_actual_path": false,
+    "physical_admission": false
+  },
+  "disk_free_bytes": 29099405312,
+  "lp_calls": 0,
+  "model_calls": 0,
+  "finite_maps": 0,
+  "physical_admission": false
+}
