@@ -1,0 +1,8 @@
+{
+  "phase": "failed",
+  "utc": "2026-10-12T17:44:37.052057+00:00",
+  "completed": [
+    "contact_pairs"
+  ],
+  "traceback": "Traceback (most recent call last):\n  File \"/data/humanoid-sitting-perception/resting_bounded_validation_02/run.py\", line 21, in <module>\n    with (out/f'{name}.log').open('w') as log:subprocess.run(command,cwd=root,stdout=log,stderr=subprocess.STDOUT,check=True)\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/cache/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['bash', 'scripts/run_resting_gpu1.sh', 'python', '-u', '../scripts/run_resting_bounded.py', '--mode', 'fixed', '--output', '/data/humanoid-sitting-perception/resting_bounded_validation_02/reset_probe', '--bank', '/data/humanoid-sitting-perception/resting_seated_capture_dev02', '--num-envs', '16', '--seed', '53011', '--seconds', '20', '--effort-reference', '0.005249470561742783', '--device', 'cuda:0', '--kit_args=--/renderer/activeGpu=1,--/renderer/multiGpu/enabled=false', '--reset-probe']' returned non-zero exit status 1.\n"
+}
