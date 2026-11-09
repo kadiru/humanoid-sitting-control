@@ -51,7 +51,10 @@ def measurement(executor, step):
 
 class Harness:
     def __init__(self, origin=0):
-        self.executor=CycleExecutor(compiled(),current_path_admitted=True,loaded_observer_admitted=True)
+        # Idealized sensor protocol only: independent real-world load and
+        # release admissions must both be established before a robot launch.
+        self.executor=CycleExecutor(compiled(),current_path_admitted=True,loaded_observer_admitted=True,
+                                    release_observer_admitted=True)
         self.previous=self.executor.plan.initial.astype(np.float32)
         self.step=origin;self.rows=[]
     def tick(self, change=None):
@@ -116,6 +119,8 @@ class ExecutionChecks(unittest.TestCase):
         for path,load in ((False,True),(True,False)):
             with self.assertRaisesRegex(ValueError,'ADMISSION_REQUIRED'):
                 CycleExecutor(compiled(),current_path_admitted=path,loaded_observer_admitted=load)
+        with self.assertRaisesRegex(ValueError,'INDEPENDENT_RELEASE'):
+            CycleExecutor(compiled(),current_path_admitted=True,loaded_observer_admitted=True)
     def test_three_clock_origins_complete_only_sensor_protocol(self):
         for origin in (0,104,5000):
             with self.subTest(origin=origin):

@@ -204,9 +204,14 @@ class CyclePlan:
 
 class CycleExecutor:
     """One continuous cycle; callers apply the original filter exactly once."""
-    def __init__(self, plan: CyclePlan, *, current_path_admitted, loaded_observer_admitted):
+    def __init__(self, plan: CyclePlan, *, current_path_admitted, loaded_observer_admitted,
+                 release_observer_admitted=False):
         if not current_path_admitted or not loaded_observer_admitted:
             raise ValueError('CURRENT_PATH_AND_LOADED_OBSERVER_ADMISSION_REQUIRED')
+        # Loaded calibration does not establish the ability to distinguish
+        # release. The existing +/-2%BW interval cannot fit below1%BW.
+        if not release_observer_admitted:
+            raise ValueError('INDEPENDENT_RELEASE_OBSERVER_ADMISSION_REQUIRED')
         self.plan = plan
         self.phase = 'sit'
         self.index = self.hold = self.quiet = 0

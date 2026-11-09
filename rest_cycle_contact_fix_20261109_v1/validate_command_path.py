@@ -1,7 +1,8 @@
 """Check a saved path through the original Torch actuator filter on the CPU.
 
-All sensor inputs here are synthetic. Passing demonstrates sequencing and
-actuator compatibility only; it does not admit a path or certify a robot trial.
+All sensor inputs here are synthetic. Actuator compatibility and idealized
+sequencing are reported separately from actual producer/consumer compatibility.
+No result admits a path or certifies a robot trial.
 """
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = ''
@@ -15,6 +16,7 @@ import sys
 import time
 import numpy as np
 from cycle_executor import CyclePlan, CycleExecutor, Measurements
+from load_contract import validation_verdict
 
 
 def check(plan_path, metadata_path, policy_directory):
@@ -35,7 +37,8 @@ def check(plan_path, metadata_path, policy_directory):
     plan = CyclePlan(source, metadata['lower'][:23], metadata['upper'][:23],**boundaries)
     # These flags permit this synthetic protocol test only. They are not
     # written back to the plan, runtime configuration, or admission records.
-    executor = CycleExecutor(plan, current_path_admitted=True, loaded_observer_admitted=True)
+    executor = CycleExecutor(plan, current_path_admitted=True, loaded_observer_admitted=True,
+                             release_observer_admitted=True)
     previous = torch.tensor(plan.initial, dtype=torch.float32)
     lower = torch.tensor(plan.lower, dtype=torch.float32)
     upper = torch.tensor(plan.upper, dtype=torch.float32)
@@ -98,9 +101,10 @@ def check(plan_path, metadata_path, policy_directory):
     assert result['quiet_samples'] == 100 and not result['physical_success']
     files = [Path(plan_path), Path(metadata_path), policy_directory/'policy.py',
              policy_directory/'common.py', Path(__file__), Path(__file__).with_name('cycle_executor.py'),
-             Path(__file__).with_name('contact_gate.py')]
-    return dict(passed=True, synthetic_measurements=True, G1_trials=0, PPO_updates=0,
-        physical_success=False, path_admission_changed=False, original_filter='Torch CPU float32',
+             Path(__file__).with_name('contact_gate.py'),Path(__file__).with_name('load_contract.py')]
+    return dict(**validation_verdict(actuator_filter_passed=True,idealized_protocol_passed=True),
+        synthetic_measurements=True, G1_trials=0, PPO_updates=0, original_filter='Torch CPU float32',
+        idealized_release_interval_bw=[0.,0.],release_interval_is_hypothetical=True,
         numpy_version=np.__version__,torch_version=torch.__version__,
         command_counts=counts, stage_samples=stage_samples,cycle_boundaries=boundaries,
         return_start_control=returned_at, completion_control=control,
