@@ -1,0 +1,6 @@
+{
+  "phase": "Before study freeze and any full PPO run",
+  "initial_probe": "13/13 upright,12/13 free of physical failures,2/13 full qualifying rest at initial Gaussian std0.30",
+  "change": "Lower initial exploration std to0.15; retain original action ranges, reward and physical criteria. Repeat probe and then optimizer smoke. Preserve original source/results.",
+  "reason": "Reduce random high-frequency perturbation while allowing learned mean posture changes."
+}

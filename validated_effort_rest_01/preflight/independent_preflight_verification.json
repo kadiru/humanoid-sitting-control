@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "changed": {
+    "actor_state_dict": [
+      "distribution.log_std_param",
+      "mlp.0.weight",
+      "mlp.0.bias",
+      "mlp.2.weight",
+      "mlp.2.bias",
+      "mlp.4.weight",
+      "mlp.4.bias"
+    ],
+    "critic_state_dict": [
+      "mlp.0.weight",
+      "mlp.0.bias",
+      "mlp.2.weight",
+      "mlp.2.bias",
+      "mlp.4.weight",
+      "mlp.4.bias"
+    ]
+  },
+  "finite": true,
+  "smoke_final_checkpoint_loaded": true,
+  "exact_startup_errors": {
+    "root": 0.0,
+    "q": 0.0,
+    "command": 0.0,
+    "geometry": 0.0,
+    "observation": 0.0
+  },
+  "fixed_command_errors": {
+    "train": 0.0,
+    "holdout": 0.0
+  },
+  "smoke_successes": 13,
+  "smoke_total": 13
+}
