@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-29T07:26:55.200288+00:00",
+  "owner": {
+    "state": "ppo",
+    "owner_pid": 1139195,
+    "active": {
+      "label": "train_sitting_64111",
+      "pid": 1142378
+    },
+    "completed": [
+      "body_support",
+      "body_support_audit"
+    ],
+    "elapsed_s": 3747.10186017098,
+    "simulation_launches": 2,
+    "gpu": "4090only",
+    "gpu4070": "AIWorker untouched",
+    "recurring_automation": false
+  },
+  "latest_update": 225,
+  "updates_with_accepted_actor_steps": 225,
+  "accepted_actor_steps": 797,
+  "weight_check": {
+    "checkpoint": "update_128.pt",
+    "changes_l2": {
+      "actor": 0.4990270393546341,
+      "critic": 7.202063907327029
+    },
+    "updates": 128,
+    "sha256": "dd971bd690d0ea3795c5eca212a888c86d3ef0e35947398c95708d83c7a61f6e"
+  },
+  "gpu": "4090only"
+}
