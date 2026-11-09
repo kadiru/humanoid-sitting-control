@@ -1,0 +1,86 @@
+{
+  "case": "sit_6MoOyPtetL_center_closer",
+  "closer_m": 0.10934892194538018,
+  "placement": {
+    "closer_m": 0.10934892194538018,
+    "first_contact_translation_m": 0.11934892194538017,
+    "additional_separation_m": 0.01,
+    "existing_clearance_m": 0.006,
+    "first_contact_witness": {
+      "body": "right_ankle_roll_link",
+      "face": 77,
+      "barycentric": [
+        0.0,
+        0.9079542600638948,
+        0.09204573993610521
+      ]
+    },
+    "three_variable_geometry_LPs": 12,
+    "actual_rollout_initial_mesh_check_required": true
+  },
+  "geometry_audit": {
+    "passed": true,
+    "tests": {
+      "bilateral_feet_fixed": true,
+      "balance_in_foot_support": true,
+      "hover_clearance": true,
+      "contact_patch_observed_interior": true,
+      "command_margin_unchanged": true,
+      "initial_command_exact": true,
+      "time_for_original_hold": true
+    },
+    "max_foot_error": 0.0010573513480850076,
+    "min_command_margin": 0.25999997307436695,
+    "min_patch_inset": 0.023652749390528166,
+    "com_range": [
+      -0.05033402050856969,
+      0.04515000193039673
+    ],
+    "earliest_settled_seconds": 13.82701038608079,
+    "missing_before_physics": [
+      "full observed-obstacle clearance",
+      "final landing/load controller",
+      "live quiet-state gate"
+    ],
+    "simulation_admitted": false,
+    "physical_success": false
+  },
+  "command_audit": {
+    "passed": true,
+    "tests": {
+      "discrete_filter_exact": true,
+      "original_rate_limit": true,
+      "desired_command_margin": true,
+      "normal_approach": true,
+      "feet_fixed": true,
+      "landing_command_rate": true,
+      "original_hold_time_reserved": true
+    },
+    "maximum_increment_rad": 0.002999970000000296,
+    "minimum_desired_margin_rad": 0.25999997307436695,
+    "normal_path_tangent_drift_m": 6.737558362968601e-05,
+    "nominal_latest_settled_s": 12.78,
+    "final_model_gap_m": -0.002979751463674296,
+    "actual_quiet_gate_may_delay": true,
+    "missing_before_physics": [
+      "full collision clearance",
+      "live sensor controller and reset checks"
+    ],
+    "simulation_admitted": false,
+    "physical_success": false
+  },
+  "clearance_audit": {
+    "passed": true,
+    "sampled_poses": 189,
+    "triangle_tests": 924,
+    "forbidden_or_early_clearance_intersections": [],
+    "forbidden_or_early_clearance_intersection_count": 0,
+    "expected_target_approaches": 110,
+    "clearance_buffer_m": 0.006,
+    "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+    "simulation_success": false
+  },
+  "model_admitted": true,
+  "physical_success": false,
+  "time_admission": "Exact discrete original-action-contract schedule replaces the preliminary conservative estimate; the14.4s cutoff is unchanged."
+}

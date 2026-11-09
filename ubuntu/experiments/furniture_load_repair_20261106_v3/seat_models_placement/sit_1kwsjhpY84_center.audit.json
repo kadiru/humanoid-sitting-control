@@ -1,0 +1,153 @@
+{
+  "case": "sit_1kwsjhpY84_center_closer",
+  "closer_m": 0.10934839338431598,
+  "placement": {
+    "closer_m": 0.10934839338431598,
+    "first_contact_translation_m": 0.11934839338431598,
+    "additional_separation_m": 0.01,
+    "existing_clearance_m": 0.006,
+    "first_contact_witness": {
+      "body": "right_ankle_roll_link",
+      "face": 62,
+      "barycentric": [
+        0.37483349878079064,
+        0.0,
+        0.6251665012192094
+      ]
+    },
+    "three_variable_geometry_LPs": 12,
+    "actual_rollout_initial_mesh_check_required": true
+  },
+  "geometry_audit": {
+    "passed": true,
+    "tests": {
+      "bilateral_feet_fixed": true,
+      "balance_in_foot_support": true,
+      "hover_clearance": true,
+      "contact_patch_observed_interior": true,
+      "command_margin_unchanged": true,
+      "initial_command_exact": true,
+      "time_for_original_hold": true
+    },
+    "max_foot_error": 0.00017708970811551976,
+    "min_command_margin": 0.25999997307436695,
+    "min_patch_inset": 0.026343458586537583,
+    "com_range": [
+      -0.05027201004088068,
+      0.045149980669614266
+    ],
+    "earliest_settled_seconds": 13.46441349227151,
+    "missing_before_physics": [
+      "full observed-obstacle clearance",
+      "final landing/load controller",
+      "live quiet-state gate"
+    ],
+    "simulation_admitted": false,
+    "physical_success": false
+  },
+  "command_audit": {
+    "passed": true,
+    "tests": {
+      "discrete_filter_exact": true,
+      "original_rate_limit": true,
+      "desired_command_margin": true,
+      "normal_approach": true,
+      "feet_fixed": true,
+      "landing_command_rate": true,
+      "original_hold_time_reserved": true
+    },
+    "maximum_increment_rad": 0.002999970000000296,
+    "minimum_desired_margin_rad": 0.25999997307436695,
+    "normal_path_tangent_drift_m": 0.00017736459080289443,
+    "nominal_latest_settled_s": 12.48,
+    "final_model_gap_m": -0.0029979024933761145,
+    "actual_quiet_gate_may_delay": true,
+    "missing_before_physics": [
+      "full collision clearance",
+      "live sensor controller and reset checks"
+    ],
+    "simulation_admitted": false,
+    "physical_success": false
+  },
+  "clearance_audit": {
+    "passed": false,
+    "sampled_poses": 189,
+    "triangle_tests": 960,
+    "forbidden_or_early_clearance_intersections": [
+      {
+        "sample": 128,
+        "body": "pelvis",
+        "face": 637,
+        "phase": "approach"
+      },
+      {
+        "sample": 128,
+        "body": "pelvis",
+        "face": 663,
+        "phase": "approach"
+      },
+      {
+        "sample": 129,
+        "body": "pelvis",
+        "face": 637,
+        "phase": "approach"
+      },
+      {
+        "sample": 129,
+        "body": "pelvis",
+        "face": 663,
+        "phase": "approach"
+      },
+      {
+        "sample": 130,
+        "body": "pelvis",
+        "face": 637,
+        "phase": "approach"
+      },
+      {
+        "sample": 130,
+        "body": "pelvis",
+        "face": 663,
+        "phase": "approach"
+      },
+      {
+        "sample": 131,
+        "body": "pelvis",
+        "face": 637,
+        "phase": "approach"
+      },
+      {
+        "sample": 131,
+        "body": "pelvis",
+        "face": 663,
+        "phase": "approach"
+      },
+      {
+        "sample": 187,
+        "body": "left_hip_pitch_link",
+        "face": 637,
+        "phase": "landing"
+      },
+      {
+        "sample": 188,
+        "body": "left_hip_pitch_link",
+        "face": 637,
+        "phase": "landing"
+      },
+      {
+        "sample": 188,
+        "body": "right_hip_pitch_link",
+        "face": 663,
+        "phase": "landing"
+      }
+    ],
+    "forbidden_or_early_clearance_intersection_count": 11,
+    "expected_target_approaches": 114,
+    "clearance_buffer_m": 0.006,
+    "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+    "simulation_success": false
+  },
+  "model_admitted": false,
+  "physical_success": false,
+  "time_admission": "Exact discrete original-action-contract schedule replaces the preliminary conservative estimate; the14.4s cutoff is unchanged."
+}

@@ -1,0 +1,16 @@
+{
+  "mechanism": "The stool first-contact placement computation hit45s before producing a placement because it started one LP per triangle. Replace that geometry algorithm with direct ray intersection of the triangle-minus-expanded-body convex Minkowski hull. The earliest witness is independently checked with one original barycentric LP. Subsequent path constraints and audits are unchanged.",
+  "initialization": "Original two stool standing states, raw scene triangles and same6mm expanded body hull; no old solver point, no extended cap, no parameter retry.",
+  "resources": {
+    "cases": 2,
+    "seconds_per_case_including_hulls_single_LP_path_and_audits": 45,
+    "max_hulls_per_case": 10000,
+    "max_independent_LPs_per_case": 1,
+    "CPU_threads": 2,
+    "GPU": false,
+    "physics_steps": 0,
+    "PPO_updates": 0
+  },
+  "equations": "For each triangle T and expanded convex body B, intersect t*d with conv(T-B). Each hull halfspace a*t+b<=0 yields a scalar lower/upper bound. Select smallest nonnegative feasible t; place10mm before it, cap140mm.",
+  "success_test": "Independent witness-LP equality1e-8 and unchanged full-path audits; failure remains rejected."
+}
