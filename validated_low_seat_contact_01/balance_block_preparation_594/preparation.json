@@ -1,0 +1,79 @@
+{
+  "utc": "2026-10-19T12:15:18.603572+00:00",
+  "passed": true,
+  "preparation_only": true,
+  "specification": {
+    "scope": "NEW exact dimension reduction of586 rational PRIMARY zeroFACE. Fixed1365 coupled3x3 moment/gap blocks eliminate4095 remaining physical rootxy/f direction columns/equalities, leaving10540 priorcontrols plus originalscalar78790. No actualstate/model/root evaluation.",
+    "selection": "Source586 columns10540+3*b+[0,1,2], equality FILE POSITIONS1366+3*b+[0,1,2], b0..1364. Each equality record keeps its original578 row label. Verify selected rows contain no eliminated coordinate outside their designated3-column block. Eliminated columns must havezero cost andunbounded ORIGINALdirectbounds. Fixed selection, deterministic firstnonzero exactrowpivot; singularity/incidencefailure terminates entire preparation, no alternateblock/rankthreshold/fallback.",
+    "algebra": "For saved rational B*z+C*v=h, construct NEW K=B^-1 by exactFraction Gauss-Jordan, G=-K*C,k=K*h. This DOES perform1365 new exact3x3 inversions/coefficient-system solves if complete. It does NOT repeat586 inverses, call a numericallinear solver, or perform nonlinear15-root/IK/retraction/drift. Priorcontrols remain independent, physical rootxy/f and leg directions become uniquely determined graph outputs, not eliminated physical requirements.",
+    "substitution": "For EVERY265967 source586 inequality andEVERY unselected equality, use aReduced=a_v+sum a_z*G,bReduced=b-sum a_z*k. Preserve all rows/order/sourceIDs, includingconstantrows, all original/inward/trust/box/consistencysigns/frozenunits through exact substitution. No threshold/scaling/rounding/normalization/rowdeletion. Remaining equality count1367 includes1366oldzero rows andscalarzero, subject to checked source layout.",
+    "theorem": "Independent ALLsquareB*K=I certifies invertibility; B*G+C=0 andB*k=h certify uniqueREALgraph. Exact reducedREALfeasibility lifts uniquely to586, then inherited586footgraph to578 and578auxgraph to572ZERO FACE withsameobjective. Converse projection holds. ZeroFACE mayempty/proper originalLPsubset. No originaloptimumzero/primalexistence/remainingrank/conditioning/speed/convergence/finiteextension claim.",
+    "distinction": "Substantive additional column/equality elimination of the coupled moment/gap constraints after foot elimination, not a renamed face, basis, rowgroup, same-matrix encoding, backend/presolve/crossover retry or old15-variable nonlinearroot. No previous solver/internal/rejected vector selected.",
+    "storage": "Canonical rationalA/E/RHS, maps/cost/originalbounds and NEW K/G/k/pivot traces. Source586/587 coefficients/proofs inheritedbyhash; no oldinverse/identity/forward/reverse proof replay. No588 compensation/roundedE reused. No newnumericinput/LP/witness algorithm exists.",
+    "finite": "No primalpoint constructed. Future backend10541retained values muststayBITWISE,scalarALREADYzero. Evaluate NEW moment/gap graph EXACTLY, then586footgraph onEXACTUNROUNDED14636 vector, then578auxgraph onEXACTUNROUNDED31016 vector. Round EACH68250eliminatedoriginalcoordinateONCE. No roundedintermediate feed, universalbinary64extension, clip/repair/normalization. Fullnewexact/586/578/572/570/546/516/FULL490 and anyfuture numericinput primal/equality/bound/requiredstationarity/absgap<=1e-9 inside1e-7 remainmandatory.573analyticdual inheritedonly,no newproof/pair.",
+    "future": "Separate numericrepresentation/errorpolicy/independent audit andcompleteboundedwitness construction beforeLP. SAMEcompleteoriginalprimarydirection computes modeledphi/theta/ACTUAL(mu+theta)/2 interiorceiling/prediction,primaryNEVERmapped,phi notassumed0. ZeroFACE graphs invalid at nonzero actualinteriorceiling: freshFULLoriginal branch, newstate/trust independentassembly/proofs BEFORELPinside45sTOTALfromMAINentry beforeimports/globalchecks/prep/backend/point/lift/KKT.40GiB/120sparent,24major48LP120maps5dyadics,trust/guards/tolerances unchanged. Exactunscaledeta>0before490encoder,freshnewXmechanics/J,no15rootdrift; allphysical/filter/runtime/72retention/PPOgates unchanged.",
+    "resources": "240s producer and240s independent audit TOTALfromBEFOREscientificimports/globalhashes;40GiBAS, checksbetweenoperations mayovershoot reportednotextension, peakunmeasured. No numericalLP/smallfixture/primalpoint/physicaltrial. Firstfailure/cap terminal; partialfiles/counts preserved, no completedarithmetic replay/restart. These symboliccaps doNOTextend45sLP.",
+    "audit": "Standalone595 importsNOproducer/optimizer andconstructsNOinverse/refactor. Verify every B*K=I,B*G+C=0,B*k=h. For each newA/E, signedlambda=a_z*K fromsource586 coefficients, ADDlambda ORIGINAL586moment/gapE rows/RHS tosaved reducedrow torestoreENTIREsourceEXACTLY. This independentreverse proof differsfromforward producer. Verify maps/cost/bounds/IDs/coverage. Inherited586587/578579/572573/559571547517proofs not replayed.",
+    "physical_admission": false,
+    "numerical_algorithm_exists": false,
+    "rounded_input_exists": false,
+    "primal_witness_exists": false
+  },
+  "primary": {
+    "source_columns": 14636,
+    "reduced_columns": 10541,
+    "eliminated_rootxy_f_columns": 4095,
+    "retained_prior_controls": 10540,
+    "retained_physical_columns": 0,
+    "exact_three_by_three_inversions": 1365,
+    "exact_block_coefficient_solves": 1365,
+    "rank_certificate_entries": 12285,
+    "inverse_nonzeros": 12285,
+    "graph_coefficient_nonzeros": 93132,
+    "original_scalar_column": 78790,
+    "source_scalar_column": 14635,
+    "reduced_scalar_column": 10540,
+    "all_inequalities_retained": true,
+    "conditions_discarded": 0,
+    "statistics": {
+      "inequality": {
+        "rows": 265967,
+        "nonzeros": 6102946,
+        "constant_rows": 0
+      },
+      "equality": {
+        "rows": 1367,
+        "nonzeros": 1,
+        "constant_rows": 1366
+      }
+    },
+    "operations": {
+      "inverse_divisions": 16380,
+      "inverse_products": 32760,
+      "graph_coefficient_products": 124755,
+      "graph_RHS_products": 8796,
+      "substitution_coefficient_products": 18131764,
+      "substitution_RHS_products": 791882
+    },
+    "largest_fraction_bits": 3644,
+    "rounded_coefficients_created": 0,
+    "primal_graph_values": 0,
+    "old_proofs_repeated": false
+  },
+  "elapsed_s": 230.8802153270226,
+  "numerical_lp_calls": 0,
+  "numerical_linear_system_solves": 0,
+  "exact_block_coefficient_solves": 1365,
+  "exact_block_inverses": 1365,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "primal_vectors_constructed": 0,
+  "analytic_dual_vectors_constructed": 0,
+  "physical_admission": false,
+  "new_solver": false,
+  "new_candidate": false,
+  "peak_memory_measured": false
+}
