@@ -1,0 +1,41 @@
+{
+  "files": {
+    "/home/kadir/humanoid-sitting/outputs/rest_cycle_edge_visible_20261108_v1/sit_edge_visible/frame_0.npz": "39b6bd3034a395cfbb648acd4df1611030e1927803644c9727b53808f9dcb071",
+    "/home/kadir/humanoid-sitting/experiments/rest_cycle_high_support_20261108_v1/assets/scenes/high_support_table_050/mesh.npz": "6e2bb7fa3e75ac0e118288b0a286894ed39b22684f840f68644a47c3a8370857",
+    "/home/kadir/humanoid-sitting/runs/g1_kinematics_geometry_04/model.json": "fe29aa3c0b8da033c35b8abc1c40ae93b0706e8186f9163ad56d8e31c4d07690",
+    "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/shared_frame.py": "daec7a1c769c68579cebfafe79d2063cb19660ca6e09ced705f460218f9fcf5c",
+    "/home/kadir/humanoid-sitting/experiments/furniture_perception_repair_20261029_v1/render_colliders.json": "f682a8f7f05f4fd8e44f462a58bb7d3755a3f7ac3834413df70bab26a2817e0b",
+    "/home/kadir/humanoid-sitting/experiments/rest_cycle_partial_support_20261109_v1/prepare_camera.py": "2795ad63f4d27418467d90415eb495c52a80e1be49534d24ab071cf3143fdaa1",
+    "/home/kadir/humanoid-sitting/experiments/rest_cycle_high_support_20261108_v1/assets/scenes/high_support_table_050/target_region.json": "4d24c1dd94d5b401c43eb5c9dc597c0d98762d3e1a116704a33b109711f54ae8"
+  },
+  "frame": "/home/kadir/humanoid-sitting/outputs/rest_cycle_edge_visible_20261108_v1/sit_edge_visible/frame_0.npz",
+  "fixture_mesh": "/home/kadir/humanoid-sitting/experiments/rest_cycle_high_support_20261108_v1/assets/scenes/high_support_table_050/mesh.npz",
+  "camera_in_body": [
+    [
+      0,
+      0.707106781,
+      -0.707106781,
+      -0.07
+    ],
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -0.707106781,
+      -0.707106781,
+      0.38
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "independent_review": "Source inspection: detector receives only calibrated sensor inputs; truth audit is downstream. Separating axis must hold for whole convex body, not per-vertex union; missing/stale bounds stayunknown. No live-control admission by this validation.",
+  "scope": "One closed-form geometry-derived virtual camera mount and independent ray/visibility audit;45s1thread40GiB;no simulation. Stops if rays blocked. No threshold tuning. Does not itself admit any motion or actor load sensor."
+}

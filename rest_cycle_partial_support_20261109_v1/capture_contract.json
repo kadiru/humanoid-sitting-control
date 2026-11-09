@@ -1,0 +1,18 @@
+{
+  "utc": "2026-11-09T01:01:44.270389+00:00",
+  "scope": "One standing-only4090capture to validate geometry-derived rear mount and record shadow joint-wrench signals. No sitting,load-triggeredmovement,PPOor otherGPU.",
+  "camera": "Mountx=-.104707m,z=.38,angle67.0548deg from singlegeometryconstruction. 34.707mmrearwardchange; explicitnewvirtualsensorhardwareassumption.",
+  "shadow_sensor": "Nativeincomingjointwrench and exactmatching5msfootcontact readouts for independent offline calibration. Jointwrench is not motor torque. Nothing enters actor. Hardwareforce sensors not assumed present on realrobot.",
+  "runtime": "Originalexact standingreset/25warmcontrols then50unchangedstandingcommands;200substepmeasurements. Existingaction/successcriteria unchanged.",
+  "resources": {
+    "GPU_UUID": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4",
+    "CPU_threads": 2,
+    "max_GPU_child_wall_s": 900,
+    "max_temp_C": 85,
+    "min_root_free_GB": 20,
+    "new_PPO_updates": 0,
+    "retries": 0
+  },
+  "return_policy": "Stopaftercapture;independentfreshframeandwrenchauditrequired. Noautomaticmotion/PPOchain.",
+  "source_review": "Soleowner codeinspection plus independent depth/raycast/force-balanceauditors;noexternalreviewer. CameraTsetbeforecfgspawnandsharedobserver, scene/calibrationmatching. Wrenchshadowonly;controlfixedexactly."
+}

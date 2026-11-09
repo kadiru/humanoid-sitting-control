@@ -1,0 +1,11 @@
+{
+  "utc": "2026-11-09T01:11:34.884124+00:00",
+  "mechanism": "Free endpoint contact position on actual current patch, with whole-body finite-front separating constraints including hip-roll and hip-pitch housings inside solve. Minimize full23-joint static torque squared at10%BW support plus posture displacement. Root-coordinate approach avoids changing lowest-vertex interpolation. No old endpoint/command vector input.",
+  "initialization": "Fresh camera0 q/gravity/selectedpoints and exactstandingcommand from camera_and_wrench_capture only. Same originaljointboxes,tilt,rootboxes,footanchors. One SLSQP80iter endpoint; no restarts.",
+  "preserved": "20mm observed bottom-patch inset+2mmconstructionreserve;6mmforbiddencollisionbuffer;10mmfootCoP reserve;5%BW eachfoot;mu.5; .003rad/20ms,.1filter,.03desiredmargin,14fixedfingers;normal6mm/s;nominalsettle<14.4seconds and first20s/final5s originalphysicalcriteria.",
+  "new_association": "Current finite-front edge passed independentmesh audit. Front upper bound plus6mmuncertainty enters clearance. Every nonpelvis body must be wholly above supportplane or wholly aheadfront; pervertexOR forbidden. Actualfullmeshindependentaudit retained.",
+  "finite_return": "One cold endpoint,33root-interpolatedfootIKnodes,16normalstrokeIKnodes,discretefilter schedule,independentgeometry/commands/fullmesh/mechanics audit inside45s total,1thread,40GiB. Firstfailedgate endsconstruction. No GPU inthisstep.",
+  "return_policy": "No stand-up primitive admitted by thisconstruction; successfulsittingmodel stillrequiresphysicalcontact/shadowloadvalidation and qualifiedreturn. No physicaleffort/repairclaim fromstaticobjective.",
+  "source_review": "Soleowner review; independentauditimplementations recomputefeet/inset/filter/mesh/fullwrench andvirtualwork. Notexternalreviewer.",
+  "startup_recovery": "First metadata writer had SyntaxError using reservedreturn keyword; rsync missingfiles and startup failedonmissingfreeze before NumPy/scientificimports/solver. All threefailures preserved. This is preparation-only recovery, not numericalretry; separatev2output."
+}
