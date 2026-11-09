@@ -1,0 +1,105 @@
+{
+  "utc": "2026-10-17T14:02:27.149949+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_active_physics_ticks": 24000,
+  "new_initial_settling_ticks": 600,
+  "new_indexed_warmup_ticks": 0,
+  "new_optimizer_updates": 0,
+  "new_full20s_trials": 24,
+  "holdout_started": false,
+  "physical_candidate": "touchdown_probe_178",
+  "candidate_rejected": true,
+  "software_audit_passed": true,
+  "exact_preservation_gate_passed": false,
+  "physical_admission_passed": false,
+  "candidate_outcomes": {
+    "count": 24,
+    "stable": 18,
+    "clean": 14,
+    "slipping": 6,
+    "unwanted_contacts": 2,
+    "physical_failures": 2,
+    "margin_warnings": 16,
+    "full_duration": true
+  },
+  "prior_recheck": {
+    "utc": "2026-10-17T14:02:27.149949+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "mismatches": [],
+        "passed": true
+      },
+      {
+        "manifest": "completed_probes_preservation_172.json",
+        "checked": 3906,
+        "mismatches": [],
+        "passed": true
+      },
+      {
+        "manifest": "supplemental_preservation_172.json",
+        "checked": 3,
+        "mismatches": [],
+        "passed": true
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_188.json",
+  "protected_completed_files": 4139,
+  "manifest_sha256": "395b2ff3fdafd302be5bba4f6bd834deb0380b18139e0d95bd2a3e599261ce3a",
+  "new_frozen_sources_rechecked": true,
+  "physical_workers_running": false,
+  "model_workers_running": false,
+  "audit_workers_running": false,
+  "report": "progress_report_185",
+  "video": "all_attempts_video_182/all_attempts.mp4",
+  "video_summary": {
+    "full_trials": 792,
+    "successes": 461,
+    "failures": 331,
+    "event_frames_checked": 534,
+    "source_runs": 36
+  },
+  "local_review": {
+    "utc": "2026-10-17T14:00:04.346079+00:00",
+    "report": "progress_report_185",
+    "original_report_hashes_verified": 18,
+    "supplemental_review_hashes_verified": 3,
+    "video_original_hashes_verified": 3,
+    "video_audit_hashes_verified": 7,
+    "calculation_recovery_hashes_verified": 19,
+    "local_hashes_verified": true,
+    "plots_visually_inspected": [
+      "comparison.png",
+      "settling_and_load.png"
+    ],
+    "video_frames_visually_inspected": true,
+    "video_frames": [
+      "new_probe178.png",
+      "known_success.png",
+      "browser_intro"
+    ],
+    "browser_visually_inspected": true,
+    "browser_url": "http://127.0.0.1:8807/progress_report_185/review.html",
+    "tables_checked": [
+      "geometry_before_events",
+      "settling",
+      "hover_bias",
+      "paired_effort",
+      "all24_outcomes"
+    ],
+    "embedded_video_loaded": true,
+    "physical_motion_added": true,
+    "new_full_trials": 24,
+    "video_current": true,
+    "video_duration_s": 58.4,
+    "video_full_trials": 792,
+    "physical_admission": false,
+    "task_complete": false
+  },
+  "handoff_sha256": "e164ef3c59663f6e693a3b741373e42e71e4e4787c995fec4e6c750cc7075b44",
+  "next": "# Measured-settling probe178 \u2014 completed and rejected; repair unfinished\n\nContinue the user's authorized low-seat slipping/housing repair, preserve ALL64 current clean successes, then the small two-seed PPO stability/total-joint-effort comparison in THIS chat. Maintain the under-one-minute video of ALL attempts, success and failure. Work directly Mac SSH kfuUbuntu, project /home/kadir/humanoid-sitting; never another coding agent. Project Python is /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python. Read docs/LOW_SEAT_CONTACT_PROTOCOL.md, docs/LOW_SEAT_CONTACT_STATUS.md, study status.json and closure_record_188.json. Check actual workers before launching. All173\u2013188 jobs complete at closure; do not repeat178 or completed calculations/audits. No main PPO, fresh holdout or promotion. Stay quiet during ordinary progress; notify only meaningful failure/completion or required input.\n\nBest verified full-development controller remains current_retention_09:64/72 clean,70 stable,8 slipping,2 housing contacts; all64 successes remain protected. New178 gained no clean case. No72-case retention or PPO followed.\n\nProbe178 completed24 full20s development trials on physicalGPU1:18 stable,14 clean,6 slipping,2 hip-housing/physical-failure cases,0 illegal-patch cases,16 conservative warnings. All14 best-probe clean outcomes retained, NONE gained. No additional physical-failure case, but all four selected rows0/1/6/7 never reached seated support: finalhold0s and zero legal seat load. They have no slip flags because the hover never released; this is NOT repaired sitting. All8 targets0/1/2/3/6/7/10/11 remain unresolved. The original36cm/+20 housing contacts at11.98s remain. Relative to164, stability fell20\u219218; relative tobestnormal3s22\u219218. No physical criterion was relaxed.\n\nRevision178 was a bounded PRE-TRAINING timing/controller experiment, not an execution fix. Keep164 complete150 poses/force allocation, measured balance160 gains, arms, feet, geometry/guard130 and frozen59117 unchanged. Reserve feedback rate only on two ankle-pitch joints(.1125 nominal+.0375 feedback); other moving joints use original applied.15rad/s ceiling. At12mm modeled pelvis gap, require25 consecutive CURRENT samples with pitch error<=.5deg, abs gyro_y<=.02rad/s,moving-joint speed<=.05rad/s, fresh geometry and all original130 guards. Then modeled normal descent<=.006m/s. No timer-only release, no early modeled unloading, no saved/truth sensors. Originaldesiredmargin.03/filter.1/globalrate.15/fingers/materials/physical criteria unchanged. Parent59117 remains15s selected,11/15 elsewhere; no early61111 pulse in isolating probe. Budget24000active+600initialsettling,0warmup/optimizer. Sources low_seat_touchdown_path_175.py,low_seat_touchdown_runtime_176.py,run_low_seat_touchdown_176.py andlaunch_low_seat_touchdown_178.py frozen in touchdown_probe_178/revision.json.\n\nDiagnosis184/187: selected approaches reach the planned12mm hover, but estimated actual gaps are about6.1\u20136.6mm beforeparent. All four have ZERO consecutive quiet ticks and never release. During11\u201314.9s, pitch error1.31\u20131.38deg and raw moving-joint speed fail their controller guards, while all196gyro samples/case pass .02 and geometry staysfresh. Dominant raw qd is ankle roll:median.27\u2013.38rad/s despite its20ms sampled q range<.7mrad and median finite difference~.00024\u2013.00031rad/s. These are DIFFERENT sampling quantities, not proof of a bad sensor or permission to waive a guard. Current actor414 qd-channel crosscheck188 verifies756 samples with max normalizederror3.7253e-9 under existing3e-7 arithmetic bound (NOT bit exact). At unchanged15s frozen-parent handoff, pitch error grows to2.31\u20132.38deg;37cm rows also lose originalguard progress. Legal seat load remainszero throughout. No modeled seat load was requested. Source/data in hover_diagnosis_187, touchdown_diagnosis_184 and touchdown_input_crosscheck_188.json.\n\nNext work must address actual steady pose-tracking bias, sub-control-tick joint dynamics/settling and parent composition while approaching/paused, preserving164's approach-balance improvement. Diagnose before designing a bounded feedback or approach change. Do NOT simply weaken settling guards, physical thresholds or call hovering/no-slip a success. Do not repeat static paths, blind gain/arm/lean/rate sweeps, endpoint-only launches, saved-sensor substitution or old diagnostics. Other remaining36/+20 and36.5/+17.5 still lack a proven complete corrected-model contact transition. A fixed-foot estimator cannot certify common foot slip or actual support; static force allocations are assumptions, not realized force control.\n\nIndependent179/180 finished with software_audit_passed=true but overall passed=false, exact_preservation_gate_passed=false and physical_admission_passed=false. Actual417 inputs/memory/actions/full rewards,frozen parent,zerooptimizer,exact starts/first1s and four runtime planners passed. All3800selected20ms GPU filter applications replay EXACTLY. Every24000 applied increment and14fingers checked. All3800 actual20ms raw settling records(q/qd/IMU/geometry) and3800balance records replayed;756sampled crosschecks against actual414/trace. Original130 raw guard checks remain separately at0.1s, not20ms raw replay. Currentrear/down replay2280caseframes exactly matches actual414geometry, ZEROdownfallback. Unselected full20s exact preservation remainsFALSE:maxbodycomponent1.216888mm,q.002403330rad. No equality waiver; all14 clean outcomes remained clean but their traces/effort are NOT exactly unchanged. Finalizer181 complete2026-10-17T13:57:51.531152Z; all frozen sources intact.\n\nOffline173/174 verified one unchanged-pose/force command schedule11.42s, synthetic.5s hover and6mm/s normal approach. Independent vectorized nominal interpolation differs2.91e-11rad from float32 filter state, disclosed; actualCPU/GPU clamp/filter replay isexact, endpoint/fingers exact,no clipping,originalbounds.177v2 checks20,000commandticks/device across nominal,late-settle,no-settle,no-load,stale-hoverfixtures:nominal11.42s,synthetic1s delay12.42s,unsettled/stale holds andno-loadpermission behaved correctly; frozenparent retained. Integration checks currentobservation-before-progress,idempotence,staleplanehold,unselectedmock/fingers. These are software fixtures, not physical certificates. No actual8-target repair admission.\n\nNarrow recoveries preserved: touchdown_preparation_recovery_177 contains original offline abs(list) assertion error/source/log and unexecuted integrationdraft; v2 NumPyconversiononly, no runtime/threshold change. touchdown_finalizer_recovery_181 preserves a shell-transport quoting error in a wait wrapper that failed syntax before invoking any audit/video job. After physics completed, unchangedfinalizer181 ran directly ONCE; no physics rerun. Originalfailedlogs/sources retained.\n\nCurrent complete video all_attempts_video_182/all_attempts.mp4:58.4s,3840x2160,15fps,H264. All36 recorded sources:792complete20s trials(461clean successes,331failures),72diagnosticprefixes,72abortedcaseattempts without savedmotion explicitlydisclosed. Independent183 checks completeinventory,labels,534firstevents,sourcehashes/duration. Schematic fromrecordedXYZW/bodyCOM,NOT camerafootage;0.1sposesbracket.02slabels. Historicalrepeated/rejected totalsarenotbestcontrolleraccuracy. Keep182 as current; earlier168/153/137/59 unchanged. Updatefullcoverageaftereveryfuturephysical/PPOattempt,omitnofailure.\n\nCurrent local report /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_185/review.html and video /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/all_attempts_video_182/all_attempts.mp4 copied/hashverified.18originalreport+3reviewhashes,3video+7videoaudit+19calculation/recoveryentries verified. comparison.png,settling_and_load.png,new178/success/introvideo frames andHTMLgeometry/settling/hover/effort/all24tables visuallyinspected. Embeddedvideo loaded. Review adds readingspaces only;numeric tokens/attributes/originalHTML/data unchanged. URL http://127.0.0.1:8807/progress_report_185/review.html. InterimDEVELOPMENTevidence,notnewPPO/unseen/finalcompletion.\n\nEffort178 vsbestnormal3s on14commoncompleteclean trials:whole20torque\u00b2+0.005358%,final10+0.01119%,final5+0.03041%;no gain. Strictboth3trialswhole20+0.00414%,final5+0.03618%. These are small differences on unselected successes; failedhoverfragments excluded. Full all37squared/absolute/time-meaninstantaneousRMS,leg/upper squaredcontributions,threewindows/strictsubsets in paired_effort.json. Verified09vs61111commoncleanexact;vsselected62111@8old20commonclean whole20+4.38%,final5+25.45%. No overall/PPOeffort improvement claim.\n\nGoverning requirements unchanged: removeALL8 failures ANDretainALL64 in72matchedfull20s development trials BEFOREPPO. Best09 frozenearly61111@6\u20137s/resting59117@11/15s,guardednormal3s measuredroutingheight<38cm/slope>10.5 ORheight<41.5cm/slope>18. Oldbank22stable20clean4slip2housing;transfer24/22/2/0;recent24/22/2/0. Original60unionplus4gains37cm/+11.25 and36.5cm/+12.5 twice. Remaining36cm/+15,+20;37cm/+16.25;36.5cm/+17.5 twice.50warnings22strictclean. Verified09 andearlierstudies read-only. Isolatingprobe omitsearly61111; unchangedmildparentslipsarenotcurrent-policy regressions.\n\nFresh24holdoutCLOSED throughrepair,normalization,training,selection:36.75/37.75/39.5/41.5cm\u00d7positive8.75/13.75/18.75deg twice,reservedbeforenewsimulation. Previousholdoutsdevelopment;negativeslopesexcluded. Runtimecurrentmeasuredsensors/reference/staticmodelonly;truthreset/reward/evaluationonly. No relaxation ofmaterials,alltickslip,forbiddenbodyORillegalpatchUNION,physicalfailure,stablesupport. Resttilt<=40deg ANDlegalseatnormalload>=.05BW plusoriginalconditions;55degfall different;38degmodelreserve separate. Robotstatic/dynamic.5/.5,seat/floor.8/.6;legacy.6ratioNOTactualcapacity;.90warningsseparate. Nofootdrag/teleport. Cooked50offlinecollisionmodelNOTlive-shapecertificate/perceptionselfmask; frozenbridgeinertiaunchanged,5\u20136mmraw/cookeddiscrepancy andunknownoffsets remain. Tinychanged-scenerenderingdivergence27notwaived; no truth/replayedsensors.\n\nOnlyafterphysicalprerequisite,freezePPO63111/63117:8completeepisodeupdates/seed,ONEuninterruptedoptimizer/seed;24envs192000active+4200indexedwarmup=196200/seed392400total;1200settlingseparate. Documentexactwindows/control/reward/sensorinputs/accounting. Verifyzero/global/indexedreplay,actualchannels,finitechangedactor/critic,CPUoptimizerreplay,fingers/bounds,smokeretention,freshmain=smokeINITIAL nottrainedsmoke. Noextratraining/postfreezedefinitionchanges/promotion. Bothfullfinals/devselection precedefreshholdout. Exactmatchedstarts/full20s comparisons:physicalfailures/slip/contactunion/lost-gainedfirst,warningsseparate;effortONLYcommoncompletecleanboth/strictsubsets. Torqueproxy,notenergy/globaloptimum. Referenceassistedsim/twoseeds/nearbyrigidslabs doNOTestablishunassisted/realrobot/anywhere sittingorleaning;leaningnotbroadened.\n\nAutomation remainsACTIVE. PauseONLYafteractualrepair,newPPOcomparison andupdatedcomplete subminutevideo delivered. This round is a rejected development experiment; task remainsunfinished.\n"
+}
