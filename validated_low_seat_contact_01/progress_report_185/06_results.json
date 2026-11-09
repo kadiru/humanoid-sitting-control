@@ -1,0 +1,75 @@
+{
+  "utc": "2026-10-17T13:40:03.774045+00:00",
+  "scope": "One bounded OFFLINE schedule design, unchanged164 pose/force polylines.\n\nReserve feedback rate only on its two ankle-pitch joints. Other moving joints\nretain the existing applied.15rad/s ceiling. At12mm planned gap, hold0.5s in this\nsoftware fixture, then cap modeled normal approach at6mm/s. A future runtime\nmust require current measured settling, not trust this fixture. No simulation.\n",
+  "rows": [
+    {
+      "case": 0,
+      "command_ticks": 1000,
+      "duration_s": 11.42,
+      "time_gate_passed": true,
+      "planned_touchdown_speed_limit_m_s": 0.006,
+      "maximum_sampled_near_gap_speed_m_s": 0.006000000000499985,
+      "synthetic_hover_hold_s": 0.5,
+      "cpu_gpu_exact": true,
+      "clipped_targets": 0,
+      "maximum_applied_step_rad": 0.0029999911785125732,
+      "unchanged_endpoint": true,
+      "physical_prediction": false
+    },
+    {
+      "case": 1,
+      "command_ticks": 1000,
+      "duration_s": 11.42,
+      "time_gate_passed": true,
+      "planned_touchdown_speed_limit_m_s": 0.006,
+      "maximum_sampled_near_gap_speed_m_s": 0.006000000000499963,
+      "synthetic_hover_hold_s": 0.5,
+      "cpu_gpu_exact": true,
+      "clipped_targets": 0,
+      "maximum_applied_step_rad": 0.0029999911785125732,
+      "unchanged_endpoint": true,
+      "physical_prediction": false
+    },
+    {
+      "case": 6,
+      "command_ticks": 1000,
+      "duration_s": 11.42,
+      "time_gate_passed": true,
+      "planned_touchdown_speed_limit_m_s": 0.006,
+      "maximum_sampled_near_gap_speed_m_s": 0.006000000000499985,
+      "synthetic_hover_hold_s": 0.5,
+      "cpu_gpu_exact": true,
+      "clipped_targets": 0,
+      "maximum_applied_step_rad": 0.0029999911785125732,
+      "unchanged_endpoint": true,
+      "physical_prediction": false
+    },
+    {
+      "case": 7,
+      "command_ticks": 1000,
+      "duration_s": 11.42,
+      "time_gate_passed": true,
+      "planned_touchdown_speed_limit_m_s": 0.006,
+      "maximum_sampled_near_gap_speed_m_s": 0.00600000000049999,
+      "synthetic_hover_hold_s": 0.5,
+      "cpu_gpu_exact": true,
+      "clipped_targets": 0,
+      "maximum_applied_step_rad": 0.0029999911785125732,
+      "unchanged_endpoint": true,
+      "physical_prediction": false
+    }
+  ],
+  "all_time_gates_passed": true,
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "runtime_installed": false,
+  "physical_admission": false,
+  "limitations": "Same sampled model pose/force paths. No new between-knot geometry proof, actual force or dynamic validation. Settling and load permission are synthetic here; a future runtime must use current sensors and unchanged support guards. Two remaining geometry types still lack feasible paths. This is one chosen schedule, not a search or minimum-time proof.",
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/check_low_seat_touchdown_schedule_173.py": "7abdebfad10ce0ad2b9e986c724ea7a357e3a3f88c7b86a1f72a165a336cb073",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_gated_command_128.py": "68b0f2549b210deeeb3aac45d50ade49925809d29165187c1c4d3401c0d27f47",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_balance_feedback_160.py": "6f2fec374997e83593fa08f512d1c8a69ac21827019eb1a0e49ca3bb80d771d1",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/balanced_force_paths_144/SHA256.json": "8e14ffa431464536ecd92ca3556d53fdceef192e2f206dc0778d2dd764c84845",
+    "/data/humanoid-sitting-perception/posture_credit_01/ppo_01/seed_59117/train/final.pt": "7dc9c68f8897bb6c35451cbde6202f01247d68dc8af332f9ef283b368e4b8f65"
+  }
+}
