@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-17T21:09:49.122060+00:00",
+  "scope": "One zero-physics frozen local ordered-drive/contact validation, 50 fixed times 8.0..12.9s x all24 saved303v2 cases. No parameter fit, response selection, controller or physical launch.",
+  "samples": 1200,
+  "orders": [
+    "drive_then_contact",
+    "contact_then_drive"
+  ],
+  "position_stages": 8,
+  "velocity_stages": 4,
+  "physical_step_s": 0.005,
+  "assumptions": [
+    "Counts taken as authored8/4 for this surrogate, NOT captured effective solver-island counts.",
+    "37 sequential force-drive rows in saved joint order; scalar coefficients follow pinned public5.8 source; external forces applied each position stage and drive impulse reset per stage before accumulation.",
+    "Frozen full43-coordinate mass and velocity bias from body Jacobian directional derivatives at1e-6s; authored inertia and frozen masses retain prior discrepancies. No live-effective-mass certificate.",
+    "Bilateral stationary six-axis soles exactly projected before or after drive sweep; both orders reported without selecting a fit. This is NOT actual unilateral/friction contact iteration.",
+    "Complete observed floor-only intervals eligible; unavailable external contacts remain unavailable, not silently zeroed.",
+    "No joint-limit, CFM, friction-patch or effective internal traversal replay; finger limit discrepancies and finite contacts remain limitations.",
+    "Derived q difference and truth root/link/contact channels used ONLY for offline adequacy evaluation; no runtime raw-qd replacement.",
+    "No changes to installed simulator, control targets, gains, filter, rate, materials, quiet/load guards, PPO or holdout."
+  ],
+  "source_sha256": "82be695d98057a3d4f361bcf9559f25bf055fb906d8304588796441b2ee6efbd",
+  "zero_equilibrium_fixtures": 2,
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}

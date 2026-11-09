@@ -1,0 +1,2209 @@
+{
+  "utc": "2026-10-17T21:10:08.209714+00:00",
+  "scope": {
+    "utc": "2026-10-17T21:09:49.122060+00:00",
+    "scope": "One zero-physics frozen local ordered-drive/contact validation, 50 fixed times 8.0..12.9s x all24 saved303v2 cases. No parameter fit, response selection, controller or physical launch.",
+    "samples": 1200,
+    "orders": [
+      "drive_then_contact",
+      "contact_then_drive"
+    ],
+    "position_stages": 8,
+    "velocity_stages": 4,
+    "physical_step_s": 0.005,
+    "assumptions": [
+      "Counts taken as authored8/4 for this surrogate, NOT captured effective solver-island counts.",
+      "37 sequential force-drive rows in saved joint order; scalar coefficients follow pinned public5.8 source; external forces applied each position stage and drive impulse reset per stage before accumulation.",
+      "Frozen full43-coordinate mass and velocity bias from body Jacobian directional derivatives at1e-6s; authored inertia and frozen masses retain prior discrepancies. No live-effective-mass certificate.",
+      "Bilateral stationary six-axis soles exactly projected before or after drive sweep; both orders reported without selecting a fit. This is NOT actual unilateral/friction contact iteration.",
+      "Complete observed floor-only intervals eligible; unavailable external contacts remain unavailable, not silently zeroed.",
+      "No joint-limit, CFM, friction-patch or effective internal traversal replay; finger limit discrepancies and finite contacts remain limitations.",
+      "Derived q difference and truth root/link/contact channels used ONLY for offline adequacy evaluation; no runtime raw-qd replacement.",
+      "No changes to installed simulator, control targets, gains, filter, rate, materials, quiet/load guards, PPO or holdout."
+    ],
+    "source_sha256": "82be695d98057a3d4f361bcf9559f25bf055fb906d8304588796441b2ee6efbd",
+    "zero_equilibrium_fixtures": 2,
+    "physics_ticks": 0,
+    "optimizer_updates": 0,
+    "physical_admission": false
+  },
+  "rows": [
+    {
+      "case": 0,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.06850582071014123,
+          "joint_position_increment_rms": 1.7352764453064113e-05,
+          "roll_velocity_rms": [
+            0.2911346442132219,
+            0.2714265480621523
+          ],
+          "predicted_roll_median": [
+            0.0008573881463272435,
+            0.000862958362901545
+          ],
+          "actual_roll_median": [
+            0.2905481904745102,
+            0.2718184143304825
+          ],
+          "modeled_sole_velocity_max": 4.163336342344337e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.06835251559013227,
+          "joint_position_increment_rms": 0.0003772987911092408,
+          "roll_velocity_rms": [
+            0.29055029684541633,
+            0.27084352220215424
+          ],
+          "predicted_roll_median": [
+            0.0014746534366551654,
+            0.0014771322711490233
+          ],
+          "actual_roll_median": [
+            0.2905481904745102,
+            0.2718184143304825
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.16078487202230207,
+        0.14930122977442975
+      ]
+    },
+    {
+      "case": 0,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 20,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.06717369776039608,
+          "joint_position_increment_rms": 1.7267852108287162e-05,
+          "roll_velocity_rms": [
+            0.28534159438330087,
+            0.2656823259868217
+          ],
+          "predicted_roll_median": [
+            0.0008516461956825693,
+            0.0008546025910375923
+          ],
+          "actual_roll_median": [
+            0.28278636932373047,
+            0.2664463669061661
+          ],
+          "modeled_sole_velocity_max": 5.204170427930421e-18
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.06701576188287788,
+          "joint_position_increment_rms": 0.0003639246614654068,
+          "roll_velocity_rms": [
+            0.2847433304091084,
+            0.2650858750364835
+          ],
+          "predicted_roll_median": [
+            0.001457922509681016,
+            0.0014592410256750279
+          ],
+          "actual_roll_median": [
+            0.28278636932373047,
+            0.2664463669061661
+          ],
+          "modeled_sole_velocity_max": 1.0408340855860843e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.15601375996486852,
+        0.145633611617911
+      ]
+    },
+    {
+      "case": 1,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.06867597151525785,
+          "joint_position_increment_rms": 1.7338981715177377e-05,
+          "roll_velocity_rms": [
+            0.29218476998615356,
+            0.2716310873031912
+          ],
+          "predicted_roll_median": [
+            0.0008502888586337652,
+            0.0008536955307590137
+          ],
+          "actual_roll_median": [
+            0.29236000776290894,
+            0.2711726874113083
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.06852276891694369,
+          "joint_position_increment_rms": 0.00037717880177889863,
+          "roll_velocity_rms": [
+            0.29160045957355457,
+            0.27104830784849615
+          ],
+          "predicted_roll_median": [
+            0.0014272508335076177,
+            0.0014294663353325021
+          ],
+          "actual_roll_median": [
+            0.29236000776290894,
+            0.2711726874113083
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.16052692887986666,
+        0.14923993143431333
+      ]
+    },
+    {
+      "case": 1,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 20,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.06713823718858503,
+          "joint_position_increment_rms": 1.7217620203467794e-05,
+          "roll_velocity_rms": [
+            0.2854825662197374,
+            0.2653681688258907
+          ],
+          "predicted_roll_median": [
+            0.0008565937925557997,
+            0.0008600527644650221
+          ],
+          "actual_roll_median": [
+            0.2819983959197998,
+            0.26646123826503754
+          ],
+          "modeled_sole_velocity_max": 6.938893903907228e-18
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.06697989393400584,
+          "joint_position_increment_rms": 0.000363983506980907,
+          "roll_velocity_rms": [
+            0.2848826076773135,
+            0.26477008511334765
+          ],
+          "predicted_roll_median": [
+            0.0014581035979593332,
+            0.0014594781816108656
+          ],
+          "actual_roll_median": [
+            0.2819983959197998,
+            0.26646123826503754
+          ],
+          "modeled_sole_velocity_max": 8.673617379884035e-18
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.15676532928404321,
+        0.14561350629760403
+      ]
+    },
+    {
+      "case": 2,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.09289137878346426,
+          "joint_position_increment_rms": 4.316744929137325e-05,
+          "roll_velocity_rms": [
+            0.3657361286079452,
+            0.39986756780269694
+          ],
+          "predicted_roll_median": [
+            0.0009097855158381888,
+            0.000909476016417964
+          ],
+          "actual_roll_median": [
+            0.34290502965450287,
+            0.3844262659549713
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.09271438802650539,
+          "joint_position_increment_rms": 0.0004938012294030813,
+          "roll_velocity_rms": [
+            0.3650169915411806,
+            0.39914181443302227
+          ],
+          "predicted_roll_median": [
+            0.00144046656381546,
+            0.001440870690753077
+          ],
+          "actual_roll_median": [
+            0.34290502965450287,
+            0.3844262659549713
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.20285230281700714,
+        0.21865082176816347
+      ]
+    },
+    {
+      "case": 2,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 11,
+      "unavailable": 9,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.1100181491897904,
+          "joint_position_increment_rms": 9.569518395242966e-05,
+          "roll_velocity_rms": [
+            0.41190415849340567,
+            0.4703761281538814
+          ],
+          "predicted_roll_median": [
+            -0.0017968689409383135,
+            -0.0017989242121823391
+          ],
+          "actual_roll_median": [
+            0.3998282253742218,
+            0.44116708636283875
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.10978591426599948,
+          "joint_position_increment_rms": 0.0005856413294541423,
+          "roll_velocity_rms": [
+            0.41094250244832037,
+            0.46941357911417614
+          ],
+          "predicted_roll_median": [
+            -0.0006361656820953213,
+            -0.0006380675452403939
+          ],
+          "actual_roll_median": [
+            0.3998282253742218,
+            0.44116708636283875
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.208361870571331,
+        0.2406894481828308
+      ]
+    },
+    {
+      "case": 3,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.09301217473151292,
+          "joint_position_increment_rms": 4.307120269663593e-05,
+          "roll_velocity_rms": [
+            0.365908649669772,
+            0.4005562013167311
+          ],
+          "predicted_roll_median": [
+            0.0009431176747422263,
+            0.0009426730149058417
+          ],
+          "actual_roll_median": [
+            0.34179578721523285,
+            0.382852703332901
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.09283598501133532,
+          "joint_position_increment_rms": 0.0004937691576987629,
+          "roll_velocity_rms": [
+            0.36519182406973055,
+            0.39983271813500576
+          ],
+          "predicted_roll_median": [
+            0.0014760989944039673,
+            0.0014763703223644822
+          ],
+          "actual_roll_median": [
+            0.34179578721523285,
+            0.382852703332901
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.20220296523141842,
+        0.21817493391433931
+      ]
+    },
+    {
+      "case": 3,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 10,
+      "unavailable": 10,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.11262458607265612,
+          "joint_position_increment_rms": 6.206057119756043e-05,
+          "roll_velocity_rms": [
+            0.4210891637240607,
+            0.4814783509670088
+          ],
+          "predicted_roll_median": [
+            -0.00035765726094150456,
+            -0.0003620799079006148
+          ],
+          "actual_roll_median": [
+            0.4185393899679184,
+            0.4750337600708008
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.11239469627600474,
+          "joint_position_increment_rms": 0.0005715722968291582,
+          "roll_velocity_rms": [
+            0.420101673179071,
+            0.4804903144299514
+          ],
+          "predicted_roll_median": [
+            0.0006740562532545511,
+            0.0006697048337102357
+          ],
+          "actual_roll_median": [
+            0.4185393899679184,
+            0.4750337600708008
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.21065516540017754,
+        0.24523708017469906
+      ]
+    },
+    {
+      "case": 4,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.08231272234467199,
+          "joint_position_increment_rms": 1.76767600088656e-05,
+          "roll_velocity_rms": [
+            0.32724171158910764,
+            0.3507242800517198
+          ],
+          "predicted_roll_median": [
+            0.0002298470194957678,
+            0.000233754625735114
+          ],
+          "actual_roll_median": [
+            0.32505305111408234,
+            0.33598625659942627
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.08217777015811381,
+          "joint_position_increment_rms": 0.0004975314619951975,
+          "roll_velocity_rms": [
+            0.32666531654285996,
+            0.35014169919857124
+          ],
+          "predicted_roll_median": [
+            0.0006741788697036464,
+            0.0006802171769799976
+          ],
+          "actual_roll_median": [
+            0.32505305111408234,
+            0.33598625659942627
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.18056926028004927,
+        0.19173682123275973
+      ]
+    },
+    {
+      "case": 4,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 15,
+      "unavailable": 5,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.09985151327543566,
+          "joint_position_increment_rms": 1.5827888670949277e-05,
+          "roll_velocity_rms": [
+            0.39081864910173003,
+            0.42912675101405257
+          ],
+          "predicted_roll_median": [
+            0.0003113491267513004,
+            0.00030814095231267966
+          ],
+          "actual_roll_median": [
+            0.3740820288658142,
+            0.4216178059577942
+          ],
+          "modeled_sole_velocity_max": 1.3877787807814457e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.09967014088455277,
+          "joint_position_increment_rms": 0.0005950148124740344,
+          "roll_velocity_rms": [
+            0.39001945118298714,
+            0.4283259906569808
+          ],
+          "predicted_roll_median": [
+            0.0011047451225478042,
+            0.0011021838710299952
+          ],
+          "actual_roll_median": [
+            0.3740820288658142,
+            0.4216178059577942
+          ],
+          "modeled_sole_velocity_max": 1.3877787807814457e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.21818515812023984,
+        0.23574300835886397
+      ]
+    },
+    {
+      "case": 5,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.0816660075377774,
+          "joint_position_increment_rms": 1.7596565547469233e-05,
+          "roll_velocity_rms": [
+            0.32519829521932214,
+            0.347416811867644
+          ],
+          "predicted_roll_median": [
+            0.0001518858532074752,
+            0.00015536226547790434
+          ],
+          "actual_roll_median": [
+            0.32294680178165436,
+            0.33349762856960297
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.08153069760554917,
+          "joint_position_increment_rms": 0.000497645809303591,
+          "roll_velocity_rms": [
+            0.32462075632070464,
+            0.3468333990376948
+          ],
+          "predicted_roll_median": [
+            0.0006406253067461275,
+            0.0006462125082629469
+          ],
+          "actual_roll_median": [
+            0.32294680178165436,
+            0.33349762856960297
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.18156804278155222,
+        0.1914289171218813
+      ]
+    },
+    {
+      "case": 5,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 15,
+      "unavailable": 5,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.10012669781048868,
+          "joint_position_increment_rms": 1.5817080118562105e-05,
+          "roll_velocity_rms": [
+            0.39146668399428913,
+            0.4304653510085574
+          ],
+          "predicted_roll_median": [
+            0.00036289770652540317,
+            0.00035975013752572387
+          ],
+          "actual_roll_median": [
+            0.37626636028289795,
+            0.42216068506240845
+          ],
+          "modeled_sole_velocity_max": 1.3877787807814457e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.09994486130900383,
+          "joint_position_increment_rms": 0.0005948729892003277,
+          "roll_velocity_rms": [
+            0.39066629561781413,
+            0.4296633283390518
+          ],
+          "predicted_roll_median": [
+            0.0011579992295350588,
+            0.0011554894431935424
+          ],
+          "actual_roll_median": [
+            0.37626636028289795,
+            0.42216068506240845
+          ],
+          "modeled_sole_velocity_max": 1.3877787807814457e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.21890122969376535,
+        0.23584516783917508
+      ]
+    },
+    {
+      "case": 6,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.08684069989836525,
+          "joint_position_increment_rms": 1.9573158655107617e-05,
+          "roll_velocity_rms": [
+            0.3437465410343972,
+            0.37205320355262894
+          ],
+          "predicted_roll_median": [
+            -0.00043852255823946485,
+            -0.00043911691484793246
+          ],
+          "actual_roll_median": [
+            0.3357006907463074,
+            0.38125304877758026
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.08668498300272738,
+          "joint_position_increment_rms": 0.00048816496993013374,
+          "roll_velocity_rms": [
+            0.3430995320861113,
+            0.371399199002205
+          ],
+          "predicted_roll_median": [
+            0.00011860110293330257,
+            0.00011863379145210279
+          ],
+          "actual_roll_median": [
+            0.3357006907463074,
+            0.38125304877758026
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.19185199171323397,
+        0.20375290224652048
+      ]
+    },
+    {
+      "case": 6,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 9,
+      "unavailable": 11,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.11599233471911802,
+          "joint_position_increment_rms": 3.886368660702636e-05,
+          "roll_velocity_rms": [
+            0.4408573591151928,
+            0.504684984517445
+          ],
+          "predicted_roll_median": [
+            -0.0036308326263111493,
+            -0.0036434519551357125
+          ],
+          "actual_roll_median": [
+            0.4395134150981903,
+            0.5120260715484619
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.11576859177303715,
+          "joint_position_increment_rms": 0.000610807451551276,
+          "roll_velocity_rms": [
+            0.43988752635990497,
+            0.5037125244480485
+          ],
+          "predicted_roll_median": [
+            -0.0026489943811074295,
+            -0.0026574596461712194
+          ],
+          "actual_roll_median": [
+            0.4395134150981903,
+            0.5120260715484619
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.220746588246076,
+        0.2510714597420706
+      ]
+    },
+    {
+      "case": 7,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.08699261960325198,
+          "joint_position_increment_rms": 1.956328346179294e-05,
+          "roll_velocity_rms": [
+            0.3444552412211236,
+            0.3725297413034331
+          ],
+          "predicted_roll_median": [
+            -0.0004397089361108382,
+            -0.00044023338642653687
+          ],
+          "actual_roll_median": [
+            0.33582866191864014,
+            0.38193805515766144
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.08683675864372642,
+          "joint_position_increment_rms": 0.0004881370179615122,
+          "roll_velocity_rms": [
+            0.3438077677193899,
+            0.37187550034770284
+          ],
+          "predicted_roll_median": [
+            0.00011718930878012809,
+            0.00011729058711715854
+          ],
+          "actual_roll_median": [
+            0.33582866191864014,
+            0.38193805515766144
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.19177267161981265,
+        0.20386595754809536
+      ]
+    },
+    {
+      "case": 7,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 9,
+      "unavailable": 11,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.11622150670445089,
+          "joint_position_increment_rms": 3.872145691690835e-05,
+          "roll_velocity_rms": [
+            0.441745606775496,
+            0.5054732694697465
+          ],
+          "predicted_roll_median": [
+            -0.003634128759261548,
+            -0.003646630454724497
+          ],
+          "actual_roll_median": [
+            0.4383866786956787,
+            0.511711597442627
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.11599802086386175,
+          "joint_position_increment_rms": 0.0006108817006343786,
+          "roll_velocity_rms": [
+            0.44077674199409855,
+            0.5045018385489897
+          ],
+          "predicted_roll_median": [
+            -0.002653652019589926,
+            -0.0026620021486213827
+          ],
+          "actual_roll_median": [
+            0.4383866786956787,
+            0.511711597442627
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.22032465363262335,
+        0.25076087040758277
+      ]
+    },
+    {
+      "case": 8,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.08276350998699789,
+          "joint_position_increment_rms": 1.739644685755702e-05,
+          "roll_velocity_rms": [
+            0.33029633079040693,
+            0.3513235697278911
+          ],
+          "predicted_roll_median": [
+            -0.0001801391639096787,
+            -0.00018055772229974803
+          ],
+          "actual_roll_median": [
+            0.3235161751508713,
+            0.3594481199979782
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.08262046337167017,
+          "joint_position_increment_rms": 0.000491821543579665,
+          "roll_velocity_rms": [
+            0.3296936847723795,
+            0.3507152106111467
+          ],
+          "predicted_roll_median": [
+            0.00030702256433325623,
+            0.0003071737328207172
+          ],
+          "actual_roll_median": [
+            0.3235161751508713,
+            0.3594481199979782
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.18437392263557395,
+        0.19337334413462995
+      ]
+    },
+    {
+      "case": 8,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 15,
+      "unavailable": 5,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.10194162038145965,
+          "joint_position_increment_rms": 1.5320224007061743e-05,
+          "roll_velocity_rms": [
+            0.39895574784516374,
+            0.43769390289055315
+          ],
+          "predicted_roll_median": [
+            -0.0019558337558367796,
+            -0.001959387820103676
+          ],
+          "actual_roll_median": [
+            0.3909546136856079,
+            0.43309924006462097
+          ],
+          "modeled_sole_velocity_max": 1.3877787807814457e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.1017486073163379,
+          "joint_position_increment_rms": 0.0006034406729860665,
+          "roll_velocity_rms": [
+            0.39811338260551093,
+            0.4368493528818038
+          ],
+          "predicted_roll_median": [
+            -0.0010142452460687448,
+            -0.0010173070372663875
+          ],
+          "actual_roll_median": [
+            0.3909546136856079,
+            0.43309924006462097
+          ],
+          "modeled_sole_velocity_max": 1.3877787807814457e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.225813790386975,
+        0.24545168511222987
+      ]
+    },
+    {
+      "case": 9,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.08305142829238495,
+          "joint_position_increment_rms": 1.7439237279747944e-05,
+          "roll_velocity_rms": [
+            0.3321075551388681,
+            0.35188208544087285
+          ],
+          "predicted_roll_median": [
+            -0.00014743371938741686,
+            -0.000147947117190501
+          ],
+          "actual_roll_median": [
+            0.3264063745737076,
+            0.3618205189704895
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.0829082156544495,
+          "joint_position_increment_rms": 0.0004917787148983028,
+          "roll_velocity_rms": [
+            0.3315042627987853,
+            0.35127316158979155
+          ],
+          "predicted_roll_median": [
+            0.0003246454087275468,
+            0.00032461289612970663
+          ],
+          "actual_roll_median": [
+            0.3264063745737076,
+            0.3618205189704895
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.18460591892871742,
+        0.19344499036042148
+      ]
+    },
+    {
+      "case": 9,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 15,
+      "unavailable": 5,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.10197959294726658,
+          "joint_position_increment_rms": 1.538493818849744e-05,
+          "roll_velocity_rms": [
+            0.39887299174298235,
+            0.43804087296923533
+          ],
+          "predicted_roll_median": [
+            -0.002030368130910552,
+            -0.002033940418029077
+          ],
+          "actual_roll_median": [
+            0.3921157419681549,
+            0.4324249029159546
+          ],
+          "modeled_sole_velocity_max": 1.3877787807814457e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.10178659152500762,
+          "joint_position_increment_rms": 0.0006034613213785137,
+          "roll_velocity_rms": [
+            0.3980306015540391,
+            0.43719634342961505
+          ],
+          "predicted_roll_median": [
+            -0.0010885147124401553,
+            -0.001091602006730395
+          ],
+          "actual_roll_median": [
+            0.3921157419681549,
+            0.4324249029159546
+          ],
+          "modeled_sole_velocity_max": 1.3877787807814457e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.22582751649891503,
+        0.2454241889720704
+      ]
+    },
+    {
+      "case": 10,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.09272383256106714,
+          "joint_position_increment_rms": 3.662280141738205e-05,
+          "roll_velocity_rms": [
+            0.3694993182265758,
+            0.3952473108627974
+          ],
+          "predicted_roll_median": [
+            0.0008517710346605636,
+            0.0008518551342138623
+          ],
+          "actual_roll_median": [
+            0.3455347418785095,
+            0.38676556944847107
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.09255038942929814,
+          "joint_position_increment_rms": 0.0004941654410724539,
+          "roll_velocity_rms": [
+            0.3687885921028104,
+            0.39453075254490333
+          ],
+          "predicted_roll_median": [
+            0.0015032137887848996,
+            0.0015041000982605529
+          ],
+          "actual_roll_median": [
+            0.3455347418785095,
+            0.38676556944847107
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.20407406685514087,
+        0.21647179753442433
+      ]
+    },
+    {
+      "case": 10,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 10,
+      "unavailable": 10,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.11365236727643986,
+          "joint_position_increment_rms": 4.912818368175269e-05,
+          "roll_velocity_rms": [
+            0.4290792680558558,
+            0.49098199238577217
+          ],
+          "predicted_roll_median": [
+            -0.0007611498785683285,
+            -0.000768699595398782
+          ],
+          "actual_roll_median": [
+            0.447722390294075,
+            0.5074653029441833
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.11342262518674201,
+          "joint_position_increment_rms": 0.0005787529803509266,
+          "roll_velocity_rms": [
+            0.42809679349594587,
+            0.4899983638310924
+          ],
+          "predicted_roll_median": [
+            0.000265660090523879,
+            0.00025900422504136273
+          ],
+          "actual_roll_median": [
+            0.447722390294075,
+            0.5074653029441833
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.22364749105528423,
+        0.2547609507169012
+      ]
+    },
+    {
+      "case": 11,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.09251529820306824,
+          "joint_position_increment_rms": 3.670046753636569e-05,
+          "roll_velocity_rms": [
+            0.3665849885241388,
+            0.3958686235887464
+          ],
+          "predicted_roll_median": [
+            0.0008064464345671824,
+            0.0008064345938112929
+          ],
+          "actual_roll_median": [
+            0.34499143064022064,
+            0.38686490058898926
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.09234272154247501,
+          "joint_position_increment_rms": 0.0004940520876579176,
+          "roll_velocity_rms": [
+            0.36587772782095646,
+            0.39515512230554867
+          ],
+          "predicted_roll_median": [
+            0.001459042153299857,
+            0.0014598391741490152
+          ],
+          "actual_roll_median": [
+            0.34499143064022064,
+            0.38686490058898926
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.20253592675390983,
+        0.21660622688087147
+      ]
+    },
+    {
+      "case": 11,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 10,
+      "unavailable": 10,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.11378336107448939,
+          "joint_position_increment_rms": 4.918263345430848e-05,
+          "roll_velocity_rms": [
+            0.4299293620095321,
+            0.4910439740237955
+          ],
+          "predicted_roll_median": [
+            -0.0007453343702150649,
+            -0.0007527843808202594
+          ],
+          "actual_roll_median": [
+            0.4491432011127472,
+            0.5077346861362457
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.11355322677880929,
+          "joint_position_increment_rms": 0.0005786699333581891,
+          "roll_velocity_rms": [
+            0.42894607465285384,
+            0.4900595268415288
+          ],
+          "predicted_roll_median": [
+            0.00028097471726820644,
+            0.0002744334069080934
+          ],
+          "actual_roll_median": [
+            0.4491432011127472,
+            0.5077346861362457
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.2234205167225151,
+        0.2548200602692943
+      ]
+    },
+    {
+      "case": 12,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.08276416815770524,
+          "joint_position_increment_rms": 1.749791935834105e-05,
+          "roll_velocity_rms": [
+            0.3288135798850182,
+            0.35284240644596304
+          ],
+          "predicted_roll_median": [
+            0.0002252308535864289,
+            0.00022971288910192888
+          ],
+          "actual_roll_median": [
+            0.3209988921880722,
+            0.3327951729297638
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.08262454752697121,
+          "joint_position_increment_rms": 0.000496963733130639,
+          "roll_velocity_rms": [
+            0.3282210181621693,
+            0.3522443871574161
+          ],
+          "predicted_roll_median": [
+            0.0007496887681135165,
+            0.0007488848574576299
+          ],
+          "actual_roll_median": [
+            0.3209988921880722,
+            0.3327951729297638
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.18365361305455719,
+        0.19391379862143507
+      ]
+    },
+    {
+      "case": 12,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 15,
+      "unavailable": 5,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.11156318541336294,
+          "joint_position_increment_rms": 1.5736696186751758e-05,
+          "roll_velocity_rms": [
+            0.4364076700543637,
+            0.4781615649358772
+          ],
+          "predicted_roll_median": [
+            -0.0008429347306402727,
+            -0.000846220048671752
+          ],
+          "actual_roll_median": [
+            0.44743940234184265,
+            0.48647475242614746
+          ],
+          "modeled_sole_velocity_max": 1.3877787807814457e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.11135548138767251,
+          "joint_position_increment_rms": 0.0006219471653379078,
+          "roll_velocity_rms": [
+            0.4355011787628975,
+            0.47725388046914125
+          ],
+          "predicted_roll_median": [
+            0.0001127874203532271,
+            0.00010948347566261068
+          ],
+          "actual_roll_median": [
+            0.44743940234184265,
+            0.48647475242614746
+          ],
+          "modeled_sole_velocity_max": 1.3877787807814457e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.2415369999784372,
+        0.2618672071284609
+      ]
+    },
+    {
+      "case": 13,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 30,
+      "unavailable": 0,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.08280434644737712,
+          "joint_position_increment_rms": 1.7512718681906993e-05,
+          "roll_velocity_rms": [
+            0.3289936849726452,
+            0.3530028582172021
+          ],
+          "predicted_roll_median": [
+            0.00020906016473426758,
+            0.00021356633854295094
+          ],
+          "actual_roll_median": [
+            0.3227090686559677,
+            0.33273160457611084
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.08266491068444669,
+          "joint_position_increment_rms": 0.0004969506355157648,
+          "roll_velocity_rms": [
+            0.3284017211660042,
+            0.3524054082625318
+          ],
+          "predicted_roll_median": [
+            0.0007255526228889029,
+            0.0007247044030663638
+          ],
+          "actual_roll_median": [
+            0.3227090686559677,
+            0.33273160457611084
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.18346372476587497,
+        0.1937608206079641
+      ]
+    },
+    {
+      "case": 13,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 15,
+      "unavailable": 5,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.11151045416158493,
+          "joint_position_increment_rms": 1.5752021833020076e-05,
+          "roll_velocity_rms": [
+            0.4366104452575505,
+            0.47803059637863715
+          ],
+          "predicted_roll_median": [
+            -0.0008816989667375609,
+            -0.000885025855574488
+          ],
+          "actual_roll_median": [
+            0.4473561644554138,
+            0.48823776841163635
+          ],
+          "modeled_sole_velocity_max": 1.3877787807814457e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.11130215471509297,
+          "joint_position_increment_rms": 0.0006219418168387067,
+          "roll_velocity_rms": [
+            0.4357038793092642,
+            0.47712285552290384
+          ],
+          "predicted_roll_median": [
+            7.41747413552587e-05,
+            7.081749819073782e-05
+          ],
+          "actual_roll_median": [
+            0.4473561644554138,
+            0.48823776841163635
+          ],
+          "modeled_sole_velocity_max": 1.3877787807814457e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.24152447541871394,
+        0.2618328319114987
+      ]
+    },
+    {
+      "case": 14,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 26,
+      "unavailable": 4,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.0748677820336303,
+          "joint_position_increment_rms": 1.8038542072652965e-05,
+          "roll_velocity_rms": [
+            0.30049136153981815,
+            0.31612429861856345
+          ],
+          "predicted_roll_median": [
+            -0.000726575140206493,
+            -0.0007305130672728565
+          ],
+          "actual_roll_median": [
+            0.28907859325408936,
+            0.311116024851799
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.07475550638157828,
+          "joint_position_increment_rms": 0.00048079775939564,
+          "roll_velocity_rms": [
+            0.29999955763162683,
+            0.3156270670279511
+          ],
+          "predicted_roll_median": [
+            -0.00026356503187819914,
+            -0.0002657762659238241
+          ],
+          "actual_roll_median": [
+            0.28907859325408936,
+            0.311116024851799
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.166277227429094,
+        0.1749105744938139
+      ]
+    },
+    {
+      "case": 14,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 0,
+      "unavailable": 20,
+      "orders": [
+        null,
+        null
+      ],
+      "recorded_sole_angular_rms": [
+        0.03937679553933889,
+        0.05890672689329631
+      ]
+    },
+    {
+      "case": 15,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 26,
+      "unavailable": 4,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.07488849061478454,
+          "joint_position_increment_rms": 1.8071941220802598e-05,
+          "roll_velocity_rms": [
+            0.3014074108009032,
+            0.31541176461926373
+          ],
+          "predicted_roll_median": [
+            -0.0006592992817539082,
+            -0.0006633405528262131
+          ],
+          "actual_roll_median": [
+            0.289762943983078,
+            0.31071899831295013
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.0747753966775124,
+          "joint_position_increment_rms": 0.00048087533370140914,
+          "roll_velocity_rms": [
+            0.3009132125042239,
+            0.31491197166989404
+          ],
+          "predicted_roll_median": [
+            -0.00019410327323848592,
+            -0.00019641961660282764
+          ],
+          "actual_roll_median": [
+            0.289762943983078,
+            0.31071899831295013
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.16733665179791055,
+        0.17527430879202663
+      ]
+    },
+    {
+      "case": 15,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 0,
+      "unavailable": 20,
+      "orders": [
+        null,
+        null
+      ],
+      "recorded_sole_angular_rms": [
+        0.04014922101886621,
+        0.05927727146028871
+      ]
+    },
+    {
+      "case": 16,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 26,
+      "unavailable": 4,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.07319979278778257,
+          "joint_position_increment_rms": 1.855201403871157e-05,
+          "roll_velocity_rms": [
+            0.2937294933607986,
+            0.30940390648217825
+          ],
+          "predicted_roll_median": [
+            -0.0003323153518601675,
+            -0.00033054135708041873
+          ],
+          "actual_roll_median": [
+            0.2925185412168503,
+            0.30810192227363586
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.07310015080219388,
+          "joint_position_increment_rms": 0.0004867241819047493,
+          "roll_velocity_rms": [
+            0.2932719120567519,
+            0.30894125072929896
+          ],
+          "predicted_roll_median": [
+            7.183616609927364e-05,
+            7.564047130534287e-05
+          ],
+          "actual_roll_median": [
+            0.2925185412168503,
+            0.30810192227363586
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.16215949432004415,
+        0.16970136309672457
+      ]
+    },
+    {
+      "case": 16,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 0,
+      "unavailable": 20,
+      "orders": [
+        null,
+        null
+      ],
+      "recorded_sole_angular_rms": [
+        0.03534951433517961,
+        0.054859957329709816
+      ]
+    },
+    {
+      "case": 17,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 26,
+      "unavailable": 4,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.07306299137465544,
+          "joint_position_increment_rms": 1.8532662873878466e-05,
+          "roll_velocity_rms": [
+            0.2937369020453771,
+            0.30821059735510553
+          ],
+          "predicted_roll_median": [
+            -0.0003575289834212883,
+            -0.0003558176936575453
+          ],
+          "actual_roll_median": [
+            0.29255732893943787,
+            0.30671219527721405
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.07296310099591606,
+          "joint_position_increment_rms": 0.00048671159323925885,
+          "roll_velocity_rms": [
+            0.2932786549589975,
+            0.30774726914192196
+          ],
+          "predicted_roll_median": [
+            4.880952800430014e-05,
+            5.256677746042209e-05
+          ],
+          "actual_roll_median": [
+            0.29255732893943787,
+            0.30671219527721405
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.16194287918934577,
+        0.17004071754383487
+      ]
+    },
+    {
+      "case": 17,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 0,
+      "unavailable": 20,
+      "orders": [
+        null,
+        null
+      ],
+      "recorded_sole_angular_rms": [
+        0.03503233317387158,
+        0.05481819114337106
+      ]
+    },
+    {
+      "case": 18,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 25,
+      "unavailable": 5,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.07144872757494655,
+          "joint_position_increment_rms": 1.9385189210171614e-05,
+          "roll_velocity_rms": [
+            0.28726622041728994,
+            0.30148716174423157
+          ],
+          "predicted_roll_median": [
+            -0.0001895575228361345,
+            -0.0001892654094222802
+          ],
+          "actual_roll_median": [
+            0.2851390838623047,
+            0.3082752227783203
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.07136796166437435,
+          "joint_position_increment_rms": 0.0004913869622625988,
+          "roll_velocity_rms": [
+            0.28685563835897954,
+            0.3010724147329113
+          ],
+          "predicted_roll_median": [
+            0.0001586858705897359,
+            0.00015964499477333921
+          ],
+          "actual_roll_median": [
+            0.2851390838623047,
+            0.3082752227783203
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.15675888137524321,
+        0.163455997563199
+      ]
+    },
+    {
+      "case": 18,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 0,
+      "unavailable": 20,
+      "orders": [
+        null,
+        null
+      ],
+      "recorded_sole_angular_rms": [
+        0.029104851013730598,
+        0.049303396808065364
+      ]
+    },
+    {
+      "case": 19,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 25,
+      "unavailable": 5,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.07147764630636182,
+          "joint_position_increment_rms": 1.93927881266281e-05,
+          "roll_velocity_rms": [
+            0.2879051056521159,
+            0.30115510409919116
+          ],
+          "predicted_roll_median": [
+            -0.00013054433072187983,
+            -0.00013064680056387826
+          ],
+          "actual_roll_median": [
+            0.2862710952758789,
+            0.3054126799106598
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.07139708290787528,
+          "joint_position_increment_rms": 0.0004913830049331216,
+          "roll_velocity_rms": [
+            0.28749523549230105,
+            0.30074110104769347
+          ],
+          "predicted_roll_median": [
+            0.00023295147080451014,
+            0.00023345772931461191
+          ],
+          "actual_roll_median": [
+            0.2862710952758789,
+            0.3054126799106598
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.15627547415846813,
+        0.16366118764574691
+      ]
+    },
+    {
+      "case": 19,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 0,
+      "unavailable": 20,
+      "orders": [
+        null,
+        null
+      ],
+      "recorded_sole_angular_rms": [
+        0.028864359370636517,
+        0.04913272386608228
+      ]
+    },
+    {
+      "case": 20,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 25,
+      "unavailable": 5,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.07087040328240868,
+          "joint_position_increment_rms": 1.9645831715327736e-05,
+          "roll_velocity_rms": [
+            0.2853813514532272,
+            0.298560927219427
+          ],
+          "predicted_roll_median": [
+            -0.00026464798644512336,
+            -0.0002644853292029201
+          ],
+          "actual_roll_median": [
+            0.28385329246520996,
+            0.3025335669517517
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.07079424588809273,
+          "joint_position_increment_rms": 0.0004957194295650139,
+          "roll_velocity_rms": [
+            0.2849800755618048,
+            0.2981558436458307
+          ],
+          "predicted_roll_median": [
+            9.045753066465713e-05,
+            9.1274510836652e-05
+          ],
+          "actual_roll_median": [
+            0.28385329246520996,
+            0.3025335669517517
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.15534659965252073,
+        0.16234285747504792
+      ]
+    },
+    {
+      "case": 20,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 0,
+      "unavailable": 20,
+      "orders": [
+        null,
+        null
+      ],
+      "recorded_sole_angular_rms": [
+        0.027131715330834926,
+        0.04735579190616971
+      ]
+    },
+    {
+      "case": 21,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 25,
+      "unavailable": 5,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.07100568015658068,
+          "joint_position_increment_rms": 1.9601891495325428e-05,
+          "roll_velocity_rms": [
+            0.2863414803904242,
+            0.2988076217729939
+          ],
+          "predicted_roll_median": [
+            -0.0003146436738125171,
+            -0.00031452892945106197
+          ],
+          "actual_roll_median": [
+            0.28814244270324707,
+            0.3049188554286957
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.07092941300740371,
+          "joint_position_increment_rms": 0.0004957003843798265,
+          "roll_velocity_rms": [
+            0.2859396324834328,
+            0.29840173993512487
+          ],
+          "predicted_roll_median": [
+            3.784616074557198e-05,
+            3.860280078905647e-05
+          ],
+          "actual_roll_median": [
+            0.28814244270324707,
+            0.3049188554286957
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.15560800043292827,
+        0.16279583531156339
+      ]
+    },
+    {
+      "case": 21,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 0,
+      "unavailable": 20,
+      "orders": [
+        null,
+        null
+      ],
+      "recorded_sole_angular_rms": [
+        0.027351766947431886,
+        0.04738734388435936
+      ]
+    },
+    {
+      "case": 22,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 26,
+      "unavailable": 4,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.07247394865057241,
+          "joint_position_increment_rms": 1.8799824431808392e-05,
+          "roll_velocity_rms": [
+            0.2908346974149341,
+            0.30622578975815795
+          ],
+          "predicted_roll_median": [
+            -4.538348661408598e-05,
+            -4.487852938307784e-05
+          ],
+          "actual_roll_median": [
+            0.2884838879108429,
+            0.31679166853427887
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.07237944090845685,
+          "joint_position_increment_rms": 0.00048539869422837835,
+          "roll_velocity_rms": [
+            0.29039145666633687,
+            0.3057774130898787
+          ],
+          "predicted_roll_median": [
+            0.00032431778400602033,
+            0.0003255103823790454
+          ],
+          "actual_roll_median": [
+            0.2884838879108429,
+            0.31679166853427887
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.15926381978749646,
+        0.16767033591628483
+      ]
+    },
+    {
+      "case": 22,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 0,
+      "unavailable": 20,
+      "orders": [
+        null,
+        null
+      ],
+      "recorded_sole_angular_rms": [
+        0.03223481456698286,
+        0.052369143686920284
+      ]
+    },
+    {
+      "case": 23,
+      "window": [
+        8.0,
+        11.0
+      ],
+      "samples": 30,
+      "available": 26,
+      "unavailable": 4,
+      "orders": [
+        {
+          "order": "drive_then_contact",
+          "joint_velocity_rms": 0.07296547381985496,
+          "joint_position_increment_rms": 1.883285390355245e-05,
+          "roll_velocity_rms": [
+            0.2925124039294614,
+            0.3087264364043624
+          ],
+          "predicted_roll_median": [
+            -3.724528689088696e-05,
+            -3.681969449962855e-05
+          ],
+          "actual_roll_median": [
+            0.29146498441696167,
+            0.3180057108402252
+          ],
+          "modeled_sole_velocity_max": 5.551115123125783e-17
+        },
+        {
+          "order": "contact_then_drive",
+          "joint_velocity_rms": 0.07287149505107222,
+          "joint_position_increment_rms": 0.0004854856319477797,
+          "roll_velocity_rms": [
+            0.2920710137767294,
+            0.30827941415874416
+          ],
+          "predicted_roll_median": [
+            0.0003344299118131223,
+            0.00033555060871650797
+          ],
+          "actual_roll_median": [
+            0.29146498441696167,
+            0.3180057108402252
+          ],
+          "modeled_sole_velocity_max": 2.7755575615628914e-17
+        }
+      ],
+      "recorded_sole_angular_rms": [
+        0.15853095839154357,
+        0.16735871627306
+      ]
+    },
+    {
+      "case": 23,
+      "window": [
+        11.0,
+        13.0
+      ],
+      "samples": 20,
+      "available": 0,
+      "unavailable": 20,
+      "orders": [
+        null,
+        null
+      ],
+      "recorded_sole_angular_rms": [
+        0.032142833856269024,
+        0.05201220195364232
+      ]
+    }
+  ],
+  "records": 1200,
+  "available": 865,
+  "unavailable": 335,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/screen_low_seat_ordered_contact_317.py": "82be695d98057a3d4f361bcf9559f25bf055fb906d8304588796441b2ee6efbd",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_contact_dynamics_290.py": "e83cd732376a7e20696e8a7d60267edc6fd5e301a82fcc5f3b680d2635a19a3c",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/ordered_contact_revision_317.json": "3e15508638bc6dd6738c7b2d1d992d82960dc9c25fd7ed7b2d2c2270fb8e6a34",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/substep_states.npz": "9ec8a781dc1481ff4d8f6786c00826cb44afb7d7b2ee4fea08feabdb8ec78cc8",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/implicit_launches.npz": "48959d0cfdb3e4baf09f20bd67949df7e100a431fa79f1077876ab34159ceb73",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/backend_properties.npz": "584d7aa93eb762cd31411efb34f4932ccc6aa1d1080e9db5e9ef459657d068fc",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/incoming_diagnostic_v2_303/actuator_metadata.json": "3c40b6bbea84e429bf60a0cf7bccd11e0a1e51e36ef9c1bcd105e1ec8474585b",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/ankle_impulse_296/arrays.npz": "ca39294ed8c69cbdf3da8f4839197b5b3039f23c0e9e5682285737b91f03e2e2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_dynamics_screen_v3_290/inertial_model.json": "1ffd883425d2ecf8d80f50796883d33f1373e4419e15d41667431fe2935eb117",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/ordered_drive_source_316/source_manifest.json": "6ea2c389abaf46eba38e9d45a5949c4ed0a2d8c26397bcd893ca8394b725ca77",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false,
+  "repair_complete": false,
+  "model_validated_as_PhysX": false
+}
