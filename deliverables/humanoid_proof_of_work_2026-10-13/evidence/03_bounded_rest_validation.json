@@ -1,0 +1,2410 @@
+{
+  "utc": "2026-10-12T18:45:22.132674+00:00",
+  "completed_utc": "2026-10-12T18:39:25.678207+00:00",
+  "source_hashes_verified": 46,
+  "budgets": [
+    {
+      "seed": 53111,
+      "updates": 64,
+      "transitions": 65536,
+      "finite": true,
+      "active_transitions": 63856,
+      "warmup_transitions": 1680,
+      "unfinished_episode_steps": [
+        910,
+        535,
+        0,
+        649,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "changes": {
+        "actor_state_dict": 0.023761942982673645,
+        "critic_state_dict": 0.05331861972808838
+      },
+      "final_sha256": "1747d2549dc8d7742c26b4570b6b8f066cbf38c91aa195bf6220356e26f3a5c8",
+      "completed_training_episodes": 70,
+      "successful_training_episodes": 44
+    },
+    {
+      "seed": 53117,
+      "updates": 64,
+      "transitions": 65536,
+      "finite": true,
+      "active_transitions": 63484,
+      "warmup_transitions": 2052,
+      "unfinished_episode_steps": [
+        130,
+        24,
+        240,
+        270,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "changes": {
+        "actor_state_dict": 0.02464871108531952,
+        "critic_state_dict": 0.04835904389619827
+      },
+      "final_sha256": "2a09f17077a4ef867be52e69b875f429ef62f63a57b1d59d75dfb02cbd66a3be",
+      "completed_training_episodes": 84,
+      "successful_training_episodes": 42
+    }
+  ],
+  "startup_and_checkpoint_and_command_checks": [
+    {
+      "run": "starts_53111_ppo",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.005472064018249512,
+      "max_command_offset_deg": 0.3135261535644531,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 6.528472900368953e-05,
+      "largest_joint_offsets": [
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.005472064018249512
+        },
+        {
+          "joint": "right_shoulder_roll_joint",
+          "rad": 0.0036889314651489258
+        },
+        {
+          "joint": "right_elbow_roll_joint",
+          "rad": 0.0035805837251245975
+        },
+        {
+          "joint": "right_hip_yaw_joint",
+          "rad": 0.00296341092325747
+        },
+        {
+          "joint": "left_hip_yaw_joint",
+          "rad": 0.0029399506747722626
+        }
+      ]
+    },
+    {
+      "run": "starts_53111_ppo_hold",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.005472064018249512,
+      "max_command_offset_deg": 0.3135261535644531,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 6.528472900368953e-05,
+      "largest_joint_offsets": [
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.005472064018249512
+        },
+        {
+          "joint": "right_shoulder_roll_joint",
+          "rad": 0.0036889314651489258
+        },
+        {
+          "joint": "right_elbow_roll_joint",
+          "rad": 0.0035805837251245975
+        },
+        {
+          "joint": "right_hip_yaw_joint",
+          "rad": 0.00296341092325747
+        },
+        {
+          "joint": "left_hip_yaw_joint",
+          "rad": 0.0029399506747722626
+        }
+      ]
+    },
+    {
+      "run": "heights_53111_ppo",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.005247712135314941,
+      "max_command_offset_deg": 0.3006717264652252,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 6.975936889652701e-05,
+      "largest_joint_offsets": [
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.005247712135314941
+        },
+        {
+          "joint": "right_shoulder_roll_joint",
+          "rad": 0.003606557846069336
+        },
+        {
+          "joint": "right_elbow_roll_joint",
+          "rad": 0.0033047334291040897
+        },
+        {
+          "joint": "left_hip_yaw_joint",
+          "rad": 0.0028016329742968082
+        },
+        {
+          "joint": "right_hip_yaw_joint",
+          "rad": 0.002759858500212431
+        }
+      ]
+    },
+    {
+      "run": "heights_53111_ppo_hold",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.005247712135314941,
+      "max_command_offset_deg": 0.3006717264652252,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 6.975936889652701e-05,
+      "largest_joint_offsets": [
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.005247712135314941
+        },
+        {
+          "joint": "right_shoulder_roll_joint",
+          "rad": 0.003606557846069336
+        },
+        {
+          "joint": "right_elbow_roll_joint",
+          "rad": 0.0033047334291040897
+        },
+        {
+          "joint": "left_hip_yaw_joint",
+          "rad": 0.0028016329742968082
+        },
+        {
+          "joint": "right_hip_yaw_joint",
+          "rad": 0.002759858500212431
+        }
+      ]
+    },
+    {
+      "run": "impulse_53111_ppo",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.005259990692138672,
+      "max_command_offset_deg": 0.30137524008750916,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 0.0003484592437743572,
+      "largest_joint_offsets": [
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.005259990692138672
+        },
+        {
+          "joint": "right_shoulder_roll_joint",
+          "rad": 0.003607511520385742
+        },
+        {
+          "joint": "right_elbow_roll_joint",
+          "rad": 0.0033238285686820745
+        },
+        {
+          "joint": "left_hip_yaw_joint",
+          "rad": 0.0028084407094866037
+        },
+        {
+          "joint": "right_hip_yaw_joint",
+          "rad": 0.002772356616333127
+        }
+      ]
+    },
+    {
+      "run": "impulse_53111_ppo_hold",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.005259990692138672,
+      "max_command_offset_deg": 0.30137524008750916,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 0.0003484592437743572,
+      "largest_joint_offsets": [
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.005259990692138672
+        },
+        {
+          "joint": "right_shoulder_roll_joint",
+          "rad": 0.003607511520385742
+        },
+        {
+          "joint": "right_elbow_roll_joint",
+          "rad": 0.0033238285686820745
+        },
+        {
+          "joint": "left_hip_yaw_joint",
+          "rad": 0.0028084407094866037
+        },
+        {
+          "joint": "right_hip_yaw_joint",
+          "rad": 0.002772356616333127
+        }
+      ]
+    },
+    {
+      "run": "novel_53111_ppo",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.005373597145080566,
+      "max_command_offset_deg": 0.30788442492485046,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 6.43348693847301e-05,
+      "largest_joint_offsets": [
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.005373597145080566
+        },
+        {
+          "joint": "right_shoulder_roll_joint",
+          "rad": 0.003651738166809082
+        },
+        {
+          "joint": "right_elbow_roll_joint",
+          "rad": 0.0034610340371727943
+        },
+        {
+          "joint": "left_hip_yaw_joint",
+          "rad": 0.0028791488148272038
+        },
+        {
+          "joint": "right_hip_yaw_joint",
+          "rad": 0.0028758340049535036
+        }
+      ]
+    },
+    {
+      "run": "novel_53111_ppo_hold",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.005373597145080566,
+      "max_command_offset_deg": 0.30788442492485046,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 6.43348693847301e-05,
+      "largest_joint_offsets": [
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.005373597145080566
+        },
+        {
+          "joint": "right_shoulder_roll_joint",
+          "rad": 0.003651738166809082
+        },
+        {
+          "joint": "right_elbow_roll_joint",
+          "rad": 0.0034610340371727943
+        },
+        {
+          "joint": "left_hip_yaw_joint",
+          "rad": 0.0028791488148272038
+        },
+        {
+          "joint": "right_hip_yaw_joint",
+          "rad": 0.0028758340049535036
+        }
+      ]
+    },
+    {
+      "run": "starts_53117_ppo",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.007238149642944336,
+      "max_command_offset_deg": 0.41471540927886963,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 0.00010783767700228708,
+      "largest_joint_offsets": [
+        {
+          "joint": "right_knee_joint",
+          "rad": 0.007238149642944336
+        },
+        {
+          "joint": "right_ankle_pitch_joint",
+          "rad": 0.0059852153062820435
+        },
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.005083680152893066
+        },
+        {
+          "joint": "left_elbow_pitch_joint",
+          "rad": 0.004209995269775391
+        },
+        {
+          "joint": "right_elbow_pitch_joint",
+          "rad": 0.0029578208923339844
+        }
+      ]
+    },
+    {
+      "run": "starts_53117_ppo_hold",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.007238149642944336,
+      "max_command_offset_deg": 0.41471540927886963,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 0.00010783767700228708,
+      "largest_joint_offsets": [
+        {
+          "joint": "right_knee_joint",
+          "rad": 0.007238149642944336
+        },
+        {
+          "joint": "right_ankle_pitch_joint",
+          "rad": 0.0059852153062820435
+        },
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.005083680152893066
+        },
+        {
+          "joint": "left_elbow_pitch_joint",
+          "rad": 0.004209995269775391
+        },
+        {
+          "joint": "right_elbow_pitch_joint",
+          "rad": 0.0029578208923339844
+        }
+      ]
+    },
+    {
+      "run": "heights_53117_ppo",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.006814122200012207,
+      "max_command_offset_deg": 0.39042040705680847,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 0.00014395904540975835,
+      "largest_joint_offsets": [
+        {
+          "joint": "right_knee_joint",
+          "rad": 0.006814122200012207
+        },
+        {
+          "joint": "right_ankle_pitch_joint",
+          "rad": 0.00565221905708313
+        },
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.00477290153503418
+        },
+        {
+          "joint": "left_elbow_pitch_joint",
+          "rad": 0.003957986831665039
+        },
+        {
+          "joint": "left_elbow_roll_joint",
+          "rad": 0.0029210145585238934
+        }
+      ]
+    },
+    {
+      "run": "heights_53117_ppo_hold",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.006814122200012207,
+      "max_command_offset_deg": 0.39042040705680847,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 0.00014395904540975835,
+      "largest_joint_offsets": [
+        {
+          "joint": "right_knee_joint",
+          "rad": 0.006814122200012207
+        },
+        {
+          "joint": "right_ankle_pitch_joint",
+          "rad": 0.00565221905708313
+        },
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.00477290153503418
+        },
+        {
+          "joint": "left_elbow_pitch_joint",
+          "rad": 0.003957986831665039
+        },
+        {
+          "joint": "left_elbow_roll_joint",
+          "rad": 0.0029210145585238934
+        }
+      ]
+    },
+    {
+      "run": "impulse_53117_ppo",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.006820201873779297,
+      "max_command_offset_deg": 0.39076876640319824,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 0.00030644226074239,
+      "largest_joint_offsets": [
+        {
+          "joint": "right_knee_joint",
+          "rad": 0.006820201873779297
+        },
+        {
+          "joint": "right_ankle_pitch_joint",
+          "rad": 0.005656033754348755
+        },
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.004774570465087891
+        },
+        {
+          "joint": "left_elbow_pitch_joint",
+          "rad": 0.003961801528930664
+        },
+        {
+          "joint": "left_elbow_roll_joint",
+          "rad": 0.0029226772021502256
+        }
+      ]
+    },
+    {
+      "run": "impulse_53117_ppo_hold",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.006820201873779297,
+      "max_command_offset_deg": 0.39076876640319824,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 0.00030644226074239,
+      "largest_joint_offsets": [
+        {
+          "joint": "right_knee_joint",
+          "rad": 0.006820201873779297
+        },
+        {
+          "joint": "right_ankle_pitch_joint",
+          "rad": 0.005656033754348755
+        },
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.004774570465087891
+        },
+        {
+          "joint": "left_elbow_pitch_joint",
+          "rad": 0.003961801528930664
+        },
+        {
+          "joint": "left_elbow_roll_joint",
+          "rad": 0.0029226772021502256
+        }
+      ]
+    },
+    {
+      "run": "novel_53117_ppo",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.007037520408630371,
+      "max_command_offset_deg": 0.40322020649909973,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 0.00015412902832068198,
+      "largest_joint_offsets": [
+        {
+          "joint": "right_knee_joint",
+          "rad": 0.007037520408630371
+        },
+        {
+          "joint": "right_ankle_pitch_joint",
+          "rad": 0.005826219916343689
+        },
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.004935622215270996
+        },
+        {
+          "joint": "left_elbow_pitch_joint",
+          "rad": 0.004090309143066406
+        },
+        {
+          "joint": "left_elbow_roll_joint",
+          "rad": 0.0029387816321104765
+        }
+      ]
+    },
+    {
+      "run": "novel_53117_ppo_hold",
+      "full_horizon": true,
+      "startup_bitwise_equal": true,
+      "checkpoint_equal": true,
+      "max_command_offset_rad": 0.007037520408630371,
+      "max_command_offset_deg": 0.40322020649909973,
+      "bounded": true,
+      "uncontrolled_commands_fixed": true,
+      "torque_rms_10hz_vs_50hz_max_error_Nm": 0.00015412902832068198,
+      "largest_joint_offsets": [
+        {
+          "joint": "right_knee_joint",
+          "rad": 0.007037520408630371
+        },
+        {
+          "joint": "right_ankle_pitch_joint",
+          "rad": 0.005826219916343689
+        },
+        {
+          "joint": "left_shoulder_roll_joint",
+          "rad": 0.004935622215270996
+        },
+        {
+          "joint": "left_elbow_pitch_joint",
+          "rad": 0.004090309143066406
+        },
+        {
+          "joint": "left_elbow_roll_joint",
+          "rad": 0.0029387816321104765
+        }
+      ]
+    }
+  ],
+  "hold_checks": [
+    {
+      "seed": 53111,
+      "bank": "starts",
+      "entries": 0,
+      "releases": 0,
+      "minimum_recorded_effort_ratio": 0.99506189090523,
+      "recorded_samples_meeting_effort_threshold": 0,
+      "bitwise_same_trace_and_results_as_plain": true,
+      "note": "No hold episodes: physical validity or benefit after a hold entry cannot be assessed. 10 Hz samples; gate counters record all 50 Hz steps."
+    },
+    {
+      "seed": 53111,
+      "bank": "heights",
+      "entries": 0,
+      "releases": 0,
+      "minimum_recorded_effort_ratio": 0.9934491581303342,
+      "recorded_samples_meeting_effort_threshold": 0,
+      "bitwise_same_trace_and_results_as_plain": true,
+      "note": "No hold episodes: physical validity or benefit after a hold entry cannot be assessed. 10 Hz samples; gate counters record all 50 Hz steps."
+    },
+    {
+      "seed": 53111,
+      "bank": "impulse",
+      "entries": 0,
+      "releases": 0,
+      "minimum_recorded_effort_ratio": 0.9141500157879584,
+      "recorded_samples_meeting_effort_threshold": 0,
+      "bitwise_same_trace_and_results_as_plain": true,
+      "note": "No hold episodes: physical validity or benefit after a hold entry cannot be assessed. 10 Hz samples; gate counters record all 50 Hz steps."
+    },
+    {
+      "seed": 53111,
+      "bank": "novel",
+      "entries": 0,
+      "releases": 0,
+      "minimum_recorded_effort_ratio": 0.9975564529251608,
+      "recorded_samples_meeting_effort_threshold": 0,
+      "bitwise_same_trace_and_results_as_plain": true,
+      "note": "No hold episodes: physical validity or benefit after a hold entry cannot be assessed. 10 Hz samples; gate counters record all 50 Hz steps."
+    },
+    {
+      "seed": 53117,
+      "bank": "starts",
+      "entries": 0,
+      "releases": 0,
+      "minimum_recorded_effort_ratio": 1.0002598499613098,
+      "recorded_samples_meeting_effort_threshold": 0,
+      "bitwise_same_trace_and_results_as_plain": true,
+      "note": "No hold episodes: physical validity or benefit after a hold entry cannot be assessed. 10 Hz samples; gate counters record all 50 Hz steps."
+    },
+    {
+      "seed": 53117,
+      "bank": "heights",
+      "entries": 0,
+      "releases": 0,
+      "minimum_recorded_effort_ratio": 1.0,
+      "recorded_samples_meeting_effort_threshold": 0,
+      "bitwise_same_trace_and_results_as_plain": true,
+      "note": "No hold episodes: physical validity or benefit after a hold entry cannot be assessed. 10 Hz samples; gate counters record all 50 Hz steps."
+    },
+    {
+      "seed": 53117,
+      "bank": "impulse",
+      "entries": 0,
+      "releases": 0,
+      "minimum_recorded_effort_ratio": 0.9913324728130913,
+      "recorded_samples_meeting_effort_threshold": 0,
+      "bitwise_same_trace_and_results_as_plain": true,
+      "note": "No hold episodes: physical validity or benefit after a hold entry cannot be assessed. 10 Hz samples; gate counters record all 50 Hz steps."
+    },
+    {
+      "seed": 53117,
+      "bank": "novel",
+      "entries": 0,
+      "releases": 0,
+      "minimum_recorded_effort_ratio": 1.0003664548063238,
+      "recorded_samples_meeting_effort_threshold": 0,
+      "bitwise_same_trace_and_results_as_plain": true,
+      "note": "No hold episodes: physical validity or benefit after a hold entry cannot be assessed. 10 Hz samples; gate counters record all 50 Hz steps."
+    }
+  ],
+  "baseline_successes": 56,
+  "conditions": 56,
+  "unique_states": 44,
+  "impulse_repeats": 12,
+  "new_holdout_states": 16,
+  "all_evaluation_failures_zero": true,
+  "comparisons": [
+    {
+      "seed": 53111,
+      "bank": "starts",
+      "total": 16,
+      "fixed_successes": 16,
+      "ppo_successes": 16,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.005267988407984377,
+          "ppo": 0.005284235347993672,
+          "percent_change": 0.3084088033426635
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.01920230102539,
+          "ppo": 4.016092025756836,
+          "percent_change": -0.07738538733819134
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.523022857666016,
+          "ppo": 6.5175407714843745,
+          "percent_change": -0.08404211208915546
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7642955474853514,
+          "ppo": 1.762985336303711,
+          "percent_change": -0.07426256805488363
+        },
+        "foot_load_bw": {
+          "fixed": 0.3662621154785156,
+          "ppo": 0.36748573040962224,
+          "percent_change": 0.33408176259452915
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.6337369475364685,
+          "ppo": 0.6325096106529235,
+          "percent_change": -0.19366661330320056
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "seed": 53111,
+      "bank": "heights",
+      "total": 12,
+      "fixed_successes": 12,
+      "ppo_successes": 12,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.005849381012221177,
+          "ppo": 0.005864480225990215,
+          "percent_change": 0.25813353135129
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.098828430175781,
+          "ppo": 4.094614176432292,
+          "percent_change": -0.10281605622874945
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.679822550455729,
+          "ppo": 6.671940511067709,
+          "percent_change": -0.11799773614468156
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7424661051432293,
+          "ppo": 1.741106353759766,
+          "percent_change": -0.07803603062634945
+        },
+        "foot_load_bw": {
+          "fixed": 0.40122884877522785,
+          "ppo": 0.4024379202524821,
+          "percent_change": 0.30134210960777175
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.5987700703938802,
+          "ppo": 0.5975678952534994,
+          "percent_change": -0.20077408671912433
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "seed": 53111,
+      "bank": "impulse",
+      "total": 12,
+      "fixed_successes": 12,
+      "ppo_successes": 12,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0058298200256559456,
+          "ppo": 0.005845530553339901,
+          "percent_change": 0.26948563788959934
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.093252382473222,
+          "ppo": 4.089194918122506,
+          "percent_change": -0.09912568225914908
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.669396239439512,
+          "ppo": 6.661888709769124,
+          "percent_change": -0.11256685614197126
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.742546024891336,
+          "ppo": 1.7411608123400864,
+          "percent_change": -0.07949359910514042
+        },
+        "foot_load_bw": {
+          "fixed": 0.40086272686530106,
+          "ppo": 0.40203538701436425,
+          "percent_change": 0.29253409470948455
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.5991519473880415,
+          "ppo": 0.597966770410793,
+          "percent_change": -0.19780908372494244
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "seed": 53111,
+      "bank": "novel",
+      "total": 16,
+      "fixed_successes": 16,
+      "ppo_successes": 16,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0077705409051850435,
+          "ppo": 0.00779165979847312,
+          "percent_change": 0.2717815084659625
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.466986099243163,
+          "ppo": 4.465158950805664,
+          "percent_change": -0.04090338310676067
+        },
+        "leg_rms_Nm": {
+          "fixed": 7.382172607421875,
+          "ppo": 7.378928985595703,
+          "percent_change": -0.04393858012627927
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7061482543945312,
+          "ppo": 1.7045625534057618,
+          "percent_change": -0.09294039862509651
+        },
+        "foot_load_bw": {
+          "fixed": 0.498398503780365,
+          "ppo": 0.49956278419494626,
+          "percent_change": 0.2336043157734613
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.501601053237915,
+          "ppo": 0.500435094833374,
+          "percent_change": -0.2324473597123844
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "seed": 53111,
+      "bank": "known",
+      "total": 40,
+      "fixed_successes": 40,
+      "ppo_successes": 40,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.005610955674556887,
+          "ppo": 0.005626697372996504,
+          "percent_change": 0.28055289245998427
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.065305164204856,
+          "ppo": 4.061579538669174,
+          "percent_change": -0.09164442483891033
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.613974780034978,
+          "ppo": 6.607165074844799,
+          "percent_change": -0.10295934618218539
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.75122185800451,
+          "ppo": 1.7498742843514399,
+          "percent_change": -0.07695048156866058
+        },
+        "foot_load_bw": {
+          "fixed": 0.3871323188835649,
+          "ppo": 0.38833628434390277,
+          "percent_change": 0.31099585377163397
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.612871384349164,
+          "ppo": 0.6116642439604572,
+          "percent_change": -0.1969647171549349
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "seed": 53111,
+      "bank": "unperturbed",
+      "total": 44,
+      "fixed_successes": 44,
+      "ppo_successes": 44,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.006336569117212837,
+          "ppo": 0.006354274660348893,
+          "percent_change": 0.2794184488252416
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.203748990145597,
+          "ppo": 4.200804221413352,
+          "percent_change": -0.07005101254017321
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.87820450106534,
+          "ppo": 6.872881869229404,
+          "percent_change": -0.07738403001992245
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7371975929953836,
+          "ppo": 1.735773692737926,
+          "percent_change": -0.08196535979551056
+        },
+        "foot_load_bw": {
+          "fixed": 0.4238480930328368,
+          "ppo": 0.425046165379611,
+          "percent_change": 0.2826655036245018
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.5761511103890158,
+          "ppo": 0.5749529552459717,
+          "percent_change": -0.20795848891710378
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "seed": 53111,
+      "bank": "all",
+      "total": 56,
+      "fixed_successes": 56,
+      "ppo_successes": 56,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0062279800261649315,
+          "ppo": 0.006245258065989822,
+          "percent_change": 0.2774260635439063
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.180071145644374,
+          "ppo": 4.176887942136743,
+          "percent_change": -0.07615189781992049
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.833459873574092,
+          "ppo": 6.827669049345057,
+          "percent_change": -0.08474219994220045
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7383436855445162,
+          "ppo": 1.7369280755098175,
+          "percent_change": -0.0814344163625691
+        },
+        "foot_load_bw": {
+          "fixed": 0.41892265742550777,
+          "ppo": 0.42011528430134376,
+          "percent_change": 0.2846890361971166
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.5810798611745215,
+          "ppo": 0.5798844870670049,
+          "percent_change": -0.20571597595903102
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "seed": 53117,
+      "bank": "starts",
+      "total": 16,
+      "fixed_successes": 16,
+      "ppo_successes": 16,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.005267988407984377,
+          "ppo": 0.005408252177760004,
+          "percent_change": 2.6625679275041447
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.01920230102539,
+          "ppo": 4.052903167724609,
+          "percent_change": 0.8384964023985697
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.523022857666016,
+          "ppo": 6.586487274169922,
+          "percent_change": 0.9729295433837271
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7642955474853514,
+          "ppo": 1.7643140563964843,
+          "percent_change": 0.0010490822333730776
+        },
+        "foot_load_bw": {
+          "fixed": 0.3662621154785156,
+          "ppo": 0.3739067702293396,
+          "percent_change": 2.0872087032087316
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.6337369475364685,
+          "ppo": 0.626099428653717,
+          "percent_change": -1.2051560055699517
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "seed": 53117,
+      "bank": "heights",
+      "total": 12,
+      "fixed_successes": 12,
+      "ppo_successes": 12,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.005849381012221177,
+          "ppo": 0.005999969240278006,
+          "percent_change": 2.574430144697404
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.098828430175781,
+          "ppo": 4.13803271484375,
+          "percent_change": 0.9564753767038692
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.679822550455729,
+          "ppo": 6.7527910970052085,
+          "percent_change": 1.092372529334651
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7424661051432293,
+          "ppo": 1.7425335896809895,
+          "percent_change": 0.003872932595982981
+        },
+        "foot_load_bw": {
+          "fixed": 0.40122884877522785,
+          "ppo": 0.40902307701110846,
+          "percent_change": 1.942589188108701
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.5987700703938802,
+          "ppo": 0.590983658472697,
+          "percent_change": -1.3004009896588897
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "seed": 53117,
+      "bank": "impulse",
+      "total": 12,
+      "fixed_successes": 12,
+      "ppo_successes": 12,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0058298200256559456,
+          "ppo": 0.005980692443419947,
+          "percent_change": 2.5879429742263094
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.093252382473222,
+          "ppo": 4.131881221967103,
+          "percent_change": 0.9437199538265828
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.669396239439512,
+          "ppo": 6.741451135969114,
+          "percent_change": 1.080381101118344
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.742546024891336,
+          "ppo": 1.7426301015476648,
+          "percent_change": 0.004824931745139871
+        },
+        "foot_load_bw": {
+          "fixed": 0.40086272686530106,
+          "ppo": 0.4083705251172966,
+          "percent_change": 1.872910038482667
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.5991519473880415,
+          "ppo": 0.5916366620580346,
+          "percent_change": -1.2543204378737682
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "seed": 53117,
+      "bank": "novel",
+      "total": 16,
+      "fixed_successes": 16,
+      "ppo_successes": 16,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0077705409051850435,
+          "ppo": 0.007968134543858469,
+          "percent_change": 2.542855652964615
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.466986099243163,
+          "ppo": 4.515631774902344,
+          "percent_change": 1.0890044109925112
+        },
+        "leg_rms_Nm": {
+          "fixed": 7.382172607421875,
+          "ppo": 7.471721618652344,
+          "percent_change": 1.2130441266089864
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7061482543945312,
+          "ppo": 1.7061164932250978,
+          "percent_change": -0.001861571487216107
+        },
+        "foot_load_bw": {
+          "fixed": 0.498398503780365,
+          "ppo": 0.506004020690918,
+          "percent_change": 1.5259911201307652
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.501601053237915,
+          "ppo": 0.49400280332565305,
+          "percent_change": -1.5147994333772008
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "seed": 53117,
+      "bank": "known",
+      "total": 40,
+      "fixed_successes": 40,
+      "ppo_successes": 40,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.005610955674556887,
+          "ppo": 0.005757499376213388,
+          "percent_change": 2.6117422798581202
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.065305164204856,
+          "ppo": 4.102135448133099,
+          "percent_change": 0.9059660330676955
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.613974780034978,
+          "ppo": 6.682867579560266,
+          "percent_change": 1.0416247690155922
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.75122185800451,
+          "ppo": 1.75127472992719,
+          "percent_change": 0.0030191447438987495
+        },
+        "foot_load_bw": {
+          "fixed": 0.3871323188835649,
+          "ppo": 0.3947807887302573,
+          "percent_change": 1.9756732966003776
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.612871384349164,
+          "ppo": 0.6052258676207063,
+          "percent_change": -1.2474912230690638
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "seed": 53117,
+      "bank": "unperturbed",
+      "total": 44,
+      "fixed_successes": 44,
+      "ppo_successes": 44,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.006336569117212837,
+          "ppo": 0.006500495873391628,
+          "percent_change": 2.586995472573572
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.203748990145597,
+          "ppo": 4.244385265003552,
+          "percent_change": 0.9666674902144345
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.87820450106534,
+          "ppo": 6.953746260209514,
+          "percent_change": 1.0982773067080842
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7371975929953836,
+          "ppo": 1.7372111788662992,
+          "percent_change": 0.0007820567430094627
+        },
+        "foot_load_bw": {
+          "fixed": 0.4238480930328368,
+          "ppo": 0.431519308610396,
+          "percent_change": 1.8098973909892901
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.5761511103890158,
+          "ppo": 0.5684872639395974,
+          "percent_change": -1.3301799321785213
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "seed": 53117,
+      "bank": "all",
+      "total": 56,
+      "fixed_successes": 56,
+      "ppo_successes": 56,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0062279800261649315,
+          "ppo": 0.006389109424111981,
+          "percent_change": 2.587185528375402
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 4.180071145644374,
+          "ppo": 4.220277255781455,
+          "percent_change": 0.9618522923700912
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.833459873574092,
+          "ppo": 6.908254447872288,
+          "percent_change": 1.0945344771458698
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7383436855445162,
+          "ppo": 1.7383723765837351,
+          "percent_change": 0.0016504814011941704
+        },
+        "foot_load_bw": {
+          "fixed": 0.41892265742550777,
+          "ppo": 0.4265588550047318,
+          "percent_change": 1.8228179936965683
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.5810798611745215,
+          "ppo": 0.573447849250691,
+          "percent_change": -1.313418762853713
+        }
+      },
+      "cases_10percent_saving": 0
+    }
+  ],
+  "by_height": [
+    {
+      "height_m": 0.25,
+      "seed": 53111,
+      "bank": "starts",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0001382932886481285,
+          "ppo": 0.00014066563919186594,
+          "percent_change": 1.7154487878103808
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 2.9386056518554686,
+          "ppo": 2.92146533203125,
+          "percent_change": -0.5832807070726198
+        },
+        "leg_rms_Nm": {
+          "fixed": 4.53870654296875,
+          "ppo": 4.507106567382812,
+          "percent_change": -0.6962330630274405
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.700729522705078,
+          "ppo": 1.697345001220703,
+          "percent_change": -0.19900410025174287
+        },
+        "foot_load_bw": {
+          "fixed": 0.061657222747802734,
+          "ppo": 0.06392987537384034,
+          "percent_change": 3.685947119826438
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.9383437042236328,
+          "ppo": 0.9360589141845703,
+          "percent_change": -0.24349180676315196
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.3,
+      "seed": 53111,
+      "bank": "starts",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0006775415688753129,
+          "ppo": 0.0006921517550945283,
+          "percent_change": 2.1563527450378484
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 3.009546813964844,
+          "ppo": 3.007550842285156,
+          "percent_change": -0.06632133683470709
+        },
+        "leg_rms_Nm": {
+          "fixed": 4.603209716796875,
+          "ppo": 4.600263061523437,
+          "percent_change": -0.06401305729534235
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7983150634765626,
+          "ppo": 1.796986572265625,
+          "percent_change": -0.07387421914651915
+        },
+        "foot_load_bw": {
+          "fixed": 0.15504278945922853,
+          "ppo": 0.1565448226928711,
+          "percent_change": 0.9687862549954573
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.8449556579589843,
+          "ppo": 0.8434490509033203,
+          "percent_change": -0.17830604972848274
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.35,
+      "seed": 53111,
+      "bank": "starts",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.002994715213775635,
+          "ppo": 0.003008483529090881,
+          "percent_change": 0.459753743925706
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 3.8070848388671874,
+          "ppo": 3.80996728515625,
+          "percent_change": 0.07571268860717684
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.125785278320313,
+          "ppo": 6.131370361328125,
+          "percent_change": 0.09117333948316375
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.8540911865234375,
+          "ppo": 1.8540361328125,
+          "percent_change": -0.0029693097803318302
+        },
+        "foot_load_bw": {
+          "fixed": 0.3274963684082031,
+          "ppo": 0.32826869964599614,
+          "percent_change": 0.23582894721763115
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.672504379272461,
+          "ppo": 0.6717289581298829,
+          "percent_change": -0.11530350827112512
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.4,
+      "seed": 53111,
+      "bank": "starts",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.01726140356063843,
+          "ppo": 0.017295640468597412,
+          "percent_change": 0.1983437084864592
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 6.321571899414062,
+          "ppo": 6.325384643554687,
+          "percent_change": 0.06031322907169567
+        },
+        "leg_rms_Nm": {
+          "fixed": 10.824389892578125,
+          "ppo": 10.831423095703125,
+          "percent_change": 0.0649755154313203
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.704046417236328,
+          "ppo": 1.7035736389160157,
+          "percent_change": -0.027744450827771328
+        },
+        "foot_load_bw": {
+          "fixed": 0.9208520812988281,
+          "ppo": 0.9211995239257813,
+          "percent_change": 0.037730557818060895
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.07914404869079589,
+          "ppo": 0.0788015193939209,
+          "percent_change": -0.4327922345913837
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.275,
+      "seed": 53111,
+      "bank": "heights",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.00022095928341150285,
+          "ppo": 0.0002221312187612057,
+          "percent_change": 0.5303852056400382
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 2.926631103515625,
+          "ppo": 2.910482543945313,
+          "percent_change": -0.5517798109544336
+        },
+        "leg_rms_Nm": {
+          "fixed": 4.469677856445313,
+          "ppo": 4.438908691406249,
+          "percent_change": -0.6883978225565857
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7569749755859374,
+          "ppo": 1.7547042846679688,
+          "percent_change": -0.12923866016995023
+        },
+        "foot_load_bw": {
+          "fixed": 0.08293919372558593,
+          "ppo": 0.08488870048522949,
+          "percent_change": 2.3505253331660425
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.9170600585937501,
+          "ppo": 0.9151203918457033,
+          "percent_change": -0.2115092386665629
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.325,
+      "seed": 53111,
+      "bank": "heights",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0018177020847797395,
+          "ppo": 0.0018310689330101014,
+          "percent_change": 0.7353706827035733
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 3.4276464233398434,
+          "ppo": 3.4274427490234376,
+          "percent_change": -0.005942104034384332
+        },
+        "leg_rms_Nm": {
+          "fixed": 5.40752734375,
+          "ppo": 5.4075693359375,
+          "percent_change": 0.0007765506271129041
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.8308576965332033,
+          "ppo": 1.8302280883789062,
+          "percent_change": -0.0343886996509557
+        },
+        "foot_load_bw": {
+          "fixed": 0.2560508346557617,
+          "ppo": 0.2571282463073731,
+          "percent_change": 0.42078037084309905
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.7439485626220703,
+          "ppo": 0.7428673858642578,
+          "percent_change": -0.1453295042337155
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.375,
+      "seed": 53111,
+      "bank": "heights",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.015509481668472292,
+          "ppo": 0.01554024052619934,
+          "percent_change": 0.19832292519210704
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 5.942207763671875,
+          "ppo": 5.945917236328125,
+          "percent_change": 0.062425832346835186
+        },
+        "leg_rms_Nm": {
+          "fixed": 10.162262451171873,
+          "ppo": 10.169343505859375,
+          "percent_change": 0.0696799036781881
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.6395656433105468,
+          "ppo": 1.6383866882324218,
+          "percent_change": -0.07190654933122431
+        },
+        "foot_load_bw": {
+          "fixed": 0.864696517944336,
+          "ppo": 0.8652968139648438,
+          "percent_change": 0.06942274058590048
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.1353015899658203,
+          "ppo": 0.1347159080505371,
+          "percent_change": -0.4328714211201623
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.275,
+      "seed": 53111,
+      "bank": "impulse",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.00022198524944730348,
+          "ppo": 0.0002245306707918644,
+          "percent_change": 1.1466623799997855
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 2.924785814623217,
+          "ppo": 2.909560974121094,
+          "percent_change": -0.5205454849378177
+        },
+        "leg_rms_Nm": {
+          "fixed": 4.465866113550074,
+          "ppo": 4.437019409179688,
+          "percent_change": -0.6459375099235887
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.756950587703182,
+          "ppo": 1.7546194458007813,
+          "percent_change": -0.1326811305176201
+        },
+        "foot_load_bw": {
+          "fixed": 0.08379858803200173,
+          "ppo": 0.08562599563598633,
+          "percent_change": 2.1807140751425758
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.9162405256361097,
+          "ppo": 0.914384033203125,
+          "percent_change": -0.20262064174642047
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.325,
+      "seed": 53111,
+      "bank": "impulse",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0018074755966663361,
+          "ppo": 0.0018218445181846618,
+          "percent_change": 0.7949718128879457
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 3.424843994140625,
+          "ppo": 3.4244212036132815,
+          "percent_change": -0.01234481126927145
+        },
+        "leg_rms_Nm": {
+          "fixed": 5.401998413085938,
+          "ppo": 5.40164306640625,
+          "percent_change": -0.006578059683004511
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.8308611450195311,
+          "ppo": 1.8302184448242187,
+          "percent_change": -0.03510371046219207
+        },
+        "foot_load_bw": {
+          "fixed": 0.255285587310791,
+          "ppo": 0.25641125488281247,
+          "percent_change": 0.4409444277208907
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.7447142181396484,
+          "ppo": 0.7435817108154297,
+          "percent_change": -0.15207274101035617
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.375,
+      "seed": 53111,
+      "bank": "impulse",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.015459999230854195,
+          "ppo": 0.015490216471043174,
+          "percent_change": 0.19545434471091028
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 5.930127338655821,
+          "ppo": 5.933602576633145,
+          "percent_change": 0.058603091955045095
+        },
+        "leg_rms_Nm": {
+          "fixed": 10.140324191682524,
+          "ppo": 10.147003653721436,
+          "percent_change": 0.0658703007186956
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.6398263419512948,
+          "ppo": 1.638644546395259,
+          "percent_change": -0.07206833588424555
+        },
+        "foot_load_bw": {
+          "fixed": 0.8635040052531101,
+          "ppo": 0.8640689105242938,
+          "percent_change": 0.06542011012653504
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.13650109838836627,
+          "ppo": 0.1359345672138242,
+          "percent_change": -0.4150378137839028
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.2625,
+      "seed": 53111,
+      "bank": "novel",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.00014158238843083382,
+          "ppo": 0.00014398793876171112,
+          "percent_change": 1.6990462991465005
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 2.9283291015625004,
+          "ppo": 2.9131818237304685,
+          "percent_change": -0.5172669227632043
+        },
+        "leg_rms_Nm": {
+          "fixed": 4.494371337890625,
+          "ppo": 4.466296264648438,
+          "percent_change": -0.6246718646831573
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.730739776611328,
+          "ppo": 1.7278048400878907,
+          "percent_change": -0.16957699609722043
+        },
+        "foot_load_bw": {
+          "fixed": 0.06451613807678222,
+          "ppo": 0.0666692352294922,
+          "percent_change": 3.3373001188439444
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.9354839935302734,
+          "ppo": 0.9333241119384765,
+          "percent_change": -0.2308838640462607
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.3125,
+      "seed": 53111,
+      "bank": "novel",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.001243685394525528,
+          "ppo": 0.001255548059940338,
+          "percent_change": 0.9538316898330956
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 3.202874816894531,
+          "ppo": 3.1994140625,
+          "percent_change": -0.10805150348919268
+        },
+        "leg_rms_Nm": {
+          "fixed": 4.97637548828125,
+          "ppo": 4.97022802734375,
+          "percent_change": -0.12353289963702441
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.8153047485351563,
+          "ppo": 1.8143440856933595,
+          "percent_change": -0.05292019659906
+        },
+        "foot_load_bw": {
+          "fixed": 0.20941621017456055,
+          "ppo": 0.21065120697021483,
+          "percent_change": 0.5897331417777263
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.7905831146240234,
+          "ppo": 0.7893454895019532,
+          "percent_change": -0.15654585826296863
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.3625,
+      "seed": 53111,
+      "bank": "novel",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0133930344581604,
+          "ppo": 0.013427789449691772,
+          "percent_change": 0.25950050109961875
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 5.596732543945313,
+          "ppo": 5.60312451171875,
+          "percent_change": 0.1142089196374485
+        },
+        "leg_rms_Nm": {
+          "fixed": 9.550375244140625,
+          "ppo": 9.562502685546875,
+          "percent_change": 0.1269839257226124
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.6054844055175783,
+          "ppo": 1.60384912109375,
+          "percent_change": -0.10185613875839383
+        },
+        "foot_load_bw": {
+          "fixed": 0.826390640258789,
+          "ppo": 0.8271617736816406,
+          "percent_change": 0.09331342651823782
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.1736108551025391,
+          "ppo": 0.172834171295166,
+          "percent_change": -0.4473705327436739
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.3875,
+      "seed": 53111,
+      "bank": "novel",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.016303861379623412,
+          "ppo": 0.016339313745498657,
+          "percent_change": 0.21744766500255697
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 6.140007934570313,
+          "ppo": 6.144915405273437,
+          "percent_change": 0.07992612966334356
+        },
+        "leg_rms_Nm": {
+          "fixed": 10.507568359375,
+          "ppo": 10.51668896484375,
+          "percent_change": 0.08680034387416047
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.6730640869140627,
+          "ppo": 1.672252166748047,
+          "percent_change": -0.04852893397008229
+        },
+        "foot_load_bw": {
+          "fixed": 0.8932710266113282,
+          "ppo": 0.8937689208984374,
+          "percent_change": 0.05573832266765333
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.10672624969482421,
+          "ppo": 0.1062366065979004,
+          "percent_change": -0.4587841307306384
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.25,
+      "seed": 53117,
+      "bank": "starts",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0001382932886481285,
+          "ppo": 0.00016597046703100202,
+          "percent_change": 20.013392300833143
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 2.9386056518554686,
+          "ppo": 2.9394799804687497,
+          "percent_change": 0.029753179462144175
+        },
+        "leg_rms_Nm": {
+          "fixed": 4.53870654296875,
+          "ppo": 4.540604614257813,
+          "percent_change": 0.04181965216505379
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.700729522705078,
+          "ppo": 1.700522216796875,
+          "percent_change": -0.012189234410031613
+        },
+        "foot_load_bw": {
+          "fixed": 0.061657222747802734,
+          "ppo": 0.07062767601013184,
+          "percent_change": 14.548909053236248
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.9383437042236328,
+          "ppo": 0.9293789520263672,
+          "percent_change": -0.9553804386296605
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.3,
+      "seed": 53117,
+      "bank": "starts",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0006775415688753129,
+          "ppo": 0.0007722591459751128,
+          "percent_change": 13.979596448528863
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 3.009546813964844,
+          "ppo": 3.0366649780273436,
+          "percent_change": 0.9010713485720467
+        },
+        "leg_rms_Nm": {
+          "fixed": 4.603209716796875,
+          "ppo": 4.657716430664062,
+          "percent_change": 1.1841023377295867
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7983150634765626,
+          "ppo": 1.7984032592773438,
+          "percent_change": 0.004904357560731043
+        },
+        "foot_load_bw": {
+          "fixed": 0.15504278945922853,
+          "ppo": 0.16336376190185548,
+          "percent_change": 5.366887729283998
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.8449556579589843,
+          "ppo": 0.836643829345703,
+          "percent_change": -0.9836999770329702
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.35,
+      "seed": 53117,
+      "bank": "starts",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.002994715213775635,
+          "ppo": 0.0031514522433280946,
+          "percent_change": 5.233787467718876
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 3.8070848388671874,
+          "ppo": 3.8536454467773438,
+          "percent_change": 1.2229989580166745
+        },
+        "leg_rms_Nm": {
+          "fixed": 6.125785278320313,
+          "ppo": 6.214771362304687,
+          "percent_change": 1.4526477821432016
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.8540911865234375,
+          "ppo": 1.8543047485351563,
+          "percent_change": 0.01151842009017301
+        },
+        "foot_load_bw": {
+          "fixed": 0.3274963684082031,
+          "ppo": 0.3348069381713867,
+          "percent_change": 2.2322597953426504
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.672504379272461,
+          "ppo": 0.6651994323730468,
+          "percent_change": -1.086230383706488
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.4,
+      "seed": 53117,
+      "bank": "starts",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.01726140356063843,
+          "ppo": 0.01754332685470581,
+          "percent_change": 1.63325822883984
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 6.321571899414062,
+          "ppo": 6.381822265625,
+          "percent_change": 0.953091528018879
+        },
+        "leg_rms_Nm": {
+          "fixed": 10.824389892578125,
+          "ppo": 10.932856689453125,
+          "percent_change": 1.0020592195165712
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.704046417236328,
+          "ppo": 1.7040260009765624,
+          "percent_change": -0.0011981046736275758
+        },
+        "foot_load_bw": {
+          "fixed": 0.9208520812988281,
+          "ppo": 0.9268287048339845,
+          "percent_change": 0.6490318756435354
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.07914404869079589,
+          "ppo": 0.07317550086975097,
+          "percent_change": -7.54137287613773
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.275,
+      "seed": 53117,
+      "bank": "heights",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.00022095928341150285,
+          "ppo": 0.00026381539180874824,
+          "percent_change": 19.39547763532181
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 2.926631103515625,
+          "ppo": 2.928478576660156,
+          "percent_change": 0.06312627315112618
+        },
+        "leg_rms_Nm": {
+          "fixed": 4.469677856445313,
+          "ppo": 4.473384399414062,
+          "percent_change": 0.08292640068914281
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.7569749755859374,
+          "ppo": 1.7570189208984375,
+          "percent_change": 0.0025011917136330553
+        },
+        "foot_load_bw": {
+          "fixed": 0.08293919372558593,
+          "ppo": 0.09164847755432129,
+          "percent_change": 10.500805997163475
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.9170600585937501,
+          "ppo": 0.9083563842773438,
+          "percent_change": -0.9490844394371312
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.325,
+      "seed": 53117,
+      "bank": "heights",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0018177020847797395,
+          "ppo": 0.001958951234817505,
+          "percent_change": 7.77075359160857
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 3.4276464233398434,
+          "ppo": 3.472240417480469,
+          "percent_change": 1.3010091658512968
+        },
+        "leg_rms_Nm": {
+          "fixed": 5.40752734375,
+          "ppo": 5.494455444335937,
+          "percent_change": 1.607538807666109
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.8308576965332033,
+          "ppo": 1.831026336669922,
+          "percent_change": 0.009210990949104492
+        },
+        "foot_load_bw": {
+          "fixed": 0.2560508346557617,
+          "ppo": 0.2639143905639648,
+          "percent_change": 3.0710916911381947
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.7439485626220703,
+          "ppo": 0.7360929412841797,
+          "percent_change": -1.0559360865223355
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.375,
+      "seed": 53117,
+      "bank": "heights",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.015509481668472292,
+          "ppo": 0.01577714109420776,
+          "percent_change": 1.7257793100820873
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 5.942207763671875,
+          "ppo": 6.013379150390625,
+          "percent_change": 1.1977263257919368
+        },
+        "leg_rms_Nm": {
+          "fixed": 10.162262451171873,
+          "ppo": 10.290533447265625,
+          "percent_change": 1.262228728199788
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.6395656433105468,
+          "ppo": 1.6395555114746094,
+          "percent_change": -0.0006179585415599931
+        },
+        "foot_load_bw": {
+          "fixed": 0.864696517944336,
+          "ppo": 0.871506362915039,
+          "percent_change": 0.7875416206014396
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.1353015899658203,
+          "ppo": 0.12850164985656737,
+          "percent_change": -5.025765115525049
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.275,
+      "seed": 53117,
+      "bank": "impulse",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.00022198524944730348,
+          "ppo": 0.00026645610481500627,
+          "percent_change": 20.033247920042374
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 2.924785814623217,
+          "ppo": 2.928391967773438,
+          "percent_change": 0.12329631565466403
+        },
+        "leg_rms_Nm": {
+          "fixed": 4.465866113550074,
+          "ppo": 4.473094848632813,
+          "percent_change": 0.16186636363335616
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.756950587703182,
+          "ppo": 1.7570091857910155,
+          "percent_change": 0.003335215471844677
+        },
+        "foot_load_bw": {
+          "fixed": 0.08379858803200173,
+          "ppo": 0.09197520446777344,
+          "percent_change": 9.757463255406096
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.9162405256361097,
+          "ppo": 0.9080294799804688,
+          "percent_change": -0.8961670463048188
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.325,
+      "seed": 53117,
+      "bank": "impulse",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0018074755966663361,
+          "ppo": 0.0019529200494289398,
+          "percent_change": 8.046828019745211
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 3.424843994140625,
+          "ppo": 3.4693846435546876,
+          "percent_change": 1.3005161546121524
+        },
+        "leg_rms_Nm": {
+          "fixed": 5.401998413085938,
+          "ppo": 5.488852416992187,
+          "percent_change": 1.6078124661394133
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.8308611450195311,
+          "ppo": 1.831004119873047,
+          "percent_change": 0.007809158761418189
+        },
+        "foot_load_bw": {
+          "fixed": 0.255285587310791,
+          "ppo": 0.2631893310546875,
+          "percent_change": 3.096039939878903
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.7447142181396484,
+          "ppo": 0.7368158111572266,
+          "percent_change": -1.060595701013023
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.375,
+      "seed": 53117,
+      "bank": "impulse",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.015459999230854195,
+          "ppo": 0.015722701176015895,
+          "percent_change": 1.6992364698014573
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 5.930127338655821,
+          "ppo": 5.997867054573184,
+          "percent_change": 1.1422978301966147
+        },
+        "leg_rms_Nm": {
+          "fixed": 10.140324191682524,
+          "ppo": 10.262406142282344,
+          "percent_change": 1.2039255184756126
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.6398263419512948,
+          "ppo": 1.6398769989789326,
+          "percent_change": 0.0030891702579527447
+        },
+        "foot_load_bw": {
+          "fixed": 0.8635040052531101,
+          "ppo": 0.8699470398294287,
+          "percent_change": 0.746149935277951
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.13650109838836627,
+          "ppo": 0.13006469503640844,
+          "percent_change": -4.715275868070523
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.2625,
+      "seed": 53117,
+      "bank": "novel",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.00014158238843083382,
+          "ppo": 0.0001757076345384121,
+          "percent_change": 24.102747867012585
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 2.9283291015625004,
+          "ppo": 2.928980651855469,
+          "percent_change": 0.022249899870230294
+        },
+        "leg_rms_Nm": {
+          "fixed": 4.494371337890625,
+          "ppo": 4.49582177734375,
+          "percent_change": 0.03227235455371957
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.730739776611328,
+          "ppo": 1.7305636596679688,
+          "percent_change": -0.01017581878796081
+        },
+        "foot_load_bw": {
+          "fixed": 0.06451613807678222,
+          "ppo": 0.0733376579284668,
+          "percent_change": 13.673353853241931
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.9354839935302734,
+          "ppo": 0.9266679534912109,
+          "percent_change": -0.9424041565685326
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.3125,
+      "seed": 53117,
+      "bank": "novel",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.001243685394525528,
+          "ppo": 0.0013641693890094758,
+          "percent_change": 9.687658552098144
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 3.202874816894531,
+          "ppo": 3.242084777832031,
+          "percent_change": 1.2242114718525654
+        },
+        "leg_rms_Nm": {
+          "fixed": 4.97637548828125,
+          "ppo": 5.053998291015626,
+          "percent_change": 1.5598260805915531
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.8153047485351563,
+          "ppo": 1.8154124145507813,
+          "percent_change": 0.005931016029769864
+        },
+        "foot_load_bw": {
+          "fixed": 0.20941621017456055,
+          "ppo": 0.21748381423950197,
+          "percent_change": 3.852425778413515
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.7905831146240234,
+          "ppo": 0.7825242919921875,
+          "percent_change": -1.0193517269425079
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.3625,
+      "seed": 53117,
+      "bank": "novel",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.0133930344581604,
+          "ppo": 0.013728999614715576,
+          "percent_change": 2.508506624131557
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 5.596732543945313,
+          "ppo": 5.683093505859374,
+          "percent_change": 1.5430603702420775
+        },
+        "leg_rms_Nm": {
+          "fixed": 9.550375244140625,
+          "ppo": 9.706345703124999,
+          "percent_change": 1.6331343533340759
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.6054844055175783,
+          "ppo": 1.6054701843261718,
+          "percent_change": -0.00088578819934515
+        },
+        "foot_load_bw": {
+          "fixed": 0.826390640258789,
+          "ppo": 0.8335242614746095,
+          "percent_change": 0.8632262840714722
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.1736108551025391,
+          "ppo": 0.1664814033508301,
+          "percent_change": -4.106570264571396
+        }
+      },
+      "cases_10percent_saving": 0
+    },
+    {
+      "height_m": 0.3875,
+      "seed": 53117,
+      "bank": "novel",
+      "total": 4,
+      "fixed_successes": 4,
+      "ppo_successes": 4,
+      "metrics": {
+        "normalized_torque_squared": {
+          "fixed": 0.016303861379623412,
+          "ppo": 0.01660366153717041,
+          "percent_change": 1.8388291617940977
+        },
+        "all_joint_rms_Nm": {
+          "fixed": 6.140007934570313,
+          "ppo": 6.208368164062501,
+          "percent_change": 1.1133573477535075
+        },
+        "leg_rms_Nm": {
+          "fixed": 10.507568359375,
+          "ppo": 10.630720703125,
+          "percent_change": 1.1720346662329462
+        },
+        "torso_arm_hand_rms_Nm": {
+          "fixed": 1.6730640869140627,
+          "ppo": 1.6730197143554688,
+          "percent_change": -0.002652173275430325
+        },
+        "foot_load_bw": {
+          "fixed": 0.8932710266113282,
+          "ppo": 0.8996703491210938,
+          "percent_change": 0.716392037704594
+        },
+        "rest_normal_load_bw": {
+          "fixed": 0.10672624969482421,
+          "ppo": 0.1003375644683838,
+          "percent_change": -5.986048647552389
+        }
+      },
+      "cases_10percent_saving": 0
+    }
+  ],
+  "outcome": "Both bounded PPO policies retain 56/56 stable trials, but neither reduces normalized squared torque. Hold never enters and therefore has no effect. No policy promoted.",
+  "notes": [
+    "All reported effort means use qualifying ticks of successful trials; trace reconstruction samples at10Hz versus50Hz official metrics.",
+    "Two seeds reuse the same44 states;12 additional conditions repeat states under impulses.",
+    "Normalized squared torque is an effort proxy, not energy; Nm averages instantaneous all-joint RMS.",
+    "Older-study comparison is not an isolated ablation: action/observation contract, seeds and budgets differ."
+  ]
+}
