@@ -1,0 +1,191 @@
+{
+  "utc": "2026-10-18T17:17:58.418207+00:00",
+  "scope": "Preserve completed488/489 preparation; keep sealed487 and unfinished task.",
+  "preparation_only": true,
+  "new_closure": false,
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_487.json",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_487.json",
+      "files": 10722,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_487.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 10758,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/feature_evidence_preservation_489.json",
+  "manifest_sha256": "e58bf9dabaa141ef868f49c9de6257122a11374f1cff95a882c3b4c2449217b9",
+  "workers": [],
+  "actual_exits": {
+    "feature_compile_exit_488.json": {
+      "actual_exit": 0,
+      "observed_tool": "63b1e0",
+      "scope": "Compile new488/489 sources only"
+    },
+    "feature_preparation_freeze_exit_488.json": {
+      "utc": "2026-10-18T17:13:43.338048+00:00",
+      "actual_exit": 0,
+      "observed_tool": "964246",
+      "session_id": 45244
+    },
+    "feature_preparation_exit_488.json": {
+      "utc": "2026-10-18T17:13:43.338134+00:00",
+      "actual_exit": 0,
+      "observed_tool": "d492cf",
+      "session_id": 28715
+    },
+    "feature_audit_exit_489.json": {
+      "utc": "2026-10-18T17:14:47.161020+00:00",
+      "actual_exit": 0,
+      "observed_tool": "e82a25",
+      "session_id": 55921
+    },
+    "feature_record_compile_exit_489.json": {
+      "utc": "2026-10-18T17:17:35.496490+00:00",
+      "actual_exit": 0,
+      "observed_tool": "41d4e5"
+    }
+  },
+  "preparation": {
+    "utc": "2026-10-18T17:13:20.404728+00:00",
+    "passed": true,
+    "scope": "Prepare ONE new full-feature collocation transcription from sealed saved arrays.",
+    "specification": {
+      "scope": "New lifted feature-space transcription; preparation only, no executable optimizer or candidate.",
+      "seed": "EXACT sealed472 INITIAL X/Y/J. No484 final or rejected trial initializes it.",
+      "features": "Unchanged75 features per state: X24 followed by all51 auxiliary mechanics outputs.",
+      "variables": "Existing10540 g/p/conserved-load/exact-drop coordinates plus65 independent features at each1365 nonfixed state;99265 total.",
+      "extra_features": "15 rootxy/f/leg coordinates plus50 auxiliary outputs other than gap. Commands and torques are independent auxiliaries until consistency is satisfied.",
+      "closure": "51 nonlinear equations auxiliaryY-Mechanics(X)=0 and14 affine auxiliary foot/moment equations=0 at each nonfixed state;88725 equations.",
+      "closure_units": "Feetposition m; orientation0.1*vee rad-scaled; horizontalmoments normalizedBW*m; normal normalizedBW; command rad; torque Nm; gap andCOM m. Mixed residuals are not a physical severity ranking.",
+      "original_equalities": "All1411 original normal/hover equations remain separately visible. Their lifted tangents are NOT zero; after closure/nullspace reduction they recover the old analytic zero tangents. Original absolute-normal1e-13 and normalized-hover1e-8 primal criteria remain. Redundant conservation equations require explicit numerical treatment by any future solver, not impossible restoration of an admissible roundoff residual.",
+      "hard_rows": "All331888 final rows and27708 original/support/window plus1572 old coordinate bounds retained. Same331495 optimizer keep mask,156647 hard and174848 rate/window soft labels. No hard slack introduced by this preparation.",
+      "domain": "Original440 +/- .02 full11906 f/p/load box;206 normal-drop bounds including exact pivot;45 fixed states, inactive exactzero loads, aliases and all labels remain. Added feature variables do not expand physical authority.",
+      "finite_encoding": "No finite lifted decoder exists yet. Existing exact-drop and conserved-load encodings are not rerun. A future decoder must preserve all original bounds, exact endpoints, fixed/alias/inactive states and the load rounding contract; this linear basis is not a quantized-map derivative claim.",
+      "nonlinear_policy": "An off-consistency lifted point is an INFEASIBLE research iterate, never a complete actual path or command schedule. Every admitted final must freshly recompute actual mechanics, all original/buffered rows, geometry and independent work. Auxiliary row success or small aggregate closure is insufficient; actual signed criteria may not be waived.",
+      "retained_buffers": "8eps contact/phase/support;4ULP per20ms rates;32ULP targets;430 additional2^-23 buffer;normal-gap2e-13+2*2^-59 guard unchanged.",
+      "numerical_scope": "Saved Jacobian algebra at the exact inherited472 initial state only; no FK,AD,root,finite-work,LP,trajectory optimizer,filter or physics.",
+      "algebra_comparison_bound": 2e-10,
+      "solver_designed": false,
+      "solver_budget_frozen": false,
+      "physical_admission": false
+    },
+    "checks": {
+      "reference_rows_error": 0.0,
+      "reference_equalities_error": 0.0,
+      "basis_null_reconstruction": 0.0,
+      "closure_null_error": 5.684341886080802e-14,
+      "original_equalities_null_error": 0.0,
+      "old331888_row_chain_error": 2.116945507779633e-12,
+      "old11906_box_chain_error": 0.0,
+      "implicit_schur_error": 2.174844251062585e-15,
+      "schur_condition_max": 32.46656722255188,
+      "source_consistency_error": 0.0,
+      "source_anchor_error": 9.85878045867139e-14,
+      "original_equality_lifted_nonzeros": 1365,
+      "original_equality_reduced_nonzeros": 0
+    },
+    "states": 1410,
+    "labels": 1467,
+    "exact_times": 1460,
+    "fixed_states": 45,
+    "active_states": 1365,
+    "lifted_coordinates": 99265,
+    "nonlinear_consistency_rows": 69615,
+    "affine_foot_moment_rows": 19110,
+    "original_final_inequalities": 331888,
+    "original_final_equalities": 1411,
+    "model_calls": 0,
+    "root_calls": 0,
+    "ad_calls": 0,
+    "finite_work_columns": 0,
+    "lp_calls": 0,
+    "new_complete_path": false,
+    "physical_admission": false
+  },
+  "independent_audit": {
+    "utc": "2026-10-18T17:13:45.274716+00:00",
+    "passed": true,
+    "scope": "Independent saved-array audit of lifted features488; no mechanics/root/LP calls.",
+    "lifted_coordinates": 99265,
+    "closure_equations": 88725,
+    "nonlinear_consistency_rows": 69615,
+    "affine_anchor_rows": 19110,
+    "all_row_matrix_errors": {
+      "all_rows_lifted_chain": 0.0,
+      "original_equalities_lifted_chain": 0.0,
+      "original_control_box_chain": 0.0
+    },
+    "closure_matrix_error": 0.0,
+    "null_equivalence_errors": {
+      "basis": 0.0,
+      "all331888rows": 2.116945507779633e-12,
+      "all11906boxes": 0.0,
+      "closure": 5.684341886080802e-14,
+      "schur": 2.174844251062585e-15
+    },
+    "original_lifted_equality_nonzeros": 1365,
+    "original_reduced_equality_nonzeros": 0,
+    "auxiliary_only_command_counterexample": {
+      "command_change_rad": 9.5367431640625e-07,
+      "consistency_defect_rad": 9.5367431640625e-07,
+      "affine_rows_affected": 20,
+      "rejected_as_actual_path": true
+    },
+    "all_original_buffers_and_boxes_unchanged": true,
+    "all_labels_fixed_aliases_inactive_preserved": true,
+    "reference_is_exact472_initial": true,
+    "no_new_candidate": true,
+    "model_calls": 0,
+    "root_calls": 0,
+    "ad_calls": 0,
+    "finite_work_columns": 0,
+    "lp_calls": 0,
+    "physical_admission": false
+  },
+  "local_verification": {
+    "utc": "2026-10-18T17:16:06.786477+00:00",
+    "checks": [
+      {
+        "folder": "feature_collocation_preparation_488",
+        "entries": 12,
+        "passed": true
+      },
+      {
+        "folder": "feature_collocation_audit_489",
+        "entries": 1,
+        "passed": true
+      }
+    ],
+    "verified_entries": 13,
+    "passed": true,
+    "new_visual_report": false,
+    "model_calls": 0,
+    "complete_path": false
+  },
+  "new_solver_exists": false,
+  "new_complete_path": false,
+  "mechanics_calls": 0,
+  "root_calls": 0,
+  "ad_calls": 0,
+  "finite_work_columns": 0,
+  "lp_calls": 0,
+  "actual_forward_filter_ticks": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "best_clean": "64/72",
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}
