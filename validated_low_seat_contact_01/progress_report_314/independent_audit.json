@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-17T20:36:08.170360+00:00",
+  "passed": true,
+  "records": 888000,
+  "case_joint_windows": 1776,
+  "joints": 37,
+  "checks": 65731,
+  "max_error": 1.0658141036401503e-14,
+  "error_groups": {
+    "t0": 0,
+    "t1": 0,
+    "target": 0,
+    "q_start": 0,
+    "q_end": 0,
+    "raw_start": 0,
+    "raw_end": 0,
+    "position_difference_rate": 0,
+    "transmitted_axial": 7.105427357601002e-15,
+    "armature_delta_velocity_term": 2.220446049250313e-16,
+    "spring_mid": 0,
+    "raw_end_PD": 0,
+    "start_PD": 0,
+    "pose_difference_PD": 0,
+    "required_conditional_velocity": 1.4432899320127035e-15,
+    "required_with_armature_term": 1.4710455076283324e-15,
+    "limit_margin": 0,
+    "conditional_identity": 7.105427357601002e-15,
+    "conditional_armature_identity": 1.0658141036401503e-14,
+    "statistics": 7.105427357601002e-15
+  },
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_drive_stages_313.py": "770ffaaf8b8ca2304c50f7e4f9f036f2fd73b1dd299aefb830af582c8afa6db6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/drive_stage_diagnosis_312/results.json": "605ed11f0d4d153f40bccd2a183b8e2fefa5bdd94f0bff00d9783ba415beda45",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/drive_stage_diagnosis_312/arrays.npz": "e802454866e4ca17fd414720ae34e433f485822c7983dead844e5db815ef9546"
+  },
+  "physics_ticks": 0,
+  "physical_admission": false,
+  "repair_complete": false,
+  "limitations": [
+    "Backend incoming axial moment includes transmitted joint effects and is NOT isolated drive effort. The conditional velocity is an algebraic unknown under an unverified force-drive identity, NOT an observed solver-stage velocity.",
+    "Position differences are offline diagnostics only and NEVER replace runtime raw qd or any quiet/support criterion. No alternate quantity is admitted as a controller input.",
+    "All24 cases and37 joints retained, including incomplete external-wrench intervals. This joint-local comparison does not require complete external force closure; coverage labels remain descriptive.",
+    "Authored force drive and limit metadata are not independently captured effective backend drive-type/internal island iteration counts. Backend Kp/Kd/armature/limits were independently verified in305.",
+    "Official TGS documentation distinguishes accumulated position-iteration drive force from velocity iterations. Neither raw endpoint nor finite-difference PD is thereby certified as the actual drive law.",
+    "No forward prediction, system identification, force-fit, controller change, physical trajectory, PPO, holdout or physical admission. Existing290 ideal-contact/backward-Euler response is not validated by this comparison."
+  ]
+}
