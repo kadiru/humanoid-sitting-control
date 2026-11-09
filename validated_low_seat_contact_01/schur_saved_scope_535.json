@@ -1,0 +1,130 @@
+{
+  "utc": "2026-10-19T01:11:29.355512+00:00",
+  "scope": "Saved-only completed532/533 scope, no new model/matrix/projection/LP/map calculations.",
+  "stages": [
+    {
+      "major": 0,
+      "role": "primary",
+      "status": 1,
+      "message": "45s total solver wall deadline",
+      "reason": "45s total solver wall deadline",
+      "elapsed_s": 45.007629787083715,
+      "elapsed_including_evidence_s": 45.528986787074246,
+      "statistics": {
+        "local_cholesky_blocks": 1365,
+        "local_rhs_blocks": 4995900,
+        "K_solves": 235,
+        "CG_iterations": 3191,
+        "schur_matvecs": 3191,
+        "maximum_K_residual": 8.693108940054246e-10,
+        "DR_iterations": 233
+      },
+      "candidate": false,
+      "success": false,
+      "iterations": 233,
+      "crossover_iterations": 0,
+      "actual_lp_call": true,
+      "problem_scope": "robot_projected_LP",
+      "full_size_robot_LP": true,
+      "terminal_stage": "DR",
+      "physical_admission": false,
+      "method": "hsd-schur-dr",
+      "peak_memory_measured": false,
+      "trace_policy": "scalar ledger plus only last K equation and last DR step; factors saved once",
+      "worker_actual_exit": 0,
+      "worker_wall_timeout": false,
+      "worker_elapsed_s": 45.69435454602353,
+      "projection": {
+        "role": "primary",
+        "inherited": true,
+        "full_rows": 652529,
+        "source_rows": 452522,
+        "full_columns": 78791,
+        "source_shape": [
+          452522,
+          78791
+        ],
+        "source_nnz": 2235285,
+        "shape": [
+          408842,
+          56951
+        ],
+        "nnz": 2147925,
+        "eliminated_columns": 21840,
+        "copied_rows": 365162,
+        "pair_rows": 87360,
+        "kept_pairs": 43680,
+        "constant_tautologies": 21840,
+        "bound_implied_pairs": 21840,
+        "generated_coefficients": 487890,
+        "proof": {
+          "inherited": true,
+          "implication_manifest_sha256": "168af0a3de212172b275b6a665d7d48259cb8fe2a091ec9996752a9fd4ab61b4",
+          "projection_manifest_sha256": "7c6f7f65b3a349710c3fa39c734188cb7c7183406fd52e5254f5d6ff76840aaa",
+          "prior_proofs_repeated": false
+        }
+      },
+      "projected_candidate": false,
+      "backsubstitution_attempted": false,
+      "terminal_failure": true
+    }
+  ],
+  "actual_hsd_lp_calls": 1,
+  "worker_actual_exits": [
+    0
+  ],
+  "worker_wall_cap_hits": 0,
+  "returned_reduced_vectors": 0,
+  "backsubstitution_attempts": 0,
+  "original_direction_reconstructions": 0,
+  "complete_certified_witnesses": 0,
+  "finite_maps": 0,
+  "actual_trials": 0,
+  "accepted": 0,
+  "actual_X_exact472": true,
+  "actual_Y_exact472": true,
+  "actual_J_exact472": true,
+  "auxiliary_features_exact490": true,
+  "auxiliary_Y_exact_actual_Y": false,
+  "inherited_projection_systems": 1,
+  "new_projection_systems": 0,
+  "new_quotient_proof_rows": 0,
+  "new_projection_pairs": 0,
+  "staged_recovery": false,
+  "initial_full_assembly_repeated": false,
+  "inherited_initial_assemblies": 1,
+  "new_complete_assemblies": 0,
+  "solver_statistics": [
+    {
+      "local_cholesky_blocks": 1365,
+      "local_rhs_blocks": 4995900,
+      "K_solves": 235,
+      "CG_iterations": 3191,
+      "schur_matvecs": 3191,
+      "maximum_K_residual": 8.693108940054246e-10,
+      "DR_iterations": 233
+    }
+  ],
+  "solver_audits": [
+    {
+      "folder": "/data/humanoid-sitting-perception/low_seat_contact_01/schur_path_532/major_00/primary/projected",
+      "passed": true,
+      "new_Gram_factors_verified": 1365,
+      "factor_product_relative_error": 3.7437812518305707e-16,
+      "last_K_residual": null,
+      "cached_M_residual": 5.791535761725121e-14,
+      "last_DR_residual": 2.192174413579774e-13,
+      "DR_steps_scalar_checked": 233,
+      "full_saved_DR_transitions_checked": 1,
+      "all_DR_vectors_replayed": false,
+      "solver_calls": 0,
+      "local_factorizations": 0,
+      "local_solves": 0,
+      "physical_admission": false,
+      "scope": "Saved factors/last K equation/last DR transition and every bounded scalar ledger; no old test, solve or factor repeated. Full intermediate vectors deliberately not retained."
+    }
+  ],
+  "prior_examples_and_proofs_repeated": false,
+  "physical_admission": false,
+  "task_complete": false
+}
