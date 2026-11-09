@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-17T10:51:57.063727+00:00",
+  "scope": "One OFFLINE linear program102 changes only nonnegative vertical foot-corner forces on unchanged audited115-knot contact path98. Geometry, total right-foot load and zero/assumed seat-normal loading at each knot, endpoint force distributions, initial/fixed14finger commands and configured effort/rate limits remain fixed. Positive-gap nodes carryZEROseatforce. Exact support moment includes the existing assumed vertical seat force at zero gap. Tighten only the internal LP command reserve to.03001rad to stay inside unchanged.03rad actual command bound. HiGHS residual precision1e-10 and existing independent1e-8 residual check unchanged. Minimize specific command-polyline time at.15rad/s, with existing13.5s allowance. Assumed forces are NOTsensed/controller-realized contact, and filtering/dynamics still need separate validation. No pose search,simulation,PPO,holdout orphysical admission",
+  "summary": {
+    "success": false,
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+  },
+  "nodes": [],
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/optimize_low_seat_contact_forces_102.py": "e169072a8c7223d8b8c8f5bbc791f8c9e336ed86944fce279ae71eef111b23f0",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/stance_com_path_v2_98/results.json": "cd70ad73525155d2db0974d9ddc0ba6b55a42063274d89011f4aaf3352621468",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/stance_com_path_audit_v2_99/independent_audit.json": "1b7cd1ef216100b34f587df105ae8e2c9e34648fa2248a3e7c2333a4ef446c32",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+    "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json": "69e0920e2bec88a43b7a6dc41d0fc361500d060ef09e3e3a07bb04cdaf569584",
+    "/data/humanoid-sitting-perception/contact_effort_repair_01/plane_calibration.json": "6a6a0f078ced3d3510897e96670c26226dee25d495653a222cf1dd52e97a8009",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/trace.npz": "c380356202f31c64d5667f48bd2f8d13d3391c6f751dd19db2dc002101d020d2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/sensor_inputs.npz": "468d3637bc09c404b000b15f48bdbc1f2e8c6aacc23e51d966c2604801afb6d6"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "holdout_used": false,
+  "physical_admission": false
+}
