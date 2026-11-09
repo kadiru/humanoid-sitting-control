@@ -1,0 +1,12 @@
+"""Saved-only596/597 numeric-input scope; no encoding or proof replay."""
+from pathlib import Path
+import json,datetime
+D=Path('/data/humanoid-sitting-perception/low_seat_contact_01');read=lambda p:json.loads(Path(p).read_text())
+def main():
+ assert read(D/'balance_encoding_preparation_exit_596.json')['actual_exit']==read(D/'balance_encoding_audit_exit_597.json')['actual_exit']==0
+ p=read(D/'balance_encoding_preparation_596/preparation.json');a=read(D/'balance_encoding_audit_597/independent_audit.json');assert p['passed'] and a['passed'] and p['primary']==a['primary']
+ pt=read(D/'balance_encoding_preparation_596/completion_timing.json');at=read(D/'balance_encoding_audit_597/completion_timing.json')
+ assert pt['checked_limit_passed'] and at['checked_limit_passed'] and pt['through_output_manifest_elapsed_s']<=240 and at['through_output_manifest_elapsed_s']<=240
+ r=dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),preparation_only=True,last_sealed_closure='closure_record_593.json',primary=p['primary'],preparation_scientific_elapsed_s=p['scientific_elapsed_s'],audit_scientific_elapsed_s=a['scientific_elapsed_s'],preparation_completion_timing=pt,audit_completion_timing=at,exact_copy_error=0,numerical_lp_calls=0,numerical_linear_system_solves=0,exact_block_inverses=0,model_calls=0,root_calls=0,finite_maps=0,physics_ticks=0,policy_updates=0,primal_vectors_constructed=0,analytic_dual_vectors_constructed=0,physical_admission=False,complete_numerical_algorithm_exists=False,old_proofs_repeated=False,scientific_execution_recovery=False,scope='NEW binary64input for594 exactmoment/gapcondensation:6102946 compensatedAcoefficients/265967directedRHS,exactE1367rows/onecoefficient/zeroRHS. Project588existingfiniteOUTERbounds afterNEWoriginalcoordinateassociation;no oldrowcompensation orproofreplay. Complete numericREALfeasibleset insideexplicit10541box is a sufficientINNERsubset of594exactzeroFACE,possiblyempty/proper. NOTequivalence/finite/tolerancefeasibility/primalexistence/performance. Fullunchangedpoint andoriginalonce-roundedcompositegraph/KKT checks mandatory. No LP/primalpoint/graphlift/analyticdual/model/physicalprogress. No598completealgorithm/child/wholepath/return-and-actualstateauditor/budget/sourcefreeze. All64protected/all8unresolved/PPOholdoutunstarted.')
+ out=D/'balance_encoding_scope_597.json';assert not out.exists();out.write_text(json.dumps(r,indent=2));print(json.dumps(r,indent=2),flush=True)
+if __name__=='__main__':main()

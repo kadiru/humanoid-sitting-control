@@ -1,0 +1,46 @@
+{
+  "classification": "Source-level algorithm and independent audit review before any scientific launch",
+  "genuinely_new_input": "Relinearize at accepted20261023 map/Y/J and exact drops, with freshly derived original guard/interval/C/full input. Append exactly two physical-output tangent constraints based on new completed failure attribution; no old solve input/direction or completed proof arithmetic replay.",
+  "target_rows": [
+    214643,
+    215327
+  ],
+  "target_associations": [
+    [
+      622,
+      1273
+    ],
+    [
+      1400,
+      631
+    ]
+  ],
+  "equation": "G_i d <= r_actual_i -2^-20, where G_i=-(J_gap,b P_Xb - J_gap,a P_Xa)/original_scale_i; scalar epigraph coefficient zero. Every full-original row, both consistency signs, equality, cost and bound retained unchanged for the new state.",
+  "witness_mechanism": "Seek a full-original numerical optimum that also satisfies these two actual-gap predictions. Added raw inequality marginals must already be exactly zero. Extract only the unchanged original subvector and verify all original numerical KKT equations independently. Nonzero extra marginal, any original or augmented numerical failure, or less than1%predicted improvement is terminal rejection. No marginal adjustment, clipping, refitting, alternate certificate or retry.",
+  "numerical_optimality_not_exact": "The exact-zero condition removes the added-row dual contributions algebraically; it is not by itself a primal/optimality certificate. Original full residual/stationarity/absolute gap <=1e-9 and signs remain mandatory; this is the inherited numerical gate, not an exact-rational optimality claim.",
+  "initialization": "No x0, basis, old primal/internal or rejected vector. One cold installed SciPy HiGHS-IPM only after new-state full input and target/augmented layout proofs pass.",
+  "independence": "Independent input assembly module retained but zero-face work removed; independent target scalar assembly imports no target producer; independent return equations import no solver or production numerical check; separate final auditor process.",
+  "tests": {
+    "synthetic_only": true,
+    "first_test_tool": "acb792",
+    "final_test_and_compile_tool": "50613d",
+    "actual_exit": 0,
+    "checks": [
+      "target sign, scale and original direction basis",
+      "independent scalar target assembly",
+      "augmented original-prefix exactness",
+      "original and augmented KKT agreement",
+      "signed-zero added marginals accepted",
+      "tiny positive and negative added marginals rejected without tolerance",
+      "wrong-sign original marginal rejected"
+    ]
+  },
+  "limitations": [
+    "No feasibility or runtime success guarantee; no speed improvement claimed. Recent original solve required327.81s under its separately consumed exception.",
+    "Extra constraints need not be redundant or have an original optimum in their intersection; exact-zero certificate test may reject an augmented optimum.",
+    "Only two known hard rows receive new direct constraints; no other actual hard row is claimed safe.",
+    "Stored nonsmooth gap Jacobian is used only as the existing local model; nonlinear/finite/geometry/filter/runtime/72trial/PPO gates unchanged.",
+    "No automatic downstream finite map, model evaluation, simulation, PPO or holdout."
+  ],
+  "launch_policy": "At most one45s construction and audit; no retries, budget exception or automatic diagnostic chain."
+}

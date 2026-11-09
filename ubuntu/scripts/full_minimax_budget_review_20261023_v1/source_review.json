@@ -1,0 +1,25 @@
+{
+  "utc": "2026-10-23T07:43:18.420975+00:00",
+  "kind": "Single-owner source review with separately implemented return audit; no external reviewer or scientific run claimed",
+  "review_passed": true,
+  "execution_authorized": false,
+  "review": [
+    "Same accepted-state full matrix, original equations, bounds and guard values; AST comparison confirms original input identity and KKT functions are unchanged.",
+    "A deliberate one-run terminal-family revisit and 600-second budget exception; no novelty, speedup, exact optimality or physical admission claimed.",
+    "One cold highs-ipm call; original solver options and numerical primal/dual/gap 1e-9 checks retained. No feasibility-only or optimality waiver.",
+    "Shared origin includes setup, hashing, loading, solve and return. Backend receives allowance ending nominally at420s, producer has480s hard cutoff, audit600s. Each late stage invalidates acceptance; no reallocation or reset.",
+    "Producer and separate auditor implement algebraically equivalent exact scalar1% checks independently; boundary/adjacent-float/nonfinite fixtures pass. These do not make matrix products exact.",
+    "Independent return auditor imports no producer or optimizer; unchanged full-space row/dual/sign/prediction checks remain. Failure-accounting PASS is not a candidate.",
+    "Both authorization and contract require explicit approval; local blocked-admission check passes before output or scientific worker creation.",
+    "Output directory is new and exclusive; historical sources/results/authorizations are not edited. No old internal or rejected vector used.",
+    "Serial worker scan and exclusive file lock retained. Any interruption, deadline, nonfinite return or failed audit terminates.",
+    "No interior, encoding, nonlinear model, simulated motion, PPO or holdout call exists in this diagnostic. Downstream gates remain required and are not authorized here."
+  ],
+  "local_checks_sha256": "a2b89a2224532e6ac926604bc0d19af2f1ea65fd755bc62db6ed6ed1bcbb1ad0",
+  "remote_syntax_check": "PASS: project Python3.12.15 compiled all four files without executing or scientific imports; tool926776 actual exit0.",
+  "limitations": [
+    "No proof of convergence within600seconds or peak native factorization cost below40GiB; these are enforced limits.",
+    "A numerical optimum, infeasibility status or one-percent point does not establish nonlinear or physical feasibility.",
+    "Process-finalization time and any overshoot must be measured by the execution owner; overrun cannot be reported as an accepted candidate."
+  ]
+}

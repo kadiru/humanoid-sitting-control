@@ -1,0 +1,211 @@
+{
+  "rows": [
+    {
+      "final_heading_error_mean_deg": 2.754336631570792,
+      "final_heading_error_max_deg": 5.780634727926899,
+      "run": "geometry_reference_v12_holdout_canonical_pilot_01",
+      "trials": 144,
+      "successes": 102,
+      "success_percent": 70.83333134651184,
+      "falls_percent": 0.0,
+      "unintended_percent": 0.0,
+      "excessive_force_percent": 24.30555522441864,
+      "torque_violation_percent": 0.0,
+      "peak_force_N": 902.3074951171875,
+      "mean_trial_peak_force_N": 465.97648885515,
+      "peak_descent_m_s": 0.24677705764770508,
+      "minimum_hold_s": 0.0,
+      "median_hold_s": 8.540005683898926,
+      "final_linear_speed_mean_m_s": 0.001267785090021789,
+      "final_angular_speed_mean_rad_s": 0.005906598176807165,
+      "residual_rms_rad": 0.012036700733006
+    },
+    {
+      "final_heading_error_mean_deg": 2.576887773051903,
+      "final_heading_error_max_deg": 5.670021736813494,
+      "run": "geometry_reference_v12_holdout_pilot_01",
+      "trials": 144,
+      "successes": 144,
+      "success_percent": 100.0,
+      "falls_percent": 0.0,
+      "unintended_percent": 0.0,
+      "excessive_force_percent": 0.0,
+      "torque_violation_percent": 0.0,
+      "peak_force_N": 486.3138122558594,
+      "mean_trial_peak_force_N": 321.3983400132921,
+      "peak_descent_m_s": 0.24677705764770508,
+      "minimum_hold_s": 7.47999382019043,
+      "median_hold_s": 8.58000659942627,
+      "final_linear_speed_mean_m_s": 0.0012785247527062893,
+      "final_angular_speed_mean_rad_s": 0.007632247172296047,
+      "residual_rms_rad": 0.012038913555443287
+    },
+    {
+      "final_heading_error_mean_deg": 2.5718124071964823,
+      "final_heading_error_max_deg": 5.809601115524817,
+      "run": "geometry_reference_v12_holdout_pilot_blind_01",
+      "trials": 144,
+      "successes": 144,
+      "success_percent": 100.0,
+      "falls_percent": 0.0,
+      "unintended_percent": 0.0,
+      "excessive_force_percent": 0.0,
+      "torque_violation_percent": 0.0,
+      "peak_force_N": 486.76995849609375,
+      "mean_trial_peak_force_N": 320.9522919125027,
+      "peak_descent_m_s": 0.2474595308303833,
+      "minimum_hold_s": 7.599993705749512,
+      "median_hold_s": 8.560006141662598,
+      "final_linear_speed_mean_m_s": 0.0012799324467778206,
+      "final_angular_speed_mean_rad_s": 0.0076823667623102665,
+      "residual_rms_rad": 0.011988475918769836
+    },
+    {
+      "final_heading_error_mean_deg": 2.6807718609660016,
+      "final_heading_error_max_deg": 6.111080556609165,
+      "run": "geometry_reference_v12_holdout_ppo_01",
+      "trials": 144,
+      "successes": 144,
+      "success_percent": 100.0,
+      "falls_percent": 0.0,
+      "unintended_percent": 0.0,
+      "excessive_force_percent": 0.0,
+      "torque_violation_percent": 0.0,
+      "peak_force_N": 467.25146484375,
+      "mean_trial_peak_force_N": 320.8295743730333,
+      "peak_descent_m_s": 0.21242843568325043,
+      "minimum_hold_s": 7.419993877410889,
+      "median_hold_s": 8.540005683898926,
+      "final_linear_speed_mean_m_s": 0.0014918295200914145,
+      "final_angular_speed_mean_rad_s": 0.008508059196174145,
+      "residual_rms_rad": 0.009193346835672855
+    },
+    {
+      "final_heading_error_mean_deg": 2.6566458218335907,
+      "final_heading_error_max_deg": 6.641094500039813,
+      "run": "geometry_reference_v12_holdout_scripted_01",
+      "trials": 144,
+      "successes": 144,
+      "success_percent": 100.0,
+      "falls_percent": 0.0,
+      "unintended_percent": 0.0,
+      "excessive_force_percent": 0.0,
+      "torque_violation_percent": 0.0,
+      "peak_force_N": 469.2089538574219,
+      "mean_trial_peak_force_N": 317.79661623636883,
+      "peak_descent_m_s": 0.18932098150253296,
+      "minimum_hold_s": 7.559993743896484,
+      "median_hold_s": 8.540005683898926,
+      "final_linear_speed_mean_m_s": 0.0017134955851361156,
+      "final_angular_speed_mean_rad_s": 0.008571847341954708,
+      "residual_rms_rad": 0.0
+    }
+  ],
+  "paired": [
+    {
+      "reference": "geometry_reference_v12_holdout_scripted_01",
+      "comparison": "geometry_reference_v12_holdout_canonical_pilot_01",
+      "initial_conditions_bitwise_identical": true,
+      "success_gain_percentage_points": -29.166666666666668,
+      "wins": 0,
+      "losses": 42,
+      "geometry_block_bootstrap_95_percent_interval_pp": [
+        -47.916666666666664,
+        -11.805555555555555
+      ],
+      "mean_peak_force_difference_N": 148.1798726187812,
+      "geometry_block_bootstrap_95_percent_force_difference_N": [
+        66.26972839302486,
+        234.17412938012012
+      ]
+    },
+    {
+      "reference": "geometry_reference_v12_holdout_scripted_01",
+      "comparison": "geometry_reference_v12_holdout_pilot_01",
+      "initial_conditions_bitwise_identical": true,
+      "success_gain_percentage_points": 0.0,
+      "wins": 0,
+      "losses": 0,
+      "geometry_block_bootstrap_95_percent_interval_pp": [
+        0.0,
+        0.0
+      ],
+      "mean_peak_force_difference_N": 3.6017237769232855,
+      "geometry_block_bootstrap_95_percent_force_difference_N": [
+        -5.218390215767754,
+        12.765584648980033
+      ]
+    },
+    {
+      "reference": "geometry_reference_v12_holdout_scripted_01",
+      "comparison": "geometry_reference_v12_holdout_pilot_blind_01",
+      "initial_conditions_bitwise_identical": true,
+      "success_gain_percentage_points": 0.0,
+      "wins": 0,
+      "losses": 0,
+      "geometry_block_bootstrap_95_percent_interval_pp": [
+        0.0,
+        0.0
+      ],
+      "mean_peak_force_difference_N": 3.1556756761338978,
+      "geometry_block_bootstrap_95_percent_force_difference_N": [
+        -6.54530783229404,
+        13.098459895451857
+      ]
+    },
+    {
+      "reference": "geometry_reference_v12_holdout_scripted_01",
+      "comparison": "geometry_reference_v12_holdout_ppo_01",
+      "initial_conditions_bitwise_identical": true,
+      "success_gain_percentage_points": 0.0,
+      "wins": 0,
+      "losses": 0,
+      "geometry_block_bootstrap_95_percent_interval_pp": [
+        0.0,
+        0.0
+      ],
+      "mean_peak_force_difference_N": 3.0329581366644964,
+      "geometry_block_bootstrap_95_percent_force_difference_N": [
+        -0.05188247892591685,
+        6.389150232738917
+      ]
+    },
+    {
+      "reference": "geometry_reference_v12_holdout_ppo_01",
+      "comparison": "geometry_reference_v12_holdout_pilot_01",
+      "initial_conditions_bitwise_identical": true,
+      "success_gain_percentage_points": 0.0,
+      "wins": 0,
+      "losses": 0,
+      "geometry_block_bootstrap_95_percent_interval_pp": [
+        0.0,
+        0.0
+      ],
+      "mean_peak_force_difference_N": 0.5687656402587891,
+      "geometry_block_bootstrap_95_percent_force_difference_N": [
+        -7.330867173936632,
+        9.956943363613552
+      ]
+    },
+    {
+      "reference": "geometry_reference_v12_holdout_pilot_blind_01",
+      "comparison": "geometry_reference_v12_holdout_pilot_01",
+      "initial_conditions_bitwise_identical": true,
+      "success_gain_percentage_points": 0.0,
+      "wins": 0,
+      "losses": 0,
+      "geometry_block_bootstrap_95_percent_interval_pp": [
+        0.0,
+        0.0
+      ],
+      "mean_peak_force_difference_N": 0.446048100789388,
+      "geometry_block_bootstrap_95_percent_force_difference_N": [
+        -3.0645539813571507,
+        3.507352081934611
+      ]
+    }
+  ],
+  "safety_thresholds_unchanged": true,
+  "initial_conditions_bitwise_identical": true,
+  "bootstrap_unit": "furniture geometry, preserving the nine correlated initialization trials"
+}

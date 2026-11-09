@@ -1,0 +1,101 @@
+## Delivery complete — monitor paused
+
+The final comparison and58.4-second video have been opened in the Mac app and browser. Automation finish-resting-ppo-comparison is PAUSED. Both main runs and all evaluations are complete; no additional training or policy promotion.
+
+## Completed and independently reviewed — 2026-10-16
+
+The positive-slope study is complete. Both seeds61111/61117 trained all12updates,3at8seconds and9at6seconds after passing the current/prospective development gates. Main budget:216000active+3600indexed warmup perseed=439200total physics transitions;3600initial settling ticks are separate. The learned action is only a one-second±.001rad symmetric approach pulse at6–7seconds. The reference resumes until the frozen59117 resting policy acts11/15seconds. This is limited earlier intervention, not continuous PPO takeover or unassisted sitting.
+
+Both full-budget final policies retain18/18clean admitted development trials. Across all24development trials they have22stable,18clean,6slipping and2physical hip-pitch-housing contacts. The six excluded stress trials remain explicit failures:36cm/+15,+20degrees and40cm/+20degrees; housing contacts remain at36cm/+20degrees. No thresholds, frozen definitions or budgets were altered after launch.
+
+On24unseen trials (12geometries repeated twice,37/39/41/43cm×+6.25/+11.25/+16.25degrees), both finals and the repaired reference/parent have24stable,20clean,4slipping,zero unwanted contacts or other physical failures. Slipping remains on37cm/+11.25and+16.25degrees, both placements. Previous reference/current59111/59117/60117 each have18stable/clean,6slipping and4unwanted contacts. The repair improves reliability; the new PPO adds no further clean successes. Conservative margin warnings remain: finals61111/61117 have8/24and4/24strict-margin-clean holdout trials. The legacy force ratio is not actual static friction capacity.
+
+Effort uses only common full-duration clean successes, never failed fragments. On20clean unseen pairs versus repaired reference, final61111/61117 reduce total37-joint torque-squared by1.03277%/1.01799% whole20seconds,3.27835%/3.22883% final10seconds and6.97862%/6.92878% final5seconds. Final5s leg torque-squared changes−12.2356%/−12.1484%; upper-body changes−.0343%/−.0337%. Whole-trial absolute torque decreases.59284%/.58620%; mean instantaneous joint RMS decreases.98255%/.97181%. Almost all savings already come from frozen59117. Against that policy on the same repaired motion, incremental whole20changes are−.00237%/+.01256% and final5changes−.00858%/+.04500%: tiny, inconsistent, no demonstrated new effort benefit. On16common clean cases versus current59117, whole20changes−.00157%/+.00508%; versus currentearly60117, final5effort increases.01554%/.04712%. Grouped height/slope and strict-policy subsets are preserved in verification/review_audit JSON.
+
+Development selection froze before holdout:61111block1 and61117block2, both6seconds. Full-budget block3 finals remain separate. Selected61111's later24-environment development replay slipped once at10.50seconds on44cm/+15degrees case21, despite its18-environment selection evaluation passing. Exact checkpoint load verified; do not attribute this conclusively to batch-size/numerical effects without further evidence. Report17/18admitted clean and17/24overall for this selected checkpoint. Selected61117 retains18/18admitted clean. Both selected policies have20/24clean holdout and no meaningful incremental effort gains. No policy promoted; no post-holdout reselection.
+
+Independent `ppo_01/verified_03/verification.json` passed and exactly equals verified02:188frozen source/input hashes,17,849protected prior/preflight files, finite changed actor/critic weights, CPU optimizer replay, exact Adam continuity, smoke/main initial parity, all active/warmup/pulse/gap/reference/parent budgets, exact final/selected loads,414sensor-channel starts, locked prefixes, bounded commands/fixed fingers, full20second horizons and holdout barrier. Actual accepted actor steps91/93, critic96each; actor rollback respected. CPU replay weight atol5e-5/rtol5e-4, action inference atol/rtol1e-5; physical startup/prefix arrays exact. Actual pulse-window ticks10800perseed; inherited eligibility-after-start counts are not continuous new-actor control.
+
+Geometry was available at all2448audited observations per unseen final through the physical-evaluation failure boundary; maximum plane-offset error2.2403mm and normal error.3232degrees. The observed failures do not show lost geometry observations as their cause. Torque remains an effort proxy, not electrical energy/global optimum; two seeds and repeated nearby rigid slabs do not establish arbitrary-surface generalization.
+
+Final export `/data/humanoid-sitting-perception/positive_slope_01/final_export_01` copied to Mac `validated_positive_slope_01/final_results`; all236original files SHA256-verified. Additive review.html/review_audit.json clarify failure/contact unions and incremental gains; original report and frozen sources unchanged. Independent local verifier copy `validated_positive_slope_01/independent_verified_03`. Video independently rechecked against every trace:480episodes,355SUCCESS/125FAILURE,48conditions,58.4seconds,H264,1920×1080,1752frames,allfirst-event frames included. SHA256 fbe83f6eea2725660d0e98f2c346693e78cede6386d6feec4095cb646823e42b. Explicit offline schematic from recorded transforms/modelCOM. comparison.png,curriculum.png,readable report and representative clean/slip/contact/selected-regression/event frames visually inspected. Local report http://127.0.0.1:8805/review.html; video final_results/video/summary.mp4. No additional simulations or training launched in final review.
+
+All earlier status entries below are historical. Deliver the final comparison and video, then pause automation `finish-resting-ppo-comparison`. Useful next development targets are the remaining low-seat positive-slope transfer slips and sustained feedback control; these are not newly launched experiments.
+
+---
+
+## Main training complete; matched final evaluations running — 2026-10-16 11:33 UTC
+
+Both seeds finished all12updates and the scheduled219600physics transitions each (439200total). Both trained3updates with the8–9s pulse and9updates with the6–7s pulse,after passing both current/prospective18-case gates. Final development gates retained18/18clean outcomes. These are development results,not yet an unseen-surface conclusion. Selection froze before holdout:61111 selected block1;61117 selected block2. Full-budget block3 finals remain separately evaluated. No policy promoted.
+
+Both final checkpoints and selections were verified to precede the holdout barrier;scheduled budgets and exact checkpoint hashes passed the preliminary training-completion audit atppo_01/training_completion_snapshot_01.json. Full independent optimizer/source/action/final-evaluation checks stillawait worker completion. Both workers nowrun matched reference/parent/final/selected evaluations including the24 reserved holdout trials;positive_slope_finalize waits. Rootstatus nowreflects holdoutstarted. Finalcomparison andupdated<60s video remainpending;normal progress requires no intervention.
+
+## Main PPO launched and independently checked — 2026-10-16 10:33 UTC
+
+Both seeds (61111/61117) began the admitted main study at10:29UTC on separate GPUs. Both have completed their first update and remain in block0 at the8-second intervention stage. Their fresh initial actor/critic/optimizer checkpoints exactly match the admitted8-second smoke initializations, with zero inherited optimizer updates; the frozen59117 parent is exact. Independent launch audit:ppo_01/launch_validation_01.json. All188 frozen source/input hashes and17,849 protected prior/preflight files passed.
+
+Both new8-second zero/global/indexed replays matched exactly. Each seed passed36/36 exploration trials,36/36 two-update smoke trials and18/18 matched deterministic smoke evaluations without slipping, unwanted contact or physical failure. CPU optimizer replay passed. Conservative margin warnings remain; this is not a strict-margin or static-capacity certificate.
+
+Frozen main budget:four3-update blocks per seed,18 complete20-second trajectories per update;216000active+3600indexed warmup=219600physics transitions per seed,439200total.3600initial settling ticks excluded. New PPO controls a bounded one-second approach pulse at8–9s;the reference resumes before the frozen resting parent acts11/15s. Candidate6s requires current/prospective stability and effort gates. This is not continuous PPO takeover or unassisted sitting. No reward,control,geometry,criteria or budget changes after freeze.
+
+Persistent sessions:positive_slope_ppo_61111,positive_slope_ppo_61117,positive_slope_finalize. Current status:ppo_01/status_61111.json,status_61117.json andfinalization_status.json. Main is launched;earlier statements that main has not started are historical. Holdout remains untouched until both final checkpoints and selections are fixed. Runtime/validationv4;common/worker/verifier/finalizer/reportv5. Runverify_positive_slope_study_v5.py into freshverified_03 aftercompletion. Finalcomparison andunder-one-minute video stillpending;interimrepair video isnot the newstudy result. Automation staysactive andquietduringnormalprogress.
+
+## Verified at2026-10-16T10:12Z:earlier pulse physical probes passed
+
+Both8–9s pulse probes PASSED:61111=36/36 and61117=36/36 full20s stable/no-slip/no-unwanted-contact/no-physical-failure trials. Independent active-tick,startup/prefix andactual414-channel parent/bounded-action audit passed. Conservative margin warnings remain;no strict-margin or static-capacity claim. Evidence:pulse_timing_probe_05/independent_validation.json. Bothpreflight workers began fresh8s zero/global/indexed replay at10:12:01Z,then2update smokes andmatched evaluations ifexactreplay passes. positive_launch_v6 remainsguarded;main/holdout notstarted. No budget/gate changes.
+
+## Current continuation: pulse timing probe at8s,October16
+
+The9s pulse improved random exploration to71/72clean but61117 stillslippedonce on36cm/+5deg at10.58s;all72stable,nocontact/otherphysicalfailure.61111 additionallypassed36/36smoke,18/18evaluation,CPUreplay anddevelopmentgate;incrementaleffort savings tiny(~0.005%whole20/~0.012%final5),notmain/unseenresults.2smokeupdates only,preserved;main/holdout neverstarted. pulse9_archive_05 preserves350outputs andsources.
+
+Nowtestingsameone-second±.001radpulse at8–9s onbothseeds toallow more settling. Runtime/reference/parent/reward/geometry/physicalthresholds unchanged. Probe:pulse_timing_probe_05/status_61111/61117.json. Bothprobes mustpass beforeconditionalpositive_pulse8_preflight_gpu0/1 performnewzero/indexedexact replay,2updatesmokes,matched20sevaluations. Live preflightpreflight_pulse8_05_status_gpu0/1.json;positive_launch_v6 waitsguarded freeze. Currentorchestration/verifier/finalizer/reportv5,runtime/validationv4. Maininitial8then6onlyifnewadmission/current/prospective gatespass;439200budget unchanged. No9sgatebypass orcontinuousPPOtakeoverclaim. Bothfinals/selections stillrequired beforeholdout. No policy promotion.
+
+## Current continuation: smooth early-release preflight, October16
+
+Smaller persistent.001rad exploration FAILED:61111=35/36clean,61117=33/36clean;72stable,4true pelvis-seat touchdown slips,no foot slips/unwanted contacts/other physical failures. No optimizer/main/holdout started. Preserved in early_span_001_persistent_archive_04 with114 original output hashes;diagnosis exploration_failure_diagnosis_02.json.
+
+New documented pre-main repair uses a one-second smooth±.001rad approach pulse,zero by10s from9s start;reference controls touchdown andgap until unchangedparent59117at11/15s. This is earlier bounded intervention,not continuous PPO takeover. Same reward,physical criteria,geometry and439200 mainbudget. Software envelope checks passed;physical validation pending. Persistent positive_pulse_preflight_gpu0/1 runnewzero replay/exploration/smokes/evaluation underpreflight_pulse_04;live statuspreflight_pulse_04_status_gpu0/1.json. positive_launch_v5 guardsfreezeandmain;never bypassfailure. Currentruntime/worker/freeze/verifier/finalizer/report arev4. Useverify_positive_slope_study_v4.py forindependent finalchecks. Separateactual pulse/reference-gap/parentticks.
+
+Holdout staysclosed untilbothfinals/selections;allprior studiesunchanged. Finalcomparison/video remainpending;interim58.4s repairvideo isnotnewPPO.
+
+## Current continuation: bounded positive-slope preflight, October16
+
+The .004rad exploration FAILED zero-slip admission:61111=34/36clean,61117=32/36clean;72/72stable,no unwanted contacts or physical failures. Six real pelvis-seat touchdown slips remain failures. No optimizer/main/holdout ran. Diagnosed all-tick evidence and original sources/results preserved in early_span_004_archive_03 and exploration_failure_diagnosis_01.json.
+
+Documented pre-main revision reduces only early bound to.001rad;9s start,1s ramp,parent11/15s,reward,geometry,no-slip definition,and439200main budget unchanged. Exact source-transform audit and both saved same-GPU full-trace/414-channel zero replays revalidated. Two persistent positive_bounded_preflight_gpu0/1 workers repeat exploration,2update smokes andmatched20s evaluations under preflight_bounded_03;positive_launch_v4 waits for both checks before independent admission/freeze/main. Inspect preflight_bounded_03_status_gpu0/1.json andlaunch_v2_status.json. Do not call v2 failed statuses active progress. Current scripts common/runner/validation/worker/freeze/verifier/finalizer are v3;launcher v4. Never bypass failure. Main not started at this update.
+
+Final verifier verify_positive_slope_study_v3.py;required report/video andholdout embargo unchanged. Existing58.4s repairvideo remains interim. Automation remains active until new comparison/video delivered.
+
+# Positive-slope continuation — October16,2026
+
+Active request:repair steep positive slopes,validate zero slipping/unwanted contacts,train earlier PPO,compare current policies and update under-one-minute outcome video. Work Mac SSH kfuUbuntu only,no second agent. Prior studies untouched.
+
+Data:/data/humanoid-sitting-perception/positive_slope_01.15596initial prior files protected. Positive pitch descends toward feet. Holdout24trials/12geometries is untouched. Development24trials/12geometries,36/40/44cm×+5/+10/+15/+20deg.
+
+Completed:assessment independently verified;old reference/current59111/59117/60117 each14clean/24,16stable,6physicalcontact failures,10slipping cases. Rejected60111 has13clean. Uncleared0.66rad fallback moves support toward seat edge. Original first10s reliable.
+
+Repairs all retained:01=18clean;02=12clean,4impacts;03=16clean,low20deg hip-pitch-housing contact confirmed;04load-feedback=12clean;05slower=16clean. Original01/02 diagnostic close exception occurred AFTER physics saved;closure recovery verifies all24×20s without fabricating missing body names. Original logs/sources retained.
+
+Repair06 now COMPLETE:reference and frozen59117withconditionalhandoff both22stable/18clean,2physicalcontacts,6slipcases. Exactly preserve first10s andstartup414channels. Already-clear44cm/+15deg keeps original upright reference. Resting59117acts11s on preserved references,15s only on new5s sensor-planned transfers;this removes two policy-induced40cm/+15deg slips. Parent motion exactly equals current59117 on14previous clean cases. Against repaired reference on18commonclean:−1.0346%whole20,−6.5922%final5torque². Existing-policy/controller gains,not newPPO.
+
+Explicit pre-main domain revision:train9clean geometries×2=18. Keep6knownstress rows (36/+15,+20;40/+20) inall24development comparisons;no hidden failures. Low36/+20 retains2physical contacts,all6stresscases slip. Holdout stillclosed. initialdraft24env budget superseded BEFORE new optimizer/main inpre_main_revision_01/02. Readcurrentprotocol,notoldprovisionalnumbers.
+
+Materialaudit:robotfrictionstatic/dynamic0.5/0.5,seat/floor0.8/0.6. Legacy utilization denominator0.6 isnot actualstaticcapacity. Failed originalpreflight preserved:reference18clean butratio>1;parent16clean and2real slips. Newv2 keeps0.90warnings/penalties andallphysical/slip/contact definitions;admission checks actual zero-slip/contact stable outcomes,not inferredcapacity fromlegacyratio. No material changed.
+
+Persistent positive_launch_v2 now gatespreflight→freeze→main. positive_preflight_v2_gpu0/1 execute independent clean-domain baselines,zero/indexed replay,randomexploration,two-update optimizer smokes,matchedsmokeevals andCPUreplay. Inspect launch_v2_status.json andpreflight_v2_status_gpu0/1.json. NO mainPPOstarted unless launchphase main_launched andppo_01/protocol.json admitted/frozen. No holdout simulation beforebothfinalsandselections. Never bypassfailedgate.
+
+Proposedmain:newseeds61111/61117,fresh3action earlyactor,414inputs,±.004rad1sramp,9→8→6s gates;frozen59117atconditional11/15s. Four3updateblocks,18envs,219600physics/seed,439200total,3600initialsettlingexcluded. Seeprotocolforfullreward,gates andstrict budget. Scripts *_v2 separatefromfailedpreflight. Mainworker/freeze/verifier/report/finalizer nowbuilt;finalsourcefreezeonlyafterpreflight.
+
+diagnosis_export_01 copied/hashverified locally validated_positive_slope_01/diagnosis_results:57files,58.4s H264,168episodes(99success/69failure),allcoverage/firstevents verified. Itshowsinitialfivecontrollers+repair01/02,notlatest06ornewPPO. Plot andfailure/repair-success frames inspected. Newrenderer fixes XYZW quaternion interpretation forheadCOMonly;bodypositions andphysicsunchanged;oldoutputs preserved. Updatefinalvideoafterfinalcomparison. Do not present interimvideoasnewtrainingresult.
+
+On completion independentlyrun verify_positive_slope_study.py --study .../ppo_01 --output freshverified_03,copyfinal_export_01to localvalidated_positive_slope_01/final_results,checkSHA256,inspectcomparison/curriculum/report/video,reportcleanstability andpairedall37jointeffortseparatelyrepairvsnewPPO. Actualtrainedtimesandfallbackmustbeexplicit. Deliveractual<60sMP4thenpausefinish-resting-ppo-comparison. No policy promotion.
+
+## Reset replay recovery (before main training)
+
+Original cross-GPU zero/indexed replay failed exact identity late in episode2, despite exact414-channel parent inputs and36/36clean outcomes in both runs. Frozen parent inference differed by at most1.192e-7 in macro actions across GPU types, eventually causing up to0.5015mm position difference. All originals are preserved in reset_recovery_01/manifest.json and preserved/. No numerical tolerance or physical criterion is silently enlarged. New paired probes run both harnesses on each SAME physical GPU and require every full trace and actual parent input/action to match exactly. No optimizer runs during this diagnostic. Two additional36-trajectory runs cost72000active+900indexedwarmup,900initialsettling excluded,separate from main. The control/reward/geometry/budget definitions are unchanged. Persistent positive_launch_v3 waits for this recovery and remaining preflight; launch_v2_status.json remains the current gate state.
+
+## Verified continuation at2026-10-16T08:30:55Z
+
+Both same-GPU zero/indexed-reset replays PASSED exactly:every trace array and actual414-channel parent inputs/actions. This confirms the preserved cross-GPU numerical-inference explanation. zero_validation_61111/61117.json identify the paired sources. Both GPUworkers now run explore_61111/61117, then2update smokes andmatchedsmokeevals. positive_launch_v3 remainsguarded;main/holdout notstarted yet. No physical threshold or numerical tolerance relaxed.
+
+Updated168episode repairvideo COMPLETE:58.4sH264,105SUCCESS/63FAILURE,allfirsteventframes andcoverageverified. Copiedtolocalvalidated_positive_slope_01/repair_validation_results,55originalfilesSHAverified. review.html/review_audit.json clarify contactunion;physicalhousingcontact failurescount2. comparison.png andsuccess/failureframes visuallyinspected;browserreportlocalhost8804/review.html,localserverexecsession34520. Video/repairresults delivered asinterim;newPPO/unseencomparisonpending. AutomationACTIVE until finalcomparison/video delivered.

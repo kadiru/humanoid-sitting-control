@@ -1,0 +1,22 @@
+# Complete: near-seat transfer and progressive PPO — October 15, 2026 PDT
+
+Read `docs/NEAR_SEAT_CURRICULUM_STATUS.md` and frozen `docs/NEAR_SEAT_CURRICULUM_PROTOCOL.md` on Ubuntu. Work directly through Mac SSH to `kfuUbuntu`; never start another coding agent. Root: `/data/humanoid-sitting-perception/near_seat_curriculum_01`. All authorized runs/evaluations and the reviewed comparison are complete. No extra training or policy promotion. Pause the named completion automation after reporting.
+
+Both fresh seeds57111/57117 completed128updates, but neither progressed to standing starts:0 standing-training transitions. Both passed stages5/4 (settled .1/.2rad), then spent88updates atstage3 (actual10s approach crouch). Finalstage3 stable success4/18 and5/18; strict0/18 each;2forbidden-contact failures each at42cm/−5°, starting0.18s/0.16s into transfer. No curriculum gate was bypassed.
+
+Final standing holdout (8reserved geometries repeatedtwice): currentreference and currentPPO56211/56217 each16/16,0physical failures; rollingreference1/16,4physical; new57111=0/16,4physical;57117=8/16,4physical. Strict whole-trial no-slip/friction/contact counts0/16 and1/16 for newpolicies. Development standing0/18 and9/18,4/2physical failures, versuscurrentbaselines18/18. The newpolicies' physical failures are forbidden contacts. Holdout failures occur at39.25/40.75cm with−6.25°; other misses concern continuous support/friction.57117 first contacts unwanted geometry at9.52s on40.75cm/−6.25°, before rolling starts at10s: residual actions change an approach phase not trained from.
+
+On57117's8common successful holdout trials only, whole20s/final10s/final5s summed37joint torque² changes: vsreference−39.330%/−79.833%/−88.211%; vs56211−36.457%/−77.956%/−86.416%; vs56217−37.893%/−78.913%/−87.379%. Final5s seat load78.81%BW vsreference10.78%; torque²102.88 vs872.68Nm²; average instantaneous joint RMS1.667 vs4.855Nm. Legs−97.58% butupperbody+70.27%vsreference. These savings do not offset stability loss or establish clean transfers; only1holdout trial isstrict.57111hasnosuccesses and no valid savings claim. No common holdout successes between57117androllingreference, so no paired effort claim there.
+
+Near-seat final retention:both18/18strict,0physical failures. Compared with identical-start rollingreference, whole20s torque² INCREASES7.23%/21.76%; final5s+7.70%/+21.76%, drivenby leg torque. The physically validated rollingreference itself stillpasses18/18,~75%BW seatload, with2.67%/35.13% final5s savings versusholding the two nearstartposes. Those are reference-motion gains, not learned standing gains.
+
+Verification01/02 plusfreshindependent03 pass with identicalJSON.30frozen/4714prior hashes unchanged, exact startups and finalcheckpointloads, finitechangedactor/critic, criticwarmactoridentity, Adamcontinuity/steps, full20s horizons, fixedfingers and bounded-commandcode/100ms slew checks pass. Main737280transitions=681632active+55648indexedwarmup;7200initialsettlingexcluded;5760smokeseparate. Eachseed368640:57111active340672/warm27968;57117active340960/warm27680. Unfinished/pendingwarmup perblock accounted. No standing training. Both finals preceded holdout. Savednearstartupobs precede rolling-planconstruction; don'toverstate their identity asfirstactorinput.
+
+Newpolicy measuredplane remainsavailable beforefailure in allstandingevals; worstoffset2.19mm,normal.381°, foot-anchoredroot-xerror up to6.75mm withfootmotion. Runtime406sensor/referencechannels,23boundedresiduals,14fixedfingers; truthreset/reward/evaluationonly; explicitreference/horizontalplacementassistance remains. Two seeds/repeatedrigidslabs aren't arbitrary-surface generalization; torqueproxyisnotenergy/globaloptimum.
+
+Mac package:`validated_near_seat_curriculum_01/final_results` (605originalSHA256entriesverified; supplemental REVIEW_SHA256.json). Remote:`final_export_01`. Freshcheck:`ppo_01/verified_03`. Report:http://127.0.0.1:8799/final_results/review.html; originalfindings,comparison/curriculumplots andmatchedreplay preserved. Plots/report/replay visually inspected. Proposed nextresearchonly: smaller validated bridge, smooth preload release, and preserve the successful approach while training the newtransition. Neither is a validated fix; noadditionaltraininglaunched.
+
+---
+
+Historical records follow; completion above supersedes their active status.
+

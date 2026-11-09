@@ -1,0 +1,21 @@
+[
+  "ffmpeg",
+  "-nostdin",
+  "-n",
+  "-i",
+  "/home/kadir/humanoid-sitting/runs/seated_hold_policy_video_comparison_02/seated_baseline_0000.mp4",
+  "-i",
+  "/home/kadir/humanoid-sitting/runs/full_transition_policy_video_02/transition_0000.mp4",
+  "-filter_complex",
+  "[0:v]drawtext=text='Preserved policy - starts seated':x=20:y=20:fontsize=22:fontcolor=white:box=1:boxcolor=black@0.7[a];[1:v]drawtext=text='New residual PPO - starts standing':x=20:y=20:fontsize=22:fontcolor=white:box=1:boxcolor=black@0.7[b];[a][b]hstack=inputs=2[v]",
+  "-map",
+  "[v]",
+  "-an",
+  "-c:v",
+  "libx264",
+  "-crf",
+  "20",
+  "-pix_fmt",
+  "yuv420p",
+  "/home/kadir/humanoid-sitting/runs/full_transition_comparison_02/comparison.mp4"
+]

@@ -1,0 +1,98 @@
+{
+  "classification": "Unexecuted proposal, requiring a specific exception to terminal/changed-face restriction; unchanged45-second allowance",
+  "total_seconds": 45,
+  "address_space_bytes": 42949672960,
+  "concurrent_scientific_workers": 1,
+  "clock": "Single monotonic origin at supervisor entry before imports/source/input/runtime hashes/load, cold solve, output, full numerical return checks and separate independent audit. No reset/reserve/extension; only remaining time passed once to backend. Kill process group and reap at deadline; any overshoot reported and rejected.",
+  "initialization": {
+    "accepted_state": "finite_model_step_20261020_v1/mapped.npz,actual.npz,accepted_J.npz,map.json",
+    "saved_full_input": "changed_state_primary_20261020_v1/full_matrix.npz,full_arrays.npz,full_equality.npz",
+    "inherited_proof": "changed_state_primary_20261020_v1/input_proof.json",
+    "merit": 0.12270472005373632,
+    "trust": 1,
+    "cold": true,
+    "x0_basis_restart": false
+  },
+  "equations": [
+    "Minimize t over original78790-direction d and scalar t. Retain sealed full-original M*w<=b, E*w=e, native bounds. No added t=0 equality or paired-row equality replacement.",
+    "Kept original rows: -Akeep*d-soft*t<=rkeep-guard; consistency BOTH signs: C*d-t<=-h and -C*d-t<=h; normalized closed feature/control/drop rows: +/-Hnorm*d<=unchanged closed RHS; original zero E; t in[0,1]; all other native bounds infinite, with closed bounds still enforced as rows.",
+    "Use returned backend primal and marginals unchanged: y=-ineqlin,nu=-eqlin,upper=-upper,lower=lower. Stationarity c+M.T*y+E.T*nu+upper-lower; absolute duality gap |c*w+b*y+e*nu+finite_upper*upper-finite_lower*lower|. No old t=0 analytic dual applies.",
+    "Require finite full original primal/equality/bounds, stationarity and absolute gap<=1e-9; exact nonnegative inequality/bound duals and exact zero duals at infinite bounds. No clipping/repair/normalization.",
+    "Independently recompute actual theta=max(0,-(r+A*d)_soft,abs(h+C*d)); require theta<saved mu. Only then preserve untouched primary point and actual(mu+theta)/2 ceiling. Primary is NEVER a finite motion command."
+  ],
+  "input_associations": {
+    "full_variables": 78791,
+    "direction_variables": 78790,
+    "scalar_column": 78790,
+    "full_rows": 652529,
+    "full_nnz": 2614306,
+    "equality_rows": 1366,
+    "equality_nnz": 0,
+    "kept_original_rows": 331495,
+    "all_original_rows": 331888,
+    "positive_consistency_rows": [
+      331495,
+      399745
+    ],
+    "negative_consistency_rows": [
+      399745,
+      467995
+    ],
+    "closed_interval_rows": [
+      467995,
+      652529
+    ],
+    "interval_rows": 92267,
+    "old_state_reduced_systems": 0
+  },
+  "witness_mechanism": "The completed attempt restricted t to zero and returned no point. Full minimax asks whether a strictly smaller residual than currentmu is attainable without requiring it to vanish in one local step. A positive t is only an intermediate residual, never a physical tolerance change. Whole-LP infeasibility was not established by the failed zero-face solve.",
+  "premise_associations": [
+    "Accepted finite/model summary supplies mu0.12270472005373632; input_proof binds exact current full M/RHS/E/intervals at that same state.",
+    "Saved auxiliary soft merit0.09895469355627554 is below mu by more than2^-20; hard auxiliary rows were positive and guards are at most half their positive value; zero direction satisfies current closed box/trust/drop rows. Thus d=0,t=mu is a plausible baseline from saved evidence. This is a design implication, not a newly executed point certificate, warmstart or improvement claim."
+  ],
+  "operation_costs": {
+    "full_M_products_per_implementation": 5228612,
+    "prediction_A_C_products_per_implementation": 1301654,
+    "producer_plus_auditor_sparse_products": 13060532,
+    "exact_rational_products": 0,
+    "new_assembly_or_interval_proof": 0,
+    "completed_proof_replay": 0,
+    "runtime_file_bindings": 2362,
+    "input_file_bindings": 26
+  },
+  "storage": {
+    "required_free_bytes": 1073741824,
+    "numerical_output_bound_bytes": 134217728,
+    "working_memory_hard_limit_bytes": 42949672960,
+    "full_CSR_bytes_without_headers": 33981792,
+    "backend_internal_factorization_bound": "Only hard40GiBAS and max4096iterations; no promised factorization/crossover count, return time or convergence."
+  },
+  "charged_costs": [
+    "Each worker rehashes all bound input/runtime files; imports and JSON/NPZ parsing; duplicate matrix/array loads; matrix transpose and solver data conversion.",
+    "Backend native allocations, factorization and crossover; complete primal/dual/stationarity/gap checks; dense prediction and residual arrays; source hashes, output writes and separate audit reads all count in45s."
+  ],
+  "solver_options": {
+    "method": "highs-ipm",
+    "presolve": true,
+    "maxiter": 4096,
+    "primal_feasibility_tolerance": 1e-09,
+    "dual_feasibility_tolerance": 1e-09,
+    "ipm_optimality_tolerance": 1e-09,
+    "time_limit": "Remaining shared45s, passed once"
+  },
+  "finite_return_cost": "Zero finite maps in this diagnostic. An accepted primary cannot be executed. Any later interior would need a fresh full-original problem at the actual ceiling, backend/full KKT checks, exact unscaled positive eta over92267 intervals/125867H products per implementation, immutable finite encoder and independent audit, fresh mechanics/J, actual physical/runtime gates and full72retention. None is included, waived, prepaid or automatically launched here.",
+  "success_test": "All frozen identities and full numerical checks pass, backend success, theta<mu, untouched point and actual ceiling independently audited before45seconds. This is only a linear research witness.",
+  "failure_test": "Missing/nonfinite/uncertified point, no strict improvement, infeasible status, memory/disk/deadline or audit failure terminates the single attempt. No backend retry, increased budget, parameter/trust/guard/box/tolerance change or automatic later solve.",
+  "net_savings": "Reuse only already sealed SAME-state full input and proof by identity; no proof or assembly arithmetic replay and no rational graph lifting. Returning to the full inequality system increases row count from516029 to652529 and replaces sparse equality closure with signed inequalities; no speedup claimed. Credibility comes from the changed question, not a promised computational shortcut.",
+  "counts": {
+    "cold_primary_calls_max": 1,
+    "interior_calls": 0,
+    "finite_maps": 0,
+    "model_calls": 0,
+    "J_calls": 0,
+    "simulation_calls": 0,
+    "PPO_updates": 0,
+    "holdout_trials": 0
+  },
+  "physical_criteria": "Unchanged.64/72clean;all64protected;all8unresolved;PPO/holdoutclosed."
+}

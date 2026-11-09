@@ -1,0 +1,74 @@
+{
+  "controller": "contact-v12 scripted; zero PPO residual",
+  "trials": 432,
+  "development_trials": 144,
+  "held_out_trials": 288,
+  "geometry_banks": [
+    9612,
+    10514,
+    10515
+  ],
+  "held_out_geometry_banks": [
+    10514,
+    10515
+  ],
+  "initialization_seeds": [
+    [
+      2040,
+      2041,
+      2042
+    ],
+    [
+      3107,
+      3108,
+      3109
+    ],
+    [
+      3110,
+      3111,
+      3112
+    ]
+  ],
+  "success_rate": 1.0,
+  "fall_rate": 0.0,
+  "unintended_contact_rate": 0.0,
+  "excessive_force_rate": 0.0,
+  "joint_torque_violation_rate": 0.0,
+  "maximum_seat_force_N": 616.0780639648438,
+  "seat_force_limit_N": 632.52783203125,
+  "maximum_descent_m_s": 0.18932098150253296,
+  "minimum_seated_hold_s": 6.539994716644287,
+  "promotion": "scripted rigid stage 2 only; residual PPO is not promoted",
+  "registered_task_validation": "../geometry_reference_v12_registered_task_validation_01/results.json",
+  "registered_task_repeats_144_held_out_conditions_not_counted_as_new_trials": true,
+  "families": {
+    "chair": {
+      "trials": 108,
+      "successes": 108,
+      "max_force_N": 616.0780639648438,
+      "max_descent_m_s": 0.18932098150253296,
+      "minimum_hold_s": 7.31999397277832
+    },
+    "bench": {
+      "trials": 108,
+      "successes": 108,
+      "max_force_N": 485.11444091796875,
+      "max_descent_m_s": 0.1875162124633789,
+      "minimum_hold_s": 7.399993896484375
+    },
+    "box": {
+      "trials": 108,
+      "successes": 108,
+      "max_force_N": 496.9208068847656,
+      "max_descent_m_s": 0.1794574111700058,
+      "minimum_hold_s": 6.539994716644287
+    },
+    "rigid_couch": {
+      "trials": 108,
+      "successes": 108,
+      "max_force_N": 506.3180847167969,
+      "max_descent_m_s": 0.1834126114845276,
+      "minimum_hold_s": 8.25999927520752
+    }
+  }
+}

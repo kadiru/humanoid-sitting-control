@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd /home/kadir/humanoid-sitting
+bash scripts/run.sh python ../scripts/evaluate_geometry_reference.py --deployment-checkpoint ../runs/deployment_status_mask_05/student.pt --contact-estimator ../runs/contact_estimator_dagger_04/contact.pt --soft-landing-mode actions --deployment-perception ../datasets/deploy_rgbd_confirmation_05 --deployment-action-rate .05 --summary-only --compact-recording --geometry-seed 25001 --geometry-count 12 --seeds 3401 --output ../runs/soft_landing_dagger_contact_clean_04 --device cuda:0 > logs/soft_landing_dagger_contact_clean_04.log 2>&1
+bash scripts/run.sh python ../scripts/evaluate_geometry_reference.py --deployment-checkpoint ../runs/soft_contact_ankle_dagger_04/student.pt --contact-estimator ../runs/contact_estimator_02/contact.pt --soft-landing-mode actions --disable-contact-feedback --deployment-perception ../datasets/deploy_rgbd_confirmation_05 --deployment-action-rate .05 --summary-only --compact-recording --geometry-seed 25001 --geometry-count 12 --seeds 3401 --output ../runs/soft_landing_dagger_ankle_clean_04 --device cuda:0 > logs/soft_landing_dagger_ankle_clean_04.log 2>&1

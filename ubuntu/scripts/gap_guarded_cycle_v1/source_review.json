@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "classification": "Static source review; no study arrays or scientific execution",
+  "proposal_sha256": "72c4aafa098419ba2ee69623ff5597b4fab14fd8626befb5a99a835f975253b2",
+  "source_files": 23,
+  "solver_call_sites": [
+    "A/producer.py",
+    "B/producer.py"
+  ],
+  "independent_arithmetic_modules_do_not_import_producers": true,
+  "obsolete_origins_absent": true,
+  "physical_criteria_unchanged": true,
+  "execution_approved": false,
+  "stages": {
+    "A": {
+      "input_bindings": 40,
+      "runtime_bindings": 2362,
+      "limits": [
+        600,
+        420,
+        480,
+        598
+      ],
+      "contract_sha256": "d12cdb0d5afc802845cca6b1c01d8a76c93e4c19a8eedf70a4c0475c09b86c12"
+    },
+    "B": {
+      "input_bindings": 40,
+      "runtime_bindings": 2362,
+      "limits": [
+        600,
+        420,
+        480,
+        598
+      ],
+      "contract_sha256": "b730c4cf9e7234c4fe9c0809c0ec3c567d55db942c440d142bdd45a90028a15d"
+    },
+    "C": {
+      "input_bindings": 54,
+      "runtime_bindings": 6701,
+      "limits": [
+        45,
+        0,
+        30,
+        44
+      ],
+      "contract_sha256": "49d5f29077160ede453fbb159a48d1c3323c457c4b6fe50d114d4e21f17565cc"
+    }
+  },
+  "manual_review": [
+    "A uses saved hash-bound augmented input without reassembly or old proof replay; original primal separately audited.",
+    "A and B retain raw returned arrays and exact dual signs; strengthened KKT replaces only the explicitly proposed original-only optimality condition.",
+    "B independently checks each original slice/RHS and both added rows with zero eta coefficient before its one cold solve.",
+    "Exact B trace is independently accumulated as dyadic integers; C inherits it without H/P/N/eta replay.",
+    "C retains original finite map, mechanical summaries and independent rounding/metric audit; two separate actual-progress gates reject target or new-hard-row regressions.",
+    "Each stage uses parent clock, RLIMIT_AS, separate producer/audit deadlines and kill/reap; positive exits alone do not admit downstream.",
+    "Absent explicit human approval and a bound freeze, root cannot create an owner claim or launch a stage. All stages terminate at first failure."
+  ]
+}

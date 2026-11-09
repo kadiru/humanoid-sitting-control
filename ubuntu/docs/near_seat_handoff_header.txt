@@ -1,0 +1,18 @@
+# Active: validated near-seat transfer; progressive PPO running — October 14, 2026 PDT
+
+Work directly through Mac SSH to `kfuUbuntu`, project `/home/kadir/humanoid-sitting`; never start another coding agent. Read `docs/NEAR_SEAT_CURRICULUM_PROTOCOL.md` and `docs/NEAR_SEAT_CURRICULUM_STATUS.md`. New root: `/data/humanoid-sitting-perception/near_seat_curriculum_01`.
+
+The rolling-contact reference passes18/18 near-seated 20s trials at both6s and4s movement durations with zero all-tick physical, unwanted-contact, slip or friction-margin violations. Four-second transfer reaches~75% vertical bodyweight on the seat. Relative to holding the identical start, final5s squared torque falls2.67% from the .1rad start and35.13% from the .2rad start. These are reference-motion gains from near-seated starts, not learned standing gains. Static holding also passes18/18. Sensor/model-inferred contact pivot allows horizontal pelvis motion during rotation, avoiding fixed-x shear. Failed probes remain preserved.
+
+Two fresh progressive PPO seeds57111/57117 are running independently in tmux `near_seat_ppo_57111` (physicalGPU0) and `near_seat_ppo_57117` (physicalGPU1). Each128updates/368640transitions;737280total includes indexed-reset warmup, plus7200 initial settling ticks across16processes excluded from training budget. Separate smoke5760transitions. First8updates critic-only,120actor-enabled; optimizer state continues across blocks. Stages5/4 are settled .1/.2rad starts,3/2/1 are actual current-reference10/8/6s states,0standing. All18 development trials must pass strict no-slip/contact/friction plus>=60% seat weight before advancing. Do not bypass gates or add budget. Both first gates passed and reachedstage4. Full standing reference remains3/18, so standing success is unresolved.
+
+Frozen:30 input hashes,4714 protected prior hashes. Runtime406sensor/reference channels,23bounded residuals,14fixed fingers; truth only reset/reward/evaluation. Preserve frozen rewards/contracts/budget/criteria. Holdout8reserved geometries repeatedtwice opens only after both final checkpoints. Final20s standing comparisons: currentreference,currentPPO56211/56217,rollingreference,final57111/57117; near-final retention evaluated separately. No policy promotion or checkpoint selection.
+
+Persistent tmux `near_seat_finalize_01` waits for both workers, independently verifies twice, then exports `final_export_01`. Read `finalization_status.json`. If reporting/execution fails, preserve originals and document narrow recovery; never silently alter training. Copy final export to `validated_near_seat_curriculum_01/final_results`, verify SHA256, inspect plots/replay, update both handoffs and give an honest comparison including actual reached stages and actual standing-training count.
+
+Near-seat validation already SHA-verified and visually checked at Mac `validated_near_seat_curriculum_01/validation_results`; report http://127.0.0.1:8799/validation_results/findings.html. Old completion automation remains paused; persistent simulator workers/finalizer continue independently of this turn.
+
+---
+
+Historical records below; this active study takes precedence.
+
