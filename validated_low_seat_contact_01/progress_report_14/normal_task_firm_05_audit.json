@@ -1,0 +1,543 @@
+{
+  "baseline": {
+    "count": 24,
+    "stable": 22,
+    "clean": 8,
+    "slipping": 16,
+    "unwanted_contacts": 2,
+    "physical_failures": 2,
+    "margin_warnings": 21,
+    "full_duration": true
+  },
+  "candidate": {
+    "count": 24,
+    "stable": 12,
+    "clean": 8,
+    "slipping": 14,
+    "unwanted_contacts": 4,
+    "physical_failures": 4,
+    "margin_warnings": 21,
+    "full_duration": true
+  },
+  "lost_clean_cases": [],
+  "gained_clean_cases": [],
+  "added_physical_failure_cases": [
+    10,
+    11
+  ],
+  "lost_stable_cases": [
+    0,
+    1,
+    4,
+    5,
+    6,
+    7,
+    10,
+    11,
+    12,
+    13
+  ],
+  "common_clean_effort": {
+    "metrics_whole_trial": {
+      "total_squared_torque_Nm2": {
+        "n": 8,
+        "baseline": 604.8959687500001,
+        "candidate": 604.89884375,
+        "percent_change": 0.00047528833855281505
+      },
+      "total_absolute_torque_Nm": {
+        "n": 8,
+        "baseline": 62.17756689453125,
+        "candidate": 62.1782802734375,
+        "percent_change": 0.0011473252201410489
+      },
+      "all_joint_rms_Nm": {
+        "n": 8,
+        "baseline": 3.7204488525390627,
+        "candidate": 3.720475067138672,
+        "percent_change": 0.0007046085203299413
+      },
+      "leg_squared_torque_Nm2": {
+        "n": 8,
+        "baseline": 524.7918515625,
+        "candidate": 524.7945,
+        "percent_change": 0.0005046643716033472
+      },
+      "upper_squared_torque_Nm2": {
+        "n": 8,
+        "baseline": 80.1039248046875,
+        "candidate": 80.1038974609375,
+        "percent_change": -3.413534362950443e-05
+      }
+    },
+    "metrics_last10s": {
+      "total_squared_torque_Nm2": {
+        "n": 8,
+        "baseline": 310.88023828125,
+        "candidate": 310.8856875,
+        "percent_change": 0.0017528353619900017
+      },
+      "total_absolute_torque_Nm": {
+        "n": 8,
+        "baseline": 48.9584384765625,
+        "candidate": 48.95985888671875,
+        "percent_change": 0.0029012570671227422
+      },
+      "all_joint_rms_Nm": {
+        "n": 8,
+        "baseline": 2.6139710998535155,
+        "candidate": 2.614020568847656,
+        "percent_change": 0.001892484356202928
+      },
+      "leg_squared_torque_Nm2": {
+        "n": 8,
+        "baseline": 230.14809375,
+        "candidate": 230.1536328125,
+        "percent_change": 0.002406738378657458
+      },
+      "upper_squared_torque_Nm2": {
+        "n": 8,
+        "baseline": 80.7321328125,
+        "candidate": 80.73205761718751,
+        "percent_change": -9.314173906593837e-05
+      }
+    },
+    "metrics_last5s": {
+      "total_squared_torque_Nm2": {
+        "n": 8,
+        "baseline": 139.223515625,
+        "candidate": 139.2462001953125,
+        "percent_change": 0.01629363416852936
+      },
+      "total_absolute_torque_Nm": {
+        "n": 8,
+        "baseline": 37.713518554687504,
+        "candidate": 37.7171669921875,
+        "percent_change": 0.0096740840945575
+      },
+      "all_joint_rms_Nm": {
+        "n": 8,
+        "baseline": 1.9380263519287109,
+        "candidate": 1.9381846313476563,
+        "percent_change": 0.008167041629114635
+      },
+      "leg_squared_torque_Nm2": {
+        "n": 8,
+        "baseline": 55.7522744140625,
+        "candidate": 55.77357080078126,
+        "percent_change": 0.03819823844422032
+      },
+      "upper_squared_torque_Nm2": {
+        "n": 8,
+        "baseline": 83.47122753906251,
+        "candidate": 83.472615234375,
+        "percent_change": 0.001662483413022997
+      }
+    }
+  },
+  "exact_startups": {
+    "startup.npz": {
+      "root": true,
+      "q": true,
+      "command": true,
+      "geometry": true,
+      "observation": true
+    },
+    "traction_startup.npz": {
+      "policy": true,
+      "reference": true,
+      "learn": true
+    },
+    "bridge_startup.npz": {
+      "policy": true,
+      "learn": true,
+      "reference": true
+    }
+  },
+  "locked_first10": {
+    "body": {
+      "exact": true,
+      "max_error": 0.0
+    },
+    "q": {
+      "exact": true,
+      "max_error": 0.0
+    },
+    "command": {
+      "exact": true,
+      "max_error": 0.0
+    },
+    "reference": {
+      "exact": true,
+      "max_error": 0.0
+    },
+    "geometry": {
+      "exact": true,
+      "max_error": 0.0
+    }
+  },
+  "rows": [
+    {
+      "case": 0,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": false,
+      "slip_ticks": 51,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 1,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": false,
+      "slip_ticks": 57,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 2,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": false,
+      "slip_ticks": 27,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": true,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 3,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": false,
+      "slip_ticks": 26,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": true,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 4,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": false,
+      "slip_ticks": 0,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 5,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": false,
+      "slip_ticks": 0,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 6,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": false,
+      "slip_ticks": 47,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 7,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": false,
+      "slip_ticks": 48,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 8,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": true,
+      "slip_ticks": 5,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 9,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": true,
+      "slip_ticks": 5,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 10,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": false,
+      "slip_ticks": 52,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": true,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 11,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": false,
+      "slip_ticks": 56,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": true,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 12,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": false,
+      "slip_ticks": 38,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 13,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": false,
+      "slip_ticks": 38,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 14,
+      "baseline_clean": true,
+      "candidate_clean": true,
+      "stable": true,
+      "slip_ticks": 0,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 15,
+      "baseline_clean": true,
+      "candidate_clean": true,
+      "stable": true,
+      "slip_ticks": 0,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 16,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": true,
+      "slip_ticks": 1,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 17,
+      "baseline_clean": false,
+      "candidate_clean": false,
+      "stable": true,
+      "slip_ticks": 1,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 18,
+      "baseline_clean": true,
+      "candidate_clean": true,
+      "stable": true,
+      "slip_ticks": 0,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 19,
+      "baseline_clean": true,
+      "candidate_clean": true,
+      "stable": true,
+      "slip_ticks": 0,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 20,
+      "baseline_clean": true,
+      "candidate_clean": true,
+      "stable": true,
+      "slip_ticks": 0,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 21,
+      "baseline_clean": true,
+      "candidate_clean": true,
+      "stable": true,
+      "slip_ticks": 0,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 22,
+      "baseline_clean": true,
+      "candidate_clean": true,
+      "stable": true,
+      "slip_ticks": 0,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    },
+    {
+      "case": 23,
+      "baseline_clean": true,
+      "candidate_clean": true,
+      "stable": true,
+      "slip_ticks": 0,
+      "illegal_ticks": 0,
+      "failures": {
+        "fall": false,
+        "forbidden": false,
+        "torque": false,
+        "impact": false,
+        "joint_limit": false
+      }
+    }
+  ],
+  "regression_gate_passed": false,
+  "repair_complete": false
+}
