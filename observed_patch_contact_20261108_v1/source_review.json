@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "reviewer": "Single scientific owner; separate source/equation audit, no agent delegation",
+  "scope": "Source correctness only, neither arithmetic feasibility nor simulation admission",
+  "checks": [
+    "Connected adjacency uses shared edges only: first triangle neighbours upper/left second and same-cell second; second neighbours lower/right first and same-cell first. Mask is original valid AND target AND not ground; no mask extension.",
+    "Point projection uses same calibrated pixel convention as original clearance. Actual indexed triangle is the only allowed contact; all3 vertex plane and ray membership checks retained. Unknown/disconnected lookup terminates.",
+    "Every state AND jets call activates its own facet BEFORE cached evaluation; x uniquely determines active facet with fixed material marker. States/Jac caches clear at entry/exit of endpoint search. Per-triangle normal/offset derivatives are zero; original independent FD audits test full force/torque/feet/point/objective at seed.",
+    "Original camera masks, 6mm housing buffers, all physical/action criteria and root/joint boxes remain. Existing target region finite inset is checked using original basis, while active facet finite membership is separately required.",
+    "Accepted endpoint facet is frozen before dense load and whole mesh validation. Backward connection recomputes standing gap with final measured plane. Only admitted endpoint may seed its planned connection.",
+    "No previous solver/internal coordinates read. One cold 45s construction incl component traversal, all source hashing,initialization,audits,path,serialization; no retry, fallback, extra iterations or GPU."
+  ],
+  "model_validated": false,
+  "launch_requires_synthetic_fixture": true,
+  "sources": {
+    "run.py": "c5d4d2d8aa3052f2db9b4e3b0cfe7f910a01937dd40067e41d2adde730299855",
+    "audit_full_mesh.py": "03f3d47b158cb3b826a6d908e9b645816dac37d73bdeef1b04fe6ac4b9eca66f",
+    "audit_facet.py": "e3b67fd5c606b8aa0c62d11497573dcf027196bd9b3ebd50e62cc841ef4a87cb",
+    "contact_facet.py": "57a847e6461485a8ac85293114b0d4a75a847164a6cf577a7b47d790d09211fe",
+    "analytic_model.py": "d89e2796ebbf2eb1c94c03c22cd895515e95e8a7b8c81267b820cd34d8b46757",
+    "terminal_plan.py": "4648f7e193978816d33053a7c28fe81b0ec3eef76761171bc83595dc4523643e",
+    "patch_contact.py": "108b6ccf118cf45ca4dea20c3a633356cf0f6003d1993536de90bef85c7be458",
+    "validate.py": "ef51e6695f006366aa096e49f957e035dd3636aa42ed1ccaa136c4cb1350ed07",
+    "seed.py": "80d460209610e07229eb65be7da949812f53549d6bbf5f2989d58df82d065aa9",
+    "camera_clearance.py": "5691ab6038ce7d7e183ce8a80f2900c15268d43f45f53b47d40c99eca58f5a08",
+    "readiness_graph.py": "78be0584ffeff91d7eff1ce06ea90ac8e8ec1c2e6cf505c12271cf4cc8cdfaa5",
+    "compact_camera.py": "49507da324316711e73301156cfae3d67e520cedac2941814f9605d6e57a31e7",
+    "static_model.py": "9dff8d35670ec5db85be71b93efec70e9cd86bf062e24ecce827a6ab7185402b",
+    "audit_patch.py": "eb2870eaf6c744f06ec3e89133524fede1d6a1c34e041e5adabd3ad6f9c91281"
+  }
+}
