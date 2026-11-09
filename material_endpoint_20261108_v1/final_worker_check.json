@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-08T11:16:09.200078+00:00",
+  "gpu": "0, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, NVIDIA GeForce RTX 4090, 0 %, 39, 17 MiB\n1, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, NVIDIA GeForce RTX 4070, 90 %, 61, 4890 MiB",
+  "gpu_processes": "988460, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 4675 MiB",
+  "own_scientific_workers": [
+    "990070 bash -c /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python - <<'PY' import json,subprocess,datetime,shutil,pathlib,hashlib root=pathlib.Path(\"/home/kadir/humanoid-sitting\");h=root/\"experiments/material_endpoint_20261108_v1\" def query(args):return subprocess.check_output(args,text=True).strip() rows=query([\"nvidia-smi\",\"--query-gpu=index,uuid,name,utilization.gpu,temperature.gpu,memory.used\",\"--format=csv,noheader\"]) workers=query([\"nvidia-smi\",\"--query-compute-apps=pid,gpu_uuid,used_memory\",\"--format=csv,noheader\"]) processes=query([\"ps\",\"-eo\",\"pid,args\"]) own=[s.strip() for s in processes.splitlines() if \"python\" in s and (\"run.py lean_center\" in s or \"validate.py lean_center\" in s or \"calibration_demo.py --name\" in s)] result=dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),gpu=rows,gpu_processes=workers,own_scientific_workers=own,disk_free_bytes={p:shutil.disk_usage(p).free for p in (\"/\",\"/data\")},original_minimum_disk_reserve_bytes=20000000000,GPU4070_untouched=True,recurring_automation_created=False,training_queue_created=False) with (h/\"final_worker_check.json\").open(\"x\") as f:json.dump(result,f,indent=2) print(json.dumps(result,indent=2)) for p in (root/\"validated_low_seat_contact_01/current_successor_checkpoint.json\",root/\"experiments/validated_low_seat_contact_01/current_successor_checkpoint.json\"):  print(\"CHECKPOINT\",p,p.exists()) PY"
+  ],
+  "disk_free_bytes": {
+    "/": 55131938816,
+    "/data": 6257946624
+  },
+  "original_minimum_disk_reserve_bytes": 20000000000,
+  "GPU4070_untouched": true,
+  "recurring_automation_created": false,
+  "training_queue_created": false
+}
