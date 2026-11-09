@@ -1,0 +1,138 @@
+{
+  "utc": "2026-10-18T10:47:14.771483+00:00",
+  "scope": "ONE complete persistent-contact constrained lift; no trajectory optimizer.\nAll1467 labeled clock/half-clock/vertex records are constructed and screened.\nNo actual forward-filter or physics call is permitted by this script.\n",
+  "construction": "One new complete nominal construction from saved430, not its optimizer restart.\n\nPersistent four foot-local sole vertices replace WORLD array-slot interpolation.\nSaved loads are copied into new identity slots; old files are never changed.\nAt nodes15..64 the nominal COM is projected onto the LEFT sole inset, preserving\neach foot's total normal allocation. This explicitly includes one pre-lift segment.\nPositive moment roots produce new loads only where that target changes. All other\nloads are preserved. Between nodes, interpolate these persistent loads and declared\n330 foot frames; their actual moments define the COM target. A constrained FK lift\nsolves rootxy/12legs (and descent during guarded normal approach). Root orientation,\narm rule, step/lift, initial and104..114 endpoint poses remain cardinal constraints.\n\nThis is a bounded construction, not trajectory optimization or an admitted schedule.\nIt retains the original imperfect330 foot FRAME path: approach frames drift within\nthe old pose errors. Matching that declared path is NOT a world-fixed foot or no-slip\ncertificate. No dynamics, forward filter or current quiet samples are generated.\n",
+  "records": 1467,
+  "clock_records": 676,
+  "half_tick_records": 675,
+  "vertex_records": 116,
+  "new_nominal_nodes": [
+    {
+      "knot": 15,
+      "original_com_xy": [
+        0.030254696245994826,
+        0.08846368232394922
+      ],
+      "new_com_xy": [
+        0.030254907493776424,
+        0.08964300568220972
+      ],
+      "displacement_m": [
+        2.1124778159728463e-07,
+        0.0011793233582605006
+      ],
+      "active_polygon_edges": [
+        2
+      ],
+      "moment_root": {
+        "iterations": 4,
+        "residual": 8.881784197001252e-16,
+        "lambda_value": [
+          -0.37499455653022445,
+          0.49839620793123035,
+          0.016683166903937494,
+          0.41973496857698755
+        ]
+      }
+    },
+    {
+      "knot": 16,
+      "original_com_xy": [
+        0.029781257907872,
+        0.08888203934776548
+      ],
+      "new_com_xy": [
+        0.02978139423211813,
+        0.08964309050087112
+      ],
+      "displacement_m": [
+        1.3632424613121974e-07,
+        0.000761051153105638
+      ],
+      "active_polygon_edges": [
+        2
+      ],
+      "moment_root": {
+        "iterations": 4,
+        "residual": 5.551115123125783e-17,
+        "lambda_value": [
+          0.08251705482389368,
+          0.011155627961477762,
+          0.2866392746230926
+        ]
+      }
+    },
+    {
+      "knot": 17,
+      "original_com_xy": [
+        0.028938346361600014,
+        0.08964324151081675
+      ],
+      "new_com_xy": [
+        0.02893834636160037,
+        0.08964324151281676
+      ],
+      "displacement_m": [
+        3.5735303605122226e-16,
+        2.0000112677109882e-12
+      ],
+      "active_polygon_edges": [
+        2
+      ],
+      "moment_root": {
+        "iterations": 1,
+        "residual": 1.1102230246251565e-16,
+        "lambda_value": [
+          1.8285722382427623e-10,
+          -7.1703605521182295e-12,
+          6.640566726781433e-10
+        ]
+      }
+    }
+  ],
+  "exact_event_budgets": [
+    93,
+    194,
+    245,
+    101,
+    17
+  ],
+  "exact_total_time_numerator": 27,
+  "exact_total_time_denominator": 2,
+  "source430_unchanged_prior_gates_passed": true,
+  "source430_unchanged_extra_buffer_passed": false,
+  "sampled_geometry_failures": [],
+  "minimum_housing_m": 0.003731078343242842,
+  "minimum_support_m": 0.00500095427236287,
+  "maximum_kinematic_residual": 9.854617122329046e-14,
+  "maximum_equilibrium_residual": 6.972894484036374e-14,
+  "maximum_declared_frame_position_error_m": 1.2394836539869502e-13,
+  "maximum_declared_frame_orientation_error_rad": 2.2995101969104313e-13,
+  "minimum_command_margin_rad": 0.030147325375236594,
+  "maximum_effort_utilization": 0.938187298286034,
+  "negative_corner_records": [],
+  "minimum_new_clock_rate_rad": -0.00043837897576593215,
+  "minimum_new_clock_target_headroom_rad": 3.477566778986585e-06,
+  "minimum_prior_clock_reserve": -0.0004393326500823384,
+  "minimum_buffered_clock_row": -0.14644433590340233,
+  "original_node_constraint_min": -0.0005924403903470495,
+  "prior_node_constraint_min": -0.0005937335219483556,
+  "buffered_node_constraint_min": -0.19791129319207473,
+  "buffered_node_negative_rows": 39,
+  "hover_residual": 1.4456028966473393e-15,
+  "minimum_sampled_descent_increment": -9.788228589879822e-07,
+  "minimum_sampled_normal_residual_m": 3.364195586604696e-13,
+  "exact_initial_command": true,
+  "fixed_q_exact": true,
+  "fixed_commands_exact": true,
+  "root_iteration_cap": 10,
+  "moment_iteration_cap": 30,
+  "optimizer_calls": 0,
+  "actual_forward_filter_ticks": 0,
+  "executed_command_ticks": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "continuous_clearance_certified": false,
+  "command_between_samples_certified": false,
+  "physical_admission": false
+}
