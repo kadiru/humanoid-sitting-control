@@ -1,0 +1,83 @@
+{
+  "scope": "Report preparation only; no new scientific execution",
+  "checkpoint_utc": "2026-10-23T03:43:36Z",
+  "source_checkpoint_sha256": "bee480c5714b0897b3efade839fdab49fd8b94f7cbd0dad5f00b559061be8266",
+  "video_frame_seconds": 3.9,
+  "video_frame_selected_tile_boxes": [
+    [
+      1912,
+      378,
+      2378,
+      660
+    ],
+    [
+      16,
+      90,
+      482,
+      372
+    ],
+    [
+      490,
+      90,
+      956,
+      372
+    ],
+    [
+      16,
+      1242,
+      482,
+      1524
+    ]
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "label": "Current status and accepted model iterate",
+      "path": "validated_low_seat_contact_01/current_successor_checkpoint.json"
+    },
+    {
+      "id": "S2",
+      "label": "Goal, baseline, failure conditions and complete evaluation contract",
+      "path": "task_transfer_2026-10-20/START_HERE.txt; task_transfer_2026-10-20/CONTINUE_IN_NEW_CHAT.txt"
+    },
+    {
+      "id": "S3",
+      "label": "Perception, geometry and control findings",
+      "path": "task_transfer_2026-10-20/evidence/LOW_SEAT_CONTACT_PROTOCOL.md; validated_low_seat_contact_01/dual_view_audit_39/recorded_depth.png"
+    },
+    {
+      "id": "S4",
+      "label": "Full linear system and nonlinear model result",
+      "path": "validated_low_seat_contact_01/changed_state_primary_20261020_v1/summary.json; validated_low_seat_contact_01/finite_model_step_20261020_v1/decision.json; summary.json"
+    },
+    {
+      "id": "S5",
+      "label": "Latest failed cycle and its closure",
+      "path": "validated_low_seat_contact_01/feasibility_research_cycle_result_20261022_v1.txt; feasibility_research_cycle_closure_20261022_v1.json"
+    },
+    {
+      "id": "S6",
+      "label": "Unexecuted structural design and worker observation",
+      "path": "validated_low_seat_contact_01/local_block_design_assessment_20261023_v1.json"
+    },
+    {
+      "id": "S7",
+      "label": "Simulation, learning and differentiable mechanics sources",
+      "path": "ubuntu_audit/sitting_task/src/humanoid_sitting/tasks/config.py; rl_support_work/scripts/train_support_rl.py; rl_support_work/scripts/low_seat_clock_transcription_444.py"
+    },
+    {
+      "id": "S8",
+      "label": "Historical visual record and coverage manifest",
+      "path": "validated_low_seat_contact_01/all_attempts_video_307/all_attempts.mp4; coverage.json"
+    },
+    {
+      "id": "S9",
+      "label": "Separate earlier PPO reward study",
+      "path": "validated_support_reward_study_01/results/REPORT.md"
+    }
+  ],
+  "outputs": {
+    "Humanoid_Sitting_Project_Report.docx": "74ca2a52f2646cda4b6d24846f23a11bd5d1ef36b658c51da9491a5c41ae9b74",
+    "ChatGPT_Project_Brief.txt": "1209f02a87f99ba6a8d2f24f9fe7dc2d8e1ed4ef212a3288827046f84af0d23c"
+  }
+}

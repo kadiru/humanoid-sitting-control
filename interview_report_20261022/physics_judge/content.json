@@ -1,0 +1,326 @@
+[
+  {
+    "title": "Physics Judge interview preparation",
+    "blocks": [
+      [
+        "p",
+        "Meta Research Scientist Level 5 contract\nRole context supplied by Kadir from Rahul’s briefing"
+      ],
+      [
+        "p",
+        "Lead with the ability to define and test physical validity. The humanoid sitting project connects directly to contact, foot slip, support and environment interaction. It also provides an example of rejecting a result that looks plausible but fails the physical task. Direct generated-video evaluation and SMPL experience are the gaps to acknowledge."
+      ],
+      [
+        "h",
+        "Suggested opening answer"
+      ],
+      [
+        "p",
+        "“My strongest connection is physics-based evaluation of humanoid motion. In our sitting project, a motion could look controlled yet fail because the feet slipped, the robot contacted the wrong surface, or it never established seated support. We separated those failure modes and evaluated complete trials. The current baseline is clean in 64 of 72 trials; the remaining eight are unresolved. That experience is relevant to defining what a physics judge should measure and testing whether optimizing its score improves behavior. My main gap is direct work with generated human video and SMPL. I would bring the contact-modeling and evaluation experience while building expertise in reconstructing human and object motion from video.”"
+      ],
+      [
+        "p",
+        "Use this as a project-level draft. Replace “our” with an accurate account of what you personally designed, implemented or reviewed; AI coding assistance was part of this project."
+      ],
+      [
+        "table",
+        [
+          "Role objective",
+          "Connection to this project",
+          "Evidence boundary"
+        ],
+        [
+          [
+            "Smarter judgments",
+            "Separate slip, illegal contact, missing support and task completion.",
+            "64/72 clean simulation trials; eight unresolved."
+          ],
+          [
+            "Faster and cheaper training signals",
+            "Account for the whole pipeline; distinguish a useful objective from a score that can be exploited.",
+            "No GPU speedup or video-training result demonstrated."
+          ],
+          [
+            "Human interaction with the scene",
+            "Model support surfaces, contact geometry and load transfer across time.",
+            "Sitting/contact experience; human grasping remains a new application."
+          ]
+        ],
+        [
+          1.55,
+          2.75,
+          2.5
+        ]
+      ],
+      [
+        "h",
+        "How to frame the experience gap"
+      ],
+      [
+        "p",
+        "“I have relevant simulation, PyTorch and contact-evaluation experience. I have not yet built a production judge for generated human video or demonstrated an SMPL pipeline. I understand that the central additional problem is uncertain 3D reconstruction: camera motion, scale and occlusion can look like physical violations. I would explicitly represent that uncertainty rather than treating every bad reconstruction as bad physics.”"
+      ],
+      [
+        "p",
+        "Keep the 38% reduction in offline model mismatch as a secondary numerical-engineering example. It did not pass motion admission and is not a 38% gain in sitting or judge accuracy."
+      ]
+    ]
+  },
+  {
+    "title": "One concrete example to tell",
+    "blocks": [
+      [
+        "h",
+        "A hovering robot can receive a misleadingly good score"
+      ],
+      [
+        "p",
+        "Situation: the goal was stable low-seat sitting without foot slip or unwanted housing contact. A candidate could hover near the seat without establishing the required support. A judge based only on low velocity, no slip or a plausible final pose could mistakenly reward it."
+      ],
+      [
+        "image",
+        "selected_recorded_trials.png",
+        "Saved simulation evidence. Ret09 succeeds at 36 cm / +5°; the other tiles show failures from separate experiments at 36 cm / +15°. Candidate 273 failed to reach stable support. These schematic poses come from recorded transforms; the labels reflect full-trial outcomes. The tiles are illustrative, not a matched comparison.",
+        6.0
+      ],
+      [
+        "p",
+        "Action: evaluate the full 20-second attempt and keep the failure checks separate. In this robot study, the resting definition includes trunk tilt at most 40° and legal seat normal load at least 5% of body weight, alongside the other slip, contact and stability criteria. Candidate 273 lacked legal seat load and the required quiet release, so it was rejected."
+      ],
+      [
+        "p",
+        "Result: the evaluation prevented promotion of a false success. It did not repair the controller; the verified baseline remains 64/72. Earlier corrections also aligned a 51.6° planned endpoint with the existing 40° objective and corrected a roughly 5–6 mm planning/collision-model discrepancy."
+      ],
+      [
+        "p",
+        "Connection to Physics Judge: score whether the required interaction actually happens over time. In video, support must be inferred with uncertainty; the robot-specific load and angle thresholds cannot simply be copied into a human-video judge. The lesson is the evaluation structure, not those particular constants."
+      ]
+    ]
+  },
+  {
+    "title": "How I would design the judge",
+    "blocks": [
+      [
+        "p",
+        "Interview proposal, not an implemented system or a description of Meta’s internal architecture: reconstruct camera, human, object and scene motion; infer interaction phases and confidence; then produce localized physical-violation scores. Preserve the component scores and uncertainty even if training ultimately needs a scalar reward."
+      ],
+      [
+        "table",
+        [
+          "Failure",
+          "Candidate measurement",
+          "Important counterexample"
+        ],
+        [
+          [
+            "Foot sliding",
+            "Tangential foot velocity relative to its supporting surface during an inferred stance interval.",
+            "Moving camera or platform; a swinging foot is not planted."
+          ],
+          [
+            "Unsupported floating",
+            "Check inferred support contacts and whether motion is consistent with the expected supported or airborne phase.",
+            "Jumping, hanging or brief loss of contact can be valid."
+          ],
+          [
+            "Failed grasp",
+            "Combine hand–object proximity, finger configuration, contact persistence and relative motion.",
+            "Co-motion alone does not prove a grasp or force closure."
+          ],
+          [
+            "Interpenetration",
+            "Use an appropriate collision representation to measure penetration depth, duration and affected area.",
+            "Reconstruction error, clothing and soft contact can create apparent intersections."
+          ],
+          [
+            "Broken interaction timing",
+            "Check approach, contact, transfer and release as a sequence; localize violations in time.",
+            "A plausible final frame can hide an impossible transition."
+          ]
+        ],
+        [
+          1.35,
+          2.95,
+          2.5
+        ]
+      ],
+      [
+        "h",
+        "Separate missing evidence from a physical failure"
+      ],
+      [
+        "p",
+        "Evaluate in a consistent world or surface frame and use physical time units. Carry confidence for pose, depth, scale and contact. An occluded hand should be marked uncertain when the evidence is insufficient. Do not silently treat uncertainty as success; report how much of the clip was actually assessed and test whether generators exploit blind spots."
+      ],
+      [
+        "p",
+        "A fitted body mesh is a geometric hypothesis. It does not establish contact forces, mass distribution or dynamically feasible motion. For ambiguous clips, consider multiple reconstructions or sensitivity bounds. If a simulator is used as a more expensive check, validate the mapping from estimated human motion to its body and contact model."
+      ],
+      [
+        "h",
+        "A bounded first experiment to propose"
+      ],
+      [
+        "p",
+        "Start with one failure class, such as planted-foot sliding. Build paired clips with controlled slip perturbations and matched valid examples, including camera motion and moving supports. Mix simulated examples with human-labeled real and generated clips. Hold out subjects, scenes, camera setups and generator families where feasible. Freeze the benchmark before tuning thresholds."
+      ],
+      [
+        "p",
+        "Measure per-class precision and recall, severity ranking, timing localization and calibration at a stated coverage level. Compare the new component with a simpler baseline and ablate pose quality, camera compensation and contact inference. A higher average score alone would not demonstrate a better judge."
+      ]
+    ]
+  },
+  {
+    "title": "Making the score useful for training",
+    "blocks": [
+      [
+        "h",
+        "A practical path from evaluator to reward"
+      ],
+      [
+        "p",
+        "A judge that scores completed videos can already provide a black-box terminal reward for reinforcement learning. Differentiability is not required for policy-gradient training; DDPO is a published example for diffusion models. Direct gradient guidance requires a differentiable path or suitable surrogate. [W4]"
+      ],
+      [
+        "bullets",
+        [
+          "First validate an offline judge against a fixed benchmark and human judgments. Keep an independent evaluator that is not optimized by the generator.",
+          "Combine physical validity with task or prompt fulfillment. A motionless person, a hidden hand or an omitted object must not earn a high score simply by avoiding a detectable violation.",
+          "Train a cheaper surrogate on expensive judge outputs if profiling justifies it. Audit disagreement and hard cases, including new outputs from the changing generator.",
+          "For denoising-time guidance, validate inputs at the relevant noise levels or predicted clean reconstructions. A clean-video judge should not be assumed reliable on noisy intermediate states.",
+          "Run a controlled training comparison at equal compute and prompts. Check physical quality, diversity, task completion and blind-spot exploitation with the independent evaluator."
+        ]
+      ],
+      [
+        "h",
+        "How I would approach speed and cost"
+      ],
+      [
+        "p",
+        "Profile decoding, pose and object estimation, body-model evaluation, geometric checks and data transfer separately. Batch suitable work across frames and clips, cache static topology, use coarse collision rejection before expensive tests, and allocate extra computation to uncertain contact windows. Test mixed precision only where it preserves sensitivity to small violations."
+      ],
+      [
+        "p",
+        "PyTorch’s profiler can expose both CPU and CUDA activity. Measure warmed-up end-to-end throughput, tail latency, peak memory and cost per clip on fixed hardware and video lengths; account correctly for asynchronous GPU execution. Any speed claim should hold at comparable detection quality and coverage. [W5]"
+      ],
+      [
+        "h",
+        "What would count as success"
+      ],
+      [
+        "table",
+        [
+          "Dimension",
+          "Evidence to seek"
+        ],
+        [
+          [
+            "Judge quality",
+            "Better detection and calibration on held-out failure categories, not just correlation on an easy aggregate."
+          ],
+          [
+            "Training utility",
+            "Generator improvement judged independently at equal training cost; no collapse into stillness or loss of prompt fulfillment."
+          ],
+          [
+            "Efficiency",
+            "Lower cost or latency at matched quality, including reconstruction and transfer overhead."
+          ],
+          [
+            "Expanded capability",
+            "Reliable results on new human–object and human–scene interactions, with uncertainty and coverage reported."
+          ]
+        ],
+        [
+          1.5,
+          5.3
+        ]
+      ],
+      [
+        "p",
+        "Project lesson to connect: a prior robot reward study produced 44/64 and 42/64 successes after training versus 47/64 for the starting policy. Neither was promoted. That separate experiment is a useful example of why optimizing a reward must be checked against actual outcomes."
+      ]
+    ]
+  },
+  {
+    "title": "Body models and interview practice",
+    "blocks": [
+      [
+        "h",
+        "SMPL concepts to know"
+      ],
+      [
+        "p",
+        "SMPL represents human body shape and pose as a skinned 3D mesh. SMPL-H adds articulated hands through the MANO hand model; SMPL-X includes articulated hands and an expressive face. These representations are useful for tracking body surfaces and interactions. They are not, by themselves, physics simulators or proofs of physical plausibility. [W1–W3]"
+      ],
+      [
+        "p",
+        "Be ready to discuss pose versus shape parameters, root motion, joint rotations, skinning, fitting to images, temporal consistency, camera coordinates and scale ambiguity. For grasp evaluation, hand articulation and object geometry matter. Explicitly distinguish understanding these concepts from hands-on SMPL implementation experience."
+      ],
+      [
+        "h",
+        "Questions to rehearse"
+      ],
+      [
+        "bullets",
+        [
+          "How would you distinguish foot sliding from camera motion, and how would you test the detector?",
+          "How can a judge distinguish hovering from a jump or valid hanging support?",
+          "What evidence supports a grasp when the fingers are occluded?",
+          "How would you convert an expensive, nondifferentiable score into a training signal?",
+          "What would the generator exploit, and how would you detect reward overoptimization?",
+          "Which part of your project did you personally own, and what would you change about its research process?"
+        ]
+      ],
+      [
+        "h",
+        "Questions to ask the team"
+      ],
+      [
+        "p",
+        "What does the current judge consume and return? Which failure classes are most costly? What are its measured latency and quality baselines? Is the intended integration offline labeling, RL post-training or denoising-time guidance? What outcome would define a successful first three months?"
+      ],
+      [
+        "h",
+        "Prompt for ChatGPT"
+      ],
+      [
+        "p",
+        "Prepare me for the Meta Research Scientist Level 5 Physics Judge interview described here. Use this brief and the project report as evidence. Ask what I personally implemented before writing first-person answers. Run a mock first round with a 90-second introduction, the hovering-versus-support example, and technical follow-ups on contact, uncertainty, rewards, PyTorch performance and SMPL. Challenge unsupported claims. Do not claim the eight sitting failures were repaired or that I have generated-video, SMPL or GPU-optimization results that are not documented."
+      ],
+      [
+        "h",
+        "Primary references"
+      ],
+      [
+        "web",
+        "W1  SMPL official project",
+        "https://smpl.is.tue.mpg.de/"
+      ],
+      [
+        "web",
+        "W2  MANO and SMPL-H official project",
+        "https://mano.is.tue.mpg.de/"
+      ],
+      [
+        "web",
+        "W3  SMPL-X official project",
+        "https://smpl-x.is.tue.mpg.de/"
+      ],
+      [
+        "web",
+        "W4  Training Diffusion Models with Reinforcement Learning",
+        "https://rl-diffusion.github.io/"
+      ],
+      [
+        "web",
+        "W5  PyTorch profiler documentation",
+        "https://docs.pytorch.org/docs/stable/profiler.html"
+      ],
+      [
+        "p",
+        "Project evidence: current_successor_checkpoint.json; the inherited low-seat protocol and handoff; all_attempts_video_307; and the separate reward-study REPORT.md, all documented in the companion project report. Role and terms are from Rahul’s briefing as supplied by Kadir: 12 months, remote, $160/hour W-2 without benefits; two rounds expected, first focused on experience and fit with possible technical questions."
+      ]
+    ]
+  }
+]
