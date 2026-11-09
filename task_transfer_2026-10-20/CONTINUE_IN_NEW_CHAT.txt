@@ -1,0 +1,265 @@
+CONTINUATION HANDOFF — LOW-SEAT SITTING REPAIR
+
+Human request on October 20, 2026:
+“what is going on in this task - what have you been trying to run? i almost cannot
+follow the history of what we have been doing here. maybe it is time for you to
+create a summary of what we actually have been doing, and create a transferrable
+copy of this task so that we can continue on a separate conversation.”
+
+The current action is a transfer and explanation, not authorization to restart
+failed scientific work. Read START_HERE.txt first. In the new chat's initial turn,
+give a brief orientation and a concrete assessment of the next decision; do not
+launch numerical work merely because this chat was created.
+
+Execution ownership
+
+Continue in the new conversation in the existing local project. The new chat is
+the continuation requested by the user, not a parallel coding agent. Do the work
+directly; do not delegate to another coding agent. Keep one scientific execution
+owner. Preserve the existing 30-minute ACTIVE heartbeat by retargeting it to the
+new chat once created; do not create a duplicate. transfer_receipt.json will
+record the actual destination and automation result.
+
+Original chat:
+  01a1248e-6e6f-7f51-80b9-5b1d440e3b65
+  “Audit and build sitting perception”
+Project:
+  e749379f-0711-4849-a9ed-fa5f2faef630
+  /Users/kadir/humanoid-sitting-control
+
+The source chat should finish the transfer rather than continue independent
+scientific design afterward. The user's new clarification or change of scope in
+the continuation chat takes precedence over the inherited plan.
+
+Locations
+
+  Local root W: /Users/kadir/humanoid-sitting-control
+  Scripts S:    W/rl_support_work/scripts
+  Local data L: W/validated_low_seat_contact_01
+  SSH alias:    kfuUbuntu
+  Remote repo:  /home/kadir/humanoid-sitting
+  Remote Python:/home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python
+  Remote data D:/data/humanoid-sitting-perception/low_seat_contact_01
+
+The local root is not a Git repository. Find filenames with rg --files before
+reading them. Several historical read-only failures came from guessed filenames.
+Remote docs are /home/kadir/humanoid-sitting/docs/LOW_SEAT_CONTACT_PROTOCOL.md and
+LOW_SEAT_CONTACT_STATUS.md; local copies are in L.
+
+Read order and source precedence
+
+1. START_HERE.txt, this handoff, transfer_checkpoint.json, transfer_receipt.json.
+2. evidence/status.json; evidence/preparation_handoff_record_603.json;
+   evidence/closure_record_601.json.
+3. Protocol and relevant current status passages. The status document contains
+   historical snapshots; a historical “running” line is not a live worker.
+4. governing_context.txt for exact inherited restrictions and failure details;
+   evidence/handoff_prepared_603.txt for the sealed preparation handoff.
+5. The relevant post603 design notes and their supplemental chain only as needed.
+
+Latest entries supersede older “NEXT” or “current report” references. Preserve all
+older evidence, failures, and physical contracts. Do not confuse proof/audit PASS
+with candidate feasibility, physical admission, task completion, or promotion.
+
+Verified current state
+
+Remote checkpoint 2026-10-20T07:42:11.876282+00:00, read-only tool 661703,
+actual exit 0. No matching study Python/Isaac workers observed. Protocol/status/
+603 handoff/603 record/601 closure hashes match the saved checkpoint.
+
+Status: 603, offline_pressure_quotient602_exact_obstruction_audited603.
+Last sealed experiment closure: 601.
+Latest reviewed report: progress_report_600/findings.html.
+Video: all_attempts_video_307/all_attempts.mp4, 58.4 seconds, unchanged.
+Best controller current_retention_09: 64/72 clean, 70 stable, 8 slipping,
+2 housing contacts; categories overlap.
+All64 protected/all8 unresolved. Main PPO and fresh holdout unstarted.
+Repair/task complete=false. No new physical trials or optimizer updates.
+
+Boundary of the interrupted 07:13 heartbeat
+
+Before the human requested this transfer, that heartbeat performed read-only
+orientation/source review and wrote TWO LOCAL metadata files:
+
+  arm_halfplane_design_after_603.json
+    2c9fa0256554b488c97c2ebf48a3e5644de6cbdbe7868de22acac285a6e257a7
+  supplemental_arm_halfplane_design_603.json
+    fb73d4cda662c48d33b5a3872d35795ba3b2aeca35c0850ff77da67530494e9c
+
+They were NOT copied to D and were NOT added to the old scheduler prompt.
+Remote absence was confirmed at the transfer checkpoint. The supplemental file
+contains an intended remote path; that path is not evidence of remote existence.
+Both files are included in this bundle as LOCAL DRAFT metadata. No polygon,
+coefficient support test, matrix assembly, solver, or robot point was computed.
+Do not portray that draft as experiment604 or as a certified reduction.
+
+The draft's idea: if a predetermined local family of present arm rows really
+depends only on two exact phase coordinates and four retained bounds enclose a
+full-dimensional nonempty polygon, keep its facets and certify every omitted row
+by a nonnegative combination of at most two retained facet rows. Exact support,
+actual target/premise IDs, actual savings, and full costs are all unresolved.
+No generic eligibility scan is authorized. This is only a design suggestion.
+
+Scientific endpoint to inherit, not repeat
+
+598 used the exact594/595 condensation and compensated596/597 representation.
+It ran ONE cold HiGHS-IPM primary solve: 10,541 original retained coordinates,
+265,967 inequalities / 6,102,946 nonzeros; 1,367 exact equalities / one nonzero;
+explicit projected finite bounds. Six IPM iterations, zero crossover, time limit,
+NO candidate. Charged total45.683261826s, backend27.560491130s versus remaining
+allowance26.877538072s. Total main46.051738448s. Backend factor counts and peak
+memory unmeasured. Process exit0 is not solver success.
+
+No exact point checks, composite graph lift, finite map, new mechanics/J,
+nonlinear trial, physical simulation, or PPO followed. Export remains472 INITIAL
+X/Y/J with490 canonical auxiliary values and unchanged drops/anchors.
+
+602/603 tested one fixed local pressure elimination premise on saved572 rows:
+first nonfixed state1/block0/left foot, original columns2,3,4, moment rows1378,
+1379. First nonzero after12 zero foot rows was command row1380, original positive
+ID331509. Exact local rank3 rules out that output-preserving local pressure mode
+with all other original coordinates fixed. Do not try other feet, states, pivots,
+minors, bases, thresholds, or approximate nulls to rescue it. It says nothing
+about global LP/physical infeasibility or why598 timed out.
+
+Post603 conclusions
+
+Inherited equality eliminations leave10,540 affine degrees of freedom. Another
+basis or removing the remaining scalar alone is not a substantive reduction.
+Further reduction needs actual consequences of inequalities or a properly
+certified existential projection with finite reconstruction.
+
+The interval-projection, order-chain, comparison-principle, comparison/box, and
+box-facet notes are CONDITIONAL mathematics. No actual target sets, widths,
+support certificates, net savings, or complete resources were selected.
+Do not launch generic Fourier–Motzkin, chain, forest, row-family, or support
+scans from those notes.
+
+The old446 feature-trust scale is derived from canonical444 Jacobians and a
+different tangent parameterization. It is not a support bound for the current
+exact594/586/578 graph at472 INITIAL.
+
+What remains required before any next scientific launch
+
+Derive ONE substantively different, mathematically justified witness construction
+or exact structural reduction using saved whole-clock/command/local mechanics.
+Freeze its complete inputs/initialization/equations, actual target and premise
+associations, total row/nonzero/rational-bit/storage costs, wall-clock resources,
+finite return procedure, and an independent audit before launch. Compile and
+record ACTUAL exits before dependencies. A renamed basis, method, backend,
+presolve, crossover, row family, metric, dual, face, or same-matrix encoding is
+not a new construction. Small row savings alone do not justify a solver retry.
+
+No restart/extension/polish of598/590/582/574/566/560/554/548/542/532/524/518/
+512/506/498/492 or continuation of their internal iterates. No warmstart,
+internal/rejected vector selection, bigger45-second LP allowance, caps, trust,
+boxes, guards, or tolerances. No completed scientific proof/arithmetic replay.
+Failed353/381/382 remain unexecuted. No force-only workaround,15-root drift,
+physical waiver, pose/arm/gain/weight/allocation sweep, or blind solver sweep.
+
+Finite return and full-model obligations
+
+Exact594 ->586 ->578 graphs describe the572 t=0 face only, possibly empty or a
+proper subset of the whole LP.596 is a sufficient real INNER representation
+inside its explicit finite box; it is not equivalent or universally feasible.
+Old588's complete equality system was only a surrogate. Neither distinction may
+be lost in the transfer.
+
+For the inherited condensed return, keep all10,541 backend coordinates bitwise
+unchanged and require the scalar already zero. Evaluate594 rootxy/f exactly;
+then586 legs on exact UNROUNDED intermediates; then578 auxiliary outputs on exact
+UNROUNDED intermediates. Round each of68,250 eliminated original coordinates
+ONCE. Check exact reduced rows and final rounded projections as specified.
+All NINE systems596/594/586/578/572/570/546/516/full490 remain required, including
+primal/equality/bounds/stationarity/absolute-gap gates. Changed representations
+need their own complete input/domain certificate;596's proof cannot be assumed.
+No universal binary64 extension or exact optimality follows from numerical KKT.
+
+The primary direction is not directly decoded. The interior problem uses the
+ACTUAL modeled improvement/ceiling, fresh FULL490, exact positive unscaled eta,
+then the immutable finite encoder. A genuinely changed state requires fresh
+mechanics/J and new appropriate proofs inside the frozen clock. Old state
+graphs/certificates cannot be silently reused. No new return branches have run.
+
+Physical and evaluation contracts
+
+All original/inward rows, both signs of consistency, units, fixed/inactive
+coordinates, and full boxes remain. Whole-clock domain1467 labels/1460 exact
+times/1410 alias blocks/45 fixed;13.5s motion includes25 synthetic hold ticks.
+Those ticks are NOT the required25 CURRENT quiet sensor samples.
+
+Keep original5mm support,3mm housing,.03rad command margin,.1 filter,
+global.15rad/s command rate,14 fixed fingers,.1125 nominal pitch AND roll plus
+.0375 feedback allowance,6mm/s normal descent,12mm hover and all reserves.
+No extra feedback, materials/PhysX change, finite-difference velocity,
+ground-truth substitution, timer release, early unload, foot drag or teleport.
+
+Quiet175 requires25 consecutive CURRENT samples with moving raw qd<=.05rad/s,
+pitch error<=.5deg, |gyro-y|<=.02rad/s, fresh geometry and130 guards.
+Rest means tilt<=40deg AND legal seat normal load>=.05BW plus original criteria.
+55deg fall and38deg model reserve are separate thresholds.
+Keep all-tick slip/contact union and physical-failure/stable-support definitions.
+Robot friction.5/.5, seat/floor.8/.6. Warnings are separate from pass/fail.
+Runtime uses measured sensors/reference/static model; truth only reset/reward/
+evaluation. Cooked planning geometry is not a live-shape/perception certificate.
+
+205 binary64 drops plus exact rational pivot203/fixed endpoint sum and468
+directed encoding remain. Once-rounded cumulative gaps; U=2^-59;207U trust is
+distinct from206-drop reserve and2e-13+2U guard. No clipping/normalization.
+All signed rows/normal1e-13/hover1e-8/seven closure units1e-13/all1467 geometry
+checks, then actual float32/full between-sample/both placements/current runtime/
+frozen parent/164/207v2/175/130 gates before bounded physical trials.
+
+PPO and final deliverables
+
+Prerequisite: all8 failures removed AND all64 clean conditions retained in72
+matched full20s development trials. Then freeze seeds63111/63117: eight complete
+episode updates per seed; one uninterrupted optimizer each;24 environments;
+192,000 active+4,200 indexed warmup=196,200/seed,392,400 total;1,200 initial
+settling separate. Freeze/document controls, windows, rewards, sensors and
+accounting. Verify replay, actual channels, changed finite actor/critic, CPU
+optimizer replay, fingers/bounds and smoke retention. Main starts from the
+smoke INITIAL weights, not trained smoke weights.
+
+Both full-budget final policies and development selections precede ANY fresh
+holdout. Fresh24: heights36.75/37.75/39.5/41.5cm x positive slopes8.75/13.75/
+18.75deg, twice. Keep CLOSED through repair/training/selection. Prior holdouts
+are development; negative slopes/leaning outside pilot. No extra/post-freeze
+training or automatic promotion.
+
+Compare matched full20s clean/stable/slip/contact union/physical failure and
+lost/gained successes before effort. Effort only on common COMPLETE clean trials
+and strict subsets: all37 joints, whole20/final10/final5, squared/absolute/
+time-mean instantaneous RMS, leg/upper contributions. Applied implicit-PD torque
+is approximate telemetry, not solver/hardware effort, electrical energy, or a
+global optimum. No hover/prefix/fragment savings claims.
+
+Video307 stays unchanged until new motion exists. It already has44 sources,
+864 full trials,192 prefixes,120 aborted attempts without motion,49 panels,
+58.4s4K15fpsH264. Future update must include all new physical/PPO coverage.
+Offline closure/audit/report is not completion. Automation remains ACTIVE under
+the existing instruction until repair, PPO comparison and complete video are
+delivered; user steering can change the task.
+
+Failure provenance
+
+The full governing context preserves executed failures and staged recoveries
+(including516,524,548,553,563 metadata,565 audit, and earlier finite-map/model
+work), plus later read-only filename/quoting/review failures. Some original
+arrays, detailed435 work, or timing aggregates are unavailable; do not invent
+them or rerun completed work to conceal that gap.
+
+The transfer itself encountered an unavailable tool-discovery route
+("unsupported call: tool_searchtool_search_tool"); already-available native app
+tools were then used. That was an app discovery failure, not scientific
+execution. No task data or scientific results were changed by it.
+
+How to communicate from here
+
+Lead with the actual physical result and what the next action can establish.
+State clearly whether an activity is design, executed arithmetic, a solver run,
+a valid linear witness, actual-model validation, or physical simulation.
+Do not send the user repeating provenance walls. Keep detailed records in files.
+Routine unchanged heartbeat work stays quiet. Notify material progress, failure,
+completion, or required input. Be candid if a proposed route has no defensible
+path to a useful experiment; do not imply that metadata accumulation is repair.

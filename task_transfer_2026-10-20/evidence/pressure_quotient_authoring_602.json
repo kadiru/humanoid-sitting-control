@@ -1,0 +1,11 @@
+{
+  "scope": "Read-only authoring failures before any602 scientific execution",
+  "failures": [
+    {"tool_chunk": "f8f716", "actual_exit": 1, "action": "SSH read-only layout metadata", "reason": "Incorrect outer shell quoting removed Python path string quotes; SyntaxError before imports or file reads", "recovery": "Correctly shell-quoted read-only command5719a9 ACTUAL0; no scientific arithmetic executed or repeated"},
+    {"tool_chunk": "aa4037", "actual_exit": 129, "action": "Local git diff --check on four newly authored sources", "reason": "Workspace is not a Git repository; no diff check performed", "recovery": "Source compilefca1e2 ACTUAL0 already passed; direct static file inspection used; no scientific execution or replay"}
+  ],
+  "scientific_execution_failure": false,
+  "metadata_writer_failure": false,
+  "completed_scientific_calculations_repeated": false,
+  "prior_failures_preserved": true
+}

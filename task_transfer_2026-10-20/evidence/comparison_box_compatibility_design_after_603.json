@@ -1,0 +1,103 @@
+{
+  "scope": "Post603 design-only compatibility test for using old box-implied rows in a command comparison certificate; no selected604 construction",
+  "recorded_utc": "2026-10-20T03:48:27Z",
+  "inherits": {
+    "supplemental_post603_readonly_authoring_1732.json": "f62790ed57fae583ecfb965fec6275672b87efb7372c1ddb5e22fb6e94c54b5e"
+  },
+  "status": "A conditional algebraic obstruction clarifies one branch of the comparison design. No stored row, endpoint, target or premise was tested; no formulation, resource freeze, independent scientific audit or launch is ready.",
+  "conditional_setup": [
+    "Work in one exact coefficient representation and the same finite endpoint box used by the old implication. Partition coordinates as x in [l,u] and y in [a,b]. The intended deleted upper bounds are x<=u. For each proposed comparison row write B_i*x+C_i*y<=d_i, where B=D-N, D is positive diagonal, and N is entrywise nonnegative with zero diagonal. This is an assumption for the derivation, not a verified property of saved rows.",
+    "Assume that this particular premise is already certified by the independent endpoint box. Define qmax_i=max_{y in [a,b]} C_i*y and qmin_i=min_{y in [a,b]} C_i*y. Its box slack is s_i=d_i-D_ii*u_i+sum_j N_ij*l_j-qmax_i>=0.",
+    "If only the independent retained y bounds are used, the row supplies the universal inequality B_i*x<=dbar_i, where dbar_i=d_i-qmin_i. The existing comparison theorem with h=u would additionally require B*u>=dbar (and a separately verified positive vector g with B*g>0)."
+  ],
+  "exact_symbolic_identity": [
+    "For every such row, dbar_i-(B*u)_i = s_i + sum_j N_ij*(u_j-l_j) + (qmax_i-qmin_i).",
+    "All terms on the right are nonnegative. Consequently, compatibility with the proposed upper supersolution requires every term to vanish: zero old box slack, zero width in every selected predecessor with N_ij>0, and zero variation of C_i*y over the independent retained box.",
+    "If even one summand is strictly positive, that row fails the required supersolution inequality. Restoring the same box-implied row does not change this algebra. This is a necessary condition for this specific sufficient comparison certificate, not a statement of global nonredundancy or infeasibility.",
+    "The proof is substitution: d_i=D_ii*u_i-sum_j N_ij*l_j+qmax_i+s_i and (B*u)_i=D_ii*u_i-sum_j N_ij*u_j; subtract qmin_i and the latter expression. No saved scalar, matrix product, support sum, sign count, endpoint width or proof ledger was evaluated.",
+    "A lower-bound proposal has an analogous condition after the independently justified change z=-x and corresponding transformed interval endpoints. Neither upper nor lower stored data was selected or tested."
+  ],
+  "implications_and_limits": [
+    "A box-omitted inverse-filter premise with a genuinely varying negative predecessor cannot both be implied by that same independent box and satisfy the upper supersolution at its tight upper endpoint. This is conditional on the exact sign, width, row association and endpoint hypotheses; no current query is claimed to satisfy them.",
+    "This narrows the earlier circular-dependency discussion: before considering restoration counts, a candidate using an old box-implied premise at the same tight endpoints must satisfy the compatibility identity. A cited old implication alone neither supplies a new endpoint improvement nor resolves deletion of its own premises.",
+    "The obstruction does not exclude comparison using other retained mixed inequalities, a separately established coupled premise about y, or a different exact certificate. It does not reject the entire comparison idea, and it does not authorize another forest, row-family retry or generic eligibility scan.",
+    "A looser physical upper bound h different from u does not satisfy the identity with h substituted for u. Proving that looser bound would still require an actually present target row and a valid dependency/accounting argument; an already omitted row is not a saving.",
+    "These statements concern one unchanged exact representation/domain. They do not transfer an implication between 490, exact594 and compensated596 without its required association/representation certificate. Fixing the scalar at zero is allowed only on the inherited zero face, with that equality retained; it does not establish a whole-LP implication.",
+    "No target/premise set, positive net row/nonzero saving, rational-bit/storage bound or complete wholeclock/return cost is known. The finite reconstruction, triple unrounded graphs followed by once-only rounding, allNINE/fulloriginal checks, finite490 encoding and all physical/PPO gates remain required. No604 construction or solver launch is selected."
+  ],
+  "source_review": {
+    "orientation": {
+      "tool": "49bb5a",
+      "actual_exit": 0,
+      "utc": "2026-10-20T03:44:27.729891+00:00",
+      "required_reads": 8,
+      "actual_workers": []
+    },
+    "additional_read_and_supplemental_verification": {
+      "tool": "6efa05",
+      "actual_exit": 0,
+      "supplemental_entry_counts": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        1,
+        4
+      ],
+      "additional_notes_read": [
+        "affine_dimension_design_after_603.json",
+        "finite_projection_design_after_603.json",
+        "order_chain_design_after_603.json",
+        "post603_readonly_authoring_1732.json"
+      ]
+    },
+    "source": "low_seat_box_support_546.py",
+    "source_text_read": {
+      "tool": "2f9b23",
+      "actual_exit": 0
+    },
+    "local_hash_tool": "28c15a",
+    "remote_hash_tool": "6efa05",
+    "source_sha256": "9733e138fa44aca0f8defd0f2eedf35c2fdb964de1972b76aa83921147f984ee",
+    "relevance": "Source546 selects tight finite endpoints from singleton/direct premises, retains every unary premise and uses an exact independent-box support test for mixed rows. Its completed scientific decisions and certificates were not replayed. This source review does not identify which saved command rows were omitted or which current endpoints/targets exist."
+  },
+  "authoring_failure": {
+    "tool": "4aa5cc",
+    "actual_exit": 1,
+    "operation": "Read-only sed requested rl_support_work/scripts/low_seat_exact_box_support_546.py, which does not exist.",
+    "extent": "No source was read by the failed sed command. No scientific module was imported, no calculation executed and no file changed.",
+    "discovery": {
+      "tool": "17e8b6",
+      "actual_exit": 0,
+      "actual_filename": "rl_support_work/scripts/low_seat_box_support_546.py"
+    },
+    "separate_parallel_read": {
+      "tool": "e5b99c",
+      "actual_exit": 0,
+      "file": "supplemental_comparison_principle_design_603.json"
+    },
+    "historical_failures_preserved": true
+  },
+  "accounting": {
+    "new_scientific_execution": false,
+    "completed_scientific_arithmetic_replayed": false,
+    "new_saved_coefficient_endpoint_incidence_or_certificate_arithmetic": false,
+    "new_independent_scientific_audit": false,
+    "new_reduction_or_algorithm_selected": false,
+    "new_lp_primal_graph_lift_actual_mechanics_or_physics": false,
+    "new_scientific_execution_failure": false,
+    "new_readonly_authoring_failure": true
+  },
+  "status_unchanged": 603,
+  "last_sealed_closure": 601,
+  "current_reviewed_report": 600,
+  "video_unchanged": 307,
+  "all64_protected": true,
+  "all8_unresolved": true,
+  "ppo_unstarted": true,
+  "fresh_holdout_unstarted": true,
+  "automation_status": "ACTIVE",
+  "task_complete": false,
+  "user_input_needed": false
+}
