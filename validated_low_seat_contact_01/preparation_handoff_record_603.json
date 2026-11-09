@@ -1,0 +1,371 @@
+{
+  "utc": "2026-10-19T13:48:36.434824+00:00",
+  "scope": "Saved-only preservation of602/603 exact local quotient obstruction.",
+  "preparation_only": true,
+  "new_closure": false,
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_601.json",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_601.json",
+      "files": 13407,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_601.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 13442,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/pressure_quotient_evidence_preservation_603.json",
+  "manifest_sha256": "73936d607998608495db87286a7cc1abfdc05aa8dbfa100ebc7aeddcfd092577",
+  "workers": [],
+  "actual_exits": {
+    "pressure_quotient_compile_exit_602.json": {
+      "utc": "2026-10-19T13:43:45.501424+00:00",
+      "actual_exit": 0,
+      "local_compile": "fca1e2",
+      "source_copy": "e98030",
+      "remote_compile": "9b3d80",
+      "source_hashes": {
+        "low_seat_pressure_quotient_602.py": "02fa35ce99290b505c0f791a330ee00a771d4fc5e9e9ac8eb17940d93ca85c19",
+        "freeze_low_seat_pressure_quotient_602.py": "42dfee4d050c2a034981dd70095e9f0b7a6c59172678bb9c4d5aa09fa3d7812a",
+        "prepare_low_seat_pressure_quotient_602.py": "37430056dabff527242ad6b11115dbd41e82bdeea8de2dbbae6faf9c4dcfc2b5",
+        "audit_low_seat_pressure_quotient_603.py": "8ff546b11481ca7764825632fbff289a1854413930f363649ca39b482487a4bf"
+      }
+    },
+    "pressure_quotient_freeze_exit_602.json": {
+      "utc": "2026-10-19T13:44:37.478160+00:00",
+      "actual_exit": 0,
+      "launch_tool": "4a73d2",
+      "session_id": 67975,
+      "actual_exit_tool": "f87cba",
+      "launch_sha256": "7f035603da244ba6eb54e6d5dc4e99fa0ee388393b89ff77613c531343f2a62a"
+    },
+    "pressure_quotient_preparation_exit_602.json": {
+      "utc": "2026-10-19T13:44:53.779100+00:00",
+      "actual_exit": 0,
+      "launch_and_actual_exit_tool": "3c628b",
+      "main_manifest_sha256": "758956012921df2e318a2a95a8862d3d0f393f2b410bc6f592076dd270d4abd4",
+      "completion_timing_sha256": "db550a2db904d8aeef212d586eb20d3a9a3b2b75f6a702bf82b24dd0b3d6dfbd"
+    },
+    "pressure_quotient_audit_exit_603.json": {
+      "utc": "2026-10-19T13:45:12.273884+00:00",
+      "actual_exit": 0,
+      "launch_and_actual_exit_tool": "372706",
+      "main_manifest_sha256": "0ce5c260b6572dc24c8686fa101a02a9e4ce46fc86076e9d7840c140ed949d24",
+      "completion_timing_sha256": "811a9fcb6bba9c7308b6cf902b94d5be404ce26ec5be5a1cb3337b25b571d32e"
+    },
+    "pressure_quotient_preservation_compile_exit_603.json": {
+      "utc": "2026-10-19T13:48:14.167079+00:00",
+      "actual_exit": 0,
+      "local_compile": "201918",
+      "source_copy": "00e23d",
+      "remote_compile": "33f51b",
+      "source_sha256": "d4ad509e2ae663a31701319b4e49af0da84a21339e26944a3da7b82e66326d5f",
+      "local_original_manifest_verification": "b697da",
+      "metadata_copy": "21d537"
+    }
+  },
+  "preparation": {
+    "utc": "2026-10-19T13:44:38.098733+00:00",
+    "passed": true,
+    "preparation_only": true,
+    "result": "exact_local_pressure_quotient_rejected",
+    "proposed_quotient_certified": false,
+    "exact_obstruction_found": true,
+    "local_rank": 3,
+    "cofactor_products": 6,
+    "row_products": 39,
+    "rows_checked": 13,
+    "exact_inverse_calls": 0,
+    "linear_system_solves": 0,
+    "lp_calls": 0,
+    "primal_points": 0,
+    "model_calls": 0,
+    "physical_admission": false,
+    "scientific_elapsed_s": 0.145152761018835,
+    "peak_memory_measured": false,
+    "specification": {
+      "scope": "One NEW exact eligibility test for eliminating a local corner-pressure self-stress while leaving the full physical direction and all modeled outputs unchanged. NOT a force-only solve, LP, completed reduction, primal point or actual mechanics evaluation.",
+      "rationale": "In exact ideal vertical-force mechanics four fixed corners have three wrench components. A possible pressure quotient would remove the one internal load mode per foot and represent its individual load bounds by existential interval constraints. That requires an EXACT null mode of the STORED coefficient system, not merely a continuum identity or a small residual. This test can disprove that premise before any projection is attempted.",
+      "selection": "Fixed first nonfixed saved state1, original490 state block0, LEFT foot corners0,1,2,3. Saved466 pivot corner2 and original prior columns2,3,4 represent load0-load2, load1-load2, load3-load2. Require this exact metadata and basis incidence; no alternate state, foot, pivot, basis or conditioning search.",
+      "source": "Immutable572 zero-face equalities, already bound by601 preservation and inherited573/559 proofs. Rows1378 and1379 are the first block moment-x/y equalities. Use their exact stored binary64 coefficients at original columns2,3,4. No model/J evaluation, reassembly, old proof replay, inverse, linear solve or594/586 graph evaluation.",
+      "equations": "For the fixed2x3 moment submatrix H, calculate signed2x2 cofactors n=(H01*H12-H02*H11,H02*H10-H00*H12,H00*H11-H01*H10). If all n=0, stop inconclusive with no fallback. Otherwise H has rank2 and its real kernel is span(n). Inspect the other48 consistency rows of block0 in increasing original row order, skipping the two moment rows, and form exact d=r.n. Stop immediately at FIRST d!=0. Then det([H0;H1;r])=d!=0 proves rank3 on these three conserved-load coordinates, so NO nonzero local left-foot pressure change can keep all these saved equalities unchanged while all other original coordinates are held fixed.",
+      "negative_result": "A nonzero exact defect rejects this proposed output-preserving local pressure quotient for the saved system. It does NOT prove LP/physical infeasibility, failure of the ideal continuum wrench identity, the cause of598 timeout, poor conditioning, or impossibility of a different coupled reduction. No threshold, rounding, equality waiver or approximate-null replacement.",
+      "zero_result": "If all48 tests are exactzero, report only this necessary local premise passed. No full-state quotient, box projection, solver or witness is authorized by that result; additional complete frozen projection and independent audit would still be required. No second state or foot is tested in this run.",
+      "audit": "Independent603 imports no602 producer or solver. Read original572 selected rows and original466 basis/layout. Verify all saved row coefficients bitwise, fixed association and first-failure prefix. Independently compute moment-cofactor values and the failing3x3 determinant through integer common-denominator Leibniz expansion, plus H.n=0 identities. No old coefficient graph/inversion/encoding/proof replay.",
+      "resources": "ONE producer and ONE independent auditor, each240s from before scientific imports/global source hashes,40GiB address-space. Check hash chunks, operations and output serialization. Peak memory unmeasured. Completion timing includes main output manifest, excludes final tiny timing record/stdout/shutdown. No extension of45s robot LP; no new numerical algorithm or LP launch.",
+      "terminal": "Unexpected source association, absent/nonfinite input, any error/deadline or first nonzero defect terminates this candidate route. No alternative block/method/parameter or repeated completed arithmetic. A mathematical obstruction is a completed negative result, not an execution failure.",
+      "physical": "All original/inward rows, both consistency signs, physical gates, finite encoding, all64 successes and all8 unresolved failures remain unchanged. Main PPO and fresh holdout remain unstarted. LastSEALED601/report600/video307 unchanged. Preparation only, task unfinished.",
+      "limit_s": 240,
+      "address_space_GiB": 40,
+      "complete_reduction": false,
+      "numerical_algorithm": false,
+      "primal_witness": false,
+      "physical_admission": false
+    }
+  },
+  "independent_audit": {
+    "utc": "2026-10-19T13:44:54.442958+00:00",
+    "passed": true,
+    "result": "exact_local_pressure_quotient_rejected",
+    "exact_local_rank": 3,
+    "exact_obstruction_found": true,
+    "integer_minor_products": 6,
+    "integer_determinant_products": 156,
+    "moment_kernel_products": 6,
+    "rows_verified": 13,
+    "copy_error_exact": 0,
+    "complete_reduction": false,
+    "primal_witness": false,
+    "physical_admission": false,
+    "old_proofs_replayed": false,
+    "producer_imported": false,
+    "scientific_elapsed_s": 0.1393358480418101,
+    "peak_memory_measured": false
+  },
+  "local_verification": {
+    "utc": "2026-10-19T13:46:37.182292+00:00",
+    "all_hashes_verified": true,
+    "original_manifest_entries": 6,
+    "verified_files": {
+      "pressure_quotient_preparation_602/preparation.json": "11d70d49fd9752353cd49677ed2c3eeae024f790399519fdfd14fbe9a0d54695",
+      "pressure_quotient_preparation_602/certificate.json": "1431e63a4a7251c66ea6fad7207f9ebf93e6a6bd3ea7c0e64608b146d14010c2",
+      "pressure_quotient_preparation_602/row_prefix.jsonl": "56679f0ef64d4f2ff90e65c722850fa5fcd3185b9c559d0dfb2e23cf97ce2f2e",
+      "pressure_quotient_audit_603/independent_audit.json": "e8ecc7681da2291286893381492386aa84700b51578a8639e7bea24a916e4b0b",
+      "pressure_quotient_audit_603/row_prefix_verified.npy": "a84e6455851fe964d6d4f7530f1eb6d07e27649493e0cf21a90197e1928c4cc9",
+      "pressure_quotient_audit_603/moment_kernel_verified.npy": "e749a8d58f247121efcaf68a622993b1140a53e1feb0ab7b77d76fc107401091"
+    },
+    "new_source_hashes": {
+      "low_seat_pressure_quotient_602.py": "02fa35ce99290b505c0f791a330ee00a771d4fc5e9e9ac8eb17940d93ca85c19",
+      "freeze_low_seat_pressure_quotient_602.py": "42dfee4d050c2a034981dd70095e9f0b7a6c59172678bb9c4d5aa09fa3d7812a",
+      "prepare_low_seat_pressure_quotient_602.py": "37430056dabff527242ad6b11115dbd41e82bdeea8de2dbbae6faf9c4dcfc2b5",
+      "audit_low_seat_pressure_quotient_603.py": "8ff546b11481ca7764825632fbff289a1854413930f363649ca39b482487a4bf"
+    },
+    "completion_timing_files_bound_by_actual_exits": true,
+    "scientific_arithmetic_repeated": false
+  },
+  "saved_scope": {
+    "scope": "602/603 exact local pressure-quotient obstruction, preparation only; no completed reduction or witness.",
+    "producer": {
+      "utc": "2026-10-19T13:44:38.098733+00:00",
+      "passed": true,
+      "preparation_only": true,
+      "result": "exact_local_pressure_quotient_rejected",
+      "proposed_quotient_certified": false,
+      "exact_obstruction_found": true,
+      "local_rank": 3,
+      "cofactor_products": 6,
+      "row_products": 39,
+      "rows_checked": 13,
+      "exact_inverse_calls": 0,
+      "linear_system_solves": 0,
+      "lp_calls": 0,
+      "primal_points": 0,
+      "model_calls": 0,
+      "physical_admission": false,
+      "scientific_elapsed_s": 0.145152761018835,
+      "peak_memory_measured": false,
+      "specification": {
+        "scope": "One NEW exact eligibility test for eliminating a local corner-pressure self-stress while leaving the full physical direction and all modeled outputs unchanged. NOT a force-only solve, LP, completed reduction, primal point or actual mechanics evaluation.",
+        "rationale": "In exact ideal vertical-force mechanics four fixed corners have three wrench components. A possible pressure quotient would remove the one internal load mode per foot and represent its individual load bounds by existential interval constraints. That requires an EXACT null mode of the STORED coefficient system, not merely a continuum identity or a small residual. This test can disprove that premise before any projection is attempted.",
+        "selection": "Fixed first nonfixed saved state1, original490 state block0, LEFT foot corners0,1,2,3. Saved466 pivot corner2 and original prior columns2,3,4 represent load0-load2, load1-load2, load3-load2. Require this exact metadata and basis incidence; no alternate state, foot, pivot, basis or conditioning search.",
+        "source": "Immutable572 zero-face equalities, already bound by601 preservation and inherited573/559 proofs. Rows1378 and1379 are the first block moment-x/y equalities. Use their exact stored binary64 coefficients at original columns2,3,4. No model/J evaluation, reassembly, old proof replay, inverse, linear solve or594/586 graph evaluation.",
+        "equations": "For the fixed2x3 moment submatrix H, calculate signed2x2 cofactors n=(H01*H12-H02*H11,H02*H10-H00*H12,H00*H11-H01*H10). If all n=0, stop inconclusive with no fallback. Otherwise H has rank2 and its real kernel is span(n). Inspect the other48 consistency rows of block0 in increasing original row order, skipping the two moment rows, and form exact d=r.n. Stop immediately at FIRST d!=0. Then det([H0;H1;r])=d!=0 proves rank3 on these three conserved-load coordinates, so NO nonzero local left-foot pressure change can keep all these saved equalities unchanged while all other original coordinates are held fixed.",
+        "negative_result": "A nonzero exact defect rejects this proposed output-preserving local pressure quotient for the saved system. It does NOT prove LP/physical infeasibility, failure of the ideal continuum wrench identity, the cause of598 timeout, poor conditioning, or impossibility of a different coupled reduction. No threshold, rounding, equality waiver or approximate-null replacement.",
+        "zero_result": "If all48 tests are exactzero, report only this necessary local premise passed. No full-state quotient, box projection, solver or witness is authorized by that result; additional complete frozen projection and independent audit would still be required. No second state or foot is tested in this run.",
+        "audit": "Independent603 imports no602 producer or solver. Read original572 selected rows and original466 basis/layout. Verify all saved row coefficients bitwise, fixed association and first-failure prefix. Independently compute moment-cofactor values and the failing3x3 determinant through integer common-denominator Leibniz expansion, plus H.n=0 identities. No old coefficient graph/inversion/encoding/proof replay.",
+        "resources": "ONE producer and ONE independent auditor, each240s from before scientific imports/global source hashes,40GiB address-space. Check hash chunks, operations and output serialization. Peak memory unmeasured. Completion timing includes main output manifest, excludes final tiny timing record/stdout/shutdown. No extension of45s robot LP; no new numerical algorithm or LP launch.",
+        "terminal": "Unexpected source association, absent/nonfinite input, any error/deadline or first nonzero defect terminates this candidate route. No alternative block/method/parameter or repeated completed arithmetic. A mathematical obstruction is a completed negative result, not an execution failure.",
+        "physical": "All original/inward rows, both consistency signs, physical gates, finite encoding, all64 successes and all8 unresolved failures remain unchanged. Main PPO and fresh holdout remain unstarted. LastSEALED601/report600/video307 unchanged. Preparation only, task unfinished.",
+        "limit_s": 240,
+        "address_space_GiB": 40,
+        "complete_reduction": false,
+        "numerical_algorithm": false,
+        "primal_witness": false,
+        "physical_admission": false
+      }
+    },
+    "audit": {
+      "utc": "2026-10-19T13:44:54.442958+00:00",
+      "passed": true,
+      "result": "exact_local_pressure_quotient_rejected",
+      "exact_local_rank": 3,
+      "exact_obstruction_found": true,
+      "integer_minor_products": 6,
+      "integer_determinant_products": 156,
+      "moment_kernel_products": 6,
+      "rows_verified": 13,
+      "copy_error_exact": 0,
+      "complete_reduction": false,
+      "primal_witness": false,
+      "physical_admission": false,
+      "old_proofs_replayed": false,
+      "producer_imported": false,
+      "scientific_elapsed_s": 0.1393358480418101,
+      "peak_memory_measured": false
+    },
+    "certificate": {
+      "state": 1,
+      "block": 0,
+      "foot": "left",
+      "original_columns": [
+        2,
+        3,
+        4
+      ],
+      "corners": [
+        0,
+        1,
+        3
+      ],
+      "conserved_pivot_corner": 2,
+      "moment_rows": [
+        1378,
+        1379
+      ],
+      "moment_coefficients": [
+        [
+          [
+            4855214572691291,
+            1125899906842624
+          ],
+          [
+            4592700217412813,
+            18446744073709551616
+          ],
+          [
+            4854934256515913,
+            1125899906842624
+          ]
+        ],
+        [
+          [
+            6209313214710571,
+            4503599627370496
+          ],
+          [
+            1553191434348277,
+            1125899906842624
+          ],
+          [
+            -883845806729455,
+            1152921504606846976
+          ]
+        ]
+      ],
+      "moment_binary64_hex": [
+        [
+          "0x1.13fcabbe9df5bp+2",
+          "0x1.051095904cccdp-12",
+          "0x1.13f8977c47b49p+2"
+        ],
+        [
+          "0x1.60f566476432bp+0",
+          "0x1.6127a3ed99bd4p+0",
+          "-0x1.91ed31ac54778p-11"
+        ]
+      ],
+      "signed_cofactors": [
+        [
+          -126510988730988654466737124124825074531,
+          21267647932558653966460912964485513216
+        ],
+        [
+          7721617964537881658760052680655093,
+          1298074214633706907132624082305024
+        ],
+        [
+          494183549730424309361809712225514129,
+          83076749736557242056487941267521536
+        ]
+      ],
+      "checked_rows": [
+        1366,
+        1367,
+        1368,
+        1369,
+        1370,
+        1371,
+        1372,
+        1373,
+        1374,
+        1375,
+        1376,
+        1377,
+        1380
+      ],
+      "first_nonzero": {
+        "row": 1380,
+        "offset": 14,
+        "original_positive_id": 331509,
+        "coefficients": [
+          [
+            4239720195864353,
+            2251799813685248
+          ],
+          [
+            797423108825403,
+            2305843009213693952
+          ],
+          [
+            8477882924719285,
+            4503599627370496
+          ]
+        ],
+        "binary64_hex": [
+          "0x1.e200190716e42p+0",
+          "0x1.6aa04491909d8p-12",
+          "0x1.e1e96f02cdcb5p+0"
+        ],
+        "defect": [
+          96130188994937572738041035127768100141,
+          47890485652059026823698344598447161988085597568237568
+        ]
+      }
+    },
+    "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_601.json",
+    "current_reviewed_report": "progress_report_600/findings.html",
+    "video_unchanged": "all_attempts_video_307/all_attempts.mp4",
+    "old_proofs_repeated": false,
+    "scientific_execution_failure": false,
+    "authoring_failures_preserved": "pressure_quotient_authoring_602.json",
+    "all64_protected": true,
+    "all8_unresolved": true,
+    "ppo_unstarted": true,
+    "holdout_unstarted": true,
+    "task_complete": false,
+    "automation_status": "ACTIVE"
+  },
+  "completed_scientific_calculations_repeated": false,
+  "scientific_execution_recovery": false,
+  "scientific_execution_failure": false,
+  "read_only_authoring_failures": "pressure_quotient_authoring_602.json",
+  "proposed_quotient_certified": false,
+  "new_reduced_system": false,
+  "new_complete_numerical_algorithm": false,
+  "new_solver_exists": false,
+  "new_complete_path": false,
+  "numerical_lp_calls": 0,
+  "numerical_linear_system_solves": 0,
+  "exact_inverses": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "primal_points": 0,
+  "analytic_dual_vectors_constructed": 0,
+  "graph_point_lifts": 0,
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}
