@@ -1,0 +1,304 @@
+{
+  "utc": "2026-10-18T08:49:09.423052+00:00",
+  "passed": true,
+  "scope": "Independent complete-path arithmetic audit418 with hard static-command rows and direct nonlinear constraints. Rebuild geometry/virtual work/original rows, the continuous-window envelope and all675 idealclock samples. Independently replay the final direct epigraph, original-coordinate bounds, fixed event budgets and structural domain; report failed gates without assuming success. No optimization or projection. Arithmetic pass is not candidate admission.",
+  "geometry": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/direct_path_418/results.json",
+      "parameters": [
+        0.13249248997109972,
+        0.4351349021283094,
+        -0.1883883483030849,
+        0.023619600000000004
+      ],
+      "length_m": 0.13999999999993848,
+      "knots": 115,
+      "max_replay_error": 2.017158141909281e-16,
+      "failed_knots": [],
+      "pose_schedule_metric_passed": false,
+      "min_clearance_mm": 3.731078343242842,
+      "max_foot_position_error_mm": 0.8411018361374456,
+      "max_foot_orientation_error_deg": 0.49854366657171784,
+      "nominal_pose_schedule_at_0_15_rad_s": 13.764627366539733,
+      "min_actual_swing_sole_height_m": 0.01300000000009311
+    }
+  ],
+  "command": {
+    "nodes": 115,
+    "max_virtual_work_error_Nm": 6.473753089153433e-09,
+    "max_equilibrium_residual": 1.9748092050519972e-14,
+    "minimum_command_margin_rad": 0.03010357921631726,
+    "maximum_effort_utilization": 0.9400896716016405,
+    "force_allocation_failures": [],
+    "model_command_passed": true,
+    "specific_command_time_s": 11.747233747052706,
+    "command_schedule_passed": true,
+    "initial_command_exact": true,
+    "all_fixed_commands_exact": true
+  },
+  "feasibility_epigraph": {
+    "slack": 0.0019264170295207844,
+    "scaled_original_violation": 0.002063077790005382,
+    "all_original_rows_replayed": 19760,
+    "additional_support_rows": 524,
+    "all_window_rows": 7424,
+    "all_clock_rows": 43200,
+    "removed_contact_constant_rows": 392,
+    "removed_exact_integer_time_rows": 1,
+    "original_numerical_feasibility": false,
+    "positive_slack_is_not_admission": true,
+    "direct_nonlinear_domain_replay": {
+      "callback_records": [
+        {
+          "callback": 0,
+          "hard_passed": false,
+          "slack": 0.08349936342950015,
+          "not_selected": true
+        },
+        {
+          "callback": 1,
+          "hard_passed": false,
+          "slack": 0.03273240771281477,
+          "not_selected": true
+        },
+        {
+          "callback": 2,
+          "hard_passed": true,
+          "slack": 0.015960814882798,
+          "not_selected": true
+        },
+        {
+          "callback": 3,
+          "hard_passed": true,
+          "slack": 0.011667586230163235,
+          "not_selected": true
+        },
+        {
+          "callback": 4,
+          "hard_passed": true,
+          "slack": 0.01120557889336953,
+          "not_selected": true
+        },
+        {
+          "callback": 5,
+          "hard_passed": false,
+          "slack": 0.009601903759633573,
+          "not_selected": true
+        },
+        {
+          "callback": 6,
+          "hard_passed": false,
+          "slack": 0.0063561633488750865,
+          "not_selected": true
+        },
+        {
+          "callback": 7,
+          "hard_passed": false,
+          "slack": 0.004101905865255008,
+          "not_selected": true
+        },
+        {
+          "callback": 8,
+          "hard_passed": false,
+          "slack": 0.003345386983711454,
+          "not_selected": true
+        },
+        {
+          "callback": 9,
+          "hard_passed": false,
+          "slack": 0.002434317558844802,
+          "not_selected": true
+        },
+        {
+          "callback": 10,
+          "hard_passed": false,
+          "slack": 0.0023146113569601674,
+          "not_selected": true
+        },
+        {
+          "callback": 11,
+          "hard_passed": false,
+          "slack": 0.002222611947787369,
+          "not_selected": true
+        },
+        {
+          "callback": 12,
+          "hard_passed": false,
+          "slack": 0.00221784481334411,
+          "not_selected": true
+        },
+        {
+          "callback": 13,
+          "hard_passed": false,
+          "slack": 0.0021944069815777135,
+          "not_selected": true
+        },
+        {
+          "callback": 14,
+          "hard_passed": true,
+          "slack": 0.002081112482827131,
+          "not_selected": true
+        },
+        {
+          "callback": 15,
+          "hard_passed": false,
+          "slack": 0.0020665421613932458,
+          "not_selected": true
+        },
+        {
+          "callback": 16,
+          "hard_passed": true,
+          "slack": 0.0020564784485853356,
+          "not_selected": true
+        },
+        {
+          "callback": 17,
+          "hard_passed": true,
+          "slack": 0.002053956467824483,
+          "not_selected": true
+        },
+        {
+          "callback": 18,
+          "hard_passed": true,
+          "slack": 0.0020413777882253865,
+          "not_selected": true
+        },
+        {
+          "callback": 19,
+          "hard_passed": true,
+          "slack": 0.0020121658105188844,
+          "not_selected": true
+        },
+        {
+          "callback": 20,
+          "hard_passed": false,
+          "slack": 0.0019836675232086996,
+          "not_selected": true
+        },
+        {
+          "callback": 21,
+          "hard_passed": false,
+          "slack": 0.001961666701481173,
+          "not_selected": true
+        },
+        {
+          "callback": 22,
+          "hard_passed": true,
+          "slack": 0.0019612671450283076,
+          "not_selected": true
+        },
+        {
+          "callback": 23,
+          "hard_passed": true,
+          "slack": 0.001959594814941524,
+          "not_selected": true
+        },
+        {
+          "callback": 24,
+          "hard_passed": true,
+          "slack": 0.0019512514696035895,
+          "not_selected": true
+        },
+        {
+          "callback": 25,
+          "hard_passed": true,
+          "slack": 0.001944111542699068,
+          "not_selected": true
+        },
+        {
+          "callback": 26,
+          "hard_passed": true,
+          "slack": 0.0019437317774509341,
+          "not_selected": true
+        },
+        {
+          "callback": 27,
+          "hard_passed": true,
+          "slack": 0.0019418222570794631,
+          "not_selected": true
+        },
+        {
+          "callback": 28,
+          "hard_passed": false,
+          "slack": 0.0019365733603274604,
+          "not_selected": true
+        },
+        {
+          "callback": 29,
+          "hard_passed": false,
+          "slack": 0.0019264170295207844,
+          "not_selected": true
+        }
+      ],
+      "callback_arrays_replayed": true,
+      "callbacks_not_selected": true,
+      "final_solver_result_used": true,
+      "optimizer_calls": 1,
+      "maximum_iterations": 30,
+      "fixed_event_budgets": [
+        93.0,
+        194.0,
+        246.0,
+        101.0,
+        16.0
+      ],
+      "all_3648_static_command_rows_hard": true,
+      "additional_coordinate_bound_rows": 1572,
+      "final_augmented_minimum": -0.00013666076048459742,
+      "final_coordinate_margin": 0.00018648299187784545,
+      "final_box_margin": 0.0,
+      "strict_hard_passed": false,
+      "positive_load_reconstruction": 8.043045396366466e-15,
+      "endpoint_moment_error": 3.97312391320348e-14,
+      "cumulative_phase_error": 2.220446049250313e-16,
+      "posthover_increment_minimum": 5.5294756353685415e-06,
+      "hover_gap_error": 7.28583859910259e-17,
+      "actual_float32_schedule": false,
+      "physical_admission": false
+    },
+    "strict_hard_rows_passed": false,
+    "window_replay_error": 3.552713678800501e-15
+  },
+  "primal": {
+    "equalities": 1,
+    "inequalities": 27708,
+    "max_equation_replay_error": 0.0,
+    "max_inequality_replay_error": 3.552713678800501e-15,
+    "max_local_replay_error": 3.885780586188048e-16,
+    "maximum_kinematic_residual": 7.849276784099857e-14,
+    "minimum_dependent_planning_bound": 9.56929266118789e-06,
+    "numerical_constraints_passed": false,
+    "minimum_inequality": -5.488973263156893e-05
+  },
+  "timing": {
+    "event_budgets": [
+      93,
+      194,
+      246,
+      101,
+      16
+    ],
+    "clock_replay_error": 7.105427357601002e-15,
+    "clock_overlap_error": 3.131175874138137e-16,
+    "clock_original_rate_minimum": -5.016062720855467e-06,
+    "clock_original_target_minimum": -5.433428267709317e-05,
+    "integer_movement_ticks": 650,
+    "minimum_synthetic_quiet_ticks": 25,
+    "integer_duration_s": 13.5,
+    "original_minimum_inequality": -5.212040616337215e-06,
+    "new_construction_minimum_inequality": -5.488973263156893e-05,
+    "continuous_guarded_s": 13.499999999999998,
+    "raw_target_minimum_headroom_rad": -5.441289547322703e-05,
+    "hover_gap_m": 0.011999999999999927,
+    "actual_float32_schedule": false,
+    "quiet_guard_exercised": false
+  },
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "physical_admission": false,
+  "repair_complete": false,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/direct_path_418/results.json": "18902b741d84d7c4345bdf9b0e1a7ab3ceb7f93cf50dfc85ca017c6f39a2839c",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_direct_path_419.py": "21f77ce651b610bf1a6e9ef71f7e29e8801f64dbbc8202f74482f9553adfe9fe"
+  }
+}
