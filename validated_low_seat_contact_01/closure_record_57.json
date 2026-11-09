@@ -1,0 +1,231 @@
+{
+  "utc": "2026-10-17T08:30:24.180230+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "notes": "Latest completed offline stance study57 \u2014 physical repair remains unresolved.\n\nNo physical trajectory, optimizer update, full72 retention run or fresh holdout ran in52\u201357. Best verified controller remains current_retention_09:64/72 clean,70 stable,8 slipping,2 housing contacts; all60 original successes plus4 gains. Preserve all64. No PPO admission/promotion. No model/audit/physics worker remains at this closure.\n\nCorrected cooked-model endpoint52 allowed hypothetical common sagittal foot shifts within60mm, fixed previously tested arms, actual1s inputs and the existing38degree research tilt limit. Three bounded starts per contact assumption. All best tested points reached the60mm rearward bound. Foot-only clearances7.183/3.072/6.905/5.409mm; hypothetical seat-supported6.101/2.252/5.762/4.263mm for36/+15,36/+20,37/+16.25,36.5/+17.5. Deepest loaded endpoint still fails the existing3mm model screen. Assumed seat force is not measured support; there is no executable contact transition. Model feet were changed only inside endpoint constraints, never in a simulator. A bounded failed search is not proof of impossibility.\n\nNew explicit offline stepping prerequisite53 examined60/100mm rearward stance shifts at the deepest development case. Each path has5 phases/155 knots: COM transfer to left,35mm right-foot lift/airborne translation/vertical landing, COM transfer to right, left-foot lift/translation/landing, recenter. Full6-joint leg IK, frozen inertia, cooked geometry, unchanged upperbody, static single/double support and existing actuator stiffness used. Stance targets are exactly fixed; horizontal swing starts above34.55mm lift. Both paths FAIL full-foot orientation (1.439/1.457deg vs0.5deg research screen), with ankle-roll joints reaching the reserved bounds \u00b10.23080rad. Pose residual stays<=1.765mm; static CoP margin about32mm. Root height was fixed at recorded0.709118m and COM targeted sole centres; these are specific tested paths, not optimal trajectories or impossibility proofs.\n\nCommand arc gives at least16.968/19.125s at0.15rad/s for these sampled paths, or17.056/19.214s including the corrected0.01329rad initial command join. This already exceeds the1\u201315s window BEFORE any seated approach or acceleration constraint. No nominal rate, full seated transfer, dynamic ZMP/friction, self-collision, continuous tracking or actual load certificate exists. Do not execute these failed paths, drag/teleport feet, increase rates blindly or call absence of an experiment a repair. Next work should formulate a complete supported contact/stance transition that jointly meets full foot pose, joint/rate, measured clearance/loading and terminal<=40deg/seatnormal>=.05BW constraints, rather than another isolated endpoint or gain sweep.\n\nIndependent audit_v3_56 passed source hashes,8 endpoint FK/clearance/static allocation/full foot pose replays,310 step-node COM/support-polygon/FK/clearance and command-arc replays. Both model gates remain FAILED and physical_admission=false. Recovery53 preserves a NumPy-bool JSON serialization failure after the first offline path. v2 only casts gate booleans and uses a fresh output directory; exact source-transform equivalence passed. No physics was rerun. Additional offline command audit found53 used measured non-leg joint positions as commands, incorrectly dropping upper-body preload and fixed-finger targets. Correction56 writes a derived copy preserving ALL leg commands, IK/root/foot/COM/clearance results and path arc, restoring recorded constant non-leg commands exactly. All14 fixed finger targets are preserved, including nonzero one/two joints. The first56 correction attempt wrongly assumed all finger targets zero and stopped before output; original source/assertion/empty directory are preserved. Corrected data is supported_step_commands_v4_56; independent stance_independent_audit_v3_56 passed. Original53 fixed-command contract failed, audit54 had narrower arithmetic scope, report55 initialjoin is obsolete. Both corrected model timing/orientation gates still FAIL. Existing G1 stiffness and FullTransition ankle160 override are recorded in report55; no runtime change.\n\nprogress_report_57 copied locally under validated_low_seat_contact_01.11 original SHA entries plus supplemental original/review hashes verified; comparison.png,stepping_constraints.png,findings.html/readable review.html and endpoint/failed-path tables visually inspected. URL http://127.0.0.1:8807/progress_report_57/review.html. All24,242 initial prior-study files and2,652 previously protected evidence files rechecked unchanged in prior_recheck_after_stance_57.json. completed_probes_preservation_57.json includes all new completed model/audit/report/recovery sources/results. Taskunfinished,automationACTIVE.\n\nEarlier collision diagnosis51 remains valid: raw configuredUSD vertices match the frozen model, but installed standalone PhysX cooking queries shift the pelvis support surface5.03\u20135.95mm in recorded late/first-event poses.32 mesh queries/6 unchanged primitives,zero physics; cooked_model_50 is separate OFFLINE planning geometry, never the visual self-mask or current sensor data. Contact/rest offsets unavailable,not assumedzero. Corrected endpoint50 at fixed feet still failed deepest; old physical contacts and0.9rad>40deg terminal error remain failed. New model studies do not change these results.\n\nNo new physical effort result.09 equals61111 on common clean pairs but versus selected62111@8 on20 old-development common-clean cases whole20 torque\u00b2+4.38%,final5+25.45%. Keep all37-joint squared/absolute/RMS,leg/upper,threewindows/strict-subsets and lost/gained reporting. No failed-fragment savings, no new PPO gains.\n\nFresh24 holdout remains CLOSED through repair/normalization/training/selection. No smallPPO63111/63117 until all8 failures removed and all64 clean cases retained in matched full20s/72development trials. Existing physical/material/slip/contactUNION/support criteria unchanged; warnings separate. Both full finals/selections precede any freshholdout. No promotion,budgetextension or premature completion. Reference-assisted rigid-slab sitting does not establish sitting/leaning anywhere; leaning has not broadened.\n",
+  "report": {
+    "utc": "2026-10-17T08:28:59.650691+00:00",
+    "repair_complete": false,
+    "new_physical_ticks": 0,
+    "new_ppo_updates": 0,
+    "fresh_holdout_started": false,
+    "physical_baseline": {
+      "controller": "current_retention_09",
+      "clean": 64,
+      "trials": 72,
+      "stable": 70,
+      "slipping": 8,
+      "housing_contacts": 2,
+      "original_successes_retained": 60,
+      "additional_retained": 4,
+      "conservative_warnings": 50,
+      "strict_clean": 22
+    },
+    "endpoint_results": [
+      {
+        "case": 0,
+        "assumption": "foot_only_before_contact",
+        "clearance_m": 0.0071829362473419525,
+        "foot_shift_m": -0.059999999999908765,
+        "maximum_replay_error": 0.0,
+        "endpoint_screen_passed": true,
+        "physical_admission": false
+      },
+      {
+        "case": 0,
+        "assumption": "hypothetical_seat_supported_endpoint",
+        "clearance_m": 0.006100705156221716,
+        "foot_shift_m": -0.059999999999930276,
+        "maximum_replay_error": 0.0,
+        "endpoint_screen_passed": true,
+        "physical_admission": false
+      },
+      {
+        "case": 2,
+        "assumption": "foot_only_before_contact",
+        "clearance_m": 0.0030720532922788335,
+        "foot_shift_m": -0.06,
+        "maximum_replay_error": 0.0,
+        "endpoint_screen_passed": true,
+        "physical_admission": false
+      },
+      {
+        "case": 2,
+        "assumption": "hypothetical_seat_supported_endpoint",
+        "clearance_m": 0.0022524412806938124,
+        "foot_shift_m": -0.06,
+        "maximum_replay_error": 0.0,
+        "endpoint_screen_passed": false,
+        "physical_admission": false
+      },
+      {
+        "case": 6,
+        "assumption": "foot_only_before_contact",
+        "clearance_m": 0.006905155693196551,
+        "foot_shift_m": -0.06,
+        "maximum_replay_error": 0.0,
+        "endpoint_screen_passed": true,
+        "physical_admission": false
+      },
+      {
+        "case": 6,
+        "assumption": "hypothetical_seat_supported_endpoint",
+        "clearance_m": 0.005762058204014076,
+        "foot_shift_m": -0.06,
+        "maximum_replay_error": 0.0,
+        "endpoint_screen_passed": true,
+        "physical_admission": false
+      },
+      {
+        "case": 10,
+        "assumption": "foot_only_before_contact",
+        "clearance_m": 0.005409225882808298,
+        "foot_shift_m": -0.06,
+        "maximum_replay_error": 0.0,
+        "endpoint_screen_passed": true,
+        "physical_admission": false
+      },
+      {
+        "case": 10,
+        "assumption": "hypothetical_seat_supported_endpoint",
+        "clearance_m": 0.004263107827000592,
+        "foot_shift_m": -0.06,
+        "maximum_replay_error": 0.0,
+        "endpoint_screen_passed": true,
+        "physical_admission": false
+      }
+    ],
+    "step_results": [
+      {
+        "shift_m": -0.06,
+        "sampled_nodes": 155,
+        "maximum_replay_error": 0.0,
+        "maximum_stance_target_motion_m": 0.0,
+        "minimum_lift_during_horizontal_translation_m": 0.03455407407407407,
+        "command_arc_rad": 2.545178358482455,
+        "necessary_command_seconds_at015": 16.96785572321637,
+        "necessary_command_seconds_with_initial_jump_at015": 17.05645653247849,
+        "initial_command_join_rad": 0.013290121389317733,
+        "kinematic_pose_arc_rad": 2.489181448426512,
+        "original_gate": {
+          "full_foot_pose": true,
+          "full_foot_rotation": false,
+          "static_support": true,
+          "floor": true,
+          "seat_clearance": true,
+          "command_joint_margin": true,
+          "necessary_time_before15s": false,
+          "frozen_nonleg_commands": true,
+          "fixed_14_fingers": true
+        },
+        "original_all_prerequisite_gates_passed": false,
+        "physical_admission": false,
+        "fixed14_fingers_exact": true,
+        "nonleg_commands_exact_recorded": true
+      },
+      {
+        "shift_m": -0.1,
+        "sampled_nodes": 155,
+        "maximum_replay_error": 0.0,
+        "maximum_stance_target_motion_m": 0.0,
+        "minimum_lift_during_horizontal_translation_m": 0.03455407407407407,
+        "command_arc_rad": 2.8687784684682938,
+        "necessary_command_seconds_at015": 19.125189789788624,
+        "necessary_command_seconds_with_initial_jump_at015": 19.213790599050743,
+        "initial_command_join_rad": 0.013290121389317733,
+        "kinematic_pose_arc_rad": 2.830286775152799,
+        "original_gate": {
+          "full_foot_pose": true,
+          "full_foot_rotation": false,
+          "static_support": true,
+          "floor": true,
+          "seat_clearance": true,
+          "command_joint_margin": true,
+          "necessary_time_before15s": false,
+          "frozen_nonleg_commands": true,
+          "fixed_14_fingers": true
+        },
+        "original_all_prerequisite_gates_passed": false,
+        "physical_admission": false,
+        "fixed14_fingers_exact": true,
+        "nonleg_commands_exact_recorded": true
+      }
+    ],
+    "step_diagnosis": [
+      {
+        "shift_m": -0.06,
+        "maximum_full_foot_orientation_residual_deg": 1.4391432649899516,
+        "maximum_full_foot_position_residual_mm": 1.7643667881435905,
+        "worst_phase": "left_lift_land",
+        "worst_fraction": 0.7333333333333333,
+        "worst_root_position": [
+          -0.06368855082801078,
+          -0.14613766965180125,
+          0.7091180017712675
+        ],
+        "minimum_static_cop_margin_mm": 32.321514459004014,
+        "minimum_joint_command_margin_rad": 0.030099957728176974
+      },
+      {
+        "shift_m": -0.1,
+        "maximum_full_foot_orientation_residual_deg": 1.4571142942805608,
+        "maximum_full_foot_position_residual_mm": 1.7641123519137312,
+        "worst_phase": "right_lift_land",
+        "worst_fraction": 0.7333333333333333,
+        "worst_root_position": [
+          0.009477127882327067,
+          0.14473521755208163,
+          0.7091180017712675
+        ],
+        "minimum_static_cop_margin_mm": 32.32148546075845,
+        "minimum_joint_command_margin_rad": 0.03009996180491592
+      }
+    ],
+    "independent_numerical_audit_passed": true,
+    "physical_admission": false,
+    "command_correction": "Original53 used measured non-leg q instead of recorded constant commands.56 restores frozen nonleg/finger commands without recomputing or changing leg commands, kinematics, geometry or path arc. Original source/results and the failed zero-finger assumption are preserved. Both failed model gates remain failed.",
+    "next_requirement": "A complete contact/stance transition with actual full foot-pose feasibility, support, command-rate headroom and terminal <=40deg/seatload>=.05BW. These bounded local path failures are not impossibility proofs. No endpoint-only or failed-screen execution.",
+    "effort": "No new physical effort data. Verified09 exactly matches61111 on common clean pairs; versus selected62111@8 on20 old-development common-clean trials, whole20 torque\u00b2+4.38%,final5+25.45%. Previous reports retain all37-joint squared/absolute/RMS/leg-upper windows and strict subsets. Model gravity feedforward is not a PPO or measured-effort result."
+  },
+  "local_review": {
+    "utc": "2026-10-17T08:30:17.007678+00:00",
+    "original_sha256_entries_verified": 11,
+    "supplemental_html_hashes_verified": 2,
+    "visually_inspected": [
+      "comparison.png",
+      "stepping_constraints.png (byte-identical to visually reviewed55)",
+      "findings.html",
+      "review.html",
+      "endpoint and failed-path tables"
+    ],
+    "url": "http://127.0.0.1:8807/progress_report_57/review.html",
+    "physical_admission": false,
+    "task_complete": false,
+    "files": {
+      "summary.json": "e7a74a26c8cd9b5ebdcec47698f7fa40998fe4d13e8846559ffedd1ee682fb0a",
+      "stepping_constraints.png": "c7978e56e8db57a989fd296a8517e7f40f5d1446d95ea0d41ab5a51ccaafd592",
+      "review.html": "a1e4d870c3da6b4d548676fabb7c18fbb037e6a0279b30a5e600f68aac9536ab",
+      "review_audit.json": "b9450f44c4c115a837c5584f68121f05388b75b4e11374afce668e2096c27bc6",
+      "SHA256.json": "0c133cebb17559a838758173287a24e20207a108faa56724587da706898c8b30",
+      "stiffness_sources.json": "a1df36678043b70bc1cd907d36713f200d86e867b191356df2e1e8b1cf49aa9e",
+      "serialization_recovery_53.json": "44e056a7186abc3841f343e04b753690d167f21ec740d8aaed113850061e3269",
+      "comparison.png": "7380e3d0caee27360511976b8cf2044ee3aec28ed456c5c5e7b2da58b2cdc313",
+      "findings.html": "61362b0f9034bb6677afd2982447a95fd64d822c6424f2e4fbe421c02a138900",
+      "step_diagnosis.json": "4d439f4e81097529bdda88806f6867b39d02aed34d1672913c9749eda16d135b",
+      "command_recovery_56.json": "c34e81ac63359878ac76ee39f45757169e3737e9f45418b9e61e29ff6970026b",
+      "independent_audit_v3_56.json": "c632defd412c6281f85bae56157a0b78441df2457c2b631d183be79877a521be",
+      "endpoint_study_52.json": "35c9114b9ba4756ad7d8029b9c4992ee8b150ba22c87c9da0af89106a00e266a",
+      "step_study_v4_56.json": "1ab0533fca40617311f67cf1bc5b718168f4d5a9ea942dd3663e40ff67309394"
+    }
+  },
+  "preserved_prior_count": 24242,
+  "preserved_previous_evidence_count": 2652,
+  "new_completed_evidence_count": 2722,
+  "preservation_sha256": "b246cad66390425b6e60a3a94ca564a239c43086e297512f70ed6f0b1bca0132",
+  "handoff_sha256": "ec6fb2236d8ebd2cbfc3b0a4ca07557e7275e4e8843c2735976296f43b50bde7",
+  "protocol_sha256": "730a40c9a74406e28035423d57e3ab67cd941b5c9e014e08c2725150b970641a",
+  "new_physical_ticks": 0,
+  "new_optimizer_updates": 0,
+  "workers_running": false,
+  "next": "A complete contact/stance transition with actual full foot-pose feasibility, support, command-rate headroom and terminal <=40deg/seatload>=.05BW. These bounded local path failures are not impossibility proofs. No endpoint-only or failed-screen execution."
+}

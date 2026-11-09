@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-17T08:28:59.362793+00:00",
+  "original_source": "scripts/screen_low_seat_supported_step_53.py",
+  "original_output": "supported_step_screen_53",
+  "original_log": "supported_step_53.log",
+  "failure": "NumPy boolean in gate map could not be serialized after first offline60mm model path. No simulation or PPO ran.",
+  "correction": "v2 casts gate booleans to Python bool and uses fresh output. Exact source-transform equivalence independently verified; model, constraints and tolerances unchanged. Original source/log/empty output preserved. Model calculation repeated because the failed serialization did not persist the first path.",
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "source_sha256": {
+    "scripts/screen_low_seat_supported_step_53.py": "fff0e0ec270c803b89b399f3a63a80c7a29b09e038c13cc73d47de2135918482",
+    "scripts/screen_low_seat_supported_step_v2_53.py": "c990f96ca01188ab6db37cb8e861b171104964efd913ee695225748e292325f2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/supported_step_53.log": "bd776237e1a7a43e7cd9b3e2206a47ffc4c2a08e06f53016ae0b78b919ed278b"
+  }
+}
