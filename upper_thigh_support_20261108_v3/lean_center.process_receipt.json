@@ -1,0 +1,10 @@
+{
+  "target": "lean_center",
+  "wall_seconds_including_interpreter_startup": 1.9670907099789474,
+  "timeout": false,
+  "returncode": 0,
+  "cpu_seconds": 1.9652239999999999,
+  "child_peak_rss_kib": 286184,
+  "output": "{\n  \"model_pass\": false,\n  \"error\": \"ValueError({'reason': 'NO_PROXIMAL_THIGH_CLEARANCE_BRACKET', 'at_zero_m': np.float64(-0.12172114694688765), 'at_max_pitch_m': np.float64(-0.02653203171524091)})\",\n  \"traceback\": \"Traceback (most recent call last):\\n  File \\\"/home/kadir/humanoid-sitting/experiments/upper_thigh_support_20261108_v3/validate.py\\\", line 79, in <module>\\n    seed_x,seed_source=original_seed(provisional_plan)\\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/kadir/humanoid-sitting/experiments/upper_thigh_support_20261108_v3/seed.py\\\", line 21, in construct\\n    else:raise ValueError(dict(reason='NO_PROXIMAL_THIGH_CLEARANCE_BRACKET',at_zero_m=separation(0.),at_max_pitch_m=separation(.65)))\\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nValueError: {'reason': 'NO_PROXIMAL_THIGH_CLEARANCE_BRACKET', 'at_zero_m': np.float64(-0.12172114694688765), 'at_max_pitch_m': np.float64(-0.02653203171524091)}\\n\",\n  \"total_seconds\": 1.8894016790145542,\n  \"physics_launch_ready\": false,\n  \"physical_success\": false,\n  \"physics_steps\": 0,\n  \"PPO_updates\": 0\n}\n",
+  "new_physics_steps": 0
+}
