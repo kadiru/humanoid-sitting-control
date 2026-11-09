@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-18T14:21:20.717157+00:00",
+  "original_actual_exit": 1,
+  "observed_tool": "f76ce6",
+  "session": 60841,
+  "compile_v2_actual_exit": 0,
+  "compile_observed": "3d0675",
+  "failure": "NumPy batched vector RHS interpreted as matrix before first Newton update. Initial oracle values and Jacobian evaluated; no completed root or saved signed fixture.",
+  "narrow_fix": "Explicit trailing singleton RHS dimension then remove it after solve; all equations, limits, backtracking, thresholds unchanged.",
+  "original_preparation_and_audit_not_repeated": true,
+  "empty_failed_output": "/data/humanoid-sitting-perception/low_seat_contact_01/gap_root_initialization_467",
+  "workers": [],
+  "sources": {
+    "/home/kadir/humanoid-sitting/scripts/low_seat_gap_coordinates_v2_467.py": "aa30f0acd9a8f71e3c5b494ab405e0e6797f22c8972ed3f728bc7e40cef133cf",
+    "/home/kadir/humanoid-sitting/scripts/check_low_seat_gap_root_initialization_v2_467.py": "68f622220b795b62b5d5f6d3d63b5a4486045ea20c27cb398b45a1379d290866",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_gap_root_initialization_v2_467.py": "07e4b5bc9ad6efdb564a9a1ae3363d8424da7e9bfc95695ba7d1b1339f1c51db"
+  },
+  "inputs": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/gap_coordinate_preparation_v3_466/SHA256.json": "ec1fedb47e2a5887d0a5de4b9a3836418ddc2fa597dbad593cdef237018a57e0",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/gap_coordinate_audit_467/SHA256.json": "9800626ef84063bc0e94edf8541e30dc84966dea870a660380048ecb46428a66"
+  }
+}

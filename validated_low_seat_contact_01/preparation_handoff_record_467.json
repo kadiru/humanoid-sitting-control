@@ -1,0 +1,202 @@
+{
+  "utc": "2026-10-18T14:25:26.163034+00:00",
+  "scope": "Preserve free-gap preparation and local root validation; last sealed closure465 unchanged.",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_465.json",
+      "files": 9118,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_465.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 9194,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/gap_evidence_preservation_467.json",
+  "manifest_sha256": "1837f68cb70abae8fe31c0e12b70666682ba21765ac66b52f6ca77165f93fb95",
+  "workers": [],
+  "actual_exits": {
+    "utc": "2026-10-18T14:23:42.855343+00:00",
+    "preparation_original_actual_exit": 1,
+    "preparation_original_evidence": "86fb93/session19747",
+    "preparation_v2_actual_exit": 1,
+    "preparation_v2_evidence": "11147b/session91310",
+    "preparation_v3_actual_exit": 0,
+    "preparation_v3_evidence": "85e3e0/session45782",
+    "algebra_audit_actual_exit": 0,
+    "algebra_audit_evidence": "c0518a/immediate",
+    "supplementary_root_original_actual_exit": 1,
+    "supplementary_root_original_evidence": "f76ce6/session60841",
+    "supplementary_root_v2_actual_exit": 0,
+    "supplementary_root_v2_evidence": "44824c/session78361",
+    "supplementary_audit_actual_exit": 0,
+    "supplementary_audit_evidence": "226e49/immediate",
+    "scope": "Actual exits observed before dependencies; completed preparation/full audit not rerun; supplementary root initialization check separately documented."
+  },
+  "preparation_summary": {
+    "utc": "2026-10-18T14:13:17.647452+00:00",
+    "scope": "ONE new gap-coordinate and normal-drop preparation; no complete path solve.",
+    "states": 1410,
+    "labels": 1467,
+    "normal_edges": 206,
+    "reduced_coordinates": 10540,
+    "full_inequalities": 331888,
+    "retained_inequalities": 331495,
+    "original_equalities": 1411,
+    "equality_chain_nonzeros": 0,
+    "original_control_bounds": 11906,
+    "maximum_condition": 32.46656722255188,
+    "implicit_tangent_error": 2.1273791073119597e-15,
+    "gap_identity_tangent_error": 1.2212453270876722e-15,
+    "normal_projection_maximum_change_m": 7.016223272116707e-12,
+    "normal_projection_sum_exact": true,
+    "total_drop_m": 0.01199999713618104,
+    "sum_lower_m": 8.568930123170821e-09,
+    "sum_upper_m": 0.012119998513982697,
+    "root_fixture_states": 6,
+    "root_fixture_signs": 2,
+    "root_directional_error": 4.9197026660841026e-12,
+    "unchanged_derivative_bound": 2e-06,
+    "new_full_path_roots": 0,
+    "new_trajectory_optimizers": 0,
+    "new_actual_filter_ticks": 0,
+    "new_physics_ticks": 0,
+    "new_policy_updates": 0,
+    "physical_admission": false,
+    "tangent_reference": "Immutable440 X/Y/J; projection supplies new gap target coordinates only. Future complete lifting must recompute mechanics/J at the actual new state; this saved tangent is not claimed to be evaluated at projected targets.",
+    "limitations": "Only new target-gap coordinates and local implicit tangent prepared. f remains dependent and its monotonicity/old +/- .02 bounds remain explicit hard constraints. No complete new candidate is reconstructed or admitted. Old geometry/support/static/command/rate/window rows all remain; no solver designed/frozen/launched."
+  },
+  "independent_audit_summary": {
+    "utc": "2026-10-18T14:13:51.263553+00:00",
+    "scope": "Independent SAVED-ARRAY gap-coordinate preparation audit; no root/FK/AD/optimizer.",
+    "passed": true,
+    "arithmetic_only": true,
+    "normal_drop_KKT_exact": true,
+    "endpoint_sum_exact": true,
+    "all_206_dense_and5_original_normal_caps_preserved": true,
+    "original_order_reserves_preserved": true,
+    "root_error_guard_retained": true,
+    "maximum_gap_rounding_error_m": 8.394254706698478e-19,
+    "basis_error": 0.0,
+    "implicit_equation_error": 2.1273791073119597e-15,
+    "local_output_chain_error": 8.526512829121202e-14,
+    "full_row_chain_error": 0.0,
+    "equality_chain_error": 0.0,
+    "equality_chain_nonzeros": 0,
+    "root_directional_error": 4.9197026660841026e-12,
+    "derivative_bound": 2e-06,
+    "all11906_original_control_bounds_including_dependent_f_retained": true,
+    "full_inequalities": 331888,
+    "normal_drop_edges": 206,
+    "reduced_coordinates": 10540,
+    "new_root_calls": 0,
+    "new_model_calls": 0,
+    "new_optimizer_calls": 0,
+    "physical_admission": false,
+    "complete_candidate": false
+  },
+  "supplementary_root_result": {
+    "utc": "2026-10-18T14:21:30.563179+00:00",
+    "scope": "Additional bounded root-initialization validation, not a preparation rerun.\n466's two predictor-initialized batches needed zero Newton updates; their small\ncentral difference primarily replayed the supplied tangent. Preserve those\nresults and test the SAME declared controls from UNPERTURBED dependent states.\nThis is new root work, not a repeated full-path or finite-work loop.\n",
+    "passed": true,
+    "original_predictor_fixture_newton_updates": 0,
+    "new_batches": 2,
+    "new_signed_states": 12,
+    "newton_updates": [
+      1,
+      1
+    ],
+    "derivative_error": 2.236148766154855e-11,
+    "unchanged_bound": 2e-06,
+    "new_complete_paths": 0,
+    "new_optimizers": 0,
+    "physical_admission": false
+  },
+  "supplementary_root_audit": {
+    "utc": "2026-10-18T14:21:55.992944+00:00",
+    "scope": "Independent saved-array audit of additional unpredicted-start root fixtures only.",
+    "passed": true,
+    "derivative_error": 2.236148766154855e-11,
+    "unchanged_bound": 2e-06,
+    "dependent_initial_states_exact_unperturbed": true,
+    "independent_controls_exact": true,
+    "both_roots_performed_updates": true,
+    "saved_newton_updates": [
+      1,
+      1
+    ],
+    "new_model_or_root_calls": 0,
+    "original_preparation_and_full_audit_not_repeated": true,
+    "physical_admission": false
+  },
+  "local_hash_review": {
+    "utc": "2026-10-18T14:23:59.473238+00:00",
+    "all_hashes_verified": true,
+    "visual_review_claimed": false,
+    "new_complete_path_claimed": false,
+    "manifests": [
+      {
+        "folder": "gap_coordinate_preparation_v3_466",
+        "entries": 13,
+        "manifest_sha256": "ec1fedb47e2a5887d0a5de4b9a3836418ddc2fa597dbad593cdef237018a57e0"
+      },
+      {
+        "folder": "gap_coordinate_audit_467",
+        "entries": 1,
+        "manifest_sha256": "9800626ef84063bc0e94edf8541e30dc84966dea870a660380048ecb46428a66"
+      },
+      {
+        "folder": "gap_input_recovery_466",
+        "entries": 5,
+        "manifest_sha256": "20ab0839ca9260831b4601488171de2e5f901919a21fab8bb1605e6a8d8d22d6"
+      },
+      {
+        "folder": "gap_flat_index_recovery_466",
+        "entries": 5,
+        "manifest_sha256": "b41a82372ef523835ccb738a9f06ed0895db39f96c11bde3f92558b2ab996b7e"
+      },
+      {
+        "folder": "gap_root_batch_recovery_467",
+        "entries": 5,
+        "manifest_sha256": "a81765c690cfa85722b0ee41e56735bb897588f6bfb60003915019e224c1facc"
+      },
+      {
+        "folder": "gap_root_initialization_v2_467",
+        "entries": 5,
+        "manifest_sha256": "fb9b392a2531405cfcfaff57bb439ffbc9f8723f9166982b4bb7cc737308f20c"
+      },
+      {
+        "folder": "gap_root_initialization_audit_v2_467",
+        "entries": 1,
+        "manifest_sha256": "f039991200319d66e3bc9c5a187f340168de944b48a9908a1f79d8213b80c7b4"
+      }
+    ],
+    "manifest_count": 7,
+    "entries": 35
+  },
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_465.json",
+  "new_closure": false,
+  "new_solver_exists": false,
+  "new_candidate": false,
+  "complete_path_root_calls": 0,
+  "local_fixture_scope": "12 predictor-initialized signed states needed zero updates plus12 new unpredicted-start signed states needed one update each; failed batch attempt evaluated initial values/J before RHS error, no completed root. These are local fixtures, not complete paths.",
+  "new_signed_fixture_states": 24,
+  "original_input_recovery_recomputed_saved_array_algebra": true,
+  "optimizer_calls": 0,
+  "actual_forward_filter_ticks": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "best_clean": "64/72",
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}
