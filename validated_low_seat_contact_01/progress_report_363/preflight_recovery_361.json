@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-18T02:19:28.290854+00:00",
+  "observed_exit_code": 1,
+  "stage": "Preparation derivative assertion; no optimizer launched",
+  "original_output_files": [],
+  "original_max_error_unavailable": true,
+  "source_findings": "The global check perturbed fixed padding and endpoint phase slots despite reduced derivative being defined only on free coordinates. A1e-10 inner residual stopping tolerance also does not guarantee a2e-6 directional derivative check at1e-6 displacement.",
+  "correction": "V2 tests an exactly free-coordinate direction and tightens only inner numerical root tolerance to1e-13. Predeclared derivative bound2e-6 and all model/controller/physical limits unchanged; detailed arrays saved before assertion.",
+  "new_optimizer_runs": 0,
+  "new_physics_ticks": 0
+}
