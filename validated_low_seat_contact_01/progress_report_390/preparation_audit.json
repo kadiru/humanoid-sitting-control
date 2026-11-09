@@ -1,0 +1,44 @@
+{
+  "utc": "2026-10-18T04:39:47.562826+00:00",
+  "passed": true,
+  "scope": "Independent event-duration, all675 clock rows, and derivative preflight audit.\nReads saved386v2 arrays; does not call its construction or redo FK/projection.\nNo optimizer, physics or candidate float32 schedule.\n",
+  "event_budgets": [
+    93,
+    194,
+    246,
+    101,
+    16
+  ],
+  "mandatory_event_tick_indices_including_quiet": [
+    93,
+    287,
+    533,
+    659,
+    675
+  ],
+  "timing_reconstruction_error": 5.551115123125783e-17,
+  "clock_reconstruction_error": 3.3306690738754696e-16,
+  "overlap_increment_error": 2.159188626504882e-16,
+  "original_row_error": 2.7755575615628914e-17,
+  "clock_row_error": 7.105427357601002e-15,
+  "scalar_dot_error": 8.881784197001252e-16,
+  "directional_error": 4.704965750335077e-09,
+  "all_clock_inequalities": 43200,
+  "full_target_rows_in_optimizer": 21600,
+  "all_original_support_rows": 20284,
+  "optimizer_inequalities": 41884,
+  "continuous_rate_implies_ideal_clock_rate_by_nonnegative_overlap": true,
+  "constant_holds": 25,
+  "actual_float32_candidate_schedule": false,
+  "intermediate_geometry_checked": false,
+  "physical_admission": false,
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_event_preparation_387.py": "ad328023ca620d06e938757434dcad95af71dce5cb3cdeaf943ee4f186af7543",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/event_clock_preparation_v2_386/preparation.json": "1313f658919dcce40f1f674a5d1c02d76ede2ec4173a3d4b1a19addc9f1e79d9",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/event_clock_preparation_v2_386/fixture.npz": "20c430c149b47e1b599c3d83b365a7b228643671df26bcebef7de5876041d581",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/support_path_373/final.npz": "8878f2040e955392867f0c8b4ed619fb920b7451565e8197ecacf708a4571c37",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/discrete_path_379/results.json": "25b9096f82ba04cfd3dd108991c3d25128389d940f7c0460bdcc02b8e72e6c26"
+  }
+}
