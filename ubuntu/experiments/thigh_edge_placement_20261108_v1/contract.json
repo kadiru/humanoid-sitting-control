@@ -1,0 +1,56 @@
+{
+  "classification": "Measured curved-edge placement with fixed bilateral target facets",
+  "target": "Wooden stool rigid XY placement from accepted demonstration and observed central point; supported perch unclassified",
+  "authorization": "Latest human upper-thigh repair,200demos,4090PPO,all72; previous explicit furniture seat/arm/back/edge variations",
+  "mechanism": "Construct one XY object translation aligning observed central surface to mean proximal thigh contact in admitted reference; no height, scale, yaw or body changes. Preserve only measured triangles in fixed rear-camera z-buffer with provenance labels. Fix two actually observed local facets under the reference contacts, retain six finite triangle edge rows, and solve coupled feet/contact/mechanics.",
+  "original_reference": {
+    "trajectory": "/home/kadir/humanoid-sitting/outputs/full_body_contact_imitation_v4/capture_known_old/demonstrations_50hz.npz",
+    "audit": "/home/kadir/humanoid-sitting/outputs/full_body_contact_imitation_v4/capture_known_old/demonstration_audit.json",
+    "case": 8,
+    "frame": 999,
+    "require_complete_episode_admitted": true,
+    "no_rejected_optimizer_state": true
+  },
+  "initialization": "Original known_old/8 admitted final measured joints, current left foot anchor. Translation source is original reference and measured surface only, <=35cm XY, no search. Full original feet constraints and bounds remain.",
+  "finite_geometry": {
+    "target": "Original current-depth connected top component,22mm final inset and exact two triangle contact equalities; no unseen surface filled.",
+    "camera": "Keep EVERY original material sample and margin. Append exact per-face6mm expanded hip-pitch-housing vertices with zero additional margin. Compare each to its actually observed pixel triangle; no double-counted6mm and no infinite-plane extension.",
+    "fullmesh": "Independent original finite furniture triangles and exact6mm expanded shapes for every body; only legal thigh bodies may contact intended top triangles. Mesh truth remains evaluation-only.",
+    "equivalence_scope": "This changes the construction from conservative global planes to actual finite observed geometry. No claim that failed global-plane solver points become feasible; no failed vector read."
+  },
+  "mechanics": "Separately measured N_i,d_i and 0.5*W*load*N_i per proximal thigh;loads0..0.2. Full23gravity and4-contact virtual work, both foot force/friction/CoP, original command/box/time cost. Every numerical row independently checked; mandatory solver success.",
+  "path": "Same endpoint-first full path,25CURRENTquiet,12mm hover,5.5mm/s normal,fullfloat32filter/actionmargin/fingers and settle<14.4s. Audit each fixed support material normal speed and load drift; an off-object distal vertex is not the support point.",
+  "gates": {
+    "action_increment": 0.003,
+    "control_seconds": 0.02,
+    "filter": 0.1,
+    "desired_joint_margin": 0.03,
+    "normal_speed_limit": 0.006,
+    "physical_episode_seconds": 20,
+    "final_continuous_good_seconds": 5,
+    "slip_and_forbidden_contact_unchanged": true,
+    "bodyweight_load_threshold": 0.05,
+    "all72_retained": true,
+    "heldout": "closed",
+    "GPU": "none for this model;4090only for eventual physical/PPO;4070untouched"
+  },
+  "audits": "Independent new finite-camera fixture; inherited paired-force fixture by exact-source hash; full23current-standing and seed finite differences,4-contact virtual work,actual camera rows,fullmesh/fullpath/encoding required.",
+  "resources": {
+    "attempts": 1,
+    "parent_wall_seconds": 45,
+    "address_space_GiB": 40,
+    "CPU_threads": 1,
+    "optimizer_iterations": 60,
+    "ftol": 1e-09,
+    "min_free_bytes": 20000000000,
+    "max_expected_evidence_MiB": 15,
+    "physics_steps": 0,
+    "autostart": false,
+    "retry": false,
+    "resume": false
+  },
+  "result_policy": "Prototype is not counted as a sitting or leaning demonstration until a full physical rollout and posture-intent audit pass. Full200 collection/PPO/all72 remain pending; no squat relabelled upright lean.",
+  "curved_target": "Use connected measured top pixels from existing expand; all3 triangle vertices must belong and localnormalz>.97. Reprojection labels obey occlusion and unknown pixels. The erroneous single2mm whole-plane band is replaced with measured local facets, not widened. No physical region, gap tolerance or body class change.",
+  "fixed_facets": "Two seed rays select exactly one actual depth triangle each; facet normals/offsets and6edge inequalities frozen for endpoint. No nearest-neighbour search and no old rejected state. All6rows retained in solve and return audit.",
+  "required_fresh_reset": "Offline rigid-observation augmentation is not new physical camera validation. Any model pass needs fresh4090 reset/camera and complete path validation before a full rollout. No queued launch."
+}
