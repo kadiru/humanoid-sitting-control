@@ -1,0 +1,5680 @@
+{
+  "utc": "2026-10-17T12:26:29.499620+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_active_physics_ticks": 24000,
+  "new_initial_settling_ticks": 600,
+  "new_indexed_warmup_ticks": 0,
+  "new_optimizer_updates": 0,
+  "new_full20s_trials": 24,
+  "holdout_started": false,
+  "physical_candidate": "fixed_foot_probe_134",
+  "candidate_rejected": true,
+  "software_audit_passed": true,
+  "exact_preservation_gate_passed": false,
+  "physical_admission_passed": false,
+  "candidate_outcomes": {
+    "count": 24,
+    "stable": 18,
+    "clean": 14,
+    "slipping": 10,
+    "unwanted_contacts": 6,
+    "physical_failures": 6,
+    "margin_warnings": 21,
+    "full_duration": true
+  },
+  "prior_recheck": {
+    "utc": "2026-10-17T12:26:29.499620+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "mismatches": [],
+        "passed": true
+      },
+      {
+        "manifest": "completed_probes_preservation_125.json",
+        "checked": 3230,
+        "mismatches": [],
+        "passed": true
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_142.json",
+  "protected_completed_files": 3423,
+  "manifest_sha256": "b57fce1b0224aee6c990bff181afe9dc680b6d72b4a4a4686363444a4deac0de",
+  "new_frozen_sources_rechecked": true,
+  "physical_workers_running": false,
+  "model_workers_running": false,
+  "audit_workers_running": false,
+  "report": "progress_report_141",
+  "video": "all_attempts_video_137/all_attempts.mp4",
+  "video_audit": {
+    "utc": "2026-10-17T12:14:12.311715+00:00",
+    "passed": true,
+    "scope": "Independent complete source inventory, saved full-trial labels, contact union/slip first-event frame inclusion, prefix/aborted disclosure, H264 duration and source SHA audit. Rendering uses recorded XYZW/body COM schematic; poses bracket 20ms events. Does NOT validate any rejected controller or constitute repair/PPO admission.",
+    "source_runs": 33,
+    "full_trials": 720,
+    "successes": 419,
+    "failures": 301,
+    "recorded_prefixes": 72,
+    "aborted_prefixes_disclosed": 72,
+    "event_frames_checked": 488,
+    "checks": [
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 8,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 9,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 12,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 13,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/baseline",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 8,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 9,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 12,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 13,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_damped_01/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 0,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 1,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 10,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 11,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 16,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 17,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_old/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 0,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 1,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 2,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 3,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 6,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 7,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 10,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 11,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 16,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 17,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_recent/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 0,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 1,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 2,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 3,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 6,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 7,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 8,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 9,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 10,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 11,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 16,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 17,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_07/known_transfer/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 0,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 1,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 2,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 3,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 10,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 11,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 16,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 17,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_old/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 0,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 1,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 2,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 3,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 6,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 7,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 10,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 11,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 16,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 17,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_recent/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 0,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 1,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 2,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 3,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 6,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 7,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 8,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 9,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 10,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 11,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 16,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 17,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_08/known_transfer/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 0,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 1,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 2,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 3,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 10,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 11,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 16,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 17,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_old/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 0,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 1,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 2,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 3,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 6,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 7,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 10,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 11,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 16,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 17,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_recent/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 0,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 1,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 2,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 3,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 6,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 7,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 10,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 11,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 16,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 17,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/current_retention_09/known_transfer/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 8,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 9,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 12,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 13,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/baseline",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 4,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 8,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 9,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 12,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 13,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/damped_original_01/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 4,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 5,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 0,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 1,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 2,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 3,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 4,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 5,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 6,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 7,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 8,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 9,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 10,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 11,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 12,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 13,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 14,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 15,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 16,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 1,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 17,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 1,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 18,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 19,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 20,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 21,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 22,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_diagnostic_39",
+        "case": 23,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 13.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 4,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 4,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 4,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 5,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 4,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 4,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/fixed_foot_probe_134/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 8,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 9,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 12,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 13,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/hover_rotate_normal_03/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 4,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 5,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/joint_path_17/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 4,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 8,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 9,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 12,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 13,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_clearance_02/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 4,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 8,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 9,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 12,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 13,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/load_feedback_original_02/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 4,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 4,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 4,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 4,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_ankle_balance_04/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 4,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 5,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_counterbalance_13/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 4,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 5,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 12,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 13,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_descent_03/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 4,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 5,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 12,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 13,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing2s_06/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 4,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 5,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_load_balance_04/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 4,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 5,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_slow_orientation_08/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 8,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 9,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 12,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 13,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_firm_05/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 4,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 5,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 8,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 12,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 13,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/normal_task_mild_05/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 0,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 1,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 2,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 3,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 4,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 5,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 6,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 7,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 8,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 9,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 10,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 11,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 12,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 13,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 14,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 15,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 16,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 17,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 18,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 19,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 20,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 21,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 22,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/baseline",
+        "case": 23,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 0,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 1,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 2,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 3,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 4,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 5,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 6,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 7,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 8,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 9,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 10,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 11,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 12,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 13,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 14,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 15,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 16,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 17,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 18,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 19,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 20,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 21,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 22,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/sensor_prefix_v4_24/changed",
+        "case": 23,
+        "label": "DIAGNOSTIC PREFIX",
+        "event_count": 0,
+        "horizon_s": 8.4
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 4,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 5,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/staged_approach_36/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 0,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 1,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 2,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 3,
+        "label": "FAILURE",
+        "event_count": 3,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 4,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 5,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 6,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 7,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 8,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 9,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 10,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 11,
+        "label": "FAILURE",
+        "event_count": 2,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 12,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 13,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 14,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 15,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 16,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 17,
+        "label": "FAILURE",
+        "event_count": 1,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 18,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 19,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 20,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 21,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 22,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      },
+      {
+        "source": "/data/humanoid-sitting-perception/low_seat_contact_01/tracking_headroom_31/candidate",
+        "case": 23,
+        "label": "SUCCESS",
+        "event_count": 0,
+        "horizon_s": 20.0
+      }
+    ],
+    "contact_example": {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate",
+      "case": 2,
+      "event_s": 14.16,
+      "recorded_pose_s": 14.200000000000001,
+      "video_frame": 120
+    },
+    "extracted_frames": {
+      "intro": 0,
+      "first_contact": 120,
+      "known_success": 539,
+      "retention_end": 335,
+      "closing": 875,
+      "new_probe134": 63
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 3840,
+          "height": 2160,
+          "r_frame_rate": "15/1",
+          "nb_frames": "876"
+        }
+      ],
+      "format": {
+        "duration": "58.400000"
+      }
+    },
+    "source_sha256": {
+      "/home/kadir/humanoid-sitting/scripts/verify_low_seat_all_attempts_138.py": "a13e8b79c1aa0d16803099f129a791d2bb5380125597a384902440506f8ed54d",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/all_attempts_video_137/coverage.json": "20277b960ef0f3729defd4643c3632a298c44121820c22932b6ef77aef522191",
+      "/data/humanoid-sitting-perception/low_seat_contact_01/all_attempts_video_137/all_attempts.mp4": "deb88847755102792ba1162691c02f64dbcf4500081103f4aafad9ab5ba08a3c"
+    },
+    "physics_ticks": 0,
+    "optimizer_updates": 0,
+    "physical_admission": false
+  },
+  "local_review": {
+    "utc": "2026-10-17T12:26:00.482292+00:00",
+    "report": "progress_report_141",
+    "original_report_hashes_verified": 13,
+    "supplemental_review_hashes_verified": 3,
+    "video_original_hashes_verified": 3,
+    "video_audit_hashes_verified": 7,
+    "preparation_hashes_verified": 10,
+    "diagnosis_hashes_verified": 1,
+    "plots_visually_inspected": [
+      "comparison.png",
+      "early_balance.png"
+    ],
+    "video_frames_visually_inspected": [
+      "intro.png",
+      "new_probe134.png",
+      "first_contact.png",
+      "known_success.png"
+    ],
+    "browser_visually_inspected": true,
+    "browser_url": "http://127.0.0.1:8807/progress_report_141/review.html",
+    "tables_checked": true,
+    "embedded_video_loaded": true,
+    "original_html_sha256": "64e54aa7133a20781c4362ecd4c665fa354cf185316ec4bbbec5fdbcdddccf7f",
+    "review_html_sha256": "9de97ff1757ec4c3b417fe6e5842d489506c014f9d76a038612891044e00f7ea",
+    "physical_motion_added": true,
+    "new_full_trials": 24,
+    "video_current": true
+  },
+  "handoff_sha256": "83a88b8b682eb584cfc6b6c1faedadb47a0ff1d8e3c8525363503b0a8a30d4e9",
+  "next": "Do not rerun134. Diagnose/control dynamic balance, actual foot-load realization and stable pause before a new complete contact transition; no blind sweeps. Preserve64/remove8 across72 matched full20s before PPO. Keep fresh holdout closed and all-attempt video complete."
+}
