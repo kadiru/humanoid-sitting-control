@@ -1,0 +1,145 @@
+{
+  "utc": "2026-11-08T22:31:10.588919+00:00",
+  "state": "HOLD_STAGE_CONTRACT_FIXED_VALIDATED_BALANCE_PATH_REJECTED_FOR_TIMING",
+  "construction": {
+    "kind": "Fresh cold support-margin construction on current wide-camera standing snapshot",
+    "endpoint_solver": {
+      "success": true,
+      "status": 0,
+      "message": "Optimization terminated successfully",
+      "iterations": 21,
+      "objective": 0.004907050896700978,
+      "maximum_hard_residual_m": 1.0408340855860843e-17,
+      "initialization": "current measured q0 only",
+      "global_optimality_claim": false
+    },
+    "foot_margin_before_m": 0.02,
+    "foot_margin_after_m": 0.087351083462983,
+    "geometry_pass_except_timing": true,
+    "clearance_pass": true,
+    "action_bounds_filter_rate_pass": true,
+    "nominal_settle_s": 20.78,
+    "required_nominal_settle_before_s": 14.4,
+    "admitted": false,
+    "whole_process_s": 8.629135070019402,
+    "physics_steps": 0,
+    "no_old_endpoint_input": true,
+    "contract": "contract.json",
+    "audit": "model_construction/audit.json"
+  },
+  "findings": {
+    "native_velocity": "Installed backend refreshes raw joint buffers; configuration requests per-iteration external forces, no task-level override found. Position/velocity discrepancy is compatible with documented TGS/split-impulse behavior. A local backend bug or particular root cause remains unproven.",
+    "physics_or_gains_changed": false,
+    "hold_defect": "Cycle core reused strict raw precontact quiet in HOLD, although original resting_objective.good has no raw joint-speed threshold.",
+    "boundary_defect": "Core switched to UNLOAD at1000, but unchanged cycle_audit requires HOLD through1000."
+  },
+  "repair": {
+    "source": "stages.py",
+    "old_source": "../rest_cycles_20261108_v1/stages.py",
+    "rest_stability_defaults_false": true,
+    "hold_window": "Latch controls751..1000 at1000; keep1000 HOLD; firstUNLOAD1001",
+    "precontact_quiet_unchanged": true,
+    "unload_stand_quiet_unchanged": true,
+    "physical_auditor_unchanged": true,
+    "action_contract_unchanged": true,
+    "unit_tests_passed": 16,
+    "saved_full_rollout_checks": 4,
+    "saved_rows": [
+      {
+        "case": "legacy_armchair_0",
+        "saved_samples": 1000,
+        "old_raw_quiet_hold_s": 0.0,
+        "corrected_qualified_hold_s": 6.84,
+        "raw_quiet_final5s_samples": 0,
+        "original_clean_label_unchanged": true,
+        "first_unload_tick": 1001,
+        "motion_advance_with_nonquiet_unload": false
+      },
+      {
+        "case": "legacy_armchair_1",
+        "saved_samples": 1000,
+        "old_raw_quiet_hold_s": 0.0,
+        "corrected_qualified_hold_s": 6.82,
+        "raw_quiet_final5s_samples": 0,
+        "original_clean_label_unchanged": true,
+        "first_unload_tick": 1001,
+        "motion_advance_with_nonquiet_unload": false
+      },
+      {
+        "case": "legacy_armchair_2",
+        "saved_samples": 1000,
+        "old_raw_quiet_hold_s": 0.0,
+        "corrected_qualified_hold_s": 6.84,
+        "raw_quiet_final5s_samples": 0,
+        "original_clean_label_unchanged": true,
+        "first_unload_tick": 1001,
+        "motion_advance_with_nonquiet_unload": false
+      },
+      {
+        "case": "wide_camera_slipping_sit",
+        "saved_samples": 1000,
+        "old_raw_quiet_hold_s": 0.0,
+        "corrected_qualified_hold_s": 6.46,
+        "raw_quiet_final5s_samples": 0,
+        "original_clean_label_unchanged": false,
+        "first_unload_tick": 1001,
+        "motion_advance_with_nonquiet_unload": false
+      }
+    ],
+    "scope": "Offline interface validation only: HOLD seeded for isolation, no sensor-only reachability or full-cycle claim",
+    "truth_labels_offline_only": true,
+    "runtime_actor_adapter_qualified": false,
+    "deployed_to_physics": false,
+    "legacy_holds_not_upright": true,
+    "contract": "hold_contract.json",
+    "validation": "hold_validation.json"
+  },
+  "counts": {
+    "model_constructions": 1,
+    "software_tests": 16,
+    "saved_rollouts": 4,
+    "GPU_launches": 0,
+    "physics_steps": 0,
+    "new_demonstrations": 0,
+    "complete_cycles": 0,
+    "PPO_updates": 0,
+    "new_full72_checks": 0,
+    "physical_repairs": 0
+  },
+  "resources": {
+    "model_process_s": 8.629135070019402,
+    "hold_validation_process_s": 0.2300012590130791,
+    "cap_each_stage_s": 45,
+    "AS_GiB": 40,
+    "CPU_threads": 1,
+    "retries": 0,
+    "scientific_owners": 1,
+    "other_agents": 0,
+    "worker_check": "worker_check.json",
+    "own_workers_live": false,
+    "queued_jobs": 0,
+    "gpu4070_untouched": true
+  },
+  "last_physical_result": {
+    "source": "../rest_cycle_wide_camera_20261108_v1/execution_receipt.json",
+    "final_hold_s": 6.46,
+    "slip_controls": 21,
+    "passed": false,
+    "new_video": false
+  },
+  "authoring_failures": [
+    "Ubuntu rg unavailable; used grep. Two wrong source locations corrected via rg --files; no science in those reads.",
+    "Receipt writer initially failed Python parsing because a keyword began with a digit; nothing was written. Corrected metadata writer only; no scientific replay."
+  ],
+  "references": [
+    {
+      "url": "https://nvidia-omniverse.github.io/PhysX/physx/5.8.0/docs/Simulation.html",
+      "finding": "Split impulse/TGS semantics mean velocity need not equal pose increments. No finite-difference substitution justified."
+    },
+    {
+      "url": "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/110.0/dev_guide/guides/current_limitations.html",
+      "finding": "Known TGS stationary-drive nonzero velocity; task config already requests per-iteration external forces. Not a proven local backend bug."
+    }
+  ],
+  "next_work": "Use corrected stage core rest_cycle_balance_margin_20261108_v1/stages.py: qualified rest is distinct from precontact quiet; original control1000 remains HOLD. A qualified runtime sensor adapter is still missing; saved truth-label tests do not supply one. Reject the new support-margin path for timing; no physical launch, retiming, resume, or endpoint warm start. Next compatible-furniture/positioning construction needs an explicit action-time witness before solving a full path. Eliminate physical transition slip, qualify current sensor load/unload and implement return-to-stand. Preserve raw25quiet precontact, action/physical criteria and PhysX/gains/materials. TGS velocity semantics are not proof of a local bug; no finite-difference qd substitution. One sitting and one upright-lean full cycle from3starts precede200demos/PPO/all72.4090only,4070AIWorker,64protected/8unresolved,holdoutclosed,automationdeleted."
+}

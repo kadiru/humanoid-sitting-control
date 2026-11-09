@@ -1,0 +1,51 @@
+{
+  "utc": "2026-11-08T22:23:36.418039+00:00",
+  "authorization": "Latest Continue: reliable two-cycle restart, within unchanged action and physical criteria.",
+  "premise": "Fresh wider-camera patch makes a nearer supported target visible. The executed heel-biased path has2cm modeled heel margin and fails21slip controls. The old centered construction used a different narrower observed patch and is not reused.",
+  "mechanism": "Cold eleven-coordinate endpoint minimizes squared normalized COM distance to sole-interval midpoint, with8original bilateral-foot/hover/observed-target equalities and original joint/root/arm bounds. Fresh path uses interpolated COM ending at that endpoint. This is a balance-margin construction, not a solver/quiet/physics change.",
+  "initialization": "Saved native wide-camera standing snapshot at physics100; q0 only. No old endpoint, failed vector, direction, or path as input.",
+  "equations": "min ((COM_x(q,root)-(xmin+xmax)/2)/(xmax-xmin))^2, hard=(left/right foot x,z,pitch; pelvis minimum-plane gap-.012; pelvis tangent-target)=0. Source target remains22mm-eroded observed hull. Conservative improvement gate min(COM_x-xmin,xmax-COM_x)>=.04m; old explicit rule .02m.",
+  "return_policy": "One SLSQP endpoint(max80,ftol1e-10,eps1e-7), one33node cold path, one16node normal stroke. Stop on rejected solver/residual/margin/geometry/action/clearance/timing; no best failed point, retiming, tuning, or retry. No global optimality claim.",
+  "audits": [
+    "Existing independent full geometry recomputation",
+    "Existing exact discrete command filter/rate/margin/timing audit",
+    "Existing sampled mesh collision audit",
+    "Independent endpoint COM recomputation and>=2cm margin gain"
+  ],
+  "resources": {
+    "total_CPU_wall_s": 45,
+    "address_space_GiB": 40,
+    "threads": 1,
+    "max_endpoint_iterations": 80,
+    "physics_steps": 0,
+    "PPO_updates": 0,
+    "retries": 0,
+    "outputs_MiB": 20
+  },
+  "unchanged": [
+    ".003rad/control",
+    ".1filter",
+    ".03margin",
+    "14fixedfingers",
+    "25currentrawquietticks",
+    "20s/final5s",
+    "alltickslip/legal/failurecriteria",
+    "PhysX/gains/materials"
+  ],
+  "review": {
+    "source_review_passed": true,
+    "one_execution_owner": true,
+    "independent_geometry_command_clearance_auditors": true,
+    "limits": "SLSQP local convergence is not global optimality; modeled balance margin is not a guarantee of raw quiet, support force, no slip, or complete cycle."
+  },
+  "references": [
+    {
+      "url": "https://nvidia-omniverse.github.io/PhysX/physx/5.8.0/docs/Simulation.html",
+      "finding": "Split impulse/TGS semantics mean velocity need not equal pose increments. No finite-difference substitution justified."
+    },
+    {
+      "url": "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/110.0/dev_guide/guides/current_limitations.html",
+      "finding": "Known TGS stationary-drive nonzero velocity; task config already requests per-iteration external forces. Not a proven local backend bug."
+    }
+  ]
+}
