@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-18T10:16:15.194986+00:00",
+  "passed": true,
+  "scope": "Corrected independent saved-state audit434, without constructing new candidates.\nOriginal v2 completed finite-work checks but failed geometry because a degree angle\nwas passed as radians. Preserve its failure and reuse ONLY its verified aggregate\nwork evidence; repeat no finite-work columns. Original work array is unavailable.\nRebuild all1467 interpolation states with SciPySlerp, independent FK geometry,\nequilibrium, and16-joint central finite virtual work per state. Replay derived\nclock and rounding arithmetic. Failure of compatibility is reported, not an\nassertion that the candidate must pass. No root/optimizer/filter/runtime/physics.\n",
+  "records": 1467,
+  "finite_work_columns_completed_in_original_v2": 23472,
+  "finite_work_columns_repeated_in_v3": 0,
+  "detailed_original_finite_work_array_available": false,
+  "corrected_geometry_unit": "degrees=True for degree-valued seat rotation, matching original434 measured plane",
+  "original_audit_actual_exit": 1,
+  "errors": {
+    "interpolation": 3.3306690738754696e-16,
+    "geometry": 5.289724544882013e-16,
+    "work": 8.816620322704694e-09,
+    "equilibrium": 4.440892098500626e-16,
+    "command": 1.8968226989102277e-10,
+    "derived_clock": 0.0,
+    "rounding": 0.0
+  },
+  "reported_geometry_failures": [
+    93,
+    94,
+    769
+  ],
+  "reported_nonlinear_lift_compatible": false,
+  "inherited430_extra_buffer_passed": false,
+  "arithmetic_pass_not_admission": true,
+  "actual_float32_filter_ticks": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "physical_admission": false,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/clock_lift_v2_434/results.json": "3fab6eeafb818ca4f95360cea35ae2e475865c1c26ed9953157ef49aed717b84",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_clock_lift_v3_435.py": "7d0c1be3f2e0f9e9c03eb21009d4b25f18b36f8ab45dd53e8407cc93908415a5"
+  }
+}

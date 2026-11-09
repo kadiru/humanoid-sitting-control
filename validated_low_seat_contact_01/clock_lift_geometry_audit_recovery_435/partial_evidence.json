@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-18T10:16:01.504638+00:00",
+  "original_actual_exit": 1,
+  "exit_tool": "89afec",
+  "session": 72434,
+  "original_completed_loop_records": 1467,
+  "original_completed_loop_finite_work_columns": 23472,
+  "original_completed_loop_errors": {
+    "interpolation": 3.3306690738754696e-16,
+    "geometry": 0.2811614271130405,
+    "work": 8.816620322704694e-09,
+    "equilibrium": 4.440892098500626e-16,
+    "command": 1.8968226989102277e-10,
+    "derived_clock": 0.0,
+    "rounding": 0.0
+  },
+  "original_detailed_finite_work_array_available": false,
+  "why_count_known": "The failed aggregate assertion occurs after the complete1467-record loop; no result-array write was reached. Closed source and log retained.",
+  "correction": "Independent auditor converted plane radians to degrees, then omitted degrees=True in Rotation.from_euler. Add degrees=True. Original434 geometry uses degrees=True and is unchanged. Rebuild only geometry/interpolation/equilibrium/clock; reuse original closed-log finite-work aggregate, no finite-work loop repeated.",
+  "compile_actual_exit": 0,
+  "compile_tool": "875c85",
+  "evidence_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/clock_lift_geometry_audit_recovery_435/audit_low_seat_clock_lift_v2_435.py": "5247c5ba3741482fb66eba16ed230cfd6c46fba321319629dc4d1ef075fe2a24",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/clock_lift_geometry_audit_recovery_435/clock_lift_audit_v2_435.log": "3ab4029e527ed2906999e839c80086ac1d0a3df167e47f14f28f35f68477e80b"
+  },
+  "corrected_source_sha256": "7d0c1be3f2e0f9e9c03eb21009d4b25f18b36f8ab45dd53e8407cc93908415a5",
+  "physical_admission": false
+}
