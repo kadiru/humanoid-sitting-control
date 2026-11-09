@@ -1,0 +1,143 @@
+{
+  "utc": "2026-11-09T06:42:29.895162+00:00",
+  "state": "INITIALIZATION_FIXED_CONTACT_BIAS_OBSERVED_FULL_ROBOT_SPEED_ERROR_NOT_REPRODUCED",
+  "correction": "Correct explicit native initial joint coordinate and velocity in a new isolated fixture. Not a correction to the robot ankle readout.",
+  "comparison": [
+    {
+      "fixture": "free",
+      "angle_range_rad": 5.735557715524919e-05,
+      "angle_change_rad": -5.735557715524919e-05,
+      "mean_native_velocity_rad_s": 6.106915679993108e-05,
+      "max_abs_native_velocity_rad_s": 0.00025002914480865,
+      "native_velocity_integral_rad": 0.0003053457476198673,
+      "mean_angle_rad": 2.212265371781541e-06,
+      "minimum_corner_height_m": -0.05000115931034088
+    },
+    {
+      "fixture": "floor_contact",
+      "angle_range_rad": 9.5367431640625e-07,
+      "angle_change_rad": -2.9802322387695312e-08,
+      "mean_native_velocity_rad_s": -0.0025422063190490007,
+      "max_abs_native_velocity_rad_s": 0.002564668655395508,
+      "native_velocity_integral_rad": -0.01271103136241436,
+      "mean_angle_rad": 0.4651005268096924,
+      "minimum_corner_height_m": -0.000547424890100956
+    }
+  ],
+  "independent_audit": {
+    "reproduction_passed": false,
+    "criteria": {
+      "loaded_angle_range_under_1e_4_rad": true,
+      "loaded_mean_native_speed_exceeds_0_05_rad_s": false,
+      "loaded_mean_speed_disagrees_with_position_change_by_over_0_05_rad_s": false
+    },
+    "setup_and_data_checks_passed": true,
+    "maximum_target_increment_rad": 0.003000020980834961,
+    "maximum_filter_error_rad": 2.0980834958272965e-08,
+    "initial_physics_steps": 0,
+    "active_physics_steps": 2000,
+    "fixture_transitions": 4000,
+    "physics_configuration_changed": false,
+    "readings_corrected": false,
+    "robot_repair": false,
+    "complete_robot_cycles": 0,
+    "trajectory_sha256": "6e356f0a0b1cd3245d3b9fb0bd50af21b87d9e1eba82bb0aea915daa6c424b82",
+    "wall_s": 0.03169283701572567
+  },
+  "outcome": "Fixed reproduction predicate FAILED: loaded fixture native speed magnitude0.00254rad/s is below frozen0.05rad/s. Qualitative native readout/position mismatch exists independently of robot scripts, but does not isolate the cause or reproduce magnitude of the robot failure. No simulator parameter change, robot retry, sensor substitution or physical success justified.",
+  "resources": {
+    "owner": {
+      "state": "NATIVE_CONTACT_FIXTURE_RECORDED",
+      "pid": 2710358,
+      "utc": "2026-11-09T06:38:11.293441+00:00",
+      "wall_s": 4.428902902000118,
+      "recurring": false,
+      "GPU_launches": 1,
+      "commanded_sitting_controls": 0,
+      "complete_cycles": 0,
+      "PPO_updates": 0
+    },
+    "child": {
+      "returncode": 0,
+      "wall_s": 4.054086413991172
+    },
+    "active_physics_steps": 2000,
+    "fixture_transitions": 4000,
+    "initialization_physics_steps": 0,
+    "post_audit_wall_s": 0.03169283701572567,
+    "post_audit_limit_s": 45,
+    "post_audit_cores": 1,
+    "post_audit_AS_GiB": 40,
+    "task_new_robot_sitting_controls": 0,
+    "task_complete_cycles": 0,
+    "task_required_starts": 3
+  },
+  "chronology": "Fixture source/inputs/physical settings/test predicates and separate source review were frozen before execution. The saved-data audit implementation was written after capture, following the frozen predicates; not claimed as an independently authored prelaunch implementation.",
+  "physical_repairs": 0,
+  "raw_ankle_velocity_fixed": false,
+  "pelvis_slip_fixed_in_physics": false,
+  "complete_cycles": 0,
+  "baseline": "64/72clean,8unresolved; no new72evaluation",
+  "worker_live": false,
+  "autostart": false,
+  "automation": "deleted",
+  "next_work": "The isolated test closes with a negative result; do not sweep its parameters or replay the rejected robot path. Need an evidence-backed native velocity correction and a newly admitted current-camera contact approach before full robot cycles. Prepared hover/contact gates remain physically unvalidated; keep native quiet, action, material, all-tick slip and success thresholds unchanged.",
+  "evidence": {
+    "audit.py": {
+      "sha256": "ed91f9b9cf5c1f2f4042cfcb7c0f341e0bacb8cb7a33f10f5ef049e57f75e194",
+      "bytes": 2269
+    },
+    "reproduce.py": {
+      "sha256": "d52891d0baba860a6dffe810559e8e8f31b2cf1eac890d72ce024b41602d740f",
+      "bytes": 7677
+    },
+    "owner.py": {
+      "sha256": "22a1ebe785a8f42060d6a0a8579fb6ffdb874582323e6e44f7d81e22627ec100",
+      "bytes": 3310
+    },
+    "freeze.json": {
+      "sha256": "ee84159e5820d1e297090b30fcf22da3a5c23cfbb9a2180511f293d3ca7765e7",
+      "bytes": 58108
+    },
+    "contract.json": {
+      "sha256": "64fca66a3e550d8413e9ccf0d4c94249d92df06bee1a0a30f53988251b5d8090",
+      "bytes": 2707
+    },
+    "results/trial.log": {
+      "sha256": "054f29c751119f7030b03da694f82af15e52f7bec9f100b754e26c7300a680f0",
+      "bytes": 4036
+    },
+    "results/command.json": {
+      "sha256": "8fe02bf1a5aab020a7817b0b783538504c3978c70775107ad78f7bca842e0c08",
+      "bytes": 272
+    },
+    "results/trial_process.json": {
+      "sha256": "45458e2ae5a26d060ee8fd84e237029bdab41d8e29033b3534f4d0783639e879",
+      "bytes": 53
+    },
+    "results/owner_status.json": {
+      "sha256": "bcad4d8af17f79c0e6e7a6eb43d4dceac7dd0d3d32cace3dd7507c1493e0ae52",
+      "bytes": 265
+    },
+    "results/fixture/fixture.usda": {
+      "sha256": "2a00d25a026d6da1339985b1c502a00338c64487a7db6dfdee846371f3964dff",
+      "bytes": 8766
+    },
+    "results/fixture/result.json": {
+      "sha256": "d754620ce93402a2ca2839884d43713ee562f1ec60e10e6674c5272ca52926d7",
+      "bytes": 1448
+    },
+    "results/fixture/native_states.npz": {
+      "sha256": "6e356f0a0b1cd3245d3b9fb0bd50af21b87d9e1eba82bb0aea915daa6c424b82",
+      "bytes": 23254
+    },
+    "results/fixture/initialization.json": {
+      "sha256": "32e7e45fb48290ee1059bcf902536f6e7ed575ecce97b6ddf2b2a13fd0698bce",
+      "bytes": 115
+    },
+    "results/fixture/independent_audit.json": {
+      "sha256": "c1e4eb6419a070ef741e3c487cb6c2a6b2dddc79223f42d6b7648709b7bd912b",
+      "bytes": 736
+    }
+  }
+}

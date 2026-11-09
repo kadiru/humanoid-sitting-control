@@ -1,7 +1,7 @@
 {
-  "utc": "2026-11-09T06:31:19.107600+00:00",
+  "utc": "2026-11-09T06:42:29.895162+00:00",
   "scope": "Current successor index; preserve inherited603/601 evidence and unchanged physical criteria",
-  "latest_scientific_result": "One4090standing-only inspection(100physicssteps)confirmed externalforces-per-iteration=True andreportedjointfriction0;nativeankleloaded inconsistency unresolved. Newcontactentrygate/executor passes12logic tests; savedprefix firstblockedcommand6.40s beforeold9.04s slip,NOTphysicalrepair. No new sitting/stand/PPO/72tests;0/3cycles.773reconstructed saved-record commits nowpublished alongside original7importcommits.",
+  "latest_scientific_result": "Contactentryguard/executor prepared and12logic tests passed; no physicalrepair. One fresh4090nativejointfixture initializationfailed; correctedv2completed2000physicssteps. Qualitativecontactvelocitybias0.00254rad/s withstableangle, butfrozen>0.05reproductiontestFAILED. Nativeanklereadoutmechanism remainsunresolved; no PhysXsettingschanged,no failedrobottrajectoryretry,no newrobotcycles/PPO/72tests.0/3cycles; prior10.86s supportedcalibrationstillFAIL. Detailed773savedrecordarchivepublished; eachnewchange separatelycommitted/pushed.",
   "authorizations": {
     "primary_diagnostic": "completed and consumed",
     "interior_diagnostic": "explicitly approved; completed and consumed",
@@ -51,7 +51,7 @@
     "load_and_three_starts_20261109": "Latest human: validate load sensing, sit/5s hold/stand from3starts,4090only, unchanged actionlimits/successcriteria; asks GitHub commit status.",
     "pelvis_ankle_three_starts_and_history_20261109": "Fix pelvis slip and ankle-speed readings, then3sit5s-hold-stand starts;4090only;unchanged actions/criteria;commit and push each fix;preserve recoverable development history."
   },
-  "next_work": "Establish the native loaded articulation velocity mechanism and a genuine correction before altering any readout. Source-level trace is allowed; no guessed solver/friction/gain/iteration changes or finite-difference quiet substitution. The contact execution adapter must be bound to a newly admitted path with measured precontact geometry and a contact-seeking endpoint capable of a qualified positive load; do not simply wait for5%BW on a theoretical zero-load pose, replay the rejected path, or claim the saved-prefix refusal is physical repair. Only after loaded sensing and release are admitted run3complete cycles and their original audits.",
+  "next_work": "The isolated test closes with a negative result; do not sweep its parameters or replay the rejected robot path. Need an evidence-backed native velocity correction and a newly admitted current-camera contact approach before full robot cycles. Prepared hover/contact gates remain physically unvalidated; keep native quiet, action, material, all-tick slip and success thresholds unchanged.",
   "physical": {
     "clean": "64/72",
     "stable": 70,
@@ -277,15 +277,15 @@
     "authorization_consumed": true
   },
   "current_execution": {
-    "scope": "standing native-property diagnosis and offline contact-entry correction",
-    "state": "CONTACT_ENTRY_GUARD_TESTED_NATIVE_ANKLE_INCONSISTENCY_UNRESOLVED_NO_COMPLETE_CYCLE",
+    "scope": "fresh native contact readout fixture",
+    "state": "INITIALIZATION_FIXED_CONTACT_BIAS_OBSERVED_FULL_ROBOT_SPEED_ERROR_NOT_REPRODUCED",
     "worker_live": false,
     "model_constructions": 0,
     "accepted_paths": 0,
-    "physics_steps": 100,
+    "physics_steps": 2000,
     "PPO_updates": 0,
     "relaunch_permitted": false,
-    "receipt": "/Users/kadir/humanoid-sitting-control/rest_cycle_contact_fix_20261109_v1/execution_receipt.json"
+    "receipt": "/Users/kadir/humanoid-sitting-control/native_contact_readout_20261109_v2/execution_receipt.json"
   },
   "previous_scientific_result_before_budget_diagnostic": {
     "kind": "Terminal failure of approved cycle stage B; no admissible candidate",
@@ -2137,20 +2137,15 @@
     "physical_repairs": 0
   },
   "latest_worker_check": {
-    "utc": "2026-11-09T06:31:19.107600+00:00",
-    "gpu_lines": [
-      "RTX4090:0%util,43C,17MiB",
-      "RTX4070:24%util,57C,5080MiB"
-    ],
-    "compute_apps": [
-      "4070:2635147:/isaac-sim/kit/python/bin/python3"
-    ],
+    "utc": "2026-11-09T06:42:29.895162+00:00",
     "own_simulation_worker": false,
     "own_PPO_worker": false,
     "recurring_automation": false,
-    "own_worker_matches": [],
-    "inspection_owner_pid": 2669205,
-    "inspection_owner_exited": true
+    "completed_owners": [
+      2669205,
+      2706663,
+      2710358
+    ]
   },
   "furniture_motion_repairs_20261108_v1": {
     "receipt": "/Users/kadir/humanoid-sitting-control/furniture_motion_repairs_20261108_v1/execution_receipt.json",
@@ -2399,5 +2394,13 @@
     "unsaved_edits_recoverable": false,
     "original_git_history_recoverable": false,
     "excluded_bulk_artifacts": "Retained externally with SHA256 inventory; not uploaded as Git history."
+  },
+  "native_contact_readout_20261109_v2": {
+    "receipt": "/Users/kadir/humanoid-sitting-control/native_contact_readout_20261109_v2/execution_receipt.json",
+    "receipt_sha256": "d807f17517d5db41585364bf8e9b9f1d9569d1aca30279b3f8e6e9160a0d5595",
+    "state": "INITIALIZATION_FIXED_CONTACT_BIAS_OBSERVED_FULL_ROBOT_SPEED_ERROR_NOT_REPRODUCED",
+    "physical_repair": false,
+    "worker_live": false,
+    "autostart": false
   }
 }

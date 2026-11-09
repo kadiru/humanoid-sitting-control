@@ -1,0 +1,43 @@
+{
+  "fixtures": [
+    {
+      "fixture": "free",
+      "angle_range_rad": 5.735557715524919e-05,
+      "angle_change_rad": -5.735557715524919e-05,
+      "mean_native_velocity_rad_s": 6.106915679993108e-05,
+      "max_abs_native_velocity_rad_s": 0.00025002914480865,
+      "native_velocity_integral_rad": 0.0003053457476198673,
+      "mean_angle_rad": 2.212265371781541e-06,
+      "minimum_corner_height_m": -0.05000115931034088
+    },
+    {
+      "fixture": "floor_contact",
+      "angle_range_rad": 9.5367431640625e-07,
+      "angle_change_rad": -2.9802322387695312e-08,
+      "mean_native_velocity_rad_s": -0.0025422063190490007,
+      "max_abs_native_velocity_rad_s": 0.002564668655395508,
+      "native_velocity_integral_rad": -0.01271103136241436,
+      "mean_angle_rad": 0.4651005268096924,
+      "minimum_corner_height_m": -0.000547424890100956
+    }
+  ],
+  "physics_steps": 2000,
+  "active_steps": 2000,
+  "wall_s": 2.696438333950937,
+  "fixture_parameters": {
+    "mass_kg": 2.0,
+    "length_m": 0.55,
+    "hinge_height_m": 0.5,
+    "initial_angle_rad": 0.6,
+    "drive_Kp": 160.0,
+    "drive_Kd": 4.0,
+    "max_effort_Nm": 40.0,
+    "dt": 0.005,
+    "position_iterations": 8,
+    "velocity_iterations": 4
+  },
+  "changed_robot_configuration": false,
+  "robot_cycles": 0,
+  "source_readings_not_corrected": true,
+  "conclusion": "A controlled readout reproduction only; does not establish a robot repair or authorize parameter changes."
+}
