@@ -1,0 +1,249 @@
+"""Camera-derived interior landing, with bilateral feet and balance constraints.
+
+CPU construction only. No simulator imports, scene identity, or saved action path.
+Coordinates are gravity aligned at the startup pelvis, with measured feet fixed.
+"""
+import time
+import numpy as np
+from scipy.optimize import least_squares, minimize
+from scipy.spatial import ConvexHull
+from scipy.spatial.transform import Rotation
+from humanoid_sitting.shared_frame import apply, level_rotation, transform
+from sagittal_static_bias import static_bias
+
+
+class SeatPlan:
+    def __init__(self, model, inertia, shapes, q, gravity, geometry, points, previous):
+        self.model, self.inertia = model, inertia
+        self.q0 = np.asarray(q, float).copy()
+        self.previous = np.asarray(previous, float).copy()
+        self.R0 = level_rotation(np.asarray(gravity, float).copy())
+        self.euler0 = Rotation.from_matrix(self.R0).as_euler('xyz')
+        self.n = self.R0 @ np.asarray(geometry[2:5], float)
+        self.n /= np.linalg.norm(self.n)
+        self.d = float(geometry[5])
+        assert geometry[11] and geometry[12] <= .21 and self.n[2] > .97
+        self.cloud = np.asarray(points) @ self.R0.T
+        self.e = np.array([1., 0., 0.]) - self.n * self.n[0]
+        self.e /= np.linalg.norm(self.e)
+        self.b = np.cross(self.n, self.e)
+        self.hull = ConvexHull(np.c_[self.cloud @ self.e, self.cloud @ self.b])
+        self.mesh = {b: np.concatenate([s['vertices'] for s in shapes if s['body'] == b])
+                     for b in {s['body'] for s in shapes}}
+        # Choose one actual collision vertex, once, from the lowest rear edge.
+        # It remains the same material point through the entire motion.
+        candidates=[]
+        for shape_index,shape in enumerate(shapes):
+            if shape['body']=='pelvis':
+                for vertex_index,vertex in enumerate(shape['vertices']):
+                    candidates.append((shape_index,vertex_index,np.asarray(vertex,float)))
+        bottom=min(float(row[2][2]) for row in candidates)
+        eligible=[r for r in candidates if float(r[2][2])<=bottom+1e-9]
+        chosen=min(eligible,key=lambda r:(float(r[2][0]),abs(float(r[2][1])),float(r[2][1]),r[0],r[1]))
+        self.contact_marker=chosen[2].copy()
+        self.contact_association=dict(body='pelvis',shape_index=chosen[0],vertex_index=chosen[1],
+            local_point=self.contact_marker.tolist(),selection='lowest-z rear-most actual collider vertex; fixed material identity')
+        self.legids = [model.names.index(f'{s}_{j}_joint') for s in ('left', 'right')
+                       for j in ('hip_pitch', 'knee', 'ankle_pitch')]
+        limits = {j['name']: np.deg2rad(j['limits']) for j in model.joints if j['name'] in model.names}
+        self.lower = np.array([limits[model.names[j]][0] + .031 for j in self.legids])
+        self.upper = np.array([limits[model.names[j]][1] - .031 for j in self.legids])
+        fk = model.fk(self.q0)
+        self.feet = [transform(self.R0) @ fk[s + '_ankle_roll_link'] for s in ('left', 'right')]
+        soles = np.concatenate([apply(t, self.mesh[s + '_ankle_roll_link'])
+                                for s, t in zip(('left', 'right'), self.feet)])
+        self.floor = float(soles[:, 2].min())
+        sole = soles[soles[:, 2] < self.floor + .004]
+        self.foot_bounds = [float(sole[:, 0].min()), float(sole[:, 0].max())]
+        self.z0 = np.r_[self.q0[self.legids], 0., 0., self.euler0[1]]
+        self.deadline = None
+        self.arm_reach = 0.
+        self.arm_goal = None
+        self.progress = 0.
+        self.armids = [model.names.index(f'{side}_{joint}_joint') for side in ('left','right')
+                       for joint in ('shoulder_pitch','shoulder_roll','elbow_pitch')]
+        self.arm_target = np.array([-1.3,.15,.10,-1.3,-.15,.10])
+        self.shoulder_ids = [self.armids[0], self.armids[3]]
+        self.elbow_ids = [self.armids[2], self.armids[5]]
+        self.arm_initial = np.array([self.q0[self.shoulder_ids].mean(), self.q0[self.elbow_ids].mean()])
+        self.z0 = np.r_[self.z0, self.arm_initial]
+        self.arm_lower = np.array([max(limits[model.names[j]][0] for j in ids)+.031 for ids in (self.shoulder_ids,self.elbow_ids)])
+        self.arm_upper = np.array([min(limits[model.names[j]][1] for j in ids)-.031 for ids in (self.shoulder_ids,self.elbow_ids)])
+
+    def state(self, z):
+        if self.deadline is not None and time.monotonic() > self.deadline:
+            raise TimeoutError('45_SECOND_CONSTRUCTION_CAP')
+        q = self.q0.copy(); q[self.legids] = z[:6]
+        q[self.armids] += self.arm_reach*(self.arm_target-self.q0[self.armids])
+        q[self.shoulder_ids] = self.q0[self.shoulder_ids] + z[9]-self.arm_initial[0]
+        q[self.elbow_ids] = self.q0[self.elbow_ids] + z[10]-self.arm_initial[1]
+        angles = self.euler0.copy(); angles[1] = z[8]
+        root = transform(Rotation.from_euler('xyz', angles).as_matrix(), [z[6], 0., z[7]])
+        fk = self.model.fk(q)
+        pelvis = apply(root, self.mesh['pelvis'])
+        heights = pelvis @ self.n + self.d
+        tip = apply(root,self.contact_marker)
+        com = np.average([apply(root @ fk[b], c) for b, c in
+                          zip(self.inertia['body_names'], self.inertia['local_com'])],
+                         axis=0, weights=self.inertia['mass'])
+        return q, root, fk, pelvis, heights, tip, com
+
+    def residual(self, z, gap, tangent, balance):
+        q, root, fk, pelvis, heights, tip, com = self.state(z)
+        error = []
+        for s, anchor in zip(('left', 'right'), self.feet):
+            t = root @ fk[s + '_ankle_roll_link']
+            error.extend((t[:3, 3] - anchor[:3, 3])[[0, 2]])
+            error.append(.2 * Rotation.from_matrix(anchor[:3, :3].T @ t[:3, :3]).as_rotvec()[1])
+        arm_reference = self.arm_initial if self.arm_goal is None else (1-self.progress)*self.arm_initial+self.progress*self.arm_goal
+        return np.r_[error, heights.min() - gap, tip @ self.e - tangent, com[0] - balance, .001*(z[9:11]-arm_reference)]
+
+    def fit(self, seed, gap, tangent, balance):
+        lo = np.r_[self.lower, -.5, -.6, -.15, self.arm_lower]
+        hi = np.r_[self.upper, .1, .1, np.deg2rad(40) - .05, self.arm_upper]
+        fit = least_squares(self.residual, seed, bounds=(lo, hi),
+                            args=(gap, tangent, balance), max_nfev=60,
+                            xtol=1e-9, ftol=1e-9, gtol=1e-9)
+        if np.max(np.abs(fit.fun[:9])) > .002:
+            raise ValueError(dict(reason='BILATERAL_BALANCED_POSE_INFEASIBLE',
+                                  residual=fit.fun.tolist(), variables=fit.x.tolist(),
+                                  gap=gap, tangent=tangent, balance=balance))
+        return fit.x
+
+    def command_for_state(self,q,root,tip):
+        floor_root=root.copy();floor_root[2,3]-=self.floor
+        pose=np.r_[floor_root[:3,3],Rotation.from_matrix(root[:3,:3]).as_quat()]
+        bias,static=static_bias(self.model,self.inertia,q,pose,float(tip[0]),0.)
+        arm_bias=[]
+        for joint in self.armids:
+            potentials=[]
+            for sign in (-1,1):
+                trial=q.copy();trial[joint]+=sign*1e-5;tf=self.model.fk(trial)
+                potentials.append(sum(m*9.81*apply(root@tf[b],c)[2] for b,m,c in
+                    zip(self.inertia['body_names'],self.inertia['mass'],self.inertia['local_com'])))
+            arm_bias.append((potentials[1]-potentials[0])/(2e-5*40.))
+        cmd=self.previous.copy();cmd[self.legids]=q[self.legids]+bias
+        cmd[self.armids]=q[self.armids]+np.asarray(arm_bias)
+        return cmd,static
+
+    def solve(self):
+        self.deadline = time.monotonic() + 45.
+        q, root, fk, pelvis, h, tip, com = self.state(self.z0)
+        # Choose the nearest forward contact in the observed hull eroded by the
+        # original20mm contact-patch reserve, plus2mm numerical allowance.
+        # Account for the actual pelvis bottom patch through the allowed pitch
+        # range. This changes the selected target, never the acceptance inset.
+        eq = self.hull.equations
+        lane = float(tip @ self.b)
+        footprint = []
+        for pitch in np.linspace(-.15, np.deg2rad(40)-.05, 33):
+            angles = self.euler0.copy(); angles[1] = pitch
+            points = self.mesh['pelvis'] @ Rotation.from_euler('xyz', angles).as_matrix().T
+            height = points @ self.n
+            bottom = points[height < height.min()+.002]
+            reference = self.contact_marker @ Rotation.from_euler('xyz', angles).as_matrix().T
+            footprint.extend(np.c_[(bottom-reference) @ self.e, (bottom-reference) @ self.b])
+        padding = np.max(np.asarray(footprint) @ eq[:,:2].T, axis=0)
+        rhs = -.022-eq[:,2]-eq[:,1]*lane-padding
+        forward = eq[:,0] > 1e-5
+        target = float(np.min(rhs[forward]/eq[forward,0]))
+        backward = eq[:,0] < -1e-5
+        if backward.any() and target < np.max(rhs[backward]/eq[backward,0]):
+            raise ValueError('ERODED_OBSERVED_PATCH_EMPTY_AT_CONTACT_LANE')
+        if np.any((abs(eq[:,0])<=1e-5)&(rhs<0)):
+            raise ValueError('ERODED_OBSERVED_PATCH_LANE_OUTSIDE')
+        edge = float(np.min((-eq[forward,2]-eq[forward,1]*lane)/eq[forward,0]))
+        center = .5*sum(self.foot_bounds)
+        span = self.foot_bounds[1]-self.foot_bounds[0]
+        # A fresh endpoint solve supplies an arm reference for the path. It
+        # cannot import a previous failed command vector or relax constraints.
+        self.arm_reach = 1.
+        # New cold constrained construction: maximize sagittal support margin
+        # (equivalently minimize distance to the sole interval center).
+        # No old endpoint, rejected iterate, or measured outcome enters this solve.
+        self.progress = 1.
+        def hard(z):
+            return self.residual(z, .012, target, 0.)[:8]
+        def objective(z):
+            return ((self.state(z)[-1][0]-center)/span)**2
+        lo=np.r_[self.lower,-.5,-.6,-.15,self.arm_lower]
+        hi=np.r_[self.upper,.1,.1,np.deg2rad(40)-.05,self.arm_upper]
+        opt=minimize(objective,self.z0.copy(),method='SLSQP',bounds=list(zip(lo,hi)),
+                     constraints=[dict(type='eq',fun=hard)],
+                     options=dict(maxiter=80,ftol=1e-10,eps=1e-7,disp=False))
+        self.endpoint_solver=dict(success=bool(opt.success),status=int(opt.status),message=str(opt.message),
+             iterations=int(opt.nit),objective=float(opt.fun),maximum_hard_residual_m=float(np.max(abs(hard(opt.x)))),
+             initialization='current measured q0 only',global_optimality_claim=False)
+        if not opt.success or not np.isfinite(opt.x).all() or np.max(abs(hard(opt.x)))>2e-6:
+            raise ValueError(dict(reason='SUPPORT_MARGIN_ENDPOINT_REJECTED',solver=self.endpoint_solver))
+        endpoint=opt.x
+        balance=float(self.state(endpoint)[-1][0])
+        margin=min(balance-self.foot_bounds[0],self.foot_bounds[1]-balance)
+        if margin < .04:
+            raise ValueError(dict(reason='NO_SUBSTANTIVE_SUPPORT_MARGIN_GAIN',margin_m=margin))
+        qe,re,fe,pe,he,te,ce=self.state(endpoint)
+        end_command=self.command_for_state(qe,re,te)[0]
+        from complete_seat_path import arc_clock
+        length=float(np.max(abs(end_command-self.previous)))
+        duration=arc_clock(0,length)[1];count=int(np.ceil(duration/.02))
+        limits={j['name']:np.deg2rad(j['limits']) for j in self.model.joints if j['name'] in self.model.names}
+        previous=self.previous.copy();peak=0.;minimum=float('inf')
+        for tick in range(count):
+            distance,_=arc_clock(min((tick+1)*.02,duration),length)
+            command=self.previous+(end_command-self.previous)*distance/length
+            desired=previous+(command-previous)/.1
+            peak=max(peak,float(abs(command-previous).max()))
+            minimum=min(minimum,min(min(desired[j]-limits[self.model.names[j]][0],limits[self.model.names[j]][1]-desired[j]) for j in range(23)))
+            previous=command
+        self.stage_evidence=dict(contact_association=self.contact_association,endpoint_solver=self.endpoint_solver,endpoint_variables=endpoint.tolist(),
+            command_time_witness=dict(controls=count,duration_s=count*.02,max_increment_rad=peak,
+              minimum_desired_margin_rad=minimum,full_path_or_physics_witness=False))
+        if count*.02>10.4 or peak>.003+1e-10 or minimum<.03:
+            raise ValueError('HIGH_SUPPORT_COMMAND_TIME_WITNESS_REJECTED')
+        self.arm_goal = endpoint[9:11].copy()
+        seed = self.z0.copy(); nodes = []
+        initial_gap, initial_tangent, initial_balance = float(h.min()), float(tip @ self.e), float(com[0])
+        # Solve fresh measured-geometry constraints; no prior failed action vector.
+        for s in np.linspace(0, 1, 33):
+            self.arm_reach = s
+            self.progress = s
+            gap = (1-s)*initial_gap + s*.012
+            tangent = (1-s)*initial_tangent + s*target
+            cop = (1-s)*initial_balance + s*balance
+            if s:
+                seed = self.fit(seed, gap, tangent, cop)
+            q, root, fk, pelvis, heights, tip, com = self.state(seed)
+            floor_root = root.copy(); floor_root[2, 3] -= self.floor
+            pose = np.r_[floor_root[:3, 3], Rotation.from_matrix(root[:3, :3]).as_quat()]
+            bias, static = static_bias(self.model, self.inertia, q, pose, float(tip[0]), 0.)
+            arm_bias=[]
+            for joint in self.armids:
+                potentials=[]
+                for sign in (-1,1):
+                    trial=q.copy();trial[joint]+=sign*1e-5
+                    tf=self.model.fk(trial)
+                    potentials.append(sum(m*9.81*apply(root@tf[b],c)[2] for b,m,c in
+                        zip(self.inertia['body_names'],self.inertia['mass'],self.inertia['local_com'])))
+                arm_bias.append((potentials[1]-potentials[0])/(2e-5*40.))
+            arm_bias=np.asarray(arm_bias)
+            if not nodes:
+                arm_preload=self.previous[self.armids]-q[self.armids]-arm_bias
+                preload = self.previous[self.legids] - q[self.legids] - bias
+            cmd = self.previous.copy(); cmd[self.legids] = q[self.legids] + bias + (1-s)*preload
+            cmd[self.armids]=q[self.armids]+arm_bias+(1-s)*arm_preload
+            nodes.append(dict(q=q.tolist(), root=root.tolist(), command=cmd.tolist(),
+                              phase='approach', gap=float(heights.min()),
+                              contact_tangent=float(tip @ self.e), balance=float(com[0]), static=static))
+        nodes[0]['command'] = self.previous.tolist()
+        # Conservative command arc timing with a half-second speed ramp at each end.
+        commands = np.array([x['command'] for x in nodes])
+        arc = np.r_[0., np.cumsum(np.max(abs(np.diff(commands, axis=0)), axis=1))]
+        approach_seconds = float(arc[-1]/.125 + 1.)
+        return dict(contact_association=self.contact_association,command_time_witness=self.stage_evidence['command_time_witness'],nodes=nodes, command_arc=arc.tolist(), approach_seconds=approach_seconds,
+                    earliest_contact_seconds=approach_seconds+.5+.012/.006,
+                    earliest_settled_seconds=approach_seconds+.5+.012/.006+1.,
+                    target_tangent=target, target_balance=balance, target_rule='nearest_eroded_observed_pelvis_patch_with_support_margin', endpoint_solver=self.endpoint_solver, support_margin_m=float(margin), support_center_m=float(center), arm_endpoint=self.arm_goal.tolist(),
+                    sensor_front_edge=float(edge), measured_floor=self.floor,
+                    foot_bounds=self.foot_bounds, surface_normal=self.n.tolist(),
+                    surface_offset=self.d, independent_audit_required=True,
+                    physical_success=False)

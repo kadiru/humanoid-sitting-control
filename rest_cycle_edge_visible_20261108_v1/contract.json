@@ -1,0 +1,27 @@
+{
+  "utc": "2026-11-08T23:48:49.619714+00:00",
+  "authorization": "Validate higher support, sit five-second hold and stand;4090only unchanged limits/criteria.",
+  "premise": "Higher-table capture sees tabletop but its nearest edge lies outside the image. The measured hull is therefore not the physical front edge. Fixed-material motion passes timing but collides with hip housings. Correct the scene start using an explicit visibility equation before another cold solve.",
+  "placement_equation": "Forward reset shift alpha=(camera_edge_y-r*camera_edge_z)/(camera_forward_y-r*camera_forward_z)+.001m, r=(H-10.5-cy)/fy; constrain0<alpha<=.1m. Original closer=.05 changes to.05-alpha. Same robot q/qd/command and seed66302, same physical fixture and sensors. Reposition before reset only, never during motion.",
+  "current_admission": "Fresh observed near-edge points must be>=2pixels inside image and the observed edge must match actual edge within the existing6mm geometry reserve. Existing depth/plane checks unchanged. Truth is admission-only.",
+  "construction": "Cold q0; fixed physical pelvis vertex identity; original full geometry/command/timing/clearance checks. Explicit endpoint command-time witness before full path. No rejected pose/path reuse.",
+  "resources": {
+    "preparation_CPU_wall_s": 45,
+    "construction_CPU_wall_s": 45,
+    "post_CPU_wall_s": 45,
+    "AS_GiB": 40,
+    "CPU_threads": 1,
+    "GPU_wall_s": 900,
+    "GPU_UUID": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4",
+    "temperature_max_C": 85,
+    "min_free_GB": 20,
+    "warmup_controls": 25,
+    "sitting_controls_max": 1000,
+    "return_controls_admitted": 0,
+    "physics_initialization_cap": 1000,
+    "retries": 0,
+    "PPO_updates": 0
+  },
+  "return_status": "Surface/sitting prerequisite only until qualified sensor load/unload and return primitive exist. No timer or simulator-force substitution.",
+  "source_review_passed": true
+}
