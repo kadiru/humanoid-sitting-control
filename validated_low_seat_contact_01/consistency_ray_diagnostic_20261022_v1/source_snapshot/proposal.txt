@@ -1,0 +1,53 @@
+PREPARED, NOT EXECUTED: one constructed-descent diagnostic
+
+The accepted finite update lowered the modeled mismatch by38%, but its actual
+motion checks failed. Its current normalized mechanics mismatch is0.1227047201,
+above the auxiliary rate/window violation0.0989546936. That strict difference
+supports testing a small coordinated correction of mechanics consistency.
+
+Use the current saved linearization, not a previous solver vector. Solve one
+fixed15x15 linear block for each of1365 nonfixed states, with orientation,
+pressure and encoded gap inputs held. Set the35 remaining auxiliary increments
+per block from their individual consistency equations. These are linear saved
+coefficient calculations; no nonlinear root, model evaluation or motion occurs.
+
+Bound one common step using every original inequality. Return just one finite
+native-coordinate point. A separate program checks every original inequality
+exactly with integer dyadic arithmetic, all equality/bound rows, and a strictly
+decreasing feasibility epigraph. There is no second direction, trial search,
+fallback, altered guard or altered physical threshold if this attempt fails.
+
+The new premise is the accepted state's strict consistency-versus-soft margin.
+This is not the old522 torque projection, an old476 finite-map ray, or the
+578/586/594 zero-face graph. No rows/variables are removed, and no stopped solver
+is restarted. The full system stays unchanged. The mechanism is direct primal
+construction rather than solving the global minimax optimum.
+
+REQUESTED EXCEPTION: for this single diagnostic only, replace the inherited
+primary stationarity/dual-gap acceptance requirement with exact full-original
+primal feasibility and predicted descent. This does not certify primary
+optimality and does not satisfy the ordinary full KKT gate. All prior approvals
+are consumed and are not reused. Approval would authorize only this diagnostic.
+
+Limits:45 seconds total, including imports, source/input/runtime verification,
+construction, native finite return and independent audit;40GiB per worker;
+one scientific worker at a time. Stop worker work by44.75 seconds to reserve
+0.25 seconds for finalization. Measure termination overhead, and do not count
+an over-deadline result as passing. One construction, no retry or larger budget.
+Scientific timings and actual memory remain unknown until execution.
+
+Success means a finite original-model primal point and a predicted decrease
+larger than1e-9, independently verified within the budget. It does not authorize
+interior optimization, finite motion encoding, nonlinear validation, simulation,
+PPO or holdout. These later gates and all72-trial retention requirements remain.
+Failure identifies whether the fixed block construction, feasible step, finite
+return, exact check or budget prevented this particular mechanism from working.
+
+Prepared sources:producer.py, independent_audit.py, common.py, supervise.py.
+resources.json gives equations, fixed row/column associations, operation/bit/
+storage caps, finite-return costs and terminal conditions. input_runtime.json
+binds the already-proved current full system and accepted state. No scientific
+array or equation is reassembled or numerically inspected during preparation.
+
+The task remains unfinished:64/72 clean, all8 failures unresolved. There is no
+new physical result, policy, comparison or video from this preparation.

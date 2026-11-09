@@ -1,0 +1,116 @@
+{
+  "utc": "2026-10-21T06:13:20.813980+00:00",
+  "classification": "Terminal numerical infeasibility report for one new-state primary zero-face LP; no returned candidate",
+  "candidate_accepted": false,
+  "solver_reported_infeasible": true,
+  "exact_infeasibility_certificate": false,
+  "infeasibility_scope": "Restricted linearization at the accepted finite research iterate with original scalar t fixed0, unchanged trust1/boxes/guards. No claim about whole unconstrained-epigraph LP, nonlinear motion or physical sitting impossibility.",
+  "independent_input_proof_passed": true,
+  "independent_result_audit_passed": true,
+  "audit_scope": "Fresh full-state/interval/zero-face input identities plus termination and rejection accounting; not an independent exact Farkas infeasibility proof.",
+  "backend": {
+    "status": 2,
+    "success": false,
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+    "candidate_returned": false,
+    "iterations": 12,
+    "crossover_iterations": 0,
+    "seconds": 22.706756689818576,
+    "total_elapsed_s": 28.238419014960527
+  },
+  "stages": [
+    {
+      "stage": "producer",
+      "actual_exit": 0,
+      "elapsed_s": 28.27041479595937,
+      "total_elapsed_s": 28.300398512976244,
+      "completed_within_deadline": true,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "overshoot_s": 0.0,
+      "peak_rss_bytes": 799653888,
+      "worker_pid": 1791911,
+      "supervisor_error": null
+    },
+    {
+      "stage": "audit",
+      "actual_exit": 0,
+      "elapsed_s": 0.08099060109816492,
+      "total_elapsed_s": 28.38168655592017,
+      "completed_within_deadline": true,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "overshoot_s": 0.0,
+      "peak_rss_bytes": 25378816,
+      "worker_pid": 1792121,
+      "supervisor_error": null
+    }
+  ],
+  "time_seconds": 28.381892771925777,
+  "time_cap_seconds": 45,
+  "backend_allowance_seconds": 39.46854462195188,
+  "peak_rss_bytes": 799653888,
+  "input_dimensions": {
+    "full_shape": [
+      652529,
+      78791
+    ],
+    "full_nnz": 2614306,
+    "native_shape": [
+      516029,
+      78791
+    ],
+    "native_nnz": 978666,
+    "equality_shape": [
+      69617,
+      78791
+    ],
+    "equality_nnz": 749571
+  },
+  "contract_sha256": "3ff89e25d5b8f60e61b8215b9e5ba36b2f0263c307832ee8fd5d0683a2db41c5",
+  "input_proof_sha256": "13123c9d896a780429495bd995469994e10597e0e9c52627f27da09b19e1bcb2",
+  "scientific_outer_actual_exit": 0,
+  "scientific_outer_exit_evidence": "Mac session6777 final tool1856f4",
+  "counts": {
+    "cold_primary_solves": 1,
+    "interior_solves": 0,
+    "finite_maps": 0,
+    "model_calls": 0,
+    "J_calls": 0,
+    "physical_trials": 0,
+    "PPO_updates": 0,
+    "holdout_trials": 0
+  },
+  "new_state_full_original_coordinates": true,
+  "old_state_reductions_used": false,
+  "old_coefficient_proofs_replayed": false,
+  "workers": [],
+  "old_evidence_preserved": {
+    "/home/kadir/humanoid-sitting/docs/LOW_SEAT_CONTACT_PROTOCOL.md": "0df7fa154b64c99f7c992c6a6317e87e62adac7ab31410daa140f742d01a4415",
+    "/home/kadir/humanoid-sitting/docs/LOW_SEAT_CONTACT_STATUS.md": "7c2c8fd221ca7d021f7ffdf582665fe68fd0523d9b34c8671cb3812bfd24b7c6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/finite_model_step_20261020_v1/summary.json": "8bf2a6243926bbc72efbb325801e67769d4d6784861753eeca0dda1109b1b4ba"
+  },
+  "last_accepted_research_iterate": {
+    "folder": "/data/humanoid-sitting-perception/low_seat_contact_01/finite_model_step_20261020_v1",
+    "merit": 0.12270472005373632,
+    "physical_admission": false
+  },
+  "physical_state": {
+    "clean": "64/72",
+    "stable": 70,
+    "slipping": 8,
+    "housing_contact": 2,
+    "categories_overlap": true,
+    "all64_protected": true,
+    "all8_unresolved": true,
+    "main_PPO": "unstarted",
+    "fresh_holdout": "closed"
+  },
+  "next_boundary": "This new-state input/solve is terminal: no restart, changed scalar face, trust/guard/box/tolerance relaxation or automatic retry. Preserve the accepted finite iterate and all failure evidence. Assess a substantive next construction and freeze its complete equations/resources/source/input/independent audit before any new scientific launch. Both enlarged diagnostic approvals remain consumed.",
+  "read_only_monitor_failure": "1cacf9 actual1: quoted progress-reader label became a Python NameError after successfully reading event/solver-start markers. No effect on scientific worker; corrected read172c66 actual0.",
+  "repair_complete": false,
+  "automation": "ACTIVE",
+  "historical_sealed": 601,
+  "report": 600,
+  "video": 307
+}

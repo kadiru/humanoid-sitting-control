@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-24T09:31:44.841094+00:00",
+  "status": "PREPARED_AWAITING_NEW_HUMAN_APPROVAL",
+  "classification": "Implementation, synthetic tests and source/resource freeze; no scientific execution",
+  "cycle": "actual_hard_cycle_v1",
+  "proposal": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/actual_hard_cycle_v1/proposal.json",
+  "proposal_sha256": "3955c09430d2aec28bd0b30658459ecfc7305a3337d4b5fb7677f1a3ec4e91fd",
+  "freeze": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/actual_hard_cycle_v1/freeze.json",
+  "freeze_sha256": "e154cdbb0f736076eccba8a80fba61cf2f720d384d9a7101f7436403297009c4",
+  "source_review": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/actual_hard_cycle_v1/source_review.json",
+  "source_review_sha256": "3a09c33b61b55d6fa83a66efa7f1cf0319ac52f711e1bbcf40b9dc782a2d2cef",
+  "source_preparation_complete": true,
+  "execution_approved": false,
+  "scientific_launches": 0,
+  "previous_result": "The completed gap_guarded cycle is closed;24.4563% nonlinear merit reduction but188 newly negative hard rows; rejected.",
+  "new_mechanism": "All156647 actual hard-row tangent guards plus eta error reserve. Audited encoded A guards reused in B with upward kappa. Fresh finite/nonlinear posterior certificate in C.",
+  "final_integration_tests": {
+    "passed": 9,
+    "total": 9,
+    "source_files_matched": 32,
+    "scientific_reads": 0,
+    "solver_calls": 0,
+    "model_calls": 0
+  },
+  "prior_component_tests": {
+    "reference": 34,
+    "streaming": 33,
+    "not_rerun_this_freeze": true
+  },
+  "limits": {
+    "stage_seconds": [
+      600,
+      600,
+      45
+    ],
+    "audits_included": true,
+    "aggregate_gib": 40,
+    "worker_gib": 39.5,
+    "one_cycle": true,
+    "stop_on_first_failure": true,
+    "simulation": 0,
+    "PPO": 0,
+    "holdout": 0
+  },
+  "next_action": "Request explicit approval for this new frozen cycle. Upon approval, reread governing context, deploy immutable package, verify actual workers, bind human receipt and run one driver. Never reuse previous approvals.",
+  "deployment": "Source-only synthetic copy in /tmp/actual_hard_cycle_synthetic_Ut5zynHr; no scientific runner deployed or started.",
+  "physical": {
+    "clean": "64/72",
+    "all64protected": true,
+    "unresolved": 8,
+    "PPO": "unstarted",
+    "holdout": "closed"
+  },
+  "automation": "ACTIVE"
+}

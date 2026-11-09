@@ -1,0 +1,80 @@
+{
+  "classification": "Prepared diagnostic only; unexecuted and blocked on one-time primary optimality-gate exception",
+  "total_seconds": 45.0,
+  "address_space_bytes": 42949672960,
+  "concurrent_scientific_workers": 1,
+  "clock": "One supervisor monotonic clock starts before imports, contract/source/input/runtime hashing, process startup, numerical construction, complete finite return, exact independent audit and result write. Deadline kills child process group; termination overhead measured separately. No retry.",
+  "initialization": "Only accepted finite_model_step_20261020_v1 and its current sealed full-original changed_state_primary_20261020_v1 input. Fresh zero vector for all78790 directions. No old direction, dual, warmstart, internal vector, graph or rejected state is read.",
+  "new_premise": "Saved accepted model decision has closure merit .12270472005373632, auxiliary soft merit .09895469355627554 and strictly positive auxiliary hard minimum2.4117141617097104e-10. Closure dominates guarded soft merit. This gap did not describe the472 seed. Actual motion admission remains FALSE.",
+  "equations": [
+    "For each block k=0..1364, select current C rows50k+[0..13,46] and physical columns10540+50k+[0..14]. Solve exactly one binary64 dense15x15 system B_k d_k=-h_k. No rank search, regularization, second RHS/solve, nonlinear root or alternate block.",
+    "Base10540 directions remain exactzero: pressure, orientation and encoded gap/drop inputs are held. Extra columns15..49 correspond to35 commands/torques/COM auxiliaries. Rows[14..45,47..49] own one positive diagonal auxiliary coefficient; require all other auxiliary incidences exactzero and no cross-block extra incidence. Set d_aux=-(h+C d_physical)/diagonal once.",
+    "Require outward-enclosed max|C d+h|<=1e-9, independently checked using exact integer dyadic arithmetic. This is a saved linear correction, never an applied nonlinear15-root restoration.",
+    "On the ray v(alpha)=[alpha*d,mu-alpha*mu/2], compute origin slacks b-M[0,mu] with error-free TwoSum lower rounding, and all slope upper bounds with outward binary64 interval arithmetic. Reject any blocking zero slack. Choose one power of two alpha no greater than half the minimum of1 and every positive-slope ratio. No trial search or retry.",
+    "Scale native d once by the selected power of two and reject non-reversible underflow; round the constructed epigraph upward. Require modeled reduction and epigraph reduction both>1e-9. This stronger diagnostic screen does not weaken any physical or original constraint.",
+    "Independently check every original stored binary64 inequality exactly on the returned finite point, all1366 empty-zero equalities and all native bounds, dyadic ray identity, residual test and strictly decreasing epigraph. No coordinate/row elimination or full-matrix replacement occurs."
+  ],
+  "actual_associations": {
+    "C_shape": [
+      68250,
+      78790
+    ],
+    "C_nnz": 749570,
+    "full_M_shape": [
+      652529,
+      78791
+    ],
+    "full_M_nnz": 2614306,
+    "E_shape": [
+      1366,
+      78791
+    ],
+    "E_nnz": 0,
+    "local_blocks": 1365,
+    "physical_columns_per_block": 15,
+    "auxiliary_columns_per_block": 35,
+    "base_columns_held_zero": 10540,
+    "maximum_row_width_cap": 256
+  },
+  "net_savings_or_witness_mechanism": "No row/column savings claimed. Mechanism is a directly constructed finite primal descent point using current strict closure-vs-soft margin, small local systems and one bounded ray, avoiding any full-size optimization iteration. This is not522 torque projection,476 finite-map rescaling of an old LP direction, or578/586/594 zero-face condensation; those algorithms/proofs are not replayed. It deliberately does not certify an optimum.",
+  "operation_costs": {
+    "dense_linear_solves": 1365,
+    "dense_matrix_entries": 307125,
+    "maximum_dense_local_storage_entries": 3412500,
+    "auxiliary_assignments": 47775,
+    "producer_sparse_dot_term_visits_upper_bound": 12000000,
+    "auditor_exact_coefficient_products": 3363876,
+    "auditor_exact_primal_rows": 652529,
+    "auditor_raw_consistency_rows": 68250,
+    "native_finite_point_coordinates": 78791,
+    "maximum_dyadic_denominator_exponent": 2148,
+    "integer_numerator_bit_cap": 4352,
+    "LP_calls": 0,
+    "J_or_model_calls": 0,
+    "root_calls": 0,
+    "finite_encoder_calls": 0,
+    "physics_ticks": 0,
+    "PPO_updates": 0
+  },
+  "storage": {
+    "engineering_estimate_peak_bytes": 2147483648,
+    "enforced_worker_address_space_bytes": 42949672960,
+    "free_disk_precondition_bytes": 1073741824,
+    "result_expected_bytes_less_than": 16777216,
+    "note": "These are planning estimates and enforced caps, not measured execution costs. Coefficient/shape/width/bit limits fail closed. Large exact row-result tables are not retained; finite vectors, hashes, exact counts and outcome are retained."
+  },
+  "finite_return_cost": "One native78791-coordinate point, with zero base and no elimination graph. Exact audit costs one full M pass and one C pass=3363876 coefficient products plus dyadic origin/scaling/epigraph comparisons. Worst finite binary64 product aligned at2^-2148 uses at most4196 numerator bits; <=256 terms adds8 bits;4352-bit cap covers subtraction/residual. Exact interval clearance and immutable motion encoding are explicitly NOT executed.",
+  "success_test": "Both stages complete within shared45s. Exact full-original primal/bounds/equalities pass, fixed raw-correction residual passes, finite dyadic ray identity holds and epigraph/model merit decrease exceeds1e-9. This only establishes viability of this constructed direction at the stored model; no primary optimum/interior/actual motion claim.",
+  "failure_test": "First mismatch, unexpected incidence, singular/nonfinite block, residual failure, blocked/too-small ray, point violation, exact-audit failure, missing result or deadline terminates the entire one-shot construction. No larger time, new block, different alpha trial, repaired vector or additional solve.",
+  "exception_requested": "For this diagnostic alone, assess exact primal feasibility plus modeled descent without primary stationarity/dual-gap/optimality checks. All source/input, physical, trust, box, guard, linear residual and later interior/finite/model/runtime/72/PPO gates are preserved. No downstream execution authorized by diagnostic success.",
+  "unchanged_physical_state": "64/72 clean;8 unresolved. Main PPO and holdout unstarted. Physical admission remains false.",
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "optimization_assertions_disabled": false
+  },
+  "worker_finalization_reserve_s": 0.25
+}

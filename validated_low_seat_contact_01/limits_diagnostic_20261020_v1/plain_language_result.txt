@@ -1,0 +1,21 @@
+The single approved diagnostic succeeded: it produced a complete primary linear candidate that passed all nine required validation systems and the independent audit.
+
+This is an offline mathematical result. It is not yet an executable motion or a repaired sitting controller. The physical record remains 64/72 clean trials, with all eight previously failing cases unresolved. No simulation trials, PPO updates, holdout trials or video changes occurred.
+
+Actual time versus the approved cap:
+  Prelaunch verification: 33.841 seconds / 300 seconds
+  Calculation and validation: 215.292 seconds / 600 seconds
+  Independent audit: 133.243 seconds / 600 seconds
+  Total of these stages: 382.376 seconds (6 minutes 22 seconds)
+
+Setup took 16.308 seconds. The one cold solver call took 75.138 seconds and returned at 91.446 seconds, before its absolute 300-second cutoff. Reconstruction, validation and finalization then took 123.846 seconds. Every stage exited successfully; there were no deadline overruns or retries. Source authoring, transport and subsequent result preservation are separate administrative time, not included in these stage totals.
+
+All 10,541 retained values stayed bitwise unchanged. The exact graph reconstruction produced 68,250 other values, each rounded once. The full original system and all eight other required systems passed the unchanged acceptance checks. The independent implementation rechecked the new point arithmetic, rounding, residuals, input identities and timing. The largest reported full-original primal residual was 1.03538788654e-10; the encoded system residual was 1.75912007183e-10, against the unchanged 1e-9 numerical threshold. These are numerical acceptance results, not a claim of exact mathematical feasibility or exact optimality.
+
+Peak resident memory was 5.055 GiB for calculation and 4.816 GiB for audit, with the unchanged 40 GiB address-space limit on each worker. The solver reported 1 IPM iteration and 3,800 crossover iterations. Internal factorization counts were not measured.
+
+What this means: this existing formulation can produce a fully checked primary candidate when allowed more time. It gives a concrete result to use when preparing the next required motion-construction step. It does not yet show that the robot can sit successfully, and one run does not establish repeatability or identify the only cause of previous timeouts.
+
+The next scientific gate is the separately reviewed interior construction using the actual modeled improvement and positive interior margin, followed by finite motion encoding and nonlinear/runtime validation. The primary candidate must not be executed directly. All 72 development trials, preservation of all 64 successes, and removal of all eight failures remain mandatory before PPO. This diagnostic is closed; its one-run exception is consumed. No follow-on scientific calculation was launched.
+
+Preservation: all 44 result files are hashed and read-only on Ubuntu. The local copy contains 28 verified result/candidate/metadata files; larger arithmetic logs and matrix/residual archives remain preserved remotely. Original598 and the historical protocol/status remain unchanged. A final check at 2026-10-20T09:28:45.747097+00:00 found no study workers. The overall repair task and its existing automation remain active.

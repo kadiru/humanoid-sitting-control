@@ -1,0 +1,64 @@
+{
+  "utc": "2026-10-22T23:41:34.807864+00:00",
+  "classification": "Source-only mathematical design assessment; no scientific arithmetic or new launch",
+  "candidate": "One fixed ankle-row adjoint certificate for a lower bound on the current full-model epigraph",
+  "actual_target": {
+    "full_row": 91755,
+    "original_row": 92148,
+    "state": 632,
+    "feature": 15,
+    "joint": "right_ankle_roll_joint",
+    "exact_time": [
+      "657",
+      "50"
+    ],
+    "native_column": 42104,
+    "margin_source": "Sealed stage A exact_margin; unchanged accepted current input",
+    "attribution_summary_sha256": "526ba1bad6586135b2324a4269d12f21e67085d450bf77186988b1358539a426"
+  },
+  "why_consider": "The measured obstruction belongs to one original joint-planning row. A fixed adjoint could determine whether that row and its mechanically coupled constraints impose a lower bound on possible mismatch, instead of assuming the next local correction can evade it.",
+  "conditional_derivation": [
+    "Let x be the15 physical extra coordinates of state632, v all native base coordinates appearing in its15 physical consistency rows, and e=B*x+G*v+h. Full original consistency requires |e_i|<=t. The original ankle row is x_ankle>=-m.",
+    "If B is exactly invertible, solve B^T*lambda=e_ankle exactly. Then x_ankle=lambda^T*e-lambda^T*h-lambda^T*G*v. This is a new adjoint right-hand side, not the completed correction or a saved rejected direction.",
+    "For verified outer native-coordinate bounds L_j<=v_j<=U_j, define S=sum_j max(-(lambda^T*G)_j*L_j,-(lambda^T*G)_j*U_j). Thus x_ankle<=t*sum|lambda|-lambda^T*h+S.",
+    "Combining gives t>=(lambda^T*h-S-m)/sum|lambda|, when sum|lambda|>0. A bound strictly above a specified progress threshold could rule out that threshold for the full current linearized problem. It would not prove physical impossibility or produce an admissible motion.",
+    "A checker could verify a nonnegative combination of the actual original ankle, signed-consistency and singleton interval rows, eliminating every native direction coordinate. The resulting scalar inequality is necessary for every feasible full-original point."
+  ],
+  "actual_premises_not_established": [
+    "No adjoint, rank certificate, G coefficient products, native bound associations, support sum or lower bound has been evaluated.",
+    "Native base bounds are infinite in the saved full bounds array. Any finite outer bounds must be derived from specifically associated CURRENT original rows, not inherited old projected boxes.",
+    "The current builder rounds normalized interval coefficients and RHS independently. Unscaled interval metadata cannot silently substitute for exact bounds of stored binary64 rows. A certificate must use actual singleton-row coefficient/RHS ratios and prove each row association.",
+    "Normal-drop coordinates couple state-local gap coefficients to the global drop chart; these terms cannot be silently omitted.",
+    "The independent outer box may be too loose to provide a positive or useful bound. No existing evidence places the proposed lower bound near the current merit or the1% target."
+  ],
+  "resource_and_finite_return_status": {
+    "source_identified_work": "One exact15x15 adjoint, targeted coefficients from15 current physical rows, explicit associated current interval rows, exact dual-combination return and separate audit. No generic family/support scan.",
+    "unresolved": "Exact selected row set, rational-bit-growth bound including interval coefficient ratios, complete implemented finite return and independent audit are not frozen. No measured runtime or memory savings exist.",
+    "scientific_allocation_seconds": 0,
+    "launch_ready": false
+  },
+  "decision": "Do not select or launch this as the next repair construction. It could at most supply an obstruction certificate; no credible useful bound, primal witness mechanism or resource-complete audited implementation is established. It does not restore the consumed primary-optimality waiver or authorize another diagnostic cycle.",
+  "correction_to_prior_next_plan": "The full original matrix already contains joint bounds, phase ordering, command timing and both consistency signs together. Simply requesting a jointly constrained solve, fixing a progress epigraph, or renaming its objective would repeat the existing formulation, not supply a substantive new construction.",
+  "no_new_approval_question": true,
+  "no_retry_or_replay": true,
+  "closed_cycle_remains_closed": true,
+  "new_scientific_array_calculations": 0,
+  "new_solver_calls": 0,
+  "new_model_calls": 0,
+  "new_simulation_trials": 0,
+  "new_PPO_updates": 0,
+  "source_sha256": {
+    "rl_support_work/scripts/changed_state_primary_20261020_v1/builder.py": "076568b6abeeab437df567d3616424272d46b121fd61acb1a3722e37d343fa76",
+    "rl_support_work/scripts/changed_state_primary_20261020_v1/producer.py": "e4d3fbdee503deacb3d423ed53ed8fcb374a30ea5fb2772c54496798cd729833",
+    "validated_low_seat_contact_01/feasibility_research_cycle_closure_20261022_v1.json": "9652f7bbccb78fcfd8939f3a02ed025249ec5594791194a7afada9a029d745eb"
+  },
+  "live_workers": {
+    "utc": "2026-10-22T23:35:44.672506+00:00",
+    "workers": [],
+    "source": "c41497 direct remote /proc check"
+  },
+  "physical_state": "64/72 clean; all64 protected;0/8 failures repaired; main PPO unstarted; holdout closed",
+  "overall_task": "ACTIVE",
+  "automation": "ACTIVE",
+  "scientific_method_selected": false
+}

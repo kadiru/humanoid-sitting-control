@@ -1,0 +1,187 @@
+{
+  "utc": "2026-10-23T23:15:13.860139+00:00",
+  "classification": "Completed saved-residual attribution with independent audit; no model/solver execution or motion admission",
+  "result": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/hard_row_attribution_20261023_v1/attribution.json",
+  "result_sha256": "5b5fbc14cca4ae572cbdb0aed4d206f3a296ab2082d2d4036b8dc8f43f3b41ec",
+  "audit_sha256": "e745ef63dcd8a3857cb229155eafd19b6dc1a385d39eae4de85d9329611bf9f8",
+  "manifest_sha256": "6b67929332fd4366ba2bfb028bacc8b956995aa171166f89fd7f00272f50d755",
+  "contract_sha256": "946cec56ccbc3a67ed06b9bd504e18b0e60ed416be0e77d47d4eff95fa9b7ca6",
+  "archive_sha256": "1474c0e65a0e3305e83260a6842462fcd8bdf1a699294794237a4b1d7cdb8274",
+  "total_owner_process_seconds": 0.9,
+  "total_limit_seconds": 45,
+  "address_space_gib_per_worker": 40,
+  "launch_tool": "f210fd",
+  "actual_exit": 0,
+  "independent_audit_passed": true,
+  "source_fixture_tool": "1d922f",
+  "remote_freeze_compile_worker_tool": "8100d3",
+  "preservation_tool": "2c69e7",
+  "local_verification_tool": "3cfd54",
+  "observations": [
+    {
+      "row": 214643,
+      "unfiltered_446_row": 214648,
+      "group": "mesh_normal_descent",
+      "scale": 6e-05,
+      "constant": 5.9999992847442626e-05,
+      "actual_before": -52.5510503481505,
+      "actual_after": -27.51763860158102,
+      "auxiliary_before": 0.009901108610272337,
+      "auxiliary_after": 0.009901108610272337,
+      "physical_signed_residual_before": -0.00315306302088903,
+      "physical_signed_residual_after": -0.0016510583160948612,
+      "terms": [
+        {
+          "column": 46721,
+          "state": 622,
+          "feature": 71,
+          "coefficient": -1.0,
+          "canonical_label": 647,
+          "exact_time": [
+            "647",
+            "50"
+          ],
+          "alias_labels": [
+            647
+          ],
+          "auxiliary_before": 0.001306933264817098,
+          "auxiliary_after": 0.001306933264817098,
+          "actual_before": 0.003388872894082934,
+          "actual_after": 0.0023071780766914796
+        },
+        {
+          "column": 95546,
+          "state": 1273,
+          "feature": 71,
+          "coefficient": 1.0,
+          "canonical_label": 1323,
+          "exact_time": [
+            "259",
+            "20"
+          ],
+          "alias_labels": [
+            1323
+          ],
+          "auxiliary_before": 0.0012475273384862718,
+          "auxiliary_after": 0.0012475273384862718,
+          "actual_before": 0.0001758098803464614,
+          "actual_after": 0.0005961197677491759
+        }
+      ]
+    },
+    {
+      "row": 215327,
+      "unfiltered_446_row": 215332,
+      "group": "mesh_normal_descent",
+      "scale": 6.833207426750813e-06,
+      "constant": 6.83320661216901e-06,
+      "actual_before": 0.011539402556424595,
+      "actual_after": -304.4704805204717,
+      "auxiliary_before": 0.009901082403075249,
+      "auxiliary_after": 0.009901082403075249,
+      "physical_signed_residual_before": 7.885113124882786e-08,
+      "physical_signed_residual_after": -0.002080509948718876,
+      "terms": [
+        {
+          "column": 47396,
+          "state": 631,
+          "feature": 71,
+          "coefficient": 1.0,
+          "canonical_label": 656,
+          "exact_time": [
+            "328",
+            "25"
+          ],
+          "alias_labels": [
+            656
+          ],
+          "auxiliary_before": 0.00023762658159469694,
+          "auxiliary_after": 0.00023762658159469694,
+          "actual_before": 0.0023204291988482006,
+          "actual_after": -0.0005418096164185593
+        },
+        {
+          "column": 105071,
+          "state": 1400,
+          "feature": 71,
+          "coefficient": -1.0,
+          "canonical_label": 1455,
+          "exact_time": [
+            "19095334107869139859",
+            "1455563399566144070"
+          ],
+          "alias_labels": [
+            1455
+          ],
+          "auxiliary_before": 0.0002443921320570564,
+          "auxiliary_after": 0.0002443921320570564,
+          "actual_before": 0.002327183554329121,
+          "actual_after": 0.0015455335389124858
+        }
+      ]
+    }
+  ],
+  "finding": "The worst hard-row identity changed. Prior worst214643 remains violated but improves; new worst215327 is mesh_normal_descent and was positive before. Both copied auxiliary gap differences stay unchanged and admissible. New actual gap at state631 is negative. The overall consistency-merit reduction does not control the small-time-gap actual descent difference.",
+  "interpretation": {
+    "old_worst_row": 214643,
+    "new_worst_row": 215327,
+    "quantity": "pelvis-to-seat plane normal gap; buffered signed descent residual in metres, normalized by0.006m/s times exact interval duration",
+    "new_edge_earlier_state": 1400,
+    "new_edge_later_state": 631,
+    "approx_interval_ms": 1.1388679044584689,
+    "approx_gap_drop_mm": 2.0873431553310455,
+    "approx_allowed_drop_mm_before_inward_buffer": 0.006833207426750813,
+    "later_actual_gap_mm": -0.5418096164185593,
+    "source_mapping": "low_seat_clock_rows_v2_446.py feature71=GAP; mesh_normal_descent adds gap_later-gap_earlier+0.006*delta*(1-BUFFER); low_seat_clock_transcription_444.py calc computes gap as minimum pelvis vertex plane distance",
+    "limitations": [
+      "This is a saved nonlinear-model prediction, not measured contact or a physical rollout.",
+      "The evidence identifies the numerical constraint regression, not the full cause of the eight simulation failures.",
+      "No active pelvis vertex, Jacobian correctness, derivative sensitivity or global infeasibility was diagnosed."
+    ]
+  },
+  "design_implication": {
+    "classification": "Source-level targeted hypothesis only, not selected construction or launch-ready input",
+    "targets": [
+      {
+        "row": 214643,
+        "states": [
+          622,
+          1273
+        ]
+      },
+      {
+        "row": 215327,
+        "states": [
+          1400,
+          631
+        ]
+      }
+    ],
+    "current_origin": "finite_model_step_20261023_v1",
+    "prospective_equation": "For each target edge a->b, explicitly retain g_b(X_b)+J_g,b*dX_b -g_a(X_a)-J_g,a*dX_a + frozen_descent_constant >=0, in addition to all original auxiliary constraints and consistency signs. dX must use the original joint/phase/load direction map. Never reuse old direction or stale J.",
+    "mechanism": "Direct actual-output tangent constraints would exclude progress based solely on legal auxiliary gaps with an excessive predicted gap difference. The saved tiny time interval gives a concrete premise for this targeted mechanism.",
+    "not_yet_established": [
+      "Whether the strengthened system has an admissible finite correction.",
+      "Whether any solution admits all required full-original optimality certificates; extra constraints cannot silently be treated as an equivalent original LP.",
+      "Complete new-state assembly, resource and finite-return accounting under45seconds including independent audit.",
+      "Whether the fresh nonlinear result would preserve all actual hard rows, closure units and downstream gates."
+    ],
+    "launch_ready": false,
+    "no_new_approval_requested": true
+  },
+  "no_repeat": "Attribution complete; do not recompute these argmins/stencils, rerun finite encoding/model or reuse consumed solver/certificate exceptions.",
+  "model_calls": 0,
+  "new_J_calls": 0,
+  "solver_calls": 0,
+  "physical_trials": 0,
+  "PPO_updates": 0,
+  "holdout_trials": 0,
+  "physical_success": false,
+  "physical_status": "best09:64/72clean,70stable,8slipping,2housing-contact;categories overlap;all64protected/all8unresolved",
+  "automation": "ACTIVE",
+  "retained_preparation_notes": [
+    "Read-only broad file/contract/context outputs were truncated by output limits; no scientific execution or data mutation resulted.",
+    "Initial shell grep worker check exited1 with no matches; subsequent /proc checks verified no competing workers.",
+    "Synthetic fixture and scientific attribution both completed with actual exit0; prior inherited failures preserved."
+  ]
+}

@@ -1,0 +1,9 @@
+The single interior diagnostic succeeded.
+
+The solver returned a complete direction, and the independent audit confirmed a strictly positive margin inside all 92,267 finite-encoding intervals. The smallest normalized margin is about 0.99% of an interval width. All full-original numerical checks passed at the unchanged thresholds.
+
+Prelaunch took 53.1 seconds; calculation and validation took 154.3 seconds; independent audit took 6.0 seconds: 3 minutes 33 seconds across the three phases. The solver returned at 153.3 seconds, before its 5-minute cutoff. Peak worker RSS was about 1.24 GiB under the 40 GiB limit. No limit was exceeded, no retry occurred, and all workers stopped.
+
+This gives the next construction step a verified direction with room inside the encoding bounds. It is not an encoded motion or a repaired controller: no finite map, nonlinear-model evaluation, simulation, PPO or holdout trial was run. Performance remains 64/72 clean trials, with all eight failures unresolved.
+
+The next scientific step would encode this accepted direction and check the resulting motion against the nonlinear model under a separately frozen plan. This diagnostic approval is consumed; the task and existing automation remain active.

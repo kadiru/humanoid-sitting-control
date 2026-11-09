@@ -1,0 +1,118 @@
+{
+  "classification": "Executed attribution of existing stored residuals, not new model validation",
+  "selected": {
+    "before": 214643,
+    "after": 215327
+  },
+  "records": [
+    {
+      "row": 214643,
+      "unfiltered_446_row": 214648,
+      "group": "mesh_normal_descent",
+      "scale": 6e-05,
+      "constant": 5.9999992847442626e-05,
+      "actual_before": -52.5510503481505,
+      "actual_after": -27.51763860158102,
+      "auxiliary_before": 0.009901108610272337,
+      "auxiliary_after": 0.009901108610272337,
+      "physical_signed_residual_before": -0.00315306302088903,
+      "physical_signed_residual_after": -0.0016510583160948612,
+      "terms": [
+        {
+          "column": 46721,
+          "state": 622,
+          "feature": 71,
+          "coefficient": -1.0,
+          "canonical_label": 647,
+          "exact_time": [
+            "647",
+            "50"
+          ],
+          "alias_labels": [
+            647
+          ],
+          "auxiliary_before": 0.001306933264817098,
+          "auxiliary_after": 0.001306933264817098,
+          "actual_before": 0.003388872894082934,
+          "actual_after": 0.0023071780766914796
+        },
+        {
+          "column": 95546,
+          "state": 1273,
+          "feature": 71,
+          "coefficient": 1.0,
+          "canonical_label": 1323,
+          "exact_time": [
+            "259",
+            "20"
+          ],
+          "alias_labels": [
+            1323
+          ],
+          "auxiliary_before": 0.0012475273384862718,
+          "auxiliary_after": 0.0012475273384862718,
+          "actual_before": 0.0001758098803464614,
+          "actual_after": 0.0005961197677491759
+        }
+      ]
+    },
+    {
+      "row": 215327,
+      "unfiltered_446_row": 215332,
+      "group": "mesh_normal_descent",
+      "scale": 6.833207426750813e-06,
+      "constant": 6.83320661216901e-06,
+      "actual_before": 0.011539402556424595,
+      "actual_after": -304.4704805204717,
+      "auxiliary_before": 0.009901082403075249,
+      "auxiliary_after": 0.009901082403075249,
+      "physical_signed_residual_before": 7.885113124882786e-08,
+      "physical_signed_residual_after": -0.002080509948718876,
+      "terms": [
+        {
+          "column": 47396,
+          "state": 631,
+          "feature": 71,
+          "coefficient": 1.0,
+          "canonical_label": 656,
+          "exact_time": [
+            "328",
+            "25"
+          ],
+          "alias_labels": [
+            656
+          ],
+          "auxiliary_before": 0.00023762658159469694,
+          "auxiliary_after": 0.00023762658159469694,
+          "actual_before": 0.0023204291988482006,
+          "actual_after": -0.0005418096164185593
+        },
+        {
+          "column": 105071,
+          "state": 1400,
+          "feature": 71,
+          "coefficient": -1.0,
+          "canonical_label": 1455,
+          "exact_time": [
+            "19095334107869139859",
+            "1455563399566144070"
+          ],
+          "alias_labels": [
+            1455
+          ],
+          "auxiliary_before": 0.0002443921320570564,
+          "auxiliary_after": 0.0002443921320570564,
+          "actual_before": 0.002327183554329121,
+          "actual_after": 0.0015455335389124858
+        }
+      ]
+    }
+  ],
+  "criterion": "keep AND NOT soft; smallest stored normalized residual, first original row on ties",
+  "source_model_calls": 0,
+  "new_matrix_products": 0,
+  "new_J_calls": 0,
+  "solver_calls": 0,
+  "candidate_admission": false,
+  "physical_success": false
+}

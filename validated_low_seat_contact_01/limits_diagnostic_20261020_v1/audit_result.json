@@ -1,0 +1,435 @@
+{
+  "audit_completed": true,
+  "audit_passed": true,
+  "new_candidate_accepted": true,
+  "producer_candidate": true,
+  "actual_lp_call": true,
+  "numerical_execution": {
+    "stage": "numerical",
+    "origin": 1007625.414425239,
+    "end": 1007840.706401754,
+    "elapsed_s": 215.2919765150873,
+    "configured_seconds": 600,
+    "actual_exit": 0,
+    "hard_termination_reason": null,
+    "termination_signal_sent_at": null,
+    "completed_within_deadline": true,
+    "deadline_overshoot_s": 0.0,
+    "peak_rss_bytes": 5428019200,
+    "peak_rss_scope": "Linux wait4 worker peak RSS",
+    "address_space_limit_bytes": 42949672960,
+    "backend_factor_counts": null,
+    "backend_linear_solve_counts": null
+  },
+  "independent_checks": {
+    "passed": true,
+    "actual_lp_call": true,
+    "numerical_candidate": true,
+    "physical_admission": false,
+    "backend_internal_iterates_available": false,
+    "backend_iterations_replayed": false,
+    "coordinate_reconstruction_attempts": 1,
+    "exact_rational_point_check_attempted": true,
+    "backend_result": {
+      "status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "success": true,
+      "candidate_returned": true,
+      "iterations": 1,
+      "crossover_iterations": 3800,
+      "elapsed_s": 75.13810729200486,
+      "configured_time_limit_s": 283.6923640969908,
+      "internal_vectors_saved": false
+    },
+    "input_preparation_completed": true,
+    "initial_proofs_inherited": true,
+    "old_proofs_repeated": false,
+    "solver_inequality_shape": [
+      265967,
+      10541
+    ],
+    "solver_inequality_nonzeros": 6102946,
+    "solver_equality_shape": [
+      1367,
+      10541
+    ],
+    "solver_equality_nonzeros": 1,
+    "all_new_preparation_charged": true,
+    "original_coordinates_retained": 10541,
+    "primary_zero_face_restriction": true,
+    "whole_original_equivalence": false,
+    "returned_graph_point": {
+      "exact_reduced": {
+        "passed": true,
+        "complete": true,
+        "balance594": {
+          "complete": true,
+          "saved_rows_verified": {
+            "inequalities": 265967,
+            "equalities": 1367
+          },
+          "saved_point_products_verified": {
+            "inequalities": 6102946,
+            "equalities": 1
+          },
+          "passed_certificate": true,
+          "checks": {
+            "passed": true,
+            "maximum_exact_inequality_violation": [
+              1132243805685566586084648874806482181863497829815265894101299540252097012541936776481976913567876934236926023606131795678266894787067487260418664419866538773283281697789447331967998537035195716462680440952135823153101070046903464194438009325619385212448717053691552889163057174520439137804181975289539674687651916477198633322136709346979747751615182441623274270594787833506934246896015843572696054839617755912135451784988139854208427869151214620677050346470471576546743932903647800075956475419882995020767793033201933107542965311319285789864595442540918088646932579902444456993939295261887022652258305544802448210004405803202616221614008835245111315617568998043315957981254353689490950621569269820382137,
+              11068698467732148639180788487165821159048926369952989755869273881953146929047837212860504177099116621720117984837455535132079312479101571103857117128643248758257681244790991238562426410471235176709539794864837375982041220908045006888476223002056361614925673455741161320056283261161262732818432891359134546320994352349335373112992566456981900373158668562226068055667610141104377682696508052449784662450691446697503968444766029066711495529138845370457405212464641567823639004240764509026845193440155697277556992173343011841472668703948768270430192142868702970277529616243852657203049027582377093488713597976088434381942846107820938270073254136423124635275930560520174605253954521033362716138809129820772931595141120
+            ],
+            "maximum_exact_equality_violation": [
+              0,
+              1
+            ],
+            "rows": {
+              "inequalities": 265967,
+              "equalities": 1367
+            },
+            "point_coefficient_products": {
+              "inequalities": 6102946,
+              "equalities": 1
+            },
+            "equality": 0.0,
+            "bound": 0.0,
+            "stationarity": 0.0,
+            "absolute_gap": 0.0,
+            "finite": true,
+            "nonnegative_duals": true,
+            "analytic_dual_inherited": true,
+            "point": "unchanged backend10541"
+          }
+        },
+        "foot586": {
+          "complete": true,
+          "saved_rows_verified": {
+            "inequalities": 265967,
+            "equalities": 5462
+          },
+          "saved_point_products_verified": {
+            "inequalities": 1891613,
+            "equalities": 52506
+          },
+          "passed_certificate": true,
+          "checks": {
+            "passed": true,
+            "maximum_exact_inequality_violation": [
+              4781617330865356702212847971284303470112828938208823195557640105724464735082642494436281770336384231346406269989582710856845541678186738736899405107760152058682369585432901339911475704794383206660404091674785729029916776965756183770625087521435153853080963531275738284790492629481961147056769428532997480336591885725269809641,
+              47530436792946559998895975948117636618094179146266133224359195139823586537684986717321004115851350346100039277851750048631765091288878247094995140987493029977113321035148556145409311380878197313365048348832571423646172318939697540013052648919508675518984475373979298982681728871975111966389457975287508850765789388266111594914048376832
+            ],
+            "maximum_exact_equality_violation": [
+              16930707987507697,
+              1298074214633706907132624082305024
+            ],
+            "rows": {
+              "inequalities": 265967,
+              "equalities": 5462
+            },
+            "point_coefficient_products": {
+              "inequalities": 1891613,
+              "equalities": 52506
+            },
+            "equality": 1.304294299712689e-17,
+            "bound": 0.0,
+            "stationarity": 0.0,
+            "absolute_gap": 0.0,
+            "finite": true,
+            "nonnegative_duals": true,
+            "analytic_dual_inherited": true,
+            "point": "final once-rounded original vector projected to586"
+          }
+        },
+        "auxiliary578": {
+          "complete": true,
+          "saved_rows_verified": {
+            "inequalities": 265967
+          },
+          "saved_point_products_verified": {
+            "inequalities": 2580552
+          },
+          "passed_certificate": true,
+          "checks": {
+            "passed": true,
+            "maximum_exact_inequality_violation": [
+              229253353651814510015298256803682531717500251362187181079,
+              2257453326477640498964606169459784134303278768470024509204574765056
+            ],
+            "maximum_exact_equality_violation": null,
+            "rows": {
+              "inequalities": 265967
+            },
+            "point_coefficient_products": {
+              "inequalities": 2580552
+            },
+            "equality": 6.763342774094302e-17,
+            "bound": 0.0,
+            "stationarity": 0.0,
+            "absolute_gap": 0.0,
+            "finite": true,
+            "nonnegative_duals": true,
+            "analytic_dual_inherited": true,
+            "point": "final once-rounded original vector projected to578"
+          }
+        }
+      },
+      "graph_lift": {
+        "complete": true,
+        "saved_point_arithmetic": {
+          "rootxyf_outputs": 4095,
+          "balance_point_products": 93132,
+          "leg_outputs": 16380,
+          "auxiliary_outputs": 47775,
+          "outputs": 68250,
+          "foot_point_products": 65520,
+          "auxiliary_point_products": 504198,
+          "exact_auxiliary_divisions": 47775,
+          "once_rounded_outputs": 68250,
+          "maximum_exact_rounding_error": [
+            13100437055804957559170802298026935344933541692131593116992628197998200845312844390207481065453927418790602951776043028814801912292941274006489465959827693208679927454643745306314216458164727515923204051960921289362195148307963868680394553201513321866788372418878314236287518446987442896071091067353890939867945492377922238005604584810730772377,
+            59630039780271397949917804368746799191105430378506197143237549290727434000140183125279305625508474706070655542213718831678554179153014354529534858949641811212001295878120981878438159864414682548897248013889845201133412906375770457011842352197552881523970083377880755994839219346414958311481098408683653090575728751613682954205338608453390582287995153240031232
+          ],
+          "old_auxiliary_graph_uses_unrounded_exact_legs": true,
+          "foot_and_auxiliary_graphs_use_unrounded_exact_rootxyf": true,
+          "retained_values_bitwise_backend": true,
+          "scalar_already_zero": true,
+          "clip_repair_normalize": false
+        },
+        "completed_certificate_present": true
+      },
+      "independent_original_point_lift_verified": true,
+      "old_graph_or_encoding_proofs_repeated": false,
+      "incomplete_prefix_is_not_certificate": false
+    },
+    "original_KKT": {
+      "full": {
+        "primal": 1.0353878865387856e-10,
+        "dual": 0.0,
+        "gap": 0.0,
+        "finite": true,
+        "nonnegative_duals": true,
+        "passed": true
+      },
+      "face": {
+        "primal": 1.0353878865387856e-10,
+        "dual": 0.0,
+        "gap": 0.0,
+        "finite": true,
+        "nonnegative_duals": true,
+        "passed": true
+      },
+      "coupled": {
+        "primal": 1.0353878865387856e-10,
+        "dual": 0.0,
+        "gap": 0.0,
+        "finite": true,
+        "nonnegative_duals": true,
+        "passed": true
+      },
+      "retained": {
+        "primal": 1.0353878865387856e-10,
+        "dual": 0.0,
+        "gap": 0.0,
+        "finite": true,
+        "nonnegative_duals": true,
+        "passed": true
+      },
+      "source": {
+        "primal": 1.0353878865387856e-10,
+        "dual": 0.0,
+        "gap": 0.0,
+        "finite": true,
+        "nonnegative_duals": true,
+        "passed": true
+      },
+      "encoded": {
+        "primal": 1.7591200718314326e-10,
+        "dual": 0.0,
+        "gap": 0.0,
+        "finite": true,
+        "nonnegative_duals": true,
+        "passed": true
+      }
+    },
+    "all_original_coordinates_bitwise_backend_primal": false,
+    "retained_coordinates_bitwise_backend_primal": true
+  },
+  "events": {
+    "main_preparation_started": {
+      "phase": "main_preparation_started",
+      "monotonic": 1007625.432332044,
+      "origin": 1007625.414425239,
+      "elapsed_s": 0.017906805034726858
+    },
+    "main_preparation_finished": {
+      "phase": "main_preparation_finished",
+      "monotonic": 1007630.255371122,
+      "origin": 1007625.414425239,
+      "elapsed_s": 4.840945883071981
+    },
+    "input_checks_started": {
+      "phase": "input_checks_started",
+      "monotonic": 1007630.486719425,
+      "origin": 1007625.414425239,
+      "elapsed_s": 5.072294185985811
+    },
+    "input_checks_finished": {
+      "phase": "input_checks_finished",
+      "monotonic": 1007641.722063472,
+      "origin": 1007625.414425239,
+      "elapsed_s": 16.30763823306188
+    },
+    "backend_started": {
+      "phase": "backend_started",
+      "monotonic": 1007641.722149459,
+      "origin": 1007625.414425239,
+      "elapsed_s": 16.30772421997972
+    },
+    "backend_returned": {
+      "phase": "backend_returned",
+      "monotonic": 1007716.860275814,
+      "origin": 1007625.414425239,
+      "backend_elapsed_s": 75.13810729200486,
+      "elapsed_s": 91.44585057499353
+    },
+    "exact_point_594_started": {
+      "phase": "exact_point_594_started",
+      "monotonic": 1007716.860712718,
+      "origin": 1007625.414425239,
+      "elapsed_s": 91.44628747901879
+    },
+    "exact_point_594_finished": {
+      "phase": "exact_point_594_finished",
+      "monotonic": 1007814.528471072,
+      "origin": 1007625.414425239,
+      "elapsed_s": 189.11404583300464
+    },
+    "lift_started": {
+      "phase": "lift_started",
+      "monotonic": 1007814.528518541,
+      "origin": 1007625.414425239,
+      "elapsed_s": 189.1140933020506
+    },
+    "lift_finished": {
+      "phase": "lift_finished",
+      "monotonic": 1007820.090442779,
+      "origin": 1007625.414425239,
+      "elapsed_s": 194.67601754004136
+    },
+    "exact_point_586_started": {
+      "phase": "exact_point_586_started",
+      "monotonic": 1007820.090887544,
+      "origin": 1007625.414425239,
+      "elapsed_s": 194.67646230501123
+    },
+    "exact_point_586_finished": {
+      "phase": "exact_point_586_finished",
+      "monotonic": 1007832.751518886,
+      "origin": 1007625.414425239,
+      "elapsed_s": 207.33709364698734
+    },
+    "exact_point_578_started": {
+      "phase": "exact_point_578_started",
+      "monotonic": 1007832.752214808,
+      "origin": 1007625.414425239,
+      "elapsed_s": 207.33778956905007
+    },
+    "exact_point_578_finished": {
+      "phase": "exact_point_578_finished",
+      "monotonic": 1007840.084230691,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.66980545199476
+    },
+    "numeric_checks_started": {
+      "phase": "numeric_checks_started",
+      "monotonic": 1007840.085937916,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.671512676985
+    },
+    "numeric_full_started": {
+      "phase": "numeric_full_started",
+      "monotonic": 1007840.08597768,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.6715524410829
+    },
+    "numeric_full_finished": {
+      "phase": "numeric_full_finished",
+      "monotonic": 1007840.09566186,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.68123662099242
+    },
+    "numeric_face_started": {
+      "phase": "numeric_face_started",
+      "monotonic": 1007840.09580851,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.68138327100314
+    },
+    "numeric_face_finished": {
+      "phase": "numeric_face_finished",
+      "monotonic": 1007840.101648031,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.6872227920685
+    },
+    "numeric_coupled_started": {
+      "phase": "numeric_coupled_started",
+      "monotonic": 1007840.101766349,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.68734111008234
+    },
+    "numeric_coupled_finished": {
+      "phase": "numeric_coupled_finished",
+      "monotonic": 1007840.109359167,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.69493392808363
+    },
+    "numeric_retained_started": {
+      "phase": "numeric_retained_started",
+      "monotonic": 1007840.109491525,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.69506628601812
+    },
+    "numeric_retained_finished": {
+      "phase": "numeric_retained_finished",
+      "monotonic": 1007840.116839181,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.70241394208279
+    },
+    "numeric_source_started": {
+      "phase": "numeric_source_started",
+      "monotonic": 1007840.116974961,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.70254972204566
+    },
+    "numeric_source_finished": {
+      "phase": "numeric_source_finished",
+      "monotonic": 1007840.125601049,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.71117581008002
+    },
+    "numeric_encoded_started": {
+      "phase": "numeric_encoded_started",
+      "monotonic": 1007840.125726856,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.7113016169751
+    },
+    "numeric_encoded_finished": {
+      "phase": "numeric_encoded_finished",
+      "monotonic": 1007840.137819815,
+      "origin": 1007625.414425239,
+      "elapsed_s": 214.72339457599446
+    },
+    "numerical_result_written": {
+      "phase": "numerical_result_written",
+      "monotonic": 1007840.651486547,
+      "origin": 1007625.414425239,
+      "candidate": true,
+      "elapsed_s": 215.23706130799837
+    }
+  },
+  "elapsed_s": 133.19963226094842,
+  "physical_admission": false,
+  "physical_trials": 0,
+  "policy_updates": 0,
+  "holdout_trials": 0,
+  "scope": "New result/input/timing audit only. No old proofs or optimization replay."
+}

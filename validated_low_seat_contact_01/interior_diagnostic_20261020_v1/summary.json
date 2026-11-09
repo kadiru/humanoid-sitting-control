@@ -1,0 +1,136 @@
+{
+  "utc": "2026-10-21T05:06:46.736069+00:00",
+  "classification": "Accepted full-original interior numerical direction with exact positive unscaled interval margin; not a finite motion, model validation or physical repair",
+  "candidate_accepted": true,
+  "single_interior_exception_consumed": true,
+  "exact_eta": [
+    8129123856074459136,
+    821031401511672449723
+  ],
+  "eta_approx_for_display_only": 0.009901111992924047,
+  "interval_rows_checked": 92267,
+  "exact_H_products_per_implementation": 125867,
+  "nonpositive_interval_rows": 0,
+  "limiting_interval_row": 92246,
+  "numerical_checks": {
+    "primal": 3.0663027672517273e-11,
+    "dual": 1.4210854715202004e-14,
+    "absolute_gap": 8.434225540199236e-15,
+    "finite": true,
+    "dual_signs": true,
+    "passed": true
+  },
+  "actual_ceiling": {
+    "mu": 0.19791129319207476,
+    "theta": 8.326672684688674e-17,
+    "ceiling": 0.09895564659603742,
+    "eligible": true,
+    "primary_sha256": "7715ec610c7769a1e2ba5ba2d2b0955f0d073317231fe74136c9447608f00d4d"
+  },
+  "backend": {
+    "status": 0,
+    "reported_IPM_iterations": 2,
+    "reported_crossover_iterations": 31752,
+    "solve_seconds": 146.25154116912745,
+    "returned_at_numerical_seconds": 153.3040413609706,
+    "timing_not_a_general_performance_or_conditioning_claim": true
+  },
+  "stages": [
+    {
+      "stage": "preflight",
+      "origin": 1078521.315537122,
+      "end": 1078574.381102711,
+      "elapsed_s": 53.065565588884056,
+      "configured_seconds": 300,
+      "actual_exit": 0,
+      "effective_completion_deadline_seconds": 300,
+      "completed_within_deadline": true,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "deadline_overshoot_s": 0.0,
+      "address_space_limit_bytes": 42949672960,
+      "peak_rss_bytes": 35962880,
+      "supervisor_error": null,
+      "worker_pid": 1787111
+    },
+    {
+      "stage": "numerical",
+      "origin": 1078574.381275604,
+      "end": 1078728.727114847,
+      "elapsed_s": 154.34583924291655,
+      "configured_seconds": 600,
+      "actual_exit": 0,
+      "effective_completion_deadline_seconds": 600,
+      "completed_within_deadline": true,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "deadline_overshoot_s": 0.0,
+      "address_space_limit_bytes": 42949672960,
+      "peak_rss_bytes": 1332809728,
+      "supervisor_error": null,
+      "worker_pid": 1787117
+    },
+    {
+      "stage": "audit",
+      "origin": 1078728.727305239,
+      "end": 1078734.70377903,
+      "elapsed_s": 5.976473790826276,
+      "configured_seconds": 600,
+      "actual_exit": 0,
+      "effective_completion_deadline_seconds": 600,
+      "completed_within_deadline": true,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "deadline_overshoot_s": 0.0,
+      "address_space_limit_bytes": 42949672960,
+      "peak_rss_bytes": 237527040,
+      "supervisor_error": null,
+      "worker_pid": 1787592
+    }
+  ],
+  "stage_elapsed_sum_s": 213.38787862262689,
+  "outer_supervisor_actual_exit": {
+    "value": 0,
+    "evidence": "Mac exec session47661 final tool e0b822"
+  },
+  "point_sha256": "1552f785a5bf2de8a30821b6c345994bf5eccb7e3df41998a3e48bc7a43c5a08",
+  "contract_sha256": "11fa866048fcf416506abbf359fc8a4ec740584cac8f95e778c82f2c138aa8e0",
+  "independent_audit_passed": true,
+  "all_original_thresholds_unchanged": true,
+  "counts": {
+    "cold_interior_solves": 1,
+    "primary_repeats": 0,
+    "finite_maps": 0,
+    "model_calls": 0,
+    "physical_trials": 0,
+    "PPO_updates": 0,
+    "holdout_trials": 0
+  },
+  "no_retry": true,
+  "physical_state_unchanged": {
+    "clean": "64/72",
+    "stable": 70,
+    "slipping": 8,
+    "housing_contact": 2,
+    "categories_overlap": true,
+    "all64_protected": true,
+    "all8_unresolved": true,
+    "main_PPO": "unstarted",
+    "fresh_holdout": "closed"
+  },
+  "meaning": "The accepted unscaled direction lies strictly inside all92267 reserved encoding intervals and passes the complete original numerical checks. It is ready to be considered for a separately frozen finite-encoding and nonlinear-model validation step. No encoded trajectory or robot/controller success follows yet.",
+  "next_boundary": "No new scientific work authorized by this consumed diagnostic exception. Freeze complete finite-encoding/model test and resources before any next calculation; physical/PPO gates remain unchanged.",
+  "workers_at_final_check": [],
+  "automation": "ACTIVE",
+  "old_evidence_preserved": {
+    "/home/kadir/humanoid-sitting/docs/LOW_SEAT_CONTACT_PROTOCOL.md": "0df7fa154b64c99f7c992c6a6317e87e62adac7ab31410daa140f742d01a4415",
+    "/home/kadir/humanoid-sitting/docs/LOW_SEAT_CONTACT_STATUS.md": "7c2c8fd221ca7d021f7ffdf582665fe68fd0523d9b34c8671cb3812bfd24b7c6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/limits_diagnostic_20261020_v1/summary.json": "5c05524a5f40bd90fe497c40fc53aa529a1b761e07b0fb93a4b00026db1ea72d",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/limits_diagnostic_20261020_v1/SHA256.json": "6aaee5f547c57eeb0f37974a0d7527d4809c65c2ec9d21dc23df60195a795391"
+  },
+  "report_video_unchanged": {
+    "report": 600,
+    "video": 307
+  },
+  "prior_failures_retained": "All inherited failures remain; prelaunch read-only SSH transport denial bf5a89 actual255 preceded connection/science, metadata retry0d7d97 actual0. Diagnostic itself used one solve without retry."
+}

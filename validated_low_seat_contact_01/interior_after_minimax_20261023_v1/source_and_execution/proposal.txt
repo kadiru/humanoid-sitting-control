@@ -1,0 +1,19 @@
+New-state strict-interior validation after the October23 minimax diagnostic
+
+Status: prepared for review; no execution approval. One new solve, no automatic downstream execution.
+
+Purpose: the accepted numerical primary predicts99.1051% reduction but cannot itself be encoded as motion. The next inherited gate finds a correction with positive exact margin inside every reserved encoding interval while keeping predicted mismatch below the actual saved ceiling0.061901382259917585. This ceiling is the inherited halfway rule between current merit0.12270472005373632 and audited predicted merit0.00109804446609885; it is not a relaxed physical threshold. No primary point is evaluated again.
+
+Inputs and associations: use changed_state_primary_20261020_v1 full_matrix/full_arrays/full_equality, state, H and intervals, bound by their accepted proof and exact hashes. These represent finite_model_step_20261020_v1, not the initial October20 state. Bind the successful full_minimax_budget_review_20261023_v1 summary, audit, ceiling, witness, result and process timing by hash. The new primary witness is provenance only, never a warm start. All26 inherited input bindings plus8 new-result bindings and2362 runtime bindings remain in contract.json.
+
+Equations: variables are full d in R^78790 and eta. Minimize -eta, eta in[0,0.5]. Retain every original auxiliary row, both consistency signs, closed box/trust/drop rows and all1366 zero equalities. At the fixed saved ceiling c, require -A_keep*d <= r_keep-guard_keep+soft_keep*c and +/-C*d <= -/+h+c. Append H_j*d/width_j+eta <= upper_j/width_j and -H_j*d/width_j+eta <= -lower_j/width_j for all92267 reserved intervals. No scaled direction, clipping, row deletion, new guards, bounds or tolerances.
+
+Initialization: one cold scipy.optimize.linprog highs-ipm call with no x0/basis/internal vector. Presolve enabled, maxiter4096, all inherited backend feasibility/optimality tolerances1e-9. Full original numerical checks require finite output, valid dual signs and primal/dual/absolute gap <=1e-9. Exact rational interval verification requires min_j((H_j*d-lower_j)/width_j,(upper_j-H_j*d)/width_j)>0 at the unchanged returned d, with eta cap1/2. Positive numerical eta alone is insufficient. Independently audit new input coefficient associations before solve; independently verify returned KKT and every exact H*d trace using integer dyadic accumulation after solve.
+
+Budget requested:600seconds TOTAL including imports, hashing, new assembly, input audit, solver, numerical checks, exact trace, independent return audit and owner-process finalization;40GiB per worker; one scientific worker at a time. Soft backend endpoint420s, hard producer endpoint480s, final audit endpoint600s, all from one origin. At most one solve; timeout, missing optimum, failed numerical/exact check, overshoot or memory failure is terminal. No retry or budget reallocation. Resource derivations and finite-return sizes are in resources.json.
+
+Success: audited full-original numerical optimum and strictly positive exact margin at this new state/ceiling within budget. This is encoding readiness only. It does not establish nonlinear consistency, a motion-admissible trajectory, repaired trials or PPO performance.
+
+After success: separately freeze the current-state finite encoding and fresh nonlinear validation. Physical admission, full72-case retention/repair, PPO comparison and held-out evaluation remain required. This proposal launches none of those stages.
+
+Why new approval is needed: the previous600-second exception was explicitly limited to one minimax diagnostic and has been consumed. This validation requests a separate600-second total allowance instead of the inherited45 seconds; no other requirement is waived. It is a new-state downstream gate, not a restart of the completed primary or the old interior point.

@@ -1,0 +1,67 @@
+{
+  "utc": "2026-10-24T01:09:20.403170+00:00",
+  "classification": "Source-only scope assessment of explicit pelvis-gap coordinates; not a selected construction",
+  "local_only": true,
+  "launch_ready": false,
+  "actual_targets": {
+    "rows": [
+      214643,
+      215327
+    ],
+    "state_pairs": [
+      [
+        622,
+        1273
+      ],
+      [
+        1400,
+        631
+      ]
+    ],
+    "physical_output": 47,
+    "auxiliary_feature": 71,
+    "origin": "finite_model_step_20261023_v1"
+  },
+  "source_result": [
+    "Mechanics.calc forms the pelvis transform directly from root=(x,y,z0+dz*f) and R_s(p)=baseR_s*(I+sin(angle*p)*K+(1-cos(angle*p))*K^2). Pelvis gap does not directly depend on leg coordinates, arm angles or corner loads.",
+    "In exact real interpretation of those stored model parameters, gap_s=n_x*x+n_y*y+n_z*(z0+dz*f)+plane_d+min_v n^T*R_s(p)*v. It is affine in x,y,f at fixed p. The remaining nonlinearity and possible vertex switches depend on the one orientation coordinate p.",
+    "If n_z*dz is nonzero, this expression can solve f explicitly for a specified physical gap. No such denominator, branch, interval or numerical identity was evaluated on study arrays."
+  ],
+  "primary_scope_obstruction": [
+    "The full original primary retains an independent auxiliary gap g and both signs of its consistency residual: |g-gap_linear|<=sigma_gap*t. The scalar t need not be zero.",
+    "Setting f from g alone imposes zero gap residual and restricts that primary domain; it is not an equivalent coordinate change of the whole minimax problem. No proof shows an original optimum on this restricted domain.",
+    "To retain the full domain one must retain an independent gap-error coordinate e, with gap=g-e and both signed bounds |e|<=sigma_gap*t. Replacing f by e does not itself remove a degree of freedom or establish computational savings.",
+    "Changing f after receiving a backend point would change the motion point and its coupled foot, arm, command, moment, torque and timing conditions. The earlier finite-map approval and named dual correction do not authorize that projection."
+  ],
+  "decision": "Do not launch explicit gap projection or claim that the scalar formula solves the remaining cases. This source identity can inform a future construction, but a full-original witness/equivalence mechanism and useful cost reduction remain absent. Do not repeat the source derivation or inspect vertex branches generically on this basis.",
+  "unresolved_costs": [
+    "Certified treatment of the min over vertices and floating arithmetic",
+    "All original consistency, bounds, time and command associations after any coordinate change",
+    "Full original primal/dual return and finite-map proof",
+    "A demonstrated structural saving sufficient to justify preparation, solve and independent audit within45seconds"
+  ],
+  "sources": {
+    "rl_support_work/scripts/low_seat_clock_transcription_444.py": "a08170272855bfe2460b3ce11ed44418cbe5e792d4ed61daa4fd34694b3d28dd",
+    "rl_support_work/scripts/targeted_gap_primary_20261023_v1/builder.py": "076568b6abeeab437df567d3616424272d46b121fd61acb1a3722e37d343fa76",
+    "rl_support_work/scripts/finite_model_step_20261023_v1/assessment.py": "11ca78db5e8e756090587cf7c3fe89764a5880fde978f8c416b20ffa55cc1b3a",
+    "validated_low_seat_contact_01/hard_row_attribution_20261023_v1/attribution.json": "5b5fbc14cca4ae572cbdb0aed4d206f3a296ab2082d2d4036b8dc8f43f3b41ec"
+  },
+  "worker_check": {
+    "utc": "2026-10-24T01:05:53.746291+00:00",
+    "workers": [],
+    "tool": "f309f1"
+  },
+  "new_scientific_execution": {
+    "array_loads": 0,
+    "coefficient_products": 0,
+    "solver_calls": 0,
+    "model_calls": 0,
+    "geometry_evaluations": 0,
+    "simulation_trials": 0,
+    "PPO_updates": 0
+  },
+  "new_authorization_requested": false,
+  "physical_status_changed": false,
+  "automation": "ACTIVE",
+  "prior_checkpoint_sha256": "16e50514edb3d4b094e1c29ce9a8a50879c8e16a3f4a57fd17b094a1a1f4c8f2"
+}

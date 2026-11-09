@@ -1,0 +1,13 @@
+Approved gap-constraint cycle: completed once; stopped on nonlinear acceptance failure.
+
+Primary and interior solves passed independent optimality checks for the strengthened problems. All original primal constraints were retained. Exact interior rounding clearance and finite encoding passed. No multiplier was edited.
+
+Time including audits: primary 308.276s/600s; interior 186.180s/600s; finite/nonlinear 9.288s/45s. Two cold solves, one finite map, one fresh model evaluation over 1365 states; no simulation, PPO or holdout.
+
+The encoded step predicted a 44.00% merit reduction; the nonlinear evaluation achieved 24.46% (0.0860533 to 0.0650079), realizing 55.58% of the predicted reduction. The primary-only 88.00% prediction was not the encoded step.
+
+Rejection: one actual gap target passed; the other remained -2.6143e-6 normalized. Worse, 188 previously satisfied hard checks became negative across nine families, including approach order, descent rate, support and command limits. Worst hard violation improved from 304.4705 to 38.1609, but this does not permit new violations or satisfy physical admission. All seven consistency units still fail their inherited gate. These are model constraints, not 188 physical cases.
+
+What this establishes: the larger budget cleared the solver barrier for this input. Optimizing two actual-gap tangents does not preserve actual hard feasibility through the nonlinear step. The rejected point is not promoted; last accepted model state and physical 64/72 result remain unchanged.
+
+Next concrete preparation: implement actual-motion feasibility guards across the affected hard-row families, preserving every original row, and derive a defensible reserve for nonlinear prediction error. Freeze a single feasibility-restoration experiment from the last accepted state. Its test must require zero newly violated hard rows, both target gaps nonnegative and at least 1% nonlinear merit reduction. This is a new construction to prepare, not a launched or guaranteed remedy. A fresh scientific run needs complete source/resource/audit freeze and any new explicit budget/optimality exceptions; the just-completed approval is consumed.

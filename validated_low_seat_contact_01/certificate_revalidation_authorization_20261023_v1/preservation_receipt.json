@@ -1,0 +1,77 @@
+{
+  "summary": {
+    "utc": "2026-10-23T22:54:31.459802+00:00",
+    "classification": "Executed single named certificate revalidation; audited numerical and strict exact rounding-margin success; no encoding/model/physical success",
+    "candidate_accepted": true,
+    "physical_success": false,
+    "approved_contract_sha256": "d8d1c0623c0fe5aabfe96c44e2a7cb0f19b1925ad7b3fefcae8a4b445a4585f7",
+    "owner_process_wall_s_rounded": 3.02,
+    "total_cap_s": 45,
+    "owner_actual_exit": 0,
+    "outer_timeout": false,
+    "full_original_numerical_checks": {
+      "primal": 7.0150205089269946e-12,
+      "dual": 1.4210854715202004e-14,
+      "absolute_gap": 8.390857453299816e-15,
+      "finite": true,
+      "dual_signs": true,
+      "passed": true
+    },
+    "exact_margin": {
+      "passed": true,
+      "exact_eta": [
+        228304098722825,
+        23058430092136896
+      ],
+      "nonpositive": [],
+      "limiting_row": 72828,
+      "rows": 92267,
+      "coefficient_products": 125867,
+      "observed_max_rational_bits": 1070,
+      "direction_scaled": false,
+      "finite_map_performed": false,
+      "rows_sha256": "c431ff256bfa0081e45c77ddbad35eeb430ebe090b32970cf884d1079689583d"
+    },
+    "independent_return_audit_passed": true,
+    "single_dual_change": {
+      "row": 753917,
+      "source_hex": "0x1.d500000000000p-49",
+      "replacement_hex": "0x0.0p+0",
+      "changed_dual_values": 1,
+      "changed_primal_values": 0,
+      "source_primal_sha256": "c16f1f5092ba4a025e7b8356a14ba2dde4fe38ce7ff895de2569e93c4d9e8322",
+      "policy": "One specifically authorized dual entry; no threshold-based/general clipping",
+      "no_optimum_claim_from_correction_alone": true
+    },
+    "witness_sha256": "c16f1f5092ba4a025e7b8356a14ba2dde4fe38ce7ff895de2569e93c4d9e8322",
+    "primary_predicted_reduction_does_not_measure_this_interior_point": true,
+    "interior_predicted_mismatch_ceiling": 0.061901382259917585,
+    "solves": 0,
+    "retries": 0,
+    "finite_maps": 0,
+    "model_calls": 0,
+    "simulation_calls": 0,
+    "PPO_updates": 0,
+    "holdout_trials": 0,
+    "physical_status": {
+      "clean": 64,
+      "development_trials": 72,
+      "unresolved": 8,
+      "protected": 64,
+      "main_PPO": "unstarted",
+      "fresh_holdout": "closed"
+    },
+    "last_worker_check": [],
+    "worker_check_utc": "2026-10-23T22:54:16.236208+00:00",
+    "authorization": "Consumed by this one revalidation; no retry or automatic downstream",
+    "next_gate": "Prepare finite encoding and fresh current-state nonlinear-model validation; neither executed or authorized by this revalidation approval",
+    "prior_failures_preserved": true,
+    "metadata_correction": "Before launch only, corrected stale initialization description to match unchanged zero-solver scientific code"
+  },
+  "manifest_sha256": "ecd439323df7f6ce17db8e226a1caac7af1864bf0bf0eff91d118ebaa44e9000",
+  "summary_sha256": "7a2676b78bd010ce4de55a5c74904ae1bf78cd512c3a8349b0d41d8f81ec517b",
+  "archive": "/tmp/interior_certificate_revalidation_completed_20261023_v1.tar.gz",
+  "archive_sha256": "240406e12444945140f771455dd73176593e267c3bd38c01df604b4d7633edb2",
+  "archive_bytes": 6747324,
+  "output_files": 36
+}

@@ -1,0 +1,84 @@
+{
+  "utc": "2026-10-23T04:10:02.375129+00:00",
+  "classification": "Source and saved-summary novelty review only; no scientific array arithmetic or launch",
+  "local_only": true,
+  "remote_certificate": false,
+  "finding": "Local-block elimination alone is already present in the terminal 528/530/532 family. The new partition changes which variables are local, but does not supply a new complete witness mechanism.",
+  "source_associations": [
+    {
+      "source": "rl_support_work/scripts/low_seat_arrow_operator_528.py",
+      "lines": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        31,
+        50
+      ],
+      "fact": "Prior 528 partitions state-local columns, derives weighted block-diagonal Gram blocks, Schur action, RHS condensation and recovery. It also explicitly includes arbitrary strictly positive weights in the operator identity."
+    },
+    {
+      "source": "rl_support_work/scripts/low_seat_schur_hsd_530.py",
+      "lines": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "fact": "Prior 530 uses inherited state blocks with fixed resolvent Gram factors, separator PCG and full recovered residual checks; 532 applies this mechanism to the full projected problem and terminates without a candidate."
+    },
+    {
+      "source": "validated_low_seat_contact_01/arrow_operator_preparation_528/preparation.json",
+      "fact": "Saved primary summary records 1365 local blocks of maximum order 17, 23205 local columns and 33746 separator columns. These are read historical counts, not a fresh matrix scan."
+    },
+    {
+      "source": "validated_low_seat_contact_01/schur_path_532/results.json",
+      "fact": "Historical method first existentially projected out 21840 torque auxiliary coordinates. Accepted solver iterates, finite maps and actual trial evaluations are all zero."
+    },
+    {
+      "source": "validated_low_seat_contact_01/local_block_design_assessment_20261023_v1.json",
+      "fact": "The newer partition has 33 direct extras per state: the same 17 root/leg/COM extras plus 16 torque extras. Its additional state-private columns are the native load columns."
+    }
+  ],
+  "count_comparison": {
+    "symbolic_identity": "45045 = 23205 + 21840. The 21840 added private extras were already absent through torque projection in the historical formulation. Before privatizing any loads, both accounting routes leave 33746 separator coordinates.",
+    "remaining_partition_delta": "With L current native load columns made private, the new proposal leaves 33746-L retained columns. L has not been counted by a new saved-data scan.",
+    "limitation": "This is coordinate bookkeeping, not equality of the two Schur matrices or feasible floating-point implementations. They use different current/reference inputs and different row representations. Torque projection and elimination inside a Newton solve are not interchangeable proofs.",
+    "resource_tradeoff": "New blocks can reach order 40 instead of the saved maximum 17. Eliminating loads may shrink the separator but increases local factor work and can increase retained fill. Changing Newton weights also prevents simply inheriting the fixed factors of 530. No measured or certified net advantage follows."
+  },
+  "decision": "Do not select local-block elimination by itself as the next scientific construction, and do not retry 532 with the new partition. Any future proposal must supply an additional concrete separator/witness mechanism and full initialization, total 45-second resource, finite-return and independent-audit accounting. Source-level partition changes and smaller retained dimension alone do not meet that gate.",
+  "new_scientific_execution": {
+    "array_loads": 0,
+    "coefficient_or_incidence_scans": 0,
+    "factorizations": 0,
+    "solver_calls": 0,
+    "model_calls": 0,
+    "simulation_trials": 0,
+    "PPO_updates": 0,
+    "completed_proofs_replayed": false
+  },
+  "worker_check": {
+    "utc": "2026-10-23T04:05:41.377759+00:00",
+    "workers": [],
+    "source": "Direct Mac SSH kfuUbuntu /proc inspection; tool eff702"
+  },
+  "operational_notes": [
+    "Initial sandbox SSH attempt was denied by the environment; authorized read-only escalation succeeded.",
+    "Read-only path discovery included absent .agents/.codex directories and returned exit 2.",
+    "One read requested absent schur_hsd_preparation_530/summary.json; subsequent rg discovery found preparation.json. No scientific computation was invoked."
+  ],
+  "source_sha256": {
+    "rl_support_work/scripts/low_seat_arrow_operator_528.py": "c66926ec74545e64771aa52caf2cf437e11377dd0f3f7f6d9eb437ba44a9bf39",
+    "rl_support_work/scripts/low_seat_schur_hsd_530.py": "baf4722155c40239c9c732a3c476acaa3960fbddf51faa8b9306b17590373395",
+    "rl_support_work/scripts/low_seat_lifted_feasibility_490.py": "04d675594cc2c72a08a1acf12a3d189aebf854f1857c2adbcc96d1a8f3cf0150",
+    "rl_support_work/scripts/changed_state_primary_20261020_v1/builder.py": "076568b6abeeab437df567d3616424272d46b121fd61acb1a3722e37d343fa76",
+    "validated_low_seat_contact_01/arrow_operator_preparation_528/preparation.json": "8274205cec1850dd0f7247c055274a597a2e5fef9c6072508c95a32addaa136c",
+    "validated_low_seat_contact_01/schur_path_532/results.json": "6b875cafcd570f366a40b605872fe2fec8242e1ae0de864bed801d08249d0a90",
+    "validated_low_seat_contact_01/local_block_design_assessment_20261023_v1.json": "c78996d2b836ac4c352a45d84965cce7afa3ce1f3070f2daacad0fcf9867b7ec"
+  },
+  "physical_status": "64/72 clean; all64 protected; all8 unresolved; main PPO unstarted; fresh holdout closed",
+  "cycle_remains_closed": true,
+  "new_exception_requested": false,
+  "task_and_automation": "ACTIVE"
+}

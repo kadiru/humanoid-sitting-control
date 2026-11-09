@@ -1,0 +1,44 @@
+{
+  "execution_and_audit_passed": true,
+  "candidate_accepted": true,
+  "stages": [
+    {
+      "stage": "producer",
+      "actual_exit": 0,
+      "elapsed_s": 327.1057260800153,
+      "total_elapsed_s": 327.1423381799832,
+      "completed_within_deadline": true,
+      "stage_deadline_s": 480.0,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "overshoot_s": 0.0,
+      "peak_rss_bytes": 1124732928,
+      "worker_pid": 1969578,
+      "supervisor_error": null
+    },
+    {
+      "stage": "audit",
+      "actual_exit": 0,
+      "elapsed_s": 0.5694426270201802,
+      "total_elapsed_s": 327.71214226214215,
+      "completed_within_deadline": true,
+      "stage_deadline_s": 600.0,
+      "hard_termination_reason": null,
+      "termination_signal_sent_at": null,
+      "overshoot_s": 0.0,
+      "peak_rss_bytes": 131416064,
+      "worker_pid": 1970661,
+      "supervisor_error": null
+    }
+  ],
+  "total_elapsed_s": 327.7124468421098,
+  "total_cap_s": 600.0,
+  "address_space_bytes": 42949672960,
+  "no_retry": true,
+  "solves": 1,
+  "physical_trials": 0,
+  "PPO_updates": 0,
+  "holdout_trials": 0,
+  "physical_admission": false,
+  "repair_complete": false
+}

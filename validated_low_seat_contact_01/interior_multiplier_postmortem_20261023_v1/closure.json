@@ -1,0 +1,67 @@
+{
+  "utc": "2026-10-23T17:13:42.007852+00:00",
+  "classification": "Executed bounded saved-record attribution; not a solve, candidate or physical repair",
+  "process_wall_seconds": 0.53,
+  "cap_seconds": 45,
+  "independent_audit_passed": true,
+  "attribution": {
+    "classification": "Read-only attribution of saved multiplier rejection",
+    "records": 1,
+    "counts": {
+      "positive_inequality_marginal": 1
+    },
+    "worst": {
+      "positive_inequality_marginal": {
+        "magnitude_bits": 4390253172686323712,
+        "family": "inequality",
+        "index": 753917,
+        "raw_hex": "0x1.d500000000000p-49",
+        "raw_value": 3.25434124093249e-15
+      }
+    },
+    "violation_trace_sha256": "525734bed7d2c7de30fdc9b23e57a9ed96c85543572485a66ef86e906c344b38",
+    "matrices_or_primal_loaded": false,
+    "KKT_replayed": false,
+    "solver_calls": 0,
+    "candidate_accepted": false,
+    "physical_success": false
+  },
+  "observed_violation": {
+    "family": "inequality",
+    "index": 753917,
+    "raw_hex": "0x1.d500000000000p-49",
+    "raw_value": 3.25434124093249e-15,
+    "conditions": [
+      "positive_inequality_marginal"
+    ],
+    "association": {
+      "kind": "reserved_lower_interval",
+      "index": 9121
+    }
+  },
+  "interpretation": "One positive inequality marginal3.25434124093249e-15 triggers the unchanged exact sign check. Its magnitude is consistent with numerical roundoff; source of that error is not proved. No primal, stationarity/gap, margin or model admission is obtained from this attribution.",
+  "rejected_primal_loaded": false,
+  "solver_calls": 0,
+  "full_KKT_repeated": false,
+  "exact_margin_checks": 0,
+  "finite_maps": 0,
+  "model_calls": 0,
+  "simulation_calls": 0,
+  "PPO_updates": 0,
+  "physical_success": false,
+  "old_rejection_preserved": true,
+  "workers": [],
+  "authoring_failures": [
+    {
+      "tool": "aa8cf0",
+      "exit": 127,
+      "error": "remote rg unavailable; source-read fallback succeeded"
+    },
+    {
+      "tool": "d9955d",
+      "exit": 1,
+      "error": "empty tar input during preparation; only empty source directory created, later populated; no scientific data loaded"
+    }
+  ],
+  "next_work": "Prepare an explicitly scoped policy decision for certificate-level roundoff handling before any old-point revalidation. Preserve exact sign and original numerical/physical gates unless the human explicitly changes the return policy. No automatic retry, multiplier clipping, primal reuse, exact-margin, encoding or model run."
+}

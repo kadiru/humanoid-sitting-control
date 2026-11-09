@@ -1,0 +1,86 @@
+{
+  "utc": "2026-10-23T23:01:15.695228+00:00",
+  "classification": "Audited current-state finite encoding and fresh nonlinear research iterate; actual numerical motion admission FAILED",
+  "summary": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/finite_model_step_20261023_v1/summary.json",
+  "summary_sha256": "8b55e9fb961c01041bfdb43b9a6efd7e89e48dbdabff711f7e56025fdb54d614",
+  "manifest_sha256": "a96ae43e9373e0ffc517fc67ba970679948240bfb6150dd2399833b050dd5d64",
+  "approved_contract_sha256": "ff681dbf790dfffa279362b624fab2175a6d127b6198cdfc12de9532a92a3be1",
+  "human_approval_receipt_sha256": "2aeb728f297a8733182e435b1932c26774b2928f79a5cd52de4e7dd898f27338",
+  "owner_process_wall_s": 18.21,
+  "total_cap_s": 45,
+  "finite_encoding_passed": true,
+  "independent_audit_passed": true,
+  "trial_merit_accepted": true,
+  "actual_numerical_admission_gate": false,
+  "physical_success": false,
+  "merit_before": 0.12270472005373632,
+  "predicted_merit_after": 0.06190138226005615,
+  "actual_merit_after": 0.08605330623059242,
+  "predicted_fractional_reduction": 0.4955256632919455,
+  "actual_fractional_reduction": 0.2986960388083937,
+  "actual_to_predicted_ratio": 0.6027862145908939,
+  "comparison": {
+    "scope": "Comparison of already saved audited scalar metrics only; no model/row recomputation",
+    "merit": {
+      "before": 0.12270472005373632,
+      "after": 0.08605330623059242,
+      "predicted_after": 0.06190138226005615
+    },
+    "worst_foot_closure_m": {
+      "before": 0.007750459694340003,
+      "after": 0.0048759519770204965
+    },
+    "worst_actual_hard_normalized_row": {
+      "before": -52.5510503481505,
+      "after": -304.4704805204717,
+      "required": ">=0",
+      "worsened": true
+    },
+    "worst_actual_all_normalized_rows": {
+      "before": -328764.5146446765,
+      "after": -84731.31868342013
+    },
+    "all_seven_closure_units_still_failed": true,
+    "interpretation": "Research merit and closure magnitudes improved, while the worst actual hard-row residual worsened. Merit acceptance is not physical or motion admission."
+  },
+  "fresh_value_states": 1365,
+  "fresh_J_states": 1365,
+  "finite_output_sha256": {
+    "decision.json": "8a2ae8f6abb602d5df559e0011e690d4d555671a39dc165aed4acb3080996d75",
+    "actual.npz": "222f3db712851263811d0c0e90d151c39bfd850976a38bdf4442dfcc43573324",
+    "accepted_J.npz": "1a16ca4278f665bb8ea108b518f4c08614730a86b1ec4c5446df29c78daedf13",
+    "map.json": "9293339866fd48cb46161a995457964af63808ebaa5cc7f97d5ad11661b25750",
+    "mapped.npz": "a5de4d3bcf43addf6116e49723416c7df86ce38ba33988f76ac3df2d394fc984"
+  },
+  "scientific_launches": 1,
+  "solvers": 0,
+  "retries": 0,
+  "physical_trials": 0,
+  "PPO_updates": 0,
+  "authorization_consumed": true,
+  "no_automatic_downstream": true,
+  "model_audit_scope": "Frozen original444 mechanics, fresh-call provenance and changed-state identity; independent599 all-row/metric replay. No second oracle evaluation.",
+  "authoring_failures_preserved": [
+    {
+      "tool": "d8d7d6",
+      "actual_exit": 1,
+      "reason": "Read attempted nonexistent old independent_return.py; correct independent.py read afterward; no scientific execution"
+    },
+    {
+      "tool": "4e5e9e",
+      "reason": "Read attempted nonexistent local changed-state input_audit.json; actual input_proof.json located by file inventory; no scientific execution"
+    }
+  ],
+  "physical": {
+    "clean": "64/72",
+    "stable": 70,
+    "slipping": 8,
+    "housing_contact": 2,
+    "categories_overlap": true,
+    "all64_protected": true,
+    "all8_unresolved": true,
+    "main_PPO": "unstarted",
+    "fresh_holdout": "closed"
+  },
+  "next_work": "Design and freeze a current-state constrained correction around this new accepted map/Y/J. Account explicitly for failed actual hard rows and seven closure units; preserve all original bounds, criteria and45s budget. No old-stage rerun, automatic solver budget extension, simulation or PPO."
+}

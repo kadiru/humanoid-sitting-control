@@ -1,0 +1,99 @@
+{
+  "utc": "2026-10-21T06:43:46.963018+00:00",
+  "scope": "Current successor index; preserve inherited603/601 evidence and unchanged physical criteria",
+  "latest_scientific_result": {
+    "kind": "Terminal numerical infeasibility report for one new-state primary zero-face LP; no returned candidate",
+    "folder": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/changed_state_primary_20261020_v1",
+    "summary_sha256": "c15b718f080b109c707bc17d75d17cd89ccb2ec896596c7cef4194dd5ca01c2f",
+    "manifest_sha256": "fd0fcf29115690958ab3bd69f8636ee9aa30fb9f4df9cd61e57072d6de2695ba",
+    "candidate_accepted": false,
+    "backend_status": 2,
+    "backend_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+    "iterations": 12,
+    "exact_infeasibility_certificate": false,
+    "scope": "Restricted linearization at the accepted finite research iterate with original scalar t fixed0, unchanged trust1/boxes/guards. No claim about whole unconstrained-epigraph LP, nonlinear motion or physical sitting impossibility.",
+    "independent_input_proof_passed": true,
+    "independent_result_audit_passed": true,
+    "audit_scope": "Fresh full-state/interval/zero-face input identities plus termination and rejection accounting; not an independent exact Farkas infeasibility proof.",
+    "total_seconds": 28.381892771925777,
+    "total_cap_seconds": 45,
+    "single_cold_solve": true,
+    "no_retry": true,
+    "physical_success": false
+  },
+  "authorizations": {
+    "primary_diagnostic": "completed and consumed",
+    "interior_diagnostic": "explicitly approved; completed and consumed",
+    "pending_approval_question": true,
+    "further_budget_exception_approved": false,
+    "full_minimax_exception": "Requested once; pending. No scientific launch authorized."
+  },
+  "next_work": {
+    "kind": "Prepared full-original minimax diagnostic; awaiting specific human exception",
+    "proposal": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/full_minimax_review_20261020_v1/proposal.txt",
+    "contract_sha256": "351edf7aeea1d097649df312b482d452cada5e785cc90620948feca7228893f8",
+    "frozen_ready": true,
+    "execution_approved": false,
+    "approval_question_tool": "request_user_input_async",
+    "required": "Do not launch pending approval. One full-original minimax solve at same accepted finite state; optimize original t rather than require t=0. Explicit exception to terminal/changed-face rule requested; no larger45s allowance or validation change. Preserve pending proposal contract/authorization before any approved update. No retry, motion, simulation, PPO or automatic interior.",
+    "scientific_calls_this_preparation": 0,
+    "no_automatic_additional_solve": true,
+    "finite_maps_so_far": 1,
+    "new_nonlinear_model_evaluations": 1,
+    "new_J_evaluations": 1,
+    "last_accepted_model_state_motion_admissible": false,
+    "approval_question": "Approve the prepared full-minimax diagnostic:45seconds total including validation/audit,40GiB per worker,one cold solve,no retry/motion/simulation/PPO;one-time exception to inherited ban on changing failed zero-mismatch formulation;physicalchecksunchanged."
+  },
+  "physical": {
+    "clean": "64/72",
+    "stable": 70,
+    "slipping": 8,
+    "housing_contact": 2,
+    "categories_overlap": true,
+    "all64_protected": true,
+    "all8_unresolved": true,
+    "main_PPO": "unstarted",
+    "fresh_holdout": "closed"
+  },
+  "historical_artifacts": {
+    "last_sealed_historical": 601,
+    "report": 600,
+    "video": 307
+  },
+  "last_remote_worker_check": {
+    "utc": "2026-10-21T06:41:32.016136+00:00",
+    "workers": [],
+    "source": "7b6a4e"
+  },
+  "heartbeat_policy": "Quiet when unchanged/non-actionable; meaningful scientific results distinct from physical success. No delegated coding agents or duplicate automation.",
+  "automation": "ACTIVE",
+  "authorization_notes": "Both enlarged primary/interior diagnostic approvals consumed. Subsequent finite/model step and one genuine changed-state primary attempt completed inside their unchanged45s caps. Changed-state primary now terminal; no further enlarged exception approved.",
+  "last_accepted_research_iterate": {
+    "kind": "Audited finite encoding and accepted nonlinear research iterate; actual numerical motion admission FAILED",
+    "folder": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/finite_model_step_20261020_v1",
+    "summary_sha256": "8bf2a6243926bbc72efbb325801e67769d4d6784861753eeca0dda1109b1b4ba",
+    "manifest_sha256": "efccce575114edaa94ae999677c4654a5f341a419e1c01cb1a73ad5a137f1eb4",
+    "trial_merit_accepted": true,
+    "actual_numerical_admission_gate": false,
+    "finite_map_passed": true,
+    "independent_audit_passed": true,
+    "merit_before": 0.19791129319207476,
+    "merit_after": 0.12270472005373632,
+    "fractional_merit_reduction": 0.3800014234930482,
+    "actual_to_predicted_ratio": 0.7600028470906671,
+    "finite_output_sha256": {
+      "decision.json": "ab20bcf2bea951bd18237552637474a0f0378e647366f2157e15a4f1c5a7c781",
+      "actual.npz": "992a1602a85b55a91c11b65695c1fea89047c6c6d93712b041b0e709b6bde770",
+      "accepted_J.npz": "9b70ecd8bc0620cf466878707bff63506971cf97f6f7873945f7ad71aed18e40",
+      "map.json": "02173c8583b7bbf181146b763c0ab20021afbf375c0b3c9aa453d58835ffd511",
+      "mapped.npz": "e6d44ae6b99322663889f1136106c3d64a44a42f5d879e2dd004ed7dc2ea1262"
+    },
+    "fresh_value_states": 1365,
+    "fresh_J_states": 1365,
+    "total_seconds": 8.269158354960382,
+    "total_cap_seconds": 45,
+    "source_input_runtime_freeze_passed": true,
+    "solvers": 0,
+    "physical_success": false
+  }
+}

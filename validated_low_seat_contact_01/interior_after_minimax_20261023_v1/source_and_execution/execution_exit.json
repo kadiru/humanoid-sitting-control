@@ -1,0 +1,59 @@
+{
+  "utc": "2026-10-23T16:59:26.884959+00:00",
+  "actual_exit": 0,
+  "supervisor_pid": 1973946,
+  "child_process_wall_s": 175.808678093832,
+  "through_result_read_wall_s": 175.80911259585992,
+  "total_cap_s": 600,
+  "outer_timeout": false,
+  "overshoot_s": 0,
+  "candidate_accepted": false,
+  "result": {
+    "execution_and_audit_passed": true,
+    "candidate_accepted": false,
+    "stages": [
+      {
+        "stage": "producer",
+        "actual_exit": 0,
+        "elapsed_s": 174.9318271188531,
+        "total_elapsed_s": 174.9667858609464,
+        "completed_within_deadline": true,
+        "stage_deadline_s": 480.0,
+        "hard_termination_reason": null,
+        "termination_signal_sent_at": null,
+        "overshoot_s": 0.0,
+        "peak_rss_bytes": 1262415872,
+        "worker_pid": 1973947,
+        "supervisor_error": null
+      },
+      {
+        "stage": "audit",
+        "actual_exit": 0,
+        "elapsed_s": 0.7820373370777816,
+        "total_elapsed_s": 175.75056633003987,
+        "completed_within_deadline": true,
+        "stage_deadline_s": 600.0,
+        "hard_termination_reason": null,
+        "termination_signal_sent_at": null,
+        "overshoot_s": 0.0,
+        "peak_rss_bytes": 141303808,
+        "worker_pid": 1974491,
+        "supervisor_error": null
+      }
+    ],
+    "total_elapsed_s": 175.75087048416026,
+    "total_cap_s": 600.0,
+    "address_space_bytes": 42949672960,
+    "no_retry": true,
+    "solves": 1,
+    "physical_trials": 0,
+    "PPO_updates": 0,
+    "holdout_trials": 0,
+    "physical_admission": false,
+    "repair_complete": false
+  },
+  "retries": 0,
+  "simulation_calls": 0,
+  "PPO_updates": 0,
+  "whole_process_finalization_not_included_in_child_wall": true
+}

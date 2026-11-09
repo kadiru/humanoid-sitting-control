@@ -1,0 +1,156 @@
+{
+  "passed": true,
+  "utc": "2026-10-20T10:33:49.074367+00:00",
+  "scope": "LOCAL process-control fixtures only; deliberately short fixture clocks; production caps unchanged",
+  "compile_actual_exit": 0,
+  "fixtures": [
+    {
+      "name": "completed_worker",
+      "record": {
+        "stage": "preflight",
+        "origin": 2118919.774547333,
+        "end": 2118919.805967333,
+        "elapsed_s": 0.03141999989748001,
+        "configured_seconds": 0.5,
+        "actual_exit": 0,
+        "effective_completion_deadline_seconds": 0.5,
+        "completed_within_deadline": true,
+        "hard_termination_reason": null,
+        "termination_signal_sent_at": null,
+        "deadline_overshoot_s": 0.0,
+        "address_space_limit_bytes": 42949672960,
+        "peak_rss_bytes": 15007744,
+        "supervisor_error": null,
+        "worker_pid": 93962
+      },
+      "no_live_child": true,
+      "interruption_propagated": false
+    },
+    {
+      "name": "nonzero_worker",
+      "record": {
+        "stage": "preflight",
+        "origin": 2118919.806458541,
+        "end": 2118919.838441958,
+        "elapsed_s": 0.03198341699317098,
+        "configured_seconds": 0.5,
+        "actual_exit": 7,
+        "effective_completion_deadline_seconds": 0.5,
+        "completed_within_deadline": false,
+        "hard_termination_reason": null,
+        "termination_signal_sent_at": null,
+        "deadline_overshoot_s": 0.0,
+        "address_space_limit_bytes": 42949672960,
+        "peak_rss_bytes": 14909440,
+        "supervisor_error": null,
+        "worker_pid": 93963
+      },
+      "no_live_child": true,
+      "interruption_propagated": false
+    },
+    {
+      "name": "backend_deadline",
+      "record": {
+        "stage": "numerical",
+        "origin": 2118919.839395541,
+        "end": 2118920.06037025,
+        "elapsed_s": 0.2209747089073062,
+        "configured_seconds": 0.5,
+        "actual_exit": -9,
+        "effective_completion_deadline_seconds": 0.2,
+        "completed_within_deadline": false,
+        "hard_termination_reason": "setup_or_backend_deadline",
+        "termination_signal_sent_at": 2118920.045299291,
+        "deadline_overshoot_s": 0.020974708907306183,
+        "address_space_limit_bytes": 42949672960,
+        "peak_rss_bytes": 15138816,
+        "supervisor_error": null,
+        "worker_pid": 93964
+      },
+      "no_live_child": true,
+      "interruption_propagated": false
+    },
+    {
+      "name": "validation_total_deadline",
+      "record": {
+        "stage": "numerical",
+        "origin": 2118920.061698791,
+        "end": 2118920.578296916,
+        "elapsed_s": 0.5165981249883771,
+        "configured_seconds": 0.5,
+        "actual_exit": -9,
+        "effective_completion_deadline_seconds": 0.5,
+        "completed_within_deadline": false,
+        "hard_termination_reason": "numerical_total_deadline",
+        "termination_signal_sent_at": 2118920.563182625,
+        "deadline_overshoot_s": 0.016598124988377094,
+        "address_space_limit_bytes": 42949672960,
+        "peak_rss_bytes": 16089088,
+        "supervisor_error": null,
+        "worker_pid": 93967
+      },
+      "no_live_child": true,
+      "interruption_propagated": false
+    },
+    {
+      "name": "late_exit_between_polls",
+      "record": {
+        "stage": "numerical",
+        "origin": 2118920.58055175,
+        "end": 2118920.995625458,
+        "elapsed_s": 0.415073708165437,
+        "configured_seconds": 0.5,
+        "actual_exit": 0,
+        "effective_completion_deadline_seconds": 0.2,
+        "completed_within_deadline": false,
+        "hard_termination_reason": null,
+        "termination_signal_sent_at": null,
+        "deadline_overshoot_s": 0.21507370816543697,
+        "address_space_limit_bytes": 42949672960,
+        "peak_rss_bytes": 14974976,
+        "supervisor_error": null,
+        "worker_pid": 93968
+      },
+      "no_live_child": true,
+      "interruption_propagated": false
+    },
+    {
+      "name": "interrupted_supervisor",
+      "record": {
+        "stage": "numerical",
+        "origin": 2118920.998067958,
+        "end": 2118921.002773625,
+        "elapsed_s": 0.004705667030066252,
+        "configured_seconds": 0.5,
+        "actual_exit": -9,
+        "effective_completion_deadline_seconds": 0.2,
+        "completed_within_deadline": false,
+        "hard_termination_reason": "supervisor_interrupted_or_failed",
+        "termination_signal_sent_at": 2118921.002608708,
+        "deadline_overshoot_s": 0.0,
+        "address_space_limit_bytes": 42949672960,
+        "peak_rss_bytes": 491520,
+        "supervisor_error": "KeyboardInterrupt('local fixture interruption')",
+        "worker_pid": 93973
+      },
+      "no_live_child": true,
+      "interruption_propagated": true
+    }
+  ],
+  "scientific_runs": 0,
+  "remote_uploads": 0,
+  "production_launch_authorized": false,
+  "production_caps_seconds": {
+    "preflight": 300,
+    "numerical": 600,
+    "backend_absolute": 300,
+    "audit": 600
+  },
+  "source_sha256": {
+    "common.py": "35b50308bc304c62fecab0b7cc865ccbf4df5eac83a34bc201c94706962eb724",
+    "independent.py": "838f91f98575789dc28393c92cc0f450b001a5a721bc1e507cdb5d87c528d90d",
+    "preflight.py": "6006c0b6f6341cbf1352b72f23295053b7f17a82e57c35140e1e8f33b7f2b222",
+    "producer.py": "9e2111ecd0bdad4cee7c304c6b5afa08eff0548871b3d2eee2ab168397ec55f9",
+    "supervise.py": "68bded9f7a361d8b8192bfca47d0e57f6992de6870a76d1e655bedf92941eba7"
+  }
+}
