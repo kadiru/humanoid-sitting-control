@@ -1,0 +1,35 @@
+{
+  "utc": "2026-11-09T05:27:09.251866+00:00",
+  "official_source": "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/latest/dev_guide/guides/current_limitations.html",
+  "finding": "Documented TGS steady-state nonzero-velocity symptom matches the observed pattern, but enable_external_forces_every_iteration already defaults True and is authored by the installed manager. Source inspection only: no saved live physics-scene attribute snapshot. Cause not proven; no solver settings changed or simulation retry.",
+  "sources": [
+    {
+      "path": "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab_physx/isaaclab_physx/physics/physx_manager_cfg.py",
+      "sha256": "617dc7e53ad4e514dd7bcab8a46e3d30341efd86329eb9cb08f0c568f31692dc",
+      "first_line": 150,
+      "last_line": 178,
+      "excerpt": "    \"\"\"Enable a second broad-phase pass that makes it possible to prevent objects from tunneling through each other.\n    Default is False.\"\"\"\n\n    enable_stabilization: bool = False\n    \"\"\"Enable/disable additional stabilization pass in solver. Default is False.\n\n    .. note::\n\n        We recommend setting this flag to true only when the simulation step size is large\n        (i.e., less than 30 Hz or more than 0.0333 seconds).\n\n    .. warning::\n\n        Enabling this flag may lead to incorrect contact forces report from the contact sensor.\n    \"\"\"\n\n    enable_external_forces_every_iteration: bool = True\n    \"\"\"Enable/disable external forces every position iteration in the TGS solver. Default is True.\n\n    When using the TGS solver (:attr:`solver_type` is 1), this flag allows enabling external forces\n    every solver position iteration. This can help improve the accuracy of velocity updates.\n    Increasing the number of velocity iterations, together with this flag, can help improve the\n    accuracy of velocity updates.\n\n    .. note::\n\n        This flag is ignored when using the PGS solver (:attr:`solver_type` is 0).\n\n    .. deprecated:: TBD"
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab_physx/isaaclab_physx/physics/physx_manager.py",
+      "sha256": "bc92ab4dba2e4789abbccb50c046cb66e9437564bd7842099dab2981e1bea69c",
+      "first_line": 862,
+      "last_line": 910,
+      "excerpt": "\n        # apply remaining cfg attributes to scene (physxScene:*)\n        skip = {\n            # generic request, translated above; PhysX has no physxScene:deterministic attribute\n            \"deterministic\",\n            \"solver_type\",\n            \"enable_ccd\",\n            \"solve_articulation_contact_last\",\n            \"dt\",\n            \"device\",\n            \"render_interval\",\n            \"gravity\",\n            \"physics_prim_path\",\n            \"use_fabric\",\n            \"physics_material\",\n            \"class_type\",\n        }\n        for key, value in to_dict(cfg).items():  # type: ignore\n            if key not in skip:\n                attr_name = \"bounce_threshold\" if key == \"bounce_threshold_velocity\" else key\n                sim_utils.safe_set_attribute_on_usd_prim(\n                    scene_prim,\n                    f\"physxScene:{to_camel_case(attr_name, 'cC')}\",\n                    value,\n                    camel_case=False,\n                )\n\n        # default physics material (from SimulationCfg, or create default if None)\n        physics_material = sim_cfg.physics_material\n        if physics_material is None:\n            from isaaclab.sim.spawners.materials.physics_materials_cfg import RigidBodyMaterialBaseCfg\n\n            physics_material = RigidBodyMaterialBaseCfg()\n        mat_path = f\"{sim_cfg.physics_prim_path}/defaultMaterial\"\n        physics_material.func(mat_path, physics_material)\n        sim_utils.bind_physics_material(sim_cfg.physics_prim_path, mat_path)\n\n        # warnings\n        if not cfg.enable_external_forces_every_iteration:\n            warning_message = (\n                \"PhysxCfg.enable_external_forces_every_iteration is deprecated and will be removed in a future \"\n                \"PhysX release. External forces are applied every iteration by default; remove this override.\"\n            )\n            if cfg.solver_type == 1:\n                warning_message += \" Disabling this behavior with the TGS solver may cause noisy velocities.\"\n            warnings.warn(\n                warning_message,\n                DeprecationWarning,\n                stacklevel=2,"
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/config.py",
+      "sha256": "4cd8f537466bfcb4546dd0a04c9d554ae1ff9533eb5f01127ae51762734dcec7",
+      "first_line": 85,
+      "last_line": 99,
+      "excerpt": "class TerminationsCfg:\n    time_out = TerminationTermCfg(func=base.time_out, time_out=True)\n    fallen = TerminationTermCfg(func=mdp.fallen)\n    pelvis_floor = TerminationTermCfg(func=mdp.pelvis_floor_contact)\n\n\n@configclass\nclass SittingEnvCfg(ManagerBasedRLEnvCfg):\n    scene = SittingSceneCfg(num_envs=128, env_spacing=3.0, replicate_physics=True)\n    sim = sim.SimulationCfg(dt=0.005, render_interval=4, physics=PhysxCfg())\n    observations = ObservationsCfg()\n    actions = ActionsCfg()\n    events = EventsCfg()\n    rewards = RewardsCfg()\n    terminations = TerminationsCfg()"
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab_assets/isaaclab_assets/robots/unitree.py",
+      "sha256": "ea47505ddf82d15895fa55a0a666b5c4800eba24782ece6080061b64cd51e54b",
+      "first_line": 297,
+      "last_line": 314,
+      "excerpt": "        activate_contact_sensors=True,\n        rigid_props=PhysxRigidBodyCfg(\n            disable_gravity=False,\n            retain_accelerations=False,\n            linear_damping=0.0,\n            angular_damping=0.0,\n            max_linear_velocity=1000.0,\n            max_angular_velocity=1000.0,\n            max_depenetration_velocity=1.0,\n        ),\n        articulation_props=[\n            PhysxArticulationCfg(\n                enabled_self_collisions=False, solver_position_iteration_count=8, solver_velocity_iteration_count=4\n            ),\n            NewtonArticulationCfg(self_collision_enabled=False),\n        ],\n    ),\n    init_state=ArticulationCfg.InitialStateCfg("
+    }
+  ]
+}

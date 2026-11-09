@@ -1,0 +1,131 @@
+{
+  "slip_events": [
+    {
+      "control": 452,
+      "time_s": 9.040000000000001,
+      "body": "pelvis",
+      "speed_m_s": 0.0217114370316267,
+      "force_bw": 0.23771534860134125,
+      "path_index": 428,
+      "support_bw": 0.2082899808883667,
+      "neighbors": [
+        {
+          "control": 449,
+          "speed": 0.026119787245988846,
+          "force_bw": 0.0,
+          "support_bw": 0.0
+        },
+        {
+          "control": 450,
+          "speed": 0.029371311888098717,
+          "force_bw": 0.0,
+          "support_bw": 0.0
+        },
+        {
+          "control": 451,
+          "speed": 0.032941486686468124,
+          "force_bw": 0.0,
+          "support_bw": 0.0
+        },
+        {
+          "control": 452,
+          "speed": 0.0217114370316267,
+          "force_bw": 0.23771534860134125,
+          "support_bw": 0.2082899808883667
+        },
+        {
+          "control": 453,
+          "speed": 0.012082913890480995,
+          "force_bw": 0.2327047437429428,
+          "support_bw": 0.20389966666698456
+        },
+        {
+          "control": 454,
+          "speed": 0.013365497812628746,
+          "force_bw": 0.10375314950942993,
+          "support_bw": 0.09091018885374069
+        },
+        {
+          "control": 455,
+          "speed": 0.009426739066839218,
+          "force_bw": 0.12232326716184616,
+          "support_bw": 0.1071816086769104
+        }
+      ]
+    }
+  ],
+  "velocity_rows": [
+    {
+      "joint": "right_ankle_roll_joint",
+      "final5s_raw_speed_max_rad_s": 0.05710343271493912,
+      "final5s_raw_speed_mean_rad_s": 0.05501893535256386,
+      "final5s_angle_range_rad": 2.6583438739180565e-06,
+      "final5s_angle_change_rad": 1.1833617463707924e-06,
+      "sampled_velocity_integral_rad": 0.2750946879386902,
+      "final5s_tracking_error_max_rad": 6.607186514884233e-05
+    },
+    {
+      "joint": "left_ankle_roll_joint",
+      "final5s_raw_speed_max_rad_s": 0.0556817390024662,
+      "final5s_raw_speed_mean_rad_s": 0.054415468126535416,
+      "final5s_angle_range_rad": 1.9854633137583733e-06,
+      "final5s_angle_change_rad": 6.383052095770836e-07,
+      "sampled_velocity_integral_rad": 0.2720773220062256,
+      "final5s_tracking_error_max_rad": 6.489153020083904e-05
+    },
+    {
+      "joint": "left_ankle_pitch_joint",
+      "final5s_raw_speed_max_rad_s": 0.01590999960899353,
+      "final5s_raw_speed_mean_rad_s": -0.01551202591508627,
+      "final5s_angle_range_rad": 2.637505531311035e-06,
+      "final5s_angle_change_rad": -1.0058283805847168e-06,
+      "sampled_velocity_integral_rad": -0.07756012678146362,
+      "final5s_tracking_error_max_rad": 0.01185552030801773
+    },
+    {
+      "joint": "right_ankle_pitch_joint",
+      "final5s_raw_speed_max_rad_s": 0.015492875128984451,
+      "final5s_raw_speed_mean_rad_s": -0.014847127720713615,
+      "final5s_angle_range_rad": 5.912035703659058e-06,
+      "final5s_angle_change_rad": 1.6130506992340088e-06,
+      "sampled_velocity_integral_rad": -0.07423564046621323,
+      "final5s_tracking_error_max_rad": 0.011390041559934616
+    },
+    {
+      "joint": "left_shoulder_roll_joint",
+      "final5s_raw_speed_max_rad_s": 0.0029280749149620533,
+      "final5s_raw_speed_mean_rad_s": 0.0028538990300148726,
+      "final5s_angle_range_rad": 7.510185241699219e-06,
+      "final5s_angle_change_rad": -5.7220458984375e-06,
+      "sampled_velocity_integral_rad": 0.014269494451582432,
+      "final5s_tracking_error_max_rad": 0.13100039958953857
+    },
+    {
+      "joint": "right_hip_yaw_joint",
+      "final5s_raw_speed_max_rad_s": 0.00283705722540617,
+      "final5s_raw_speed_mean_rad_s": 0.0025215765926986933,
+      "final5s_angle_range_rad": 9.301293175667524e-06,
+      "final5s_angle_change_rad": -3.6674318835139275e-06,
+      "sampled_velocity_integral_rad": 0.012607882730662823,
+      "final5s_tracking_error_max_rad": 0.0014233909314498305
+    }
+  ],
+  "raw_quiet_final250": 0,
+  "native_motor_effort": {
+    "active_joints": 23,
+    "standing_first24_samples_mean_tau_squared_Nm2": 390.0164794921875,
+    "final250_mean_tau_squared_Nm2": 113.38201141357422,
+    "hold_over_standing_ratio": 0.29071083664894104,
+    "proxy_only": true,
+    "electrical_energy_measured": false
+  },
+  "final5s_feet_vertical_load_bw": 0.4510161578655243,
+  "final5s_support_bw": 0.5489823818206787,
+  "camera_valid_controls": 1000,
+  "maximum_camera_age_s": 0.17999997735023499,
+  "readout_cause_proven": false,
+  "criteria_changed": false,
+  "physics_steps": 0,
+  "PPO_updates": 0,
+  "wall_seconds": 0.04740772896911949
+}

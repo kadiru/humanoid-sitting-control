@@ -1,0 +1,130 @@
+{
+  "utc": "2026-11-09T05:28:18.465731+00:00",
+  "state": "LOAD_ACCURACY_IMPROVED_SUPPORTED_HOLD_10_86S_FULL_TRIAL_FAILED_NO_STAND_UP",
+  "authorization": "Latest human: validate load sensing, sit/5s hold/stand from3starts,4090only, unchanged actionlimits/successcriteria; asks GitHub commit status.",
+  "changes": [
+    "Full six-component foot-wrench inverse statics using native motor-axis effort and all descendant inertias; no contact truth used by controller.",
+    "Same-state alignment and independent finite-difference virtual-work audit.",
+    "One new current-camera narrow-support full20s calibration; estimator in shadow, no timer-asserted stage transitions."
+  ],
+  "measurement": {
+    "saved_record_final5s_mean_error_bw": 4.9193507372825795e-05,
+    "new_trial_final5s_mean_error_bw": 2.3016485561996092e-05,
+    "new_trial_final5s_max_error_bw": 0.00010896814222205453,
+    "equation_audit_passed": true,
+    "loaded_runtime_admitted": false,
+    "release_validated": false,
+    "reason": "Raw quiet qualification fails despite accurate force estimates; zero loaded-qualified final250. Zero false positives with zero admitted positives is not successful detection."
+  },
+  "physical": {
+    "fixture": "anchored narrow12cm x40cm x50cm test support, not furniture generalization",
+    "full20s_passed": false,
+    "supported_final_hold_s": 10.86,
+    "support_fraction_bodyweight": 0.5489820837974548,
+    "feet_fraction_bodyweight": 0.4510161578655243,
+    "slip_controls": 1,
+    "slip_time_s": 9.04,
+    "slip_body": "pelvis",
+    "slip_speed_m_s": 0.0217114370316267,
+    "slip_threshold_m_s": 0.02,
+    "illegal_contact_controls": 0,
+    "max_command_increment_rad": 0.002978384494781494,
+    "raw_quiet_final250": 0,
+    "stand_up_attempted": false,
+    "complete_cycles": 0,
+    "required_starts": 3,
+    "independent_audit": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/results/narrow_load_calibration/independent_audit.json"
+  },
+  "effort": {
+    "active_joints": 23,
+    "standing_first24_samples_mean_tau_squared_Nm2": 390.0164794921875,
+    "final250_mean_tau_squared_Nm2": 113.38201141357422,
+    "hold_over_standing_ratio": 0.29071083664894104,
+    "proxy_only": true,
+    "electrical_energy_measured": false
+  },
+  "counts": {
+    "GPU_trials": 1,
+    "warmup_controls": 25,
+    "sitting_controls": 1000,
+    "new_physics_steps": 4100,
+    "new_full_cycles": 0,
+    "validated_demonstrations": 0,
+    "PPO_updates": 0,
+    "full72_rechecks": 0,
+    "accepted_original_case_repairs": 0
+  },
+  "resources": {
+    "parent_process_wall_s": {
+      "validate_process.json": 2.36916876595933,
+      "audit_process.json": 1.116192662040703,
+      "audit_v2_process.json": 1.116120700025931,
+      "measurement_attribution_process.json": 0.5649669359554537,
+      "results/owner_status.json": 87.50365646299906,
+      "results/narrow_load_calibration/saved_diagnosis_process.json": 0.11401028605177999
+    },
+    "tracked_nonoverlapping_parent_wall_total_s": 92.78411581303226,
+    "GPU_child_wall_s_included_in_owner": 85.09711375401821,
+    "fresh_current_input_audit_included_in_GPU_child": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/results/narrow_load_calibration/current_admission.json",
+    "limits": {
+      "GPU": "4090 UUID GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4",
+      "GPU_workers": 1,
+      "CPU_currentaudit_total_s": 45,
+      "CPU_postaudit_total_s": 45,
+      "CPU_AS_GiB": 40,
+      "CPU_audit_cores": 1,
+      "GPU_child_wall_s": 900,
+      "maximum_temperature_C": 85,
+      "minimum_root_free_GB": 20,
+      "maximum_queue_wait_s": 7200,
+      "warmup_controls": 25,
+      "active_controls": 1000,
+      "initialization_physics_cap": 1000,
+      "activephysics_steps": 4100,
+      "output_budget_MiB": 300,
+      "physical_retries": 0,
+      "PPO": 0
+    },
+    "simulation_GPU": "4090 only",
+    "renderer": "CPU saved-poses only,250frames1280x900,H264,20s1x; renderer wall/RSS were not instrumented, not claimed as accounted compute",
+    "data_size_bytes": 8647539
+  },
+  "preserved_failure": "First independent offline audit executed arithmetic but failed JSON serialization of NumPy bool; audit.log/audit_process.json preserved. Separate audit_v2 only converts output scalars; producer was not rerun.",
+  "video": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/results/narrow_support_load_calibration.mp4",
+  "video_sha256": "28a073bc540c73fc99c40be4d204818da760746753043e679198be170d9f1b51",
+  "video_QA": "Viewed frame86,161,249; coherent scene, actual snapshot timestamps, FAIL and10.86s hold visible; ffprobe confirms20s250frames. Saved-pose rendering, not fresh physics or successful stand-up.",
+  "git_status": {
+    "local_project_is_git_repository": false,
+    "remote_project_is_git_repository": false,
+    "commits_created": 0,
+    "pushed_to_GitHub": false,
+    "storage": "Versioned files and SHA256 manifests on Mac and Ubuntu; no repository initialized."
+  },
+  "latest_worker_check": {
+    "utc": "2026-11-09T05:27:09.252357+00:00",
+    "gpu_lines": [
+      "NVIDIA GeForce RTX 4090, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 0 %, 46, 17 MiB",
+      "NVIDIA GeForce RTX 4070, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 88 %, 59, 5049 MiB"
+    ],
+    "compute_apps": [
+      "GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 2516468, /isaac-sim/kit/python/bin/python3"
+    ],
+    "own_simulation_worker": false,
+    "own_PPO_worker": false,
+    "recurring_automation": false,
+    "own_worker_matches": []
+  },
+  "next_work": "Resolve native ankle velocity/position inconsistency from the actual loaded record before changing quiet-state logic: right ankle roll averages0.0550rad/s while angle range is2.66e-6rad. Official NVIDIA TGS steady-state issue is a possible mechanism, but installed configuration already enables external forces every iteration; live scene attributes were not saved, so cause is unproven. Do not substitute finite differences, relax0.05rad/s quiet gate, blindly alter solver/friction/gains, or replay this failed trial. Separately construct a current-camera contact transition that avoids pelvis touchdown tangential speed0.0217114m/s at9.04s against0.02m/s criterion. Then validate sensor-qualified loading and release, integrate stand-up, and demonstrate3complete starts. Current calibration is rejected; no queued worker, PPO, or repeated simulation. Preserve4090only,4070AIWorker,64protected/8unresolved,holdoutclosed,deletedautomation.",
+  "evidence": {
+    "freeze.json": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/freeze.json",
+    "audit_v2_freeze.json": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/audit_v2_freeze.json",
+    "calibration_freeze.json": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/calibration_freeze.json",
+    "diagnosis_freeze.json": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/diagnosis_freeze.json",
+    "validation/result.json": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/validation/result.json",
+    "validation/audit_v2.json": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/validation/audit_v2.json",
+    "validation/measurement_attribution.json": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/validation/measurement_attribution.json",
+    "results/narrow_load_calibration/load_admission.json": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/results/narrow_load_calibration/load_admission.json",
+    "results/narrow_load_calibration/saved_diagnosis.json": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/results/narrow_load_calibration/saved_diagnosis.json",
+    "results/simulator_source_trace.json": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/results/simulator_source_trace.json"
+  }
+}
