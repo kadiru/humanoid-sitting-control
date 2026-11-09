@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-17T22:41:03.883511+00:00",
+  "passed": true,
+  "scope": "Independent all115-node finite-difference virtual work, equilibrium, initial/fixed commands, zero pre-lift/swing foot loading, preserved zero/assumed seat loading and model command constraints, plus saved GLOBAL LP primal/dual feasibility, signs, stationarity and duality gap. Certified numerical lower bound applies ONLY to visiting these115 fixed sampled poses in order under the unchanged static-command construction/contact force family. It is NOT a universal motion lower bound or dynamics/filtered execution certificate.",
+  "nodes": 115,
+  "max_virtual_work_error_Nm": 6.77515954450314e-09,
+  "max_equilibrium_residual": 4.440892098500626e-16,
+  "minimum_command_margin_rad": 0.03,
+  "maximum_static_effort_utilization": 0.8133993051728794,
+  "model_command_gate": true,
+  "specific_command_time_s": 13.642748176360922,
+  "dual_time_lower_bound_s": 13.642748176360916,
+  "maximum_primal_residual": 4.440892098500626e-16,
+  "dual_sign_violation": 9.901714691608699e-14,
+  "maximum_stationarity": 4.218847493575595e-14,
+  "duality_gap_s": 8.881784197001252e-15,
+  "planning_allowance_s": 13.5,
+  "command_time_gate": false,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_lift_command_bound_332/results.json": "646d2acc35f11d70e84210e32e8fefed5581319d6ba6e9500cd5d24472efde66",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_lift_path_330/results.json": "495f70a6764e7c821bc8a1f2e0ad3819d45b3841b795bbd6153410aec39f3831",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_clearance_bound_333.py": "038bc3b05934f5238d9f1949f57ec406b149cb275c5ae130c22b0dbd13f2b96f",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_lift_command_bound_332/inequalities.npz": "8ce373fcebb5d4e9e1372cccc1fa8a6490dbd9d39d69a70958408f72c97fc665",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_lift_command_bound_332/equalities.npz": "77cf934ce9dce9cb4a1dd3d6f85fa4002b1616ee6102f042610038172d4978de",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_lift_command_bound_332/lp_witness.npz": "e9f80205fc4069e6c1d00a35ccf6df8c09a7b5a82717d54d2f277feb84b3269c"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "holdout_used": false,
+  "physical_admission": false
+}
