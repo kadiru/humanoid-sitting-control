@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "stationary_poses": 14,
+  "endpoint_supported": true,
+  "zero_reference_actor": true,
+  "constant_fixed_commands": true,
+  "reset_isolation": true,
+  "exact_fixed_reference_startup_errors": {
+    "root": 0.0,
+    "q": 0.0,
+    "command": 0.0,
+    "geometry": 0.0,
+    "observation": 0.0
+  },
+  "smoke_budget": {
+    "updates": 2,
+    "transitions": 2048,
+    "active": 2048,
+    "warmup": 0
+  },
+  "smoke_success": "2/2 full20s",
+  "finite_changed_weights": {
+    "actor_state_dict": [
+      "distribution.log_std_param",
+      "mlp.0.weight",
+      "mlp.0.bias",
+      "mlp.2.weight",
+      "mlp.2.bias",
+      "mlp.4.weight",
+      "mlp.4.bias"
+    ],
+    "critic_state_dict": [
+      "mlp.0.weight",
+      "mlp.0.bias",
+      "mlp.2.weight",
+      "mlp.2.bias",
+      "mlp.4.weight",
+      "mlp.4.bias"
+    ]
+  },
+  "smoke_checkpoint_loaded": true,
+  "runtime_source_sha256": "585187848f2324b4cb19604aa83c5f6b1d5d962438beeab874afb772bd37f0ca",
+  "resume_metadata_note": "After smoke, continuation training increments RSL saved zero-based completed iteration before the next block. No simulation/control/reward change; new-update counts stay32/block."
+}

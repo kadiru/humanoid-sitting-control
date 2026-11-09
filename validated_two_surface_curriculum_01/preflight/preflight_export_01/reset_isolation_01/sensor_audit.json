@@ -1,0 +1,121 @@
+{
+  "channels": 405,
+  "physics_advances_during_camera": 0,
+  "camera_frames": 1,
+  "actor_inputs": "encoders, measured torque, IMU gravity/gyro, previous absolute joint commands, depth plane with encoder/IMU propagation",
+  "truth_validation": [
+    {
+      "t": 0.0,
+      "case": 0,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.17751742153067282,
+      "offset_error_m": -0.002064979076385476
+    },
+    {
+      "t": 0.0,
+      "case": 1,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.216932185049959,
+      "offset_error_m": -0.0021008014678954856
+    },
+    {
+      "t": 0.0,
+      "case": 2,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.24524914667476944,
+      "offset_error_m": -0.0020529985427856223
+    },
+    {
+      "t": 0.0,
+      "case": 3,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.28764235349067474,
+      "offset_error_m": -0.001981711387634255
+    },
+    {
+      "t": 0.0,
+      "case": 4,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.3502732617396974,
+      "offset_error_m": -0.001835292577743508
+    },
+    {
+      "t": 0.0,
+      "case": 5,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.22213359989592807,
+      "offset_error_m": -0.0016211181879043357
+    },
+    {
+      "t": 0.0,
+      "case": 6,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.30065428770604996,
+      "offset_error_m": -0.0017149060964584129
+    },
+    {
+      "t": 0.0,
+      "case": 7,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.006540282741943533,
+      "offset_error_m": 0.00011730207277074745
+    },
+    {
+      "t": 0.0,
+      "case": 8,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.018993112387659557,
+      "offset_error_m": 0.0005031861125440462
+    },
+    {
+      "t": 0.0,
+      "case": 9,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.030186564250371736,
+      "offset_error_m": 0.0005877910670368525
+    },
+    {
+      "t": 0.0,
+      "case": 10,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.025267068593065694,
+      "offset_error_m": 0.0005494812674085303
+    },
+    {
+      "t": 0.0,
+      "case": 11,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.022767040175280487,
+      "offset_error_m": 0.0005189754548320102
+    },
+    {
+      "t": 0.0,
+      "case": 12,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.020294979552593344,
+      "offset_error_m": 0.0004926912032653108
+    },
+    {
+      "t": 0.0,
+      "case": 13,
+      "valid": true,
+      "age": 0.0,
+      "normal_error_deg": 0.022647840064260995,
+      "offset_error_m": 0.0004919745109357582
+    }
+  ],
+  "reference": "Offline joint-command motion library and control clock; not live simulator geometry or robot pose. Explicitly a residual/reference-based controller."
+}
