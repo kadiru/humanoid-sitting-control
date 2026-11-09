@@ -1,0 +1,26 @@
+{
+  "sample_count": 448,
+  "ticks": [
+    0,
+    100,
+    250,
+    400,
+    500,
+    750,
+    999
+  ],
+  "prior_command_only": {
+    "spectral_radius_min": 0.9427517537176201,
+    "median": 0.9467755380220582,
+    "max": 0.9511095363349321,
+    "fraction_above_one": 0
+  },
+  "synchronous_position_and_previous_command": {
+    "spectral_radius_min": 0.9801885374738091,
+    "median": 0.9986654210624493,
+    "max": 1.007711720032167,
+    "fraction_above_one": 0.29464285714285715
+  },
+  "scope": "Local teacher-state observation sensitivity, not a full plant stability proof or causal intervention. q and command histories perturbed coherently; other channels held fixed. Filter linearization valid only when unsaturated.",
+  "checkpoint": "/home/kadir/humanoid-sitting/outputs/recovery_imitation_sitting_20261028_v2/clone_64111_2/initial.pt"
+}
