@@ -1,0 +1,10 @@
+{
+  "model_pass": false,
+  "error": "TypeError(\"bad operand type for abs(): 'list'\")",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/terminal_rest_20261108_v1/validate.py\", line 90, in <module>\n    result=plan.solve();goal=plan.target.copy();marker=plan.marker.copy();write('plan.json',result)\n           ^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/terminal_rest_20261108_v1/terminal_plan.py\", line 131, in solve\n    seed,seed_report=geometric_seed(self)\n                     ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/terminal_rest_20261108_v1/seed.py\", line 55, in construct\n    chain=chains(plan);lo,hi=-.6,.15\n          ^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/terminal_rest_20261108_v1/seed.py\", line 13, in chains\n    assert all(np.max(abs(j['p1']))==0 for j in js)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/terminal_rest_20261108_v1/seed.py\", line 13, in <genexpr>\n    assert all(np.max(abs(j['p1']))==0 for j in js)\n                      ^^^^^^^^^^^^\nTypeError: bad operand type for abs(): 'list'\n",
+  "total_seconds": 1.5465120669978205,
+  "physics_launch_ready": false,
+  "physical_success": false,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}
