@@ -1,0 +1,206 @@
+{
+  "all": {
+    "frames": 16000,
+    "accepted": 15858,
+    "availability": 0.991125,
+    "p95_error_cm": 0.24640241265296936,
+    "max_error_cm": 4.395786762237549,
+    "errors_above_2cm": 10
+  },
+  "near_contact": {
+    "frames": 1216,
+    "accepted": 1095,
+    "availability": 0.9004934210526315,
+    "p95_error_cm": 0.566941499710083,
+    "max_error_cm": 1.0655004978179932,
+    "errors_above_2cm": 0
+  },
+  "by_source": {
+    "current_floor_and_seat": {
+      "frames": 2901,
+      "accepted": 2901,
+      "availability": 1.0,
+      "p95_error_cm": 0.23158937692642212,
+      "max_error_cm": 1.0655004978179932,
+      "errors_above_2cm": 0
+    },
+    "depth_with_kinematic_floor": {
+      "frames": 246,
+      "accepted": 246,
+      "availability": 1.0,
+      "p95_error_cm": 0.3060685396194458,
+      "max_error_cm": 0.6167210340499878,
+      "errors_above_2cm": 0
+    },
+    "kinematic_prediction": {
+      "frames": 12711,
+      "accepted": 12711,
+      "availability": 1.0,
+      "p95_error_cm": 0.2506949007511139,
+      "max_error_cm": 4.395786762237549,
+      "errors_above_2cm": 10
+    }
+  },
+  "at_depth_frames": {
+    "frames": 3216,
+    "legacy_accepted": 2901,
+    "new_accepted": 3191,
+    "legacy_max_error_cm": 1.0655004978179932,
+    "new_max_error_cm": 4.395786762237549,
+    "near_contact_frames": 256,
+    "legacy_near_contact_accepted": 171,
+    "new_near_contact_accepted": 234
+  },
+  "event_cases": {
+    "0": {
+      "t": 11.700000000000001,
+      "valid": true,
+      "error_cm": 0.11141163110733032
+    },
+    "1": {
+      "t": 12.3,
+      "valid": true,
+      "error_cm": 0.12593530118465424
+    },
+    "2": {
+      "t": 11.5,
+      "valid": true,
+      "error_cm": 0.11254800856113434
+    },
+    "3": {
+      "t": 11.8,
+      "valid": true,
+      "error_cm": 0.10267326235771179
+    },
+    "4": {
+      "t": 12.5,
+      "valid": true,
+      "error_cm": 0.2809809446334839
+    },
+    "5": {
+      "t": 11.9,
+      "valid": true,
+      "error_cm": 0.10492222011089325
+    },
+    "6": {
+      "t": 12.1,
+      "valid": true,
+      "error_cm": 0.11027932912111282
+    },
+    "7": {
+      "t": 11.5,
+      "valid": true,
+      "error_cm": 0.5074463486671448
+    },
+    "8": {
+      "t": 13.8,
+      "valid": false,
+      "error_cm": null
+    },
+    "9": {
+      "t": 12.5,
+      "valid": false,
+      "error_cm": null
+    },
+    "10": {
+      "t": 11.6,
+      "valid": true,
+      "error_cm": 0.4219758212566376
+    },
+    "11": {
+      "t": 11.700000000000001,
+      "valid": true,
+      "error_cm": 0.4538653492927551
+    },
+    "12": {
+      "t": 11.3,
+      "valid": true,
+      "error_cm": 1.0655004978179932
+    },
+    "13": {
+      "t": 11.5,
+      "valid": true,
+      "error_cm": 0.5426018238067627
+    },
+    "14": {
+      "t": 12.4,
+      "valid": false,
+      "error_cm": null
+    },
+    "15": {
+      "t": 10.200000000000001,
+      "valid": false,
+      "error_cm": null
+    }
+  },
+  "errors_above_2cm": [
+    {
+      "case": 9,
+      "t": 13.16,
+      "error_cm": 2.1007540225982666,
+      "source": "kinematic_prediction"
+    },
+    {
+      "case": 9,
+      "t": 13.18,
+      "error_cm": 2.494539499282837,
+      "source": "kinematic_prediction"
+    },
+    {
+      "case": 9,
+      "t": 13.200000000000001,
+      "error_cm": 2.9186623096466064,
+      "source": "kinematic_prediction"
+    },
+    {
+      "case": 9,
+      "t": 13.22,
+      "error_cm": 3.3763692378997803,
+      "source": "kinematic_prediction"
+    },
+    {
+      "case": 9,
+      "t": 13.24,
+      "error_cm": 3.8747828006744385,
+      "source": "kinematic_prediction"
+    },
+    {
+      "case": 9,
+      "t": 13.26,
+      "error_cm": 4.240566730499268,
+      "source": "kinematic_prediction"
+    },
+    {
+      "case": 9,
+      "t": 13.280000000000001,
+      "error_cm": 4.393660068511963,
+      "source": "kinematic_prediction"
+    },
+    {
+      "case": 9,
+      "t": 13.3,
+      "error_cm": 4.395786762237549,
+      "source": "kinematic_prediction"
+    },
+    {
+      "case": 9,
+      "t": 13.32,
+      "error_cm": 4.392313003540039,
+      "source": "kinematic_prediction"
+    },
+    {
+      "case": 9,
+      "t": 13.34,
+      "error_cm": 4.389167785644531,
+      "source": "kinematic_prediction"
+    }
+  ],
+  "source_counts": {
+    "current_floor_and_seat": 2901,
+    "kinematic_prediction": 12711,
+    "depth_with_kinematic_floor": 246,
+    "unavailable": 142
+  },
+  "source_sha256": "4bab65fdb1ae80a3b667cc5a71bce63033da8fa3772a122a276ae7a0d632e464",
+  "fault": "none"
+}

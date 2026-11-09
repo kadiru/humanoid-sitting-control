@@ -1,0 +1,106 @@
+{
+  "capture": "/data/humanoid-sitting-perception/support_landing_sync_capture_03",
+  "fault": "none",
+  "initial": [
+    {
+      "case": 0,
+      "initialized": true,
+      "measured_floor_height": -0.7181140919461493
+    },
+    {
+      "case": 1,
+      "initialized": true,
+      "measured_floor_height": -0.7160698536097042
+    },
+    {
+      "case": 2,
+      "initialized": true,
+      "measured_floor_height": -0.7186114540861154
+    },
+    {
+      "case": 3,
+      "initialized": true,
+      "measured_floor_height": -0.7192453867556838
+    },
+    {
+      "case": 4,
+      "initialized": true,
+      "measured_floor_height": -0.7192025123576374
+    },
+    {
+      "case": 5,
+      "initialized": true,
+      "measured_floor_height": -0.7168671793029622
+    },
+    {
+      "case": 6,
+      "initialized": true,
+      "measured_floor_height": -0.7170814752322338
+    },
+    {
+      "case": 7,
+      "initialized": true,
+      "measured_floor_height": -0.7189372744025584
+    },
+    {
+      "case": 8,
+      "initialized": true,
+      "measured_floor_height": -0.7210052710710492
+    },
+    {
+      "case": 9,
+      "initialized": true,
+      "measured_floor_height": -0.7187893760495615
+    },
+    {
+      "case": 10,
+      "initialized": true,
+      "measured_floor_height": -0.7158564350129186
+    },
+    {
+      "case": 11,
+      "initialized": true,
+      "measured_floor_height": -0.7169356678002081
+    },
+    {
+      "case": 12,
+      "initialized": true,
+      "measured_floor_height": -0.7158831353464445
+    },
+    {
+      "case": 13,
+      "initialized": true,
+      "measured_floor_height": -0.716450793403473
+    },
+    {
+      "case": 14,
+      "initialized": true,
+      "measured_floor_height": -0.7189454741296829
+    },
+    {
+      "case": 15,
+      "initialized": true,
+      "measured_floor_height": -0.7184269542344547
+    }
+  ],
+  "sources": [
+    "unavailable",
+    "current_floor_and_seat",
+    "depth_with_kinematic_floor",
+    "kinematic_prediction",
+    "depth_with_temporal_identity",
+    "seat_from_observed_floor"
+  ],
+  "inputs": [
+    "proprioception.npz",
+    "depth.npz",
+    "startup.npz",
+    "calibration.json",
+    "model.json"
+  ],
+  "sensor_only": true,
+  "tracker_sha256": "80a05f6cb26e07e54acc539faa4c699205fd68a07e29a623639906ec7a46ffd0",
+  "update_median_ms": 0.5258350138319656,
+  "update_p95_ms": 17.84591532777995,
+  "total_processing_s": 62.8210418363451
+}

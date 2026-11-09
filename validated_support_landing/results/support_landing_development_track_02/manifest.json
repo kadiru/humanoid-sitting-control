@@ -1,0 +1,104 @@
+{
+  "capture": "/data/humanoid-sitting-perception/support_landing_development_capture_01",
+  "fault": "none",
+  "initial": [
+    {
+      "case": 0,
+      "initialized": true,
+      "measured_floor_height": -0.7228593821214848
+    },
+    {
+      "case": 1,
+      "initialized": true,
+      "measured_floor_height": -0.7218586647753416
+    },
+    {
+      "case": 2,
+      "initialized": true,
+      "measured_floor_height": -0.7231238338854621
+    },
+    {
+      "case": 3,
+      "initialized": true,
+      "measured_floor_height": -0.7208721914006516
+    },
+    {
+      "case": 4,
+      "initialized": true,
+      "measured_floor_height": -0.7235044390135263
+    },
+    {
+      "case": 5,
+      "initialized": true,
+      "measured_floor_height": -0.7224344441359447
+    },
+    {
+      "case": 6,
+      "initialized": true,
+      "measured_floor_height": -0.7204851172340297
+    },
+    {
+      "case": 7,
+      "initialized": true,
+      "measured_floor_height": -0.7233966556070023
+    },
+    {
+      "case": 8,
+      "initialized": true,
+      "measured_floor_height": -0.7226610802780219
+    },
+    {
+      "case": 9,
+      "initialized": true,
+      "measured_floor_height": -0.7215269404262258
+    },
+    {
+      "case": 10,
+      "initialized": true,
+      "measured_floor_height": -0.7220818849901723
+    },
+    {
+      "case": 11,
+      "initialized": true,
+      "measured_floor_height": -0.7234852557496577
+    },
+    {
+      "case": 12,
+      "initialized": true,
+      "measured_floor_height": -0.722979336656185
+    },
+    {
+      "case": 13,
+      "initialized": true,
+      "measured_floor_height": -0.7222936919353091
+    },
+    {
+      "case": 14,
+      "initialized": true,
+      "measured_floor_height": -0.7229782272451514
+    },
+    {
+      "case": 15,
+      "initialized": true,
+      "measured_floor_height": -0.7216030962061587
+    }
+  ],
+  "sources": [
+    "unavailable",
+    "current_floor_and_seat",
+    "depth_with_kinematic_floor",
+    "kinematic_prediction"
+  ],
+  "inputs": [
+    "proprioception.npz",
+    "depth.npz",
+    "startup.npz",
+    "calibration.json",
+    "model.json"
+  ],
+  "sensor_only": true,
+  "tracker_sha256": "4bab65fdb1ae80a3b667cc5a71bce63033da8fa3772a122a276ae7a0d632e464",
+  "update_median_ms": 0.524555507581681,
+  "update_p95_ms": 17.464495300373528,
+  "total_processing_s": 61.906751660688315
+}
