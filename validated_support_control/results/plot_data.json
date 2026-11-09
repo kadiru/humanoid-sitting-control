@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Historical",
+    "run": "support_control_timing_none_02",
+    "successes": 16,
+    "case14": {
+      "episode": 0,
+      "env": 14,
+      "geometry": 7,
+      "success": true,
+      "standing": true,
+      "hold_s": 6.279994964599609,
+      "peak_force_N": 455.20648193359375,
+      "reward": 95.06145477294922,
+      "seated_leg_rms_Nm": 6.7733845710754395,
+      "seated_foot_load_fraction": 0.5218653678894043,
+      "depth_availability": 0.5190000534057617,
+      "failures": {
+        "fall": false,
+        "wrong_contact": false,
+        "pelvis_floor": false,
+        "impact": false,
+        "fast_descent": false,
+        "torque": false,
+        "perception_unavailable": false
+      },
+      "duration_s": 20.0,
+      "steps": 1000,
+      "standing_checked": true,
+      "startup_ready": true,
+      "startup_refusal_reason": null,
+      "end_reason": "horizon"
+    }
+  },
+  {
+    "name": "Startup current",
+    "run": "support_control_timing_startup_02",
+    "successes": 15,
+    "case14": {
+      "episode": 0,
+      "env": 14,
+      "geometry": 7,
+      "success": false,
+      "standing": true,
+      "hold_s": 0.0,
+      "peak_force_N": 697.76904296875,
+      "reward": -2.71062970161438,
+      "seated_leg_rms_Nm": null,
+      "seated_foot_load_fraction": null,
+      "depth_availability": 0.5490000247955322,
+      "failures": {
+        "fall": false,
+        "wrong_contact": false,
+        "pelvis_floor": false,
+        "impact": true,
+        "fast_descent": false,
+        "torque": false,
+        "perception_unavailable": false
+      },
+      "duration_s": 20.0,
+      "steps": 1000,
+      "standing_checked": true,
+      "startup_ready": true,
+      "startup_refusal_reason": null,
+      "end_reason": "horizon"
+    }
+  },
+  {
+    "name": "Descent current",
+    "run": "support_control_timing_live_02",
+    "successes": 15,
+    "case14": {
+      "episode": 0,
+      "env": 14,
+      "geometry": 7,
+      "success": false,
+      "standing": true,
+      "hold_s": 0.0,
+      "peak_force_N": 714.3941040039062,
+      "reward": -2.7998366355895996,
+      "seated_leg_rms_Nm": null,
+      "seated_foot_load_fraction": null,
+      "depth_availability": 0.5540000200271606,
+      "failures": {
+        "fall": false,
+        "wrong_contact": false,
+        "pelvis_floor": false,
+        "impact": true,
+        "fast_descent": false,
+        "torque": false,
+        "perception_unavailable": false
+      },
+      "duration_s": 20.0,
+      "steps": 1000,
+      "standing_checked": true,
+      "startup_ready": true,
+      "startup_refusal_reason": null,
+      "end_reason": "horizon"
+    }
+  },
+  {
+    "name": "Both current",
+    "run": "support_control_timing_both_02",
+    "successes": 15,
+    "case14": {
+      "episode": 0,
+      "env": 14,
+      "geometry": 7,
+      "success": false,
+      "standing": true,
+      "hold_s": 0.0,
+      "peak_force_N": 729.1986694335938,
+      "reward": -2.757786989212036,
+      "seated_leg_rms_Nm": null,
+      "seated_foot_load_fraction": null,
+      "depth_availability": 0.5540000200271606,
+      "failures": {
+        "fall": false,
+        "wrong_contact": false,
+        "pelvis_floor": false,
+        "impact": true,
+        "fast_descent": false,
+        "torque": false,
+        "perception_unavailable": false
+      },
+      "duration_s": 20.0,
+      "steps": 1000,
+      "standing_checked": true,
+      "startup_ready": true,
+      "startup_refusal_reason": null,
+      "end_reason": "horizon"
+    }
+  },
+  {
+    "name": "Tracked 10 Hz",
+    "run": "support_tracking_control_dev_01",
+    "successes": 15,
+    "case14": {
+      "episode": 0,
+      "env": 14,
+      "geometry": 7,
+      "success": false,
+      "standing": true,
+      "hold_s": 0.0,
+      "peak_force_N": 669.3325805664062,
+      "reward": -2.7277493476867676,
+      "seated_leg_rms_Nm": null,
+      "seated_foot_load_fraction": null,
+      "depth_availability": 0.999000072479248,
+      "failures": {
+        "fall": false,
+        "wrong_contact": false,
+        "pelvis_floor": false,
+        "impact": true,
+        "fast_descent": false,
+        "torque": false,
+        "perception_unavailable": false
+      },
+      "duration_s": 20.0,
+      "steps": 1000,
+      "standing_checked": true,
+      "startup_ready": true,
+      "startup_refusal_reason": null,
+      "end_reason": "horizon"
+    }
+  },
+  {
+    "name": "Tracked 50 Hz",
+    "run": "support_continuous_control_dev_01",
+    "successes": 16,
+    "case14": {
+      "episode": 0,
+      "env": 14,
+      "geometry": 7,
+      "success": true,
+      "standing": true,
+      "hold_s": 6.279994964599609,
+      "peak_force_N": 362.5119323730469,
+      "reward": 99.0905532836914,
+      "seated_leg_rms_Nm": 5.03462028503418,
+      "seated_foot_load_fraction": 0.49488553404808044,
+      "depth_availability": 0.9820000529289246,
+      "failures": {
+        "fall": false,
+        "wrong_contact": false,
+        "pelvis_floor": false,
+        "impact": false,
+        "fast_descent": false,
+        "torque": false,
+        "perception_unavailable": false
+      },
+      "duration_s": 20.0,
+      "steps": 1000,
+      "standing_checked": true,
+      "startup_ready": true,
+      "startup_refusal_reason": null,
+      "end_reason": "horizon"
+    }
+  }
+]

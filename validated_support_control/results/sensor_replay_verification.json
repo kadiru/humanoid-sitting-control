@@ -1,0 +1,23 @@
+{
+  "capture": "/data/humanoid-sitting-perception/support_continuous_control_dev_01",
+  "sensor_inputs": [
+    "proprioception.npz",
+    "depth.npz",
+    "startup.npz",
+    "calibration.json",
+    "model.json"
+  ],
+  "evaluation_labels_loaded": false,
+  "training": false,
+  "hashes": {
+    "scripts/replay_support_continuous_features.py": "de9d6b0b6ed715ab147f955e292e93274e1f68355ca34000dd61066ba480f254",
+    "sitting_task/src/humanoid_sitting/support_landing_geometry.py": "80a05f6cb26e07e54acc539faa4c699205fd68a07e29a623639906ec7a46ffd0",
+    "sitting_task/src/humanoid_sitting/support_continuous_features.py": "b3f69d32ecb6f6be0553e52533b03509ac2153fdf0da3143427d25c7dc36af69"
+  },
+  "comparison": {
+    "bitwise_equal": true,
+    "max_abs_error": 0.0,
+    "actor_packets_compared": 15984,
+    "last_unused_frame_excluded": true
+  }
+}
