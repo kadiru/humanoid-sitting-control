@@ -1,0 +1,260 @@
+{
+  "utc": "2026-10-18T07:13:17.251308+00:00",
+  "passed": true,
+  "scope": "Independent complete-path arithmetic audit400. Rebuild geometry/virtual work/original rows, the continuous-window envelope and all675 idealclock samples. Independently replay every linear primal and nonlinear-acceptance decision from saved arrays; no optimization or projection. Arithmetic pass is not candidate admission.",
+  "geometry": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/window_path_400/results.json",
+      "parameters": [
+        0.13249248997109972,
+        0.4351349021283094,
+        -0.1883883483030849,
+        0.023619600000000004
+      ],
+      "length_m": 0.13999999999993848,
+      "knots": 115,
+      "max_replay_error": 2.1321648216757025e-16,
+      "failed_knots": [],
+      "pose_schedule_metric_passed": false,
+      "min_clearance_mm": 3.731078343242842,
+      "max_foot_position_error_mm": 0.8411018361374456,
+      "max_foot_orientation_error_deg": 0.49854366657171784,
+      "nominal_pose_schedule_at_0_15_rad_s": 13.944734348417182,
+      "min_actual_swing_sole_height_m": 0.013000000000093319
+    }
+  ],
+  "command": {
+    "nodes": 115,
+    "max_virtual_work_error_Nm": 5.8586930862247755e-09,
+    "max_equilibrium_residual": 1.8464396678297135e-14,
+    "minimum_command_margin_rad": 0.029999096597285335,
+    "maximum_effort_utilization": 0.8135733241232401,
+    "force_allocation_failures": [
+      1,
+      2,
+      9,
+      14,
+      15,
+      65,
+      66,
+      67,
+      68,
+      70,
+      75,
+      78,
+      80,
+      81,
+      83,
+      84,
+      85,
+      86,
+      88,
+      89,
+      90,
+      94,
+      95,
+      101,
+      102,
+      103,
+      105,
+      109,
+      112,
+      114
+    ],
+    "model_command_passed": false,
+    "specific_command_time_s": 11.865979694857671,
+    "command_schedule_passed": true,
+    "initial_command_exact": true,
+    "all_fixed_commands_exact": true
+  },
+  "feasibility_epigraph": {
+    "slack": 0.0005742576820468658,
+    "scaled_original_violation": 0.0005742576820468658,
+    "all_original_rows_replayed": 19760,
+    "additional_support_rows": 524,
+    "all_window_rows": 7424,
+    "all_clock_rows": 43200,
+    "removed_contact_constant_rows": 392,
+    "removed_exact_integer_time_rows": 1,
+    "original_numerical_feasibility": false,
+    "positive_slack_is_not_admission": true,
+    "linear_and_acceptance_replay": {
+      "records": [
+        {
+          "iteration": 0,
+          "matrix_exact": true,
+          "linear_minimum": -8.371909350664286e-11,
+          "bound_minimum": -1.3877787807814457e-16,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "actual_merit": 0.05423181806819533,
+          "acceptance_ratio": -29.544308889355943
+        },
+        {
+          "iteration": 1,
+          "matrix_exact": true,
+          "linear_minimum": -4.185955336695468e-11,
+          "bound_minimum": -1.1102230246251565e-16,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "actual_merit": 0.01901950657820231,
+          "acceptance_ratio": -9.712118909921703
+        },
+        {
+          "iteration": 2,
+          "matrix_exact": true,
+          "linear_minimum": -2.0929770720365393e-11,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "actual_merit": 0.004626845058807713,
+          "acceptance_ratio": -1.6737657400361619
+        },
+        {
+          "iteration": 3,
+          "matrix_exact": true,
+          "linear_minimum": -2.207190541447801e-10,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "actual_merit": 0.0036053331071719866,
+          "acceptance_ratio": -1.4539182616456285
+        },
+        {
+          "iteration": 4,
+          "matrix_exact": true,
+          "linear_minimum": -5.298484307553197e-12,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": true,
+          "actual_merit": 0.0015147217751233853,
+          "acceptance_ratio": 0.21330288430031
+        },
+        {
+          "iteration": 5,
+          "matrix_exact": true,
+          "linear_minimum": -9.356210250999197e-12,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "actual_merit": 0.001699737315755974,
+          "acceptance_ratio": -0.18511493072710827
+        },
+        {
+          "iteration": 6,
+          "matrix_exact": true,
+          "linear_minimum": -4.678105992861337e-12,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": true,
+          "actual_merit": 0.0007060598301315887,
+          "acceptance_ratio": 0.824263089615659
+        },
+        {
+          "iteration": 7,
+          "matrix_exact": true,
+          "linear_minimum": -2.4028756740422652e-11,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "actual_merit": 0.0012548547265425608,
+          "acceptance_ratio": -2.6209877587460584
+        },
+        {
+          "iteration": 8,
+          "matrix_exact": true,
+          "linear_minimum": -1.201438015914491e-11,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "actual_merit": 0.000823620101900772,
+          "acceptance_ratio": -0.6157644667103023
+        },
+        {
+          "iteration": 9,
+          "matrix_exact": true,
+          "linear_minimum": -6.007188778529848e-12,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": true,
+          "actual_merit": 0.0005742576820468658,
+          "acceptance_ratio": 0.7254493037001674
+        },
+        {
+          "iteration": 10,
+          "matrix_exact": true,
+          "linear_minimum": -8.132895278458244e-10,
+          "bound_minimum": 0.0,
+          "integer_error": 0.0,
+          "passed": true,
+          "accepted": false,
+          "actual_merit": 0.00063613359106917,
+          "acceptance_ratio": -17.068741283667112
+        },
+        {
+          "iteration": 11,
+          "matrix_exact": true,
+          "candidate_available": false
+        }
+      ],
+      "unchanged_independent_linear_bound": 1e-07,
+      "maximum_subproblems": 12,
+      "source_matrices_rebuilt_exactly": true,
+      "nonlinear_acceptance_replayed": true,
+      "independent_global_feasibility_or_optimality_certificate": false
+    },
+    "window_replay_error": 3.552713678800501e-15
+  },
+  "primal": {
+    "equalities": 1,
+    "inequalities": 27708,
+    "max_equation_replay_error": 0.0,
+    "max_inequality_replay_error": 3.552713678800501e-15,
+    "max_local_replay_error": 4.3021142204224816e-16,
+    "maximum_kinematic_residual": 8.704148513061227e-14,
+    "minimum_dependent_planning_bound": 3.4667344566141622e-06,
+    "numerical_constraints_passed": false,
+    "minimum_inequality": -0.0005243763583688147
+  },
+  "timing": {
+    "event_budgets": [
+      93,
+      194,
+      246,
+      101,
+      16
+    ],
+    "clock_replay_error": 7.105427357601002e-15,
+    "clock_overlap_error": 3.126839065448195e-16,
+    "clock_original_rate_minimum": -9.413714460466266e-07,
+    "clock_original_target_minimum": -1.525368769872415e-05,
+    "integer_movement_ticks": 650,
+    "minimum_synthetic_quiet_ticks": 25,
+    "integer_duration_s": 13.5,
+    "original_minimum_inequality": -0.0005234226840524084,
+    "new_construction_minimum_inequality": -0.0005243763583688147,
+    "continuous_guarded_s": 13.499999999999998,
+    "raw_target_minimum_headroom_rad": -1.5253696457773191e-05,
+    "hover_gap_m": 0.01199370863700916,
+    "actual_float32_schedule": false,
+    "quiet_guard_exercised": false
+  },
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "physical_admission": false,
+  "repair_complete": false,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/window_path_400/results.json": "bcc3583f72263ab765c179641ebed7dc5cfcbda4cb19964bdf3f1766546cf872",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_window_path_401.py": "14d707249e23ebd4423eeaf7cc18918ddca9aac0fba9f429fa25a5dfbd8d419a"
+  }
+}
