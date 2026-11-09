@@ -1,0 +1,10 @@
+{
+  "state": "stopped",
+  "error": "AssertionError(('identity_zero', 1))",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/scripts/launch_contact_comparison_v3.py\", line 111, in <module>\n    job('identity_zero',cmd('identity_zero','revised',updates=2),budget['identity_child_seconds'])\n  File \"/home/kadir/humanoid-sitting/scripts/launch_contact_comparison_v3.py\", line 63, in job\n    active=None;assert p.returncode==0,(label,p.returncode);completed.append(label);freeze()\n                       ^^^^^^^^^^^^^^^\nAssertionError: ('identity_zero', 1)\n",
+  "completed": [],
+  "first_updates_verified": [],
+  "seconds": 20.564716092998424,
+  "retry": false,
+  "complete": false
+}

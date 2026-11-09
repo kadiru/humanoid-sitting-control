@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-27T02:48:48.511697+00:00",
+  "classification": "Reward implementation and saved-data validation completed; finite simulation comparison launched, physical result pending.",
+  "saved_episodes_validated": 528,
+  "clean_reward_minimum_bound": 0.77625,
+  "nonclean_reward_maximum_bound": 0.14875,
+  "ranking_example": {
+    "case": "known_transfer 4",
+    "slipped_update2_original": 22.27754803892696,
+    "clean_update3_original": 19.716409828370402,
+    "slipped_update2_revised": -0.055032635484048666,
+    "clean_update3_revised": 1.0266665465669282
+  },
+  "files": {
+    "protocol.json": "ef1cb3da7f3e32cef5bfab7613121fdc245e9937c27d775eb75b7c0d8943dc8e",
+    "freeze.json": "b9985bb4774b1c72d49263af8adeec924735301655844b57158cfa8c020b7a72",
+    "source_review.json": "feab31ad4ec4f4c3e9d1943849318bae3932896a3b3e1083d9e9da67aa53408c",
+    "saved_reward_audit.json": "27c484b76ebf6dc9bfa298fb807fb2ed407bfb64a1915ea7e51b5f4e5ba44dd5",
+    "launch_receipt.json": "231b649f6afb123a134f3909be7cfc61f9238f168898cfecd93e3d97d7bec84d"
+  },
+  "new_physical_repair_claimed": false,
+  "preparation_failures_preserved": [
+    "Absent ankle-pitch collision mesh: corrected to six existing housing meshes.",
+    "Geometry oracle float32 normalization: corrected to float64, unchanged1e-10 tolerance.",
+    "Local base_command copy absent; authoritative remote command available.",
+    "SFTP brace expansion unsupported; retrieved matching JSON files with remote wildcard."
+  ],
+  "automation": "No recurring task created."
+}
