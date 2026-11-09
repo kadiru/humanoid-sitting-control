@@ -1,0 +1,63 @@
+{
+  "utc": "2026-10-17T14:50:25.759622+00:00",
+  "scope": "Read-only source/documentation context; no runtime import or simulation.",
+  "primary_documentation": {
+    "url": "https://nvidia-omniverse.github.io/PhysX/physx/5.8.0/docs/Simulation.html",
+    "sections": [
+      "Solver Iterations",
+      "TGS Steady-State Velocity and Position Discrepancy"
+    ],
+    "summary": "NVIDIA documents that constraint-solver velocity outputs need not equal pose differences divided by timestep: position and velocity iterations address different errors. It separately describes TGS steady-state velocity bias when external forces are applied once per frame rather than each solver iteration. These mechanisms are useful hypotheses, not proof of the cause in this robot. The installed source defaults already enable external forces each iteration, so the documented disabled-flag example must not be assumed applicable. No solver parameter or settling criterion was changed."
+  },
+  "installed_source_evidence": [
+    {
+      "path": "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/config.py",
+      "sha256": "4cd8f537466bfcb4546dd0a04c9d554ae1ff9533eb5f01127ae51762734dcec7",
+      "line_start": 1,
+      "line_end": 27,
+      "text": "\"\"\"First fixed-seat experiment: known geometry, aligned floating-base G1.\"\"\"\nimport isaaclab.sim as sim\nfrom isaaclab.assets import ArticulationCfg, AssetBaseCfg, RigidObjectCfg\nfrom isaaclab.envs import ManagerBasedRLEnvCfg, mdp as base\nfrom isaaclab.managers import (ObservationGroupCfg, ObservationTermCfg, RewardTermCfg,\n                               TerminationTermCfg, EventTermCfg, SceneEntityCfg)\nfrom isaaclab.scene import InteractiveSceneCfg\nfrom isaaclab.sensors import ContactSensorCfg\nfrom isaaclab.utils import configclass\nfrom isaaclab_assets import G1_CFG\nfrom isaaclab_physx.physics import PhysxCfg\nfrom isaaclab_visualizers.kit import KitVisualizerCfg\nfrom isaaclab_tasks.core.velocity.config.g1.agents.rsl_rl_ppo_cfg import G1FlatPPORunnerCfg\nfrom . import mdp\n\n\n@configclass\nclass SittingSceneCfg(InteractiveSceneCfg):\n    ground = AssetBaseCfg(prim_path=\"/World/Ground\", spawn=sim.GroundPlaneCfg(), collision_group=-1)\n    light = AssetBaseCfg(prim_path=\"/World/Light\", spawn=sim.DomeLightCfg(intensity=1500.0))\n    robot: ArticulationCfg = G1_CFG.replace(prim_path=\"{ENV_REGEX_NS}/Robot\")\n    seat = RigidObjectCfg(\n        prim_path=\"{ENV_REGEX_NS}/Seat\",\n        spawn=sim.CuboidCfg(size=(0.50, 0.90, 0.10),\n            rigid_props=sim.UsdPhysicsRigidBodyCfg(kinematic_enabled=True),\n            collision_props=sim.UsdPhysicsCollisionCfg(),\n            mass_props=sim.MassCfg(mass=50.0),"
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab_assets/isaaclab_assets/robots/unitree.py",
+      "sha256": "ea47505ddf82d15895fa55a0a666b5c4800eba24782ece6080061b64cd51e54b",
+      "line_start": 294,
+      "line_end": 315,
+      "text": "G1_CFG = ArticulationCfg(\n    spawn=sim_utils.UsdFileCfg(\n        usd_path=f\"{ISAACLAB_NUCLEUS_DIR}/Robots/Unitree/G1/g1.usd\",\n        activate_contact_sensors=True,\n        rigid_props=PhysxRigidBodyCfg(\n            disable_gravity=False,\n            retain_accelerations=False,\n            linear_damping=0.0,\n            angular_damping=0.0,\n            max_linear_velocity=1000.0,\n            max_angular_velocity=1000.0,\n            max_depenetration_velocity=1.0,\n        ),\n        articulation_props=[\n            PhysxArticulationCfg(\n                enabled_self_collisions=False, solver_position_iteration_count=8, solver_velocity_iteration_count=4\n            ),\n            NewtonArticulationCfg(self_collision_enabled=False),\n        ],\n    ),\n    init_state=ArticulationCfg.InitialStateCfg(\n        pos=(0.0, 0.0, 0.74),"
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab_physx/isaaclab_physx/physics/physx_manager_cfg.py",
+      "sha256": "617dc7e53ad4e514dd7bcab8a46e3d30341efd86329eb9cb08f0c568f31692dc",
+      "line_start": 60,
+      "line_end": 72,
+      "text": "\n    # ------------------------------------------------------------------\n    # Solver Settings\n    # ------------------------------------------------------------------\n\n    solver_type: Literal[0, 1] = 1\n    \"\"\"The type of solver to use. Default is 1 (TGS).\n\n    Available solvers:\n\n    * :obj:`0`: PGS (Projective Gauss-Seidel)\n    * :obj:`1`: TGS (Temporal Gauss-Seidel)\n    \"\"\""
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab_physx/isaaclab_physx/physics/physx_manager_cfg.py",
+      "sha256": "617dc7e53ad4e514dd7bcab8a46e3d30341efd86329eb9cb08f0c568f31692dc",
+      "line_start": 162,
+      "line_end": 178,
+      "text": "\n        Enabling this flag may lead to incorrect contact forces report from the contact sensor.\n    \"\"\"\n\n    enable_external_forces_every_iteration: bool = True\n    \"\"\"Enable/disable external forces every position iteration in the TGS solver. Default is True.\n\n    When using the TGS solver (:attr:`solver_type` is 1), this flag allows enabling external forces\n    every solver position iteration. This can help improve the accuracy of velocity updates.\n    Increasing the number of velocity iterations, together with this flag, can help improve the\n    accuracy of velocity updates.\n\n    .. note::\n\n        This flag is ignored when using the PGS solver (:attr:`solver_type` is 0).\n\n    .. deprecated:: TBD"
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/IsaacLab/source/isaaclab_physx/isaaclab_physx/physics/physx_manager.py",
+      "sha256": "bc92ab4dba2e4789abbccb50c046cb66e9437564bd7842099dab2981e1bea69c",
+      "line_start": 898,
+      "line_end": 912,
+      "text": "\n        # warnings\n        if not cfg.enable_external_forces_every_iteration:\n            warning_message = (\n                \"PhysxCfg.enable_external_forces_every_iteration is deprecated and will be removed in a future \"\n                \"PhysX release. External forces are applied every iteration by default; remove this override.\"\n            )\n            if cfg.solver_type == 1:\n                warning_message += \" Disabling this behavior with the TGS solver may cause noisy velocities.\"\n            warnings.warn(\n                warning_message,\n                DeprecationWarning,\n                stacklevel=2,\n            )\n        if not cfg.enable_stabilization and sim_cfg.dt > 0.0333:"
+    }
+  ],
+  "source_defaults": {
+    "task_uses_G1_CFG": true,
+    "G1_position_iterations": 8,
+    "G1_velocity_iterations": 4,
+    "PhysxCfg_solver_type": 1,
+    "PhysxCfg_enable_external_forces_every_iteration": true
+  },
+  "live_solver_parameters_captured": false,
+  "causal_mechanism_proven": false,
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false,
+  "decision": "No sensor substitution, raw-velocity guard waiver, criterion relaxation or physics-setting change follows this context. Resolve runtime semantics and preserve exact matched comparisons before a separately scoped controller revision.",
+  "source_sha256": "9dd5177499be2d221ccd4453793059125f54ab8333261281b57f56cd835d6b28"
+}
