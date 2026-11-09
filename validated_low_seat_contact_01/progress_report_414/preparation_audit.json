@@ -1,0 +1,38 @@
+{
+  "utc": "2026-10-18T08:08:05.166137+00:00",
+  "passed": true,
+  "scope": "Independent monotone descent map audit410; no root/projection/path optimization.\nRebuild positive loads and derivatives, moment equations, cumulative phases, gap\ntargets and their implicit derivatives from saved states. The original derivative\nbound is retained; arithmetic pass is not path, filter or physical admission.\n",
+  "variables": 899,
+  "positive_load_nodes": 114,
+  "endpoint_moment_nodes": 11,
+  "analytic_gap_root_records": 1,
+  "analytic_gap_columns": 18,
+  "all_rows": 27708,
+  "maximum_errors": {
+    "moment": 2.7422508708241367e-14,
+    "moment_derivative": 1.4795184833953395e-15,
+    "loads": 1.6653345369377348e-16,
+    "load_derivative": 2.615963001773025e-15,
+    "coordinates": 4.996003610813204e-16,
+    "root_equations": 1.6653345369377348e-16,
+    "gap": 3.8163916471489756e-17,
+    "implicit_phase_derivative": 1.0043625653377575e-11,
+    "full_map": 1.0043625653377575e-11,
+    "chain_rule": 1.8254708855636181e-10,
+    "directional": 4.848846338334489e-09
+  },
+  "unchanged_derivative_bound": 2e-06,
+  "posthover_phase_order_constructed": true,
+  "posthover_increment_minimum": 5.319875219789161e-06,
+  "normal_gap_speed_and_order_remain_hard_checks": true,
+  "full_geometry_checked": false,
+  "actual_float32_schedule": false,
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "physical_admission": false,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_monotone_preparation_411.py": "c65539a5a25a8cac8ca1f4ca1bba92d735e2bd7f2ea30c0271f60dda6cf5cd3d",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/monotone_preparation_410/preparation.json": "22183a55be079b5669b06c01518434bccdcd4be610da19abb874e00b30b44955",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/monotone_preparation_410/fixture.npz": "cc611791311ddbd9399ed90641236b4ee163ccdd923500c09daee1049b78d493"
+  }
+}
