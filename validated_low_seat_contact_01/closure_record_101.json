@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-17T10:33:19.245220+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_physical_ticks": 0,
+  "new_optimizer_updates": 0,
+  "holdout_started": false,
+  "prior_recheck": {
+    "utc": "2026-10-17T10:33:18.667433+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "mismatches": [],
+        "passed": true
+      },
+      {
+        "manifest": "completed_probes_preservation_94.json",
+        "checked": 2985,
+        "mismatches": [],
+        "passed": true
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_101.json",
+  "protected_completed_files": 3031,
+  "manifest_sha256": "0947c49f15cc3dc2584ae1cd2616f51d3354ec491c3d951d7d8e9aae04ad8741",
+  "pending98_sources": {
+    "/home/kadir/humanoid-sitting/scripts/refine_low_seat_stance_com_v2_98.py": "8dbd8f1f04b2c803507b145d3dd143e19556ae9855e31b6acbde72807ba94449",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_stance_com_v2_99.py": "5c9a3395a2ed17330eca42487a4226d9426d21a8c6332297adbd7b3c1d55b024",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/stance_com_revision_98.json": "305a25ea3a519443982f4fcef6e02499b30c0aae2ae1fa27e8979608ba6f719c"
+  },
+  "model98_running": true,
+  "physical_workers_running": false,
+  "report": "progress_report_100",
+  "local_review": {
+    "utc": "2026-10-17T10:32:20.818725+00:00",
+    "original_sha_entries": 8,
+    "supplemental_review_hashes": 2,
+    "landing_constraints_plot_visually_inspected": true,
+    "stance_support_plot_visually_inspected": true,
+    "html_and_gate_table_visually_inspected": true,
+    "selected95_zero_added_pitch_disclosed": true,
+    "task_complete": false,
+    "physical_repair_complete": false,
+    "video_current_no_new_physics": true
+  },
+  "handoff_sha256": "607f10a7a2b774f4029c2c43684517336de8997753737b66bb5179ab5f2fe864",
+  "next": "Inspect existing98 result and independent99, without restarting. No model/endpoint audit authorizes physical execution or PPO. Complete filtered-command/sensed-load/dynamic transition and all72 matched development physical gates remain required. Video59 remains current; no motion added."
+}
