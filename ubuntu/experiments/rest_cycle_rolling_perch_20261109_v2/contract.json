@@ -1,0 +1,24 @@
+{
+  "utc": "2026-11-09T01:55:33.047578+00:00",
+  "mechanism": "Replace fixedmaterialpoint pelvis rotation, which falsely sinks other vertices, with exact finite convex support-envelope rolling. Currentlower2mmcap lies22mmbehind conservative cameraedge lowerbound-minus6mm.14equation endpoint targets10%BW partial support at centerfootCoP. Exactrolling unload tozero then12mmnormalretract andbalancedlift.",
+  "initialization": "Fresh reconstruction from accepted known_old/16 and qualifiedframe0; v1 endpoint is preserved but not loaded. Repeated8-iteration endpoint work remains fully charged in this separate construction. No claim of zero repeat arithmetic or prior physical admission.",
+  "new_mathematics": "For each actualconvexhull vertex,height(theta)=a*cos(theta)+b*sin(theta)+c. Enumeratefinitepaircrossingsinsidefixedpitchinterval; mergeidentical activevertex intervals. On each interval roottranslation_delta=R(theta0)*v-R(theta1)*v. All materialcontactpoints are stationary whileactive; vertexswitches arecontinuous. Independentmidpoint/end checks preserve allbodyaboveplane. Endpointlower2mmcap includes exactconvexedgeclipintersections, not just meshvertices.",
+  "selected_target": "10%BW rest, not original62%BW deep seating. The human explicitly accepts partial legalhip/thighsupport. Existing10%BWtransfer qualification retained. Fullphysicalsuccess stilloriginal>=5%BWfinal5s,allslip/contacts/failureguards unchanged.",
+  "resource_bounds": {
+    "total_s": 45,
+    "cores": 1,
+    "address_space_GiB": 40,
+    "endpoint_max_nfev": 80,
+    "footIKmax_nfev": 60,
+    "loadroot_maxiter": 24,
+    "max_rolling_pair_events": 100000,
+    "max_active_segments": 64,
+    "path_controls_each_direction": 1000,
+    "GPU_launches": 0,
+    "PPO_updates": 0,
+    "retries": 0
+  },
+  "return_policy": "Oneconstruction with separateindependentauditor inheritedfromwitnesspivot:fullmesh6mm,footCoP10mm,20mmpatch,actualinversefilter.03desiredmargin/.003increment/.1filter/14fingers,normal<=.006,first20s/final5s and<=20sreturn/2squiet. Runtime loadobserver notadmitted; no physics on a rejected result. No45s cap extension or repeatedfailedsolve. This is the finite combinatorial geometry correction after v1resourcefailure, not a physics or solverparameterretry. No further automatic diagnostic exceptions.",
+  "source_review": "Originalfixedpointwitnessfailure preserved. This construction changes contactequations and target/premise association; no iteration-limit or parameter retry. Oneowner, separateauditimplementation, noexternalreviewagent.",
+  "structural_correction": "v1 endpoint solved but all-pair rolling enumeration reached fixed100000event cap; no physics. V2 uses only actual convexhull edges. A linear support functional can change its minimizing vertex only through an exposed edge/face of the convex hull. Triangulated coplanar faces may add events, never remove required ones. For3D convexhullV vertices, E<=3V-6 vsV(V-1)/2 pairs. All-sourcevertices independentanalytic dominance audit evaluates endpoints and everyinterior sinusoid minimum perretainedinterval, so missingactiveevents fail. Same100000candidate/64active/45s caps; no failedvector input or capincrease."
+}

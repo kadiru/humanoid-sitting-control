@@ -1,0 +1,795 @@
+{
+  "model_admitted": false,
+  "tests": {
+    "feet": true,
+    "balance": true,
+    "plane_nonpenetration": true,
+    "patch_reserve": true,
+    "tilt": true,
+    "base_wrench": true,
+    "first20s_hold_reserve": true,
+    "return20s": true,
+    "partial_support": true,
+    "original_command_limits": true,
+    "full_mesh_clearance": false,
+    "independent_virtual_work": true
+  },
+  "minimum_balance_margin": 0.02272827189164677,
+  "minimum_plane_gap_m": -2.7755575615628914e-17,
+  "minimum_patch_margin_m": 0.0006132375894369081,
+  "maximum_foot_error": 5.705282912771281e-09,
+  "forward": {
+    "filter_error": 3.469446951953614e-18,
+    "increment": 0.002498766342230896,
+    "desired_margin": 0.25255889404254933,
+    "fingers_fixed": true
+  },
+  "backward": {
+    "filter_error": 3.469446951953614e-18,
+    "increment": 0.002498766342230896,
+    "desired_margin": 0.25273046160910406,
+    "fingers_fixed": true
+  },
+  "clearance": {
+    "passed": false,
+    "sampled_poses": 249,
+    "triangle_tests": 8810,
+    "forbidden_or_early_clearance_intersections": [
+      {
+        "sample": 63,
+        "body": "left_hip_roll_link",
+        "face": 2806,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "left_hip_roll_link",
+        "face": 2807,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "left_hip_roll_link",
+        "face": 2808,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "left_hip_roll_link",
+        "face": 2809,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "left_hip_roll_link",
+        "face": 2810,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "left_hip_roll_link",
+        "face": 2811,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "left_hip_roll_link",
+        "face": 2812,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "right_hip_roll_link",
+        "face": 3080,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "right_hip_roll_link",
+        "face": 3081,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "right_hip_roll_link",
+        "face": 3082,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "right_hip_roll_link",
+        "face": 3083,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "right_hip_roll_link",
+        "face": 3084,
+        "phase": "approach"
+      },
+      {
+        "sample": 64,
+        "body": "left_hip_roll_link",
+        "face": 14,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "left_hip_roll_link",
+        "face": 25,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "left_hip_roll_link",
+        "face": 2806,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "left_hip_roll_link",
+        "face": 2807,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "left_hip_roll_link",
+        "face": 2808,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "left_hip_roll_link",
+        "face": 2809,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "left_hip_roll_link",
+        "face": 2810,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "left_hip_roll_link",
+        "face": 2811,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "left_hip_roll_link",
+        "face": 2812,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "left_hip_roll_link",
+        "face": 2813,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "right_hip_roll_link",
+        "face": 37,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "right_hip_roll_link",
+        "face": 66,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "right_hip_roll_link",
+        "face": 3078,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "right_hip_roll_link",
+        "face": 3079,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "right_hip_roll_link",
+        "face": 3080,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "right_hip_roll_link",
+        "face": 3081,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "right_hip_roll_link",
+        "face": 3082,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "right_hip_roll_link",
+        "face": 3083,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "right_hip_roll_link",
+        "face": 3084,
+        "phase": "landing"
+      },
+      {
+        "sample": 64,
+        "body": "right_hip_roll_link",
+        "face": 3085,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "left_hip_roll_link",
+        "face": 14,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "left_hip_roll_link",
+        "face": 25,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "left_hip_roll_link",
+        "face": 2806,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "left_hip_roll_link",
+        "face": 2807,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "left_hip_roll_link",
+        "face": 2808,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "left_hip_roll_link",
+        "face": 2809,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "left_hip_roll_link",
+        "face": 2810,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "left_hip_roll_link",
+        "face": 2811,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "left_hip_roll_link",
+        "face": 2812,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "left_hip_roll_link",
+        "face": 2813,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "right_hip_roll_link",
+        "face": 37,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "right_hip_roll_link",
+        "face": 66,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "right_hip_roll_link",
+        "face": 3078,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "right_hip_roll_link",
+        "face": 3079,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "right_hip_roll_link",
+        "face": 3080,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "right_hip_roll_link",
+        "face": 3081,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "right_hip_roll_link",
+        "face": 3082,
+        "phase": "landing"
+      },
+      {
+        "sample": 65,
+        "body": "right_hip_roll_link",
+        "face": 3083,
+        "phase": "landing"
+      }
+    ],
+    "forbidden_or_early_clearance_intersection_count": 2648,
+    "expected_target_approaches": 208,
+    "clearance_buffer_m": 0.006,
+    "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+    "simulation_success": false
+  },
+  "virtual_work": {
+    "passed": true,
+    "maximum_joint_torque_error_Nm": 1.8378889521386554e-09,
+    "maximum_base_wrench_residual": 4.6629367034256575e-15
+  },
+  "nodes": [
+    {
+      "node": 0,
+      "phase": "approach",
+      "gap_m": 0.062821242885016,
+      "load": 0.0,
+      "base_wrench_residual": 1.7763568394002505e-15
+    },
+    {
+      "node": 1,
+      "phase": "approach",
+      "gap_m": 0.058832157400388024,
+      "load": 0.0,
+      "base_wrench_residual": 4.3298697960381105e-15
+    },
+    {
+      "node": 2,
+      "phase": "approach",
+      "gap_m": 0.05489340142334434,
+      "load": 0.0,
+      "base_wrench_residual": 2.220446049250313e-16
+    },
+    {
+      "node": 3,
+      "phase": "approach",
+      "gap_m": 0.051060394712639734,
+      "load": 0.0,
+      "base_wrench_residual": 3.524958103184872e-15
+    },
+    {
+      "node": 4,
+      "phase": "approach",
+      "gap_m": 0.04734395733564267,
+      "load": 0.0,
+      "base_wrench_residual": 2.6645352591003757e-15
+    },
+    {
+      "node": 5,
+      "phase": "approach",
+      "gap_m": 0.04374522025808797,
+      "load": 0.0,
+      "base_wrench_residual": 1.1379786002407855e-15
+    },
+    {
+      "node": 6,
+      "phase": "approach",
+      "gap_m": 0.04026512442230598,
+      "load": 0.0,
+      "base_wrench_residual": 1.174060848541103e-14
+    },
+    {
+      "node": 7,
+      "phase": "approach",
+      "gap_m": 0.03690450745135071,
+      "load": 0.0,
+      "base_wrench_residual": 8.43769498715119e-15
+    },
+    {
+      "node": 8,
+      "phase": "approach",
+      "gap_m": 0.03366395213170109,
+      "load": 0.0,
+      "base_wrench_residual": 2.4980018054066022e-15
+    },
+    {
+      "node": 9,
+      "phase": "approach",
+      "gap_m": 0.03054312362984768,
+      "load": 0.0,
+      "base_wrench_residual": 6.827871601444713e-15
+    },
+    {
+      "node": 10,
+      "phase": "approach",
+      "gap_m": 0.02754198826235771,
+      "load": 0.0,
+      "base_wrench_residual": 5.329070518200751e-15
+    },
+    {
+      "node": 11,
+      "phase": "approach",
+      "gap_m": 0.024660525935454425,
+      "load": 0.0,
+      "base_wrench_residual": 4.496403249731884e-15
+    },
+    {
+      "node": 12,
+      "phase": "approach",
+      "gap_m": 0.021897796148303922,
+      "load": 0.0,
+      "base_wrench_residual": 2.1649348980190553e-15
+    },
+    {
+      "node": 13,
+      "phase": "approach",
+      "gap_m": 0.019253058082656954,
+      "load": 0.0,
+      "base_wrench_residual": 2.9976021664879227e-15
+    },
+    {
+      "node": 14,
+      "phase": "approach",
+      "gap_m": 0.016722871671262657,
+      "load": 0.0,
+      "base_wrench_residual": 9.43689570931383e-16
+    },
+    {
+      "node": 15,
+      "phase": "approach",
+      "gap_m": 0.014306643526783985,
+      "load": 0.0,
+      "base_wrench_residual": 1.5543122344752192e-15
+    },
+    {
+      "node": 16,
+      "phase": "landing",
+      "gap_m": 0.011999999999999955,
+      "load": 0.0,
+      "base_wrench_residual": 1.8596235662471372e-15
+    },
+    {
+      "node": 17,
+      "phase": "landing",
+      "gap_m": 0.008999999999999952,
+      "load": 0.0,
+      "base_wrench_residual": 4.690692279041286e-15
+    },
+    {
+      "node": 18,
+      "phase": "landing",
+      "gap_m": 0.005999999999999978,
+      "load": 0.0,
+      "base_wrench_residual": 5.551115123125783e-17
+    },
+    {
+      "node": 19,
+      "phase": "landing",
+      "gap_m": 0.002999999999999975,
+      "load": 0.0,
+      "base_wrench_residual": 1.6375789613221059e-15
+    },
+    {
+      "node": 20,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.0,
+      "base_wrench_residual": 1.970645868709653e-15
+    },
+    {
+      "node": 21,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.01270347357077053,
+      "base_wrench_residual": 4.9404924595819466e-15
+    },
+    {
+      "node": 22,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.02518356139255665,
+      "base_wrench_residual": 4.773959005888173e-15
+    },
+    {
+      "node": 23,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.02518898739902502,
+      "base_wrench_residual": 6.245004513516506e-16
+    },
+    {
+      "node": 24,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.037848407611009535,
+      "base_wrench_residual": 4.801714581503802e-15
+    },
+    {
+      "node": 25,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.05054145196389454,
+      "base_wrench_residual": 3.1780134079895106e-15
+    },
+    {
+      "node": 26,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.05448473502673993,
+      "base_wrench_residual": 3.58046925441613e-15
+    },
+    {
+      "node": 27,
+      "phase": "landing",
+      "gap_m": 2.7755575615628914e-17,
+      "load": 0.06267037177591933,
+      "base_wrench_residual": 1.7069679003611782e-15
+    },
+    {
+      "node": 28,
+      "phase": "landing",
+      "gap_m": 2.7755575615628914e-17,
+      "load": 0.07531902746736015,
+      "base_wrench_residual": 5.981326545168031e-15
+    },
+    {
+      "node": 29,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.08050323738076122,
+      "base_wrench_residual": 3.469446951953614e-16
+    },
+    {
+      "node": 30,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.08737181750199444,
+      "base_wrench_residual": 1.5959455978986625e-15
+    },
+    {
+      "node": 31,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.10000000054515587,
+      "base_wrench_residual": 4.6629367034256575e-15
+    },
+    {
+      "node": 32,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.08737181750199444,
+      "base_wrench_residual": 1.5959455978986625e-15
+    },
+    {
+      "node": 33,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.08050323738076122,
+      "base_wrench_residual": 3.469446951953614e-16
+    },
+    {
+      "node": 34,
+      "phase": "landing",
+      "gap_m": 2.7755575615628914e-17,
+      "load": 0.07531902746736015,
+      "base_wrench_residual": 5.981326545168031e-15
+    },
+    {
+      "node": 35,
+      "phase": "landing",
+      "gap_m": 2.7755575615628914e-17,
+      "load": 0.06267037177591933,
+      "base_wrench_residual": 1.7069679003611782e-15
+    },
+    {
+      "node": 36,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.05448473502673993,
+      "base_wrench_residual": 3.58046925441613e-15
+    },
+    {
+      "node": 37,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.05054145196389454,
+      "base_wrench_residual": 3.1780134079895106e-15
+    },
+    {
+      "node": 38,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.037848407611009535,
+      "base_wrench_residual": 4.801714581503802e-15
+    },
+    {
+      "node": 39,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.02518898739902502,
+      "base_wrench_residual": 6.245004513516506e-16
+    },
+    {
+      "node": 40,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.02518356139255665,
+      "base_wrench_residual": 4.773959005888173e-15
+    },
+    {
+      "node": 41,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.01270347357077053,
+      "base_wrench_residual": 4.9404924595819466e-15
+    },
+    {
+      "node": 42,
+      "phase": "landing",
+      "gap_m": -2.7755575615628914e-17,
+      "load": 0.0,
+      "base_wrench_residual": 1.970645868709653e-15
+    },
+    {
+      "node": 43,
+      "phase": "landing",
+      "gap_m": 0.002999999999999975,
+      "load": 0.0,
+      "base_wrench_residual": 1.6375789613221059e-15
+    },
+    {
+      "node": 44,
+      "phase": "landing",
+      "gap_m": 0.005999999999999978,
+      "load": 0.0,
+      "base_wrench_residual": 5.551115123125783e-17
+    },
+    {
+      "node": 45,
+      "phase": "landing",
+      "gap_m": 0.008999999999999952,
+      "load": 0.0,
+      "base_wrench_residual": 4.690692279041286e-15
+    },
+    {
+      "node": 46,
+      "phase": "landing",
+      "gap_m": 0.011999999999999955,
+      "load": 0.0,
+      "base_wrench_residual": 1.8596235662471372e-15
+    },
+    {
+      "node": 47,
+      "phase": "approach",
+      "gap_m": 0.014306643526783985,
+      "load": 0.0,
+      "base_wrench_residual": 1.5543122344752192e-15
+    },
+    {
+      "node": 48,
+      "phase": "approach",
+      "gap_m": 0.016722871671262657,
+      "load": 0.0,
+      "base_wrench_residual": 9.43689570931383e-16
+    },
+    {
+      "node": 49,
+      "phase": "approach",
+      "gap_m": 0.019253058082656954,
+      "load": 0.0,
+      "base_wrench_residual": 2.9976021664879227e-15
+    },
+    {
+      "node": 50,
+      "phase": "approach",
+      "gap_m": 0.021897796148303922,
+      "load": 0.0,
+      "base_wrench_residual": 2.1649348980190553e-15
+    },
+    {
+      "node": 51,
+      "phase": "approach",
+      "gap_m": 0.024660525935454425,
+      "load": 0.0,
+      "base_wrench_residual": 4.496403249731884e-15
+    },
+    {
+      "node": 52,
+      "phase": "approach",
+      "gap_m": 0.02754198826235771,
+      "load": 0.0,
+      "base_wrench_residual": 5.329070518200751e-15
+    },
+    {
+      "node": 53,
+      "phase": "approach",
+      "gap_m": 0.03054312362984768,
+      "load": 0.0,
+      "base_wrench_residual": 6.827871601444713e-15
+    },
+    {
+      "node": 54,
+      "phase": "approach",
+      "gap_m": 0.03366395213170109,
+      "load": 0.0,
+      "base_wrench_residual": 2.4980018054066022e-15
+    },
+    {
+      "node": 55,
+      "phase": "approach",
+      "gap_m": 0.03690450745135071,
+      "load": 0.0,
+      "base_wrench_residual": 8.43769498715119e-15
+    },
+    {
+      "node": 56,
+      "phase": "approach",
+      "gap_m": 0.04026512442230598,
+      "load": 0.0,
+      "base_wrench_residual": 1.174060848541103e-14
+    },
+    {
+      "node": 57,
+      "phase": "approach",
+      "gap_m": 0.04374522025808797,
+      "load": 0.0,
+      "base_wrench_residual": 1.1379786002407855e-15
+    },
+    {
+      "node": 58,
+      "phase": "approach",
+      "gap_m": 0.04734395733564267,
+      "load": 0.0,
+      "base_wrench_residual": 2.6645352591003757e-15
+    },
+    {
+      "node": 59,
+      "phase": "approach",
+      "gap_m": 0.051060394712639734,
+      "load": 0.0,
+      "base_wrench_residual": 3.524958103184872e-15
+    },
+    {
+      "node": 60,
+      "phase": "approach",
+      "gap_m": 0.05489340142334434,
+      "load": 0.0,
+      "base_wrench_residual": 2.220446049250313e-16
+    },
+    {
+      "node": 61,
+      "phase": "approach",
+      "gap_m": 0.058832157400388024,
+      "load": 0.0,
+      "base_wrench_residual": 4.3298697960381105e-15
+    },
+    {
+      "node": 62,
+      "phase": "approach",
+      "gap_m": 0.062821242885016,
+      "load": 0.0,
+      "base_wrench_residual": 1.7763568394002505e-15
+    }
+  ],
+  "physical_success": false,
+  "model_only": true
+}
