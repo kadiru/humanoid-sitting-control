@@ -1,0 +1,281 @@
+[
+  {
+    "update": 4,
+    "start_s": 10.0,
+    "checkpoint": "/data/humanoid-sitting-perception/low_positive_transfer_01/ppo_01/seed_62111/train/model_04.pt",
+    "sha256": "b3f1f9390f92de2689fe9d14b035e11b2e1c05782aaacc700afb86d53deaf2aa",
+    "evaluation": "/data/humanoid-sitting-perception/low_positive_transfer_01/ppo_01/seed_62111/development_update_04",
+    "gate": {
+      "passed": true,
+      "lost_baseline_clean": [],
+      "added_physical_failure": [],
+      "clean": 18,
+      "physical": 2,
+      "effort": {
+        "metrics_whole_trial": {
+          "ratio": 1.0009588335807944,
+          "within": true,
+          "common_clean": 18
+        },
+        "metrics_last5s": {
+          "ratio": 1.0020357244848113,
+          "within": true,
+          "common_clean": 18
+        }
+      }
+    },
+    "validation": {
+      "passed": true,
+      "physical": {
+        "trials": 28,
+        "stable": 26,
+        "clean": 18,
+        "slip": 10,
+        "illegal": 0,
+        "physical": 2,
+        "strict": 8,
+        "max_friction_utilization": 1.057471513748169,
+        "max_conservative_margin_ticks": 14,
+        "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit"
+      },
+      "actual417_inputs": true,
+      "full_reward_audited": true,
+      "bounds_and_slew": true,
+      "parent_exact": true,
+      "CPU_optimizer_replay": false,
+      "actor_steps": 0,
+      "critic_steps": 0,
+      "numerical_tolerances": {
+        "action_atol": 1e-05,
+        "action_rtol": 1e-05,
+        "weight_atol": 5e-05,
+        "weight_rtol": 0.0005
+      },
+      "active": 28000,
+      "warmup": 0
+    },
+    "matched": {
+      "max_errors": {
+        "root": 0.0,
+        "q": 0.0,
+        "command": 0.0,
+        "geometry": 0.0,
+        "observation": 0.0
+      },
+      "exact": true,
+      "tolerance": 1e-05,
+      "actual414_startup_exact": true,
+      "prefix_exact_until": 10.0
+    }
+  },
+  {
+    "update": 8,
+    "start_s": 10.0,
+    "checkpoint": "/data/humanoid-sitting-perception/low_positive_transfer_01/ppo_01/seed_62111/train/model_08.pt",
+    "sha256": "72bd5b4fc3855cd9c964116801fbf5ece4889b74c1c23b962f79841ca0eac78b",
+    "evaluation": "/data/humanoid-sitting-perception/low_positive_transfer_01/ppo_01/seed_62111/development_update_08",
+    "gate": {
+      "passed": true,
+      "lost_baseline_clean": [],
+      "added_physical_failure": [],
+      "clean": 18,
+      "physical": 2,
+      "effort": {
+        "metrics_whole_trial": {
+          "ratio": 1.000840616194312,
+          "within": true,
+          "common_clean": 18
+        },
+        "metrics_last5s": {
+          "ratio": 1.0033384612889495,
+          "within": true,
+          "common_clean": 18
+        }
+      }
+    },
+    "validation": {
+      "passed": true,
+      "physical": {
+        "trials": 28,
+        "stable": 26,
+        "clean": 18,
+        "slip": 10,
+        "illegal": 0,
+        "physical": 2,
+        "strict": 6,
+        "max_friction_utilization": 1.0342774391174316,
+        "max_conservative_margin_ticks": 15,
+        "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit"
+      },
+      "actual417_inputs": true,
+      "full_reward_audited": true,
+      "bounds_and_slew": true,
+      "parent_exact": true,
+      "CPU_optimizer_replay": false,
+      "actor_steps": 0,
+      "critic_steps": 0,
+      "numerical_tolerances": {
+        "action_atol": 1e-05,
+        "action_rtol": 1e-05,
+        "weight_atol": 5e-05,
+        "weight_rtol": 0.0005
+      },
+      "active": 28000,
+      "warmup": 0
+    },
+    "matched": {
+      "max_errors": {
+        "root": 0.0,
+        "q": 0.0,
+        "command": 0.0,
+        "geometry": 0.0,
+        "observation": 0.0
+      },
+      "exact": true,
+      "tolerance": 1e-05,
+      "actual414_startup_exact": true,
+      "prefix_exact_until": 10.0
+    }
+  },
+  {
+    "update": 12,
+    "start_s": 10.0,
+    "checkpoint": "/data/humanoid-sitting-perception/low_positive_transfer_01/ppo_01/seed_62111/train/model_12.pt",
+    "sha256": "9f58c9d8eef34c1e9e8033644b3dd86bc20db43313af02ef45656866828005d7",
+    "evaluation": "/data/humanoid-sitting-perception/low_positive_transfer_01/ppo_01/seed_62111/development_update_12",
+    "gate": {
+      "passed": false,
+      "lost_baseline_clean": [
+        2,
+        3
+      ],
+      "added_physical_failure": [],
+      "clean": 16,
+      "physical": 2,
+      "effort": {
+        "metrics_whole_trial": {
+          "ratio": 1.0000829589779354,
+          "within": true,
+          "common_clean": 16
+        },
+        "metrics_last5s": {
+          "ratio": 0.9987898178000187,
+          "within": true,
+          "common_clean": 16
+        }
+      }
+    },
+    "validation": {
+      "passed": true,
+      "physical": {
+        "trials": 28,
+        "stable": 26,
+        "clean": 16,
+        "slip": 12,
+        "illegal": 0,
+        "physical": 2,
+        "strict": 8,
+        "max_friction_utilization": 1.0452549457550049,
+        "max_conservative_margin_ticks": 15,
+        "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit"
+      },
+      "actual417_inputs": true,
+      "full_reward_audited": true,
+      "bounds_and_slew": true,
+      "parent_exact": true,
+      "CPU_optimizer_replay": false,
+      "actor_steps": 0,
+      "critic_steps": 0,
+      "numerical_tolerances": {
+        "action_atol": 1e-05,
+        "action_rtol": 1e-05,
+        "weight_atol": 5e-05,
+        "weight_rtol": 0.0005
+      },
+      "active": 28000,
+      "warmup": 0
+    },
+    "matched": {
+      "max_errors": {
+        "root": 0.0,
+        "q": 0.0,
+        "command": 0.0,
+        "geometry": 0.0,
+        "observation": 0.0
+      },
+      "exact": true,
+      "tolerance": 1e-05,
+      "actual414_startup_exact": true,
+      "prefix_exact_until": 10.0
+    }
+  },
+  {
+    "update": 16,
+    "start_s": 10.0,
+    "checkpoint": "/data/humanoid-sitting-perception/low_positive_transfer_01/ppo_01/seed_62111/train/model_16.pt",
+    "sha256": "20cfd15b4f043c377ffa993b99bbeff46461f27eb6edca7e58c3b09ec603557d",
+    "evaluation": "/data/humanoid-sitting-perception/low_positive_transfer_01/ppo_01/seed_62111/development_update_16",
+    "gate": {
+      "passed": true,
+      "lost_baseline_clean": [],
+      "added_physical_failure": [],
+      "clean": 18,
+      "physical": 2,
+      "effort": {
+        "metrics_whole_trial": {
+          "ratio": 1.000664500104934,
+          "within": true,
+          "common_clean": 18
+        },
+        "metrics_last5s": {
+          "ratio": 1.0032233695806434,
+          "within": true,
+          "common_clean": 18
+        }
+      }
+    },
+    "validation": {
+      "passed": true,
+      "physical": {
+        "trials": 28,
+        "stable": 26,
+        "clean": 18,
+        "slip": 10,
+        "illegal": 0,
+        "physical": 2,
+        "strict": 10,
+        "max_friction_utilization": 1.0775563716888428,
+        "max_conservative_margin_ticks": 14,
+        "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit"
+      },
+      "actual417_inputs": true,
+      "full_reward_audited": true,
+      "bounds_and_slew": true,
+      "parent_exact": true,
+      "CPU_optimizer_replay": false,
+      "actor_steps": 0,
+      "critic_steps": 0,
+      "numerical_tolerances": {
+        "action_atol": 1e-05,
+        "action_rtol": 1e-05,
+        "weight_atol": 5e-05,
+        "weight_rtol": 0.0005
+      },
+      "active": 28000,
+      "warmup": 0
+    },
+    "matched": {
+      "max_errors": {
+        "root": 0.0,
+        "q": 0.0,
+        "command": 0.0,
+        "geometry": 0.0,
+        "observation": 0.0
+      },
+      "exact": true,
+      "tolerance": 1e-05,
+      "actual414_startup_exact": true,
+      "prefix_exact_until": 10.0
+    }
+  }
+]

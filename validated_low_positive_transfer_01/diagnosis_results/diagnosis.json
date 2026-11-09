@@ -1,0 +1,201 @@
+{
+  "scope": "Development repair probes only, not new PPO or fresh holdout. All six variants rejected; none removes the targeted slips. Existing first10s preserved exactly.",
+  "outcomes": [
+    {
+      "trials": 12,
+      "stable": 10,
+      "clean": 2,
+      "slip": 10,
+      "illegal": 0,
+      "physical": 2,
+      "strict": 0,
+      "max_friction_utilization": 0.9565771222114563,
+      "max_conservative_margin_ticks": 15,
+      "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit",
+      "unwanted_contact_union": 2,
+      "name": "existing repaired parent",
+      "folder": "/data/humanoid-sitting-perception/low_positive_transfer_01/feedback_zero_01/old_parent",
+      "locked_first10": {
+        "max_errors": {
+          "root": 0.0,
+          "q": 0.0,
+          "command": 0.0,
+          "geometry": 0.0,
+          "observation": 0.0
+        },
+        "exact": true,
+        "tolerance": 1e-05,
+        "actual414_startup_exact": true,
+        "prefix_exact_until": 10.0
+      }
+    },
+    {
+      "trials": 12,
+      "stable": 2,
+      "clean": 2,
+      "slip": 10,
+      "illegal": 1,
+      "physical": 5,
+      "strict": 0,
+      "max_friction_utilization": 924791296.0,
+      "max_conservative_margin_ticks": 79,
+      "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit",
+      "unwanted_contact_union": 2,
+      "name": "phase_only",
+      "folder": "/data/humanoid-sitting-perception/low_positive_transfer_01/phase_only/parent",
+      "locked_first10": {
+        "max_errors": {
+          "root": 0.0,
+          "q": 0.0,
+          "command": 0.0,
+          "geometry": 0.0,
+          "observation": 0.0
+        },
+        "exact": true,
+        "tolerance": 1e-05,
+        "actual414_startup_exact": true,
+        "prefix_exact_until": 10.0
+      }
+    },
+    {
+      "trials": 12,
+      "stable": 2,
+      "clean": 2,
+      "slip": 10,
+      "illegal": 0,
+      "physical": 6,
+      "strict": 0,
+      "max_friction_utilization": 1.0165280103683472,
+      "max_conservative_margin_ticks": 148,
+      "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit",
+      "unwanted_contact_union": 6,
+      "name": "phase_deeper",
+      "folder": "/data/humanoid-sitting-perception/low_positive_transfer_01/phase_deeper/parent",
+      "locked_first10": {
+        "max_errors": {
+          "root": 0.0,
+          "q": 0.0,
+          "command": 0.0,
+          "geometry": 0.0,
+          "observation": 0.0
+        },
+        "exact": true,
+        "tolerance": 1e-05,
+        "actual414_startup_exact": true,
+        "prefix_exact_until": 10.0
+      }
+    },
+    {
+      "trials": 12,
+      "stable": 10,
+      "clean": 2,
+      "slip": 10,
+      "illegal": 0,
+      "physical": 2,
+      "strict": 0,
+      "max_friction_utilization": 1.0026251077651978,
+      "max_conservative_margin_ticks": 36,
+      "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit",
+      "unwanted_contact_union": 2,
+      "name": "timing_mild",
+      "folder": "/data/humanoid-sitting-perception/low_positive_transfer_01/timing_mild/parent",
+      "locked_first10": {
+        "max_errors": {
+          "root": 0.0,
+          "q": 0.0,
+          "command": 0.0,
+          "geometry": 0.0,
+          "observation": 0.0
+        },
+        "exact": true,
+        "tolerance": 1e-05,
+        "actual414_startup_exact": true,
+        "prefix_exact_until": 10.0
+      }
+    },
+    {
+      "trials": 12,
+      "stable": 6,
+      "clean": 2,
+      "slip": 10,
+      "illegal": 0,
+      "physical": 2,
+      "strict": 0,
+      "max_friction_utilization": 1.012521505355835,
+      "max_conservative_margin_ticks": 35,
+      "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit",
+      "unwanted_contact_union": 2,
+      "name": "timing_strong",
+      "folder": "/data/humanoid-sitting-perception/low_positive_transfer_01/timing_strong/parent",
+      "locked_first10": {
+        "max_errors": {
+          "root": 0.0,
+          "q": 0.0,
+          "command": 0.0,
+          "geometry": 0.0,
+          "observation": 0.0
+        },
+        "exact": true,
+        "tolerance": 1e-05,
+        "actual414_startup_exact": true,
+        "prefix_exact_until": 10.0
+      }
+    },
+    {
+      "trials": 12,
+      "stable": 10,
+      "clean": 2,
+      "slip": 10,
+      "illegal": 0,
+      "physical": 2,
+      "strict": 0,
+      "max_friction_utilization": 1.0235581398010254,
+      "max_conservative_margin_ticks": 21,
+      "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit",
+      "unwanted_contact_union": 2,
+      "name": "load_delay",
+      "folder": "/data/humanoid-sitting-perception/low_positive_transfer_01/load_delay/parent",
+      "locked_first10": {
+        "max_errors": {
+          "root": 0.0,
+          "q": 0.0,
+          "command": 0.0,
+          "geometry": 0.0,
+          "observation": 0.0
+        },
+        "exact": true,
+        "tolerance": 1e-05,
+        "actual414_startup_exact": true,
+        "prefix_exact_until": 10.0
+      }
+    },
+    {
+      "trials": 12,
+      "stable": 4,
+      "clean": 2,
+      "slip": 10,
+      "illegal": 0,
+      "physical": 8,
+      "strict": 0,
+      "max_friction_utilization": 1.022674322128296,
+      "max_conservative_margin_ticks": 21,
+      "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit",
+      "unwanted_contact_union": 8,
+      "name": "rolling_mild",
+      "folder": "/data/humanoid-sitting-perception/low_positive_transfer_01/rolling_mild/parent",
+      "locked_first10": {
+        "max_errors": {
+          "root": 0.0,
+          "q": 0.0,
+          "command": 0.0,
+          "geometry": 0.0,
+          "observation": 0.0
+        },
+        "exact": true,
+        "tolerance": 1e-05,
+        "actual414_startup_exact": true,
+        "prefix_exact_until": 10.0
+      }
+    }
+  ]
+}
