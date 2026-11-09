@@ -1,0 +1,104 @@
+{
+  "utc": "2026-10-18T10:21:20.881209+00:00",
+  "completed_work": "434v2 compatibility assessment rejected; staged435v3 arithmetic audit and436report complete. Original434input/435geometry failures retained. No optimizer/filter/physics.",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_433.json",
+      "files": 8001,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_433.json",
+      "files": 3,
+      "passed": true
+    }
+  ],
+  "protected_files": 8059,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_437.json",
+  "manifest_sha256": "9fcfd6c71033991c10db656d4d3c14390bf52ee64d1ccd8b328b37491f9a2438",
+  "original_report_manifests": 6,
+  "original_manifest_entries": 27,
+  "local_review": {
+    "utc": "2026-10-18T10:19:04.812296+00:00",
+    "visual_review_complete": true,
+    "original_manifests": 6,
+    "original_entries": 27,
+    "checks": [
+      {
+        "folder": "clock_lift_input_recovery_434",
+        "entries": 5,
+        "passed": true
+      },
+      {
+        "folder": "clock_lift_v2_434",
+        "entries": 3,
+        "passed": true
+      },
+      {
+        "folder": "clock_lift_geometry_audit_recovery_435",
+        "entries": 3,
+        "passed": true
+      },
+      {
+        "folder": "clock_lift_audit_v3_435",
+        "entries": 2,
+        "passed": true
+      },
+      {
+        "folder": "clock_lift_report_draft_revision_436",
+        "entries": 2,
+        "passed": true
+      },
+      {
+        "folder": "progress_report_436",
+        "entries": 12,
+        "passed": true
+      }
+    ],
+    "plots_reviewed": [
+      "support_transition.png",
+      "interpolation_defects.png"
+    ],
+    "html_sections_reviewed": [
+      "scope and unchanged430 gates",
+      "three support failures and boundary distinction",
+      "corner ordering and moment identity",
+      "exact values and failed extra buffer",
+      "original434 and435 failures with limited inherited evidence",
+      "CSV links and source JSON",
+      "physical/PPO/effort status",
+      "loaded unchanged video307"
+    ],
+    "video_duration_s": 58.4,
+    "video_ready_state": 4,
+    "video_rerendered": false,
+    "completed_files_modified": false,
+    "actual_float32_filter_ticks": 0,
+    "physical_admission": false
+  },
+  "workers": [],
+  "assessment_actual_exit": 0,
+  "original_assessment_actual_exit": 1,
+  "original_audit_actual_exit": 1,
+  "corrected_audit_actual_exit": 0,
+  "report_actual_exit": 0,
+  "finite_work_columns_completed_once_in_original_audit": 23472,
+  "finite_work_columns_repeated": 0,
+  "detailed_finite_work_array_available": false,
+  "physics_ticks": 0,
+  "actual_candidate_command_schedule_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "best_clean": "64/72",
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "main_ppo_started": false,
+  "fresh_holdout_started": false,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}
