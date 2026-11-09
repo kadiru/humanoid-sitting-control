@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-17T15:55:00.886479+00:00",
+  "scope": "Bounded OFFLINE centered-stance contact planning, after219\u2013226.\nFixed y=0. Vary root-x/roll/pitch/yaw ONLY within previously documented58 bounds.\nMaximize minimum whole-path housing clearance while enforcing existing gates plus\nseparate research limits on assumed L/R foot-load difference<=.1BW and ankle-roll\ncommand change<=.04rad. This targets the recorded lateral stance/roll association,\nnot a proven cause. Static loads remain assumptions. Max40 unique19-knot checks,\n10 SLSQP iterations, ONE91-knot check for each of four known failing geometries.\nNo simulation, runtime/control modification, optimizer learning, holdout or admission.\n",
+  "maximum_evaluations_per_geometry": 40,
+  "maximum_iterations": 10,
+  "dense_checks_per_geometry": 1,
+  "variable_bounds": [
+    [
+      -0.28,
+      -0.1
+    ],
+    [
+      -0.20943951023931956,
+      0.20943951023931956
+    ],
+    [
+      0.08726646259971647,
+      0.6632251157578453
+    ],
+    [
+      -0.6108652381980153,
+      0.6108652381980153
+    ]
+  ],
+  "fixed_lateral_root_m": 0.0,
+  "research_foot_load_difference_BW": 0.1,
+  "research_ankle_roll_command_change_rad": 0.04,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/refine_low_seat_centered_orientation_227.py": "bc85461ee74563d53dbb2657293c26a0edeb5ab4671b9558a887780b39d993ab",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+    "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json": "69e0920e2bec88a43b7a6dc41d0fc361500d060ef09e3e3a07bb04cdaf569584",
+    "/data/humanoid-sitting-perception/contact_effort_repair_01/plane_calibration.json": "6a6a0f078ced3d3510897e96670c26226dee25d495653a222cf1dd52e97a8009",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/stance_diagnosis_219/results.json": "d4c2765e21f82e39e0daaf37a5f83132ed635f1932692b702d6ed94842e6b722",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_centered_coarse_223.py": "57bf0408d2d4ad44927a267e199d08158ef3c259b6e8ed970cfbec388fa92d30",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_fixed_foot_plan_126.py": "1ebd0014cff6bf3558daf406a304aa523d20143f1d6f4ceeecd14eed27896b63",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_balanced_force_v2_145.py": "d48a9422da8570c69077edbcfe50d79f3f59453541b4128c292e176d49d12425",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_touchdown_path_175.py": "31c0fd2caf366b85249c05b56197722d95bc792269b894cbe538b3d1e8002a7e",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_path_check_221/case_0.json": "2f63c861c67f345ab2247bef5c571ec94e55d5519091cd831d3ed5077311a5c3",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_path_check_221/case_2.json": "6d44d84ce386b914aad25647692cb70a08ad72b90d98aa28d1fdd3a5a0f041eb",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_path_check_221/case_6.json": "a8af75aa47d09cb67ad8155f9f2fb2e57af7ae7d90d14373911b9c3fccfb0f5f",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/centered_path_check_221/case_10.json": "678cda624fa957b2078a3e93cc745736f5a8a7f7ee21cdaf05b874fcc68971de"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "holdout_used": false
+}
