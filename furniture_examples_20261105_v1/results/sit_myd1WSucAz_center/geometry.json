@@ -1,0 +1,62 @@
+[
+  {
+    "case": 0,
+    "label": "sit_myd1WSucAz_center",
+    "kind": "sit",
+    "family": "slab",
+    "height": 0.370718015454061,
+    "x": -0.390015918365486,
+    "y": 1.0013363245911664e-08,
+    "yaw": 0.0,
+    "pitch_deg": 2.561320938754782e-06,
+    "depth": 0.5,
+    "width": 0.9,
+    "top_center": [
+      -0.390015918365486,
+      1.0013363245911664e-08,
+      0.370718015454061
+    ],
+    "normal": [
+      4.371138815344547e-08,
+      2.2477389510237026e-18,
+      0.999999999999999
+    ],
+    "rotation_xyzw": [
+      -1.1238694755118511e-18,
+      2.185569407672274e-08,
+      2.4562947438953866e-26,
+      0.9999999999999998
+    ],
+    "source": "/data/humanoid-sitting-perception/resting_seated_capture_dev02",
+    "source_index": 12,
+    "split": "development",
+    "surface_id": 0,
+    "source_case": 3,
+    "stage": 6,
+    "phase": 1.0,
+    "pitch_correction_rad": 0.0,
+    "source_validation": "/data/humanoid-sitting-perception/two_surface_curriculum_01/candidate_validation_01",
+    "source_case_index": 56,
+    "known_anchor": false,
+    "reset_scope": "Original standing reset only",
+    "source_scope": "Furniture target truth is evaluation/reset only; runtime plane comes from camera",
+    "start_stage": 0,
+    "control_profile": {
+      "name": "transfer15_pitch55",
+      "kp": 0.6,
+      "kd": 0.15,
+      "cap": 0.25,
+      "command_step": 0.003,
+      "adapt_plane": true,
+      "front_contact": true,
+      "contact_pitch": 0.55,
+      "contact_x": -0.15,
+      "contact_gap": -0.015,
+      "x_gain": 1.0,
+      "approach_x": -0.12,
+      "approach_pitch": 0.65,
+      "approach_gap": 0.055
+    },
+    "effort_scale_Nm2": 1500.0
+  }
+]
