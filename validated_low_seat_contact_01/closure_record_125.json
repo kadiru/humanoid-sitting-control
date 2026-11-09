@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-17T11:41:58.394068+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_physical_ticks": 0,
+  "new_optimizer_updates": 0,
+  "holdout_started": false,
+  "prior_recheck": {
+    "utc": "2026-10-17T11:41:57.817456+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "mismatches": [],
+        "passed": true
+      },
+      {
+        "manifest": "completed_probes_preservation_111.json",
+        "checked": 3099,
+        "mismatches": [],
+        "passed": true
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_125.json",
+  "protected_completed_files": 3230,
+  "manifest_sha256": "9f3ced64cad6f843a6376e4ed40a4f6ec4944c4bb2db1ddf6ef42e768a05eef3",
+  "new_planning_sources_rechecked": true,
+  "physical_workers_running": false,
+  "model_workers_running": false,
+  "audit_workers_running": false,
+  "report": "progress_report_124",
+  "local_review": {
+    "utc": "2026-10-17T11:41:11.273097+00:00",
+    "report": "progress_report_124",
+    "original_report_hashes_verified": 14,
+    "all_local_result_audit_report_manifests": 25,
+    "all_local_original_entries_verified": 50,
+    "supplemental_review_entries": 3,
+    "plots_visually_inspected": [
+      "fixed_foot_paths.png",
+      "rejected_bounds.png"
+    ],
+    "browser_visually_inspected": true,
+    "browser_url": "http://127.0.0.1:8807/progress_report_124/review.html",
+    "tables_checked": true,
+    "physical_motion_added": false,
+    "video_current": true,
+    "original_html_sha256": "e52608b557940e7cd77772fc73ecc0bbafa4ef19cd3f7451a6b01dd1fccf5ca7",
+    "review_html_sha256": "b701c5e616fcf0f9aaf41bdc8b22251be7b397c45b7d2a1ea99ccad5b4848b4a"
+  },
+  "handoff_sha256": "bab11a537775edf143b907cad5ef4540677dcacb0f4c1272126fbd31c9556d6e",
+  "next": "Do not rerun112\u2013123. Prepare measuredsensor runtime and boundedvalidation for two offline paths onlyafter completecontrol/load/parentchecks; designremaining36/+20and36.5/+17.5. No automaticphysicallaunch fromauditpass. All72matchedphysicalgates beforePPO. Video59current; no newmotion."
+}
