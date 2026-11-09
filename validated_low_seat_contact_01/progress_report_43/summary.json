@@ -1,0 +1,94 @@
+{
+  "utc": "2026-10-17T07:32:06.737331+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "physical_candidate40_rejected": true,
+  "counts": {
+    "Original parent59117": {
+      "stable": 22,
+      "clean": 8,
+      "slip": 16,
+      "contact": 2,
+      "physical": 2,
+      "warnings": 21
+    },
+    "Best normal3s": {
+      "stable": 22,
+      "clean": 14,
+      "slip": 10,
+      "contact": 2,
+      "physical": 2,
+      "warnings": 21
+    },
+    "Rear-only staged36": {
+      "stable": 16,
+      "clean": 14,
+      "slip": 2,
+      "contact": 3,
+      "physical": 3,
+      "warnings": 14
+    },
+    "Current fallback40": {
+      "stable": 16,
+      "clean": 14,
+      "slip": 2,
+      "contact": 6,
+      "physical": 6,
+      "warnings": 16
+    }
+  },
+  "remaining_target_cases": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    7,
+    10,
+    11
+  ],
+  "lost_best_clean": [],
+  "gained_best_clean": [],
+  "added_physical_cases": [
+    6,
+    7,
+    10,
+    11
+  ],
+  "exact_preservation_gate_passed": false,
+  "software_audit_passed": true,
+  "current_plane_replay_exact": true,
+  "actual414_chosen_geometry_exact": true,
+  "down_fallback_case_frames": 368,
+  "paused_env_ticks": 0,
+  "budget": {
+    "active": 24000,
+    "initial_settling_excluded": 600,
+    "warmup": 0,
+    "optimizer_updates": 0
+  },
+  "ppo_started": false,
+  "fresh_holdout_started": false,
+  "best_full72": {
+    "clean": 64,
+    "stable": 70,
+    "slip": 8,
+    "housing": 2,
+    "original_union_retained": 60,
+    "warnings": 50,
+    "strict_clean": 22
+  },
+  "planning_omission": "The staged36/40 .9rad endpoint is51.566deg: exceeds unchanged40deg qualifying-support tilt. Its model checks included clearance/rate/foot support but omitted this final-posture requirement. The55deg fall limit is a different criterion. Original physical failures and audits remain unchanged.",
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/independent_dual_view_audit_40.json": "cf92e94c9d3618fd7ad3a777cf8e7ce8b0ab52205e1554eb94ff19c5dd3a0400",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/independent_staged_audit_36.json": "0b2f90e2931d42b8f3b12779d0f7566fe5b58421a7bf0781f9f791e2453e71a7",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/candidate/sensor_control_audit.json": "06e98df060c7735fd60a837177a4bcd84a67fca886d9a6a2ec503604c4f94045",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_approach_40/revision.json": "06456323874ab6101fdd0d7297a747bf19d29ede72a37ce5a0bcde13ba79b338",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/support_diagnosis_41/recorded_support.json": "ec250deab606d9c2aaccda4138cc7c3b8a7aa4833e93ea7afad0e3c163042ff9",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/support_diagnosis_41/support_and_tilt.png": "e9a2730f9b340579bfa14235812e8f30d9d4cfaf1b3d053b5dda6ad4c4769892",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/terminal_screen_42/results.json": "105b0892c8dbb365599af6e383d09113b29d495412785c5248e5de3f208e2320",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/terminal_screen_42/contract_checks.json": "ed05e4932d3a92377c3ac2d46d07df52c9b9a786941fa99f7f7939b0ed563513",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_audit_39/independent_audit.json": "bd4f4bf0892a943258e13018e40b884db994093d7b2a2227a2a6991402b5a064",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/dual_view_audit_39/recorded_depth.png": "9953c95754a4b9ad7a2dc1bcbd34bc55277ee9b4cdea83d6fdd7377efe7e3fac"
+  }
+}
