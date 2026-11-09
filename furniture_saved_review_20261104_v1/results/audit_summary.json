@@ -1,0 +1,1315 @@
+{
+  "source_run": "furniture_perception_repair_20261029_v1",
+  "simulator_steps": 0,
+  "ppo_updates": 0,
+  "trials": [
+    {
+      "id": "6MoOyPtetL_seat",
+      "furniture": "Box-arm couch",
+      "approach": "seat",
+      "task": "sitting",
+      "robot": {
+        "passed": true,
+        "id": "6MoOyPtetL_seat",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 448,
+        "first_recorded_failure_s": 11.0,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "8bca80a0d3e451a25c7290ac74371fec4cd1e31c64e8c13f0c6590c5ce46e35a",
+        "inputs": {
+          "trajectory.npz": "8bca80a0d3e451a25c7290ac74371fec4cd1e31c64e8c13f0c6590c5ce46e35a",
+          "results.json": "3d67149ed537a497a3797876add5661d142bc9ae335fc3e41131675a7aeb7750",
+          "manifest.json": "cdf5b061ebd229ea15496f7697e0e239191a95c12f62ad26e6bb30dd46aeca97",
+          "contact_mapping.json": "cebbc16c61f620a3bb4b6c5994d8bbaa50c8304f2f83f7123287898441db27fc",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "6MoOyPtetL_seat",
+          "round": 0,
+          "body": "pelvis",
+          "physical_support": true,
+          "intended_contact_patch": false,
+          "mean_load_N": 131.17915463738208,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "6MoOyPtetL_seat",
+          "round": 1,
+          "body": "left_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 65.18106059870165,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "6MoOyPtetL_seat",
+          "round": 2,
+          "body": "right_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 101.9481651904562,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 1,
+      "on_target_load_passes": 0,
+      "depth_geometry": true,
+      "plane_gate": false
+    },
+    {
+      "id": "6MoOyPtetL_seat_oblique",
+      "furniture": "Box-arm couch",
+      "approach": "seat_oblique",
+      "task": "sitting",
+      "robot": {
+        "passed": true,
+        "id": "6MoOyPtetL_seat_oblique",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          true,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "fall",
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 557,
+        "illegal_ticks": 553,
+        "first_recorded_failure_s": 8.86,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "9d863944e861d03cf35181a55fc9322d9a137c73975d710a41e36ba3bbdbede3",
+        "inputs": {
+          "trajectory.npz": "9d863944e861d03cf35181a55fc9322d9a137c73975d710a41e36ba3bbdbede3",
+          "results.json": "e6df1fe8cb74f75f7a68dc4b26bfe45edbc5394a88abf1233470e9aed64950b8",
+          "manifest.json": "d0b4a9263780dd1b106e8ad1be29657ab5815e3d69394b725a6cca94b28e1d1f",
+          "contact_mapping.json": "be2746e6d979dcfabb426fd1d96be6894d0fde21b19688ad740a5d6a3072c491",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "6MoOyPtetL_seat_oblique",
+          "round": 0,
+          "body": "pelvis",
+          "physical_support": true,
+          "intended_contact_patch": false,
+          "mean_load_N": 156.60263136895753,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "6MoOyPtetL_seat_oblique",
+          "round": 1,
+          "body": "left_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 82.89231304737318,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "6MoOyPtetL_seat_oblique",
+          "round": 2,
+          "body": "right_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 56.07314745377375,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 1,
+      "on_target_load_passes": 0,
+      "depth_geometry": true,
+      "plane_gate": false
+    },
+    {
+      "id": "6MoOyPtetL_arm",
+      "furniture": "Box-arm couch",
+      "approach": "arm",
+      "task": "sitting",
+      "robot": {
+        "passed": true,
+        "id": "6MoOyPtetL_arm",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": true,
+        "clean": false,
+        "physical_failures": [
+          true,
+          true,
+          false,
+          false,
+          true
+        ],
+        "failure_types": [
+          "fall",
+          "forbidden contact",
+          "joint limit"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 12,
+        "illegal_ticks": 0,
+        "first_recorded_failure_s": 3.06,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "21a7b5c45e32d3bb3f56beacf5ff46bbd77a1f922607ec559c7b90f269ad7c6c",
+        "inputs": {
+          "trajectory.npz": "21a7b5c45e32d3bb3f56beacf5ff46bbd77a1f922607ec559c7b90f269ad7c6c",
+          "results.json": "666c543dc6bfedcd64b32fbde49ca04234ce387a0ea5aa22780bcb8559ac5472",
+          "manifest.json": "7a6e89591bb78e7ee0a698d51355defe3ef43d8f41e12a56262cc7a346b6e3ab",
+          "contact_mapping.json": "acde6af74aa8fc41dc56d34ecc86089e2263bd2443d21801f5cc6182149a7097",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "6MoOyPtetL_arm",
+          "round": 0,
+          "body": "pelvis",
+          "physical_support": true,
+          "intended_contact_patch": false,
+          "mean_load_N": 155.28312688725856,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "6MoOyPtetL_arm",
+          "round": 1,
+          "body": "left_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 22.135575304583277,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "6MoOyPtetL_arm",
+          "round": 2,
+          "body": "right_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 63.29612747611169,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 1,
+      "on_target_load_passes": 0,
+      "depth_geometry": true,
+      "plane_gate": false
+    },
+    {
+      "id": "6MoOyPtetL_rear_back",
+      "furniture": "Box-arm couch",
+      "approach": "rear_back",
+      "task": "leaning",
+      "robot": {
+        "passed": true,
+        "id": "6MoOyPtetL_rear_back",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 917,
+        "first_recorded_failure_s": 1.68,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "745f7fff4d26282f8db3d93e3f51959b48b36d17431cd9b7e64a26c88c30f4d8",
+        "inputs": {
+          "trajectory.npz": "745f7fff4d26282f8db3d93e3f51959b48b36d17431cd9b7e64a26c88c30f4d8",
+          "results.json": "f160d2626a9dc973e7f618b111e10f6230035f0f7d92fe576c218c45222fc13d",
+          "manifest.json": "07c964d49c4538fbe6e275343de4547037a55bcdb948109a281b83fa2987b6e1",
+          "contact_mapping.json": "36ff93632bc3521acf23fac4140db872cf126c9af7e6d555bec95548ae68c017",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_step_v5/audit.py",
+        "physical_audit_sha256": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "6MoOyPtetL_rear_back",
+          "round": 0,
+          "body": "torso_link",
+          "physical_support": true,
+          "intended_contact_patch": false,
+          "mean_load_N": 158.18710036979945,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "6MoOyPtetL_rear_back",
+          "round": 1,
+          "body": "torso_link",
+          "physical_support": true,
+          "intended_contact_patch": false,
+          "mean_load_N": 158.13852707055042,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "6MoOyPtetL_rear_back",
+          "round": 2,
+          "body": "torso_link",
+          "physical_support": true,
+          "intended_contact_patch": false,
+          "mean_load_N": 158.06720222013396,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 3,
+      "on_target_load_passes": 0,
+      "depth_geometry": true,
+      "plane_gate": false
+    },
+    {
+      "id": "myd1WSucAz_seat",
+      "furniture": "Box armchair",
+      "approach": "seat",
+      "task": "sitting",
+      "robot": {
+        "passed": true,
+        "id": "myd1WSucAz_seat",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 4,
+        "illegal_ticks": 482,
+        "first_recorded_failure_s": 10.38,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "9dcea4bca2fd3857c555326a1fbaeb2dbfe24d1adad525bfc759dbad8dac80f2",
+        "inputs": {
+          "trajectory.npz": "9dcea4bca2fd3857c555326a1fbaeb2dbfe24d1adad525bfc759dbad8dac80f2",
+          "results.json": "b454231e97a3689969e7e97c7be13e014cd029647d3c8b8270824bd05f1bbebb",
+          "manifest.json": "fec39beff0c20c34ebf0ae24fda73d6f49c47dddab08b3e859cdfcf1f802ba5f",
+          "contact_mapping.json": "bfe36336ccb914ec0ca06e8f82fafc2b64b241c9f9cb1d002970151dc6977bfd",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "myd1WSucAz_seat",
+          "round": 0,
+          "body": "pelvis",
+          "physical_support": true,
+          "intended_contact_patch": true,
+          "mean_load_N": 156.7144673509584,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "myd1WSucAz_seat",
+          "round": 1,
+          "body": "left_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 192.42095078117956,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "myd1WSucAz_seat",
+          "round": 2,
+          "body": "right_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": true,
+          "mean_load_N": 121.72359631996044,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 1,
+      "on_target_load_passes": 1,
+      "depth_geometry": true,
+      "plane_gate": true
+    },
+    {
+      "id": "myd1WSucAz_seat_oblique",
+      "furniture": "Box armchair",
+      "approach": "seat_oblique",
+      "task": "sitting",
+      "robot": {
+        "passed": true,
+        "id": "myd1WSucAz_seat_oblique",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": true,
+        "clean": false,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 0,
+        "first_recorded_failure_s": 8.08,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "a548ff727be736c18d92d5c4bae120c4dd9470467c5e2bd4da9d3c4abdc5e41f",
+        "inputs": {
+          "trajectory.npz": "a548ff727be736c18d92d5c4bae120c4dd9470467c5e2bd4da9d3c4abdc5e41f",
+          "results.json": "c0ea2e925d5f36846ef90e399d04fa1723ab09757df96ab409702fc3281b1002",
+          "manifest.json": "65b1b7378c1cfd99e06af7612ba320fbe73b1e21249635eadba35c491d3f4c3d",
+          "contact_mapping.json": "8f52383c2fc1eb18eae6f8a6ee7122260d181f747395cdb808eff8c2b9fab807",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "myd1WSucAz_seat_oblique",
+          "round": 0,
+          "body": "pelvis",
+          "physical_support": true,
+          "intended_contact_patch": true,
+          "mean_load_N": 148.11901770231498,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "myd1WSucAz_seat_oblique",
+          "round": 1,
+          "body": "left_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 205.12006226579044,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "myd1WSucAz_seat_oblique",
+          "round": 2,
+          "body": "right_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 98.19938686445657,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 1,
+      "on_target_load_passes": 1,
+      "depth_geometry": true,
+      "plane_gate": true
+    },
+    {
+      "id": "myd1WSucAz_arm",
+      "furniture": "Box armchair",
+      "approach": "arm",
+      "task": "sitting",
+      "robot": {
+        "passed": true,
+        "id": "myd1WSucAz_arm",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": true,
+        "clean": false,
+        "physical_failures": [
+          true,
+          true,
+          false,
+          false,
+          true
+        ],
+        "failure_types": [
+          "fall",
+          "forbidden contact",
+          "joint limit"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 12,
+        "illegal_ticks": 0,
+        "first_recorded_failure_s": 3.2600000000000002,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "9928754345abb75f03e5d31c43dbda73d4e87a070ae2ca99f6966a8522c798c5",
+        "inputs": {
+          "trajectory.npz": "9928754345abb75f03e5d31c43dbda73d4e87a070ae2ca99f6966a8522c798c5",
+          "results.json": "cbaaff6cd6957fef450d41d8a54f5801a216f128406b53df0dd9345d7c9eb591",
+          "manifest.json": "093ff9733134968666f7e9e8ebc6afece74839951c9eda1a51c3323f296d6ee3",
+          "contact_mapping.json": "8d5ed1ca487a6d9ee3d3654863dcd9246bd2fc977f2c118b698c7b5ff3833c38",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "myd1WSucAz_arm",
+          "round": 0,
+          "body": "pelvis",
+          "physical_support": true,
+          "intended_contact_patch": true,
+          "mean_load_N": 145.16393093343274,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "myd1WSucAz_arm",
+          "round": 1,
+          "body": "left_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 31.38313866782625,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "myd1WSucAz_arm",
+          "round": 2,
+          "body": "right_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 164.6709504854264,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 1,
+      "on_target_load_passes": 1,
+      "depth_geometry": true,
+      "plane_gate": true
+    },
+    {
+      "id": "myd1WSucAz_rear_back",
+      "furniture": "Box armchair",
+      "approach": "rear_back",
+      "task": "leaning",
+      "robot": {
+        "passed": true,
+        "id": "myd1WSucAz_rear_back",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": true,
+        "clean": false,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 941,
+        "first_recorded_failure_s": 1.2,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "bc6ffc5b83668da1dd2868e1aac2595f2f5626856db6fd61bc8e5a2277913e72",
+        "inputs": {
+          "trajectory.npz": "bc6ffc5b83668da1dd2868e1aac2595f2f5626856db6fd61bc8e5a2277913e72",
+          "results.json": "50a32e12afdf22bf2117033a57fdbd2525699ada37317f85b05739ddcaf53915",
+          "manifest.json": "ebd21fa3b16868a4f37245141637b8993ef0043279c333d4f7992b72ed0f3114",
+          "contact_mapping.json": "b788a9e09ec5509bad32aad2cfbe550384af97510a2a2e3b17fb40fd405c89da",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_step_v5/audit.py",
+        "physical_audit_sha256": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "myd1WSucAz_rear_back",
+          "round": 0,
+          "body": "torso_link",
+          "physical_support": true,
+          "intended_contact_patch": true,
+          "mean_load_N": 157.909098253747,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "myd1WSucAz_rear_back",
+          "round": 1,
+          "body": "torso_link",
+          "physical_support": true,
+          "intended_contact_patch": true,
+          "mean_load_N": 157.90421867970818,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "myd1WSucAz_rear_back",
+          "round": 2,
+          "body": "torso_link",
+          "physical_support": true,
+          "intended_contact_patch": true,
+          "mean_load_N": 157.90565928584184,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 3,
+      "on_target_load_passes": 3,
+      "depth_geometry": true,
+      "plane_gate": true
+    },
+    {
+      "id": "wooden_stool_01_top",
+      "furniture": "Round wooden stool",
+      "approach": "top",
+      "task": "sitting",
+      "robot": {
+        "passed": true,
+        "id": "wooden_stool_01_top",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 465,
+        "first_recorded_failure_s": 10.72,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "8f7d152816326633bc280046c55b61c1bc0c4b936982aad3f68f6cb91f57c830",
+        "inputs": {
+          "trajectory.npz": "8f7d152816326633bc280046c55b61c1bc0c4b936982aad3f68f6cb91f57c830",
+          "results.json": "c3a77b8925105427816daed9d92656c4b0229be8e2097cf2e9558caa700cc0ad",
+          "manifest.json": "71ac48c685ff420fa60ebdee8d189a2df0dc704dddb86569add1b897cb6b92d3",
+          "contact_mapping.json": "a7966bbe1c3cf97319f86f5553833bccb412149d5acb36c8c24d3409a0727404",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "wooden_stool_01_top",
+          "round": 0,
+          "body": "pelvis",
+          "physical_support": true,
+          "intended_contact_patch": false,
+          "mean_load_N": 152.32377575988173,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "wooden_stool_01_top",
+          "round": 1,
+          "body": "left_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 223.6913743368832,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "wooden_stool_01_top",
+          "round": 2,
+          "body": "right_hip_yaw_link",
+          "physical_support": true,
+          "intended_contact_patch": false,
+          "mean_load_N": 141.01995994533482,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 2,
+      "on_target_load_passes": 0,
+      "depth_geometry": true,
+      "plane_gate": true
+    },
+    {
+      "id": "wooden_stool_01_top_oblique",
+      "furniture": "Round wooden stool",
+      "approach": "top_oblique",
+      "task": "sitting",
+      "robot": {
+        "passed": true,
+        "id": "wooden_stool_01_top_oblique",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 6,
+        "illegal_ticks": 445,
+        "first_recorded_failure_s": 11.120000000000001,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "a523dc9fd582f7aff2fc7212a58db54f9790412bed00edb773c95e272001598f",
+        "inputs": {
+          "trajectory.npz": "a523dc9fd582f7aff2fc7212a58db54f9790412bed00edb773c95e272001598f",
+          "results.json": "e11bb6a083d8837905f401b8b86f546e84142f96c54ece7b12ac8f1d35fef2fc",
+          "manifest.json": "4e09ba7a10420f0a4c207ff1184c94ec189acacd7a7abefec9876965b5dbbb57",
+          "contact_mapping.json": "a0e1812bc6add08b6a8132e8e1253287887eacb63f52a765eef347c006abff03",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "wooden_stool_01_top_oblique",
+          "round": 0,
+          "body": "pelvis",
+          "physical_support": true,
+          "intended_contact_patch": false,
+          "mean_load_N": 158.31030074678043,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "wooden_stool_01_top_oblique",
+          "round": 1,
+          "body": "left_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 77.63507609846657,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "wooden_stool_01_top_oblique",
+          "round": 2,
+          "body": "right_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 116.95199754612045,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 1,
+      "on_target_load_passes": 0,
+      "depth_geometry": true,
+      "plane_gate": false
+    },
+    {
+      "id": "modern_coffee_table_01_top",
+      "furniture": "Rectangular coffee table",
+      "approach": "top",
+      "task": "sitting",
+      "robot": {
+        "passed": true,
+        "id": "modern_coffee_table_01_top",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 481,
+        "first_recorded_failure_s": 10.4,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "cec9d87ae9148b3a2907a94140b5d53b7f5562f0d6260ebb90624044506a8a5a",
+        "inputs": {
+          "trajectory.npz": "cec9d87ae9148b3a2907a94140b5d53b7f5562f0d6260ebb90624044506a8a5a",
+          "results.json": "f1605ca9e75e70c281da375cff2b7b63b50382ec61bfb40a47a224ee5d20db57",
+          "manifest.json": "40d511aa4c76152e91653a6069b2cad0974897ee07d0aa3dad8767cd72d9b0af",
+          "contact_mapping.json": "7e903777f0b2edc62c68da5fa5990202e4284bcfca7abdff3fb3f506a8edcbc2",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "modern_coffee_table_01_top",
+          "round": 0,
+          "body": "pelvis",
+          "physical_support": true,
+          "intended_contact_patch": false,
+          "mean_load_N": 171.44112016616316,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "modern_coffee_table_01_top",
+          "round": 1,
+          "body": "left_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": false,
+          "mean_load_N": 123.18766479550462,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "modern_coffee_table_01_top",
+          "round": 2,
+          "body": "right_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": true,
+          "mean_load_N": 107.74827548085287,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 1,
+      "on_target_load_passes": 0,
+      "depth_geometry": true,
+      "plane_gate": true
+    },
+    {
+      "id": "modern_coffee_table_01_top_oblique",
+      "furniture": "Rectangular coffee table",
+      "approach": "top_oblique",
+      "task": "sitting",
+      "robot": {
+        "passed": true,
+        "id": "modern_coffee_table_01_top_oblique",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          true,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "fall",
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 47,
+        "illegal_ticks": 2,
+        "first_recorded_failure_s": 10.46,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "416b364ca7bb1164c535a869a2bfe4afbfebeecbcfa8c3a2e97a61db8596ada0",
+        "inputs": {
+          "trajectory.npz": "416b364ca7bb1164c535a869a2bfe4afbfebeecbcfa8c3a2e97a61db8596ada0",
+          "results.json": "03ca07350e4dbc2cd992fc12e98f8602316bcd6444b7aab61a5c1de1b561bd1b",
+          "manifest.json": "c9fa783940bc1d37e842fa41a18b9194993ff0eb3f249345814d03d04ce0adb8",
+          "contact_mapping.json": "20e00b03fb80c383d010c02d062506fae62e11289812dd4bf41420dbe54466d2",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "modern_coffee_table_01_top_oblique",
+          "round": 0,
+          "body": "pelvis",
+          "physical_support": true,
+          "intended_contact_patch": false,
+          "mean_load_N": 145.24033535164537,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "modern_coffee_table_01_top_oblique",
+          "round": 1,
+          "body": "left_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": true,
+          "mean_load_N": 97.62728719786715,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "modern_coffee_table_01_top_oblique",
+          "round": 2,
+          "body": "right_hip_yaw_link",
+          "physical_support": false,
+          "intended_contact_patch": true,
+          "mean_load_N": 75.07686289326327,
+          "checks": {
+            "sustained_contact": false,
+            "load_capacity": false,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 1,
+      "on_target_load_passes": 0,
+      "depth_geometry": true,
+      "plane_gate": true
+    },
+    {
+      "id": "wooden_table_02_top",
+      "furniture": "Rectangular wooden table",
+      "approach": "top",
+      "task": "leaning",
+      "robot": {
+        "passed": true,
+        "id": "wooden_table_02_top",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": true,
+        "clean": false,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 956,
+        "first_recorded_failure_s": 0.9,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "17e155401ac4e82c52f9230423b5dd906085c38f0c3da3cada4aee2951e13fdc",
+        "inputs": {
+          "trajectory.npz": "17e155401ac4e82c52f9230423b5dd906085c38f0c3da3cada4aee2951e13fdc",
+          "results.json": "e0ba7a51011a35b32c8c93c4823a97d91dbe4e5b56b48d181d848e77f22fcc03",
+          "manifest.json": "b012b581adae760e2673bef1d186f322612ce46c75be13329d9706a2ce9b872e",
+          "contact_mapping.json": "7222dc1bb9930bd7f1722b33ce91c5fda802a3fa955d440acc8b93a8b0890808",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_step_v5/audit.py",
+        "physical_audit_sha256": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "wooden_table_02_top",
+          "round": 0,
+          "body": "torso_link",
+          "physical_support": true,
+          "intended_contact_patch": true,
+          "mean_load_N": 157.9068900557272,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "wooden_table_02_top",
+          "round": 1,
+          "body": "torso_link",
+          "physical_support": true,
+          "intended_contact_patch": true,
+          "mean_load_N": 157.90566433407102,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "wooden_table_02_top",
+          "round": 2,
+          "body": "torso_link",
+          "physical_support": true,
+          "intended_contact_patch": true,
+          "mean_load_N": 157.90193275844322,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 3,
+      "on_target_load_passes": 3,
+      "depth_geometry": true,
+      "plane_gate": true
+    },
+    {
+      "id": "wooden_table_02_top_oblique",
+      "furniture": "Rectangular wooden table",
+      "approach": "top_oblique",
+      "task": "leaning",
+      "robot": {
+        "passed": true,
+        "id": "wooden_table_02_top_oblique",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 22,
+        "illegal_ticks": 949,
+        "first_recorded_failure_s": 1.04,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "904ed1a196932a1ecd9183002d3f80868485c02bd4d96bf56d33deca6b1e1f46",
+        "inputs": {
+          "trajectory.npz": "904ed1a196932a1ecd9183002d3f80868485c02bd4d96bf56d33deca6b1e1f46",
+          "results.json": "51ce383f7b21367528f5d04d6bd5e6bb9ec06278ea119edbd24e4dc9db3c7285",
+          "manifest.json": "6a960578d48529102e9752421a41d794ae58e6ff497933681de26e667ee73bcf",
+          "contact_mapping.json": "abd00e2e345b93ea6b47c64bbdbdf03be7957407de1cf784d395d69047df93f1",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_step_v5/audit.py",
+        "physical_audit_sha256": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      },
+      "fixture": [
+        {
+          "case": "wooden_table_02_top_oblique",
+          "round": 0,
+          "body": "torso_link",
+          "physical_support": true,
+          "intended_contact_patch": true,
+          "mean_load_N": 157.9030428367041,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "wooden_table_02_top_oblique",
+          "round": 1,
+          "body": "torso_link",
+          "physical_support": true,
+          "intended_contact_patch": true,
+          "mean_load_N": 157.89578929090044,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        },
+        {
+          "case": "wooden_table_02_top_oblique",
+          "round": 2,
+          "body": "torso_link",
+          "physical_support": true,
+          "intended_contact_patch": true,
+          "mean_load_N": 157.91281930490283,
+          "checks": {
+            "sustained_contact": true,
+            "load_capacity": true,
+            "force_balance": true,
+            "filter_consistency": true
+          }
+        }
+      ],
+      "load_passes": 3,
+      "on_target_load_passes": 3,
+      "depth_geometry": true,
+      "plane_gate": true
+    }
+  ],
+  "fixture_load_N": 158.13193578645974,
+  "whole_robot_clean": 0,
+  "raw_clean": 0,
+  "unvalidated_scores": 9,
+  "fixture_load_passes": 23,
+  "fixture_on_target_load_passes": 12,
+  "fixture_audit_sha256": "134f70144a4809d6e06a2127636e0944fc9f444ae76444f7bf285b52c619bc37"
+}

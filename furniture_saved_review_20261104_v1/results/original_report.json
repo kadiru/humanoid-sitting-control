@@ -1,0 +1,2184 @@
+{
+  "complete": true,
+  "retention72": {
+    "clean": 32,
+    "repairs": [],
+    "regressions": [
+      "known_old/14",
+      "known_old/15",
+      "known_old/16",
+      "known_old/17",
+      "known_old/18",
+      "known_old/19",
+      "known_old/8",
+      "known_old/9",
+      "known_recent/10",
+      "known_recent/11",
+      "known_recent/12",
+      "known_recent/13",
+      "known_recent/16",
+      "known_recent/17",
+      "known_recent/18",
+      "known_recent/19",
+      "known_recent/2",
+      "known_recent/3",
+      "known_recent/8",
+      "known_recent/9",
+      "known_transfer/10",
+      "known_transfer/11",
+      "known_transfer/12",
+      "known_transfer/13",
+      "known_transfer/18",
+      "known_transfer/19",
+      "known_transfer/2",
+      "known_transfer/20",
+      "known_transfer/21",
+      "known_transfer/3",
+      "known_transfer/6",
+      "known_transfer/7"
+    ],
+    "lost_vs_same_checkpoint_original_perception": [
+      "known_transfer/7"
+    ],
+    "gained_vs_same_checkpoint_original_perception": [
+      "known_old/2",
+      "known_old/3",
+      "known_transfer/1"
+    ],
+    "independent_audit": true
+  },
+  "furniture": [
+    {
+      "id": "6MoOyPtetL_seat",
+      "task": "sitting",
+      "approach": "seat",
+      "depth": {
+        "complete": true,
+        "case": "6MoOyPtetL_seat",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "9867dacb4add08acccafebea5c477f288e070c210d14d0d26c307f7ccff722a3",
+            "projected_pixels": 1212,
+            "matching_pixels": 1212,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 450,
+            "target_observable": true,
+            "depth_p99_m": 2.902138949134607e-07,
+            "selected_point_count": 1250,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 2.4389592754429755e-07,
+            "original_plane_gate": false,
+            "normal_error_deg": 4.336387250634122,
+            "offset_error_m": 0.027352165035952114
+          },
+          {
+            "frame": 1,
+            "input_sha256": "d2134244da3bbac665694ac902e970acbd9302e8aae01add113fe1b27d848a43",
+            "projected_pixels": 1212,
+            "matching_pixels": 1212,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 450,
+            "target_observable": true,
+            "depth_p99_m": 3.14677567951894e-07,
+            "selected_point_count": 1251,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 2.3053291807126957e-07,
+            "original_plane_gate": false,
+            "normal_error_deg": 4.34206517555726,
+            "offset_error_m": 0.02741972693612127
+          },
+          {
+            "frame": 2,
+            "input_sha256": "72ca190597807be6526b777b301b58aaa903dc860005eccfe598b38f3681592e",
+            "projected_pixels": 1210,
+            "matching_pixels": 1210,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 449,
+            "target_observable": true,
+            "depth_p99_m": 3.350177441174829e-07,
+            "selected_point_count": 1173,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 2.3307358938991802e-07,
+            "original_plane_gate": false,
+            "normal_error_deg": 4.473351873584494,
+            "offset_error_m": 0.02575446263608827
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": false,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "6MoOyPtetL_seat",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 448,
+        "first_recorded_failure_s": 11.0,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "8bca80a0d3e451a25c7290ac74371fec4cd1e31c64e8c13f0c6590c5ce46e35a",
+        "inputs": {
+          "trajectory.npz": "8bca80a0d3e451a25c7290ac74371fec4cd1e31c64e8c13f0c6590c5ce46e35a",
+          "results.json": "3d67149ed537a497a3797876add5661d142bc9ae335fc3e41131675a7aeb7750",
+          "manifest.json": "cdf5b061ebd229ea15496f7697e0e239191a95c12f62ad26e6bb30dd46aeca97",
+          "contact_mapping.json": "cebbc16c61f620a3bb4b6c5994d8bbaa50c8304f2f83f7123287898441db27fc",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    },
+    {
+      "id": "6MoOyPtetL_seat_oblique",
+      "task": "sitting",
+      "approach": "seat_oblique",
+      "depth": {
+        "complete": true,
+        "case": "6MoOyPtetL_seat_oblique",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "701271524e33e943997a1bca7469430425a4831a909f254a91f875a7b4749ad5",
+            "projected_pixels": 940,
+            "matching_pixels": 940,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 228,
+            "target_observable": true,
+            "depth_p99_m": 4.861837510850011e-07,
+            "selected_point_count": 698,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 1.819245330569767e-07,
+            "original_plane_gate": false,
+            "normal_error_deg": 4.242498811287081,
+            "offset_error_m": 0.04933481263111478
+          },
+          {
+            "frame": 1,
+            "input_sha256": "3e6aeb2dfcf198fc4920ca63bf6182ff3a3e109da2733d68a5620557d5528b55",
+            "projected_pixels": 941,
+            "matching_pixels": 941,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 229,
+            "target_observable": true,
+            "depth_p99_m": 3.83283963900639e-07,
+            "selected_point_count": 705,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 2.2429886558543085e-07,
+            "original_plane_gate": false,
+            "normal_error_deg": 4.233200575469087,
+            "offset_error_m": 0.049424607226691286
+          },
+          {
+            "frame": 2,
+            "input_sha256": "0018d112dc2b61eda8850c3028b9cbf42049e5b7821a4d849b8ae60b284c1b98",
+            "projected_pixels": 932,
+            "matching_pixels": 932,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 230,
+            "target_observable": true,
+            "depth_p99_m": 5.096230733725442e-07,
+            "selected_point_count": 382,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 2.5944932952037677e-07,
+            "original_plane_gate": false,
+            "normal_error_deg": 3.6609691849341996,
+            "offset_error_m": 0.027298469533859615
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": false,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "6MoOyPtetL_seat_oblique",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          true,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "fall",
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 557,
+        "illegal_ticks": 553,
+        "first_recorded_failure_s": 8.86,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "9d863944e861d03cf35181a55fc9322d9a137c73975d710a41e36ba3bbdbede3",
+        "inputs": {
+          "trajectory.npz": "9d863944e861d03cf35181a55fc9322d9a137c73975d710a41e36ba3bbdbede3",
+          "results.json": "e6df1fe8cb74f75f7a68dc4b26bfe45edbc5394a88abf1233470e9aed64950b8",
+          "manifest.json": "d0b4a9263780dd1b106e8ad1be29657ab5815e3d69394b725a6cca94b28e1d1f",
+          "contact_mapping.json": "be2746e6d979dcfabb426fd1d96be6894d0fde21b19688ad740a5d6a3072c491",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    },
+    {
+      "id": "6MoOyPtetL_arm",
+      "task": "sitting",
+      "approach": "arm",
+      "depth": {
+        "complete": true,
+        "case": "6MoOyPtetL_arm",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "cd4e2d2905596682f7c694361cd22654789a21e8a557b3c0a07f24c3b516f4d7",
+            "projected_pixels": 814,
+            "matching_pixels": 814,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 264,
+            "target_observable": true,
+            "depth_p99_m": 4.6543932316511785e-07,
+            "selected_point_count": 667,
+            "selected_target_fraction": 0.9490254872563718,
+            "selected_max_mesh_distance_m": 1.530847964603948e-07,
+            "original_plane_gate": false,
+            "normal_error_deg": 16.94664807121577,
+            "offset_error_m": -0.10627649402243253
+          },
+          {
+            "frame": 1,
+            "input_sha256": "cd7361de5750c9ac21a04ba09defb8b481d1d68d9566ef76b0eda8feb6cfd47c",
+            "projected_pixels": 807,
+            "matching_pixels": 807,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 264,
+            "target_observable": true,
+            "depth_p99_m": 4.444141058068642e-07,
+            "selected_point_count": 662,
+            "selected_target_fraction": 0.9244712990936556,
+            "selected_max_mesh_distance_m": 1.850534206324224e-07,
+            "original_plane_gate": false,
+            "normal_error_deg": 16.901375084238634,
+            "offset_error_m": -0.10605852810849209
+          },
+          {
+            "frame": 2,
+            "input_sha256": "af7051d92095aee6e734e82917803667e332354bf711f35613b419c1e885bb1a",
+            "projected_pixels": 803,
+            "matching_pixels": 803,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 262,
+            "target_observable": true,
+            "depth_p99_m": 5.802344040617424e-07,
+            "selected_point_count": 564,
+            "selected_target_fraction": 0.9379432624113475,
+            "selected_max_mesh_distance_m": 1.47893759341378e-07,
+            "original_plane_gate": false,
+            "normal_error_deg": 16.989860301487887,
+            "offset_error_m": -0.10723145644652546
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": false,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "6MoOyPtetL_arm",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": true,
+        "clean": false,
+        "physical_failures": [
+          true,
+          true,
+          false,
+          false,
+          true
+        ],
+        "failure_types": [
+          "fall",
+          "forbidden contact",
+          "joint limit"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 12,
+        "illegal_ticks": 0,
+        "first_recorded_failure_s": 3.06,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "21a7b5c45e32d3bb3f56beacf5ff46bbd77a1f922607ec559c7b90f269ad7c6c",
+        "inputs": {
+          "trajectory.npz": "21a7b5c45e32d3bb3f56beacf5ff46bbd77a1f922607ec559c7b90f269ad7c6c",
+          "results.json": "666c543dc6bfedcd64b32fbde49ca04234ce387a0ea5aa22780bcb8559ac5472",
+          "manifest.json": "7a6e89591bb78e7ee0a698d51355defe3ef43d8f41e12a56262cc7a346b6e3ab",
+          "contact_mapping.json": "acde6af74aa8fc41dc56d34ecc86089e2263bd2443d21801f5cc6182149a7097",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    },
+    {
+      "id": "6MoOyPtetL_rear_back",
+      "task": "leaning",
+      "approach": "rear_back",
+      "depth": {
+        "complete": true,
+        "case": "6MoOyPtetL_rear_back",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "caac3a8fcfdf7e1e6c5341e4e0661e71d2e33deda283e2125e207f7b79619e70",
+            "projected_pixels": 833,
+            "matching_pixels": 833,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 311,
+            "target_observable": true,
+            "depth_p99_m": 1.959568098053305e-07,
+            "selected_point_count": 897,
+            "selected_target_fraction": 0.9977703455964325,
+            "selected_max_mesh_distance_m": 7.447568567568095e-08,
+            "original_plane_gate": false,
+            "normal_error_deg": 2.2869679471189963,
+            "offset_error_m": 0.018912422153063657
+          },
+          {
+            "frame": 1,
+            "input_sha256": "008e435622aec3fe4b28fb191804ef81fe7e7ccb458481df321f284aa60f4b35",
+            "projected_pixels": 833,
+            "matching_pixels": 833,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 310,
+            "target_observable": true,
+            "depth_p99_m": 1.480666151953967e-07,
+            "selected_point_count": 899,
+            "selected_target_fraction": 0.9988876529477196,
+            "selected_max_mesh_distance_m": 6.272647173933812e-08,
+            "original_plane_gate": false,
+            "normal_error_deg": 2.3093308059868525,
+            "offset_error_m": 0.01892973658884628
+          },
+          {
+            "frame": 2,
+            "input_sha256": "2388826e614f36bad35bd4791ba9af3e3c4aeded074d8f515aaf6fd20e31de02",
+            "projected_pixels": 833,
+            "matching_pixels": 833,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 309,
+            "target_observable": true,
+            "depth_p99_m": 1.7935745782571286e-07,
+            "selected_point_count": 891,
+            "selected_target_fraction": 0.9977553310886644,
+            "selected_max_mesh_distance_m": 9.857698327545255e-08,
+            "original_plane_gate": false,
+            "normal_error_deg": 2.209841993316958,
+            "offset_error_m": 0.019016271618202518
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": false,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "6MoOyPtetL_rear_back",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 917,
+        "first_recorded_failure_s": 1.68,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "745f7fff4d26282f8db3d93e3f51959b48b36d17431cd9b7e64a26c88c30f4d8",
+        "inputs": {
+          "trajectory.npz": "745f7fff4d26282f8db3d93e3f51959b48b36d17431cd9b7e64a26c88c30f4d8",
+          "results.json": "f160d2626a9dc973e7f618b111e10f6230035f0f7d92fe576c218c45222fc13d",
+          "manifest.json": "07c964d49c4538fbe6e275343de4547037a55bcdb948109a281b83fa2987b6e1",
+          "contact_mapping.json": "36ff93632bc3521acf23fac4140db872cf126c9af7e6d555bec95548ae68c017",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_step_v5/audit.py",
+        "physical_audit_sha256": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    },
+    {
+      "id": "myd1WSucAz_seat",
+      "task": "sitting",
+      "approach": "seat",
+      "depth": {
+        "complete": true,
+        "case": "myd1WSucAz_seat",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "19d9481e4b7171365d9c49096cbc42c2d147127c7252001b5ffc0404b0f4f977",
+            "projected_pixels": 814,
+            "matching_pixels": 814,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 200,
+            "target_observable": true,
+            "depth_p99_m": 2.7325628907504123e-07,
+            "selected_point_count": 1381,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 2.0324621524681082e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.012750743451336782,
+            "offset_error_m": -0.0027627394849237263
+          },
+          {
+            "frame": 1,
+            "input_sha256": "9921ad0ecad03ad32a172c95ac9fc9d71283b9f7978e757baa6e4cc5ec2f5bd9",
+            "projected_pixels": 815,
+            "matching_pixels": 815,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 200,
+            "target_observable": true,
+            "depth_p99_m": 2.2224412675964095e-07,
+            "selected_point_count": 1380,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 2.595147751138785e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.0,
+            "offset_error_m": -0.00276273949634509
+          },
+          {
+            "frame": 2,
+            "input_sha256": "0b70c3c1a7bac73a2544ab519bf856d282a847e9159c7bc017664d36ba2582e5",
+            "projected_pixels": 810,
+            "matching_pixels": 810,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 186,
+            "target_observable": true,
+            "depth_p99_m": 3.75132532712818e-07,
+            "selected_point_count": 1377,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 2.0597909361486107e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.011267837688840092,
+            "offset_error_m": -0.002762650112943521
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": true,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "myd1WSucAz_seat",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 4,
+        "illegal_ticks": 482,
+        "first_recorded_failure_s": 10.38,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "9dcea4bca2fd3857c555326a1fbaeb2dbfe24d1adad525bfc759dbad8dac80f2",
+        "inputs": {
+          "trajectory.npz": "9dcea4bca2fd3857c555326a1fbaeb2dbfe24d1adad525bfc759dbad8dac80f2",
+          "results.json": "b454231e97a3689969e7e97c7be13e014cd029647d3c8b8270824bd05f1bbebb",
+          "manifest.json": "fec39beff0c20c34ebf0ae24fda73d6f49c47dddab08b3e859cdfcf1f802ba5f",
+          "contact_mapping.json": "bfe36336ccb914ec0ca06e8f82fafc2b64b241c9f9cb1d002970151dc6977bfd",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    },
+    {
+      "id": "myd1WSucAz_seat_oblique",
+      "task": "sitting",
+      "approach": "seat_oblique",
+      "depth": {
+        "complete": true,
+        "case": "myd1WSucAz_seat_oblique",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "54705e4830cce3bdafca962e75657c6efe31251af5302449885e857c1fd4149d",
+            "projected_pixels": 649,
+            "matching_pixels": 649,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 138,
+            "target_observable": true,
+            "depth_p99_m": 4.1062587567974853e-07,
+            "selected_point_count": 946,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 1.970036599407978e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.012929146659247557,
+            "offset_error_m": -0.002762711712411825
+          },
+          {
+            "frame": 1,
+            "input_sha256": "f4aaa49f054e34e467187e3d399997d1669f5bba6a8f3d565fa8f42e33db30ee",
+            "projected_pixels": 648,
+            "matching_pixels": 648,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 140,
+            "target_observable": true,
+            "depth_p99_m": 3.270820209055891e-07,
+            "selected_point_count": 947,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 2.0228263603039328e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.0,
+            "offset_error_m": -0.0027627117414362745
+          },
+          {
+            "frame": 2,
+            "input_sha256": "6e3199be12a46f787503d73f037e83de90746d3412877c3047ffdd400b9219a5",
+            "projected_pixels": 642,
+            "matching_pixels": 642,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 138,
+            "target_observable": true,
+            "depth_p99_m": 2.579166298721794e-07,
+            "selected_point_count": 946,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 1.8804881302125783e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.0,
+            "offset_error_m": -0.0027626521859384634
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": true,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "myd1WSucAz_seat_oblique",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": true,
+        "clean": false,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 0,
+        "first_recorded_failure_s": 8.08,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "a548ff727be736c18d92d5c4bae120c4dd9470467c5e2bd4da9d3c4abdc5e41f",
+        "inputs": {
+          "trajectory.npz": "a548ff727be736c18d92d5c4bae120c4dd9470467c5e2bd4da9d3c4abdc5e41f",
+          "results.json": "c0ea2e925d5f36846ef90e399d04fa1723ab09757df96ab409702fc3281b1002",
+          "manifest.json": "65b1b7378c1cfd99e06af7612ba320fbe73b1e21249635eadba35c491d3f4c3d",
+          "contact_mapping.json": "8f52383c2fc1eb18eae6f8a6ee7122260d181f747395cdb808eff8c2b9fab807",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    },
+    {
+      "id": "myd1WSucAz_arm",
+      "task": "sitting",
+      "approach": "arm",
+      "depth": {
+        "complete": true,
+        "case": "myd1WSucAz_arm",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "aa9f28289704efbf982b624ef511b6bd35967436a0c385fbb1ac242e52fd381d",
+            "projected_pixels": 744,
+            "matching_pixels": 744,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 106,
+            "target_observable": true,
+            "depth_p99_m": 2.5853881528481496e-07,
+            "selected_point_count": 867,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 1.5383076612529591e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 2.3137248438882234,
+            "offset_error_m": 0.0023562882436306
+          },
+          {
+            "frame": 1,
+            "input_sha256": "c4e7b4fd1974ba2e39353d439f501702928a3b321f05b395d9742f529c246805",
+            "projected_pixels": 738,
+            "matching_pixels": 738,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 107,
+            "target_observable": true,
+            "depth_p99_m": 1.9075521862088604e-07,
+            "selected_point_count": 866,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 1.4881275489653247e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 2.313678183529069,
+            "offset_error_m": 0.002385274663331327
+          },
+          {
+            "frame": 2,
+            "input_sha256": "8da36d258dd2092f34b812da5531a7002877fd932f351794ffa3e9616936122c",
+            "projected_pixels": 738,
+            "matching_pixels": 738,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 109,
+            "target_observable": true,
+            "depth_p99_m": 2.7703588294458736e-07,
+            "selected_point_count": 885,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 1.634596620281316e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 2.314004639653093,
+            "offset_error_m": 0.002519215151620263
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": true,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "myd1WSucAz_arm",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": true,
+        "clean": false,
+        "physical_failures": [
+          true,
+          true,
+          false,
+          false,
+          true
+        ],
+        "failure_types": [
+          "fall",
+          "forbidden contact",
+          "joint limit"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 12,
+        "illegal_ticks": 0,
+        "first_recorded_failure_s": 3.2600000000000002,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "9928754345abb75f03e5d31c43dbda73d4e87a070ae2ca99f6966a8522c798c5",
+        "inputs": {
+          "trajectory.npz": "9928754345abb75f03e5d31c43dbda73d4e87a070ae2ca99f6966a8522c798c5",
+          "results.json": "cbaaff6cd6957fef450d41d8a54f5801a216f128406b53df0dd9345d7c9eb591",
+          "manifest.json": "093ff9733134968666f7e9e8ebc6afece74839951c9eda1a51c3323f296d6ee3",
+          "contact_mapping.json": "8d5ed1ca487a6d9ee3d3654863dcd9246bd2fc977f2c118b698c7b5ff3833c38",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    },
+    {
+      "id": "myd1WSucAz_rear_back",
+      "task": "leaning",
+      "approach": "rear_back",
+      "depth": {
+        "complete": true,
+        "case": "myd1WSucAz_rear_back",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "ca76b53aa0c74de476a394596718c7e4e0e065bb1f9650066f694af75c068712",
+            "projected_pixels": 644,
+            "matching_pixels": 644,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 164,
+            "target_observable": true,
+            "depth_p99_m": 9.691499481445657e-07,
+            "selected_point_count": 1322,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 9.972902925564053e-08,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.0,
+            "offset_error_m": -2.2479880457115797e-08
+          },
+          {
+            "frame": 1,
+            "input_sha256": "125fbb54c7b98fd18a7111bfa7e9c53a82dd1dcedf3a28d02b198b99af08e57a",
+            "projected_pixels": 644,
+            "matching_pixels": 644,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 164,
+            "target_observable": true,
+            "depth_p99_m": 8.553565101010467e-07,
+            "selected_point_count": 1325,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 9.20316384438865e-08,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.001391799267396881,
+            "offset_error_m": -1.3154996481024028e-08
+          },
+          {
+            "frame": 2,
+            "input_sha256": "894b27934238f9f3adb84f94b31d4473f499a2b03269624410eca08f90372b2d",
+            "projected_pixels": 626,
+            "matching_pixels": 626,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 123,
+            "target_observable": true,
+            "depth_p99_m": 5.175345501040596e-07,
+            "selected_point_count": 1101,
+            "selected_target_fraction": 0.9881925522252498,
+            "selected_max_mesh_distance_m": 9.093529518278141e-08,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.011219204698487917,
+            "offset_error_m": 4.1172960330293495e-06
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": true,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "myd1WSucAz_rear_back",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": true,
+        "clean": false,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 941,
+        "first_recorded_failure_s": 1.2,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "bc6ffc5b83668da1dd2868e1aac2595f2f5626856db6fd61bc8e5a2277913e72",
+        "inputs": {
+          "trajectory.npz": "bc6ffc5b83668da1dd2868e1aac2595f2f5626856db6fd61bc8e5a2277913e72",
+          "results.json": "50a32e12afdf22bf2117033a57fdbd2525699ada37317f85b05739ddcaf53915",
+          "manifest.json": "ebd21fa3b16868a4f37245141637b8993ef0043279c333d4f7992b72ed0f3114",
+          "contact_mapping.json": "b788a9e09ec5509bad32aad2cfbe550384af97510a2a2e3b17fb40fd405c89da",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_step_v5/audit.py",
+        "physical_audit_sha256": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    },
+    {
+      "id": "wooden_stool_01_top",
+      "task": "sitting",
+      "approach": "top",
+      "depth": {
+        "complete": true,
+        "case": "wooden_stool_01_top",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "d55f095769f4ded308d66078d96f415bdc0fed662b46c35b18875fa1c8b87a46",
+            "projected_pixels": 124,
+            "matching_pixels": 124,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 95,
+            "target_observable": true,
+            "depth_p99_m": 1.7493930481116139e-07,
+            "selected_point_count": 456,
+            "selected_target_fraction": 0.9868421052631579,
+            "selected_max_mesh_distance_m": 1.710797955781539e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.9214746996107602,
+            "offset_error_m": -0.00032284368665080887
+          },
+          {
+            "frame": 1,
+            "input_sha256": "255c8c6376965ebddeecec09a7f814f005db28ce922031a781eb11ecc385aace",
+            "projected_pixels": 124,
+            "matching_pixels": 124,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 95,
+            "target_observable": true,
+            "depth_p99_m": 2.1344292003955235e-07,
+            "selected_point_count": 184,
+            "selected_target_fraction": 0.9945652173913043,
+            "selected_max_mesh_distance_m": 1.6108849503428203e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.15512961790441335,
+            "offset_error_m": -0.007345579682725756
+          },
+          {
+            "frame": 2,
+            "input_sha256": "959b191159906ef7e4e06eaa7111569dea42203e348a02f4a9d34a984292b7d3",
+            "projected_pixels": 124,
+            "matching_pixels": 124,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 97,
+            "target_observable": true,
+            "depth_p99_m": 1.7527570465247776e-07,
+            "selected_point_count": 186,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 1.4078869898956283e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.17100198380256323,
+            "offset_error_m": -0.0070622927404316305
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": true,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "wooden_stool_01_top",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 465,
+        "first_recorded_failure_s": 10.72,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "8f7d152816326633bc280046c55b61c1bc0c4b936982aad3f68f6cb91f57c830",
+        "inputs": {
+          "trajectory.npz": "8f7d152816326633bc280046c55b61c1bc0c4b936982aad3f68f6cb91f57c830",
+          "results.json": "c3a77b8925105427816daed9d92656c4b0229be8e2097cf2e9558caa700cc0ad",
+          "manifest.json": "71ac48c685ff420fa60ebdee8d189a2df0dc704dddb86569add1b897cb6b92d3",
+          "contact_mapping.json": "a7966bbe1c3cf97319f86f5553833bccb412149d5acb36c8c24d3409a0727404",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    },
+    {
+      "id": "wooden_stool_01_top_oblique",
+      "task": "sitting",
+      "approach": "top_oblique",
+      "depth": {
+        "complete": true,
+        "case": "wooden_stool_01_top_oblique",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "0017bb860698e050822da23ed2ea8d77fb3cfc75d852e69000d4e23d0c6e0e60",
+            "projected_pixels": 104,
+            "matching_pixels": 104,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 76,
+            "target_observable": true,
+            "depth_p99_m": 1.8839823043625967e-07,
+            "selected_point_count": 376,
+            "selected_target_fraction": 0.9867021276595744,
+            "selected_max_mesh_distance_m": 1.5348962480470962e-07,
+            "original_plane_gate": false,
+            "normal_error_deg": 2.0055494617927674,
+            "offset_error_m": 0.021404763534672466
+          },
+          {
+            "frame": 1,
+            "input_sha256": "aaae351d1e2f822160bba9738c2bec9ca238ebc97736380a7ddfc5f91807781a",
+            "projected_pixels": 104,
+            "matching_pixels": 104,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 76,
+            "target_observable": true,
+            "depth_p99_m": 2.026363317852997e-07,
+            "selected_point_count": 118,
+            "selected_target_fraction": 0.9830508474576272,
+            "selected_max_mesh_distance_m": 2.4319974486418434e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.5246864561889111,
+            "offset_error_m": -0.0032304091613094
+          },
+          {
+            "frame": 2,
+            "input_sha256": "9844dcb4c92ecf2ea9cd9a0342bd839775d2155c1bb3edff38de1e2f61901c13",
+            "projected_pixels": 104,
+            "matching_pixels": 104,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 75,
+            "target_observable": true,
+            "depth_p99_m": 2.6945680520418236e-07,
+            "selected_point_count": 100,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 1.9136351600425222e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.4323965512037342,
+            "offset_error_m": -0.003971634907417587
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": false,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "wooden_stool_01_top_oblique",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 6,
+        "illegal_ticks": 445,
+        "first_recorded_failure_s": 11.120000000000001,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "a523dc9fd582f7aff2fc7212a58db54f9790412bed00edb773c95e272001598f",
+        "inputs": {
+          "trajectory.npz": "a523dc9fd582f7aff2fc7212a58db54f9790412bed00edb773c95e272001598f",
+          "results.json": "e11bb6a083d8837905f401b8b86f546e84142f96c54ece7b12ac8f1d35fef2fc",
+          "manifest.json": "4e09ba7a10420f0a4c207ff1184c94ec189acacd7a7abefec9876965b5dbbb57",
+          "contact_mapping.json": "a0e1812bc6add08b6a8132e8e1253287887eacb63f52a765eef347c006abff03",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    },
+    {
+      "id": "modern_coffee_table_01_top",
+      "task": "sitting",
+      "approach": "top",
+      "depth": {
+        "complete": true,
+        "case": "modern_coffee_table_01_top",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "7233160d17f4a858c3676d1e5cf7daba1299a78c131a93e50e80b6894e333032",
+            "projected_pixels": 647,
+            "matching_pixels": 647,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 642,
+            "target_observable": true,
+            "depth_p99_m": 1.7042165323610795e-07,
+            "selected_point_count": 5539,
+            "selected_target_fraction": 0.9904314858277667,
+            "selected_max_mesh_distance_m": 2.1421389586011172e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.012069002297016995,
+            "offset_error_m": 9.388298805035333e-08
+          },
+          {
+            "frame": 1,
+            "input_sha256": "533ac1f051003448f62a7f7ac38e522b9d829468c285b4e765ba5891d04625e3",
+            "projected_pixels": 646,
+            "matching_pixels": 646,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 641,
+            "target_observable": true,
+            "depth_p99_m": 1.880009679378069e-07,
+            "selected_point_count": 5537,
+            "selected_target_fraction": 0.9898862199747156,
+            "selected_max_mesh_distance_m": 2.5319004870461015e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.0,
+            "offset_error_m": -1.0982099074574592e-06
+          },
+          {
+            "frame": 2,
+            "input_sha256": "4194d079d9618240cfc207fb1d4b8fa7076610b01d77e93287bd25e9820d0b24",
+            "projected_pixels": 642,
+            "matching_pixels": 642,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 634,
+            "target_observable": true,
+            "depth_p99_m": 1.3467537502753764e-07,
+            "selected_point_count": 5517,
+            "selected_target_fraction": 0.989305782127968,
+            "selected_max_mesh_distance_m": 7.654391034507026e-06,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.0,
+            "offset_error_m": 4.921859214856994e-06
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": true,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "modern_coffee_table_01_top",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 481,
+        "first_recorded_failure_s": 10.4,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "cec9d87ae9148b3a2907a94140b5d53b7f5562f0d6260ebb90624044506a8a5a",
+        "inputs": {
+          "trajectory.npz": "cec9d87ae9148b3a2907a94140b5d53b7f5562f0d6260ebb90624044506a8a5a",
+          "results.json": "f1605ca9e75e70c281da375cff2b7b63b50382ec61bfb40a47a224ee5d20db57",
+          "manifest.json": "40d511aa4c76152e91653a6069b2cad0974897ee07d0aa3dad8767cd72d9b0af",
+          "contact_mapping.json": "7e903777f0b2edc62c68da5fa5990202e4284bcfca7abdff3fb3f506a8edcbc2",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    },
+    {
+      "id": "modern_coffee_table_01_top_oblique",
+      "task": "sitting",
+      "approach": "top_oblique",
+      "depth": {
+        "complete": true,
+        "case": "modern_coffee_table_01_top_oblique",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "a32c6d632a8ddb2022596b2bc7b8903592521f1ef478f75fd772f06c419d8cf1",
+            "projected_pixels": 403,
+            "matching_pixels": 403,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 380,
+            "target_observable": true,
+            "depth_p99_m": 2.0660099337987965e-07,
+            "selected_point_count": 3310,
+            "selected_target_fraction": 0.9921450151057402,
+            "selected_max_mesh_distance_m": 2.1133503607984676e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.0,
+            "offset_error_m": 3.067106575765921e-05
+          },
+          {
+            "frame": 1,
+            "input_sha256": "b525dbb2761667b8ac8df476cf4eaf78df5c4de3a560e59e86c246c1c743d997",
+            "projected_pixels": 404,
+            "matching_pixels": 404,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 379,
+            "target_observable": true,
+            "depth_p99_m": 2.584533696037282e-07,
+            "selected_point_count": 3309,
+            "selected_target_fraction": 0.9851919008763977,
+            "selected_max_mesh_distance_m": 2.1697468387386377e-05,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.00754722850833621,
+            "offset_error_m": 4.902929634847952e-05
+          },
+          {
+            "frame": 2,
+            "input_sha256": "1cefbdad044eb93c3d7f7484e51cfaca21a6a4e6b99376263f60b8dc687bd493",
+            "projected_pixels": 399,
+            "matching_pixels": 399,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 372,
+            "target_observable": true,
+            "depth_p99_m": 2.2186910075383487e-07,
+            "selected_point_count": 3256,
+            "selected_target_fraction": 0.9935503685503686,
+            "selected_max_mesh_distance_m": 1.8851410488185394e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.0,
+            "offset_error_m": 4.08932623366387e-05
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": true,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "modern_coffee_table_01_top_oblique",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          true,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "fall",
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 47,
+        "illegal_ticks": 2,
+        "first_recorded_failure_s": 10.46,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "416b364ca7bb1164c535a869a2bfe4afbfebeecbcfa8c3a2e97a61db8596ada0",
+        "inputs": {
+          "trajectory.npz": "416b364ca7bb1164c535a869a2bfe4afbfebeecbcfa8c3a2e97a61db8596ada0",
+          "results.json": "03ca07350e4dbc2cd992fc12e98f8602316bcd6444b7aab61a5c1de1b561bd1b",
+          "manifest.json": "c9fa783940bc1d37e842fa41a18b9194993ff0eb3f249345814d03d04ce0adb8",
+          "contact_mapping.json": "20e00b03fb80c383d010c02d062506fae62e11289812dd4bf41420dbe54466d2",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v1/audit.py",
+        "physical_audit_sha256": "c46f27df27765622529e2c866f3065f74a1fbe466586300c3de57ec1b5b0cb7d",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    },
+    {
+      "id": "wooden_table_02_top",
+      "task": "leaning",
+      "approach": "top",
+      "depth": {
+        "complete": true,
+        "case": "wooden_table_02_top",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "43e8ce92e436eb7eb17ec67cb5be4f6a8f929209a9b5475e98706394652c10c9",
+            "projected_pixels": 1052,
+            "matching_pixels": 1052,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 945,
+            "target_observable": true,
+            "depth_p99_m": 2.422354362702217e-07,
+            "selected_point_count": 8090,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 1.7477209379723855e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.008823033972464351,
+            "offset_error_m": 3.161572130483403e-08
+          },
+          {
+            "frame": 1,
+            "input_sha256": "d42d3811f49bc8239a78e8f284e6fd9bb332ec3bdd797c45176d47cb13890d90",
+            "projected_pixels": 1051,
+            "matching_pixels": 1051,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 943,
+            "target_observable": true,
+            "depth_p99_m": 2.5236110628990005e-07,
+            "selected_point_count": 8102,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 2.038550698246779e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.01224697498187289,
+            "offset_error_m": -5.536049632604012e-09
+          },
+          {
+            "frame": 2,
+            "input_sha256": "df8303e5a812e5a17b9ca83fb4574c8d76f3a5d40e5b74a048322ef96c4f93c8",
+            "projected_pixels": 1102,
+            "matching_pixels": 1102,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 1001,
+            "target_observable": true,
+            "depth_p99_m": 3.6142519484139167e-07,
+            "selected_point_count": 8586,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 2.5525372804313826e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.011156074070571731,
+            "offset_error_m": 6.9459226231805e-08
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": true,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "wooden_table_02_top",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": true,
+        "clean": false,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 0,
+        "illegal_ticks": 956,
+        "first_recorded_failure_s": 0.9,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "17e155401ac4e82c52f9230423b5dd906085c38f0c3da3cada4aee2951e13fdc",
+        "inputs": {
+          "trajectory.npz": "17e155401ac4e82c52f9230423b5dd906085c38f0c3da3cada4aee2951e13fdc",
+          "results.json": "e0ba7a51011a35b32c8c93c4823a97d91dbe4e5b56b48d181d848e77f22fcc03",
+          "manifest.json": "b012b581adae760e2673bef1d186f322612ce46c75be13329d9706a2ce9b872e",
+          "contact_mapping.json": "7222dc1bb9930bd7f1722b33ce91c5fda802a3fa955d440acc8b93a8b0890808",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_step_v5/audit.py",
+        "physical_audit_sha256": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    },
+    {
+      "id": "wooden_table_02_top_oblique",
+      "task": "leaning",
+      "approach": "top_oblique",
+      "depth": {
+        "complete": true,
+        "case": "wooden_table_02_top_oblique",
+        "frames": [
+          {
+            "frame": 0,
+            "input_sha256": "32ba7c9aeb2d44a09616f5a05709f48ef78a0cac6bd6fb975f4939da31d53d22",
+            "projected_pixels": 689,
+            "matching_pixels": 689,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 570,
+            "target_observable": true,
+            "depth_p99_m": 2.992546348057346e-07,
+            "selected_point_count": 4921,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 1.9437062726002218e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.009476883215326392,
+            "offset_error_m": 3.0647134968697642e-09
+          },
+          {
+            "frame": 1,
+            "input_sha256": "a556e06ed411cda8977174100b47f48fc082bcf656d18b449bc411d6676eadda",
+            "projected_pixels": 692,
+            "matching_pixels": 692,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 576,
+            "target_observable": true,
+            "depth_p99_m": 3.7263021945510585e-07,
+            "selected_point_count": 4954,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 2.3244742830552815e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.0,
+            "offset_error_m": 1.802374834103393e-08
+          },
+          {
+            "frame": 2,
+            "input_sha256": "86fbfaaa69a739b632416b6509fd0273c92cf6b3d3355caa5298c31cd62b0d85",
+            "projected_pixels": 723,
+            "matching_pixels": 723,
+            "occluded_pixels": 0,
+            "mismatch_pixels": 0,
+            "geometry_pass": true,
+            "visible_target_pixels": 606,
+            "target_observable": true,
+            "depth_p99_m": 3.064265327057387e-07,
+            "selected_point_count": 5224,
+            "selected_target_fraction": 1.0,
+            "selected_max_mesh_distance_m": 2.478825741336637e-07,
+            "original_plane_gate": true,
+            "normal_error_deg": 0.01331875699007335,
+            "offset_error_m": -6.364715690598821e-08
+          }
+        ],
+        "geometry_pass": true,
+        "original_plane_gate": true,
+        "thresholds_unchanged": true,
+        "association_fraction_is_diagnostic_not_relaxed_gate": true,
+        "robot_success_claim": false
+      },
+      "robot": {
+        "passed": true,
+        "id": "wooden_table_02_top_oblique",
+        "complete_trials": 1,
+        "duration_s": 20,
+        "raw_clean": false,
+        "contact_mapping_validated": false,
+        "clean": null,
+        "physical_failures": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "failure_types": [
+          "forbidden contact",
+          "impact"
+        ],
+        "final_hold_s": 0.0,
+        "slip_ticks": 22,
+        "illegal_ticks": 949,
+        "first_recorded_failure_s": 1.04,
+        "warm_failure": false,
+        "max_consecutive_intended_load_before_failure_s": 0.0,
+        "action_limits_changed": false,
+        "success_thresholds_changed": false,
+        "trajectory_sha256": "904ed1a196932a1ecd9183002d3f80868485c02bd4d96bf56d33deca6b1e1f46",
+        "inputs": {
+          "trajectory.npz": "904ed1a196932a1ecd9183002d3f80868485c02bd4d96bf56d33deca6b1e1f46",
+          "results.json": "51ce383f7b21367528f5d04d6bd5e6bb9ec06278ea119edbd24e4dc9db3c7285",
+          "manifest.json": "6a960578d48529102e9752421a41d794ae58e6ff497933681de26e667ee73bcf",
+          "contact_mapping.json": "abd00e2e345b93ea6b47c64bbdbdf03be7957407de1cf784d395d69047df93f1",
+          "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+        },
+        "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_step_v5/audit.py",
+        "physical_audit_sha256": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b",
+        "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+      }
+    }
+  ],
+  "body_support": {
+    "passed": true,
+    "rows": [
+      {
+        "case": "6MoOyPtetL_seat",
+        "round": 0,
+        "body": "pelvis",
+        "physical_support": true,
+        "intended_contact_patch": false,
+        "mean_load_N": 131.17915463738208,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "6MoOyPtetL_seat_oblique",
+        "round": 0,
+        "body": "pelvis",
+        "physical_support": true,
+        "intended_contact_patch": false,
+        "mean_load_N": 156.60263136895753,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "6MoOyPtetL_arm",
+        "round": 0,
+        "body": "pelvis",
+        "physical_support": true,
+        "intended_contact_patch": false,
+        "mean_load_N": 155.28312688725856,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "6MoOyPtetL_rear_back",
+        "round": 0,
+        "body": "torso_link",
+        "physical_support": true,
+        "intended_contact_patch": false,
+        "mean_load_N": 158.18710036979945,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "myd1WSucAz_seat",
+        "round": 0,
+        "body": "pelvis",
+        "physical_support": true,
+        "intended_contact_patch": true,
+        "mean_load_N": 156.7144673509584,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "myd1WSucAz_seat_oblique",
+        "round": 0,
+        "body": "pelvis",
+        "physical_support": true,
+        "intended_contact_patch": true,
+        "mean_load_N": 148.11901770231498,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "myd1WSucAz_arm",
+        "round": 0,
+        "body": "pelvis",
+        "physical_support": true,
+        "intended_contact_patch": true,
+        "mean_load_N": 145.16393093343274,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "myd1WSucAz_rear_back",
+        "round": 0,
+        "body": "torso_link",
+        "physical_support": true,
+        "intended_contact_patch": true,
+        "mean_load_N": 157.909098253747,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "wooden_stool_01_top",
+        "round": 0,
+        "body": "pelvis",
+        "physical_support": true,
+        "intended_contact_patch": false,
+        "mean_load_N": 152.32377575988173,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "wooden_stool_01_top_oblique",
+        "round": 0,
+        "body": "pelvis",
+        "physical_support": true,
+        "intended_contact_patch": false,
+        "mean_load_N": 158.31030074678043,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "modern_coffee_table_01_top",
+        "round": 0,
+        "body": "pelvis",
+        "physical_support": true,
+        "intended_contact_patch": false,
+        "mean_load_N": 171.44112016616316,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "modern_coffee_table_01_top_oblique",
+        "round": 0,
+        "body": "pelvis",
+        "physical_support": true,
+        "intended_contact_patch": false,
+        "mean_load_N": 145.24033535164537,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "wooden_table_02_top",
+        "round": 0,
+        "body": "torso_link",
+        "physical_support": true,
+        "intended_contact_patch": true,
+        "mean_load_N": 157.9068900557272,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "wooden_table_02_top_oblique",
+        "round": 0,
+        "body": "torso_link",
+        "physical_support": true,
+        "intended_contact_patch": true,
+        "mean_load_N": 157.9030428367041,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "6MoOyPtetL_seat",
+        "round": 1,
+        "body": "left_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 65.18106059870165,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "6MoOyPtetL_seat_oblique",
+        "round": 1,
+        "body": "left_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 82.89231304737318,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "6MoOyPtetL_arm",
+        "round": 1,
+        "body": "left_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 22.135575304583277,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "6MoOyPtetL_rear_back",
+        "round": 1,
+        "body": "torso_link",
+        "physical_support": true,
+        "intended_contact_patch": false,
+        "mean_load_N": 158.13852707055042,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "myd1WSucAz_seat",
+        "round": 1,
+        "body": "left_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 192.42095078117956,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "myd1WSucAz_seat_oblique",
+        "round": 1,
+        "body": "left_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 205.12006226579044,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "myd1WSucAz_arm",
+        "round": 1,
+        "body": "left_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 31.38313866782625,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "myd1WSucAz_rear_back",
+        "round": 1,
+        "body": "torso_link",
+        "physical_support": true,
+        "intended_contact_patch": true,
+        "mean_load_N": 157.90421867970818,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "wooden_stool_01_top",
+        "round": 1,
+        "body": "left_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 223.6913743368832,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "wooden_stool_01_top_oblique",
+        "round": 1,
+        "body": "left_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 77.63507609846657,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "modern_coffee_table_01_top",
+        "round": 1,
+        "body": "left_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 123.18766479550462,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "modern_coffee_table_01_top_oblique",
+        "round": 1,
+        "body": "left_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": true,
+        "mean_load_N": 97.62728719786715,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "wooden_table_02_top",
+        "round": 1,
+        "body": "torso_link",
+        "physical_support": true,
+        "intended_contact_patch": true,
+        "mean_load_N": 157.90566433407102,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "wooden_table_02_top_oblique",
+        "round": 1,
+        "body": "torso_link",
+        "physical_support": true,
+        "intended_contact_patch": true,
+        "mean_load_N": 157.89578929090044,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "6MoOyPtetL_seat",
+        "round": 2,
+        "body": "right_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 101.9481651904562,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "6MoOyPtetL_seat_oblique",
+        "round": 2,
+        "body": "right_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 56.07314745377375,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "6MoOyPtetL_arm",
+        "round": 2,
+        "body": "right_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 63.29612747611169,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "6MoOyPtetL_rear_back",
+        "round": 2,
+        "body": "torso_link",
+        "physical_support": true,
+        "intended_contact_patch": false,
+        "mean_load_N": 158.06720222013396,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "myd1WSucAz_seat",
+        "round": 2,
+        "body": "right_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": true,
+        "mean_load_N": 121.72359631996044,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "myd1WSucAz_seat_oblique",
+        "round": 2,
+        "body": "right_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 98.19938686445657,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "myd1WSucAz_arm",
+        "round": 2,
+        "body": "right_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 164.6709504854264,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "myd1WSucAz_rear_back",
+        "round": 2,
+        "body": "torso_link",
+        "physical_support": true,
+        "intended_contact_patch": true,
+        "mean_load_N": 157.90565928584184,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "wooden_stool_01_top",
+        "round": 2,
+        "body": "right_hip_yaw_link",
+        "physical_support": true,
+        "intended_contact_patch": false,
+        "mean_load_N": 141.01995994533482,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "wooden_stool_01_top_oblique",
+        "round": 2,
+        "body": "right_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": false,
+        "mean_load_N": 116.95199754612045,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "modern_coffee_table_01_top",
+        "round": 2,
+        "body": "right_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": true,
+        "mean_load_N": 107.74827548085287,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "modern_coffee_table_01_top_oblique",
+        "round": 2,
+        "body": "right_hip_yaw_link",
+        "physical_support": false,
+        "intended_contact_patch": true,
+        "mean_load_N": 75.07686289326327,
+        "checks": {
+          "sustained_contact": false,
+          "load_capacity": false,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "wooden_table_02_top",
+        "round": 2,
+        "body": "torso_link",
+        "physical_support": true,
+        "intended_contact_patch": true,
+        "mean_load_N": 157.90193275844322,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      },
+      {
+        "case": "wooden_table_02_top_oblique",
+        "round": 2,
+        "body": "torso_link",
+        "physical_support": true,
+        "intended_contact_patch": true,
+        "mean_load_N": 157.91281930490283,
+        "checks": {
+          "sustained_contact": true,
+          "load_capacity": true,
+          "force_balance": true,
+          "filter_consistency": true
+        }
+      }
+    ],
+    "load_N": 158.13193578645974,
+    "support_passes": 23,
+    "patch_passes": 16,
+    "scope": "42 controlled body-collider fixtures, not autonomous robot successes.",
+    "files": {
+      "/home/kadir/humanoid-sitting/outputs/furniture_perception_repair_20261029_v1/body_support/result.json": "128faccf209833575d354a875a18db56c2ee161708798007d45fb3c9d6122508",
+      "/home/kadir/humanoid-sitting/outputs/furniture_perception_repair_20261029_v1/body_support/measurements.json": "06bf8b81eb3096ed5526f796f2d7dc3db6b9f5db21f77213915d0115fc38f92d",
+      "/home/kadir/humanoid-sitting/outputs/furniture_perception_repair_20261029_v1/body_support/manifest.json": "eafcc927bff8c4b72f73be3faa8625d38a1c30ddba590e39e4e20650cd48cc4c"
+    }
+  },
+  "physical_thresholds_changed": false,
+  "action_limits_changed": false,
+  "automatic_promotion": false,
+  "acceptance": "Best09 remains until a replacement retains all64 and repairs the failures; furniture diagnostics never count toward72.",
+  "curved_patch_caution": "Original5deg/15mm single-plane gate preserved; exact selected-point membership is additional diagnostic evidence."
+}

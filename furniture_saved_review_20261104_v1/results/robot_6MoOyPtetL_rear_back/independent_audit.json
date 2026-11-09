@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "id": "6MoOyPtetL_rear_back",
+  "complete_trials": 1,
+  "duration_s": 20,
+  "raw_clean": false,
+  "contact_mapping_validated": false,
+  "clean": null,
+  "physical_failures": [
+    false,
+    true,
+    false,
+    true,
+    false
+  ],
+  "failure_types": [
+    "forbidden contact",
+    "impact"
+  ],
+  "final_hold_s": 0.0,
+  "slip_ticks": 0,
+  "illegal_ticks": 917,
+  "first_recorded_failure_s": 1.68,
+  "warm_failure": false,
+  "max_consecutive_intended_load_before_failure_s": 0.0,
+  "action_limits_changed": false,
+  "success_thresholds_changed": false,
+  "trajectory_sha256": "745f7fff4d26282f8db3d93e3f51959b48b36d17431cd9b7e64a26c88c30f4d8",
+  "inputs": {
+    "trajectory.npz": "745f7fff4d26282f8db3d93e3f51959b48b36d17431cd9b7e64a26c88c30f4d8",
+    "results.json": "f160d2626a9dc973e7f618b111e10f6230035f0f7d92fe576c218c45222fc13d",
+    "manifest.json": "07c964d49c4538fbe6e275343de4547037a55bcdb948109a281b83fa2987b6e1",
+    "contact_mapping.json": "36ff93632bc3521acf23fac4140db872cf126c9af7e6d555bec95548ae68c017",
+    "startup.json": "2b52e9cb41cf35f44254d62e045356e53274c058c3eb971133a50dc17242c3f1"
+  },
+  "physical_audit_source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_step_v5/audit.py",
+  "physical_audit_sha256": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b",
+  "mode": "Offline reconstruction from recorded forces, poses and mesh labels; warmup validity as recorded."
+}
