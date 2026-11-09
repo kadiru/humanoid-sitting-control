@@ -1,0 +1,62 @@
+{
+  "utc": "2026-10-17T09:31:21.388871+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "best_verified": {
+    "controller": "current_retention_09",
+    "total": 72,
+    "clean": 64,
+    "stable": 70,
+    "slipping": 8,
+    "housing": 2,
+    "retained_original_successes": 60,
+    "additional_successes": 4,
+    "conservative_warnings": 50,
+    "strict_clean": 22
+  },
+  "physics_ticks_since64": 0,
+  "optimizer_updates": 0,
+  "main_training_started": false,
+  "fresh_holdout_started": false,
+  "policy_promoted": false,
+  "spatial65": {
+    "failed_knots": 12,
+    "clearance_mm": 3.624137048070023,
+    "foot_error_mm": 5.4618457318923594,
+    "foot_error_deg": 2.4047853723580612
+  },
+  "coupled69": {
+    "geometry_passed": true,
+    "clearance_mm": 3.6241370466431473,
+    "foot_error_mm": 1.1249196086743642,
+    "foot_error_deg": 0.4935754644914643,
+    "command_gate_passed": false,
+    "failed_command_nodes": 63,
+    "minimum_command_margin_rad": -0.010330100575997814,
+    "specific_command_polyline_time_at015_s": 14.109726833660158
+  },
+  "endpoint72": {
+    "only_deepest_case": true,
+    "clearance_mm": 3.4429847449725175,
+    "command_margin_rad": 0.03049947459522301,
+    "maximum_static_effort_utilization": 0.8162820530345029,
+    "tilt_deg": 21.030223285601327,
+    "model_endpoint_passed": true,
+    "is_executable_motion": false
+  },
+  "exactness_correction": "Original68 metadata incorrectly called the initial model command exact. Independent71 found5.551115123125783e-17rad residue. Corrected metadata explicitly reports exact=false and retains the original1e-9 numerical check; every command/force/pose array is unchanged. Originals and failed audit preserved. Fixed14finger commands are exactly unchanged. No physical prefix was run or certified.",
+  "next_requirement": "A whole-path command-feasible sensed contact transition is still required. The actuator-aware endpoint is not a physical solution. Only after all8 target failures are removed and all64 clean conditions retained across72 matched full20s development trials may the small PPO comparison begin.",
+  "effort": "No new physical effort result. Verified09 matches frozen61111 on common clean pairs; against selected62111@8 on20 old-development common-clean cases, whole20 torque-squared is4.38% higher and final5 is25.45% higher. No savings from failed fragments.",
+  "video": {
+    "path": "../all_attempts_video_v2_59/all_attempts.mp4",
+    "seconds": 58.4,
+    "complete_trials": 696,
+    "successes": 405,
+    "failures": 291,
+    "recorded_prefixes": 72,
+    "aborted_attempts_disclosed": 72,
+    "updated_motion_required": false,
+    "reason": "No new physical motion was produced in65\u201373. Existing complete-coverage video remains current."
+  },
+  "new_research": "A separate bounded whole-path search75 was started using endpoint72 and ankle-command constraints. It is not covered as a completed result here. Missing linprog import stopped its first launch before any path evaluation; v2 adds only that import and fresh output path, with all bounds and24-evaluation budget unchanged."
+}
