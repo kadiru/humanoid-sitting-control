@@ -1,0 +1,18 @@
+{
+  "reason": "Frozen training calibration contains development labels only; evaluator attempted a lookup for a new holdout label.",
+  "repair": "For evaluation only, fill missing labels with the mean of the frozen development scales. No holdout outcome is used. Runtime actor/controller, metrics, success gates and training are unchanged.",
+  "added_labels": [
+    "lean_dh-0.015_ds-3.75",
+    "lean_dh-0.015_ds+3.75",
+    "lean_dh+0.015_ds-3.75",
+    "lean_dh+0.015_ds+3.75",
+    "lean_dh-0.025_ds+0.00",
+    "lean_dh+0.025_ds+0.00",
+    "lean_dh+0.000_ds-6.25",
+    "lean_dh+0.000_ds+6.25"
+  ],
+  "scale": 506.46799305555555,
+  "original_calibration": "3e9f06de704bfd4c4ce5615096da2c2af503339ee99ac16e8b7df88b6699867f",
+  "original_training_complete": true,
+  "source": "4edaa94f15049e161f89331eae476f4d8772f8bf59e994351cecd1dbb4c1afcd"
+}

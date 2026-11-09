@@ -1,0 +1,6 @@
+{
+  "phase": "failed",
+  "utc": "2026-10-14T19:44:15.188080+00:00",
+  "error": "AssertionError(('holdout_final_56111', 1))",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/scripts/run_stable_effort_comparison.py\", line 134, in worker\n    run(folder,label,command(folder,label,mode,55501,par,cp,bank='holdout',legacy=legacy))\n  File \"/home/kadir/humanoid-sitting/scripts/run_transfer_assessment.py\", line 15, in run\n    write(folder/(label+'.exit.json'),{'returncode':r.returncode});assert r.returncode==0,(label,r.returncode)\n                                                                          ^^^^^^^^^^^^^^^\nAssertionError: ('holdout_final_56111', 1)\n"
+}

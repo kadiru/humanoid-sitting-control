@@ -1,0 +1,94 @@
+{
+  "scope": "Read-only diagnostic using disposable copies of checkpoint parameters and optimizer state. No simulator, original parameter mutation, rollout or training-budget addition. Demonstrates Adam momentum movement on zero-gradient steps; does not establish sole cause of the observed policy regression.",
+  "ppo_source": "/home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/rsl_rl/algorithms/ppo.py",
+  "ppo_source_sha256": "01a82cea45fa9d8ccb161bd75e07d8623d25450ff92982e9c9d59ca8a9b78393",
+  "per_minibatch_normalization": false,
+  "seeds": [
+    {
+      "seed": 56111,
+      "checkpoint": "/data/humanoid-sitting-perception/contact_effort_repair_01/leaning_ppo_01/train_56111_block1/final.pt",
+      "sha256": "d356e1f03a9827efeb1cc75fb53ae0c5e9e5e28e8f5d4155a0c20e27ec03ac42",
+      "learning_rate": 0.01,
+      "checks": [
+        {
+          "parameter": "distribution.log_std_param",
+          "momentum_norm": 0.00014573092630598694,
+          "max_parameter_change_with_zero_gradient": 2.1457672119140625e-05
+        },
+        {
+          "parameter": "mlp.0.weight",
+          "momentum_norm": 4.0380564314546064e-05,
+          "max_parameter_change_with_zero_gradient": 0.00018416345119476318
+        },
+        {
+          "parameter": "mlp.0.bias",
+          "momentum_norm": 5.235070148046361e-06,
+          "max_parameter_change_with_zero_gradient": 2.385210245847702e-05
+        },
+        {
+          "parameter": "mlp.2.weight",
+          "momentum_norm": 3.752731572603807e-05,
+          "max_parameter_change_with_zero_gradient": 5.2513089030981064e-05
+        },
+        {
+          "parameter": "mlp.2.bias",
+          "momentum_norm": 9.043081263371278e-06,
+          "max_parameter_change_with_zero_gradient": 2.576783299446106e-05
+        },
+        {
+          "parameter": "mlp.4.weight",
+          "momentum_norm": 0.0003086885844822973,
+          "max_parameter_change_with_zero_gradient": 2.2973865270614624e-05
+        },
+        {
+          "parameter": "mlp.4.bias",
+          "momentum_norm": 7.789726805640385e-05,
+          "max_parameter_change_with_zero_gradient": 3.807246685028076e-06
+        }
+      ]
+    },
+    {
+      "seed": 56117,
+      "checkpoint": "/data/humanoid-sitting-perception/contact_effort_repair_01/leaning_ppo_01/train_56117_block1/final.pt",
+      "sha256": "a54dc532ad4e1e8cbd9916fb1031ecd6243d525e13681abb107728793bbc768f",
+      "learning_rate": 7.593750000000004e-05,
+      "checks": [
+        {
+          "parameter": "distribution.log_std_param",
+          "momentum_norm": 9.227678674506024e-05,
+          "max_parameter_change_with_zero_gradient": 1.1920928955078125e-07
+        },
+        {
+          "parameter": "mlp.0.weight",
+          "momentum_norm": 0.000272923381999135,
+          "max_parameter_change_with_zero_gradient": 7.301568984985352e-07
+        },
+        {
+          "parameter": "mlp.0.bias",
+          "momentum_norm": 3.533999915816821e-05,
+          "max_parameter_change_with_zero_gradient": 6.034970283508301e-07
+        },
+        {
+          "parameter": "mlp.2.weight",
+          "momentum_norm": 0.00047582402476109564,
+          "max_parameter_change_with_zero_gradient": 6.742775440216064e-07
+        },
+        {
+          "parameter": "mlp.2.bias",
+          "momentum_norm": 4.5492692152038217e-05,
+          "max_parameter_change_with_zero_gradient": 5.587935447692871e-07
+        },
+        {
+          "parameter": "mlp.4.weight",
+          "momentum_norm": 0.0032277547288686037,
+          "max_parameter_change_with_zero_gradient": 5.047768354415894e-07
+        },
+        {
+          "parameter": "mlp.4.bias",
+          "momentum_norm": 0.00027803113334812224,
+          "max_parameter_change_with_zero_gradient": 1.7508864402770996e-07
+        }
+      ]
+    }
+  ]
+}
