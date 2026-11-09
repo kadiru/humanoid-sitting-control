@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "classification": "Static source review plus separate CPU numerical/behavioral checks; NOT simulator or physical validation",
+  "simulator_validation_complete": false,
+  "reviewer": "Single execution owner; independent audit means separate equations/checker code, not a second coding agent",
+  "resolved_findings": [
+    "Expanded source geometry by actual environment-to-geometry indices;24 trials can correspond to12 surfaces. Case IDs and reset states remain paired.",
+    "Recorded previous commands before each teacher action, avoiding the teacher in-place command mutation in pre-action observations.",
+    "Used true recorded joint/root velocities; no velocity reconstruction from10Hz trajectories.",
+    "Retained full20s all-tick physical evaluation and isolated dead training frames with terminal-aware GAE.",
+    "Reverted both actor weights and Adam moments on KL rejection.",
+    "Separated late-state curriculum episode labels from full standing-start task success.",
+    "Excluded the current comparison from all new process-group signals; launch waits for four final results, final audits, released locks and empty GPU workers.",
+    "Did not treat a CPU weight-update fixture or dataset packaging PASS as simulator learning or physical repair.",
+    "Frozen original G1 asset configuration; runtime robot names, masses and joint limits checked against the frozen model and demonstrations. Remote USD bytes are not represented as locally hashed.",
+    "Storage-only correction: new output partition, original execution deadline retained; old failed attempt and all comparison evidence preserved. Learning and validation algorithms unchanged."
+  ],
+  "assertions_checked": [
+    "23 independent action channels; global rate/filter/margin and14 fixed fingers",
+    "336 actor/critic inputs contain sensors,task and public clock only",
+    "Frozen inputs and commands; no old solver entrypoint",
+    "Independent NumPy reward and physical predicate implementation",
+    "Development-only demonstration admission and BC validation",
+    "Finite wall/RAM/GPU/storage/reset bounds; all stages charged; no automatic retries",
+    "Two-seed evaluations on all72 sitting cases and18 supported-leaning cases; no automatic promotion"
+  ],
+  "pending_runtime_gates": [
+    "Full-rate teacher capture/alignment and physical label audit",
+    "Behavior cloning validation",
+    "Measured reset/sensor preflight",
+    "Independent full trajectory reward/physical replay",
+    "Live GPU binding and actor/critic/Adam update verification"
+  ],
+  "cpu_tests": "cpu_tests.json",
+  "saved_trajectory_components": "saved_reward_component_validation.json",
+  "physical_thresholds_unchanged": true,
+  "recurring_automation_created": false,
+  "source_sha256": {
+    "audit.py": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b",
+    "audit_storage_relocation.py": "ff671e584e693c86457af446053826f6309041d321874d231c0ca859dc5a8582",
+    "build_dataset.py": "668e7036ee1f344ac30c51259b09f7ef3607a541c2c7902ad5994e172e8050c2",
+    "capture_teacher.py": "4ce1cd954e2faaa949d1a2ff2a450cfa73d9551bf3fefd21387b23e6bfa753eb",
+    "common.py": "29bb7d4038bbadf185fbd91c9fc66fdb414f7f32411b07b55e573e5cc893be47",
+    "environment.py": "58e1da217248b54ed014f9ffea345961c017feb218c2b64ea1ac5b3a292faa13",
+    "launch_after_comparison.py": "1d8986ae333d7fd899b6e490a7a621bcbf443a64030695dcdca5ddf3817608df",
+    "policy.py": "5e5e513a348ea1cd1d9fb97b520dd83377023a0cd8d6d85059aa61f6030d5aea",
+    "prepare_launch.py": "e6bc39c36613d87ade517c1d286c780a620f914b0994b33cc3a73224a835b008",
+    "pretrain.py": "b1f1ee30b399bd1e42c54402dfc771db05c14f4b7997d564854c5c84ada69b32",
+    "rewards.py": "cfa2ca52573f440820c48a3b6b995cc0519de387c39ae3d2f07620e1fb00b823",
+    "run_training.py": "cb453b2d45419cdb8415e16b6a9eaa7e04e2b09853557e66b86c0fbd41a3b403",
+    "test_cpu.py": "f7c2bd4277c6151b606b7fb10034200713aaf4dc4db39a7ccd6921cb2af0218d",
+    "validate_saved.py": "0094bed6983cac4a7e85179161d1890db6c17c27c2f19b1db86fc2a95c104439"
+  },
+  "storage_only_review": "audit_storage_relocation.py; must pass before launch"
+}
