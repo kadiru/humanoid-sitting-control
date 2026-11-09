@@ -1,0 +1,78 @@
+{
+  "utc": "2026-10-18T21:11:05.492717+00:00",
+  "scope": "Freeze one new exact-row quotient preparation and independent proof auditor.",
+  "compile_actual_exit": 0,
+  "compile_exit_evidence": {
+    "actual_exit": 0,
+    "tool_chunk": "eb96cc",
+    "scope": "Final four sources compile; sort signatures only, preserve source row coefficients/storage, reject duplicate columns. Initial sources/freeze retained unchanged.",
+    "utc": "2026-10-18T21:10:47.600882+00:00"
+  },
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_515.json",
+      "files": 11378,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_515.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "workers": [],
+  "source_input_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/low_seat_exact_row_quotient_v2_516.py": "a4488b194840286dfa65a3195e1e3bf5e67358c1f80ad18ec9a5cb60dfcf2f5c",
+    "/home/kadir/humanoid-sitting/scripts/prepare_low_seat_exact_row_quotient_v2_516.py": "6b5393f5543d3a5947d6b8d1b287423095a3c2776477ed034472cebcfcd508eb",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_exact_row_quotient_v2_517.py": "7cb581f6c0b92014de780b9ea26f828eb7b9fb39c42d80b655c34b74feed13e1",
+    "/home/kadir/humanoid-sitting/scripts/freeze_low_seat_exact_row_quotient_v2_516.py": "69a6b9664c574df97938cdeb7863efe6942be1e71a9174c9bfb1ecf07830bd7e",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/SHA256.json": "61e58aa05e11f98771fd99acfdcb906fcc183deb116df3e5fb5ca4da833d10fc",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/primary/matrix.npz": "111506822a383a2a1c608c19d73ae31295a79381e01fbf713292ab59d0d64d9d",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/primary/arrays.npz": "a726d5c51d20da51fcc96678353b408c5d3a20246385f308bd4390153d093c5a",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/primary/equality.npz": "c27c5897520fe7949f33e173419fc5ad3e41a9630891dd0137bae1b849163695",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/witness/matrix.npz": "fa138784825ea82b2864b1f7ca5839a90457bb8d94a1b103136587d5bbecb26a",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/witness/arrays.npz": "8e2e756b393c5b51fbb3ee5e275e5725cfde05f0effe56c8dd89389f1254406b",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/witness/equality.npz": "c27c5897520fe7949f33e173419fc5ad3e41a9630891dd0137bae1b849163695",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/mixed_coordinate_preparation_504/SHA256.json": "70ac9db1920441dea07af5992a02d8b063347b6a5f204c95ade425fed655b8cc",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/mixed_coordinate_preparation_504/primary/matrix.npz": "6541fcc06d64824ad4321c4033e0a7740fee68c6d9f86609962b09328e122f14",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/mixed_coordinate_preparation_504/primary/arrays.npz": "bd2cfe32adaf290a777588b047c25a82eeef12b982f32c0447609f1d2b2ffa5d",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/mixed_coordinate_preparation_504/primary/equality.npz": "c27c5897520fe7949f33e173419fc5ad3e41a9630891dd0137bae1b849163695",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/mixed_coordinate_preparation_504/witness/matrix.npz": "f380ec27a3f3fe549a32327aeb70a0b98c711cdb8274238b365046aac0eb147c",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/mixed_coordinate_preparation_504/witness/arrays.npz": "06cbccce5ea4f8ebda9d08379052443a79da0190b9c49a98c75cfe8b544df4a6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/mixed_coordinate_preparation_504/witness/equality.npz": "c27c5897520fe7949f33e173419fc5ad3e41a9630891dd0137bae1b849163695",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_audit_491/independent_audit.json": "674f3cd6272bd4a62e4d05cc2dda7adbe3f234389ae5000e122596dfc2b2c4c7",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/mixed_coordinate_audit_505/independent_audit.json": "54b366832ec4905ae56ef4490da854f01741ac3e57c50407d338db1a4dbdab10"
+  },
+  "specification": {
+    "scope": "NEW exact positive-ray dominance quotient of BOTH saved original490 and mixed504 full LP inequality systems. Preparation only, no solver or candidate.",
+    "rationale": "512 obtained only a rejected partial master and then stopped. Instead of continuing its cuts or changing their selection, prove a fixed subset equivalent to every full inequality BEFORE a solve. No512 vector or cut queue is an input. Existing basis, unit scales and all row coefficients remain immutable.",
+    "signature": "Treat every finite binary64 coefficient as its exact dyadic rational. Clear power-of-two denominators and divide the integer coefficient vector by its positive integer gcd. Retain coefficient signs, column indices and the epigraph/eta column. Do not flip the sign, threshold coefficients, or round normalized coefficients. Signature columns are sorted without changing source storage or summing coefficients; duplicate stored columns reject. Dictionary keys use exact integer tuple equality, not a hash digest alone.",
+    "dominance": "Within a positive ray A_i=s_i*k, s_i>0, keep the row with smallest exact rational b_i/s_i; ties choose smallest source row ID. Then A_i=lambda_i*A_rep with lambda_i>0 and b_i-lambda_i*b_rep>=0 EXACTLY. This proves every eliminated inequality from one retained inequality for all real vectors. Negative rays are distinct. Both consistency signs remain either explicit or covered by their own exact implication proof.",
+    "zero": "A zero-LHS row with nonnegative exact RHS is a tautology. A zero-LHS row with negative RHS is a contradiction and is retained individually; never conceal it or assert global physical infeasibility. Exact stored zeros can be ignored only when constructing a signature; copied source matrices remain unmodified.",
+    "paired": "Construct independent quotients for original and transformed binary64 matrices/RHS. Keep the UNION of their representative row IDs and every contradiction. Thus every removed row has a retained implication witness in EACH representation. No claim that rounded504 equals original490 is required. A row dominant in only one representation cannot be deleted unless independently covered in the other.",
+    "proof": "For either system, the selected rows are a subset of the original rows, so full feasibility implies subset feasibility. For every omitted nonzero row, positive scaling of its selected representative plus the nonnegative exact RHS slack proves the omitted row. Omitted zero rows are tautologies. Thus subset feasibility implies full feasibility in exact real arithmetic over the stored binary64 coefficients. The objective, variable bounds, all equalities and their RHS are copied unchanged. This is constraint reduction, not variable elimination or a new coordinate basis.",
+    "numerical": "Do NOT multiply the solver tolerance by the implication scale or infer full binary64 feasibility from a reduced residual. Even tiny representative errors can amplify. Any future returned unedited transformed vector and reconstructed ORIGINAL t=S*z+a must pass EXHAUSTIVE original AND transformed full inequality/equality/bound checks at unchanged1e-7. Failure is rejection, not clipping, rounding, a waived sign, or an invitation to continue512. Exact original interval eta>0 remains mandatory before490 encoding.",
+    "ledger": "Each source row stores its chosen representative ID (minus1 only for a proved tautology), first nonzero binary64 pivot, support length and representative RHS comparison result. Immutable source coefficients plus two saved binary64 pivots specify lambda as an EXACT rational, without a lossy decimal ratio. Independent audit verifies every omitted coefficient by exact rational cross-products and RHS implication; it does not rerun the gcd grouping algorithm.",
+    "full_domain": "All331888final/331495retained path criteria,156647HARD/noepigraph,174848rate/window,68250two-sided unit-scaled consistency rows,92267finite intervals including11906fullboxes/80155trust/206drop and every pivot remain represented or exactly implied.1411actual normal/hover and1366homogeneous LP equalities remain. No original440 +/-.02box,8eps/4ULP/32ULP/4302^-23 reserve or unit scale changes.392constantcontact/timeidentity omission remains optimizer-only.",
+    "reference": "ONLY immutable490 and504 saved complete primary/witness matrices, arrays and equalities. No old basis/inverse/incidence/model/root/map fixture or transform product is rebuilt. Original actualX/Y/J, canonical auxiliary and exact drops remain unchanged. The witness ceiling.09895564659603738 is an inherited optimistic ASSEMBLY fixture, NOT a solved result.",
+    "future": "No518 algorithm, resource/LP budget, changed-state quotient lifecycle or run wrapper is frozen here. Any new state/ceiling would need its own valid full assembly and exact quotient certificates; this reference subset is not universal. Row count reductions do not demonstrate solver speed, timeout cause, a primal witness or mechanical feasibility.",
+    "admission": "Original full witness certification, exact finite-domain certification and all actual signed rows, phase,normal1e-13,hover1e-8,unit-specific closure/geometry/contactframe/COM/equilibrium/clock/windows/work/filter/runtime/physics/PPO gates remain. Auxiliary or exact quotient success never admits execution.",
+    "lp_calls": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "new_actual_path": false,
+    "physical_admission": false
+  },
+  "disk_free_bytes": 29661687808,
+  "no_rejected_or_partial_vector_input": true,
+  "lp_calls": 0,
+  "model_calls": 0,
+  "finite_maps": 0,
+  "physical_admission": false
+}
