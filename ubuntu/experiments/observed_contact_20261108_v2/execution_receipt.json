@@ -1,0 +1,30 @@
+{
+  "utc": "2026-11-08T18:10:15.629350+00:00",
+  "experiment": "observed_contact_20261108_v2",
+  "result": {
+    "model_pass": false,
+    "error": "ValueError({'reason': 'ANALYTIC_NODE_REJECTED', 'stage': 'load_transfer_endpoint', 'success': False, 'iterations': 15, 'equality': 2.3948670751367282e-05, 'inequality': -0.000625055972126809, 'message': 'Inequality constraints incompatible', 'foot_residual': 2.3948670751367282e-05, 'gap_m': -8.301692666634608e-14, 'camera_minimum_m': -8.301692666634608e-14, 'construction_clearance_minimum_m': -8.301692666634608e-14, 'objective': 1.1386454821854384, 'solver_status': 4, 'derivatives': 'analytic full model, piecewise exact active camera row'})",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/observed_contact_20261108_v2/validate.py\", line 103, in <module>\n    result=plan.solve();goal=plan.target.copy();marker=plan.marker.copy();write('plan.json',result)\n           ^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/observed_contact_20261108_v2/terminal_plan.py\", line 143, in solve\n    endpoint=self.optimize(seed,0.,self.endpoint_rows,lambda x:self.posture_cost(x,.2),\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/observed_contact_20261108_v2/analytic_model.py\", line 246, in optimize\n    if not fit.success or eq>.002 or ineq<-1e-6 or diagnostic['camera_minimum_m']<-1e-6:raise ValueError(dict(reason='ANALYTIC_NODE_REJECTED',**diagnostic))\n                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: {'reason': 'ANALYTIC_NODE_REJECTED', 'stage': 'load_transfer_endpoint', 'success': False, 'iterations': 15, 'equality': 2.3948670751367282e-05, 'inequality': -0.000625055972126809, 'message': 'Inequality constraints incompatible', 'foot_residual': 2.3948670751367282e-05, 'gap_m': -8.301692666634608e-14, 'camera_minimum_m': -8.301692666634608e-14, 'construction_clearance_minimum_m': -8.301692666634608e-14, 'objective': 1.1386454821854384, 'solver_status': 4, 'derivatives': 'analytic full model, piecewise exact active camera row'}\n",
+    "total_seconds": 3.0879906569898594,
+    "physics_launch_ready": false,
+    "physical_success": false,
+    "physics_steps": 0,
+    "PPO_updates": 0
+  },
+  "process": {
+    "target": "lean_center",
+    "wall_seconds_including_interpreter_startup": 3.15988589101471,
+    "timeout": false,
+    "returncode": 0,
+    "cpu_seconds": 3.157522,
+    "child_peak_rss_kib": 286048,
+    "new_physics_steps": 0
+  },
+  "physics_steps": 0,
+  "new_demonstrations": 0,
+  "PPO_updates": 0,
+  "new_72_case_evaluations": 0,
+  "worker_live": false,
+  "physical_repairs": 0,
+  "admitted_motion": false
+}
