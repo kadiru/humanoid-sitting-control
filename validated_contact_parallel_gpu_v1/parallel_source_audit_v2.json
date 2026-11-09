@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "classification": "Independent scheduling/source review; no simulator or optimizer execution",
+  "source_sha256": "91794095a4bf8dc3d2fa8c2e7fb49df32705a2097be5d22154584b5a7f642cae",
+  "remaining_chunks": 5,
+  "new_updates": 288,
+  "total_updates": 512,
+  "total_evaluation_episodes": 1152,
+  "all8_command_equivalence_checks": [
+    {
+      "gpu": 0,
+      "arm": "original",
+      "mode": "train",
+      "only_output_and_GPU_selector_changed": true
+    },
+    {
+      "gpu": 0,
+      "arm": "original",
+      "mode": "evaluate",
+      "only_output_and_GPU_selector_changed": true
+    },
+    {
+      "gpu": 0,
+      "arm": "revised",
+      "mode": "train",
+      "only_output_and_GPU_selector_changed": true
+    },
+    {
+      "gpu": 0,
+      "arm": "revised",
+      "mode": "evaluate",
+      "only_output_and_GPU_selector_changed": true
+    },
+    {
+      "gpu": 1,
+      "arm": "original",
+      "mode": "train",
+      "only_output_and_GPU_selector_changed": true
+    },
+    {
+      "gpu": 1,
+      "arm": "original",
+      "mode": "evaluate",
+      "only_output_and_GPU_selector_changed": true
+    },
+    {
+      "gpu": 1,
+      "arm": "revised",
+      "mode": "train",
+      "only_output_and_GPU_selector_changed": true
+    },
+    {
+      "gpu": 1,
+      "arm": "revised",
+      "mode": "evaluate",
+      "only_output_and_GPU_selector_changed": true
+    }
+  ],
+  "old_guard_stops_before_subprocess_in_isolated_execution": true,
+  "scientific_sources_unchanged": true,
+  "recorded_exception_only": true,
+  "prior_exact_failure_preserved": true,
+  "actor_critic_adam_rng_resume_unchanged": true,
+  "all72_criteria_and_action_limits_unchanged": true,
+  "new_physics_or_optimizer_steps_in_preparation": 0
+}

@@ -1,0 +1,22 @@
+{
+  "authorization": "could you use both gpu's to run two different tasks in parallel?",
+  "interpretation": "Two GPU workers for the remaining already-authorized PPO comparison, with one scientific owner. User supersedes prior single-child scheduling restriction; all reward/action/evaluation/128-update caps remain.",
+  "first_step": "One GPU1 frozen-parent fresh/indexed reset identity check against existing calibration; original GPU0 queue untouched. Exact tolerance unchanged. Failure blocks admission and no blind retry.",
+  "preflight_extra_active_episodes": 48,
+  "preflight_extra_physics_including_initial_and_indexed_settling": 49200,
+  "preflight_extra_training_updates": 0,
+  "preflight_wall_cap_seconds": 1800,
+  "shared_output_cap_bytes": 12884901888,
+  "minimum_free_disk_bytes": 5368709120,
+  "gpu1_memory_cap_MiB": 11264,
+  "intended_assignment": {
+    "gpu0": "Both original/revised seed63111",
+    "gpu1": "Both original/revised seed63117 after hardware eligibility passes"
+  },
+  "handoff_status": "Not armed. Must preserve in-flight GPU0 chunk and prevent duplicate future jobs before scheduling GPU1 training.",
+  "scope": "Current sitting comparison only; no new reward/limits/holdout/leaning experiment or automation.",
+  "source_sha256": {
+    "preflight.py": "418a3a719cc03ff6494117a14c04b80015490f9c963fe8b07b0d1f5f89859867",
+    "run_supported_gpu1_parallel_v1.sh": "33098242c0cbb27695ceec35152e585aa72c066ea83181d7f961200cfc4ebac7"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "utc": "2026-10-26T23:57:17.038160+00:00",
+  "classification": "Read-only saved-rollout arithmetic and research-informed recommendation. No simulation, optimizer step, old solver replay, holdout access or physical repair.",
+  "evidence": {
+    "diagnostics": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v2/saved_learning_diagnostics_v1.json",
+    "diagnostics_sha256": "40d5287387eff905794900eaaf6a3177773027e4df0d6f2db3510cfec117fe0f",
+    "analysis_source": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v2/analyze_saved_learning_v1.py",
+    "analysis_source_sha256": "af3b8c317555d2ee796cb5442763646db1fe195df5ce032602ed4a3d1a7854f7",
+    "source_files_bound": 54,
+    "reward_reconstruction_max_abs_error": 7.587596805080921e-06
+  },
+  "sample_budget_per_seed": {
+    "updates": 8,
+    "fresh_complete_episodes": 192,
+    "policy_decisions": 5376,
+    "active_physics_transitions": 192000,
+    "actor_Adam_steps": 64,
+    "critic_Adam_steps": 64,
+    "interpretation": "A short infrastructure/learning pilot, not evidence of convergence. Reusing each batch for 8 epochs does not add fresh trajectories."
+  },
+  "observed": {
+    "63111": {
+      "critic_explained_variance_after_update8": 0.09431007160001659,
+      "evaluation_max_abs_learned_offset_rad": 0.0009819994447752833,
+      "training_clean_events_on_original_failures": [
+        {
+          "iteration": 3,
+          "training_case": 4,
+          "original_bank": "known_transfer",
+          "original_case": 4,
+          "slip_ticks": 0,
+          "illegal_ticks": 0,
+          "physical_failure": false,
+          "final_hold_s": 5.48,
+          "traction_bad_ticks": 14,
+          "strict_transfer": false
+        }
+      ],
+      "housing_cases_positive_bonus_zero_all_updates": true
+    },
+    "63117": {
+      "critic_explained_variance_after_update8": 0.09748969512311367,
+      "evaluation_max_abs_learned_offset_rad": 0.0011896538781002164,
+      "training_clean_events_on_original_failures": [
+        {
+          "iteration": 1,
+          "training_case": 5,
+          "original_bank": "known_transfer",
+          "original_case": 5,
+          "slip_ticks": 0,
+          "illegal_ticks": 0,
+          "physical_failure": false,
+          "final_hold_s": 5.54,
+          "traction_bad_ticks": 11,
+          "strict_transfer": false
+        }
+      ],
+      "housing_cases_positive_bonus_zero_all_updates": true
+    },
+    "reward_conflict": {
+      "seed": 63111,
+      "training_case": 4,
+      "original_case": "known_transfer/4",
+      "slipped_update": 2,
+      "slipped_ticks": 18,
+      "slipped_return_from6s": 22.27754803892696,
+      "basic_clean_update": 3,
+      "basic_clean_return_from6s": 19.716409828370402,
+      "scope": "Reward prioritization conflict for basic clean criterion; strict traction margin not cleared."
+    },
+    "timing": {
+      "zero_residual_first_slip_range_s": [
+        11.9,
+        12.06
+      ],
+      "final_policy_original_failures_first_slip_range_s": [
+        11.78,
+        12.2
+      ],
+      "training_first_slip_range_s": [
+        10.46,
+        12.64
+      ],
+      "policy_starts_s": 6,
+      "policy_period_s": 0.5,
+      "typical_zero_residual_late_decisions_charged_past_slip": "15\u201316 of28",
+      "interpretation": "Failure occurs in touchdown/load transfer. It is not a fixed pre-policy failure. Past-event costs on late decisions add variance; this does not by itself invalidate the Monte Carlo policy-gradient estimator."
+    }
+  },
+  "limitations": [
+    "No matched long-run reward ablation was executed; causal contributions of budget, rewards, action representation and critic fit cannot be separated.",
+    "Explained variance is on each update training batch, not held-out performance.",
+    "Reward ranking examples are different saved trajectories for the same development case, not a controlled causal experiment.",
+    "Narrow actions are a capacity risk, but actual policy does not saturate its bounds. No evidence justifies increasing allowed joint residuals.",
+    "Two clean stochastic episodes do not establish reproducibility or full admissibility: traction-margin ticks remain14 and11 and strict_transfer=false. Neither final policy repaired these cases.",
+    "All64 baseline successes stay protected; all8 original failures remain unresolved; no leaning policy trained; fresh holdout closed; automation deleted."
+  ],
+  "recommendation": {
+    "next_step": "Prepare and independently audit a reward revision focused on clean landing before increasing the PPO budget. Preserve all physical criteria, sensors and existing action bounds.",
+    "reward_changes_to_specify": [
+      "Make zero-slip, legal-contact completion the primary learning objective. Bound shaping contributions and choose completion/failure rewards using their full-horizon bounds so earlier sitting cannot outweigh the required clean outcome. Keep efficiency secondary.",
+      "Assign the existing one-time slip, illegal-contact and physical-failure costs at their first occurrence. Preserve their episode totals and full-horizon credit for preceding actions; later actions should not receive costs for already-completed events. Final-hold penalties remain terminal.",
+      "Provide phase-specific dense labels during approach and touchdown: permitted support-patch alignment, unwanted housing clearance before contact, and loaded tangential-velocity/traction margin. Retain legal load saturation and stable rest; prohibit hovering or housing contact from being rewarded as successful support.",
+      "Report reward terms, critic explained variance, first-slip time, slip integral, forbidden-force peak and clean completion separately per original failure and protected case."
+    ],
+    "offline_audit_before_any_training": [
+      "Use the saved trajectories as regression fixtures: the two basic-clean trajectories must outrank the demonstrated slipped alternatives under the revised primary objective.",
+      "Check event costs occur exactly once, earlier decisions receive future costs, later decisions exclude past costs, and total event costs are unchanged.",
+      "Freeze reward equations, weights/bounds, initialization, source/input hashes, evaluation schedule and total wall/storage/CPU/GPU budget; independent audit required before launch."
+    ],
+    "subsequent_experiment_proposal_not_authorized_or_launch_ready": {
+      "design": "Same two seeds and fixed action envelope; compare original and revised reward at equal fresh-sample budget. Keep time discretization, parents and optimizer fixed to isolate the reward package. Proposed ceiling128updates per seed and arm; this is a diagnostic budget, not a convergence guarantee.",
+      "arms": 2,
+      "seeds_per_arm": 2,
+      "updates_per_run": 128,
+      "training_active_physics_transitions": 12288000,
+      "training_policy_decisions": 344064,
+      "evaluation_checkpoints_updates": [
+        16,
+        32,
+        64,
+        128
+      ],
+      "evaluation_full20s_development_episodes": 1152,
+      "total_physics_including_indexed_warmups_initial_settling_and_these_evaluations": 13776000,
+      "accounting_excludes": "Preflight/smoke if newly required; source audits, CPU replay, storage and wall caps still need budgeting. Therefore not a frozen launch plan.",
+      "decision": "Improving mean reward alone is insufficient. Evaluate all72 at checkpoints; promotion requires all8 failures repaired and all64 retained, plus remaining inherited gates. If contact metrics do not improve, stop at cap and use failure attribution before considering a separately justified action/phase redesign."
+    }
+  },
+  "research": [
+    {
+      "title": "ContactMimic: Humanoid Object Interaction via Contact Control",
+      "url": "https://arxiv.org/html/2607.08742v1",
+      "relevance": "Explicit desired contacts and contact-distance rewards; G1 sitting/leaning. Uses4096envs,24policy steps/update,50Hz, up to30000iterations; this scale is context, not a requirement for our residual task."
+    },
+    {
+      "title": "Proximal Policy Optimization Algorithms",
+      "url": "https://arxiv.org/abs/1707.06347",
+      "relevance": "Alternates fresh interaction data and repeated surrogate-objective optimization; epochs are not independent fresh experience."
+    },
+    {
+      "title": "High-Dimensional Continuous Control Using Generalized Advantage Estimation",
+      "url": "https://arxiv.org/abs/1506.02438",
+      "relevance": "Value baselines/advantage estimation address gradient variance. Does not establish that switching to GAE alone would repair these cases."
+    }
+  ]
+}

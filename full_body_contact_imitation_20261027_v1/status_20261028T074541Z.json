@@ -1,0 +1,124 @@
+{
+  "utc": "2026-10-28T07:45:41.710761+00:00",
+  "comparison_finished": false,
+  "comparison_state": "running",
+  "full_23_joint_state": "waiting_for_comparison",
+  "new_23_joint_updates": 0,
+  "demonstration_full_rate_checks": "not_started",
+  "reset_simulator_checks": "not_started",
+  "prior_cpu_and_saved_component_checks": "passed; not simulator validation",
+  "waiting_owner_live": true,
+  "waiting_owner_pid": 122717,
+  "gpus": "0, NVIDIA GeForce RTX 4090, 1 %, 40, 4688 MiB, 24564 MiB\n1, NVIDIA GeForce RTX 4070, 7 %, 55, 3813 MiB, 12282 MiB\n",
+  "gpu0": {
+    "task": "Old comparison: revised rewards, seed63117",
+    "updates": 66,
+    "target": 128,
+    "currently_training": true,
+    "weight_audit": {
+      "passed": true,
+      "checkpoint": "model_065.pt",
+      "initial_sha256": "be4f5d3ba382392e816a165bb4d3a8930618c952c7eb036da2a6d409d98d1ae6",
+      "checkpoint_sha256": "0025bd557f8bbe9ede7ab8c44768375f85777569572d0330f750519e086e5832",
+      "local_updates": 1,
+      "models": {
+        "actor": {
+          "max_abs_parameter_change": 0.01430869847536087,
+          "changed_tensors": 6,
+          "adam_steps_per_parameter": 8,
+          "finite": true
+        },
+        "critic": {
+          "max_abs_parameter_change": 0.010328494012355804,
+          "changed_tensors": 6,
+          "adam_steps_per_parameter": 8,
+          "finite": true
+        }
+      },
+      "physical_success_claimed": false
+    }
+  },
+  "gpu1": {
+    "task": "Old comparison: original rewards, seed63111; final evaluations running",
+    "updates": 128,
+    "target": 128,
+    "currently_training": false,
+    "weight_audit": {
+      "passed": true,
+      "checkpoint": "model_128.pt",
+      "initial_sha256": "46191cf2c058db729ae688efb8fc661346ffd4b2edd50b886d8839908f0012ae",
+      "checkpoint_sha256": "d69799b959f12abfb820e09cd0641035f04236b40da1077e7dc0a7998e7eccd8",
+      "local_updates": 64,
+      "models": {
+        "actor": {
+          "max_abs_parameter_change": 0.21191900968551636,
+          "changed_tensors": 6,
+          "adam_steps_per_parameter": 485,
+          "finite": true
+        },
+        "critic": {
+          "max_abs_parameter_change": 0.4968629479408264,
+          "changed_tensors": 6,
+          "adam_steps_per_parameter": 512,
+          "finite": true
+        }
+      },
+      "physical_success_claimed": false
+    },
+    "independent_audit": {
+      "passed": true,
+      "audited_updates": 64
+    }
+  },
+  "completed_128_results": [
+    {
+      "arm": "revised",
+      "seed": 63111,
+      "updates": 128,
+      "clean": 62,
+      "stable": 70,
+      "slipping": 10,
+      "physical_failures": 2,
+      "lost_protected": [
+        [
+          "known_old",
+          22
+        ],
+        [
+          "known_old",
+          23
+        ],
+        [
+          "known_recent",
+          22
+        ],
+        [
+          "known_recent",
+          23
+        ]
+      ],
+      "repaired_old_failures": [
+        [
+          "known_transfer",
+          4
+        ],
+        [
+          "known_transfer",
+          5
+        ]
+      ]
+    },
+    {
+      "arm": "original",
+      "seed": 63117,
+      "updates": 128,
+      "clean": 64,
+      "stable": 70,
+      "slipping": 8,
+      "physical_failures": 2,
+      "lost_protected": [],
+      "repaired_old_failures": []
+    }
+  ],
+  "source_state": "Live SSH process and GPU queries; read existing progress/checkpoint audits; no runs altered"
+}

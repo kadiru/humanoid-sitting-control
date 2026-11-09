@@ -1,0 +1,204 @@
+{
+  "utc": "2026-10-28T19:10:30.182370+00:00",
+  "classification": "Infrastructure correction; no learning or physical-criteria change",
+  "failure": {
+    "state": "stopped",
+    "reason": "DISK_RESERVE",
+    "free_bytes": 6693793792,
+    "required_min_free_bytes": 8589934592,
+    "previous_simulator_children": 0,
+    "previous_ppo_updates": 0,
+    "original_status": {
+      "state": "stopped",
+      "pid": 122717,
+      "active": {},
+      "completed": [],
+      "failures": [
+        {
+          "gpu": 0,
+          "error": "AssertionError('DISK_RESERVE')",
+          "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 121, in wrapped\n    try:fn(gpu)\n        ^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 162, in captures\n    job(gpu,label,sim_command(gpu,'capture_teacher.py',['--job',str(HERE/'jobs'/f'{name}.json')]),protocol['validation_child_seconds'],True)\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 76, in job\n    assert not stop.is_set();freeze();resources()\n                                      ^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 55, in resources\n    assert shutil.disk_usage(OUT).free>protocol['min_free_bytes'],'DISK_RESERVE'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: DISK_RESERVE\n"
+        },
+        {
+          "gpu": 1,
+          "error": "AssertionError('DISK_RESERVE')",
+          "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 121, in wrapped\n    try:fn(gpu)\n        ^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 162, in captures\n    job(gpu,label,sim_command(gpu,'capture_teacher.py',['--job',str(HERE/'jobs'/f'{name}.json')]),protocol['validation_child_seconds'],True)\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 76, in job\n    assert not stop.is_set();freeze();resources()\n                                      ^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 55, in resources\n    assert shutil.disk_usage(OUT).free>protocol['min_free_bytes'],'DISK_RESERVE'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: DISK_RESERVE\n"
+        },
+        {
+          "error": "AssertionError('DISK_RESERVE')",
+          "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 163, in main\n    paired(captures)\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 127, in paired\n    for f in fs:f.result()\n                ^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/cache/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py\", line 456, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/cache/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"/home/kadir/humanoid-sitting/cache/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/concurrent/futures/thread.py\", line 59, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 121, in wrapped\n    try:fn(gpu)\n        ^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 162, in captures\n    job(gpu,label,sim_command(gpu,'capture_teacher.py',['--job',str(HERE/'jobs'/f'{name}.json')]),protocol['validation_child_seconds'],True)\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 76, in job\n    assert not stop.is_set();freeze();resources()\n                                      ^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_v1/launch_after_comparison.py\", line 55, in resources\n    assert shutil.disk_usage(OUT).free>protocol['min_free_bytes'],'DISK_RESERVE'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: DISK_RESERVE\n"
+        }
+      ],
+      "seconds": 35613.36118578911,
+      "training_started": false,
+      "comparison_untouched": true,
+      "recurring_automation": false,
+      "physical_repair_claimed": false,
+      "retry": false
+    }
+  },
+  "storage": {
+    "new_output": "/home/kadir/humanoid-sitting/outputs/full_body_contact_imitation_v2",
+    "system_disk_free_bytes": 34450432000,
+    "max_output_bytes": 17179869184,
+    "min_reserve_bytes": 8589934592,
+    "old_files_deleted_or_moved": false
+  },
+  "launch": {
+    "utc": "2026-10-28T19:10:30.182370+00:00",
+    "pid": 167249,
+    "source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2",
+    "output": "/home/kadir/humanoid-sitting/outputs/full_body_contact_imitation_v2",
+    "original_execution_deadline_unix": 1793364525.027288,
+    "automatic_retries": 0,
+    "old_evidence_preserved": true
+  },
+  "source_audit": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_storage_v2/storage_audit.json",
+  "freeze": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_storage_v2/freeze.json",
+  "comparison_final_results": [
+    {
+      "arm": "revised",
+      "seed": 63111,
+      "updates": 128,
+      "clean": 62,
+      "stable": 70,
+      "slipping": 10,
+      "physical_failures": 2,
+      "lost_protected": [
+        [
+          "known_old",
+          22
+        ],
+        [
+          "known_old",
+          23
+        ],
+        [
+          "known_recent",
+          22
+        ],
+        [
+          "known_recent",
+          23
+        ]
+      ],
+      "repaired_old_failures": [
+        [
+          "known_transfer",
+          4
+        ],
+        [
+          "known_transfer",
+          5
+        ]
+      ]
+    },
+    {
+      "arm": "original",
+      "seed": 63117,
+      "updates": 128,
+      "clean": 64,
+      "stable": 70,
+      "slipping": 8,
+      "physical_failures": 2,
+      "lost_protected": [],
+      "repaired_old_failures": []
+    },
+    {
+      "arm": "original",
+      "seed": 63111,
+      "updates": 128,
+      "clean": 62,
+      "stable": 70,
+      "slipping": 10,
+      "physical_failures": 2,
+      "lost_protected": [
+        [
+          "known_old",
+          12
+        ],
+        [
+          "known_old",
+          13
+        ],
+        [
+          "known_old",
+          21
+        ],
+        [
+          "known_transfer",
+          21
+        ]
+      ],
+      "repaired_old_failures": [
+        [
+          "known_transfer",
+          4
+        ],
+        [
+          "known_transfer",
+          5
+        ]
+      ]
+    },
+    {
+      "arm": "revised",
+      "seed": 63117,
+      "updates": 128,
+      "clean": 58,
+      "stable": 68,
+      "slipping": 12,
+      "physical_failures": 2,
+      "lost_protected": [
+        [
+          "known_old",
+          2
+        ],
+        [
+          "known_old",
+          3
+        ],
+        [
+          "known_transfer",
+          2
+        ],
+        [
+          "known_transfer",
+          3
+        ],
+        [
+          "known_transfer",
+          6
+        ],
+        [
+          "known_transfer",
+          7
+        ],
+        [
+          "known_transfer",
+          22
+        ],
+        [
+          "known_transfer",
+          23
+        ]
+      ],
+      "repaired_old_failures": [
+        [
+          "known_transfer",
+          4
+        ],
+        [
+          "known_transfer",
+          5
+        ]
+      ]
+    }
+  ],
+  "original_deadline_preserved": true,
+  "learning_configuration_changed": false,
+  "physical_criteria_changed": false,
+  "holdout_opened": false,
+  "automatic_retries": 0,
+  "physical_repair_claimed": false
+}

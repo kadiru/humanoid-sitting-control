@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "review_kind": "Separate source inspection plus byte identity of physical and reward implementation; construction arithmetic audit required separately. No additional coding agent.",
+  "unchanged_sources": {
+    "audit.py": true,
+    "rewards.py": true,
+    "common.py": true,
+    "protected_sitting_cases.json": true
+  },
+  "environment_body_unchanged": true,
+  "findings": [
+    "New absolute action units cannot load old checkpoints.",
+    "Recovery observations captured before executed action; labels use same tick and frozen case-reference association.",
+    "Recovery passes same rate/filter/limit/finger assertions as learner.",
+    "All1000steps saved even after physical failure; all failures audited and retained.",
+    "Only independently clean disturbed trials enter recovery dataset.",
+    "All64 named successes required in both autonomous clone gates before PPO.",
+    "PPO demo term and fixed anchor constrain forgetting; not a guarantee of physical retention.",
+    "Only4090 UUID visible to learning/simulation children; live process-to-device verification;4070 never signaled.",
+    "No automatic retry, recurring task, holdout access or automatic promotion."
+  ],
+  "limits": [
+    "Offline reference-target teacher may be unable to recover disturbed states.",
+    "Absolute-target fit may still fail full sitting despite low regression error.",
+    "Physical outcomes remain pending."
+  ],
+  "preflight_correction": "Synthetic audit found a reporting-only defect inherited from v5: measured_kl exposed last rejected candidate (0.02058456), although actual retained weights had KL0.01996820 and2accepted steps. New logs separately report retained and last-candidate KL; optimizer, guards and limits unchanged. Failed preflight preserved in preflight_failure_01.",
+  "owner_boundary_correction": "Command serialization corrected before subprocess launch; new boundary test covers mixed pathlib/integer/string argv. v1 owner failed with zero children, evidence preserved."
+}

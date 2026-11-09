@@ -1,0 +1,589 @@
+{
+  "utc": "2026-10-27T21:37:40.812413+00:00",
+  "parallel_status": {
+    "state": "running",
+    "owner_pid": 77324,
+    "lanes": {
+      "0": "legacy_chunk_and_evaluations",
+      "1": "train_revised_63111_128"
+    },
+    "active": {
+      "1": {
+        "pid": 77361,
+        "label": "train_revised_63111_128"
+      }
+    },
+    "completed": [],
+    "first_updates_verified": [
+      {
+        "gpu": 1,
+        "phase": "train_revised_63111_128",
+        "checkpoint": "model_065.pt",
+        "utc": "2026-10-27T20:48:09Z"
+      }
+    ],
+    "seconds": 3279.7597182610043,
+    "legacy_status": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/status.json",
+    "complete": false,
+    "physical_repair_claimed": false,
+    "automation": "none"
+  },
+  "legacy_status": {
+    "state": "running",
+    "phase": "train_original_63117_064",
+    "owner_pid": 28553,
+    "child_pid": 75813,
+    "completed": [
+      "identity_zero",
+      "identity_audit",
+      "identity_reward_audit",
+      "train_revised_63111_016",
+      "train_revised_63111_016_audit",
+      "eval_revised_63111_016_known_old",
+      "eval_revised_63111_016_known_old_audit",
+      "eval_revised_63111_016_known_transfer",
+      "eval_revised_63111_016_known_transfer_audit",
+      "eval_revised_63111_016_known_recent",
+      "eval_revised_63111_016_known_recent_audit",
+      "train_original_63111_016",
+      "train_original_63111_016_audit",
+      "eval_original_63111_016_known_old",
+      "eval_original_63111_016_known_old_audit",
+      "eval_original_63111_016_known_transfer",
+      "eval_original_63111_016_known_transfer_audit",
+      "eval_original_63111_016_known_recent",
+      "eval_original_63111_016_known_recent_audit",
+      "train_original_63117_016",
+      "train_original_63117_016_audit",
+      "eval_original_63117_016_known_old",
+      "eval_original_63117_016_known_old_audit",
+      "eval_original_63117_016_known_transfer",
+      "eval_original_63117_016_known_transfer_audit",
+      "eval_original_63117_016_known_recent",
+      "eval_original_63117_016_known_recent_audit",
+      "train_revised_63117_016",
+      "train_revised_63117_016_audit",
+      "eval_revised_63117_016_known_old",
+      "eval_revised_63117_016_known_old_audit",
+      "eval_revised_63117_016_known_transfer",
+      "eval_revised_63117_016_known_transfer_audit",
+      "eval_revised_63117_016_known_recent",
+      "eval_revised_63117_016_known_recent_audit",
+      "train_revised_63111_032",
+      "train_revised_63111_032_audit",
+      "eval_revised_63111_032_known_old",
+      "eval_revised_63111_032_known_old_audit",
+      "eval_revised_63111_032_known_transfer",
+      "eval_revised_63111_032_known_transfer_audit",
+      "eval_revised_63111_032_known_recent",
+      "eval_revised_63111_032_known_recent_audit",
+      "train_original_63111_032",
+      "train_original_63111_032_audit",
+      "eval_original_63111_032_known_old",
+      "eval_original_63111_032_known_old_audit",
+      "eval_original_63111_032_known_transfer",
+      "eval_original_63111_032_known_transfer_audit",
+      "eval_original_63111_032_known_recent",
+      "eval_original_63111_032_known_recent_audit",
+      "train_original_63117_032",
+      "train_original_63117_032_audit",
+      "eval_original_63117_032_known_old",
+      "eval_original_63117_032_known_old_audit",
+      "eval_original_63117_032_known_transfer",
+      "eval_original_63117_032_known_transfer_audit",
+      "eval_original_63117_032_known_recent",
+      "eval_original_63117_032_known_recent_audit",
+      "train_revised_63117_032",
+      "train_revised_63117_032_audit",
+      "eval_revised_63117_032_known_old",
+      "eval_revised_63117_032_known_old_audit",
+      "eval_revised_63117_032_known_transfer",
+      "eval_revised_63117_032_known_transfer_audit",
+      "eval_revised_63117_032_known_recent",
+      "eval_revised_63117_032_known_recent_audit",
+      "train_revised_63111_064",
+      "train_revised_63111_064_audit",
+      "eval_revised_63111_064_known_old",
+      "eval_revised_63111_064_known_old_audit",
+      "eval_revised_63111_064_known_transfer",
+      "eval_revised_63111_064_known_transfer_audit",
+      "eval_revised_63111_064_known_recent",
+      "eval_revised_63111_064_known_recent_audit",
+      "train_original_63111_064",
+      "train_original_63111_064_audit",
+      "eval_original_63111_064_known_old",
+      "eval_original_63111_064_known_old_audit",
+      "eval_original_63111_064_known_transfer",
+      "eval_original_63111_064_known_transfer_audit",
+      "eval_original_63111_064_known_recent",
+      "eval_original_63111_064_known_recent_audit"
+    ],
+    "first_updates_verified": [
+      {
+        "phase": "train_revised_63111_016",
+        "checkpoint": "model_001.pt",
+        "utc": "2026-10-27T03:05:13Z"
+      },
+      {
+        "phase": "train_original_63111_016",
+        "checkpoint": "model_001.pt",
+        "utc": "2026-10-27T04:33:04Z"
+      },
+      {
+        "phase": "train_original_63117_016",
+        "checkpoint": "model_001.pt",
+        "utc": "2026-10-27T06:01:17Z"
+      },
+      {
+        "phase": "train_revised_63117_016",
+        "checkpoint": "model_001.pt",
+        "utc": "2026-10-27T07:29:30Z"
+      },
+      {
+        "phase": "train_revised_63111_032",
+        "checkpoint": "model_017.pt",
+        "utc": "2026-10-27T08:57:45Z"
+      },
+      {
+        "phase": "train_original_63111_032",
+        "checkpoint": "model_017.pt",
+        "utc": "2026-10-27T10:26:00Z"
+      },
+      {
+        "phase": "train_original_63117_032",
+        "checkpoint": "model_017.pt",
+        "utc": "2026-10-27T11:54:06Z"
+      },
+      {
+        "phase": "train_revised_63117_032",
+        "checkpoint": "model_017.pt",
+        "utc": "2026-10-27T13:22:23Z"
+      },
+      {
+        "phase": "train_revised_63111_064",
+        "checkpoint": "model_033.pt",
+        "utc": "2026-10-27T14:50:30Z"
+      },
+      {
+        "phase": "train_original_63111_064",
+        "checkpoint": "model_033.pt",
+        "utc": "2026-10-27T17:32:40Z"
+      },
+      {
+        "phase": "train_original_63117_064",
+        "checkpoint": "model_033.pt",
+        "utc": "2026-10-27T20:16:41Z"
+      }
+    ],
+    "seconds": 67764.87691069,
+    "phase_seconds": 5145.439123274002,
+    "complete": false,
+    "physical_repair_claimed": false,
+    "automation": "none"
+  },
+  "progress": {
+    "0": {
+      "label": "train_original_63117_064",
+      "completed": 17,
+      "updates": 49,
+      "seconds": 4969.920384435987,
+      "last": {
+        "iteration": 16,
+        "updates": 49,
+        "active": 408000,
+        "warmup": 9600,
+        "decisions": 672,
+        "stable": 22,
+        "clean": 13,
+        "slip": 11,
+        "illegal": 0,
+        "physical": 2,
+        "optimizer": {
+          "actor_steps": 8,
+          "critic_steps": 8,
+          "rejected_kl_steps": 0,
+          "max_accepted_kl": 0.01109219714999199,
+          "surrogate": -0.01398076156764212,
+          "value_mse": 234.82805871745776,
+          "reward_mean": 15.293102728807213,
+          "reward_std": 20.724698244929467,
+          "raw_advantage_std": 14.217705369382454
+        }
+      }
+    },
+    "1": {
+      "label": "train_revised_63111_128",
+      "completed": 10,
+      "updates": 74,
+      "seconds": 2979.4216591150034,
+      "last": {
+        "iteration": 9,
+        "updates": 74,
+        "active": 240000,
+        "warmup": 5400,
+        "decisions": 672,
+        "stable": 22,
+        "clean": 14,
+        "slip": 10,
+        "illegal": 0,
+        "physical": 2,
+        "optimizer": {
+          "actor_steps": 8,
+          "critic_steps": 8,
+          "rejected_kl_steps": 0,
+          "max_accepted_kl": 0.013154451735317707,
+          "surrogate": -0.005880764685571194,
+          "value_mse": 0.027578206732869148,
+          "reward_mean": 0.5636401772499084,
+          "reward_std": 0.5882880687713623,
+          "raw_advantage_std": 0.18982544541358948
+        }
+      }
+    }
+  },
+  "completed_evaluations": [
+    {
+      "arm": "revised",
+      "seed": 63111,
+      "updates": 16,
+      "clean": 60,
+      "stable": 68,
+      "repairs": [],
+      "regressions": [
+        [
+          "known_old",
+          0
+        ],
+        [
+          "known_old",
+          1
+        ],
+        [
+          "known_old",
+          14
+        ],
+        [
+          "known_old",
+          15
+        ]
+      ],
+      "all8_repaired_and64_retained": false
+    },
+    {
+      "arm": "original",
+      "seed": 63111,
+      "updates": 16,
+      "clean": 58,
+      "stable": 70,
+      "repairs": [],
+      "regressions": [
+        [
+          "known_transfer",
+          14
+        ],
+        [
+          "known_transfer",
+          15
+        ],
+        [
+          "known_transfer",
+          20
+        ],
+        [
+          "known_transfer",
+          21
+        ],
+        [
+          "known_transfer",
+          22
+        ],
+        [
+          "known_transfer",
+          23
+        ]
+      ],
+      "all8_repaired_and64_retained": false
+    },
+    {
+      "arm": "original",
+      "seed": 63117,
+      "updates": 16,
+      "clean": 56,
+      "stable": 68,
+      "repairs": [],
+      "regressions": [
+        [
+          "known_old",
+          14
+        ],
+        [
+          "known_old",
+          15
+        ],
+        [
+          "known_transfer",
+          8
+        ],
+        [
+          "known_transfer",
+          9
+        ],
+        [
+          "known_recent",
+          8
+        ],
+        [
+          "known_recent",
+          9
+        ],
+        [
+          "known_recent",
+          10
+        ],
+        [
+          "known_recent",
+          11
+        ]
+      ],
+      "all8_repaired_and64_retained": false
+    },
+    {
+      "arm": "revised",
+      "seed": 63117,
+      "updates": 16,
+      "clean": 61,
+      "stable": 70,
+      "repairs": [],
+      "regressions": [
+        [
+          "known_transfer",
+          20
+        ],
+        [
+          "known_transfer",
+          21
+        ],
+        [
+          "known_transfer",
+          23
+        ]
+      ],
+      "all8_repaired_and64_retained": false
+    },
+    {
+      "arm": "revised",
+      "seed": 63111,
+      "updates": 32,
+      "clean": 59,
+      "stable": 69,
+      "repairs": [],
+      "regressions": [
+        [
+          "known_old",
+          14
+        ],
+        [
+          "known_old",
+          15
+        ],
+        [
+          "known_transfer",
+          18
+        ],
+        [
+          "known_recent",
+          6
+        ],
+        [
+          "known_recent",
+          7
+        ]
+      ],
+      "all8_repaired_and64_retained": false
+    },
+    {
+      "arm": "original",
+      "seed": 63111,
+      "updates": 32,
+      "clean": 58,
+      "stable": 70,
+      "repairs": [],
+      "regressions": [
+        [
+          "known_old",
+          14
+        ],
+        [
+          "known_old",
+          15
+        ],
+        [
+          "known_transfer",
+          10
+        ],
+        [
+          "known_transfer",
+          11
+        ],
+        [
+          "known_recent",
+          10
+        ],
+        [
+          "known_recent",
+          11
+        ]
+      ],
+      "all8_repaired_and64_retained": false
+    },
+    {
+      "arm": "original",
+      "seed": 63117,
+      "updates": 32,
+      "clean": 57,
+      "stable": 69,
+      "repairs": [],
+      "regressions": [
+        [
+          "known_old",
+          14
+        ],
+        [
+          "known_old",
+          15
+        ],
+        [
+          "known_recent",
+          8
+        ],
+        [
+          "known_recent",
+          9
+        ],
+        [
+          "known_recent",
+          10
+        ],
+        [
+          "known_recent",
+          14
+        ],
+        [
+          "known_recent",
+          15
+        ]
+      ],
+      "all8_repaired_and64_retained": false
+    },
+    {
+      "arm": "revised",
+      "seed": 63117,
+      "updates": 32,
+      "clean": 62,
+      "stable": 70,
+      "repairs": [],
+      "regressions": [
+        [
+          "known_old",
+          10
+        ],
+        [
+          "known_old",
+          11
+        ]
+      ],
+      "all8_repaired_and64_retained": false
+    },
+    {
+      "arm": "revised",
+      "seed": 63111,
+      "updates": 64,
+      "clean": 59,
+      "stable": 70,
+      "repairs": [],
+      "regressions": [
+        [
+          "known_old",
+          14
+        ],
+        [
+          "known_old",
+          15
+        ],
+        [
+          "known_transfer",
+          0
+        ],
+        [
+          "known_recent",
+          14
+        ],
+        [
+          "known_recent",
+          15
+        ]
+      ],
+      "all8_repaired_and64_retained": false
+    },
+    {
+      "arm": "original",
+      "seed": 63111,
+      "updates": 64,
+      "clean": 62,
+      "stable": 70,
+      "repairs": [],
+      "regressions": [
+        [
+          "known_recent",
+          6
+        ],
+        [
+          "known_recent",
+          7
+        ]
+      ],
+      "all8_repaired_and64_retained": false
+    }
+  ],
+  "all_completed_evaluation_audits_passed": true,
+  "evaluation_audit_paths": [
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63111_016_known_old/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63111_016_known_transfer/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63111_016_known_recent/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63111_016_known_old/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63111_016_known_transfer/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63111_016_known_recent/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63117_016_known_old/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63117_016_known_transfer/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63117_016_known_recent/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63117_016_known_old/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63117_016_known_transfer/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63117_016_known_recent/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63111_032_known_old/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63111_032_known_transfer/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63111_032_known_recent/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63111_032_known_old/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63111_032_known_transfer/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63111_032_known_recent/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63117_032_known_old/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63117_032_known_transfer/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63117_032_known_recent/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63117_032_known_old/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63117_032_known_transfer/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63117_032_known_recent/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63111_064_known_old/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63111_064_known_transfer/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_revised_63111_064_known_recent/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63111_064_known_old/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63111_064_known_transfer/independent_audit.json",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/eval_original_63111_064_known_recent/independent_audit.json"
+  ],
+  "baseline_clean": 64,
+  "total_cases": 72,
+  "original_failures_repaired_in_any_completed_evaluation": [],
+  "no_regression_full_repair": false,
+  "gpu_telemetry": "0, NVIDIA GeForce RTX 4090, 38, 1 %, 4688 MiB, 84.20 W\n1, NVIDIA GeForce RTX 4070, 49, 6 %, 3825 MiB, 32.04 W\n",
+  "compute_apps": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 75818, 4612 MiB\nGPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 77366, 3625 MiB\n",
+  "training_interrupted": false,
+  "criteria_changed": false
+}

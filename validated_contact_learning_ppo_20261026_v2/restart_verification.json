@@ -1,0 +1,113 @@
+{
+  "utc": "2026-10-26T21:50:33.423508+00:00",
+  "request_completed": "Reset regression corrected, NVIDIA runtime restored, PPO restarted, actual main-training weight update verified.",
+  "study": "contact_learning_ppo_20261026_v2",
+  "driver": {
+    "loaded_and_installed": "580.196.07",
+    "NVML_pass": true,
+    "CUDA_matmul_pass": true,
+    "repair": "Reboot after installed driver update",
+    "evidence": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v2/driver_repair_20261026_v2.json"
+  },
+  "reset": {
+    "passed": true,
+    "exact_arrays": {
+      "startup.npz": 5,
+      "traction_startup.npz": 3,
+      "trace.npz": 21
+    },
+    "trace_samples": 405,
+    "episodes_per_case": 2,
+    "compared_command_samples": 400,
+    "matched_fresh_and_indexed_reset_sequences": true,
+    "fresh_equals_indexed_required": false,
+    "tolerance_relaxed": false,
+    "physical_reset_changed": false,
+    "optimizer_updates": 0,
+    "physical_repair_claimed": false
+  },
+  "smoke": {
+    "passed": true,
+    "max_parameter_error": {
+      "actor": 6.034970283508301e-07,
+      "critic": 3.91155481338501e-07
+    },
+    "absolute_tolerance": 0.0002,
+    "updates": 2
+  },
+  "main": {
+    "seed": 63111,
+    "completed_updates_verified": 1,
+    "planned_updates": 8,
+    "num_envs": 24,
+    "checkpoint_audit": {
+      "passed": true,
+      "checkpoint": "model_01.pt",
+      "initial_sha256": "cb7ba672b2eb78cadf796eedd5c9006dcbffca207ac76b13cfb64d40dfdfcf4a",
+      "checkpoint_sha256": "2b5dbae51124dd9ac646b246f08283a00dbc13b815aeb5d9f8281ead2820b733",
+      "local_updates": 1,
+      "models": {
+        "actor": {
+          "max_abs_parameter_change": 0.008075891062617302,
+          "changed_tensors": 6,
+          "adam_steps_per_parameter": 8,
+          "finite": true
+        },
+        "critic": {
+          "max_abs_parameter_change": 0.008079605177044868,
+          "changed_tensors": 6,
+          "adam_steps_per_parameter": 8,
+          "finite": true
+        }
+      },
+      "physical_success_claimed": false
+    },
+    "checkpoint_local": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v2/main_seed_63111/model_01.pt",
+    "progress": {
+      "completed": 1,
+      "updates": 1,
+      "seconds": 261.82961234000004,
+      "last": {
+        "iteration": 0,
+        "updates": 1,
+        "active": 24000,
+        "warmup": 0,
+        "decisions": 672,
+        "stable": 22,
+        "clean": 15,
+        "slip": 9,
+        "illegal": 0,
+        "physical": 2,
+        "optimizer": {
+          "actor_steps": 8,
+          "critic_steps": 8,
+          "rejected_kl_steps": 0,
+          "max_accepted_kl": 0.007550764828920364,
+          "surrogate": -0.009260771001368552,
+          "value_mse": 652.9629246006973,
+          "reward_mean": 15.750745954428123,
+          "reward_std": 20.16234933473435,
+          "raw_advantage_std": 20.16234933473435
+        }
+      }
+    },
+    "main_initial_exactly_matches_smoke_initial": true
+  },
+  "live_worker_check": {
+    "utc": "2026-10-26T21:49:52Z",
+    "owner_pid": 6453,
+    "child_wrapper_pid": 12907,
+    "training_python_pid": 12912,
+    "GPU": "RTX4090",
+    "gpu_process_memory_MiB": 4612,
+    "state": "live, next rollout in progress"
+  },
+  "remaining_finite_queue": "Complete seed63111 eight-update main and CPU audit; seed63117 smoke, eight-update main and CPU audits; both final policies evaluated on all72 development trials. No automatic promotion.",
+  "new_updates_verified_total": 3,
+  "validated_physical_status": "Best09 remains64/72 clean,70stable,8slipping,2housing; overlapping categories. New trained-policy72-case evaluation pending.",
+  "fresh_holdout": "CLOSED",
+  "leaning_trained": false,
+  "physical_repair_claimed": false,
+  "v1_preserved": true,
+  "automation": "DELETED; not recreated"
+}

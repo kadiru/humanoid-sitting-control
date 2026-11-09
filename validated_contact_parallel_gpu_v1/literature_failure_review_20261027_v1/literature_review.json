@@ -1,0 +1,118 @@
+{
+  "utc": "2026-10-27T23:19:59.217367+00:00",
+  "scope": "Targeted primary-literature scan; principal practical families and combinations, not an exhaustive list of all possible reward formulas.",
+  "reward_families": [
+    {
+      "family": "Binary completion",
+      "source_summary": "Pay only for a successful sit and hold. Simple target, but early learning can receive little guidance.",
+      "paper": "Hindsight Experience Replay,2017",
+      "url": "https://arxiv.org/abs/1707.01495",
+      "application_proposed": "Keep a clear completion bonus. Sparse reward alone is unlikely to fix rare landing slips."
+    },
+    {
+      "family": "Dense weighted components",
+      "source_summary": "Add small rewards for useful posture/contact and penalties for slip, hard impact and effort. Weights can create unwanted tradeoffs.",
+      "paper": "PhysHSI,2025 preprint",
+      "url": "https://arxiv.org/abs/2510.11072",
+      "application_proposed": "Retain completion dominance. Make worsening slip distinguishable after crossing the threshold; do not let effort savings compensate contact failures."
+    },
+    {
+      "family": "Progress-based shaping",
+      "source_summary": "Reward improvement toward a goal rather than merely remaining near it. Potential-based shaping preserves optimal policies under its stated assumptions.",
+      "paper": "Ng, Harada & Russell,1999",
+      "url": "https://ai.stanford.edu/~ang/papers/shaping-icml99.pdf",
+      "application_proposed": "Use progress toward legal supported rest; define terminal potentials correctly. This does not guarantee fast learning with our neural policy."
+    },
+    {
+      "family": "Stage-specific or gated rewards",
+      "source_summary": "Give different guidance for approaching, making contact and settling. Only enable comfort/effort rewards when the relevant contact conditions hold.",
+      "paper": "WoCoCo,CoRL2024 proceedings2025",
+      "url": "https://proceedings.mlr.press/v270/zhang25a.html",
+      "application_proposed": "A phase-aware approach/contact/hold objective is a substantive alternative to one global weighted sum."
+    },
+    {
+      "family": "Demonstration tracking",
+      "source_summary": "Reward matching successful example poses, velocities and contacts. Hierarchies can combine reusable example motions.",
+      "paper": "Learning to Sit,AAAI2021",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/16736",
+      "application_proposed": "Provide successful sitting/leaning examples, retargeted to this robot. Fixed-frame tracking can constrain adaptation to new surfaces."
+    },
+    {
+      "family": "Learned motion-style reward",
+      "source_summary": "A discriminator learns what plausible scene interactions look like; combine this with task completion.",
+      "paper": "Synthesizing Physical Character-Scene Interactions,SIGGRAPH2023",
+      "url": "https://xbpeng.github.io/projects/InterPhys/index.html",
+      "application_proposed": "Use diverse contact-aware examples to guide exploration. Style does not itself certify no slipping or forbidden contacts."
+    },
+    {
+      "family": "Separate reward and constraints",
+      "source_summary": "Optimize task reward while explicitly constraining harmful outcomes instead of mixing everything into one score.",
+      "paper": "Constrained Policy Optimization,ICML2017",
+      "url": "https://proceedings.mlr.press/v70/achiam17a.html",
+      "application_proposed": "Treat protected-case retention as an explicit evaluation requirement. Expected-cost constraints are not guarantees for every individual case."
+    },
+    {
+      "family": "Risk-sensitive or worst-case emphasis",
+      "source_summary": "Give more importance to rare bad outcomes or the poorly performing tail instead of only the average.",
+      "paper": "Chow et al.,2017",
+      "url": "https://arxiv.org/abs/1512.01629",
+      "application_proposed": "Prioritize recurring failure conditions and measure worst-case retention. Tail estimates require sufficient samples."
+    },
+    {
+      "family": "Human preference reward",
+      "source_summary": "Learn a reward from people comparing short behavior clips.",
+      "paper": "Deep RL from Human Preferences,2017",
+      "url": "https://arxiv.org/abs/1706.03741",
+      "application_proposed": "Useful for comfort/naturalness or acceptable settling. Keep measured safety checks separate; tiny slips can be invisible to people."
+    },
+    {
+      "family": "Automated reward search",
+      "source_summary": "Search over reward programs using measured training performance and feedback.",
+      "paper": "Eureka,ICLR2024",
+      "url": "https://arxiv.org/abs/2310.12931",
+      "application_proposed": "Use a bounded, reproducible search with independent selection criteria. It consumes experiments and can exploit poorly specified metrics; not an automatic fix."
+    },
+    {
+      "family": "Goal-conditioned rewards and hindsight",
+      "source_summary": "Express different desired outcomes as goals; replay achieved goals to learn from unsuccessful attempts.",
+      "paper": "Hindsight Experience Replay,2017",
+      "url": "https://arxiv.org/abs/1707.01495",
+      "application_proposed": "Potentially useful across seats and support locations, but standard HER needs an off-policy learner. It is not a drop-in addition to the current PPO update."
+    }
+  ],
+  "current_problem": "Reference-assisted residual PPO can adjust three symmetric pitch channels by at most0.004rad (~0.23deg), with0.004rad/s slew. It is learning small corrections to a preset low-seat sitting controller. This comparison does not validate general leaning.",
+  "evidence_vs_hypothesis": {
+    "measured": "Revised seed63111 checkpoint64:59/72 strict clean,70stable,13slipping,2forbidden contacts. Eight original failures and five regressions.",
+    "local_optimum": "Possible but unproven; plateau and failures alone do not establish local optimality.",
+    "PPO_unsuitable": "Not established. PhysHSI uses PPO for humanoid interaction, with substantially different action freedom, data and training design.",
+    "earlier_causal_explanation": "Training coverage, exploration/evaluation mismatch and flat severity shaping are supported concerns, not experimentally isolated causes."
+  },
+  "criteria": {
+    "full_horizon_s": 20,
+    "final_continuous_qualifying_hold_s": 5,
+    "strict_score": "1 only if stable completion, no physical failure, zero slip_ticks and zero illegal_ticks;0otherwise.",
+    "loaded_contact_force_threshold": "force norm >1%bodyweight",
+    "slip_fail": "loaded contact tangential speed >0.02m/s at any20ms sample",
+    "rest_load_minimum": "normal support load >=5%bodyweight",
+    "qualifying_hold_limits": "root speed <=0.10m/s;angular speed <=0.25rad/s;trunk tilt <=40deg;friction utilization <=0.90;legal contacts,joint margin,latched alive required.",
+    "physical_failures": "fall(root height<0.28m or tilt>55deg),forbidden contact(wrong contact force>10N or active contact outside permitted patch),torque limit,impact>2bodyweights,joint-limit margin violation.",
+    "reward_is_not_success_score": true,
+    "criteria_unchanged": true
+  },
+  "perfectionism": "The current metric is stricter than a visual successful-sit judgment: a single20ms slip fails the entire trial. Preserve the declared metric, but report stable completion, slip severity/duration, and forbidden contacts separately. Whether brief controlled settling should be acceptable is a task-definition decision, not a reward hack.",
+  "closest_robotics_example": {
+    "paper": "PhysHSI,2025 preprint",
+    "url": "https://arxiv.org/html/2510.11072v1",
+    "reported_real_robot_sitting": "9/10 trials",
+    "success_definition": "Base within0.1m of target with heading aligned; paper specifies15degree angular tolerance.",
+    "method": "PPO with task,regularization and learned motion-style rewards;29joint outputs.",
+    "comparison_limit": "Different robot/task/distribution and success criteria; cannot compare its90% directly with our81.9%strict score."
+  },
+  "next_step_recommendation": [
+    "Finish128comparison unchanged.",
+    "First compare retention-aware sampling across all72development cases against current sampling at matched total budget.",
+    "Then test one smooth slip-severity reward ablation while preserving clean-success ranking.",
+    "If unchanged failures persist, review the3-channel residual controller and frozen reference; consider demonstration-guided,stage-conditioned control rather than endless weight tuning. A different controller requires a separately specified and authorized experiment."
+  ],
+  "no_launch_or_training_change": true
+}

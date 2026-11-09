@@ -1,0 +1,442 @@
+{
+  "utc": "2026-10-27T17:42:20.111801+00:00",
+  "classification": "Observed saved-trajectory diagnostics and bounded inferences; no new simulation, training update, causal intervention or physical repair. Existing queue left running.",
+  "scope": {
+    "completed_training_updates": 160,
+    "training_episodes": 3840,
+    "original_failure_attempts": 1280,
+    "completed_evaluation_groups": 9,
+    "full20s_development_evaluations": 648
+  },
+  "case_results": [
+    {
+      "identity": "known_old/4",
+      "baseline_slip_ticks": 20,
+      "training_attempts": 160,
+      "training_clean": 2,
+      "training_strict_clean": 0,
+      "training_physical_failure": 0,
+      "revised63111_64_slip_ticks": 15,
+      "revised63111_64_wrong_force_peak_N": 0.0
+    },
+    {
+      "identity": "known_old/5",
+      "baseline_slip_ticks": 20,
+      "training_attempts": 160,
+      "training_clean": 1,
+      "training_strict_clean": 0,
+      "training_physical_failure": 0,
+      "revised63111_64_slip_ticks": 15,
+      "revised63111_64_wrong_force_peak_N": 0.0
+    },
+    {
+      "identity": "known_old/6",
+      "baseline_slip_ticks": 19,
+      "training_attempts": 160,
+      "training_clean": 0,
+      "training_strict_clean": 0,
+      "training_physical_failure": 160,
+      "revised63111_64_slip_ticks": 19,
+      "revised63111_64_wrong_force_peak_N": 352.15460205078125
+    },
+    {
+      "identity": "known_old/7",
+      "baseline_slip_ticks": 26,
+      "training_attempts": 160,
+      "training_clean": 0,
+      "training_strict_clean": 0,
+      "training_physical_failure": 160,
+      "revised63111_64_slip_ticks": 18,
+      "revised63111_64_wrong_force_peak_N": 347.5460205078125
+    },
+    {
+      "identity": "known_transfer/4",
+      "baseline_slip_ticks": 27,
+      "training_attempts": 160,
+      "training_clean": 14,
+      "training_strict_clean": 0,
+      "training_physical_failure": 0,
+      "revised63111_64_slip_ticks": 23,
+      "revised63111_64_wrong_force_peak_N": 0.0
+    },
+    {
+      "identity": "known_transfer/5",
+      "baseline_slip_ticks": 27,
+      "training_attempts": 160,
+      "training_clean": 13,
+      "training_strict_clean": 0,
+      "training_physical_failure": 0,
+      "revised63111_64_slip_ticks": 23,
+      "revised63111_64_wrong_force_peak_N": 0.0
+    },
+    {
+      "identity": "known_recent/4",
+      "baseline_slip_ticks": 23,
+      "training_attempts": 160,
+      "training_clean": 0,
+      "training_strict_clean": 0,
+      "training_physical_failure": 0,
+      "revised63111_64_slip_ticks": 18,
+      "revised63111_64_wrong_force_peak_N": 0.0
+    },
+    {
+      "identity": "known_recent/5",
+      "baseline_slip_ticks": 24,
+      "training_attempts": 160,
+      "training_clean": 0,
+      "training_strict_clean": 0,
+      "training_physical_failure": 1,
+      "revised63111_64_slip_ticks": 17,
+      "revised63111_64_wrong_force_peak_N": 0.0
+    }
+  ],
+  "amplitude": {
+    "bound_rad": 0.004,
+    "evaluated_failed_case_peak_rad": 0.0029182881116867065,
+    "any_evaluated_failed_case_95pct_saturation": false,
+    "training_failed_case_95pct_saturation_fraction": 0.0010918898809523809,
+    "training_clean_samples": 30,
+    "training_clean_case_identities": [
+      "known_old/4",
+      "known_old/5",
+      "known_transfer/4",
+      "known_transfer/5"
+    ],
+    "strict_clean_samples": 0,
+    "interpretation": "Amplitude saturation is not observed in evaluated failing cases. Four case identities have clean stochastic training trajectories inside current limits, though all retain traction-margin violations and are not deterministic/full72 repairs. Feasibility for the remaining four is unresolved."
+  },
+  "slew": {
+    "rad_per_s": 0.004,
+    "choice_period_s": 0.5,
+    "full_sign_reversal_min_s": 2,
+    "training_landing_limited_fraction": 0.6338932291666667,
+    "interpretation": "Rate limit substantially filters exploration. This is evidence of action/exploration mismatch, not proof that the rate limit makes repair impossible."
+  },
+  "failure_timing": {
+    "policy_start_s": 6,
+    "training_first_slip_range_s": [
+      10.34,
+      12.76
+    ],
+    "revised64_first_physical_failure_s": [
+      12.02,
+      12.02
+    ]
+  },
+  "training_curves": {
+    "original_63111": [
+      {
+        "updates": [
+          1,
+          16
+        ],
+        "n": 16,
+        "mean_clean_training_24": 14,
+        "mean_reward": 15.544337612633788,
+        "critic_before_in_batch_explained_variance": 0.08527554339249954,
+        "critic_after_in_batch_explained_variance": 0.09760577808269102,
+        "mean_actor_steps": 7.9375
+      },
+      {
+        "updates": [
+          17,
+          32
+        ],
+        "n": 16,
+        "mean_clean_training_24": 13.8125,
+        "mean_reward": 15.709601280669615,
+        "critic_before_in_batch_explained_variance": 0.2724755915900401,
+        "critic_after_in_batch_explained_variance": 0.284434844301461,
+        "mean_actor_steps": 7.9375
+      }
+    ],
+    "original_63117": [
+      {
+        "updates": [
+          1,
+          16
+        ],
+        "n": 16,
+        "mean_clean_training_24": 14.4375,
+        "mean_reward": 15.635455728859228,
+        "critic_before_in_batch_explained_variance": 0.084529982911044,
+        "critic_after_in_batch_explained_variance": 0.0961220972896451,
+        "mean_actor_steps": 7.875
+      },
+      {
+        "updates": [
+          17,
+          32
+        ],
+        "n": 16,
+        "mean_clean_training_24": 14.5,
+        "mean_reward": 15.916385715295911,
+        "critic_before_in_batch_explained_variance": 0.2627748040562096,
+        "critic_after_in_batch_explained_variance": 0.2756312112395976,
+        "mean_actor_steps": 7.8125
+      }
+    ],
+    "revised_63111": [
+      {
+        "updates": [
+          1,
+          16
+        ],
+        "n": 16,
+        "mean_clean_training_24": 14.0625,
+        "mean_reward": 0.5628312602639198,
+        "critic_before_in_batch_explained_variance": 0.5868227668106556,
+        "critic_after_in_batch_explained_variance": 0.661042470484972,
+        "mean_actor_steps": 8
+      },
+      {
+        "updates": [
+          17,
+          32
+        ],
+        "n": 16,
+        "mean_clean_training_24": 14.4375,
+        "mean_reward": 0.5800730995833874,
+        "critic_before_in_batch_explained_variance": 0.7780241183936596,
+        "critic_after_in_batch_explained_variance": 0.8083429299294949,
+        "mean_actor_steps": 7.6875
+      },
+      {
+        "updates": [
+          33,
+          64
+        ],
+        "n": 32,
+        "mean_clean_training_24": 14.40625,
+        "mean_reward": 0.5798584893345833,
+        "critic_before_in_batch_explained_variance": 0.7778851948678493,
+        "critic_after_in_batch_explained_variance": 0.8033560756593943,
+        "mean_actor_steps": 7.625
+      }
+    ],
+    "revised_63117": [
+      {
+        "updates": [
+          1,
+          16
+        ],
+        "n": 16,
+        "mean_clean_training_24": 14.25,
+        "mean_reward": 0.571005754172802,
+        "critic_before_in_batch_explained_variance": 0.5729200653731823,
+        "critic_after_in_batch_explained_variance": 0.6385387219488621,
+        "mean_actor_steps": 7.9375
+      },
+      {
+        "updates": [
+          17,
+          32
+        ],
+        "n": 16,
+        "mean_clean_training_24": 15.1875,
+        "mean_reward": 0.6117526311427355,
+        "critic_before_in_batch_explained_variance": 0.7370035648345947,
+        "critic_after_in_batch_explained_variance": 0.7699856571853161,
+        "mean_actor_steps": 7.8125
+      }
+    ]
+  },
+  "matched_evaluations_crosscheck": [
+    {
+      "arm": "revised",
+      "seed": 63111,
+      "updates": 16,
+      "clean": 60,
+      "regressions": 4,
+      "repairs": 0
+    },
+    {
+      "arm": "original",
+      "seed": 63111,
+      "updates": 16,
+      "clean": 58,
+      "regressions": 6,
+      "repairs": 0
+    },
+    {
+      "arm": "original",
+      "seed": 63117,
+      "updates": 16,
+      "clean": 56,
+      "regressions": 8,
+      "repairs": 0
+    },
+    {
+      "arm": "revised",
+      "seed": 63117,
+      "updates": 16,
+      "clean": 61,
+      "regressions": 3,
+      "repairs": 0
+    },
+    {
+      "arm": "revised",
+      "seed": 63111,
+      "updates": 32,
+      "clean": 59,
+      "regressions": 5,
+      "repairs": 0
+    },
+    {
+      "arm": "original",
+      "seed": 63111,
+      "updates": 32,
+      "clean": 58,
+      "regressions": 6,
+      "repairs": 0
+    },
+    {
+      "arm": "original",
+      "seed": 63117,
+      "updates": 32,
+      "clean": 57,
+      "regressions": 7,
+      "repairs": 0
+    },
+    {
+      "arm": "revised",
+      "seed": 63117,
+      "updates": 32,
+      "clean": 62,
+      "regressions": 2,
+      "repairs": 0
+    },
+    {
+      "arm": "revised",
+      "seed": 63111,
+      "updates": 64,
+      "clean": 59,
+      "regressions": 5,
+      "repairs": 0
+    }
+  ],
+  "case_conditioning": {
+    "original_63111_32": {
+      "landing_case_spread_max_rad": 0.0003824174636974931,
+      "landing_case_spread_mean_rad": 8.169206557795405e-05,
+      "landing_command_abs_max_rad": 0.0024753918405622244,
+      "scope": "Same-time target variation across eight failed case identities. Small variation does not prove observations lack information."
+    },
+    "original_63117_32": {
+      "landing_case_spread_max_rad": 0.0007320329314097762,
+      "landing_case_spread_mean_rad": 0.0002514055522624403,
+      "landing_command_abs_max_rad": 0.00256852013990283,
+      "scope": "Same-time target variation across eight failed case identities. Small variation does not prove observations lack information."
+    },
+    "revised_63111_32": {
+      "landing_case_spread_max_rad": 8.014182094484568e-05,
+      "landing_case_spread_mean_rad": 2.2767233531340025e-05,
+      "landing_command_abs_max_rad": 0.001620911294594407,
+      "scope": "Same-time target variation across eight failed case identities. Small variation does not prove observations lack information."
+    },
+    "revised_63117_32": {
+      "landing_case_spread_max_rad": 0.0006852587684988976,
+      "landing_case_spread_mean_rad": 0.0001244331506313756,
+      "landing_command_abs_max_rad": 0.0018348621670156717,
+      "scope": "Same-time target variation across eight failed case identities. Small variation does not prove observations lack information."
+    },
+    "revised_63111_64": {
+      "landing_case_spread_max_rad": 9.128428064286709e-05,
+      "landing_case_spread_mean_rad": 3.12851152557414e-05,
+      "landing_command_abs_max_rad": 0.0029011184815317392,
+      "scope": "Same-time target variation across eight failed case identities. Small variation does not prove observations lack information."
+    }
+  },
+  "housing": {
+    "attempts": 320,
+    "physical_failures": 320,
+    "revised_support_and_rest_bonus_zero": true,
+    "interpretation": "Housing failures have no successful discovery examples, constant physical-failure event penalty, small approach/clearance shaping, and an unchanged three-channel symmetric pitch action basis. Missing useful motion directions or approach trajectory is plausible but unproven."
+  },
+  "gpus": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4090",
+      "samples": 20,
+      "time_start_local": "2026/10/27 10:42:00.499",
+      "time_end_local": "2026/10/27 10:42:20.064",
+      "temperature_C": {
+        "min": 54.0,
+        "mean": 54.85,
+        "max": 55.0
+      },
+      "utilization_percent": {
+        "min": 1.0,
+        "mean": 14.9,
+        "max": 23.0
+      },
+      "memory_MiB": {
+        "min": 4781.0,
+        "mean": 4781.0,
+        "max": 4781.0
+      },
+      "power_W": {
+        "min": 87.88,
+        "mean": 88.8415,
+        "max": 90.36
+      }
+    },
+    {
+      "index": 1,
+      "name": "NVIDIA GeForce RTX 4070",
+      "samples": 20,
+      "time_start_local": "2026/10/27 10:42:00.502",
+      "time_end_local": "2026/10/27 10:42:20.067",
+      "temperature_C": {
+        "min": 50.0,
+        "mean": 50.0,
+        "max": 50.0
+      },
+      "utilization_percent": {
+        "min": 0.0,
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "memory_MiB": {
+        "min": 165.0,
+        "mean": 165.0,
+        "max": 165.0
+      },
+      "power_W": {
+        "min": 13.74,
+        "mean": 13.788,
+        "max": 13.82
+      }
+    }
+  ],
+  "current_updates": {
+    "revised_63117": 32,
+    "original_63117": 32,
+    "original_63111": 35,
+    "revised_63111": 64
+  },
+  "training_pid": 64406,
+  "thermal_throttling_observed": false,
+  "gpu_interpretation": "GPU has thermal and memory headroom. Low-to-moderate sampled utilization with about123percent training-process CPU and synchronous CPU geometry/telemetry in source suggests host/synchronization overhead; no timing profiler was run.",
+  "recommendation": [
+    "Finish the already-authorized128-update two-seed comparison unchanged. Current64 result does not show convergence to repair.",
+    "Retain amplitude and slew limits. If final results remain negative, test temporally coherent landing exploration and learning from saved clean sequences in one explicitly frozen experiment, with full72 retention checks.",
+    "For housing cases, establish a contact-free approach witness within the current three-channel envelope before spending a larger PPO budget. If unavailable, evaluate a specifically justified phase/action-basis change rather than assuming larger amplitude or more updates will work."
+  ],
+  "limitations": [
+    "No counterfactual dynamics were evaluated; reachability and causal benefits of larger/faster/asymmetric actions remain unproven.",
+    "Critic explained variance is in-batch, not held-out prediction accuracy, and reward definitions differ across arms.",
+    "Geometry vertex clearance is a proxy; physical failure flags remain the acceptance evidence.",
+    "No fresh holdout or leaning training. No candidate promoted.",
+    "The unfiltered per-body normal peak in raw arithmetic is not attribution of the forbidden contact."
+  ],
+  "evidence": {
+    "analyze.py": "cbc44ca345acbfa157dcc04a17e5f03166b3fd5d9df0f4e79efeb2ecb97306d0",
+    "analysis_contract.json": "07613d964beff20e02cf5edc3c32f9ecc3cb6fde9d8a3f6231f573490a40824b",
+    "saved_arithmetic.json": "1b31348c27bcb4281234200b7c4f3c4d18e9ba5e974dfa8a80f5b2251bd8e1d0",
+    "policy_signal.py": "449c0a0f6de33be80e2b1659fc21dfbf117aaeabdc55932b1c7623391c94c8ff",
+    "policy_signal.json": "3c1e5b6d0a5c99e1645ed605743a472d631377d79035e9981384cb503dc20f44",
+    "live_gpu_status.json": "d0ed7b585f29c84a45f5aea7f052c38217b4f81898872f60ab7ecd8c4d496301",
+    "development_comparison.json": "3eb7b799235271381f9af0eebbdc85e4e9e139eefb7327dbc93cd3ee59a13151"
+  }
+}

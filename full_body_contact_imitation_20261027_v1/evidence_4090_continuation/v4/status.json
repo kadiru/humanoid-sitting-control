@@ -1,0 +1,34 @@
+{
+  "state": "stopped",
+  "pid": 311231,
+  "active": {},
+  "completed": [
+    "reuse_capture_leaning",
+    "capture_known_old",
+    "capture_known_recent",
+    "capture_known_transfer",
+    "build_dataset",
+    "preflight_sitting",
+    "bc_sitting_64111",
+    "bc_sitting_64117",
+    "teacher_replay_sitting",
+    "teacher_replay_sitting_audit",
+    "preflight_leaning",
+    "bc_leaning_64111",
+    "bc_leaning_64117",
+    "teacher_replay_leaning",
+    "teacher_replay_leaning_audit"
+  ],
+  "failures": [
+    {
+      "error": "AssertionError(('smoke_sitting', 1))",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_v4/launch_after_comparison.py\", line 190, in main\n    for task in ['sitting','leaning']:smoke(task)\n                                      ^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_v4/launch_after_comparison.py\", line 188, in smoke\n    label='smoke_'+task;trainer(gpu,label,task,'train',64111,OUT/f'bc_{task}_64111/initial.pt',2,OUT/f'preflight_{task}/reset_audit.json')\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_v4/launch_after_comparison.py\", line 127, in trainer\n    job(gpu,label,sim_command(gpu,'run_training.py',args),protocol['training_child_seconds'] if mode=='train' else protocol['validation_child_seconds'],True,mode=='train')\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_v4/launch_after_comparison.py\", line 107, in job\n    assert child.returncode==0,(label,child.returncode)\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: ('smoke_sitting', 1)\n"
+    }
+  ],
+  "seconds": 1403.8700261116028,
+  "training_started": false,
+  "comparison_untouched": true,
+  "recurring_automation": false,
+  "physical_repair_claimed": false,
+  "retry": false
+}

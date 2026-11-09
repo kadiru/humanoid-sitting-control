@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "utc": "2026-10-27T20:48:24.062383+00:00",
+  "gpu0": {
+    "seed": 63117,
+    "arm": "original",
+    "before_updates": 38,
+    "after_updates": 39,
+    "models": {
+      "actor": {
+        "max_abs_parameter_change": 0.017181187868118286,
+        "changed_tensors": 6,
+        "new_adam_steps_per_parameter": 8,
+        "finite": true
+      },
+      "critic": {
+        "max_abs_parameter_change": 0.014886632561683655,
+        "changed_tensors": 6,
+        "new_adam_steps_per_parameter": 8,
+        "finite": true
+      }
+    },
+    "before_checkpoint": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/train_original_63117_064/model_038.pt",
+    "before_sha256": "3a513eb6298a32d6ac9c8e7c0c80c7a171292fe55c83fee8c64a703bd8df7555",
+    "after_checkpoint": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/train_original_63117_064/model_039.pt",
+    "after_sha256": "05183ebc69f16e92d01ef7c0b9ee4cc0504d468e06a64f9e975590e796601827"
+  },
+  "gpu1": {
+    "seed": 63111,
+    "arm": "revised",
+    "before_updates": 64,
+    "verified_updates": 65,
+    "current_updates": 65,
+    "models": {
+      "actor": {
+        "max_abs_parameter_change": 0.021204285323619843,
+        "changed_tensors": 6,
+        "adam_steps_per_parameter": 8,
+        "finite": true
+      },
+      "critic": {
+        "max_abs_parameter_change": 0.01453910581767559,
+        "changed_tensors": 6,
+        "adam_steps_per_parameter": 8,
+        "finite": true
+      }
+    },
+    "weight_audit": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_parallel_gpu_v1/train_revised_63111_128/model_065_weight_audit.json"
+  },
+  "live_gpu_bindings": {
+    "75813": {
+      "gpu_uuid": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4",
+      "python_pid": 75818
+    },
+    "77361": {
+      "gpu_uuid": "GPU-cde23916-c5fa-f18e-a343-127f732cc2f6",
+      "python_pid": 77366
+    }
+  },
+  "compute_apps": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 75818, 4612 MiB\nGPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 77366, 3625 MiB\n",
+  "gpu_telemetry": "0, NVIDIA GeForce RTX 4090, 38, 4 %, 4688 MiB, 86.96 W\n1, NVIDIA GeForce RTX 4070, 58, 1 %, 3825 MiB, 33.47 W\n",
+  "parallel_owner_pid": 77324,
+  "legacy_handoff_complete": false,
+  "current_gpu0_chunk_untouched": true,
+  "action_limits_changed": false,
+  "physical_success_criteria_changed": false,
+  "physical_repair_claimed": false
+}

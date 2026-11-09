@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-28T23:50:23Z",
+  "analysis": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/clone_diagnosis_20261028_v1/saved_analysis.json",
+  "sources": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/clone_diagnosis_20261028_v1/analyze_saved.py",
+  "live_status": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/clone_diagnosis_20261028_v1/live_status.json",
+  "facts": {
+    "exact_teacher_replay_clean": 64,
+    "clone_64111_clean": 0,
+    "clone_64111_first_failure_median_seconds": 7.89,
+    "ppo_64111_128_clean": 0,
+    "ppo_64111_256_clean": 0,
+    "ppo_64111_256_first_failure_median_seconds": 2.3,
+    "ppo_64111_repairs": 0,
+    "ppo_64111_protected_regressions": 64,
+    "first_failures_64111": "Every trial first fails physical ankle-pitch joint margin, before later falls/contact failures",
+    "limits_allow_demonstrations": true,
+    "positive_demo_max_action_map_violation_rad": 2.384185793236071e-08,
+    "clone_q_rmse_at6s_rad": 0.4930497109889984,
+    "post_PPO_demo_fit_mse_ratio": 10.665006938010558,
+    "seed64111_complete_training_episodes": 0,
+    "seed64117_update": 90,
+    "main_leaning_training_started": false
+  },
+  "diagnosis": {
+    "supported": "Small one-step imitation errors become much larger closed-loop state/action divergence. Reset and teacher-command replay reproduce the original successes. The one-step cloning admission check was insufficient to establish a usable policy. PPO degrades standing-start survival and teacher-input fit despite real weight updates.",
+    "inference": "Closed-loop distribution shift/unstable feedback and loss of demonstration behavior are leading explanations; the saved data do not isolate every causal contribution.",
+    "not_established": [
+      "A local-optimum proof",
+      "That higher reward alone fixes it",
+      "That current action limits allow repair of all original eight failures",
+      "Exact evaluation observation parity; full actor observations were not stored in these evaluation trajectories"
+    ]
+  },
+  "recommendation": "After the existing comparison finishes, collect teacher corrections on states the clone actually visits, validate full closed-loop demonstrations before further PPO, and retain a demonstration imitation loss during PPO. Keep command limits and success thresholds unchanged.",
+  "current_training_untouched": true,
+  "4070_reserved_for_AIWorker": true,
+  "accepted_baseline_clean": 64,
+  "accepted_repairs": 0,
+  "fresh_holdout_opened": false,
+  "furniture": {
+    "folder": "/Users/kadir/humanoid-sitting-control/furniture_test_20261028_v1",
+    "objects": 5,
+    "layouts": 14,
+    "static_checks_passed": true,
+    "actual_robot_simulation_started": false,
+    "policy_evaluation_performed": false,
+    "mesh_contact_scoring_validated": false,
+    "next": "When the current 4090 queue finishes, run the bounded scene/reset smoke, then validate contact-region scoring before applying the policies. No separate GPU process or recurring automation was launched."
+  }
+}

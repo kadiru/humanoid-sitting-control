@@ -1,0 +1,113 @@
+Saved-data diagnosis: recovery-imitation PPO seed 64111, 256 updates
+29 October 2026 UTC / 28 October PDT
+
+Conclusion
+The deployed imitation policy is unstable over a complete movement, and the
+optimizer scarcely changes it. More unchanged PPO updates are not the next fix.
+This is evidence of a failed imitation/optimization setup; it does not establish
+a mathematical local optimum or impossibility under the current action limits.
+No active training code, checkpoints, constraints, or GPU jobs were modified.
+
+Executed evidence
+1. Policy changes occurred in only 10 of 256 updates: 34 accepted actor steps
+   versus 1,024 critic steps. Updates 64 and 128 have bit-identical actor weights.
+   The last actor change was update 146. There were 246 updates without a change.
+   All 251 ultimately rejected proposals had their last tested KL below 0.02.
+   The log field rejected_kl_steps combines KL, objective, and imitation-anchor
+   rejection, so calling these KL failures would be incorrect. Final anchor MSE
+   was 0.0004575736 against a 0.0004577360 ceiling: only 0.0355% headroom. This
+   strongly implicates the anchor/objective acceptance logic; exact rejection
+   counts by cause are unavailable because rejected candidate anchor and full
+   objective values were not saved. We did not replay optimization to invent them.
+
+2. Full-bank, CPU-inferred imitation MSE increased from 0.0003782083 to
+   0.0004697954. Desired-joint RMSE was 0.0005834 rad initially and 0.0006502 rad
+   finally (about 0.037 degrees finally). Those are errors on familiar saved
+   observations, not errors during autonomous control. In the final autonomous
+   evaluation, the 64 protected cases were still alive at 4 seconds but differed
+   from their reference by 0.09375 rad (5.37 degrees) joint-pose RMSE. Initial
+   pose disagreement after the first step was only 0.00001075 rad. The evidence
+   supports accumulating control/observation-distribution error, not a gross
+   initial reset displacement. It is not a controlled causal experiment.
+
+3. Recovery round 0 used the teacher for 98.2% of control ticks, allowing at
+   most 0.02 seconds of uninterrupted policy control. Round 1 used the teacher
+   for 91%, allowing at most 0.10 seconds. These successful assisted trials
+   therefore do not demonstrate recovery after seconds of autonomous drift.
+   Source review also shows that recovery targets are the reference commands at
+   the recorded time, not a feedback expert recomputing a stabilizing action
+   from the deviated state. Only clean assisted trajectories enter the fit.
+
+4. Final full-standing evaluation: 0 clean, 0 stable, 72 physical failures,
+   median first failure 4.52 seconds (range 4.08–10.30). At first failure,
+   69 had an impact violation and 33 forbidden contacts; categories overlap.
+   Impact measurements were 2.59–10.68 bodyweights, median 5.77, against the
+   unchanged 2-bodyweight limit. Forbidden contacts included 31 outside-patch
+   cases and 2 over-10N wrong-contact cases. No first failure was attributed to
+   a fall, torque violation, or joint margin. Later post-failure flags are not
+   used to assign the original cause. No evaluation sample achieved a good hold.
+
+5. Mean full-evaluation reward was -57.28 for the clone, -29.69 at update 128,
+   and -36.67 at 256. Yet median first failure worsened from 8.60 to 6.42 to
+   4.52 seconds, and qualifying hold samples fell from 1,783 to zero. Thus a
+   less-negative score does not demonstrate progress. In the final evaluation,
+   mean tracking reward was +9.68; contact, settling, hold, and effort rewards
+   were zero; wrong-contact cost was -21.78 and terminal cost -20.00. Offline
+   reward reconstruction matches saved rewards within 6.54e-5 across all three
+   evaluations (float arithmetic). Reward differences are descriptive, not a
+   proof the policy intentionally learned to terminate early.
+
+6. Curriculum: the 648 completed training episodes included 288 standing-start
+   attempts, all 0 clean and 0 stable; 104 starts at 6s also had zero successes.
+   The only clean training episodes were 1 from a 10s reset and 11 from a 15s
+   reset. Those begin partway through the movement and are not complete sitting
+   successes. Fixed update-count advancement therefore moved into harder stages
+   without evidence the prior stages were mastered. Another 13 all-dead batches
+   ended early and were correctly recorded as failures, not successes.
+
+7. Successful original demonstrations obey the same action bounds (maximum
+   command increment 0.003000021 rad, the already-approved float32 rounding).
+   During the first 4 seconds, the rate cap was active for 9.22% of protected
+   teacher commands versus 8.54% for the final policy. This does not prove the
+   eight original failures are repairable under the limits, but does rule out
+   the limits alone explaining loss of all 64 demonstrated successes.
+   Saved sensor audits show valid observations before failure, median surface
+   offset error about 2 mm, and median normal error about 0.12 degrees. These
+   audits do not certify newly introduced furniture or all perception behavior.
+
+What needs fixing after the already-running comparison
+A. Make imitation work through a whole movement. Obtain state-corrective expert
+   targets at states actually reached by the learner, including pre-failure
+   states; aggregate those labels instead of keeping only near-teacher clean
+   trajectories. Gradually increase independent control beyond 0.10 seconds.
+   Check multi-step drift and complete 20s starts, not just average action MSE.
+   The present time-indexed replay is not a substitute for a recovery expert.
+B. Replace the current acceptance deadlock in a separately versioned experiment.
+   Log each rejection predicate and candidate value first. Design policy steps
+   that satisfy the imitation constraint while improving the objective (or a
+   justified soft imitation objective), rather than repeatedly rejecting the
+   same class of proposals. Keep physical criteria and actuator limits intact;
+   do not silently loosen any constraint or modify the running experiment.
+C. Make curriculum advancement depend on measured autonomous success. Preserve
+   standing-start exposure and distinguish assisted/partial-start successes from
+   complete sitting. The first objective is restoration of demonstrated behavior;
+   repair claims still require all 72 original trials and retention of the 64.
+D. Validate task-reward ranking on these saved complete trajectories. Earlier
+   hard failures should not look like better sitting; provide useful approach,
+   deceleration, and safe-support progress signals before successful contact,
+   while retaining original hard termination and final physical success tests.
+   Evaluate reward components by matched reset stage, not across curriculum mixes.
+
+Priority: correct closed-loop imitation and the near-frozen actor update path
+before another unchanged PPO run. Tuning reward weights alone cannot fix this.
+The exact benefit of a proposed change requires a new validated experiment;
+no repair, counterfactual success, or furniture correctness is claimed here.
+
+Active second seed was untouched: update 74, 7 accepted actor steps total,
+last actor change at update 3, at the supplemental read. Furniture tests remain
+under their existing dependency on completion of PPO and evaluations.
+
+Evidence: results.json, supplemental.json, analyze_saved.py in this directory.
+results.json contains input paths/source hashes, per-case first failures,
+command/pose drift, full-bank inference, reward reconstruction, and optimizer
+summaries. Raw trajectories remain preserved on Ubuntu.

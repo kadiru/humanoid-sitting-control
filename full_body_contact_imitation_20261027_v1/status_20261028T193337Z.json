@@ -1,0 +1,129 @@
+{
+  "utc": "2026-10-28T19:33:37.166796+00:00",
+  "full_23_joint_state": "waiting_for_free_gpus",
+  "new_23_joint_updates": 0,
+  "demonstration_validation": "FAILED: required demonstration_capture.json and50Hz arrays absent after teacher processes exited0. Corrected recorder is CPU-tested; real re-capture has not started.",
+  "reset_simulator_checks": "not_started",
+  "full_reward_replay": "not_started",
+  "cpu_checks": "original CPU fixtures and saved reward components passed; new shutdown-persistence fixtures passed; these are not simulator learning",
+  "recorder_correction": {
+    "source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_capture_v3",
+    "save_before_close": true,
+    "completion_artifacts_required_despite_exit_zero": true,
+    "tests": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_capture_v3/capture_shutdown_tests.json",
+    "audit": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_capture_v3/capture_correction_audit.json",
+    "freeze": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_capture_v3/freeze.json",
+    "local_remote_own_files_matched": 31
+  },
+  "prior_failure": {
+    "utc": "2026-10-28T19:25:44.575484+00:00",
+    "status": {
+      "state": "stopped",
+      "pid": 167249,
+      "active": {},
+      "completed": [
+        "capture_leaning",
+        "capture_known_old",
+        "capture_known_recent",
+        "capture_known_transfer"
+      ],
+      "failures": [
+        {
+          "error": "AssertionError(('build_dataset', 1))",
+          "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/launch_after_comparison.py\", line 164, in main\n    job(0,'build_dataset',[str(PYTHON),str(HERE/'build_dataset.py'),'--output',str(OUT/'dataset'),'--captures',*[str(OUT/('capture_'+n)) for n in ['known_old','known_recent','known_transfer','leaning']]],900)\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/launch_after_comparison.py\", line 102, in job\n    assert child.returncode==0,(label,child.returncode)\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: ('build_dataset', 1)\n"
+        }
+      ],
+      "seconds": 806.2963953018188,
+      "training_started": false,
+      "comparison_untouched": true,
+      "recurring_automation": false,
+      "physical_repair_claimed": false,
+      "retry": false
+    },
+    "owner_log": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/launch_after_comparison.py\", line 214, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/launch_after_comparison.py\", line 164, in main\n    job(0,'build_dataset',[str(PYTHON),str(HERE/'build_dataset.py'),'--output',str(OUT/'dataset'),'--captures',*[str(OUT/('capture_'+n)) for n in ['known_old','known_recent','known_transfer','leaning']]],900)\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/launch_after_comparison.py\", line 102, in job\n    assert child.returncode==0,(label,child.returncode)\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: ('build_dataset', 1)\n",
+    "exits": {
+      "capture_known_old.exit.json": {
+        "returncode": 0,
+        "seconds": 271.9171694180113,
+        "simulation": true,
+        "gpu": 0
+      },
+      "capture_known_transfer.exit.json": {
+        "returncode": 0,
+        "seconds": 256.858763436001,
+        "simulation": true,
+        "gpu": 0
+      },
+      "build_dataset.exit.json": {
+        "returncode": 1,
+        "seconds": 5.04253119599889,
+        "simulation": false,
+        "gpu": 0
+      },
+      "capture_leaning.exit.json": {
+        "returncode": 0,
+        "seconds": 105.76256105597713,
+        "simulation": true,
+        "gpu": 1
+      },
+      "capture_known_recent.exit.json": {
+        "returncode": 0,
+        "seconds": 271.91271746897837,
+        "simulation": true,
+        "gpu": 0
+      }
+    },
+    "gpu_processes": ""
+  },
+  "exact_dataset_error": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/build_dataset.py\", line 104, in <module>\n    main()\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/build_dataset.py\", line 51, in main\n    root = Path(path); d, meta, audit = audit_capture(root)\n                                        ^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/build_dataset.py\", line 9, in audit_capture\n    meta = read(root/'demonstration_capture.json')\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/common.py\", line 17, in read\n    return json.loads(Path(path).read_text())\n                      ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/cache/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/pathlib.py\", line 1027, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/cache/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/home/kadir/humanoid-sitting/outputs/full_body_contact_imitation_v2/capture_known_old/demonstration_capture.json'\n",
+  "launch": {
+    "utc": "2026-10-28T19:33:06.780551+00:00",
+    "pid": 178114,
+    "source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_capture_v3",
+    "output": "/home/kadir/humanoid-sitting/outputs/full_body_contact_imitation_v3",
+    "original_deadline": 1793364525.027288,
+    "prior_captures_charged": 4,
+    "automatic_retries": 0,
+    "waits_for_gpu_availability": true,
+    "freeze_sha256": "c6f48a211909ec5a7926ca223962d6ae72133e81a547b9d85de84338fcf3c480"
+  },
+  "live_status": {
+    "state": "waiting_for_free_gpus",
+    "pid": 178114,
+    "active": {},
+    "completed": [],
+    "failures": [],
+    "seconds": 30.11253046989441,
+    "training_started": false,
+    "comparison_untouched": true,
+    "recurring_automation": false,
+    "physical_repair_claimed": false,
+    "waiting_gpu_pids": [
+      "176400"
+    ]
+  },
+  "owner_process": " 178114       1       00:31 Ss   /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python /home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_capture_v3/launch_after_comparison.py\n",
+  "gpu_processes": "GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 176400, 399 MiB\n",
+  "gpu_telemetry": "0, 0 %, 44, 16 MiB\n1, 0 %, 57, 640 MiB\n",
+  "prior_prelaunch_attempt": "Stopped before creating an output directory or spawning an execution owner because GPU1 was occupied; no scientific work occurred.",
+  "resource_accounting": {
+    "prior_failed_capture_processes": 4,
+    "original_planned_simulator_processes": 26,
+    "aggregate_process_cap_with_recovery": 30,
+    "original_control_transition_cap": 4571640,
+    "prior_failed_capture_transition_upper_bound": 92250,
+    "aggregate_control_transition_cap": 4663890,
+    "aggregate_env_physics_transition_cap": 20815560,
+    "original_execution_deadline_unix": 1793364525.027288,
+    "deadline_extended": false,
+    "max_output_bytes_all_fullbody_attempts": 17179869184,
+    "other_limits_unchanged": true,
+    "automatic_retries": 0
+  },
+  "next_step": "Single finite owner178114 waits for both GPUs under the original deadline, without signaling other jobs, then recaptures demonstrations and continues dataset/reset/reward gates, PPO smoke verification, and authorized main training only if all pass.",
+  "accepted_baseline": "64/72; zero accepted regression-free repairs",
+  "physical_criteria_changed": false,
+  "comparison_changed": false,
+  "fresh_holdout_opened": false,
+  "recurring_automation": "deleted; remains deleted"
+}

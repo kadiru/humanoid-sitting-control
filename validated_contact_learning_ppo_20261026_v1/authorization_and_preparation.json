@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-26T08:15:55.738746+00:00",
+  "request": "Can we start training a ppo now",
+  "scope": "Bounded two-seed simulation-only sitting PPO pilot; 24 development environments, 8 main updates per seed, contact support reward, frozen best09 reference. The new human request supersedes repair-before-training only; physical evaluation gates preserved. No old solver launch, holdout, hardware deployment, or automation.",
+  "sources": {
+    "contact_reward_v1.py": "1286251e5129a34fa22f1ae0e3944974c7cb5852692522054517d5069d2493cc",
+    "run_contact_learning_ppo_v1.py": "1fbe0dab48e2725accc28bcf011054a428574cd15972e110263c8187b386dcd7",
+    "prepare_contact_ppo_v1.py": "362de2a68c4542a15b2234a571209a735f5ab8866726a803d8412f2097a46143",
+    "audit_contact_ppo_v1.py": "69a9e8340877213c8d24ca2193d05054f3683fb6fa73cb8ab9d20b0ba48ea303",
+    "launch_contact_ppo_v1.py": "f3064fd9743bc8acaf840f73fb14b01bfca740b9d34c1e6ba39b5e578a2d47c0"
+  },
+  "status": "PREPARING",
+  "remote_output": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_learning_ppo_20261026_v1",
+  "automation": "User-requested deletion confirmed in preceding turn",
+  "preparation_failures": [
+    "Local unit test unavailable: bundled local Python has no torch. Using Ubuntu project environment.",
+    "Initial scp blocked by filesystem/network sandbox; retried with escalation and transferred successfully. No physics/training launched during these failures."
+  ]
+}

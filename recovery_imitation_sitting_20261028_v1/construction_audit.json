@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "action_endpoint_error_rad": 9.313225746154785e-10,
+  "original_filtered_command_replay_error_rad": 0.0,
+  "teacher_samples": 72000,
+  "sampled_action_states": 10000,
+  "unchanged_filter": 0.1,
+  "unchanged_rate_rad_s": 0.15,
+  "unchanged_margin_rad": 0.03,
+  "contractivity_unsaturated": 0.9,
+  "imitation_gradient_direction": true,
+  "synthetic_combined_update": {
+    "actor_steps": 2,
+    "rejected_kl_steps": 1,
+    "critic_steps": 4,
+    "value_mse": 0.5526578426361084,
+    "policy_loss": 10.903776168823242,
+    "measured_kl": 0.019968204200267792,
+    "last_candidate_kl": 0.02058456465601921,
+    "candidate_tests": 14,
+    "accepted_step_scales": [
+      0.25,
+      0.25
+    ],
+    "imitation_loss": 11.065783500671387,
+    "imitation_candidate": 11.064741134643555,
+    "imitation_coefficient": 1.0,
+    "imitation_reference_ceiling": 13.88889193534851,
+    "anchor_loss": 11.066213607788086,
+    "anchor_ceiling": 13.888893127441406,
+    "ppo_surrogate_loss": -0.16200731694698334
+  },
+  "rollback_verified": true,
+  "bank_sha256": "74d2ba3a44cdc55202f01c485f9d7ada18a90ac280258f4cfd1e05c616fa17f6",
+  "physical_success_claimed": false,
+  "simulation_executed": false
+}

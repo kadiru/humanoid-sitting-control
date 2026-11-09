@@ -1,0 +1,18 @@
+[
+  "bash",
+  "/home/kadir/humanoid-sitting/scripts/run_supported_gpu0.sh",
+  "/home/kadir/humanoid-sitting/experiments/recovery_imitation_sitting_20261028_v2/run_training.py",
+  "--bank",
+  "/home/kadir/humanoid-sitting/outputs/full_body_contact_imitation_v4/dataset/sitting",
+  "--output",
+  "/home/kadir/humanoid-sitting/outputs/recovery_imitation_sitting_20261028_v2/clone_evaluation_64117",
+  "--mode",
+  "evaluate",
+  "--seed",
+  "64117",
+  "--device",
+  "cuda:0",
+  "--kit_args=--/renderer/activeGpu=0,--/renderer/multiGpu/enabled=false",
+  "--checkpoint",
+  "/home/kadir/humanoid-sitting/outputs/recovery_imitation_sitting_20261028_v2/clone_64117_2/initial.pt"
+]

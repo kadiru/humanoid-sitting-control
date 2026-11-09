@@ -1,0 +1,31 @@
+{
+  "entry": "run_transfer_effort.py",
+  "arguments": [
+    "--bank",
+    "/data/humanoid-sitting-perception/transfer_effort_01/banks/development",
+    "--mode",
+    "reference",
+    "--surface",
+    "leaning",
+    "--profiles",
+    "/data/humanoid-sitting-perception/split_support_curriculum_02/split_profiles/leaning_selected_02.json",
+    "--objective",
+    "legacy",
+    "--start-stage",
+    "0",
+    "--segment-seconds",
+    "2.0",
+    "--num-envs",
+    "18",
+    "--seed",
+    "55501",
+    "--device",
+    "cuda:0",
+    "--output",
+    "/home/kadir/humanoid-sitting/outputs/full_body_contact_imitation_v4/capture_leaning",
+    "--kit_args=--/renderer/activeGpu=1,--/renderer/multiGpu/enabled=false"
+  ],
+  "task": "leaning",
+  "bank": "leaning",
+  "original_manifest_sha256": "3bbc4bec284ce85670ccb4ec2327ee304d3674e42f8ea18b4388565e7dd43da9"
+}

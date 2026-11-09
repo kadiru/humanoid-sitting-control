@@ -1,0 +1,220 @@
+{
+  "utc": "2026-10-28T19:11:03.361460+00:00",
+  "comparison_finished": true,
+  "comparison_completed_utc": "2026-10-28T12:48:23.365720+00:00",
+  "completed_128_results": [
+    {
+      "arm": "revised",
+      "seed": 63111,
+      "updates": 128,
+      "clean": 62,
+      "stable": 70,
+      "slipping": 10,
+      "physical_failures": 2,
+      "lost_protected": [
+        [
+          "known_old",
+          22
+        ],
+        [
+          "known_old",
+          23
+        ],
+        [
+          "known_recent",
+          22
+        ],
+        [
+          "known_recent",
+          23
+        ]
+      ],
+      "repaired_old_failures": [
+        [
+          "known_transfer",
+          4
+        ],
+        [
+          "known_transfer",
+          5
+        ]
+      ]
+    },
+    {
+      "arm": "original",
+      "seed": 63117,
+      "updates": 128,
+      "clean": 64,
+      "stable": 70,
+      "slipping": 8,
+      "physical_failures": 2,
+      "lost_protected": [],
+      "repaired_old_failures": []
+    },
+    {
+      "arm": "original",
+      "seed": 63111,
+      "updates": 128,
+      "clean": 62,
+      "stable": 70,
+      "slipping": 10,
+      "physical_failures": 2,
+      "lost_protected": [
+        [
+          "known_old",
+          12
+        ],
+        [
+          "known_old",
+          13
+        ],
+        [
+          "known_old",
+          21
+        ],
+        [
+          "known_transfer",
+          21
+        ]
+      ],
+      "repaired_old_failures": [
+        [
+          "known_transfer",
+          4
+        ],
+        [
+          "known_transfer",
+          5
+        ]
+      ]
+    },
+    {
+      "arm": "revised",
+      "seed": 63117,
+      "updates": 128,
+      "clean": 58,
+      "stable": 68,
+      "slipping": 12,
+      "physical_failures": 2,
+      "lost_protected": [
+        [
+          "known_old",
+          2
+        ],
+        [
+          "known_old",
+          3
+        ],
+        [
+          "known_transfer",
+          2
+        ],
+        [
+          "known_transfer",
+          3
+        ],
+        [
+          "known_transfer",
+          6
+        ],
+        [
+          "known_transfer",
+          7
+        ],
+        [
+          "known_transfer",
+          22
+        ],
+        [
+          "known_transfer",
+          23
+        ]
+      ],
+      "repaired_old_failures": [
+        [
+          "known_transfer",
+          4
+        ],
+        [
+          "known_transfer",
+          5
+        ]
+      ]
+    }
+  ],
+  "full_23_joint_state": "validating_demonstrations",
+  "new_23_joint_updates": 0,
+  "demonstration_full_rate_checks": "capture running on both GPUs; admission not completed",
+  "reset_simulator_checks": "not_started",
+  "full_new_reward_replay": "not_started",
+  "prior_cpu_and_saved_component_checks": "passed; not full simulator validation",
+  "execution_owner_pid": 167249,
+  "live_status": {
+    "state": "validating_demonstrations",
+    "pid": 167249,
+    "active": {
+      "0": {
+        "pid": 167261,
+        "label": "capture_known_old"
+      },
+      "1": {
+        "pid": 167264,
+        "label": "capture_leaning"
+      }
+    },
+    "completed": [],
+    "failures": [],
+    "seconds": 30.449497938156128,
+    "training_started": false,
+    "comparison_untouched": true,
+    "recurring_automation": false,
+    "physical_repair_claimed": false
+  },
+  "gpu_telemetry": "0, NVIDIA GeForce RTX 4090, 1 %, 42, 4675 MiB\n1, NVIDIA GeForce RTX 4070, 1 %, 56, 3841 MiB\n",
+  "gpu_processes": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 167271, 4598 MiB\nGPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 167272, 3607 MiB\n",
+  "workers": [
+    " 167249       1       00:33 Ssl  /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python /home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/launch_after_comparison.py",
+    " 167261  167249       00:33 Ssl  /home/kadir/humanoid-sitting/tools/uv run --no-sync /home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/capture_teacher.py --job /home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/jobs/known_old.json",
+    " 167264  167249       00:33 Ssl  /home/kadir/humanoid-sitting/tools/uv run --no-sync /home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/capture_teacher.py --job /home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/jobs/leaning.json",
+    " 167271  167261       00:33 Rl   /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python /home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/capture_teacher.py --job /home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/jobs/known_old.json",
+    " 167272  167264       00:33 Rl   /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python /home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/capture_teacher.py --job /home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2/jobs/leaning.json"
+  ],
+  "storage_correction": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/storage_correction_20261028_v2.json",
+  "new_source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_storage_v2",
+  "new_output": "/home/kadir/humanoid-sitting/outputs/full_body_contact_imitation_v2",
+  "original_execution_deadline_unix": 1793364525.027288,
+  "physical": {
+    "accepted_baseline_clean": 64,
+    "total": 72,
+    "accepted_regression_free_repairs": 0,
+    "promoted": false
+  },
+  "next_steps": [
+    "Finish full-rate teacher captures and independently admit clean demonstrations",
+    "Check reset consistency, cloning validation, and full-trajectory staged rewards",
+    "Verify two real PPO smoke updates on each GPU",
+    "Run two seeds x256 updates per behavior; evaluate all72 sitting and18 leaning cases at0/128/256; report repairs and regressions"
+  ],
+  "automatic_retries": 0,
+  "recurring_automation": "deleted; unchanged",
+  "physical_criteria_changed": false,
+  "fresh_holdout_opened": false,
+  "followup_confirmation": {
+    "utc": "2026-10-28T19:12:36.800687+00:00",
+    "state": "validating_demonstrations",
+    "completed": [
+      "capture_leaning"
+    ],
+    "active": {
+      "0": {
+        "pid": 167261,
+        "label": "capture_known_old"
+      }
+    },
+    "failures": [],
+    "new_ppo_updates": 0,
+    "leaning_capture_exit_code": 0,
+    "leaning_capture_seconds": 105.76256105597713,
+    "leaning_demonstration_admission": "pending; capture completion is not physical admission"
+  }
+}

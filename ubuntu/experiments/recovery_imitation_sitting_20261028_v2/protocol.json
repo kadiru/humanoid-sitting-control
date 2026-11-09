@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "human_authorization": "Fix the cloning with recovery demonstrations and validate complete sitting rollouts. After the current runs finish, restart PPO with an imitation loss. Keep the action limits and success criteria unchanged, and use only the 4090.",
+  "task": "Sitting recovery and imitation-regularized PPO; leaning and furniture training are separate pending work.",
+  "seeds": [
+    64111,
+    64117
+  ],
+  "initialization": "Fresh absolute-target128x128ELU clone of all64 clean original development cases, original336 sensor/task/clock inputs. No old increment-policy initialization. Bias starts at the mean desired pose. Observation normalization fixed after initial fit. No truth/reference command/case ID actor inputs.",
+  "action": {
+    "equation": "desired=clip(raw_actor_radians,lower+.03,upper-.03); applied=previous+clip(.1*(desired-previous),-.003,.003)",
+    "rate_rad_s": 0.15,
+    "period_s": 0.02,
+    "filter": 0.1,
+    "margin_rad": 0.03,
+    "fingers_fixed": 14,
+    "body_joints": 23,
+    "numerical_command_rounding_allowance_rad": 2e-07,
+    "physical_tolerance_changed": false
+  },
+  "teacher": {
+    "equation": "desired[t,i]=clip(previous[t,ref_i]+(command[t,ref_i]-previous[t,ref_i])/.1, lower+.03,upper-.03)",
+    "association": "Original bank.reference fixed mapping; own reference for admitted64; failed8 use original nearest-clean mapping. Recovery teacher targets are offline references applied through the current previous-command filter, not an online oracle or proven stabilizer.",
+    "validation": "Exact original command reconstruction within existing float32 allowance before simulation. Actual clean recovery requires independent full1000-tick physical audit with real learner disturbances."
+  },
+  "recovery": {
+    "rounds": 2,
+    "learner_burst_ticks": [
+      1,
+      5
+    ],
+    "period_ticks": 50,
+    "active_interval_ticks": [
+      50,
+      950
+    ],
+    "otherwise": "reference-target teacher",
+    "complete_duration_s": 20,
+    "admission": "Only independent clean full20s cases with measured learner-command deviation > existing2e-7 rounding allowance. Save all failed trajectories, exclude failed cases from positive labels. Never call intervened rollout autonomous.",
+    "minimum_clean_recovery_cases": 1,
+    "aggregation": "All original64 plus each clean recovery trajectory. No fresh holdout."
+  },
+  "fitting": {
+    "initial_steps": 12000,
+    "recovery_steps_each": 6000,
+    "batch": 2048,
+    "optimizer": "Adam",
+    "lr": "cosine3e-4 to3e-5 over each finite fit",
+    "loss": "mean((predicted_desired-teacher_desired)/.03)^2",
+    "grad_cap": 1,
+    "fit_metric": "Training error only, not a success gate or generalization claim"
+  },
+  "before_ppo": "Both seeds complete all72 full standing-start20s autonomous trials, same independent physical audit, retain every named64 protected success. No aggregate substitution. Any failed gate stops, no PPO launch.",
+  "ppo": {
+    "updates_per_seed": 256,
+    "rollout": 64,
+    "epochs": 4,
+    "clip": 0.2,
+    "actor_lr": 0.0001,
+    "critic_lr": 0.0003,
+    "discount": 0.999,
+    "gae": 0.97,
+    "std_desired_rad": 0.0075,
+    "std_derivation": ".003*.25/.1 preserves old local unsaturated applied-command noise scale; no increase in physical movement cap",
+    "loss": "old clipped PPO objective +1*mean((actor(demo_obs)-desired_teacher)/.03)^2",
+    "demo_batch": 2048,
+    "anchor": "4096 deterministic evenly spaced demonstration rows; candidate anchor MSE <=1.25*pre-PPO anchor MSE; separate numerical-learning constraint, not a physical success relaxation",
+    "step_guard": "One Adam proposal per epoch; at most8 halvings. KL<=.02 and joint objective nonincreasing and anchor guard; reject restores actor and Adam.",
+    "curriculum": "Reuse validated original15/10/6/0s true-velocity reset schedule and20%standing early. Reset source and thresholds unchanged.",
+    "reward": "Byte-identical v5 staged rewards; no added task reward or physical-score changes",
+    "evaluation_updates": [
+      0,
+      128,
+      256
+    ],
+    "minimum_live_update": "Actual actor and critic checkpoint L2 changes, Adam steps, live4090process ownership"
+  },
+  "success": "Unchanged independent audit: all72 complete20s; last5s good; no loaded slip >.02m/s, no illegal contact, and unchanged force/tilt/velocity/joint/torque predicates. Track named64 regressions and8 repairs. No auto-promotion; fresh24holdout closed.",
+  "devices": {
+    "only": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4 RTX4090",
+    "gpu4070": "AIWorker untouched",
+    "concurrent_simulators": 1,
+    "owners": 1
+  },
+  "resources": {
+    "max_simulator_processes": 12,
+    "validation_simulators": 10,
+    "validation_control_transitions": 738000,
+    "ppo_active_control_transitions": 2359296,
+    "ppo_warmup_control_cap": 460800,
+    "total_control_transition_cap": 3558096,
+    "initial_physics_steps_per_process": 1000,
+    "total_environment_physics_transition_cap": 15096384,
+    "supervised_minibatch_samples_cap": 98304000,
+    "ppo_demo_samples_cap": 1048576,
+    "ppo_candidate_tests_cap": 16384,
+    "anchor_candidate_row_evaluations_cap": 67108864,
+    "ppo_advantage_transitions": 2359296,
+    "reset_attempt_cap_per_training": 128,
+    "storage_bytes": 17179869184,
+    "free_disk_and_memory_reserve_bytes": 8589934592,
+    "owned_rss_bytes": 51539607552,
+    "gpu_memory_MiB": 23552,
+    "gpu_temp_C": 85,
+    "child_fit_seconds": 3600,
+    "child_sim_validation_seconds": 7200,
+    "child_train_seconds": 43200,
+    "child_audit_seconds": 600,
+    "all_wall_includes": "imports, hashes, data IO, renders, fit, simulator, audit, logs; prelaunch CPU tests separately timed and preserved",
+    "ppo_demo_gradient_sample_evaluations_cap": 4194304,
+    "ppo_demo_candidate_sample_evaluations_cap": 33554432
+  },
+  "wall_seconds": 172800,
+  "automatic_retries": 0,
+  "recurring_automation": false,
+  "stop": "Stop finite owner on any failure, source change, deadline or resource cap; terminate only owned process group. Preserve all evidence.",
+  "execution_deadline_unix": 1793415433.0,
+  "launch_correction": "v1 owner stopped before spawning any child: PosixPath command argument JSON serialization. v2 normalizes all argv elements to strings before recording/spawn. No experiment, demonstrations, optimizer, limits or criteria changed; zero scientific work repeated. v1 evidence remains intact."
+}

@@ -1,0 +1,92 @@
+{
+  "utc": "2026-10-27T23:21:06.511824+00:00",
+  "status": {
+    "state": "running",
+    "owner_pid": 77324,
+    "lanes": {
+      "0": "train_revised_63117_064",
+      "1": "train_revised_63111_128"
+    },
+    "active": {
+      "0": {
+        "pid": 95561,
+        "label": "train_revised_63117_064"
+      },
+      "1": {
+        "pid": 77361,
+        "label": "train_revised_63111_128"
+      }
+    },
+    "completed": [],
+    "first_updates_verified": [
+      {
+        "gpu": 1,
+        "phase": "train_revised_63111_128",
+        "checkpoint": "model_065.pt",
+        "utc": "2026-10-27T20:48:09Z"
+      },
+      {
+        "gpu": 0,
+        "phase": "train_revised_63117_064",
+        "checkpoint": "model_033.pt",
+        "utc": "2026-10-27T23:11:37Z"
+      }
+    ],
+    "seconds": 9485.000148490013,
+    "legacy_status": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/status.json",
+    "complete": false,
+    "physical_repair_claimed": false,
+    "automation": "none"
+  },
+  "progress": {
+    "0": {
+      "label": "train_revised_63117_064",
+      "updates": 34,
+      "completed": 2
+    },
+    "1": {
+      "label": "train_revised_63111_128",
+      "updates": 95,
+      "completed": 31
+    }
+  },
+  "original63117_64_audits": {
+    "known_old": {
+      "passed": true,
+      "per_update": [
+        {
+          "update": 65,
+          "reward_max_abs_error": 5.9144706465730223e-8
+        }
+      ],
+      "training": false,
+      "full_episodes": 24,
+      "physical_repair_claimed": false
+    },
+    "known_recent": {
+      "passed": true,
+      "per_update": [
+        {
+          "update": 65,
+          "reward_max_abs_error": 6.047598422043166e-8
+        }
+      ],
+      "training": false,
+      "full_episodes": 24,
+      "physical_repair_claimed": false
+    },
+    "known_transfer": {
+      "passed": true,
+      "per_update": [
+        {
+          "update": 65,
+          "reward_max_abs_error": 6.00601455236216e-8
+        }
+      ],
+      "training": false,
+      "full_episodes": 24,
+      "physical_repair_claimed": false
+    }
+  },
+  "live": "    PID STAT     ELAPSED COMMAND\n  77324 Ssl     02:38:06 python\n  77366 Rl      02:38:06 python\n  95566 Rl         14:37 python\n"
+}

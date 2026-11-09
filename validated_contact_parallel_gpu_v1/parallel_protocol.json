@@ -1,0 +1,118 @@
+{
+  "authorization": "could you use both gpu's to run two different tasks in parallel?",
+  "hardware_assignment": {
+    "gpu0": {
+      "name": "RTX4090",
+      "seed": 63111,
+      "arms": [
+        "original",
+        "revised"
+      ]
+    },
+    "gpu1": {
+      "name": "RTX4070",
+      "seed": 63117,
+      "arms": [
+        "original",
+        "revised"
+      ]
+    }
+  },
+  "legacy_handoff": "Legacy owner28553 completes original63111_064, its CPU audit and all3x24 evaluations/audits. A documented exclusive-log reservation prevents its next original63117_064 job from launching. Its expected guard stop is preserved, then the new owner acquires its released lock. No in-flight simulation is killed or restarted.",
+  "remaining_chunks": {
+    "gpu0": [
+      [
+        "revised",
+        63111,
+        128,
+        64
+      ],
+      [
+        "original",
+        63111,
+        128,
+        64
+      ]
+    ],
+    "gpu1": [
+      [
+        "original",
+        63117,
+        64,
+        32
+      ],
+      [
+        "revised",
+        63117,
+        64,
+        32
+      ],
+      [
+        "original",
+        63117,
+        128,
+        64
+      ],
+      [
+        "revised",
+        63117,
+        128,
+        64
+      ]
+    ]
+  },
+  "remaining_new_updates": 320,
+  "original_total_updates": 512,
+  "original_full20s_evaluation_episodes": 1152,
+  "hardware_check_extra_episodes": 48,
+  "hardware_check_extra_physics": 49200,
+  "total_physics_with_gpu_check": 13875000,
+  "absolute_deadline_unix": 1793256490.456817,
+  "deadline_utc": "2026-10-29T06:48:10.456817+00:00",
+  "new_aggregate_simulator_RSS_cap_bytes": 51539607552,
+  "gpu1_memory_cap_MiB": 11264,
+  "source_and_model": "Unchanged frozen v4 physics, reward, sensor/action, optimizer and initial checkpoint definitions. Resume actor/critic/Adam and RNG at existing32/64 process boundaries. Both reward arms in a seed use the same hardware.",
+  "hardware_admission": "GPU1 fresh/indexed zero residual trajectory must pass the existing EXACT reset comparison to old calibration and independent reward/geometry audit; no tolerance change.",
+  "evaluation": "All72 full20s cases after64 and128; original physical criteria and all64 baseline protections retained. No policy promotion or holdout.",
+  "failure": "Stop new lanes on source/resource/audit failure; preserve evidence, no blind retry. Legacy in-flight chunk remains untouched.",
+  "automation": "none; finite continuation only",
+  "original_budget_reference": {
+    "training_updates": 512,
+    "training_episodes": 12288,
+    "evaluation_episodes": 1152,
+    "identity_episodes": 48,
+    "active_physics_transitions": 13488000,
+    "indexed_warmup_transitions": 298200,
+    "initial_settling_transitions": 39600,
+    "total_physics_transitions": 13825800,
+    "training_policy_decisions": 344064,
+    "training_actor_epoch_attempts_max": 4096,
+    "training_critic_epochs": 4096,
+    "cpu_replay_updates": 512,
+    "wall_seconds": 187200,
+    "training_child_seconds_per_update": 420,
+    "training_child_overhead_seconds": 900,
+    "evaluation_child_seconds": 900,
+    "identity_child_seconds": 1500,
+    "audit_child_seconds": 1800,
+    "max_output_bytes": 12884901888,
+    "min_free_bytes": 5368709120,
+    "max_child_rss_bytes": 51539607552,
+    "min_system_available_bytes": 2147483648,
+    "cpu_threads_per_process": 8,
+    "gpu_index": 0,
+    "max_gpu_reserved_bytes": 24696061952,
+    "concurrent_scientific_children": 1,
+    "expected_wall_hours": "Approximately40–46 from previous measured runtime;52h hard cap includes audits and setup; no automatic extension.",
+    "expected_storage_gib": "Approximately10–11 including full traces, every checkpoint and batch;12GiB cap; preserve prior evidence."
+  },
+  "authorized_scheduling_overrides": {
+    "concurrent_scientific_children": 2,
+    "gpu_indices": [
+      0,
+      1
+    ],
+    "reason": "Explicit user request to use both GPUs for two different tasks in parallel; all scientific counts and original absolute deadline retained."
+  },
+  "preserved_caps": "All other original budget fields; original per-child48GiB RSS is strengthened to48GiB aggregate across the two simulators. Additional GPU1 reset check48episodes/49200physics explicitly charged above."
+}

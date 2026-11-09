@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "unchanged_files": {
+    "audit.py": "c3a527ddd394f9b96c57843ae8b4c4221db99871bd6a482434791924d1f7b00b",
+    "common.py": "29bb7d4038bbadf185fbd91c9fc66fdb414f7f32411b07b55e573e5cc893be47",
+    "environment.py": "58e1da217248b54ed014f9ffea345961c017feb218c2b64ea1ac5b3a292faa13",
+    "rewards.py": "cfa2ca52573f440820c48a3b6b995cc0519de387c39ae3d2f07620e1fb00b823",
+    "protected_sitting_cases.json": "92b4ac58bb81fd904355a42e96233ddf403d01005f12d3faa15d37e760c33109"
+  },
+  "optimizer_change": {
+    "reason": "First cloned-policy Adam proposal exceeded existing KL guard:0.35151392221450806>0.02; actor restored and smoke stopped, critic took4steps.",
+    "proposal": "Same Adam1e-4 gradient proposal; test parameter interpolation at alpha=1,1/2,...,1/128, first finite candidate with KL<=0.02 and nonincreasing clipped surrogate loss accepted; otherwise restore parameters AND Adam state and stop epoch.",
+    "candidate_cap_per_epoch": 8,
+    "maximum_candidate_tests_per_update": 32,
+    "kl_guard": 0.02,
+    "objective_loss_guard": "candidate_loss<=preproposal_loss; no tolerance relaxation",
+    "accepted_adam_state": "One proposed gradient/moment update retained once; alpha changes effective step size only. If no candidate accepted, restore optimizer state.",
+    "no_parameter_sweep": true,
+    "prior_smoke_preserved": true,
+    "reward_action_physical_gates_changed": false
+  },
+  "resource_accounting": {
+    "teacher_capture_control_transitions": 92250,
+    "reset_validation_control_transitions": 9000,
+    "teacher_replay_control_transitions": 92250,
+    "evaluation_control_transitions": 553500,
+    "main_active_control_transitions": 2949120,
+    "main_warmup_control_transitions_cap": 576000,
+    "smoke_active_control_transitions": 11520,
+    "smoke_warmup_control_transitions_cap": 288000,
+    "physics_substeps_per_control": 4,
+    "behavior_cloning_minibatch_samples": 8192000,
+    "rendering": "Camera every10control steps plus each reset; no added physics; all wall/storage accounted",
+    "cpu_audits": "600s per evaluation/weight audit,900s dataset,1800s per cloning job, all included in48h execution cap",
+    "initial_raw_reset_steps": "1000 initial physics steps per process;32 aggregate processes including failures",
+    "total_control_transitions_cap": 4696698,
+    "simulator_processes": 32,
+    "per_process_initialization_physics_cap": 1000,
+    "total_env_physics_transitions_cap": 21090792,
+    "prior_failed_capture_control_transitions_cap": 116850,
+    "output_accounting": "16GiB total across v1,v2,v3,v4,v5 outputs",
+    "failed_ppo_smoke_control_transitions": 8208,
+    "prior_failed_actor_updates": 0,
+    "prior_critic_steps": 4
+  },
+  "cpu_tests_sha256": "7ec3a838be94bd99fcef15b4ad75c93513311cc55b0d32d3c8d7f600887298cc",
+  "all_previous_gates_reused_by_hash": true,
+  "main_weights_updating_verified": false,
+  "scientific_launches": 0
+}

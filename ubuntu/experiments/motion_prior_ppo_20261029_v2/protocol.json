@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "authorization": "Fix imitation, update bottleneck and reward ranking; validate complete72-case rollouts; restart PPO after current run finishes,4090only, unchanged action limits and success criteria. Check furniture depth perception and physical support separately.",
+  "dependency": "Version1 stopped before load simulation because its mesh exporter omitted instance proxies. Continue only the corrected load test and PPO; reuse completed audited72-case validation and all42camera frames.",
+  "construction": "Sensor-selected frozen demonstration motion prior plus trainable23-joint residual. Original336 observations plus111 latched initial sensor values. No case identity, simulator pose, contact truth or geometry-bank truth enters actor/prior selection. No reuse of failed neural clone weights.",
+  "prior": "64 clean original50Hz demonstrations; initial111-sensor-frame normalized nearest-prototype retrieval, phase from public clock. Frozen desired-target sequence reconstructed through unchanged filter. Separate matching-margin and command reconstruction checks; empirical full72 autonomous validation required. This is a development-set motion library, not evidence of novel-furniture generalization.",
+  "policy": "Fresh128x128ELU23-residual actor initialized exactlyzero, learnedcritic. Gaussian desired-target std0.0075rad. Original0.1filter,0.003rad/control cap,0.03joint-limit margin and fixedfingers unchanged.",
+  "optimizer": "4 full-batch epochs, actorAdam1e-4, criticAdam3e-4, PPOclip0.2,KL0.02. Softimitation weight0.1 on mean(residual/0.03)^2 on fixed sampled demonstration batch. No hard demonstration-error ceiling. At most8step halvings and explicit per-candidate rejection reasons. Restore parameters andAdam on rejection. Stop and preserve evidence after8consecutive updates without an actor step.",
+  "reward": "Base0.02 per live transition,-20firstphysicalfailure,+20stablecompletion,+400cleancompletion,+0.2effortbonus onlyatcleancompletion. Gamma0.999 potential shaping: gamma*Phi(next)-Phi(previous), with potential0atreset,physicalterminationandfinitehorizon. Phi uses boundedtracking,legal support,settling/hold progress and boundedcontact/slip/impact costs; no unbounded quadratic penalties. Discounted failed-rollout ranking is survival-time monotone for identical full standing resets, independently audited.",
+  "validation": "CPU construction and saved-trajectory ranking first; fresh4090 full20s72-case autonomous prior evaluation and independent physical audit. No claim imitationfixed unless all64protected retained. Training admission requires completed audited72coverage and at leastone autonomouscleanrollout; zero success halts to diagnose rather than repeating the failed-clone experiment. All regressions and eight original failures remain reported; no automaticpromotion or holdout.",
+  "training": "Two sequential seeds64111,64117,256updates maximumeach,64controlsteps/update,4epochs,1000stepfullstandingepisodes. No automatic progression into harder resets by updatecount. Full-standing baseline evaluation required beforetraining. Evaluateall72after128and256; retainbest09untilverifiedreplacement.",
+  "resources": {
+    "wait_seconds": 0,
+    "execution_seconds": 41400,
+    "child_seconds": 14400,
+    "output_bytes": 17179869184,
+    "free_disk_bytes": 8589934592,
+    "free_ram_bytes": 8589934592,
+    "owned_rss_bytes": 25769803776,
+    "gpu_temperature_C": 85,
+    "gpu_memory_MiB": 23552,
+    "max_training_reset_attempts_per_seed": 128,
+    "maximum_simulator_launches": 7,
+    "maximum_control_instance_steps": 3300000,
+    "maximum_initialization_physics_steps_per_launch": 1000,
+    "maximum_summed_physics_steps": 205292,
+    "accounting": "Previous completed15simulations plus7remaining=22physical launches; previous pre-simulation failed body binding is one extra process attempt withzero physics. Conservatively subtract1800seconds fromoriginal12hbudget. Original summedphysics/control/memory/diskbounds retained; output accounting includesbothversions."
+  },
+  "scope_limits": "Physical thresholds,actionlimits and heldoutaccessunchanged. No automatic retraining after scientificfailure. Software defects may be corrected in a new version with original evidence preserved. Single scientificowner, no codingagents, no recurringautomation. Furniture support qualification is separate from policy skill.",
+  "furniture_checks": {
+    "depth": "14layouts,3actual rear-camera frames each; calibratedimageplane-depth backprojection; triangle-ray residuals; targetvisibility and existing single-plane recognizerassociation reported separately. SaveRGB,depth,pointcloud andcollage.",
+    "support": "Existing10Nprobe/fullrobottrials remainindependent. New42controlledfixturetests useactualG1pelvis/thigh/torso collisionmeshes with0.5bodyweightnormal loads. Passmeansloadcapacity, notwholebodybalance orautonomoussuccess. Sameassetmeshes/materials; separateintendedpatchchecks.",
+    "fixture_parameters": "10kgbodyfixture;nogravity;2500N/mtranslationgain,316.227766Ns/mdamping,axisforcecap2*load;100Nm/radorientationgain,10Nms/raddamping,30Nmaxaxistorque. Three6srounds/1200physicssteps each; nominalsteadywindow3\u20134.5s;0.8\u20131.2loadmean,allsteady>0.1load,residual/filter<0.05load. Independentarithmeticrequired."
+  },
+  "software_correction": "Traverse USD instance proxies on CPU; bind pelvis, boththighs, torso to exact cached G1 convexHull source. No physical/action/reward/optimizer modifications. No simulator step happened in failed body_support attempt."
+}

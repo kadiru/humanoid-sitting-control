@@ -1,0 +1,45 @@
+{
+  "version": "contact_learning_ppo_20261026_v1",
+  "authorization": "Human: Can we start training a ppo now. New bounded contact-learning pilot; supersedes repair-before-training and all-exploration-clean prerequisites only. Does not authorize any old solver cycle or physical deployment.",
+  "seeds": [
+    63111,
+    63117
+  ],
+  "num_envs": 24,
+  "seconds_per_episode": 20,
+  "physics_dt": 0.02,
+  "updates_per_seed": 8,
+  "smoke_updates_per_seed": 2,
+  "observations": "414 sensor/reference channels plus three previous normalized residuals. No simulator truth enters actor or critic.",
+  "action": "Three symmetric hip/knee/ankle pitch corrections, +/-0.004rad, slew0.004rad/s, chosen every0.5s from6s, commands0.1s. Existing final command bounds, filter and slew remain.",
+  "parents": "Frozen best09: early61111 compact6\u20137s pulse + resting59117 at measured11/15s + normal_landing3s_guarded_09. No parent weight or gain changes.",
+  "reward": "From8s: dt*(2*min(legal_rest_normal_load_BW/0.2,1)*exp(-(speed/0.1)^2-(gyro/0.25)^2)+2*good_rest), gated by legal/no failure/alive; minus inherited dense loaded-slip and wrong-contact costs. All37 torque-squared integral penalty coefficient0.25/1350, baseline-centered. Inherited terminal penalties unchanged. Undiscounted full reward-to-go, no bootstrap.",
+  "optimizer": "Existing clipped PPO0.2, Adam0.001, fixed Normalstd0.6, max8actor and8critic epochs per full-episode update, KL0.02 rollback. Main starts from matching smoke INITIAL, not trained smoke.",
+  "phases": [
+    "old_best09_zero",
+    "calibrate_and_zero_identity",
+    "indexed_zero_2episodes",
+    "smoke63111_2updates_and_CPU_replay",
+    "smoke63117_2updates_and_CPU_replay",
+    "train63111_8updates",
+    "train63117_8updates",
+    "each_final_policy_3development_banks"
+  ],
+  "budget": {
+    "active_physics_transitions": 720000,
+    "indexed_warmup_transitions": 10200,
+    "initial_settling_transitions": 7800,
+    "total_physics_transitions": 738000,
+    "main_active_per_seed": 192000,
+    "main_indexed_warmup_per_seed": 4200,
+    "wall_seconds": 10800,
+    "child_wall_seconds": 2400,
+    "max_output_bytes": 8589934592,
+    "min_free_bytes": 6442450944,
+    "concurrent_scientific_children": 1
+  },
+  "acceptance": "No automatic promotion. Both policies evaluated on all72 full20s development trials, preserving all64 baseline clean trials; report all8 unresolved separately, slip and housing contacts, final continuous5s valid rest and all37 effort. Reward improvement or completed optimizer update is not physical repair. Fresh24 holdout closed until selection.",
+  "stops": "Stop on infrastructure/source/identity/bounds/nonfinite/CPUreplay failure, wall or storage cap. Physical exploration failures are logged and do not stop this simulation-only learning pilot. No automatic retry or budget extension.",
+  "limitations": "Sitting only, reference-assisted residual policy, small budget; not whole-body from-scratch RL, not a causal reward ablation, not a leaning policy or hardware deployment.",
+  "automation": "Deleted by user; do not recreate"
+}

@@ -1,0 +1,82 @@
+{
+  "utc": "2026-10-27T21:47:54.878461+00:00",
+  "processes": "    PID     ELAPSED STAT %CPU COMMAND\n  28553    18:57:17 Ssl   0.1 /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python /home/kadir/humanoid-sitting/scripts/launch_contact_comparison_v4.py\n  75818    01:36:05 Rl    122 /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python ../scripts/run_contact_learning_ppo_v4.py --bank /data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/training_bank --output /data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/train_original_63117_064 --mode evaluate --surface sitting --profiles /data/humanoid-sitting-perception/contact_effort_repair_01/sitting_repaired_profile.json --plane-calibration /data/humanoid-sitting-perception/contact_effort_repair_01/plane_calibration.json --seed 59101 --start-stage 0 --num-envs 24 --device cuda:0 --kit_args=--/renderer/activeGpu=0,--/renderer/multiGpu/enabled=false --curriculum-stage 0 --checkpoint /data/humanoid-sitting-perception/posture_credit_01/ppo_01/seed_59117/train/final.pt --learning-start 11 --traction-config /data/humanoid-sitting-perception/traction_transfer_01/selected_controller.json --eligible-indices 0,1,2,3,4,5,6,7,8 --episode-mode evaluate --episode-updates 16 --episode-span .008 --episode-calibration /data/humanoid-sitting-perception/posture_credit_01/preflight/calibrate/episode_calibration.json --positive-reference /data/humanoid-sitting-perception/positive_slope_01/selected_reference_v2.json --early-mode evaluate --early-start 6.0 --early-seed 61111 --early-span 0.001 --early-ramp 1.0 --early-updates 1 --early-calibration /data/humanoid-sitting-perception/positive_slope_01/preflight_v2/calibrate/early_calibration.json --early-checkpoint /data/humanoid-sitting-perception/positive_slope_01/ppo_01/seed_61111/block_03/train/final.pt --landing-config /data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_guarded_09.json --reward-arm original --feedback-mode train --feedback-start 6.0 --feedback-seed 63117 --feedback-updates 32 --feedback-span .004 --feedback-rate .004 --repair-kind original --repair-config /data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_guarded_09.json --feedback-calibration /data/humanoid-sitting-perception/low_seat_contact_01/contact_learning_ppo_20261026_v2/calibrate/feedback_calibration.json --feedback-checkpoint /data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/train_original_63117_032/final.pt --feedback-rng-state /data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/train_original_63117_032/training_rng_state.pt\n  77324    01:04:54 Ssl   0.8 /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python /home/kadir/humanoid-sitting/scripts/launch_contact_parallel_queue_v2.py\n  77366    01:04:54 Rl    121 /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python ../scripts/run_contact_learning_ppo_v4.py --bank /data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/training_bank --output /data/humanoid-sitting-perception/low_seat_contact_01/contact_parallel_gpu_v1/train_revised_63111_128 --mode evaluate --surface sitting --profiles /data/humanoid-sitting-perception/contact_effort_repair_01/sitting_repaired_profile.json --plane-calibration /data/humanoid-sitting-perception/contact_effort_repair_01/plane_calibration.json --seed 59101 --start-stage 0 --num-envs 24 --device cuda:0 --kit_args=--/renderer/activeGpu=1,--/renderer/multiGpu/enabled=false --curriculum-stage 0 --checkpoint /data/humanoid-sitting-perception/posture_credit_01/ppo_01/seed_59117/train/final.pt --learning-start 11 --traction-config /data/humanoid-sitting-perception/traction_transfer_01/selected_controller.json --eligible-indices 0,1,2,3,4,5,6,7,8 --episode-mode evaluate --episode-updates 16 --episode-span .008 --episode-calibration /data/humanoid-sitting-perception/posture_credit_01/preflight/calibrate/episode_calibration.json --positive-reference /data/humanoid-sitting-perception/positive_slope_01/selected_reference_v2.json --early-mode evaluate --early-start 6.0 --early-seed 61111 --early-span 0.001 --early-ramp 1.0 --early-updates 1 --early-calibration /data/humanoid-sitting-perception/positive_slope_01/preflight_v2/calibrate/early_calibration.json --early-checkpoint /data/humanoid-sitting-perception/positive_slope_01/ppo_01/seed_61111/block_03/train/final.pt --landing-config /data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_guarded_09.json --reward-arm revised --feedback-mode train --feedback-start 6.0 --feedback-seed 63111 --feedback-updates 64 --feedback-span .004 --feedback-rate .004 --repair-kind original --repair-config /data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_guarded_09.json --feedback-calibration /data/humanoid-sitting-perception/low_seat_contact_01/contact_learning_ppo_20261026_v2/calibrate/feedback_calibration.json --feedback-checkpoint /data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/train_revised_63111_064/final.pt --feedback-rng-state /data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/train_revised_63111_064/training_rng_state.pt\n",
+  "gpus": "0, NVIDIA GeForce RTX 4090, 38, 1 %, 4688 MiB, 83.52 W\n1, NVIDIA GeForce RTX 4070, 56, 4 %, 3825 MiB, 33.31 W\n",
+  "sources": {
+    "/home/kadir/humanoid-sitting/scripts/contact_reward_v3.py": "bd9fb705071060c9c8bcf328bdf21ff2149ff4c6f1ba60f48389a3f898ca3930",
+    "/home/kadir/humanoid-sitting/scripts/feedback_slip_reward.py": "3e9cb14ffac0c1fc46be220a7abe5b11f0138836b9458cbce17ac2ca802ea433",
+    "/home/kadir/humanoid-sitting/scripts/feedback_posture_ppo.py": "3f3549bb817f0a2b6dc02d46d6d5386151d01248cb0dc930f2f252d856cd54d1",
+    "/home/kadir/humanoid-sitting/scripts/posture_episode_ppo.py": "751c7428c46a6cc375c931b513f58988ff3f2a2c55b42da319333a44a157cc45",
+    "/home/kadir/humanoid-sitting/scripts/run_contact_learning_ppo_v4.py": "bd9133aa59bcccca95671b5f70e527d4ba2cf59c3523ddba0b88199c27a11c4b"
+  },
+  "phases": {
+    "train_original_63117_064": {
+      "directory": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/train_original_63117_064",
+      "latest_model": "model_051.pt",
+      "progress_files": {
+        "progress.json": {
+          "completed": 19,
+          "updates": 51,
+          "seconds": 5574.2051699469885,
+          "last": {
+            "iteration": 18,
+            "updates": 51,
+            "active": 456000,
+            "warmup": 10800,
+            "decisions": 672,
+            "stable": 22,
+            "clean": 14,
+            "slip": 10,
+            "illegal": 0,
+            "physical": 2,
+            "optimizer": {
+              "actor_steps": 8,
+              "critic_steps": 8,
+              "rejected_kl_steps": 0,
+              "max_accepted_kl": 0.007014167029410601,
+              "surrogate": -0.010068523361263964,
+              "value_mse": 213.4073440924851,
+              "reward_mean": 15.764901555369613,
+              "reward_std": 20.028648491010937,
+              "raw_advantage_std": 13.388889187574204
+            }
+          }
+        }
+      }
+    },
+    "train_revised_63111_128": {
+      "directory": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_parallel_gpu_v1/train_revised_63111_128",
+      "latest_model": "model_076.pt",
+      "progress_files": {
+        "progress.json": {
+          "completed": 12,
+          "updates": 76,
+          "seconds": 3579.6643307310005,
+          "last": {
+            "iteration": 11,
+            "updates": 76,
+            "active": 288000,
+            "warmup": 6600,
+            "decisions": 672,
+            "stable": 22,
+            "clean": 13,
+            "slip": 11,
+            "illegal": 1,
+            "physical": 2,
+            "optimizer": {
+              "actor_steps": 8,
+              "critic_steps": 8,
+              "rejected_kl_steps": 0,
+              "max_accepted_kl": 0.015287615358829498,
+              "surrogate": -0.01146319042891264,
+              "value_mse": 0.10356640070676804,
+              "reward_mean": 0.5140395164489746,
+              "reward_std": 0.594205379486084,
+              "raw_advantage_std": 0.3218457102775574
+            }
+          }
+        }
+      }
+    }
+  }
+}

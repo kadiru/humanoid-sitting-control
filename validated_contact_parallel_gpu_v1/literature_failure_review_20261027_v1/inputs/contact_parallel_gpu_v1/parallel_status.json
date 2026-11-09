@@ -1,0 +1,38 @@
+{
+  "state": "running",
+  "owner_pid": 77324,
+  "lanes": {
+    "0": "train_revised_63117_064",
+    "1": "train_revised_63111_128"
+  },
+  "active": {
+    "1": {
+      "pid": 77361,
+      "label": "train_revised_63111_128"
+    },
+    "0": {
+      "pid": 95561,
+      "label": "train_revised_63117_064"
+    }
+  },
+  "completed": [],
+  "first_updates_verified": [
+    {
+      "gpu": 1,
+      "phase": "train_revised_63111_128",
+      "checkpoint": "model_065.pt",
+      "utc": "2026-10-27T20:48:09Z"
+    },
+    {
+      "gpu": 0,
+      "phase": "train_revised_63117_064",
+      "checkpoint": "model_033.pt",
+      "utc": "2026-10-27T23:11:37Z"
+    }
+  ],
+  "seconds": 9065.51039563,
+  "legacy_status": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/status.json",
+  "complete": false,
+  "physical_repair_claimed": false,
+  "automation": "none"
+}

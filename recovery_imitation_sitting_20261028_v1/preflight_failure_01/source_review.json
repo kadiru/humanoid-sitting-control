@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "review_kind": "Separate source inspection plus byte identity of physical and reward implementation; construction arithmetic audit required separately. No additional coding agent.",
+  "unchanged_sources": {
+    "audit.py": true,
+    "rewards.py": true,
+    "common.py": true,
+    "protected_sitting_cases.json": true
+  },
+  "environment_body_unchanged": true,
+  "findings": [
+    "New absolute action units cannot load old checkpoints.",
+    "Recovery observations captured before executed action; labels use same tick and frozen case-reference association.",
+    "Recovery passes same rate/filter/limit/finger assertions as learner.",
+    "All1000steps saved even after physical failure; all failures audited and retained.",
+    "Only independently clean disturbed trials enter recovery dataset.",
+    "All64 named successes required in both autonomous clone gates before PPO.",
+    "PPO demo term and fixed anchor constrain forgetting; not a guarantee of physical retention.",
+    "Only4090 UUID visible to learning/simulation children; live process-to-device verification;4070 never signaled.",
+    "No automatic retry, recurring task, holdout access or automatic promotion."
+  ],
+  "limits": [
+    "Offline reference-target teacher may be unable to recover disturbed states.",
+    "Absolute-target fit may still fail full sitting despite low regression error.",
+    "Physical outcomes remain pending."
+  ]
+}

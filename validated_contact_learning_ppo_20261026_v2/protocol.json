@@ -1,0 +1,65 @@
+{
+  "version": "contact_learning_ppo_20261026_v2",
+  "authorization": "Human: Fix the reset mismatch and NVIDIA driver issue, then restart PPO training and verify that it actually starts updating weights. New bounded contact-learning pilot; supersedes repair-before-training and all-exploration-clean prerequisites only. Does not authorize any old solver cycle or physical deployment.",
+  "seeds": [
+    63111,
+    63117
+  ],
+  "num_envs": 24,
+  "seconds_per_episode": 20,
+  "physics_dt": 0.02,
+  "updates_per_seed": 8,
+  "smoke_updates_per_seed": 2,
+  "observations": "414 sensor/reference channels plus three previous normalized residuals. No simulator truth enters actor or critic.",
+  "action": "Three symmetric hip/knee/ankle pitch corrections, +/-0.004rad, slew0.004rad/s, chosen every0.5s from6s, commands0.1s. Existing final command bounds, filter and slew remain.",
+  "parents": "Frozen best09: early61111 compact6\u20137s pulse + resting59117 at measured11/15s + normal_landing3s_guarded_09. No parent weight or gain changes.",
+  "reward": "From8s: dt*(2*min(legal_rest_normal_load_BW/0.2,1)*exp(-(speed/0.1)^2-(gyro/0.25)^2)+2*good_rest), gated by legal/no failure/alive; minus inherited dense loaded-slip and wrong-contact costs. All37 torque-squared integral penalty coefficient0.25/1350, baseline-centered. Inherited terminal penalties unchanged. Undiscounted full reward-to-go, no bootstrap.",
+  "optimizer": "Existing clipped PPO0.2, Adam0.001, fixed Normalstd0.6, max8actor and8critic epochs per full-episode update, KL0.02 rollback. Main starts from matching smoke INITIAL, not trained smoke.",
+  "phases": [
+    "frozen_parent_matched_reset_2episodes",
+    "calibrate_matched_reset_2episodes_and_exact_identity",
+    "smoke63111_2updates_and_CPU_replay",
+    "train63111_8updates_and_CPU_replay",
+    "smoke63117_2updates_and_CPU_replay",
+    "train63117_8updates_and_CPU_replay",
+    "each_final_policy_3development_banks"
+  ],
+  "budget": {
+    "active_physics_transitions": 720000,
+    "indexed_warmup_transitions": 10800,
+    "initial_settling_transitions": 7200,
+    "total_physics_transitions": 738000,
+    "main_active_per_seed": 192000,
+    "main_indexed_warmup_per_seed": 4200,
+    "wall_seconds": 10800,
+    "child_wall_seconds": 2400,
+    "max_output_bytes": 8589934592,
+    "min_free_bytes": 6442450944,
+    "concurrent_scientific_children": 1
+  },
+  "acceptance": "No automatic promotion. Both policies evaluated on all72 full20s development trials, preserving all64 baseline clean trials; report all8 unresolved separately, slip and housing contacts, final continuous5s valid rest and all37 effort. Reward improvement or completed optimizer update is not physical repair. Fresh24 holdout closed until selection.",
+  "stops": "Stop on infrastructure/source/identity/bounds/nonfinite/CPUreplay failure, wall or storage cap. Physical exploration failures are logged and do not stop this simulation-only learning pilot. No automatic retry or budget extension.",
+  "limitations": "Sitting only, reference-assisted residual policy, small budget; not whole-body from-scratch RL, not a causal reward ablation, not a leaning policy or hardware deployment.",
+  "automation": "Deleted by user; do not recreate",
+  "reset_correction": {
+    "reference": "Two complete independent frozen-parent episodes, including the same indexed reset and five warmup control samples as the new zero-residual policy.",
+    "comparison": "Exact equality of all startup, traction-startup and all405 trace arrays including time, plus commanded offsets and full20s episode counts. No tolerance or physical reset behavior change.",
+    "historical_precedent": "/home/kadir/humanoid-sitting/scripts/run_earlier_control_preflight.py",
+    "v1_failure": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_learning_ppo_20261026_v1/status.json"
+  },
+  "weight_verification": "Saved main checkpoint must show changed finite actor AND critic parameters, advanced Adam step counters and local update count, matching recorded optimizer steps; independent CPU replay after each completed stage.",
+  "driver_repair": {
+    "utc": "2026-10-26T21:10:50.999854+00:00",
+    "loaded_driver": "NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  580.196.07  Release Build  (dvs-builder@U22-I3-AF04-22-3)  Wed Oct  7 19:13:59 UTC 2026\nGCC version:  gcc version 12.3.0 (Ubuntu 12.3.0-1ubuntu1~22.04.3) \n",
+    "installed_driver": "580.196.07",
+    "cuda_available": true,
+    "cuda_matmul_exact": true,
+    "torch": "2.11.0+cu130",
+    "torch_cuda": "13.0",
+    "boot_id": "a9081619-67ee-4aaf-89bb-9a217eedb5ce",
+    "nvidia_smi": "0, NVIDIA GeForce RTX 4090, 580.196.07, 443 MiB\n1, NVIDIA GeForce RTX 4070, 580.196.07, 101 MiB\n",
+    "prior_loaded_version": "580.178.04",
+    "repair": "Reboot loaded installed580.196.07; no package reinstall or downgrade.",
+    "training_started": false
+  }
+}

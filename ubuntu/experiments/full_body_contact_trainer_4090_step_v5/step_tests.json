@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "classification": "CPU contract fixtures with recorded inputs and synthetic advantages; zero simulator or PPO rollout evidence",
+  "reports": [
+    {
+      "task": "sitting",
+      "seed": 64111,
+      "actual_final_kl": 0.00529307359829545,
+      "actor_l2_change": 0.024638305148389432,
+      "actor_steps": 4,
+      "rejected_kl_steps": 0,
+      "critic_steps": 4,
+      "value_mse": 0.0004152354085817933,
+      "policy_loss": -0.007853339426219463,
+      "measured_kl": 0.00529307359829545,
+      "candidate_tests": 5,
+      "accepted_step_scales": [
+        0.5,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "task": "sitting",
+      "seed": 64117,
+      "actual_final_kl": 0.010222873650491238,
+      "actor_l2_change": 0.011532097478191138,
+      "actor_steps": 4,
+      "rejected_kl_steps": 0,
+      "critic_steps": 4,
+      "value_mse": 0.0004966948181390762,
+      "policy_loss": -0.010743840597569942,
+      "measured_kl": 0.010222873650491238,
+      "candidate_tests": 13,
+      "accepted_step_scales": [
+        0.25,
+        0.125,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "task": "leaning",
+      "seed": 64111,
+      "actual_final_kl": 0.014779080636799335,
+      "actor_l2_change": 0.02521415239900795,
+      "actor_steps": 4,
+      "rejected_kl_steps": 0,
+      "critic_steps": 4,
+      "value_mse": 0.0006207383703440428,
+      "policy_loss": -0.015901587903499603,
+      "measured_kl": 0.014779080636799335,
+      "candidate_tests": 7,
+      "accepted_step_scales": [
+        0.5,
+        0.5,
+        1.0,
+        0.5
+      ]
+    },
+    {
+      "task": "leaning",
+      "seed": 64117,
+      "actual_final_kl": 0.013766055926680565,
+      "actor_l2_change": 0.031514647587049006,
+      "actor_steps": 4,
+      "rejected_kl_steps": 0,
+      "critic_steps": 4,
+      "value_mse": 0.0008851850870996714,
+      "policy_loss": -0.012048088945448399,
+      "measured_kl": 0.013766055926680565,
+      "candidate_tests": 7,
+      "accepted_step_scales": [
+        0.25,
+        1.0,
+        0.5,
+        1.0
+      ]
+    }
+  ],
+  "rejection_restores_parameters_and_adam": true,
+  "physical_gates_unchanged": true,
+  "maximum_candidate_tests_per_update": 32
+}

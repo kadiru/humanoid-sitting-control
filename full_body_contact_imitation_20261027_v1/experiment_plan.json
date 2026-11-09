@@ -1,0 +1,77 @@
+{
+  "status": "REFERENCE_PREPARATION_COMPLETE; NEW TRAINER NOT IMPLEMENTED OR LAUNCHED",
+  "human_instruction": "Why are we limiting PPO to three tiny movements? Can we train full sitting and leaning with demonstrations and staged rewards instead, while letting the current comparison finish?",
+  "authorization_interpretation": "Prepare a separate simulation-only demonstration-guided full-movement experiment. Broaden the new policy's action representation; preserve the live comparison and its frozen action limits, rewards, resource allocation and physical criteria. No hardware deployment, holdout access, old solver restart or recurring automation.",
+  "why_current_actions_are_narrow": {
+    "source": "../validated_contact_learning_ppo_20261026_v2/protocol.json",
+    "purpose": "Controlled residual-repair pilot around best09, aimed at preserving64 clean cases while trying to repair8 failures.",
+    "action": "Three bilateral hip/knee/ankle pitch corrections, each limited to0.004rad, chosen every0.5s after6s.",
+    "limitation": "Cannot independently choose left/right leg motions, torso or arm strategy, or replace the early movement. This is a controller-design restriction, not a PPO restriction.",
+    "causality": "We have not proved that these limits make repair impossible. Some limited-action noisy episodes have succeeded on some failure conditions. Wider control is a new hypothesis, not a demonstrated cure.",
+    "prior_broader_work": "Historical23-action bounded residual and two-surface curriculum studies already exist. Merely widening another residual layer would not implement this new approach."
+  },
+  "new_policy_design": {
+    "method": "Separate task-conditioned PPO actor for complete sitting/leaning movements, guided by motion references; task code selects sit or lean. Independent per-joint commands replace the stack of frozen parent corrections.",
+    "outputs": "23 independent nonfinger joint position targets in the existing robot model.14 finger joints remain fixed. No forced bilateral symmetry or three-channel residual projection.",
+    "action_mapping": "Use validated per-joint position ranges, torque/velocity protections and a tested command-rate limiter. A reference trajectory supplies a training target, not an immutable motor command. Final numeric ranges and rate limits must be frozen after source/asset checks; they are not copied from a29-DoF research robot.",
+    "control_period_target_s": 0.02,
+    "inputs": "Sensor history, estimated surface pose/normal and validity, task command, desired motion/phase goal and previous action. Simulator truth contacts and exact surface pose are reward/evaluation labels only. No geometry-ID lookup policy.",
+    "initialization": "Motion-tracking PPO with reference-state practice, then full standing-start rollouts. Behavior cloning is optional only after correctly aligned pre-action observations and applied commands have been collected. Current10Hz records are not a behavior-cloning dataset.",
+    "demonstration_generalization": "Use demonstrations as a soft motion prior. Reduce rigid pose tracking once task learning works so the actor can adapt to new surfaces; preserve legality and task-completion requirements. Retargeted public demonstrations can add diversity after model/frame/license checks, but none have been imported."
+  },
+  "motion_phases": [
+    {"phase": "approach", "reward": "Progress toward a surface-relative approach pose, balanced motion and demonstration tracking; no reward for merely waiting near the surface."},
+    {"phase": "contact", "reward": "Progress toward the intended legal contact patch, low closing speed and gentle load onset; penalize hip-housing and other forbidden contacts."},
+    {"phase": "settle", "reward": "Transfer load to permitted surfaces while reducing loaded-contact slip and body motion. Slip severity must remain distinguishable after crossing the pass threshold."},
+    {"phase": "hold", "reward": "Continuous valid supported rest for5s. Only then reward lower effort; effort savings must not qualify a failing trial as successful."}
+  ],
+  "curriculum": [
+    "Practice final supported hold from validated contact/reset states.",
+    "Move the training starts backward to contact and settling, retaining some full-start rollouts.",
+    "Train the complete standing-to-sit or standing-to-lean movement; remove dependence on reference-state starts in final evaluation.",
+    "Vary only the development surface/start conditions initially. Evaluate all72 original sitting cases and a separately frozen leaning development bank."
+  ],
+  "reward_validation_before_training": [
+    "Freeze formulas, normalization, weights, phase transitions and maximum reward contributions before an experiment.",
+    "Check saved successful and failed episodes: worse slip or forbidden contact must not earn a better contact component; positive hold/effort reward is disabled when its contact requirements fail.",
+    "Check empty-contact, contact loss, phase jumping, repeated-contact reward farming, no-motion and terminal/reset edge cases.",
+    "Compare task results separately from imitation fit and aggregate reward. No claim that a weighted reward guarantees strict success."
+  ],
+  "prepared_data": {
+    "manifest": "demonstration_manifest.json",
+    "independent_packaging_check": "reference_audit.json",
+    "strict_clean_sitting_references": 64,
+    "excluded_sitting_positive_examples": 8,
+    "leaning_candidate_records": 18,
+    "leaning_sampled_slip_rejections": 2,
+    "leaning_remaining_full_rate_revalidation": 16,
+    "reference_frequency_hz": 10,
+    "missing_for_direct_cloning": "Aligned full-rate actor observations/actions and complete velocities/reset state. Do not fabricate them from downsampled poses.",
+    "leaning_scope": "The existing leaning examples cover the recorded supported-contact configuration, not every wall/back/hand support behavior. Contact-patch coverage must be explicit in the new task definition."
+  },
+  "execution_order": [
+    "Finish the existing128-update original/revised comparison on both seeds with its queued audits and72-case evaluations unchanged.",
+    "Prepare the new environment adapter, reward functions, reference loader, contact-phase observer and logging in a separate source directory; do not edit sources loaded by the live jobs.",
+    "After comparison workers have exited, validate reset/command/contact semantics and revalidate leaning references at full control rate in a bounded preflight.",
+    "Freeze the audited sources, inputs, initialization, seeds, training/evaluation budget and resource limits. Then launch the separate demonstration-guided pilot and verify actual actor/critic weight and optimizer updates."
+  ],
+  "resource_status": {
+    "current_preparation": "Local CPU only;27 completed sitting input files copied,82 motion records packaged and checked. Zero new simulator or optimizer steps.",
+    "new_gpu_processes": 0,
+    "current_comparison_changes": 0,
+    "new_training_budget_frozen": false,
+    "required_budget_accounting": "Include demonstration recollection, reset warmup, tracking pretraining, PPO, all evaluations, simulator substeps, retries (none automatic), CPU audits, rendering, model/checkpoint storage and total wall time. Determine throughput with a bounded preflight before choosing the final update count.",
+    "auto_start_or_scheduled_job_created": false
+  },
+  "acceptance": {
+    "sitting": "Report strict clean completion on every full20s development trial, repairs among the original8 and regressions among the protected64. A candidate is not promoted if it loses a protected case.",
+    "leaning": "Freeze a separate development bank and evaluate complete standing-start transitions with the same physical checks and5s valid hold; sitting results do not establish leaning success.",
+    "heldout": "Fresh24 sitting holdout remains closed until selection. Any new leaning heldout split must be sealed before development training.",
+    "unchanged_physical_criteria": "No relaxation of slip, forbidden contact, fall, impact, torque, joint-limit or continuous-hold requirements.",
+    "current_physical_success_claim": "None. Best09 remains the accepted64/72 baseline; no new repairs were produced by reference preparation."
+  },
+  "research_basis": [
+    {"url": "https://arxiv.org/abs/2510.11072", "name": "PhysHSI,2025preprint", "relevance": "PPO with demonstration-derived motion priors and task rewards for real humanoid scene interaction, including sitting. Its action model, criteria and data differ from ours."},
+    {"url": "https://proceedings.mlr.press/v270/zhang25a.html", "name": "WoCoCo,CoRL2024 proceedings2025", "relevance": "Whole-body contact tasks decomposed into stages. This supports the staged design principle; it is not evidence our proposed controller already works."}
+  ]
+}

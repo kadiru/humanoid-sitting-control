@@ -1,0 +1,67 @@
+{
+  "state": "pilot_complete",
+  "completed": [
+    "unit_audit",
+    "reset_comparator_unit",
+    "parent_reset",
+    "calibrate",
+    "reset_identity_audit",
+    "smoke_63111",
+    "cpu_replay_smoke_63111",
+    "train_63111",
+    "weight_audit_train_63111",
+    "cpu_replay_train_63111",
+    "smoke_63117",
+    "cpu_replay_smoke_63117",
+    "train_63117",
+    "weight_audit_train_63117",
+    "cpu_replay_train_63117",
+    "evaluate_63111_known_old",
+    "evaluate_63111_known_transfer",
+    "evaluate_63111_known_recent",
+    "evaluate_63117_known_old",
+    "evaluate_63117_known_transfer",
+    "evaluate_63117_known_recent"
+  ],
+  "seconds": 8434.878223126,
+  "bytes": 577422201,
+  "physical_success": {
+    "seeds": {
+      "63111": {
+        "clean": 62,
+        "stable": 70,
+        "slipping": 10,
+        "illegal": 0,
+        "physical_failures": 2,
+        "lost_protected": [
+          [
+            "known_recent",
+            14
+          ],
+          [
+            "known_recent",
+            15
+          ]
+        ],
+        "repaired_old_failures": [],
+        "mean_all37_torque2": 755.0896909722222,
+        "physical_repair_verified": false
+      },
+      "63117": {
+        "clean": 64,
+        "stable": 70,
+        "slipping": 8,
+        "illegal": 1,
+        "physical_failures": 2,
+        "lost_protected": [],
+        "repaired_old_failures": [],
+        "mean_all37_torque2": 755.6567057291666,
+        "physical_repair_verified": false
+      }
+    },
+    "promoted": false,
+    "fresh_holdout_opened": false,
+    "leaning_trained": false
+  },
+  "promotion": false
+}

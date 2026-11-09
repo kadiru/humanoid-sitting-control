@@ -1,0 +1,371 @@
+{
+  "utc": "2026-10-27T21:49:12.989724+00:00",
+  "classification": "Read-only saved-trajectory/component analysis and frozen-critic inference; recommendations only. No training, simulator, reward, action-limit or success-criterion changes.",
+  "request": "Explain the revised-reward regressions at64 without interrupting the ongoing128-update comparison.",
+  "scope": {
+    "seed": 63111,
+    "evaluation_episodes": 288,
+    "training_episodes": 3072,
+    "critic_inference_batches": 64
+  },
+  "observed": {
+    "clean_by_arm_at_seed63111": {
+      "original_32": 58,
+      "original_64": 62,
+      "revised_32": 59,
+      "revised_64": 59
+    },
+    "regressions": {
+      "original_32": [
+        "known_old/14",
+        "known_old/15",
+        "known_recent/10",
+        "known_recent/11",
+        "known_transfer/10",
+        "known_transfer/11"
+      ],
+      "original_64": [
+        "known_recent/6",
+        "known_recent/7"
+      ],
+      "revised_32": [
+        "known_old/14",
+        "known_old/15",
+        "known_recent/6",
+        "known_recent/7",
+        "known_transfer/18"
+      ],
+      "revised_64": [
+        "known_old/14",
+        "known_old/15",
+        "known_recent/14",
+        "known_recent/15",
+        "known_transfer/0"
+      ]
+    },
+    "case_churn": {
+      "original": {
+        "new_regressions": [
+          "known_recent/6",
+          "known_recent/7"
+        ],
+        "restored_cases": [
+          "known_old/14",
+          "known_old/15",
+          "known_recent/10",
+          "known_recent/11",
+          "known_transfer/10",
+          "known_transfer/11"
+        ],
+        "persistent_regressions": []
+      },
+      "revised": {
+        "new_regressions": [
+          "known_recent/14",
+          "known_recent/15",
+          "known_transfer/0"
+        ],
+        "restored_cases": [
+          "known_recent/6",
+          "known_recent/7",
+          "known_transfer/18"
+        ],
+        "persistent_regressions": [
+          "known_old/14",
+          "known_old/15"
+        ]
+      }
+    },
+    "original_eight_repairs": {
+      "original_32": [],
+      "original_64": [],
+      "revised_32": [],
+      "revised_64": []
+    },
+    "revised64_regressions": {
+      "known_old/14": {
+        "in_training": false,
+        "success": true,
+        "failures": {
+          "fall": false,
+          "forbidden": false,
+          "torque": false,
+          "impact": false,
+          "joint_limit": false
+        },
+        "slip_ticks": 5,
+        "illegal_ticks": 0,
+        "first_slip_s": 12.38,
+        "peak_loaded_tangent_speed_m_s": 0.02753361128270626,
+        "residual_peak_rad": 0.0029035191982984543
+      },
+      "known_old/15": {
+        "in_training": false,
+        "success": true,
+        "failures": {
+          "fall": false,
+          "forbidden": false,
+          "torque": false,
+          "impact": false,
+          "joint_limit": false
+        },
+        "slip_ticks": 5,
+        "illegal_ticks": 0,
+        "first_slip_s": 12.38,
+        "peak_loaded_tangent_speed_m_s": 0.028632521629333496,
+        "residual_peak_rad": 0.0029035541228950024
+      },
+      "known_recent/14": {
+        "in_training": true,
+        "success": true,
+        "failures": {
+          "fall": false,
+          "forbidden": false,
+          "torque": false,
+          "impact": false,
+          "joint_limit": false
+        },
+        "slip_ticks": 1,
+        "illegal_ticks": 0,
+        "first_slip_s": 10.52,
+        "peak_loaded_tangent_speed_m_s": 0.027310805395245552,
+        "residual_peak_rad": 0.002886583562940359
+      },
+      "known_recent/15": {
+        "in_training": true,
+        "success": true,
+        "failures": {
+          "fall": false,
+          "forbidden": false,
+          "torque": false,
+          "impact": false,
+          "joint_limit": false
+        },
+        "slip_ticks": 1,
+        "illegal_ticks": 0,
+        "first_slip_s": 10.52,
+        "peak_loaded_tangent_speed_m_s": 0.026482321321964264,
+        "residual_peak_rad": 0.002886635484173894
+      },
+      "known_transfer/0": {
+        "in_training": true,
+        "success": true,
+        "failures": {
+          "fall": false,
+          "forbidden": false,
+          "torque": false,
+          "impact": false,
+          "joint_limit": false
+        },
+        "slip_ticks": 1,
+        "illegal_ticks": 0,
+        "first_slip_s": 10.540000000000001,
+        "peak_loaded_tangent_speed_m_s": 0.020036842674016953,
+        "residual_peak_rad": 0.0028932001441717148
+      }
+    },
+    "sample_coverage": {
+      "protected_training_cases": 16,
+      "protected_total": 64,
+      "original_failed_training_cases": 8,
+      "total_training_cases": 24,
+      "persistent_regressions_absent_from_training": [
+        "known_old/14",
+        "known_old/15"
+      ],
+      "all_three_new_regressions_in_training": true
+    },
+    "new_regression_training_samples": {
+      "case_keys": [
+        "known_recent/14",
+        "known_recent/15",
+        "known_transfer/0"
+      ],
+      "updates": [
+        33,
+        64
+      ],
+      "clean": 90,
+      "episodes": 96,
+      "last8_updates_clean": 21,
+      "last8_updates_episodes": 24,
+      "deterministic64_clean": 0,
+      "deterministic64_episodes": 3,
+      "all_six_failures_negative_normalized_advantages_at_all10_prelanding_decisions": true,
+      "comparison_limitation": "Training samples span evolving pre-update policies; they are not96 repeated stochastic evaluations of the final64 checkpoint. Noise as the cause is not established."
+    },
+    "same_revised_metric_evaluation_mean": {
+      "original_32": 0.806460411523841,
+      "original_64": 0.8695706949691195,
+      "revised_32": 0.82292448939956,
+      "revised_64": 0.8232906055196572
+    },
+    "clean_vs_failure_ranking": "Every clean episode exceeds every failed episode under revised full-episode return within all four evaluated groups; component sums match saved full returns.",
+    "revised_training_plateau": {
+      "revised_32": {
+        "mean_clean_training_24": 14.4375,
+        "mean_own_reward": 0.5800730995833874
+      },
+      "revised_64": {
+        "mean_clean_training_24": 14.40625,
+        "mean_own_reward": 0.5798584893345833
+      }
+    },
+    "slip_component_structure": {
+      "revised": "Per loaded tick: -dt*2*clip(speed/0.02,0,1)/8 raw; total return divided by50. The speed signal is flat above0.02m/s. First slip costs5raw once; losing clean terminal costs50raw.",
+      "original": "Per loaded tick: -dt*500*max(speed-0.02,0), with no speed clipping."
+    },
+    "within_failed_severity_tradeoff": {
+      "case": "known_old/15",
+      "stable_both": true,
+      "slip_ticks32": 1,
+      "slip_ticks64": 5,
+      "return32": -0.11086669459795569,
+      "return64": -0.10637758154028146,
+      "raw_component_change_64_minus32": {
+        "legal_stationary_support": 0.07640337944030762,
+        "good_rest": 0.16499999999999648,
+        "loaded_tangent_speed": -0.024588629603385925,
+        "wrong_contact_force": 0.0,
+        "illegal_patch": 0.0,
+        "effort": 0.01539275050163269,
+        "approach": -8.34582149880081e-05,
+        "housing_clearance": -0.007668063728062169
+      },
+      "terminal_and_first_slip_cost_unchanged": true,
+      "interpretation": "Longer slip is outweighed by support/rest/effort gains within the failed class. This does not overturn clean-over-failed episode ranking."
+    },
+    "action_case_spread": {
+      "original_32": {
+        "landing_10to13s_max_abs_rad": 0.002475392073392868,
+        "mean_same_time_case_std_rad": 0.00031045175273902714,
+        "max_same_time_case_range_rad": 0.0021911459043622017,
+        "mean_channels_rad": [
+          0.0004904567031189799,
+          0.0008501408738084137,
+          0.0016950458521023393
+        ]
+      },
+      "original_64": {
+        "landing_10to13s_max_abs_rad": 0.0035990288015455008,
+        "mean_same_time_case_std_rad": 0.0007215685327537358,
+        "max_same_time_case_range_rad": 0.0035634341184049845,
+        "mean_channels_rad": [
+          0.0005296642193570733,
+          0.001093081897124648,
+          0.00222012959420681
+        ]
+      },
+      "revised_32": {
+        "landing_10to13s_max_abs_rad": 0.001641762093640864,
+        "mean_same_time_case_std_rad": 0.00013568277063313872,
+        "max_same_time_case_range_rad": 0.001129457727074623,
+        "mean_channels_rad": [
+          -0.00032637265394441783,
+          0.0014253451954573393,
+          0.0008228307706303895
+        ]
+      },
+      "revised_64": {
+        "landing_10to13s_max_abs_rad": 0.002929667942225933,
+        "mean_same_time_case_std_rad": 0.0004065465182065964,
+        "max_same_time_case_range_rad": 0.0033461139537394047,
+        "mean_channels_rad": [
+          -0.0010085847461596131,
+          0.001949105178937316,
+          0.0025487199891358614
+        ]
+      }
+    },
+    "hardware_explanation": "Both completed64 evaluations analyzed here ran on4090 before the parallel4070 continuation; approved cross-GPU rounding is not the explanation for these differences."
+  },
+  "inferences": [
+    "Strong clean/failure separation is insufficient to guarantee retention across cases under average-return PPO optimization.",
+    "Incomplete protected-case training coverage leaves48 protected development cases outside optimization; it cannot explain the three new regressions alone because those three are sampled.",
+    "Rare observed failures near the learned mean trajectory and a noisy-training/deterministic-evaluation mismatch are plausible limitations; saved data do not isolate noise, sample count, update size or reward coefficients causally.",
+    "Capped slip-speed shaping loses within-failure severity information and permits measured support-versus-slip tradeoffs.",
+    "The revised deterministic policy is below the4mrad amplitude cap; these regressions do not demonstrate that larger action bounds are necessary.",
+    "Training reward and clean-count plateau through64 provides no affirmative evidence that more updates alone will fix the problem; complete the authorized128 comparison first."
+  ],
+  "recommendations_after128": [
+    {
+      "order": 1,
+      "change": "Complete current two-seed128 comparison unchanged and perform all72 deterministic evaluations. Retain best09 unless a candidate meets unchanged repair/retention criteria.",
+      "test": "Both seeds, per-case repairs/regressions and same-reward rescoring; no selection on noisy mean training reward."
+    },
+    {
+      "order": 2,
+      "change": "First controlled follow-up: keep revised reward and existing action/rate bounds, rotate all64 protected development cases plus all8 failures through on-policy training. Freeze total simulated-transition/resource budget before launch. Use deterministic72-case checks to reject regression candidates.",
+      "test": "Compare with matched initialization/seed/budget; report per-case exposure counts and worst-case retention. Increasing the number of cases must not silently increase total compute. The fresh holdout remains closed."
+    },
+    {
+      "order": 3,
+      "change": "Then isolate one reward ablation: preserve clean bonus and first-failure event costs, replace the slip-speed plateau with a smooth bounded severity/margin cost that continues to distinguish speeds above0.02m/s. Rebalance within a proven total shaping budget.",
+      "test": "Before launching, rescore saved trajectories and verify clean-over-failed separation, event causality, no support/effort reward compensating the targeted increased-slip examples, and complete component accounting. Compare revised and revised-plus-severity arms under identical sampling/exploration and matched budget."
+    },
+    {
+      "order": 4,
+      "change": "If deterministic/noisy discrepancy persists, separately test lower-variance, temporally coherent exploration within existing amplitude/slew bounds.",
+      "test": "Collect new on-policy batches with the actual sampling distribution and correct likelihoods. Evaluate mean-policy and stochastic behavior at the same frozen checkpoint. Do not feed deterministic evaluation samples into PPO as if they were on-policy Gaussian samples."
+    }
+  ],
+  "research_context": {
+    "url": "https://proceedings.mlr.press/v70/achiam17a.html",
+    "title": "Constrained Policy Optimization, Achiam et al.,2017",
+    "use": "Supports treating retention/safety as explicit constraints rather than relying only on scalar reward. Expected-cost constraints do not by themselves certify all64 individual cases; empirical full72 gating remains required. No optimizer replacement is launched or claimed validated."
+  },
+  "limitations": [
+    "Only seed63111 has matched64 evaluations. Two-seed128 conclusion is pending.",
+    "No causal coefficient ablation or new simulation was performed.",
+    "Slip-duration totals are sampled at20ms; brief violations remain failures under unchanged criteria.",
+    "No original failure is repaired by any completed full72 evaluation; this report is not a repair."
+  ],
+  "resource_record": {
+    "core_analysis_seconds": 0.91475543899287,
+    "timing_scope": "Measured after imports; excludes Python/torch startup, copying and report preparation. No full-invocation timing claim.",
+    "cpu_threads": 1,
+    "gpu_analysis_work": false,
+    "optimizer_steps": 0,
+    "simulation_episodes": 0,
+    "new_analysis_inputs_bound": 240,
+    "local_evidence_bytes_before_report": 2022472
+  },
+  "evidence": {
+    "analyze.py": {
+      "path": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/regression_analysis_20261027_v1/analyze.py",
+      "sha256": "3c435f03bbab328eb7c841b96c5656714d620dde3ae3526aa7ddd6980948d960"
+    },
+    "saved_analysis.json": {
+      "path": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/regression_analysis_20261027_v1/saved_analysis.json",
+      "sha256": "5bb47c820ac503682012c441f29e10a8ceacf8232396869ae85d71c67e53266b"
+    },
+    "runtime_snapshot.json": {
+      "path": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/regression_analysis_20261027_v1/runtime_snapshot.json",
+      "sha256": "c77cc9e366e365487d44c63449661099d088254ccc770706630ed54b55325ad5"
+    }
+  },
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/contact_reward_v3.py": "bd9fb705071060c9c8bcf328bdf21ff2149ff4c6f1ba60f48389a3f898ca3930",
+    "/home/kadir/humanoid-sitting/scripts/feedback_slip_reward.py": "3e9cb14ffac0c1fc46be220a7abe5b11f0138836b9458cbce17ac2ca802ea433",
+    "/home/kadir/humanoid-sitting/scripts/feedback_posture_ppo.py": "3f3549bb817f0a2b6dc02d46d6d5386151d01248cb0dc930f2f252d856cd54d1",
+    "/home/kadir/humanoid-sitting/scripts/posture_episode_ppo.py": "751c7428c46a6cc375c931b513f58988ff3f2a2c55b42da319333a44a157cc45",
+    "/home/kadir/humanoid-sitting/scripts/run_contact_learning_ppo_v4.py": "bd9133aa59bcccca95671b5f70e527d4ba2cf59c3523ddba0b88199c27a11c4b"
+  },
+  "runtime_at_finish": {
+    "utc": "2026-10-27T21:47:54.878461+00:00",
+    "live_training_python_pids": [
+      75818,
+      77366
+    ],
+    "original63117_updates": 51,
+    "revised63111_updates": 76,
+    "gpu0_c": 38,
+    "gpu1_c": 56,
+    "both_latest_progress_actor_steps": 8,
+    "both_latest_progress_critic_steps": 8
+  },
+  "training_interrupted": false,
+  "comparison_complete": false,
+  "physical_repair_claimed": false,
+  "new_experiment_authorized_or_started": false
+}

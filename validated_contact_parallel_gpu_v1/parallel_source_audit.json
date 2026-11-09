@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "unique_remaining_training_chunks": 6,
+  "remaining_updates": 320,
+  "total_original_updates_preserved": 512,
+  "total_original_evaluation_episodes_preserved": 1152,
+  "each_seed_both_arms_same_gpu": true,
+  "legacy_guard_checked_before_subprocess": true,
+  "inflight_scientific_process_signals": false,
+  "new_job_failure_cleanup_uses_only_own_process_groups": true,
+  "physics_runner_source_unchanged": true,
+  "reward_and_action_source_unchanged": true,
+  "cpu_replay_retained": true,
+  "old_sources_or_frozen_inputs_modified": false,
+  "new_source_sha256": "54a9b4422206f12ff7b1deed27ba8a497c966fb9f55f57261ca178a5f5b63e49",
+  "limitations": "Hardware check must pass exactly. Legacy handoff and first GPU1 optimizer update require runtime verification. No speedup or repair established by this source review.",
+  "command_equivalence_checks": [
+    {
+      "gpu": 0,
+      "arm": "original",
+      "mode": "train",
+      "only_allowed_command_fields_differ": true
+    },
+    {
+      "gpu": 0,
+      "arm": "original",
+      "mode": "evaluate",
+      "only_allowed_command_fields_differ": true
+    },
+    {
+      "gpu": 0,
+      "arm": "revised",
+      "mode": "train",
+      "only_allowed_command_fields_differ": true
+    },
+    {
+      "gpu": 0,
+      "arm": "revised",
+      "mode": "evaluate",
+      "only_allowed_command_fields_differ": true
+    },
+    {
+      "gpu": 1,
+      "arm": "original",
+      "mode": "train",
+      "only_allowed_command_fields_differ": true
+    },
+    {
+      "gpu": 1,
+      "arm": "original",
+      "mode": "evaluate",
+      "only_allowed_command_fields_differ": true
+    },
+    {
+      "gpu": 1,
+      "arm": "revised",
+      "mode": "train",
+      "only_allowed_command_fields_differ": true
+    },
+    {
+      "gpu": 1,
+      "arm": "revised",
+      "mode": "evaluate",
+      "only_allowed_command_fields_differ": true
+    }
+  ]
+}

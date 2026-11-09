@@ -1,0 +1,230 @@
+{
+  "utc": "2026-10-28T09:23:14.788289+00:00",
+  "comparison_finished": false,
+  "comparison_state": "running",
+  "full_23_joint_state": "waiting_for_comparison",
+  "new_23_joint_updates": 0,
+  "demonstration_full_rate_checks": "not_started",
+  "reset_simulator_checks": "not_started",
+  "full_new_reward_replay": "not_started",
+  "prior_cpu_and_saved_component_checks": "passed; component checks are not full reward replay or simulator validation",
+  "comparison_owner_pid": 77324,
+  "waiting_owner_live": true,
+  "waiting_owner_pid": 122717,
+  "gpu0": {
+    "task": "Old comparison: revised rewards, seed63117",
+    "updates": 87,
+    "target": 128,
+    "currently_training": true,
+    "python_pid": 145368,
+    "weight_audit": {
+      "utc": "2026-10-28T09:23:14.788289+00:00",
+      "scope": "Read-only CPU verification of two already-saved GPU0 checkpoints; no training or simulation",
+      "before_update": 86,
+      "after_update": 87,
+      "checkpoints": {
+        "/data/humanoid-sitting-perception/low_seat_contact_01/contact_parallel_gpu_v1/train_revised_63117_128/model_086.pt": "665c33de1552b09f37400836f85622aaa20cc3293b7d7c8a582f626293fc0a9b",
+        "/data/humanoid-sitting-perception/low_seat_contact_01/contact_parallel_gpu_v1/train_revised_63117_128/model_087.pt": "e9884b68784b11ec9b046897f996da45a8140be2b3ce81c255221438f7a1e634"
+      },
+      "models": {
+        "actor": {
+          "max_abs_change": 0.019733892753720284,
+          "changed_tensors": 6,
+          "new_optimizer_steps_per_parameter": 8,
+          "finite": true
+        },
+        "critic": {
+          "max_abs_change": 0.008060276508331299,
+          "changed_tensors": 6,
+          "new_optimizer_steps_per_parameter": 8,
+          "finite": true
+        }
+      },
+      "passed": true,
+      "progress": {
+        "completed": 23,
+        "updates": 87,
+        "seconds": 6458.612740389988,
+        "last": {
+          "iteration": 22,
+          "updates": 87,
+          "active": 552000,
+          "warmup": 13200,
+          "decisions": 672,
+          "stable": 21,
+          "clean": 17,
+          "slip": 7,
+          "illegal": 0,
+          "physical": 2,
+          "optimizer": {
+            "actor_steps": 8,
+            "critic_steps": 8,
+            "rejected_kl_steps": 0,
+            "max_accepted_kl": 0.007366062607616186,
+            "surrogate": -0.008965898305177689,
+            "value_mse": 0.1324431151151657,
+            "reward_mean": 0.6730230450630188,
+            "reward_std": 0.5757445096969604,
+            "raw_advantage_std": 0.40139710903167725
+          }
+        }
+      },
+      "gpu1_completed_weight_audit": {
+        "passed": true,
+        "checkpoint": "model_128.pt",
+        "initial_sha256": "46191cf2c058db729ae688efb8fc661346ffd4b2edd50b886d8839908f0012ae",
+        "checkpoint_sha256": "d69799b959f12abfb820e09cd0641035f04236b40da1077e7dc0a7998e7eccd8",
+        "local_updates": 64,
+        "models": {
+          "actor": {
+            "max_abs_parameter_change": 0.21191900968551636,
+            "changed_tensors": 6,
+            "adam_steps_per_parameter": 485,
+            "finite": true
+          },
+          "critic": {
+            "max_abs_parameter_change": 0.4968629479408264,
+            "changed_tensors": 6,
+            "adam_steps_per_parameter": 512,
+            "finite": true
+          }
+        },
+        "physical_success_claimed": false
+      }
+    }
+  },
+  "gpu1": {
+    "task": "Comparison training and final evaluations complete; idle",
+    "updates": 128,
+    "target": 128,
+    "currently_training": false,
+    "compute_worker_present": false,
+    "weight_audit": {
+      "passed": true,
+      "checkpoint": "model_128.pt",
+      "initial_sha256": "46191cf2c058db729ae688efb8fc661346ffd4b2edd50b886d8839908f0012ae",
+      "checkpoint_sha256": "d69799b959f12abfb820e09cd0641035f04236b40da1077e7dc0a7998e7eccd8",
+      "local_updates": 64,
+      "models": {
+        "actor": {
+          "max_abs_parameter_change": 0.21191900968551636,
+          "changed_tensors": 6,
+          "adam_steps_per_parameter": 485,
+          "finite": true
+        },
+        "critic": {
+          "max_abs_parameter_change": 0.4968629479408264,
+          "changed_tensors": 6,
+          "adam_steps_per_parameter": 512,
+          "finite": true
+        }
+      },
+      "physical_success_claimed": false
+    }
+  },
+  "gpus": "0, NVIDIA GeForce RTX 4090, 1 %, 37, 4673 MiB, 24564 MiB\n1, NVIDIA GeForce RTX 4070, 0 %, 45, 166 MiB, 12282 MiB\n",
+  "telemetry_utc": "2026-10-28T09:22:34.162715+00:00",
+  "completed_128_results": [
+    {
+      "arm": "revised",
+      "seed": 63111,
+      "updates": 128,
+      "clean": 62,
+      "stable": 70,
+      "slipping": 10,
+      "lost_protected": [
+        [
+          "known_old",
+          22
+        ],
+        [
+          "known_old",
+          23
+        ],
+        [
+          "known_recent",
+          22
+        ],
+        [
+          "known_recent",
+          23
+        ]
+      ],
+      "repaired_old_failures": [
+        [
+          "known_transfer",
+          4
+        ],
+        [
+          "known_transfer",
+          5
+        ]
+      ]
+    },
+    {
+      "arm": "original",
+      "seed": 63117,
+      "updates": 128,
+      "clean": 64,
+      "stable": 70,
+      "slipping": 8,
+      "lost_protected": [],
+      "repaired_old_failures": []
+    },
+    {
+      "arm": "original",
+      "seed": 63111,
+      "updates": 128,
+      "clean": 62,
+      "stable": 70,
+      "slipping": 10,
+      "lost_protected": [
+        [
+          "known_old",
+          12
+        ],
+        [
+          "known_old",
+          13
+        ],
+        [
+          "known_old",
+          21
+        ],
+        [
+          "known_transfer",
+          21
+        ]
+      ],
+      "repaired_old_failures": [
+        [
+          "known_transfer",
+          4
+        ],
+        [
+          "known_transfer",
+          5
+        ]
+      ]
+    }
+  ],
+  "physical": {
+    "accepted_baseline_clean": 64,
+    "development_total": 72,
+    "accepted_regression_free_repairs": 0,
+    "promoted": false,
+    "criteria_unchanged": true,
+    "holdout": "closed"
+  },
+  "next_step": "Existing comparison owner completes remaining41 updates and final development evaluations/audits. Existing finite owner122717 then performs full-rate demonstration admission, reward replay and reset validation before PPO smoke checks and main23-joint training. A failed gate stops the attempt; no duplicate launch.",
+  "video_milestone": {
+    "status": "pending new trainer validation/evaluation; not achieved",
+    "deliverable": "One subminute simulation video with one uncut20s standing-to-sit episode and one uncut20s standing-to-rear-trunk-lean episode, including final5s hold.",
+    "provenance": "Use saved full standing-start evaluation traces from one frozen23-joint checkpoint per task at a planned0/128/256 evaluation; record task,seed,checkpoint hash,case identity,source trace hashes,criteria audit and render command.",
+    "scoring": "Show slip,legal contact,continuous hold and unchanged pass/fail result; accompany video with all72 sitting and18 leaning development results and repairs/regressions. If no clean representative exists, show the failure and label it honestly. A selected clip is not an all-case repair claim.",
+    "existing_reference": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/literature_failure_review_20261027_v1/failing_cases_revised64_v2.mp4",
+    "existing_reference_scope": "Historical46s offline schematic review of revised63111 at64 updates; not23-joint training or a physical robot recording."
+  },
+  "source_state": "Live SSH process/GPU queries plus read-only CPU comparison of saved checkpoints86/87; no training or queue changes",
+  "recurring_automation": "deleted; remains deleted"
+}
