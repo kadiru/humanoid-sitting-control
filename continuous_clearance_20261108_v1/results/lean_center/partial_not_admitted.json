@@ -1,0 +1,45 @@
+{
+  "seed": {
+    "source": "Original current encoders/static body hulls/current observed back plane only",
+    "pitch_rad": 0.5352942633225298,
+    "root_position": [
+      -0.12288320968537393,
+      0.0,
+      0.0
+    ],
+    "torso_pelvis_plane_separation_m": 0.02223341969958542,
+    "reach_interval_m": [
+      -0.6,
+      0.001085252717196104
+    ],
+    "full_3D_foot_residual": 2.2119437464662717e-05,
+    "balance_certified": false,
+    "collision_certified": false,
+    "physical_success": false,
+    "endpoint_material_local": [
+      -0.053285010159015656,
+      -6.628201987268767e-08,
+      -0.12269629538059235
+    ],
+    "feature_selection": "Original analytic seed only; no failed candidate"
+  },
+  "accepted_endpoint": false,
+  "optimizations": [
+    {
+      "stage": "load_transfer_endpoint",
+      "success": false,
+      "iterations": 1,
+      "equality": 2.2119437464662717e-05,
+      "inequality": -0.018095988098876553,
+      "message": "Inequality constraints incompatible",
+      "foot_residual": 2.2119437464662717e-05,
+      "gap_m": 0.0,
+      "camera_minimum_m": -9.756422642004381e-09,
+      "construction_clearance_minimum_m": -0.018095988098876553,
+      "objective": 1.936188896331887,
+      "solver_status": 4,
+      "derivatives": "analytic full model, piecewise exact active camera row"
+    }
+  ],
+  "state_evaluations": 71
+}

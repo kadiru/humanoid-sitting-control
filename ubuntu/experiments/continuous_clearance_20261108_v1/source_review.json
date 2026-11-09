@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "reviewer": "Same scientific owner, separate equation/source review; no delegated agent",
+  "scope": "Prelaunch construction review only; no feasibility, optimality or physical result claimed",
+  "findings": [
+    "Positive-knee initialization uses only original encoders, static hulls and current observed support plane; full3D FK and original joint boxes reject invalid seeds. Synthetic nonzero CAD-offset fixture independently reconstructs Cartesian targets.",
+    "All23joint components remain free in every optimizer. Same-pose load transfer is a documented additional restriction, not a reduced joint controller.",
+    "Force allocation, all23joint torques, foot polygons/friction, original joint/command margins and38degree model reserve retained. Independent virtual-work and six-dimensional base-wrench residual check runs before and after endpoint.",
+    "Endpoint selected material is shared across loads at each candidate pose. Endpoint physical load requires freezing exactly that material. Unloaded reverse path may choose exposed material. Soft tangent preference uses a fixed body anchor.",
+    "No furniture mesh feeds the optimizer; actual triangles only veto an accepted endpoint and completed path. Unknown camera rows remain unknown, not free space.",
+    "Backward edge duration is charged to the same physical forward edge. .5s hover reserve and load/settle intervals included; live25CURRENT quiet guard cannot be replaced by this reservation.",
+    "Endpoint lower bound uses max rather than summing concurrent joint/normal motion. Exact generated edge sums and original float32 filter audit remain mandatory.",
+    "Solver failure/timeout blocks output regardless of near-feasible residuals. No failed/internal point restoration or second attempt. Fullpath and actual runtime gates remain required.",
+    "45s parent watchdog includes interpreter/input hashes/construction/audits;40GiB address-space,45sCPU limit,1single-threadedCPUworker,20GBreserve,zeroGPUvisibility. Foreign4070worker unaffected."
+  ],
+  "inherited_components": "static_model, compact_camera, camera_clearance and actualmesh auditor byte-identical to contact_transition_v1; previous proofs not replayed",
+  "known_limits": [
+    "Local nonlinear solver status is not a global optimum proof",
+    "Statically balanced model is not actual physical stability",
+    "Live ankle/current-camera checks remain unimplemented for this new plan; physics_launch_ready stays false",
+    "Dynamic argmin discontinuity is a verified formulation risk, not proven sole cause of the prior solver failure. This fixed mode may be infeasible; reject without trying another mode.",
+    "Camera depth facets and minimum-body samples remain piecewise differentiable. Exact derivatives do not establish convergence or physical success.",
+    "Fixed envelope conservatism may make the target infeasible. No automatic envelope refinement, retries or exemption creation are allowed on this run."
+  ],
+  "additional_review": "Independent source/equation review: offset homothety preserves each triangle camera-ray cone; positive alpha and front-axis conditions are mandatory and executable. Supporting plane of shifted triangles conservatively enforces every old per-pixel clearance for noncontact bodies. Convex-combination material samples inherit vertex bounds. Feet floor-only exemptions and detailed pelvis rule unchanged. Original full camera and mesh audit remain separate rejection gates. No field interpolation/smoothing may weaken original6mm. All methods/iterations/tolerances/budgets unchanged; current-data seed only.",
+  "fixed_link_correction": "Match original BodyModel.fk: fixed joints absent from encoder names have zero rotation, no axis lookup. Prior v1 stopped before derivative validation and optimization; no scientific point reused. Other equations/gates unchanged."
+}
