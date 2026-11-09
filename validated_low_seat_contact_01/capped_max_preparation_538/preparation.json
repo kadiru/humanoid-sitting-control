@@ -1,0 +1,78 @@
+{
+  "utc": "2026-10-19T02:13:14.497182+00:00",
+  "passed": true,
+  "specification": {
+    "scope": "Preparation only: exact-real epigraph elimination in both immutable516 ORIGINAL representative systems. All78790 native direction variables INCLUDING21840 auxiliary torques remain. No522 projection or504 mixed transform is used. No LP, optimizer, candidate or full-size proximal update.",
+    "source_proof": "Inherit517 REAL original-system implication proof after named hashes; do not regroup or reprove. Failed516 synthetic fixture and staged recovery stay historical. Full490 original checks remain mandatory.",
+    "canonicalization": "Let e=cost[last] in{+1,-1}, v=e*t, L=min(e*lower_t,e*upper_t), U=max(...). Every coupled row must have coefficient -e, every hard row zero. Then Hx<=bH, Sx-v<=bS, L<=v<=U, min v. Native costs zero; native bounds and equality rows/RHS retained unchanged.",
+    "primal_function": "For r=Sx-bS, g(r)=max(L,max(r)) if max(r)<=U, else +infinity. Eliminate v by minimizing its feasible interval[max(L,max(r)),U]. Reconstruct v=g(r),t=e*v, with native x unchanged. No row is redundant or removed: hard rows and ALL coupled residuals remain. Upper domain must never be omitted.",
+    "conjugate": "g*(lambda)=L*(sum(lambda)-1)+(U-L)*max(sum(lambda)-1,0) for lambda>=0, +infinity otherwise. For nonnegative lambda, supremum reduces to sup_(a<=U) sum(lambda)*a-max(L,a); for any negative component, send that r component to -infinity. This proves the stated conjugate exactly.",
+    "saddle": "min_x max_(yH>=0,lambda>=0) yH.(Hx-bH)+lambda.(Sx-bS)-g*(lambda), with unchanged native domain. This is a reformulation, not a complete numerical algorithm or convergence/performance certificate.",
+    "dual_lift": "For s=sum(lambda), canonical v upper/lower multipliers alpha=max(s-1,0), beta=max(1-s,0) give1-s+alpha-beta=0. Dual objective -bH.yH-bS.lambda-U*alpha+L*beta equals -b.y-g*. If e=-1, swap bound multipliers for original t. Native stationarity H.T*yH+S.T*lambda (plus any unchanged native-domain dual terms) must still hold.",
+    "weighted_prox": "For sigma>0, prox of b.lambda+g* in diagonal metric1/sigma: q=w-sigma*(b+L), width=U-L; lambda_i=max(q_i-sigma_i*a,0). a=0 if sum max(q,0)<=1; a=width if sum max(q-sigma*width,0)>=1; otherwise solve sum max(q-sigma*a,0)=1 by exact sorted active breakpoints q/sigma. Only NEW small exact arithmetic examples are executed; not a robot solver update.",
+    "future_certification": "Any numerical method must specify complete initialization, step sizes, residual checks, resource caps and independent audit before launch. Native returned coordinates cannot be repaired. Complete original t direction must pass source and FULL490 inequality/equality/bound checks at unchanged1e-7. Actual primary result sets interior ceiling, exact unscaled interval eta>0 precedes immutable490 encoding. No522 torque midpoint lift is involved in this native-variable formulation. All actual unit/geometry/filter/runtime/physical/PPO gates remain.",
+    "limits": "One dense scalar column eliminated analytically, not a smaller feasible constraint set. Stored native direction count78790 is21840 larger than the torque-projected56950 route. No speedup, conditioning gain, deadline explanation, global infeasibility, actual path, force or effort claim.",
+    "resources": "ONE preparation of two saved systems; no iterative optimizer. Six new small rational proximal examples and three exact primal/conjugate/dual-bound examples. Independent audit copies/support and rational KKT only, no optimizer/factor/linear solve. No old fixture replay.",
+    "reference": "General proximal definition and uniqueness: Parikh and Boyd, Proximal Algorithms, https://web.stanford.edu/~boyd/papers/pdf/prox_algs.pdf . Capped-maximum formulas and source specialization derived explicitly here."
+  },
+  "systems": {
+    "primary": {
+      "source_shape": [
+        452522,
+        78791
+      ],
+      "source_nonzeros": 2235285,
+      "native_directions": 78790,
+      "hard_rows": 211989,
+      "coupled_residuals": 240533,
+      "hard_nonzeros": 282436,
+      "coupled_native_nonzeros": 1712316,
+      "native_nonzeros": 1994752,
+      "scalar_coefficients_analytically_removed": 240533,
+      "constraint_rows_omitted": 0,
+      "native_variables_eliminated": 0,
+      "objective_sign": 1.0,
+      "lower_v": 0.0,
+      "upper_v": 1.0,
+      "all_native_bounds_unbounded": true,
+      "all_native_costs_zero": true,
+      "zero_equality_rows": 1366,
+      "original_equality_source": "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/primary/equality.npz",
+      "original_equality_sha256": "c27c5897520fe7949f33e173419fc5ad3e41a9630891dd0137bae1b849163695"
+    },
+    "witness": {
+      "source_shape": [
+        618101,
+        78791
+      ],
+      "source_nonzeros": 2380700,
+      "native_directions": 78790,
+      "hard_rows": 452041,
+      "coupled_residuals": 166060,
+      "hard_nonzeros": 1994272,
+      "coupled_native_nonzeros": 220368,
+      "native_nonzeros": 2214640,
+      "scalar_coefficients_analytically_removed": 166060,
+      "constraint_rows_omitted": 0,
+      "native_variables_eliminated": 0,
+      "objective_sign": -1.0,
+      "lower_v": -0.5,
+      "upper_v": -0.0,
+      "all_native_bounds_unbounded": true,
+      "all_native_costs_zero": true,
+      "zero_equality_rows": 1366,
+      "original_equality_source": "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/witness/equality.npz",
+      "original_equality_sha256": "c27c5897520fe7949f33e173419fc5ad3e41a9630891dd0137bae1b849163695"
+    }
+  },
+  "new_small_proximal_examples": 6,
+  "new_small_fenchel_dual_lift_examples": 3,
+  "lp_calls": 0,
+  "full_size_proximal_updates": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "new_solver": false,
+  "new_candidate": false,
+  "physical_admission": false
+}
