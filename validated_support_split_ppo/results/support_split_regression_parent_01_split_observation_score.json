@@ -1,0 +1,51 @@
+{
+  "all_frames": {
+    "frames": 16000,
+    "distance_availability": 0.9980625,
+    "patch_availability": 0.984,
+    "recovered_distance_frames": 225,
+    "max_accepted_error_m": 0.001738123595714569
+  },
+  "before_first_failure": {
+    "frames": 16000,
+    "distance_availability": 0.9980625,
+    "patch_availability": 0.984,
+    "recovered_distance_frames": 225,
+    "max_accepted_error_m": 0.001738123595714569
+  },
+  "landing": {
+    "frames": 1216,
+    "distance_availability": 0.9967105263157895,
+    "patch_availability": 0.8273026315789473,
+    "recovered_distance_frames": 206,
+    "max_accepted_error_m": 0.001738123595714569
+  },
+  "successes": 16,
+  "trials": 16,
+  "trajectory_parity": {
+    "t": true,
+    "body": true,
+    "root": true,
+    "support": true,
+    "foot": true,
+    "torque": true,
+    "force": true,
+    "tilt": true,
+    "live": true,
+    "true_clearance": true,
+    "correction": true,
+    "alive": true
+  },
+  "old_policy_inputs_bitwise_equal": true,
+  "actions_bitwise_equal": true,
+  "checks": {
+    "distance_accuracy": true,
+    "distance_coverage": true,
+    "finite_observations": true,
+    "missing_distance_zero": true,
+    "known_success": true,
+    "action_parity": true,
+    "trajectory_parity": true
+  },
+  "passed": true
+}
