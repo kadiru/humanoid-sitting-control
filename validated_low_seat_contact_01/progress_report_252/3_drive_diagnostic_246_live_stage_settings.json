@@ -1,0 +1,417 @@
+{
+  "settings": [
+    {
+      "path": "/physicsScene",
+      "type": "PhysicsScene",
+      "attributes": {
+        "physxScene:enableExternalForcesEveryIteration": "True",
+        "physxScene:enableStabilization": "False",
+        "physxScene:maxPositionIterationCount": "255",
+        "physxScene:maxVelocityIterationCount": "255",
+        "physxScene:minPositionIterationCount": "1",
+        "physxScene:minVelocityIterationCount": "0",
+        "physxScene:solverType": "TGS"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/pelvis",
+      "type": "Xform",
+      "attributes": {
+        "physxArticulation:solverPositionIterationCount": "8",
+        "physxArticulation:solverVelocityIterationCount": "4",
+        "physxArticulation:stabilizationThreshold": "9.999999747378752e-06",
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_hip_pitch_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_hip_roll_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_hip_yaw_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_knee_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_ankle_pitch_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_ankle_roll_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/pelvis_contour_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_hip_pitch_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_hip_roll_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_hip_yaw_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_knee_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_ankle_pitch_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_ankle_roll_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/torso_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/head_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/imu_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_shoulder_pitch_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_shoulder_roll_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_shoulder_yaw_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_elbow_pitch_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_elbow_roll_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_palm_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_five_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_six_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_three_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_four_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_zero_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_one_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/left_two_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/logo_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_shoulder_pitch_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_shoulder_roll_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_shoulder_yaw_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_elbow_pitch_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_elbow_roll_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_palm_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_five_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_six_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_three_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_four_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_zero_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_one_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    },
+    {
+      "path": "/World/envs/env_0/Robot/right_two_link",
+      "type": "Xform",
+      "attributes": {
+        "physxRigidBody:solverPositionIterationCount": "16",
+        "physxRigidBody:solverVelocityIterationCount": "1",
+        "physxRigidBody:stabilizationThreshold": "9.999999747378752e-06"
+      }
+    }
+  ],
+  "interpretation": "Read-only instantiated USD attributes. Effective solver-island iterations are not independently queried."
+}
