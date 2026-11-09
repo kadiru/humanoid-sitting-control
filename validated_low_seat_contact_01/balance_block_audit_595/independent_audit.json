@@ -1,0 +1,75 @@
+{
+  "utc": "2026-10-19T12:18:42.074714+00:00",
+  "passed": true,
+  "arithmetic_passed": true,
+  "preparation_only": true,
+  "primary": {
+    "source_columns": 14636,
+    "reduced_columns": 10541,
+    "eliminated_rootxy_f_columns": 4095,
+    "retained_prior_controls": 10540,
+    "retained_physical_columns": 0,
+    "exact_three_by_three_inversions": 1365,
+    "exact_block_coefficient_solves": 1365,
+    "rank_certificate_entries": 12285,
+    "inverse_nonzeros": 12285,
+    "graph_coefficient_nonzeros": 93132,
+    "original_scalar_column": 78790,
+    "source_scalar_column": 14635,
+    "reduced_scalar_column": 10540,
+    "all_inequalities_retained": true,
+    "conditions_discarded": 0,
+    "statistics": {
+      "inequality": {
+        "rows": 265967,
+        "nonzeros": 6102946,
+        "constant_rows": 0
+      },
+      "equality": {
+        "rows": 1367,
+        "nonzeros": 1,
+        "constant_rows": 1366
+      }
+    },
+    "operations": {
+      "inverse_divisions": 16380,
+      "inverse_products": 32760,
+      "graph_coefficient_products": 124755,
+      "graph_RHS_products": 8796,
+      "substitution_coefficient_products": 18131764,
+      "substitution_RHS_products": 791882
+    },
+    "largest_fraction_bits": 3644,
+    "rounded_coefficients_created": 0,
+    "primal_graph_values": 0,
+    "old_proofs_repeated": false
+  },
+  "independent_products": {
+    "inverse_identity": 32760,
+    "graph_identity": 248352,
+    "graph_RHS_identity": 10920,
+    "reverse_multiplier": 2375646,
+    "reverse_coefficients": 11745423,
+    "reverse_RHS": 912533
+  },
+  "exact_copy_error": 0,
+  "elapsed_s": 178.63923654495738,
+  "producer_import": false,
+  "producer_elimination_replayed": false,
+  "producer_operation_counts_independently_replayed": false,
+  "rank_proof": "ALL1365exactB*K=I; uniqueness overREAL follows for squareB. ALLB*G+C=0 andB*k=h exact.",
+  "numeric_optimizer_calls": 0,
+  "numerical_linear_system_solves": 0,
+  "exact_block_inverses_constructed_by_audit": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "primal_vectors_constructed_or_evaluated": 0,
+  "analytic_dual_vectors_constructed": 0,
+  "physical_admission": false,
+  "execution_recovery": false,
+  "old_proofs_replayed": false,
+  "peak_memory_measured": false,
+  "scope": "Exact coupled3x3 moment/gap dimension reduction from586zeroFACE;alloriginalconditions represented. No roundednumericinput,universalfiniteextension,primalwitness,performance oractualpath claim."
+}
