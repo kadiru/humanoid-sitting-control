@@ -1,0 +1,72 @@
+{
+  "utc": "2026-10-19T06:47:25.418306+00:00",
+  "passed": true,
+  "arithmetic_pass": true,
+  "physical_pass": false,
+  "preparation_only": true,
+  "systems": {
+    "primary": {
+      "passed": true,
+      "dual_shape": [
+        78791,
+        402489
+      ],
+      "dual_nonzeros": 2049087,
+      "original_stationarity_coefficient_identities": 2049085,
+      "original_slack_coefficient_identities": 2049085,
+      "scalar_bound_column_identities": 4,
+      "signed_gap_coordinate_coefficient_identities": 78791,
+      "signed_gap_multiplier_coefficient_identities": 402489,
+      "retained_copy_error_exact": 0,
+      "original_primal_from_equality_marginals": true,
+      "optimizer_primal_is_multiplier_vector": true,
+      "original_domain_unchanged": true,
+      "candidate_evaluated": false,
+      "inherited_completed_arithmetic": true,
+      "summary_reconstructed_from_frozen_control_flow_and_saved_dimensions": true,
+      "original_serialized_summary_available": false
+    },
+    "witness": {
+      "passed": true,
+      "dual_shape": [
+        78791,
+        568285
+      ],
+      "dual_nonzeros": 2236456,
+      "original_stationarity_coefficient_identities": 2236454,
+      "original_slack_coefficient_identities": 2236454,
+      "scalar_bound_column_identities": 4,
+      "signed_gap_coordinate_coefficient_identities": 78791,
+      "signed_gap_multiplier_coefficient_identities": 568285,
+      "retained_copy_error_exact": 0,
+      "original_primal_from_equality_marginals": true,
+      "optimizer_primal_is_multiplier_vector": true,
+      "original_domain_unchanged": true,
+      "candidate_evaluated": false
+    }
+  },
+  "staged_witness_elapsed_s": 1.9087024619802833,
+  "original_monotonic_elapsed_s": null,
+  "original_log_filesystem_interval_s": 1.633025397,
+  "remaining_stage_wall_limit_s": 120,
+  "original_wall_limit_s": 240,
+  "source_proofs_inherited": [
+    "517",
+    "547"
+  ],
+  "old_proofs_repeated": false,
+  "producer_imported": false,
+  "optimizer_imported": false,
+  "execution_recovery": true,
+  "recovery_scope": "Original primary arithmetic completed once, then JSON print failed on numpy.int32. Preserve original source/log/actual1/two arrays. V2 reconstructs saved-primary summary from control-flow evidence and performs ONLY previously unexecuted witness arithmetic. No completed coefficient checks repeated.",
+  "completed_scientific_calculations_repeated": false,
+  "lp_calls": 0,
+  "small_examples": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "new_candidate": false,
+  "actual_state_audit": false,
+  "limitation": "Coefficient identities and original-domain provenance only. No primal-dual point or performance result. Primary original serialized summary/timer unavailable; completion evidenced by preserved arrays and return-before-print traceback. Future w must be BITWISE backend equality-marginal copy with independent full D/546/516/490 KKT and all physical gates."
+}

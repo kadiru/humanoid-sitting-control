@@ -1,0 +1,424 @@
+{
+  "utc": "2026-10-19T06:50:48.057894+00:00",
+  "scope": "Preserve564/565 dual-balance preparation only; sealed563 and actual path unchanged.",
+  "preparation_only": true,
+  "new_closure": false,
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_563.json",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_v2_563.json",
+      "files": 12553,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_563.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 12605,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/dual_balance_evidence_preservation_565.json",
+  "manifest_sha256": "1c16c559cc1f60fa74b4e3fef9d51120bfbab0d32975f7cac571dd0583a7cfbe",
+  "workers": [],
+  "actual_exits": {
+    "dual_balance_compile_exit_564.json": {
+      "actual_exit": 0,
+      "observed_chunk": "5d4dbf",
+      "utc": "2026-10-19T06:42:48.136813+00:00",
+      "source_copy_actual_exit": 0,
+      "source_copy_observed_chunk": "62799a",
+      "files": [
+        "low_seat_dual_balance_564.py",
+        "prepare_low_seat_dual_balance_564.py",
+        "freeze_low_seat_dual_balance_564.py",
+        "audit_low_seat_dual_balance_565.py"
+      ]
+    },
+    "dual_balance_freeze_exit_564.json": {
+      "actual_exit": 0,
+      "observed_chunk": "28e22d",
+      "session": 59388,
+      "utc": "2026-10-19T06:44:24.858719+00:00"
+    },
+    "dual_balance_preparation_exit_564.json": {
+      "actual_exit": 0,
+      "observed_chunk": "9d12bd",
+      "session": 29230,
+      "utc": "2026-10-19T06:44:49.195404+00:00"
+    },
+    "dual_balance_audit_exit_565.json": {
+      "actual_exit": 0,
+      "observed_chunk": "0a924a",
+      "session": 16374,
+      "utc": "2026-10-19T06:47:51.741460+00:00",
+      "stage": "v2 witness only; original primary completed before JSON-print failure; no primary repeat"
+    },
+    "dual_balance_audit_v2_compile_exit_565.json": {
+      "actual_exit": 0,
+      "observed_chunk": "31430d",
+      "utc": "2026-10-19T06:47:16.176116+00:00",
+      "files": [
+        "audit_low_seat_dual_balance_v2_565.py",
+        "record_low_seat_dual_balance_preparation_565.py"
+      ]
+    },
+    "dual_balance_index_exit_565.json": {
+      "actual_exit": 0,
+      "observed_chunk": "9538dc",
+      "utc": "2026-10-19T06:48:12.684466+00:00"
+    },
+    "dual_balance_preservation_compile_exit_565.json": {
+      "actual_exit": 0,
+      "observed_chunk": "cd24d2",
+      "utc": "2026-10-19T06:45:11.270497+00:00",
+      "files": [
+        "index_low_seat_dual_balance_565.py",
+        "record_low_seat_dual_balance_preparation_565.py"
+      ]
+    }
+  },
+  "preparation": {
+    "utc": "2026-10-19T06:44:32.279092+00:00",
+    "passed": true,
+    "preparation_only": true,
+    "specification": {
+      "scope": "NEW exact LP dual balance formulation of the saved546 ORIGINAL native systems. Preparation only; no numerical algorithm, LP, robot witness or actual path.",
+      "source": "Immutable546 ORIGINAL-coordinate matrix/RHS/cost/bounds and zero E;517/547 implications inherited by hash. No558 definition variables,552 finite-bound inward domain,522 eliminated torque,504 basis,532/542 internal state or rejected robot state. Actual472 INITIAL X/Y/J,490 canonical auxiliary and exact drops unchanged.",
+      "structural_change": "Exchange original native-coordinate primal feasibility with nonnegative row-multiplier feasibility and78791 native stationarity balances. ALL original546 inequality multipliers become optimizer primal variables; original78791 robot-direction/scalar coordinates become the78791 equality-marginal slots. This is LP dualization, not a native coordinate basis, renamed row group/definition or backend change. It uses the saved whole-clock/command/local-mechanics incidence through its exact transpose and the zero-native-cost/unbounded-native-domain structure. It adds no actuator authority.",
+      "dimensions": "Original native dimension78790 includes21840 auxiliary torque outputs; scalar at78790. Original native direct bounds unbounded and cost zero. Only original scalar lower/upper are finite. Original1366 E rows and RHS are identically zero. Thus no native bound multipliers or nontrivial old equality multipliers are needed. ALL original inequality rows including BOTH consistency signs/frozen units retain individual nonnegative dual variables; all original coordinates retain individual balance equations.",
+      "equations": "Original P: min c.w, A.w<=b, l<=w<=u, E.w=d=0 with E=0. New D: min b.y+U*beta-L*alpha, A.T*y+e_scalar*beta-e_scalar*alpha=-c, (y,beta,alpha)>=0. New equality B=[A.T,+e_scalar,-e_scalar], RHS h=-c, cost q=[b,U,-L]. No inequality matrix. All coefficient/RHS/cost transfers copied or exactly sign-negated; no division, multiplication, endpoint construction or rounding.",
+      "weak_duality": "For any feasible original w and new nonnegative p=(y,beta,alpha), c.w+q.p=y.(b-A.w)+beta*(U-w_scalar)+alpha*(w_scalar-L)>=0. Therefore -q.p is an original lower bound. No actual feasibility, attainment or objective equality is asserted without a certified primal-dual pair.",
+      "return_contract": "Future solver must return status0/success/finite p AND finite equality marginals lambda. Recover ORIGINAL w by a BITWISE copy of scipy eqlin.marginals lambda, without negation, scalar/torque reconstruction, rounding, normalization, clipping or repair. These are backend equality marginals, NOT the new optimizer primal vector. y=p[:m], beta=p[m], alpha=p[m+1] unchanged; original native bound duals0, original zero-E duals0. Scalar upper/lower duals beta/alpha. New lower marginals s correspond to b-A.w, U-w_scalar, w_scalar-L; new upper marginals exactly0.",
+      "kkt_identity": "Using the common stationarity convention cost+B.T*nu+upper-lower=0, new nu=-lambda=-w. New primal balance residual B.p+c is exactly original stationarity. New stationarity q-B.T*w-s=0 identifies original primal slacks, with s>=0. New signed gap q.p+h.nu equals original signed gap c.w+b.y+U*beta-L*alpha because h=-c and nu=-w. Conversely an exact original KKT pair supplies new nu=-w and lower s=[b-A.w,U-w_scalar,w_scalar-L]. This is a coefficient identity, not a computed primal/dual witness or an exact numerical-optimality claim.",
+      "finite_limit": "A numerical equality marginal is an original-coordinate candidate only after independent finite/nonnegative/bitwise and exhaustive gates. New KKT does not substitute for full original KKT due to floating association/residual amplification. No finite-binary64 feasible-set equivalence or universally returned candidate is claimed. The original real domain is retained without552 inward bounds.",
+      "mandatory_checks": "Future new D plus546 plus516 plusFULL490 primal/equality/bound violations,stationarity and absolute gap<=1e-9 inside unchanged1e-7; all original bounds/1366 equalities checked even though algebraically zero. Original546 row duals zero-embed through516 and490 IDs. No native/auxiliary/scalar candidate modification. Exact original unscaled interval eta>0 before490 encoder; primary NEVER mapped.",
+      "new_input": "Changed actual state,trust or ACTUAL primary-derived ceiling requires fresh complete original assembly,valid quotient/box proof and new dual construction/independent proof before LP inside TOTAL45s from parent preparation origin. Saved reference witness ceiling.09895564659603738 remains illustrativeONLY. No old completed proof/assembly calculation repeated.",
+      "future": "No566 numerical algorithm/child/full-path wrapper/sourcefreeze/budget/candidate exists. A future complete bounded method must handle a nonnegative multiplier primal of m+2 dimensions,78791 NONZERO equality balances,and robot candidates from equality marginals,not solver.x. Freeze independent return/actual-state auditor before any solve. Original45s,40GiB,120sparent,24major48LP120maps5dyadics,trust1..1/32 and all guards/gates unchanged.",
+      "audit": "Independent565 imports no producer or optimizer; verifies exact transpose bijection per stored coefficient, both scalar-bound columns/signs/costs, all cost/RHS/domain/row-ID copies and symbolic original-primal/new-dual stationarity and signed-gap coefficient identities. No old547/517 proof, oldfixture, LP, model,root or finite-map replay.",
+      "resources": {
+        "preparation_wall_s": 240,
+        "independent_audit_wall_s": 240,
+        "address_space_GiB": 40,
+        "checks_between_operations": true,
+        "peak_memory_measured": false,
+        "LP_budget_unchanged_s": 45
+      },
+      "performance": "More optimizer primal variables and fewer equality rows than the original inequality count do not establish speed,conditioning,feasibility or deadline success.",
+      "physical_admission": false,
+      "new_candidate": false
+    },
+    "systems": {
+      "primary": {
+        "source_shape": [
+          402487,
+          78791
+        ],
+        "source_nonzeros": 2049085,
+        "source_equality_shape": [
+          1366,
+          78791
+        ],
+        "dual_primal_variables": 402489,
+        "dual_equality_shape": [
+          78791,
+          402489
+        ],
+        "dual_equality_nonzeros": 2049087,
+        "dual_inequality_rows": 0,
+        "nonnegative_row_multiplier_variables": 402487,
+        "scalar_upper_multiplier_column": 402487,
+        "scalar_lower_multiplier_column": 402488,
+        "original_coordinate_equality_marginal_slots": 78791,
+        "original_scalar_slot": 78790,
+        "original_native_bound_multiplier_variables": 0,
+        "zero_old_equality_multiplier_variables": 0,
+        "source_coefficients_rounded": 0,
+        "new_transpose_coefficient_copies": 2049085,
+        "new_bound_column_coefficients": 2
+      },
+      "witness": {
+        "source_shape": [
+          568283,
+          78791
+        ],
+        "source_nonzeros": 2236454,
+        "source_equality_shape": [
+          1366,
+          78791
+        ],
+        "dual_primal_variables": 568285,
+        "dual_equality_shape": [
+          78791,
+          568285
+        ],
+        "dual_equality_nonzeros": 2236456,
+        "dual_inequality_rows": 0,
+        "nonnegative_row_multiplier_variables": 568283,
+        "scalar_upper_multiplier_column": 568283,
+        "scalar_lower_multiplier_column": 568284,
+        "original_coordinate_equality_marginal_slots": 78791,
+        "original_scalar_slot": 78790,
+        "original_native_bound_multiplier_variables": 0,
+        "zero_old_equality_multiplier_variables": 0,
+        "source_coefficients_rounded": 0,
+        "new_transpose_coefficient_copies": 2236454,
+        "new_bound_column_coefficients": 2
+      }
+    },
+    "elapsed_s": 1.1590580570045859,
+    "lp_calls": 0,
+    "small_examples": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physics_ticks": 0,
+    "new_solver": false,
+    "new_candidate": false,
+    "physical_admission": false,
+    "old_calculations_repeated": false
+  },
+  "independent_audit": {
+    "utc": "2026-10-19T06:47:25.418306+00:00",
+    "passed": true,
+    "arithmetic_pass": true,
+    "physical_pass": false,
+    "preparation_only": true,
+    "systems": {
+      "primary": {
+        "passed": true,
+        "dual_shape": [
+          78791,
+          402489
+        ],
+        "dual_nonzeros": 2049087,
+        "original_stationarity_coefficient_identities": 2049085,
+        "original_slack_coefficient_identities": 2049085,
+        "scalar_bound_column_identities": 4,
+        "signed_gap_coordinate_coefficient_identities": 78791,
+        "signed_gap_multiplier_coefficient_identities": 402489,
+        "retained_copy_error_exact": 0,
+        "original_primal_from_equality_marginals": true,
+        "optimizer_primal_is_multiplier_vector": true,
+        "original_domain_unchanged": true,
+        "candidate_evaluated": false,
+        "inherited_completed_arithmetic": true,
+        "summary_reconstructed_from_frozen_control_flow_and_saved_dimensions": true,
+        "original_serialized_summary_available": false
+      },
+      "witness": {
+        "passed": true,
+        "dual_shape": [
+          78791,
+          568285
+        ],
+        "dual_nonzeros": 2236456,
+        "original_stationarity_coefficient_identities": 2236454,
+        "original_slack_coefficient_identities": 2236454,
+        "scalar_bound_column_identities": 4,
+        "signed_gap_coordinate_coefficient_identities": 78791,
+        "signed_gap_multiplier_coefficient_identities": 568285,
+        "retained_copy_error_exact": 0,
+        "original_primal_from_equality_marginals": true,
+        "optimizer_primal_is_multiplier_vector": true,
+        "original_domain_unchanged": true,
+        "candidate_evaluated": false
+      }
+    },
+    "staged_witness_elapsed_s": 1.9087024619802833,
+    "original_monotonic_elapsed_s": null,
+    "original_log_filesystem_interval_s": 1.633025397,
+    "remaining_stage_wall_limit_s": 120,
+    "original_wall_limit_s": 240,
+    "source_proofs_inherited": [
+      "517",
+      "547"
+    ],
+    "old_proofs_repeated": false,
+    "producer_imported": false,
+    "optimizer_imported": false,
+    "execution_recovery": true,
+    "recovery_scope": "Original primary arithmetic completed once, then JSON print failed on numpy.int32. Preserve original source/log/actual1/two arrays. V2 reconstructs saved-primary summary from control-flow evidence and performs ONLY previously unexecuted witness arithmetic. No completed coefficient checks repeated.",
+    "completed_scientific_calculations_repeated": false,
+    "lp_calls": 0,
+    "small_examples": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physics_ticks": 0,
+    "new_candidate": false,
+    "actual_state_audit": false,
+    "limitation": "Coefficient identities and original-domain provenance only. No primal-dual point or performance result. Primary original serialized summary/timer unavailable; completion evidenced by preserved arrays and return-before-print traceback. Future w must be BITWISE backend equality-marginal copy with independent full D/546/516/490 KKT and all physical gates."
+  },
+  "local_verification": {
+    "utc": "2026-10-19T06:50:11.456927+00:00",
+    "all_hashes_verified": true,
+    "manifests": [
+      {
+        "folder": "dual_balance_preparation_564",
+        "entries": 13,
+        "manifest_sha256": "b0f300bec437bcb81a92869f7528104da7027a17d7a4472374d66192dcc4476c",
+        "passed": true
+      },
+      {
+        "folder": "dual_balance_audit_565",
+        "entries": 6,
+        "manifest_sha256": "5946a0bf8e9166a5df64ae737751c298ae83183cba1ae4af8b87965e20616baa",
+        "passed": true
+      }
+    ],
+    "total_entries": 19,
+    "scientific_arithmetic_replayed": false,
+    "visual_review": false,
+    "new_report": false
+  },
+  "saved_scope": {
+    "utc": "2026-10-19T06:47:59.054981+00:00",
+    "scope": "Saved-only scope index; no matrix, proof, optimizer or model replay.",
+    "preparation_only": true,
+    "systems": {
+      "primary": {
+        "source_shape": [
+          402487,
+          78791
+        ],
+        "source_nonzeros": 2049085,
+        "source_equality_shape": [
+          1366,
+          78791
+        ],
+        "dual_primal_variables": 402489,
+        "dual_equality_shape": [
+          78791,
+          402489
+        ],
+        "dual_equality_nonzeros": 2049087,
+        "dual_inequality_rows": 0,
+        "nonnegative_row_multiplier_variables": 402487,
+        "scalar_upper_multiplier_column": 402487,
+        "scalar_lower_multiplier_column": 402488,
+        "original_coordinate_equality_marginal_slots": 78791,
+        "original_scalar_slot": 78790,
+        "original_native_bound_multiplier_variables": 0,
+        "zero_old_equality_multiplier_variables": 0,
+        "source_coefficients_rounded": 0,
+        "new_transpose_coefficient_copies": 2049085,
+        "new_bound_column_coefficients": 2
+      },
+      "witness": {
+        "source_shape": [
+          568283,
+          78791
+        ],
+        "source_nonzeros": 2236454,
+        "source_equality_shape": [
+          1366,
+          78791
+        ],
+        "dual_primal_variables": 568285,
+        "dual_equality_shape": [
+          78791,
+          568285
+        ],
+        "dual_equality_nonzeros": 2236456,
+        "dual_inequality_rows": 0,
+        "nonnegative_row_multiplier_variables": 568283,
+        "scalar_upper_multiplier_column": 568283,
+        "scalar_lower_multiplier_column": 568284,
+        "original_coordinate_equality_marginal_slots": 78791,
+        "original_scalar_slot": 78790,
+        "original_native_bound_multiplier_variables": 0,
+        "zero_old_equality_multiplier_variables": 0,
+        "source_coefficients_rounded": 0,
+        "new_transpose_coefficient_copies": 2236454,
+        "new_bound_column_coefficients": 2
+      }
+    },
+    "audit_systems": {
+      "primary": {
+        "passed": true,
+        "dual_shape": [
+          78791,
+          402489
+        ],
+        "dual_nonzeros": 2049087,
+        "original_stationarity_coefficient_identities": 2049085,
+        "original_slack_coefficient_identities": 2049085,
+        "scalar_bound_column_identities": 4,
+        "signed_gap_coordinate_coefficient_identities": 78791,
+        "signed_gap_multiplier_coefficient_identities": 402489,
+        "retained_copy_error_exact": 0,
+        "original_primal_from_equality_marginals": true,
+        "optimizer_primal_is_multiplier_vector": true,
+        "original_domain_unchanged": true,
+        "candidate_evaluated": false,
+        "inherited_completed_arithmetic": true,
+        "summary_reconstructed_from_frozen_control_flow_and_saved_dimensions": true,
+        "original_serialized_summary_available": false
+      },
+      "witness": {
+        "passed": true,
+        "dual_shape": [
+          78791,
+          568285
+        ],
+        "dual_nonzeros": 2236456,
+        "original_stationarity_coefficient_identities": 2236454,
+        "original_slack_coefficient_identities": 2236454,
+        "scalar_bound_column_identities": 4,
+        "signed_gap_coordinate_coefficient_identities": 78791,
+        "signed_gap_multiplier_coefficient_identities": 568285,
+        "retained_copy_error_exact": 0,
+        "original_primal_from_equality_marginals": true,
+        "optimizer_primal_is_multiplier_vector": true,
+        "original_domain_unchanged": true,
+        "candidate_evaluated": false
+      }
+    },
+    "new_transpose_coefficient_copies": 4285539,
+    "new_stationarity_coefficient_identities": 4285539,
+    "new_slack_coefficient_identities": 4285539,
+    "new_scalar_bound_column_identities": 8,
+    "new_signed_gap_coordinate_identities": 157582,
+    "new_signed_gap_multiplier_identities": 970774,
+    "lp_calls": 0,
+    "small_examples": 0,
+    "metric_calculations": 0,
+    "linear_system_solves": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physics_ticks": 0,
+    "new_numerical_algorithm": false,
+    "new_candidate": false,
+    "physical_admission": false,
+    "original_coordinate_equality_marginal_slots_per_system": 78791,
+    "original_scalar_slot": 78790,
+    "original_domain_unchanged": true,
+    "original_primal_is_new_backend_equality_marginal": true,
+    "original_primal_is_new_optimizer_primal": false,
+    "performance_claim": false
+  },
+  "old_scientific_calculations_repeated": false,
+  "execution_recovery": true,
+  "recovery_scope": "Original primary arithmetic completed once, then JSON print failed on numpy.int32. Preserve original source/log/actual1/two arrays. V2 reconstructs saved-primary summary from control-flow evidence and performs ONLY previously unexecuted witness arithmetic. No completed coefficient checks repeated.",
+  "completed_scientific_calculations_repeated": false,
+  "new_complete_numerical_algorithm": false,
+  "new_solver_exists": false,
+  "new_complete_path": false,
+  "lp_calls": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}

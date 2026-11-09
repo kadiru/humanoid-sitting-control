@@ -1,0 +1,127 @@
+{
+  "utc": "2026-10-19T06:47:59.054981+00:00",
+  "scope": "Saved-only scope index; no matrix, proof, optimizer or model replay.",
+  "preparation_only": true,
+  "systems": {
+    "primary": {
+      "source_shape": [
+        402487,
+        78791
+      ],
+      "source_nonzeros": 2049085,
+      "source_equality_shape": [
+        1366,
+        78791
+      ],
+      "dual_primal_variables": 402489,
+      "dual_equality_shape": [
+        78791,
+        402489
+      ],
+      "dual_equality_nonzeros": 2049087,
+      "dual_inequality_rows": 0,
+      "nonnegative_row_multiplier_variables": 402487,
+      "scalar_upper_multiplier_column": 402487,
+      "scalar_lower_multiplier_column": 402488,
+      "original_coordinate_equality_marginal_slots": 78791,
+      "original_scalar_slot": 78790,
+      "original_native_bound_multiplier_variables": 0,
+      "zero_old_equality_multiplier_variables": 0,
+      "source_coefficients_rounded": 0,
+      "new_transpose_coefficient_copies": 2049085,
+      "new_bound_column_coefficients": 2
+    },
+    "witness": {
+      "source_shape": [
+        568283,
+        78791
+      ],
+      "source_nonzeros": 2236454,
+      "source_equality_shape": [
+        1366,
+        78791
+      ],
+      "dual_primal_variables": 568285,
+      "dual_equality_shape": [
+        78791,
+        568285
+      ],
+      "dual_equality_nonzeros": 2236456,
+      "dual_inequality_rows": 0,
+      "nonnegative_row_multiplier_variables": 568283,
+      "scalar_upper_multiplier_column": 568283,
+      "scalar_lower_multiplier_column": 568284,
+      "original_coordinate_equality_marginal_slots": 78791,
+      "original_scalar_slot": 78790,
+      "original_native_bound_multiplier_variables": 0,
+      "zero_old_equality_multiplier_variables": 0,
+      "source_coefficients_rounded": 0,
+      "new_transpose_coefficient_copies": 2236454,
+      "new_bound_column_coefficients": 2
+    }
+  },
+  "audit_systems": {
+    "primary": {
+      "passed": true,
+      "dual_shape": [
+        78791,
+        402489
+      ],
+      "dual_nonzeros": 2049087,
+      "original_stationarity_coefficient_identities": 2049085,
+      "original_slack_coefficient_identities": 2049085,
+      "scalar_bound_column_identities": 4,
+      "signed_gap_coordinate_coefficient_identities": 78791,
+      "signed_gap_multiplier_coefficient_identities": 402489,
+      "retained_copy_error_exact": 0,
+      "original_primal_from_equality_marginals": true,
+      "optimizer_primal_is_multiplier_vector": true,
+      "original_domain_unchanged": true,
+      "candidate_evaluated": false,
+      "inherited_completed_arithmetic": true,
+      "summary_reconstructed_from_frozen_control_flow_and_saved_dimensions": true,
+      "original_serialized_summary_available": false
+    },
+    "witness": {
+      "passed": true,
+      "dual_shape": [
+        78791,
+        568285
+      ],
+      "dual_nonzeros": 2236456,
+      "original_stationarity_coefficient_identities": 2236454,
+      "original_slack_coefficient_identities": 2236454,
+      "scalar_bound_column_identities": 4,
+      "signed_gap_coordinate_coefficient_identities": 78791,
+      "signed_gap_multiplier_coefficient_identities": 568285,
+      "retained_copy_error_exact": 0,
+      "original_primal_from_equality_marginals": true,
+      "optimizer_primal_is_multiplier_vector": true,
+      "original_domain_unchanged": true,
+      "candidate_evaluated": false
+    }
+  },
+  "new_transpose_coefficient_copies": 4285539,
+  "new_stationarity_coefficient_identities": 4285539,
+  "new_slack_coefficient_identities": 4285539,
+  "new_scalar_bound_column_identities": 8,
+  "new_signed_gap_coordinate_identities": 157582,
+  "new_signed_gap_multiplier_identities": 970774,
+  "lp_calls": 0,
+  "small_examples": 0,
+  "metric_calculations": 0,
+  "linear_system_solves": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "new_numerical_algorithm": false,
+  "new_candidate": false,
+  "physical_admission": false,
+  "original_coordinate_equality_marginal_slots_per_system": 78791,
+  "original_scalar_slot": 78790,
+  "original_domain_unchanged": true,
+  "original_primal_is_new_backend_equality_marginal": true,
+  "original_primal_is_new_optimizer_primal": false,
+  "performance_claim": false
+}
