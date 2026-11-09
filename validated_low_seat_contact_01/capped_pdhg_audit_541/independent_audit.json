@@ -1,0 +1,106 @@
+{
+  "utc": "2026-10-19T02:41:38.223406+00:00",
+  "passed": true,
+  "scope": "Independent exact diagonal norm, saved PDHG/proximal-gap and known-optimum audit. No solver import.",
+  "systems": {
+    "primary": {
+      "rows": 452522,
+      "columns": 78790,
+      "nonzeros": 1994752,
+      "exact_row_product_max": "1/2",
+      "exact_column_product_max": "1180582097891188166229/2361183241434822606848",
+      "exact_operator_norm_squared_bound": "1/4",
+      "all_positive_finite": true,
+      "all_minimal_dyadic_step_bounds": true
+    },
+    "witness": {
+      "rows": 618101,
+      "columns": 78790,
+      "nonzeros": 2214640,
+      "exact_row_product_max": "1/2",
+      "exact_column_product_max": "73786508377601248907/147573952589676412928",
+      "exact_operator_norm_squared_bound": "1/4",
+      "all_positive_finite": true,
+      "all_minimal_dyadic_step_bounds": true
+    }
+  },
+  "tests": {
+    "asymmetric_sum_primary": {
+      "exact_known_primal_dual_optimum": true,
+      "known_objective": 2.5,
+      "saved_PDHG_transitions_verified": 635,
+      "maximum_transition_association_error": 0.0,
+      "maximum_exact_saved_proximal_gap": 2.961579349467127e-16,
+      "exact_proximal_gap_scope": "Primal-dual objective gap bounds saved local proximal error; finite fixed screens are not a summable-error convergence theorem.",
+      "primal": 0.0,
+      "dual": 6.747131742201873e-10,
+      "gap": 3.5655656205335617e-10,
+      "objective_error": 1.0312701803627533e-09,
+      "scalar_rounding_record": {
+        "exact_canonical_scalar": "11258999073070667/4503599627370496",
+        "coupled_owner": 0,
+        "once_rounded_canonical_scalar": 2.50000000103127,
+        "rounding_error": "1/4503599627370496",
+        "exact_lower_slack": "1/4503599627370496",
+        "exact_upper_slack": "1688849859102829/1125899906842624",
+        "native_coordinates_unmodified": true,
+        "exact_real_feasible_scalar": true
+      },
+      "metrics": {
+        "rows": 4,
+        "columns": 2,
+        "nonzeros": 5,
+        "exact_row_product_max": "1/2",
+        "exact_column_product_max": "1/2",
+        "exact_operator_norm_squared_bound": "1/4",
+        "all_positive_finite": true,
+        "all_minimal_dyadic_step_bounds": true
+      },
+      "independent_LP_calls": 0
+    },
+    "translated_clearance": {
+      "exact_known_primal_dual_optimum": true,
+      "known_objective": -1.5,
+      "saved_PDHG_transitions_verified": 290,
+      "maximum_transition_association_error": 0.0,
+      "maximum_exact_saved_proximal_gap": 1.761465921177588e-16,
+      "exact_proximal_gap_scope": "Primal-dual objective gap bounds saved local proximal error; finite fixed screens are not a summable-error convergence theorem.",
+      "primal": 0.0,
+      "dual": 6.487610448857595e-10,
+      "gap": 7.549354474889469e-10,
+      "objective_error": 1.0793159699318267e-09,
+      "scalar_rounding_record": {
+        "exact_canonical_scalar": "-6755399436194937/4503599627370496",
+        "coupled_owner": 0,
+        "once_rounded_canonical_scalar": -1.499999998920684,
+        "rounding_error": "0",
+        "exact_lower_slack": "0",
+        "exact_upper_slack": "6755399436194937/4503599627370496",
+        "native_coordinates_unmodified": true,
+        "exact_real_feasible_scalar": true
+      },
+      "metrics": {
+        "rows": 5,
+        "columns": 2,
+        "nonzeros": 6,
+        "exact_row_product_max": "1/2",
+        "exact_column_product_max": "3/8",
+        "exact_operator_norm_squared_bound": "1/4",
+        "all_positive_finite": true,
+        "all_minimal_dyadic_step_bounds": true
+      },
+      "independent_LP_calls": 0
+    }
+  },
+  "new_small_LP_calls_in_producer": 2,
+  "independent_LP_calls": 0,
+  "full_size_LP_calls": 0,
+  "all_saved_small_transitions_verified": true,
+  "production_imported": false,
+  "prior538539_proof_inherited_without_repeat": true,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "new_whole_path_wrapper": false,
+  "physical_admission": false
+}
