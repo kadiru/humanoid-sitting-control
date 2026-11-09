@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-19T00:12:38.640639+00:00",
+  "passed": true,
+  "scope": "Exact support/copy proof and independent floating residual audit of two NEW algorithm-unused weighted Gram operator examples. No LP/Schur solve, no old mechanics inverse/proof/example repeated.",
+  "systems": {
+    "primary": {
+      "coefficient_copy_error": 0,
+      "row_support_proof": true,
+      "all_original_rows_retained": 408842,
+      "all_original_nonzeros_retained": 2147925,
+      "local_blocks": 1365,
+      "local_columns": 23205,
+      "separator_columns": 33746,
+      "errors": {
+        "factor": 3.739805393087597e-16,
+        "local_homogeneous": 5.273559366969494e-16,
+        "schur_action": 1.9043873838200834e-18,
+        "local_rhs": 5.551115123125783e-16,
+        "condensed_rhs": 0.0,
+        "recovery_local": 6.106226635438361e-16,
+        "recovery_separator": 1.2919364011835447e-14
+      },
+      "full_normal_or_schur_matrix_assembled": false,
+      "local_factorization_or_solve_repeated": false
+    },
+    "witness": {
+      "coefficient_copy_error": 0,
+      "row_support_proof": true,
+      "all_original_rows_retained": 577755,
+      "all_original_nonzeros_retained": 2697204,
+      "local_blocks": 1365,
+      "local_columns": 23205,
+      "separator_columns": 33746,
+      "errors": {
+        "factor": 2.742552569426658e-16,
+        "local_homogeneous": 1.4432899320127035e-15,
+        "schur_action": 1.5868873921917774e-18,
+        "local_rhs": 7.771561172376096e-16,
+        "condensed_rhs": 0.0,
+        "recovery_local": 1.5543122344752192e-15,
+        "recovery_separator": 1.5437240551241612e-14
+      },
+      "full_normal_or_schur_matrix_assembled": false,
+      "local_factorization_or_solve_repeated": false
+    }
+  },
+  "exact_structure_theorem": "No row touches two local blocks, so every off-diagonal local Gram block is structurally zero for arbitrary diagonal weights. Positive w,d imply SPD; the standard block factorization and Schur minimization identities follow algebraically. Numerical factors only checked for the saved example weights.",
+  "finite_precision_limit": "Residual audit is not a directed-rounding certificate, uniform conditioning guarantee or proof for future changing weights.1e-11 is algebra-only; unchanged original1e-7 and physical gates are not replaced.",
+  "lp_calls": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "new_actual_path": false,
+  "physical_admission": false
+}
