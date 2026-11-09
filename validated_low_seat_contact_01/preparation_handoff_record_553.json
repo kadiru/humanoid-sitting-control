@@ -1,0 +1,405 @@
+{
+  "utc": "2026-10-19T04:45:59.656575+00:00",
+  "scope": "Preserve552/553 finite-domain preparation only; sealed551 and actual path remain unchanged.",
+  "preparation_only": true,
+  "new_closure": false,
+  "last_sealed_closure": "/data/humanoid-sitting-perception/low_seat_contact_01/closure_record_551.json",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_551.json",
+      "files": 12258,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_551.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 12317,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/float_hull_evidence_preservation_553.json",
+  "manifest_sha256": "e8e13776585ee1d5704a47f2f2df1c449d45ed974b07f4dcb28e1af6f7a6c545",
+  "workers": [],
+  "actual_exits": {
+    "float_hull_compile_exit_552.json": {
+      "actual_exit": 0,
+      "observation": "6f310a",
+      "source_copy_observation": "5ed83b",
+      "utc": "2026-10-19T04:37:10.591198+00:00",
+      "scope": "four new552/553 sources compiled; no symbolic or numerical calculation executed"
+    },
+    "float_hull_freeze_exit_552.json": {
+      "actual_exit": 0,
+      "observation": "b947bb",
+      "session_id": 79853,
+      "utc": "2026-10-19T04:38:08.117803+00:00"
+    },
+    "float_hull_preparation_exit_552.json": {
+      "actual_exit_code": 0,
+      "observed_tool_chunk": "abe5e7",
+      "session_id": 60519,
+      "observed_at_utc": "2026-10-19T04:41:50.444867+00:00",
+      "scope": "Preparation552 completed once; no LP/model/root/map/physics. Actual process exit observed before audit dependency.",
+      "actual_exit": 0,
+      "schema_correction": "Added required actual_exit alias. Original actual process outcome remains0; original metadata preserved separately."
+    },
+    "float_hull_audit_exit_553.json": {
+      "actual_exit": 0,
+      "observed_tool_chunk": "9ee8ab",
+      "session_id": 27056,
+      "observed_at_utc": "2026-10-19T04:42:55.670372+00:00",
+      "log": "/data/humanoid-sitting-perception/low_seat_contact_01/float_hull_audit_completed_553.log",
+      "metadata_prerequisite_recovery": true,
+      "scientific_arithmetic_executions": 1,
+      "original_failure": "/data/humanoid-sitting-perception/low_seat_contact_01/float_hull_audit_original_exit_553.json"
+    },
+    "float_hull_index_exit_553.json": {
+      "actual_exit": 0,
+      "observed_tool_chunk": "fd725b",
+      "observed_at_utc": "2026-10-19T04:43:23.157437+00:00",
+      "saved_only": true
+    },
+    "float_hull_preservation_compile_exit_553.json": {
+      "actual_exit": 0,
+      "observed_tool_chunk": "5c264f",
+      "observed_at_utc": "2026-10-19T04:43:12.673736+00:00",
+      "sources": [
+        "index_low_seat_float_hull_553.py",
+        "record_low_seat_float_hull_preparation_553.py"
+      ]
+    }
+  },
+  "preparation": {
+    "utc": "2026-10-19T04:38:18.566766+00:00",
+    "passed": true,
+    "preparation_only": true,
+    "specification": {
+      "scope": "One new finite-domain structural reduction from saved546 exact endpoints, not another bound propagation pass or solver retry.",
+      "theorem": "Let B=[L,U] be saved546 exact rational unconditional endpoints. Define l64=min{finite binary64 v:v>=L},u64=max{finite binary64 v:v<=U}. Replace ALL singleton rows by coordinate bounds[l64,u64],retain all other546 rows,cost,E,RHS. For finite binary64 vectors,original516 feasibility iff new feasibility,using inherited517/547 proofs. Over real vectors the new polytope is an inner subset,NOT generally equal to the original real LP. No statement about equality of tolerance-feasible sets,real optima or original dual certificates.",
+      "derivation": "For |q|=n/d>0 find e=floor(log2(n/d)) by integer bit lengths and exact comparison;k=max(-1074,e-52). Divide n/d by2^k using integers; choose floor or ceil quotient,reverse direction for negative q. Encode the integer significand and exponent directly into IEEE binary64 bits; carry at2^53 exactly. Zero canonical+0 but both signed-zero candidate encodings remain mathematically feasible. No nearest-float guess,nextafter,bisection or candidate adjustment.",
+      "reuse": "Load immutable546 endpoints/owners and reduced matrix plus547 proof byhash. NEVER reconstruct endpoints,tighten/propagate bounds,rerun mixed-row supports or517/547 proof. Remove only exact singleton rows;constants/mixed rows unchanged. All78791 coordinates retained. Both consistency signs/frozen units and all original criteria remain imposed through explicit mixed rows and source-implied bounds.",
+      "audit": "Independent553 imports no producer. It uses adjacent IEEE bit encodings to prove lower predecessor<L<=lower64 and upper64<=U<upper successor for EVERY endpoint. Exact positive-conic bound support proves every removed singleton row. It checks original finite bounds,new domain/row IDs/CSR/RHS/cost/E copies and inheritedproof hashes. No LP or synthetic fixture.",
+      "limits": "No robot direction,scalar/torque lift,finite path encoding,model/root/map/physics. No universal float lift: if l64>u64 the interval has no finite binary64 member and preparation rejects; no old1/3fixture repeated. No speed/conditioning/feasibility gain from storage counts. No numerical residual amplification or original KKT guarantee.",
+      "future": "All returned native+scalar solver coordinates must stay bitwise unchanged. FULL new/546/516/FULL490 primal/equality/bound/KKT gates remain. Rounded bound multipliers would need an explicit original-premise dual lift plus full original stationarity/gap; a stronger real bound is NOT automatically an original-real dual certificate. Any changedstate/trust/ACTUALceiling needs fresh valid assembly/proofs;no illustrative witnessceiling reuse. No complete554 numerical algorithm/wrapper/budget exists.",
+      "budgets": {
+        "preparation_wall_s": 240,
+        "independent_audit_wall_s": 240,
+        "address_space_GiB": 40,
+        "peak_memory_measured": false,
+        "checks_between_operations": true,
+        "LP_budget_unchanged_s": 45
+      },
+      "references": [
+        "https://docs.python.org/3.12/library/struct.html#format-characters",
+        "https://docs.python.org/3.12/library/stdtypes.html#float.as_integer_ratio"
+      ],
+      "physical_admission": false
+    },
+    "systems": {
+      "primary": {
+        "source_shape": [
+          402487,
+          78791
+        ],
+        "source_nonzeros": 2049085,
+        "new_shape": [
+          205586,
+          78791
+        ],
+        "new_nonzeros": 1852184,
+        "singleton_rows_absorbed": 196901,
+        "constants_retained": 0,
+        "mixed_rows_retained": 205586,
+        "endpoint_encodings": 157582,
+        "strict_inward_endpoint_changes": 155984,
+        "exact_endpoints_unchanged": 1598,
+        "maximum_exact_inward_shift": "8715389614789009/4907128838989301969839544336384",
+        "largest_shift_fraction_bits": 127,
+        "native_variables_removed": 0,
+        "scalar_variables_removed": 0,
+        "finite_binary64_feasible_set_equal": true,
+        "real_polytope_inner_subset": true,
+        "real_polytope_equivalence_claimed": false,
+        "tolerance_feasible_set_equivalence_claimed": false,
+        "source_endpoint_proof_inherited": true,
+        "new_endpoint_construction": false,
+        "new_mixed_support_tests": 0,
+        "new_matrix_coefficients": false,
+        "new_candidate": false
+      },
+      "witness": {
+        "source_shape": [
+          568283,
+          78791
+        ],
+        "source_nonzeros": 2236454,
+        "new_shape": [
+          371383,
+          78791
+        ],
+        "new_nonzeros": 2039554,
+        "singleton_rows_absorbed": 196900,
+        "constants_retained": 0,
+        "mixed_rows_retained": 371383,
+        "endpoint_encodings": 157582,
+        "strict_inward_endpoint_changes": 155983,
+        "exact_endpoints_unchanged": 1599,
+        "maximum_exact_inward_shift": "8715389614789009/4907128838989301969839544336384",
+        "largest_shift_fraction_bits": 127,
+        "native_variables_removed": 0,
+        "scalar_variables_removed": 0,
+        "finite_binary64_feasible_set_equal": true,
+        "real_polytope_inner_subset": true,
+        "real_polytope_equivalence_claimed": false,
+        "tolerance_feasible_set_equivalence_claimed": false,
+        "source_endpoint_proof_inherited": true,
+        "new_endpoint_construction": false,
+        "new_mixed_support_tests": 0,
+        "new_matrix_coefficients": false,
+        "new_candidate": false
+      }
+    },
+    "elapsed_s": 3.697453725966625,
+    "lp_calls": 0,
+    "small_examples": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physics_ticks": 0,
+    "new_solver": false,
+    "new_candidate": false,
+    "physical_admission": false,
+    "old_calculations_repeated": false
+  },
+  "independent_audit": {
+    "utc": "2026-10-19T04:42:29.625687+00:00",
+    "passed": true,
+    "scope": "Independent adjacent-binary64 and exact unary-conic audit of552. No production import/optimizer.",
+    "systems": {
+      "primary": {
+        "endpoint_adjacency_certificates": 157582,
+        "singleton_positive_conic_coefficients": 196901,
+        "strict_endpoint_changes": 155984,
+        "maximum_exact_shift": "8715389614789009/4907128838989301969839544336384",
+        "new_shape": [
+          205586,
+          78791
+        ],
+        "new_nonzeros": 1852184,
+        "CSR_RHS_cost_equality_copy_error": 0,
+        "finite_binary64_feasible_set_equal": true,
+        "real_feasible_set_inner_subset": true,
+        "original_real_LP_equivalence_claimed": false,
+        "old_endpoint_and_mixed_proofs_repeated": false
+      },
+      "witness": {
+        "endpoint_adjacency_certificates": 157582,
+        "singleton_positive_conic_coefficients": 196900,
+        "strict_endpoint_changes": 155983,
+        "maximum_exact_shift": "8715389614789009/4907128838989301969839544336384",
+        "new_shape": [
+          371383,
+          78791
+        ],
+        "new_nonzeros": 2039554,
+        "CSR_RHS_cost_equality_copy_error": 0,
+        "finite_binary64_feasible_set_equal": true,
+        "real_feasible_set_inner_subset": true,
+        "original_real_LP_equivalence_claimed": false,
+        "old_endpoint_and_mixed_proofs_repeated": false
+      }
+    },
+    "elapsed_s": 5.1528381740208715,
+    "lp_calls": 0,
+    "small_examples": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physical_admission": false,
+    "preparation_only": true,
+    "no_producer_import": true
+  },
+  "local_verification": {
+    "utc": "2026-10-19T04:43:34.679873+00:00",
+    "all_hashes_verified": true,
+    "original_manifests": [
+      {
+        "folder": "float_hull_preparation_552",
+        "entries": 23,
+        "manifest_sha256": "3d61d2e0a7e1b9756bd5763057b6d42d4d54bd6abf468a0856247f2fe021108d",
+        "verified": true
+      },
+      {
+        "folder": "float_hull_audit_553",
+        "entries": 5,
+        "manifest_sha256": "735b4ba3693058179676cab0e83522722475f7792de2651522328948aed9a55b",
+        "verified": true
+      }
+    ],
+    "total_entries": 28,
+    "scope": "Local verification of original552/553 manifests only; no arithmetic replay or report/video rerender."
+  },
+  "saved_scope": {
+    "utc": "2026-10-19T04:43:13.170083+00:00",
+    "scope": "Saved-only552/553 finite-domain scope; no endpoint, unary or arithmetic replay.",
+    "systems": {
+      "primary": {
+        "source_shape": [
+          402487,
+          78791
+        ],
+        "source_nonzeros": 2049085,
+        "new_shape": [
+          205586,
+          78791
+        ],
+        "new_nonzeros": 1852184,
+        "singleton_rows_absorbed": 196901,
+        "constants_retained": 0,
+        "mixed_rows_retained": 205586,
+        "endpoint_encodings": 157582,
+        "strict_inward_endpoint_changes": 155984,
+        "exact_endpoints_unchanged": 1598,
+        "maximum_exact_inward_shift": "8715389614789009/4907128838989301969839544336384",
+        "largest_shift_fraction_bits": 127,
+        "native_variables_removed": 0,
+        "scalar_variables_removed": 0,
+        "finite_binary64_feasible_set_equal": true,
+        "real_polytope_inner_subset": true,
+        "real_polytope_equivalence_claimed": false,
+        "tolerance_feasible_set_equivalence_claimed": false,
+        "source_endpoint_proof_inherited": true,
+        "new_endpoint_construction": false,
+        "new_mixed_support_tests": 0,
+        "new_matrix_coefficients": false,
+        "new_candidate": false
+      },
+      "witness": {
+        "source_shape": [
+          568283,
+          78791
+        ],
+        "source_nonzeros": 2236454,
+        "new_shape": [
+          371383,
+          78791
+        ],
+        "new_nonzeros": 2039554,
+        "singleton_rows_absorbed": 196900,
+        "constants_retained": 0,
+        "mixed_rows_retained": 371383,
+        "endpoint_encodings": 157582,
+        "strict_inward_endpoint_changes": 155983,
+        "exact_endpoints_unchanged": 1599,
+        "maximum_exact_inward_shift": "8715389614789009/4907128838989301969839544336384",
+        "largest_shift_fraction_bits": 127,
+        "native_variables_removed": 0,
+        "scalar_variables_removed": 0,
+        "finite_binary64_feasible_set_equal": true,
+        "real_polytope_inner_subset": true,
+        "real_polytope_equivalence_claimed": false,
+        "tolerance_feasible_set_equivalence_claimed": false,
+        "source_endpoint_proof_inherited": true,
+        "new_endpoint_construction": false,
+        "new_mixed_support_tests": 0,
+        "new_matrix_coefficients": false,
+        "new_candidate": false
+      }
+    },
+    "audit_systems": {
+      "primary": {
+        "endpoint_adjacency_certificates": 157582,
+        "singleton_positive_conic_coefficients": 196901,
+        "strict_endpoint_changes": 155984,
+        "maximum_exact_shift": "8715389614789009/4907128838989301969839544336384",
+        "new_shape": [
+          205586,
+          78791
+        ],
+        "new_nonzeros": 1852184,
+        "CSR_RHS_cost_equality_copy_error": 0,
+        "finite_binary64_feasible_set_equal": true,
+        "real_feasible_set_inner_subset": true,
+        "original_real_LP_equivalence_claimed": false,
+        "old_endpoint_and_mixed_proofs_repeated": false
+      },
+      "witness": {
+        "endpoint_adjacency_certificates": 157582,
+        "singleton_positive_conic_coefficients": 196900,
+        "strict_endpoint_changes": 155983,
+        "maximum_exact_shift": "8715389614789009/4907128838989301969839544336384",
+        "new_shape": [
+          371383,
+          78791
+        ],
+        "new_nonzeros": 2039554,
+        "CSR_RHS_cost_equality_copy_error": 0,
+        "finite_binary64_feasible_set_equal": true,
+        "real_feasible_set_inner_subset": true,
+        "original_real_LP_equivalence_claimed": false,
+        "old_endpoint_and_mixed_proofs_repeated": false
+      }
+    },
+    "new_finite_domain_systems": 2,
+    "new_endpoint_encodings": 315164,
+    "new_strict_endpoint_changes": 311967,
+    "new_singleton_rows_absorbed": 393801,
+    "new_adjacency_certificates": 315164,
+    "new_unary_conic_coefficients": 393801,
+    "native_variables_removed": 0,
+    "scalar_variables_removed": 0,
+    "original_binary64_feasible_set_equal": true,
+    "real_LP_equivalence_claimed": false,
+    "tolerance_feasible_set_equivalence_claimed": false,
+    "new_mixed_support_tests": 0,
+    "old_endpoint_construction_repeated": false,
+    "old_scientific_calculations_repeated": false,
+    "lp_calls": 0,
+    "small_examples": 0,
+    "linear_solves": 0,
+    "gram_factors": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "new_solver": false,
+    "new_whole_path_wrapper": false,
+    "new_robot_candidate": false,
+    "new_actual_path": false,
+    "physical_admission": false,
+    "task_complete": false,
+    "limits": "New real feasible set is an inward subset; only exact finite-binary64 feasible sets coincide. Numerical tolerance sets and real LP optima/dual certificates need not coincide. No candidate coordinate rounded/contracted, no old support pass repeated, no performance/feasibility claim."
+  },
+  "old_scientific_calculations_repeated": false,
+  "execution_recovery": true,
+  "metadata_prerequisite_recovery": true,
+  "completed_scientific_calculations_repeated": false,
+  "original_audit_failure": {
+    "actual_exit": 1,
+    "observed_tool_chunk": "74346d",
+    "observed_at_utc": "2026-10-19T04:42:17.295875+00:00",
+    "log": "/data/humanoid-sitting-perception/low_seat_contact_01/float_hull_audit_553.log",
+    "failure": "Missing actual_exit metadata key; actual_exit_code0 existed. Failed before input hashes, output creation, endpoint/unary arithmetic. No scientific calculation completed. Original source unchanged."
+  },
+  "recovery_scope": "Audit first invocation exited1 at missing actual_exit metadata key before hashes/output/arithmetic. Preserved original metadata/log/exit; added actual_exit alias to observed producer exit0. Unchanged audit then executed all arithmetic once successfully.",
+  "new_complete_numerical_algorithm": false,
+  "new_solver_exists": false,
+  "new_complete_path": false,
+  "lp_calls": 0,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}
