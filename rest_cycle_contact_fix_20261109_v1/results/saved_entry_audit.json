@@ -1,0 +1,44 @@
+{
+  "hover_path_index": 295,
+  "contact_path_index": 398,
+  "first_divergence": {
+    "control": 320,
+    "time_s": 6.4,
+    "path_index_before": 295,
+    "old_path_index_after": 296,
+    "gate": {
+      "advance": false,
+      "reason": "await_fresh_hover_quiet",
+      "aborted": false,
+      "hover_quiet": 0,
+      "contact_quiet": 0,
+      "hover_released": false,
+      "contact_confirmed": false,
+      "physical_success": false
+    },
+    "meaning": "First command the new gate refuses. Later saved states are not a counterfactual trajectory."
+  },
+  "native_effort_comparison": [
+    {
+      "joint": "left_ankle_roll_joint",
+      "mean_position_error_rad": -6.406076136045158e-05,
+      "native_motor_effort_Nm": -0.032508622854948044,
+      "endpoint_PD_estimate_Nm": -0.22791160723567008,
+      "raw_speed_rad_s": 0.054415468126535416,
+      "interpretation": "Endpoint PD estimate is approximate; discrepancy is not a corrected sensor or a proved engine cause."
+    },
+    {
+      "joint": "right_ankle_roll_joint",
+      "mean_position_error_rad": -6.482926255557686e-05,
+      "native_motor_effort_Nm": -0.031554777175188065,
+      "endpoint_PD_estimate_Nm": -0.2304484173208475,
+      "raw_speed_rad_s": 0.05501893535256386,
+      "interpretation": "Endpoint PD estimate is approximate; discrepancy is not a corrected sensor or a proved engine cause."
+    }
+  ],
+  "source_fields_aligned": true,
+  "physical_repair_verified": false,
+  "runtime_loaded_observer_admitted": false,
+  "physics_steps": 0,
+  "wall_s": 0.06452300399541855
+}

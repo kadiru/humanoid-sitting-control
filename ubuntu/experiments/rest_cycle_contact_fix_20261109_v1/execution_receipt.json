@@ -1,0 +1,92 @@
+{
+  "utc": "2026-11-09T06:31:19.107600+00:00",
+  "state": "CONTACT_ENTRY_GUARD_TESTED_NATIVE_ANKLE_INCONSISTENCY_UNRESOLVED_NO_COMPLETE_CYCLE",
+  "authorization": "Fix pelvis slip and ankle-speed readings, then3sit5s-hold-stand starts;4090only;unchanged actions/criteria;commit and push each fix;preserve recoverable development history.",
+  "result": {
+    "contact_entry": "New reusable gate and executor require25 fresh raw-quiet samples at the admitted hover and25 qualified loaded samples at the admitted contact boundary; pauses consume no waypoints.",
+    "validation": "12 behavioral tests passed; saved-prefix audit rejects the first formerly allowed hover-release command at6.40s. No counterfactual success claim after this divergence.",
+    "integration": "Prepared execution adapter. Not installed in a launched replacement cycle; requires a newly admitted current-camera path and a validated loaded observer.",
+    "readout": "Live standing inspection rules out absent external-force flag and reported joint friction; native velocity mechanism under load remains unproven. No validated ankle-reading correction.",
+    "physical": "No new sitting trial or stand-up. Prior calibration remainsfailed;0/3 complete cycles. Pelvis-slip repair is not physically verified."
+  },
+  "resources": {
+    "GPU": "4090 only",
+    "GPU_children": 1,
+    "GPU_child_wall_s": 14.17867319000652,
+    "owner_wall_s": 14.533462135004811,
+    "new_physics_steps": 100,
+    "standing_warmup_controls": 25,
+    "new_sitting_controls": 0,
+    "CPU_saved_entry_audit_wall_s": 0.06452300399541855,
+    "audit_cap_s": 45,
+    "audit_cores": 1,
+    "audit_AS_GiB": 40,
+    "unit_tests": 12,
+    "unit_test_reported_wall_s": 0.002,
+    "unit_test_parent_wall_not_instrumented": true,
+    "new_PPO_updates": 0,
+    "new_full72_checks": 0,
+    "physical_repairs": 0
+  },
+  "constraints": {
+    "action_limits_unchanged": true,
+    "success_criteria_unchanged": true,
+    "physics_settings_unchanged": true,
+    "raw_velocity_gate_unchanged": true,
+    "finite_difference_substitution": false,
+    "old_failed_trial_replayed": false,
+    "worker_live": false,
+    "autostart": false,
+    "automation": "deleted"
+  },
+  "repository": {
+    "url": "https://github.com/kadiru/humanoid-sitting-control",
+    "initial_import_commits": 7,
+    "reconstructed_branch": "reconstructed-saved-history",
+    "reconstructed_record_commits": 773,
+    "tracked_files_covered": 24267,
+    "exact_import_tree_preserved": true,
+    "unsaved_edits_recoverable": false,
+    "original_git_history_recoverable": false,
+    "excluded_bulk_artifacts": "Retained externally with SHA256 inventory; not uploaded as Git history."
+  },
+  "next_work": "Establish the native loaded articulation velocity mechanism and a genuine correction before altering any readout. Source-level trace is allowed; no guessed solver/friction/gain/iteration changes or finite-difference quiet substitution. The contact execution adapter must be bound to a newly admitted path with measured precontact geometry and a contact-seeking endpoint capable of a qualified positive load; do not simply wait for5%BW on a theoretical zero-load pose, replay the rejected path, or claim the saved-prefix refusal is physical repair. Only after loaded sensing and release are admitted run3complete cycles and their original audits.",
+  "latest_video": {
+    "path": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/results/narrow_support_load_calibration.mp4",
+    "scope": "Historical failed20s calibration; no stand-up;not a new success video"
+  },
+  "evidence": {
+    "contact_gate.py": {
+      "path": "/Users/kadir/humanoid-sitting-control/rest_cycle_contact_fix_20261109_v1/contact_gate.py",
+      "sha256": "37515a99d1625d130c1683c0bb5c9a6028b75488e482b4f8fab6d2b6ad224cf0"
+    },
+    "contact_executor.py": {
+      "path": "/Users/kadir/humanoid-sitting-control/rest_cycle_contact_fix_20261109_v1/contact_executor.py",
+      "sha256": "c25410aed601f64fa489ddfd1773d2c36825ace1e0b3fd128a238b3d434f0ee3"
+    },
+    "test_contact_gate.py": {
+      "path": "/Users/kadir/humanoid-sitting-control/rest_cycle_contact_fix_20261109_v1/test_contact_gate.py",
+      "sha256": "564b4776cddabf664693fc64144f2142c72a2f8640044fa71a6d545be5ad18eb"
+    },
+    "entry_freeze.json": {
+      "path": "/Users/kadir/humanoid-sitting-control/rest_cycle_contact_fix_20261109_v1/entry_freeze.json",
+      "sha256": "5fff359a3ff7a8840ba3d4e5465a0e622bc3d443b6daf6c4d92c5dcaee608c78"
+    },
+    "readout_review.json": {
+      "path": "/Users/kadir/humanoid-sitting-control/rest_cycle_contact_fix_20261109_v1/readout_review.json",
+      "sha256": "73fa13062ba26c4237891785024f63c90206e319dbd237e03ed2eff94a501563"
+    },
+    "results/saved_entry_audit.json": {
+      "path": "/Users/kadir/humanoid-sitting-control/rest_cycle_contact_fix_20261109_v1/results/saved_entry_audit.json",
+      "sha256": "3735e90ac021dbbb60bae1b964769fb106d9b5e312789acc1e64e1cede6671ef"
+    },
+    "results/runtime_inspection/runtime_properties.json": {
+      "path": "/Users/kadir/humanoid-sitting-control/rest_cycle_contact_fix_20261109_v1/results/runtime_inspection/runtime_properties.json",
+      "sha256": "ec7d106d863b9d5f6c89d7d28d800dc7da8027d286a0d68646167b6fcbffbc0a"
+    },
+    "results/owner_status.json": {
+      "path": "/Users/kadir/humanoid-sitting-control/rest_cycle_contact_fix_20261109_v1/results/owner_status.json",
+      "sha256": "4c0282cf42bd6f95b01622895a58b30e57be54edfb516e3e2d88565e5cc48121"
+    }
+  }
+}

@@ -27,7 +27,8 @@ cases and no accepted repairs. Training outcomes, model audits, and simulated
 physical success are recorded separately; an audit PASS is not a repair.
 
 - Current index: [current_successor_checkpoint.json](validated_low_seat_contact_01/current_successor_checkpoint.json)
-- Latest execution: [execution_receipt.json](rest_cycle_load_validation_20261109_v1/execution_receipt.json)
+- Latest diagnosis and contact-entry preparation: [execution_receipt.json](rest_cycle_contact_fix_20261109_v1/execution_receipt.json)
+- Latest sitting execution (failed): [execution_receipt.json](rest_cycle_load_validation_20261109_v1/execution_receipt.json)
 - Latest recorded trial: [20-second video](rest_cycle_load_validation_20261109_v1/results/narrow_support_load_calibration.mp4)
 - Load observer: [observer.py](rest_cycle_load_validation_20261109_v1/observer.py)
 

@@ -1,7 +1,7 @@
 {
-  "utc": "2026-11-09T05:28:18.465731+00:00",
+  "utc": "2026-11-09T06:31:19.107600+00:00",
   "scope": "Current successor index; preserve inherited603/601 evidence and unchanged physical criteria",
-  "latest_scientific_result": "New4090narrow-support20s calibration:10.86s supportedhold,54.90%BW unloading, native23jointtorque-squared0.29071xstanding. FulltrialFAIL:1pelvis-slipcontrolat9.04s; rawanklequietgatefailsallfinal250. Fullspatialnative-motor loadestimate final5s maxerror0.01090%BW, but runtimecontact/release notadmitted.0stand-ups/3requiredstarts,0PPO/72checks/repairs;4090workerfinished,4070untouched.",
+  "latest_scientific_result": "One4090standing-only inspection(100physicssteps)confirmed externalforces-per-iteration=True andreportedjointfriction0;nativeankleloaded inconsistency unresolved. Newcontactentrygate/executor passes12logic tests; savedprefix firstblockedcommand6.40s beforeold9.04s slip,NOTphysicalrepair. No new sitting/stand/PPO/72tests;0/3cycles.773reconstructed saved-record commits nowpublished alongside original7importcommits.",
   "authorizations": {
     "primary_diagnostic": "completed and consumed",
     "interior_diagnostic": "explicitly approved; completed and consumed",
@@ -48,9 +48,10 @@
     "higher_support_full_cycle_20261108": "Latest human: validate higher support, sit, hold5seconds, stand again;4090only;unchanged actionlimits and successcriteria.",
     "partial_support_full_cycle_20261109": "Latest human: hip-housing clearance, camera edge detection, load release, sit/5s hold/stand;4090only;unchanged actions/criteria;partial legal hip/thigh support acceptable.",
     "corner_narrow_support_20261109": "Latesthuman explicitlyauthorizescorner/narrowedge,five-secondholdandstand,4090only,unchangedactionlimits/criteria; asksbrieftrainingfacts andfoot-unloading/fixed-footassessment.",
-    "load_and_three_starts_20261109": "Latest human: validate load sensing, sit/5s hold/stand from3starts,4090only, unchanged actionlimits/successcriteria; asks GitHub commit status."
+    "load_and_three_starts_20261109": "Latest human: validate load sensing, sit/5s hold/stand from3starts,4090only, unchanged actionlimits/successcriteria; asks GitHub commit status.",
+    "pelvis_ankle_three_starts_and_history_20261109": "Fix pelvis slip and ankle-speed readings, then3sit5s-hold-stand starts;4090only;unchanged actions/criteria;commit and push each fix;preserve recoverable development history."
   },
-  "next_work": "Resolve native ankle velocity/position inconsistency from the actual loaded record before changing quiet-state logic: right ankle roll averages0.0550rad/s while angle range is2.66e-6rad. Official NVIDIA TGS steady-state issue is a possible mechanism, but installed configuration already enables external forces every iteration; live scene attributes were not saved, so cause is unproven. Do not substitute finite differences, relax0.05rad/s quiet gate, blindly alter solver/friction/gains, or replay this failed trial. Separately construct a current-camera contact transition that avoids pelvis touchdown tangential speed0.0217114m/s at9.04s against0.02m/s criterion. Then validate sensor-qualified loading and release, integrate stand-up, and demonstrate3complete starts. Current calibration is rejected; no queued worker, PPO, or repeated simulation. Preserve4090only,4070AIWorker,64protected/8unresolved,holdoutclosed,deletedautomation.",
+  "next_work": "Establish the native loaded articulation velocity mechanism and a genuine correction before altering any readout. Source-level trace is allowed; no guessed solver/friction/gain/iteration changes or finite-difference quiet substitution. The contact execution adapter must be bound to a newly admitted path with measured precontact geometry and a contact-seeking endpoint capable of a qualified positive load; do not simply wait for5%BW on a theoretical zero-load pose, replay the rejected path, or claim the saved-prefix refusal is physical repair. Only after loaded sensing and release are admitted run3complete cycles and their original audits.",
   "physical": {
     "clean": "64/72",
     "stable": 70,
@@ -276,14 +277,15 @@
     "authorization_consumed": true
   },
   "current_execution": {
-    "state": "ROLLING_CONTACT_AND_TIMING_PASS_COMPLETE_MODEL_REJECTED",
+    "scope": "standing native-property diagnosis and offline contact-entry correction",
+    "state": "CONTACT_ENTRY_GUARD_TESTED_NATIVE_ANKLE_INCONSISTENCY_UNRESOLVED_NO_COMPLETE_CYCLE",
     "worker_live": false,
-    "model_constructions": 3,
+    "model_constructions": 0,
     "accepted_paths": 0,
-    "physics_steps": 0,
+    "physics_steps": 100,
     "PPO_updates": 0,
     "relaunch_permitted": false,
-    "receipt": "/Users/kadir/humanoid-sitting-control/rest_cycle_rolling_perch_20261109_v2/execution_receipt.json"
+    "receipt": "/Users/kadir/humanoid-sitting-control/rest_cycle_contact_fix_20261109_v1/execution_receipt.json"
   },
   "previous_scientific_result_before_budget_diagnostic": {
     "kind": "Terminal failure of approved cycle stage B; no admissible candidate",
@@ -1733,7 +1735,7 @@
     "training_interrupted": false,
     "constraints_changed": false
   },
-  "latest_authorized_continuation": "Latest human: hip-housing clearance, camera edge detection, load release, sit/5s hold/stand;4090only;unchanged actions/criteria;partial legal hip/thigh support acceptable.",
+  "latest_authorized_continuation": "Fix pelvis slip and ankle-speed readings, then3sit5s-hold-stand starts;4090only;unchanged actions/criteria;commit and push each fix;preserve recoverable development history.",
   "furniture_perception_repair_after_ppo": {
     "authorization": "Fix depth alignment and surface recognition, then retest seats, arms and backs after PPO finishes.4090only, unchanged success criteria, updated video.",
     "state": "SAVED_TRAJECTORY_AUDITS_AND_VIDEO_COMPLETE",
@@ -2135,18 +2137,20 @@
     "physical_repairs": 0
   },
   "latest_worker_check": {
-    "utc": "2026-11-09T05:27:09.252357+00:00",
+    "utc": "2026-11-09T06:31:19.107600+00:00",
     "gpu_lines": [
-      "NVIDIA GeForce RTX 4090, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 0 %, 46, 17 MiB",
-      "NVIDIA GeForce RTX 4070, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 88 %, 59, 5049 MiB"
+      "RTX4090:0%util,43C,17MiB",
+      "RTX4070:24%util,57C,5080MiB"
     ],
     "compute_apps": [
-      "GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 2516468, /isaac-sim/kit/python/bin/python3"
+      "4070:2635147:/isaac-sim/kit/python/bin/python3"
     ],
     "own_simulation_worker": false,
     "own_PPO_worker": false,
     "recurring_automation": false,
-    "own_worker_matches": []
+    "own_worker_matches": [],
+    "inspection_owner_pid": 2669205,
+    "inspection_owner_exited": true
   },
   "furniture_motion_repairs_20261108_v1": {
     "receipt": "/Users/kadir/humanoid-sitting-control/furniture_motion_repairs_20261108_v1/execution_receipt.json",
@@ -2375,5 +2379,25 @@
     "worker_live": false,
     "autostart": false,
     "video": "/Users/kadir/humanoid-sitting-control/rest_cycle_load_validation_20261109_v1/results/narrow_support_load_calibration.mp4"
+  },
+  "rest_cycle_contact_fix_20261109_v1": {
+    "receipt": "/Users/kadir/humanoid-sitting-control/rest_cycle_contact_fix_20261109_v1/execution_receipt.json",
+    "receipt_sha256": "eb2a17c50a29b2a0f596725cd8d53d1c53d6228bc11a2a8bff195ec5e15d0901",
+    "state": "CONTACT_ENTRY_GUARD_TESTED_NATIVE_ANKLE_INCONSISTENCY_UNRESOLVED_NO_COMPLETE_CYCLE",
+    "complete_cycles": 0,
+    "required_starts": 3,
+    "worker_live": false,
+    "autostart": false
+  },
+  "repository": {
+    "url": "https://github.com/kadiru/humanoid-sitting-control",
+    "initial_import_commits": 7,
+    "reconstructed_branch": "reconstructed-saved-history",
+    "reconstructed_record_commits": 773,
+    "tracked_files_covered": 24267,
+    "exact_import_tree_preserved": true,
+    "unsaved_edits_recoverable": false,
+    "original_git_history_recoverable": false,
+    "excluded_bulk_artifacts": "Retained externally with SHA256 inventory; not uploaded as Git history."
   }
 }
