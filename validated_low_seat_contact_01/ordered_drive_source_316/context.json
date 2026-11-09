@@ -1,0 +1,21 @@
+{
+  "source_match_installed": false,
+  "installed_extension": "110.3.2",
+  "source_commit": "fc1018a3745664a1db2b95ce03fb5e91eb585f2e",
+  "source_tag": "110.0-omni-and-physx-5.8.0",
+  "public_source_only": true,
+  "observations": [
+    "Force-drive coefficients explicitly depend on substep dt and full step simDt; velocity-target bias includes interpolation.",
+    "GPU external-forces-each-substep branch resets appliedDriveImpulse for each position-stage solve before accumulating total. TGS velocity branch leaves drive impulse unchanged before clamping.",
+    "GPU solver has contact-last and single-pass configurations. Actual effective counts/traversal/contact ordering not captured in303.",
+    "Tensor setter forwards runtime stiffness directly in this public revision; no degree/radian rescaling is indicated by that setter. This is not a binary-source equivalence proof."
+  ],
+  "limitations": [
+    "No installed source/binary edits or simulation.",
+    "317 is an intentionally limited surrogate, not source-port of fullGPU contact/articulation solver. Its failed predictive comparison cannot be fixed by arithmetic audit.",
+    "Contact truth and derived accelerations are offline evaluation only; no raw-qd quiet substitution or controller change."
+  ],
+  "transport_recovery": "Initial shell quote failure yielded SyntaxError before any Python statement. Corrected quoting fetched once; missing guessed header404 not used as source.",
+  "physics_ticks": 0,
+  "repair_complete": false
+}
