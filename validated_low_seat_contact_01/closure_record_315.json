@@ -1,0 +1,88 @@
+{
+  "utc": "2026-10-17T20:41:31.677174+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_active_physics_ticks": 0,
+  "new_initial_settling_ticks": 0,
+  "new_optimizer_updates": 0,
+  "new_full20s_trials": 0,
+  "new_diagnostic_prefixes": 0,
+  "new_aborted_case_attempts": 0,
+  "holdout_started": false,
+  "physical_admission_passed": false,
+  "best_verified_controller": "current_retention_09",
+  "best_development_clean": 64,
+  "latest_physical_candidate": "roll_feedback_probe_273",
+  "prior_recheck": {
+    "utc": "2026-10-17T20:41:31.677174+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "completed_probes_preservation_311.json",
+        "checked": 6463,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "supplemental_preservation_311.json",
+        "checked": 3,
+        "passed": true,
+        "mismatches": []
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_315.json",
+  "protected_completed_files": 6493,
+  "manifest_sha256": "433e1ae525cd84c3b6ec73037bed674170108754291a0e99dbcafd432107c845",
+  "physical_workers_running": false,
+  "model_workers_running": false,
+  "audit_workers_running": false,
+  "report": "progress_report_314",
+  "video": "all_attempts_video_307/all_attempts.mp4",
+  "video_unchanged": true,
+  "local_review": {
+    "utc": "2026-10-17T20:40:56.624488+00:00",
+    "local_hashes_verified": true,
+    "manifests": [
+      {
+        "folder": "drive_stage_diagnosis_312",
+        "entries": 2,
+        "passed": true
+      },
+      {
+        "folder": "drive_stage_audit_313",
+        "entries": 1,
+        "passed": true
+      },
+      {
+        "folder": "progress_report_314",
+        "entries": 9,
+        "passed": true
+      }
+    ],
+    "total_original_entries": 12,
+    "plots_visually_inspected": true,
+    "browser_visually_inspected": true,
+    "embedded_video_loaded": true,
+    "report_url": "http://127.0.0.1:8807/progress_report_314/findings.html",
+    "inspected": [
+      "drive_quantities.png",
+      "stage_traces.png",
+      "HTML scope and conditional-variable caveat",
+      "selected ankle table",
+      "37-joint selected-case table",
+      "all-case ankle table and full1776CSV link",
+      "independent audit/limitations and unchanged loaded58.4s video"
+    ],
+    "video_rerendered": false,
+    "physics_ticks": 0,
+    "repair_complete": false
+  },
+  "next": "# Drive-stage compatibility312/313 audited \u2014 physical repair unfinished\n\nContinue the authorized low-seat repair in THIS chat via Mac SSH kfuUbuntu, /home/kadir/humanoid-sitting; never another coding agent. Python /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python. Read docs protocol/status, study status.json and closure_record_315.json. Check actual workers before launching. All312\u2013314 jobs COMPLETE; do not repeat them, passive303v2, physical273 or completed diagnostics. Stay quiet during ordinary progress; notify meaningful failure/completion/required input. No promotion. User renewed continuation after upgrading subscription.\n\nBest verified current_retention_09 remains64/72 clean,70 stable,8 slipping,2 housing cases. All64 protected; all8 unresolved. MainPPO63111/63117 and freshholdout UNSTARTED. This round adds ZERO physics,settling,complete20s episodes,optimizer updates or video motion. Latest physical273 remains rejected; selected36/+15 rows0/1 hover withZERO legal load/hold/quiet release. No new72retention.\n\nNEW drive_stage_diagnosis_312 includes ALL1000 saved303v2 5ms intervals8\u201313s\u00d724cases\u00d737joints=888000joint records,1776case/joint/windows. Targets exactly match the recorded corresponding backend targets; velocity/extra-effort targets areZERO. Kp/Kd match separately captured backend arrays. Incoming moment is projected on the free revolute axis at the CHILD JOINT origin/frame, not306's midpoint-shifted foot boundary. Both are documented, distinct computations. Allcase/joint records retained, including incomplete external-wrench intervals; floor-only coverage counts remain descriptive, not silently zeroed.\n\n312 evaluates fixed raw-endpoint PD, start-state PD and midpoint-position/pose-difference PD expressions against TOTAL transmitted axial moment. At11\u201313s selected ankle-roll raw medians.26615\u2013.28402rad/s; raw-endpoint PD residualRMS.92068\u2013.99227Nm. Midpoint/pose-difference PD still misses by.14402\u2013.15558Nm RMS. Neither expression is thereby a verified actual drive-force law or a forward predictor. Incoming moment is NOT isolated motor effort, so the mismatch is not an isolated-drive identification.\n\nThe formal variable v_conditional = v_target + [Kp*(target\u2212q_mid)\u2212incoming_axial]/Kd has selected medians.035974\u2013.038552rad/s. This is an ALGEBRAIC UNKNOWN conditional on an unverified force-drive identity, NOT measured solver-stage velocity, a fitted estimator, quiet-guard pass, or permission to substitute for rawqd. Its being below.05 is NOT admission. A separate configured-armature\u00d7delta(rawqd)/5ms term is reported as a descriptive variant, NOT a certified effective rotor correction. No force/gain/sign/lag/offset fitted; no runtime inputs/criteria/gains changed. Authored joint-limit margins and effort-counts retained, including tiny negative finger margins; no tolerance or label changed.\n\nIndependent drive_stage_audit_313 PASSED all888000 records/1776windows with65731checks: manual quaternion rotation of child-joint moments/axes into world, projection, two defining constitutive identities, independent sorted-median/scalar-sum statistics and rawsource hashes. Maximum1.0658141036401503e\u221214 under unchanged1e\u221210 arithmetic bound. Physical_admissionFALSE,repairFALSE. Source scripts diagnose_low_seat_drive_stages_312.py/audit_low_seat_drive_stages_313.py,scope frozen in drive_stage_revision_312.json. Both compile/exit statuses were checked before dependent steps. No calculation/physics/report recovery or rerun required.\n\nNEXT: simple endpoint or finite-difference PD substitution remains unvalidated; do NOT repeat these constitutive statistics or install v_conditional into control. A new bounded approach/contact-control formulation must account for implicit-drive updates and contact-constrained motion while preserving current input validity, total authority, inherited filter/rate, whole-path clearance/support and actual quiet/load guards. Before predicting a new control response, assess its ordered drive/contact model against ALREADY recorded303v2/259 evidence. Distinguish measured endstates from unobserved internal position/velocity iterations; do not relabel a hypothetical model as installed PhysX. No gain/Ki scaling, extra hip/pitch authority, static255wrench feedback, solver flags, sensor/truth substitutions, foot dragging/teleportation, blind pose/arm/rate sweep or endpoint-only launch. Another complete contact transition remains open research, not disproved. Other36/+20,37/+16.25,36.5/+17.5 centered227 paths still fail3mm clearance. All8 removed+all64 retained across72matched full20s BEFORE PPO.\n\nPrimary read-only context310 remains official PhysX5.8 Implicit Spring Joint Drives (2024-04-23), pages4\u20136: TGS accumulates drive impulses during position substeps and freezes drive-force updates during velocity iterations. https://nvidia-omniverse.github.io/PhysX/physx/5.8.0/_downloads/6acf3afb8f69452757e0e766b5a22978/implicitDrives.pdf . This describes the algorithm family; it is not a capture of installed GPU internals, independently measured effective island counts or causal proof. AuthoredTGS/artic8pos4vel/externalforceeveryiterationTRUE unchanged.290's ideal sticking/backward-Euler derivative is not validated.\n\nPrior verified303v2 one13s\u00d724 prefix EXACTLY replayed234 acrossall24 physical/sensor/torque/start/event arrays/actual414.1001private5ms incoming/joint/link captures,1000implicitlaunches,publiccache bytes/pointers/timestamps and directview/property buffers unchanged,1004rawq/qd checks. All37 backendKp/Kd/armature/maxforce matchconfigured and stable0/8/13s; ankle160/4,.01,20Nm andfriction[0,0,0]. No stalegain ornonzeroanklefriction explanation supported. No independent backenddrive-type/effectiveislandcount captured. Totalincomingwrench isNOTmotor-only.306 incoming-vs296 boundaryRMS.000081\u2013.000159Nm versusapproxPDdifference.921\u2013.992Nm. Keep prior exactdiagnostics259/246/198 and failed189 unchanged.\n\nOriginal303 allocation failure\u22121deviceordinal is preserved in304recovery:0active600settling24abortedwithoutmotion. Correctedmapping-v2 run15600active600settling24prefixes;combined15600active+1200settling,no full20s/optimizer. No completed experiment repeated. New312\u2013314 are entirely offline and did NOT add to these physical budgets. Prior294wholebody and296foot-boundary impulses use frozenmass/authored290inertia; no certificate of liveeffectiveinertia/motor effort. Six authoredfinger mass1ULP discrepancies remainexplicit; no sourceadjustment.\n\nLocal progress_report_314/findings.html,diagnosis312,audit313 copied/hashverified:3manifests/12originalentries. Bothplots,HTML scope/selected/37joint/allcase ankle/conditional-variable caveat/independent-audit/limitations tables and full1776CSV link inspected;unchanged58.4s video loaded. URL http://127.0.0.1:8807/progress_report_314/findings.html . Interim OFFLINE development evidence,NOTrepair/PPO/unseen completion. Earlier reports unchanged.\n\nVideo307 remainsCURRENT and unchanged at /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/all_attempts_video_307/all_attempts.mp4:58.4s3840x2160,15fpsH264,44recorded sources,864full20s trials503clean361failed,192recordedprefixes,120abortedcaseattempts withoutmotion explicitlydisclosed.49panels8x7. Independent308checked1056recordedcases/624firstevents andhashes/duration. RecordedXYZW LINK-pose schematic plusmodelheadCOM,NOTcamerafootage;.1sposes bracket.02slabels. Historical repeated totalsNOTcontrolleraccuracy. No newmotion312\u2013314; doNOTrerenderunchangedvideo. Updateafterfuturephysical/PPOattempts,omitnofailure.\n\nNo new effort result.273vsbestnormal14commoncompleteclean whole20 torque\u00b2+.0126472%,final10+.0264487%,final5+.0794278%;strictbothONLY1whole20\u2212.00504478%,final5\u2212.0247301%. These areunselected-successdifferences,notrepair/savings.09vs61111commoncleanexact;vs62111@8old20whole20+4.38%,final5+25.45%. ApproximplicitPDtelemetry isNOTsolver/hardware effort,energy/globaloptimum. No failed-hover/prefix/fragmentsavings. Preserveoldrewards/results.\n\nLatestphysical273 still20stable14clean8slip2hiphousing/physical0illegal19warnings,selectedzeroquiet/load/hold; no cleangain/loss oraddedphysicalcase. Frozen59117@15selected/11\u201315elsewhere;early61111omittedonlyisolatingprobes. Audits274v2/275v2softwarepassed,physical/unselectedexactFAILED(body.769615mm,q.000864387rad,command.000684381rad),no waiver. Quiet175:25CURRENT consecutive samples movingrawqd<=.05,pitcherror<=.5deg,abs gyro-y<=.02,freshgeometry+130guards before12mmhoverrelease;normaldescent<=.006m/s.269rollcap.01insideperankle abs(pitch)+abs(roll)<=.06,pitch207priority,feedback.0375+nominal.1125 underglobal.15,.03desiredmargin/.1filter/14fingers unchanged. No quietguard waiver follows the algebraic conditional variable.\n\nAutomationACTIVE; taskunfinished. PauseONLYafteractualrepair,newPPOcomparison andupdatedcomplete subminutevideo delivered. Offlineaudit/report completion is NOTtaskcompletion.\n"
+}
