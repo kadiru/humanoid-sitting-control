@@ -1,0 +1,10 @@
+{
+  "target": "lean_center",
+  "wall_seconds_including_interpreter_startup": 1.801698414987186,
+  "timeout": false,
+  "returncode": 0,
+  "cpu_seconds": 1.79976,
+  "child_peak_rss_kib": 286284,
+  "output": "{\n  \"model_pass\": false,\n  \"error\": \"TypeError('must be str, not NoneType')\",\n  \"traceback\": \"Traceback (most recent call last):\\n  File \\\"/home/kadir/humanoid-sitting/experiments/analytic_rest_20261108_v1/validate.py\\\", line 90, in <module>\\n    result=plan.solve();goal=plan.target.copy();marker=plan.marker.copy();write('plan.json',result)\\n           ^^^^^^^^^^^^\\n  File \\\"/home/kadir/humanoid-sitting/experiments/analytic_rest_20261108_v1/terminal_plan.py\\\", line 142, in solve\\n    endpoint=self.optimize(seed,0.,self.endpoint_rows,lambda x:self.posture_cost(x,.2),\\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/kadir/humanoid-sitting/experiments/analytic_rest_20261108_v1/analytic_model.py\\\", line 230, in optimize\\n    if endpoint:self.audit_derivatives(x)\\n                ^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/kadir/humanoid-sitting/experiments/analytic_rest_20261108_v1/analytic_model.py\\\", line 205, in audit_derivatives\\n    h=1e-6;analytic=self.jets(x,.2)\\n                    ^^^^^^^^^^^^^^^\\n  File \\\"/home/kadir/humanoid-sitting/experiments/analytic_rest_20261108_v1/analytic_model.py\\\", line 65, in jets\\n    s=self.state(x,load);world,Jworld,Jroot=self.forward_jets(x)\\n                                            ^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/kadir/humanoid-sitting/experiments/analytic_rest_20261108_v1/analytic_model.py\\\", line 49, in forward_jets\\n    axis=np.eye(3)['XYZ'.index(j['axis'])];angle=q[index] if index is not None else 0.\\n                   ^^^^^^^^^^^^^^^^^^^^^^\\nTypeError: must be str, not NoneType\\n\",\n  \"total_seconds\": 1.7268689140037168,\n  \"physics_launch_ready\": false,\n  \"physical_success\": false,\n  \"physics_steps\": 0,\n  \"PPO_updates\": 0\n}\n",
+  "new_physics_steps": 0
+}
