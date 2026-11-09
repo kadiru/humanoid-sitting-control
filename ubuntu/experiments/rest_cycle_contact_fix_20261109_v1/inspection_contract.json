@@ -1,0 +1,27 @@
+{
+  "purpose": "Resolve previously missing live TGS external-force flag and native ankle friction/drive readout before changing any model or sensor.",
+  "authorization": "Latest human specifically requests fixing ankle-speed readings and pelvis slip,4090only,unchanged criteria/actions.",
+  "initialization": "Unchanged accepted standing reset bank,narrow fixture,25 warmup controls; no active sitting command and no restored loaded/rejected state.",
+  "equations": "None: read USD scene attributes,native articulation properties,and aliases; compare schema/default/runtime values. No estimator substitution.",
+  "success": "All requested available API properties captured with schema and joint ordering; this is diagnosis,never physical pass or permission to alter friction.",
+  "failure": "Capture API errors explicitly; no physical retry or automatic successor launch.",
+  "resources": {
+    "GPU": "4090 only",
+    "GPU_children": 1,
+    "GPU_wall_s": 900,
+    "CPU_threads": 2,
+    "warmup_controls": 25,
+    "initialization_physics_cap": 1000,
+    "active_controls": 0,
+    "max_temperature_C": 85,
+    "min_root_free_GB": 20,
+    "max_queue_s": 60,
+    "output_MiB": 10,
+    "PPO_updates": 0
+  },
+  "independent_review": {
+    "method": "Separate static review against original reset implementation and known installed accessor; no motion loop,no parameter setters,no quiet-gate modification.",
+    "passed": true,
+    "reviewer": "single execution owner; not an independent human or agent"
+  }
+}

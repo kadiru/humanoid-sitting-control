@@ -1,0 +1,26 @@
+{
+  "utc": "2026-11-09T06:28:14.464804+00:00",
+  "state": "NATIVE_READOUT_CAUSE_UNRESOLVED",
+  "observed": {
+    "physics_scene_external_forces_every_iteration": true,
+    "physics_scene_solver": "TGS",
+    "physics_scene_stabilization": false,
+    "legacy_and_new_joint_friction": 0.0,
+    "native_ankle_Kp": 160.0,
+    "native_ankle_Kd": 4.0
+  },
+  "ruled_out": [
+    "Missing external-force-per-iteration USD flag",
+    "Nonzero reported legacy or new joint-friction property"
+  ],
+  "installed_tensor_version": "omni.physics.tensors-110.3.2+110.3.0.lx64.r.cp312.u7f4",
+  "velocity_accessor": "IsaacLab joint_vel refreshes through root_view.get_dof_velocities; installed tensor API exposes no separate motion-averaged DOF velocity accessor.",
+  "limitation": "Native and schema properties do not prove internal GPU solver behavior. No demonstrated source-level correction to the ankle inconsistency has been found.",
+  "source": "https://nvidia-omniverse.github.io/PhysX/physx/5.8.0/docs/Simulation.html#tgs-steady-state-velocity-and-position-discrepancy",
+  "source_scope": "Documentation explains why TGS can produce this symptom. Its simple no-contact example does not establish the cause in our loaded articulation.",
+  "preserved_constraints": "No solver, iteration, friction, gains, dt, speed threshold or action limits changed. No finite-difference replacement.",
+  "inspected_offline_failure": "Importing PhysxSchema without Kit failed; live inspection used the supported stage accessor after Kit startup. No physical retry followed.",
+  "new_simulation_scope": "One standing-only reset/property inspection:100 physics steps,zero sitting commands.",
+  "new_repair": false,
+  "complete_cycles": 0
+}
