@@ -1,0 +1,10 @@
+{
+  "model_pass": false,
+  "error": "ValueError(('FULL_BODY_HOLD_RESERVE', 14.400000000155753))",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/rest_ready_20261108_v1/validate_reserved.py\", line 68, in <module>\n    result=plan.solve();write('plan.json',result)\n           ^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/rest_ready_20261108_v1/reserved_full_body.py\", line 174, in solve\n    if spent+1.>=14.4:raise ValueError(('FULL_BODY_HOLD_RESERVE',spent+1.))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: ('FULL_BODY_HOLD_RESERVE', 14.400000000155753)\n",
+  "total_seconds": 14.673091439006384,
+  "physics_launch_ready": false,
+  "physical_success": false,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}

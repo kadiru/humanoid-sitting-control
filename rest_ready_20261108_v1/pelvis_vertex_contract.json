@@ -1,0 +1,64 @@
+{
+  "scope": "One genuinely different contact construction: current-standing pelvis against observed finite armchair back, full23joints, torso clearance retained.",
+  "new_user_objective": "Supported rest with lower total effort, stable balance, minimal necessary contact regions and a short return tostanding; success and action limits unchanged.",
+  "variables": "23jointpositions+6floatingroot coordinates;14fingersfixed. Explicit bilateralfoot and eligible materialpoint constraints. This replaces3joint posture restriction.",
+  "contact_associations": {
+    "lean_center": "Current pelvis supporting static hull face, finite observedback22mminset and40mmheightreserve. Currentstanding input only."
+  },
+  "force_equations": "Groundforce=Wz-restforce. GroundCoP and bilateralFx,Fy,Fz derived from all6basewrenchbalanceequations; originalfoot10mminset,conservative.5friction andpositivefootload enforced. Full23jointtau=sum massgravityJacobians minus externalcontactforceJacobians.",
+  "objective": "sum_j tau_j^2 / standing_sum_tau_j^2 + (max_j|command-standing_command|/(.15*14.4))^2 + .05*sum_j(q_j-standing_q_j)^2. Torqueproxy only, not electricalpower/energy. No perjointtorquecapacity weighting. Feasibility has priority over score.",
+  "init": "Original standingframe/command only; no old failedrear-pelvis optimizer vector or current rejectedtorso path.",
+  "path": "8approach intervals,4normal intervals,4load intervals;quiet25current samples mandatory; normal target5.5mm/s belowunchanged6mm/s ceiling; supports .2BW leaning/.5BW sitting are modelallocations, never measured load.",
+  "accounting": {
+    "outer_wall_s_per_case": 45,
+    "max_total_wall_s": 45,
+    "cases": 1,
+    "node_SLSQP_maxiter": 60,
+    "CPU_threads": 1,
+    "GPU": 0,
+    "retry": 0
+  },
+  "prelaunch_review": [
+    "Dataflow noactortruth mesh or recordedcurrentcontactforce",
+    "exact6wrench and independent23joint virtualwork audit mandatory beforeoptimizing",
+    "alloriginalaction bounds/fingers/filter/physicalscorerunchanged",
+    "exactexpandedmeshcornerbounding andmaterialbodyassociation checked",
+    "clockconstraints includephase costs as constructed; allreceipts/partialoutputs retained",
+    "source plan outputs are modelcandidates only, never physicaladmission"
+  ],
+  "no_autolaunch": true,
+  "PPO_pending": "10sitting+10leaning verifieddemos,imitation/recovery preflight,4090availability thenall72.",
+  "implementation_correction": {
+    "evidence": "Both distinct starts reached equality residual<3.4e-8 and positive inequality margin but hit60iterations at first newnode. This does not prove the only cause. Cost and clock used nonsmooth max(abs(command difference)).",
+    "equivalence": "Introduce r>=0; r>=+/-((command-standing)/2.16), minimize r^2. Since square is increasing on nonnegative r this exactly represents the original squared maximum. Replace max(delta/.125,minimum)+extra<=remaining with all46signed delta inequalities and minimum inequality. No physical/action/clock/objective coefficient changes.",
+    "initialization": "Original saved standing x plus r=0; no earlier accepted partial or rejected solver state imported.",
+    "resources": "45s each including all input checks/audits,60iterations pernode unchanged,2named cases,0GPU, no downstream autolaunch",
+    "classification": "Source-level nonsmooth expression correction; convergence benefit remains unproven."
+  },
+  "future_time_reservation": {
+    "evidence": "Saved lean partial path spent4.47037seconds at first of8approachknots, then spent allremaining13.4s at first of4loadknots. Saved stool path exhausted13.4s before finalnormal node.",
+    "correction": "Each knot receives a cumulative share of unchanged phase deadline. Approach ends9.7s. Normal ends12.4s reserving four mandatory.25sloadnodes. Load ends13.4s. Normal quiet.5s charged at firstnormalnode before equal remaining shares. No speed, totalclock, objective or convergence setting changed.",
+    "mechanism": "Coordinates must progress within every reserved prefix. Arms and legs can move concurrently, instead of greedy low-effort poses consuming futurephase time.",
+    "scope": "Two original standing inputs, no saved partial or rejected state reuse; one execution pertarget; no additional target scan."
+  },
+  "finite_encoding_correction": {
+    "evidence": "Complete armchair path rejected at14.400000000155753s against14.4s; no rejected point reused or rounded into acceptance.",
+    "inward_clock_guard_s": 0.04,
+    "basis": "Two existing20mscontrolticks removed from every phase deadline: one for ceil tocontrolgrid, one for <=16node solver feasibility residue and float32 command encoding. Node signedrate residual<=1e-6rad implies<=8microseconds/node;16nodes<=128microseconds. For |command|<4, float32ULP<=2^-21; twoendpoint errors at16intervals/.125 add<.000123s. Combined<.001s, well below second20mstick. Actual endtime independentlychecked.",
+    "inward_command_guard_rad": 1e-05,
+    "basis_command": "At magnitudes<4, coefficient10/9 inversefilter has <20ULP error=9.536743e-6rad; exact float32 forwardedfilter and alloriginalbounds additionallychecked. This guard changes planningreserve only, neverhardware/physicalacceptance.",
+    "no_waiver": true,
+    "only_target": "lean_center",
+    "initialization": "Original standing measurements only; no failedplan/readiness/root/joints used as initialization."
+  },
+  "mechanism": "Move support below upperchair edge, avoiding the torso/corner obstruction. Original scorer alreadypermits pelvis. Enforce entire supportbody normalclearance>=plannedgap, and retain other torso/logoclearance. No globalplaneextension ascontacttarget: selectedpoint must beinside actualcamera finitefacet.",
+  "resources": {
+    "wholecase_wall_s": 45,
+    "CPU_threads": 1,
+    "GPU": 0,
+    "retry": 0,
+    "cases": 1
+  },
+  "physical_admission": "Full mesh, float32, balance/work audits plus runtime/currentcamera gates mandatory; no physical/PPO autolaunch.",
+  "support_face_expression_correction": "Replace nonsmooth min(allvertexgaps)>=requiredgap by each vertexgap>=requiredgap. Exact same feasible set; avoids finite-difference derivative of a changing minimum at a supporting face with tied vertices. Allobjective/solver settings/caps/inputs unchanged; priornonconvergedvector unavailable and neverused."
+}

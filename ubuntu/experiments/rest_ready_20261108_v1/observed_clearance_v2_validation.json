@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "metadata": {
+    "triangles": 9677,
+    "target_plane_triangles": 2136,
+    "camera_only": true,
+    "unobserved_space_certified": false,
+    "force_sensor": false
+  },
+  "standing": {
+    "passed": true,
+    "sampled_poses": 1,
+    "triangle_tests": 0,
+    "forbidden_or_early_clearance_intersections": [],
+    "forbidden_or_early_clearance_intersection_count": 0,
+    "expected_target_approaches": 0,
+    "clearance_buffer_m": 0.006,
+    "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+    "simulation_success": false,
+    "accelerator": "cKDTree exact AABB + signed halfspace rejection/interior; original clip on boundary",
+    "fast_exclusions": 0,
+    "fast_inside": 0,
+    "slow_clips": 0
+  },
+  "rejected_path": {
+    "passed": false,
+    "first_forbidden_or_early_clearance_intersection": {
+      "sample": 27,
+      "body": "torso_link",
+      "face": 3452,
+      "phase": "approach"
+    },
+    "sampled_poses_through_rejection": 28,
+    "triangle_tests_through_rejection": 33127,
+    "clearance_buffer_m": 0.006,
+    "early_exit": true,
+    "scope": "One exact collision witness suffices to veto; no total collision count claimed",
+    "simulation_success": false
+  },
+  "missing_depth_rejected": true,
+  "scope": "Saved-camera veto validation only. Rejected path used solely as a negative test, never as an initializer or actor motion. No optimizer, simulation or PPO.",
+  "physical_repair": false,
+  "deployed": false,
+  "seconds": 11.211569776001852
+}

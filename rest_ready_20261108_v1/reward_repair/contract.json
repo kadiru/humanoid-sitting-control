@@ -1,0 +1,22 @@
+{
+  "change": "Keep original success-first potential reward and all coefficients. Replace final-instant torque_squared inclean-completion bonus by last250controlticks mean of alljoint squared appliedtorque. Original instantaneous telemetry preserved.",
+  "semantics": "Appliedtorque is implicit-PD proxy; not actual electricalpower/energy. No bonus for failed, slipping, illegal or incompleteholds. Ready-to-stand remains a planningproxy, not physicallyvalidated. Minimum contactarea not rewarded without robustness evidence.",
+  "validation": [
+    "Successful originalarmchair complete20s",
+    "FailedL-couchcenter complete20s",
+    "FailedL-couchangled complete20s",
+    "Independentnumpy250sample window/reward equations",
+    "One-sample torque dip",
+    "Synchronousreset isolation",
+    "RejectNaN"
+  ],
+  "resources": {
+    "CPU_threads": 1,
+    "GPU": 0,
+    "wall_s": 45,
+    "physics_steps": 0,
+    "PPO_updates": 0
+  },
+  "no_autodeploy": true,
+  "unchanged": "Physicalclassification,actionbounds,filter,torque/materiallimits,resetpositions,PPOcoefficients,old64protectedroutes"
+}

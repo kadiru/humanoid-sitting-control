@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "trajectories": [
+    {
+      "source": "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/demo_rear_back_center/trajectory.npz",
+      "clean_completion": [
+        true
+      ],
+      "last_instant_proxy_Nm2": [
+        1756.0640869140625
+      ],
+      "final5s_proxy_Nm2": [
+        1756.0742124023438
+      ],
+      "old_terminal_bonus": [
+        0.09213577949204882
+      ],
+      "new_terminal_bonus": [
+        0.0921354921387553
+      ],
+      "maximum_window_error": 0.00026855468740905053,
+      "independent_reward_replay": true
+    },
+    {
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_center_local_patch_normal_landing/trajectory.npz",
+      "clean_completion": [
+        false
+      ],
+      "last_instant_proxy_Nm2": [
+        966.716552734375
+      ],
+      "final5s_proxy_Nm2": [
+        966.7063759765625
+      ],
+      "old_terminal_bonus": [
+        0.0
+      ],
+      "new_terminal_bonus": [
+        0.0
+      ],
+      "maximum_window_error": 0.0002363281250836735,
+      "independent_reward_replay": true
+    },
+    {
+      "source": "/home/kadir/humanoid-sitting/outputs/furniture_camera_coverage_20261106_v1/calibration_demos/sit_1kwsjhpY84_angled_local_patch_normal_landing/trajectory.npz",
+      "clean_completion": [
+        false
+      ],
+      "last_instant_proxy_Nm2": [
+        1065.0478515625
+      ],
+      "final5s_proxy_Nm2": [
+        1094.3470991210938
+      ],
+      "old_terminal_bonus": [
+        0.0
+      ],
+      "new_terminal_bonus": [
+        0.0
+      ],
+      "maximum_window_error": 0.00028027343751091394,
+      "independent_reward_replay": true
+    }
+  ],
+  "controls": 3000,
+  "one_tick_dip_proxy_Nm2": 1494.0,
+  "reset_history_isolated": true,
+  "nonfinite_rejected": true,
+  "original_success_action_and_reward_weights_unchanged": true,
+  "physical_success_claim": false,
+  "deployed": false,
+  "PPO_updates": 0,
+  "seconds": 0.752869115996873
+}
