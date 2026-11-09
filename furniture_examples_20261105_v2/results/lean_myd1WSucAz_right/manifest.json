@@ -1,0 +1,64 @@
+{
+  "case": {
+    "id": "myd1WSucAz_rear_back",
+    "asset": "myd1WSucAz",
+    "title": "Box armchair",
+    "approach": "rear_back",
+    "yaw_deg": -90,
+    "task": "leaning",
+    "mesh_usd": "/home/kadir/humanoid-sitting/experiments/furniture_examples_20261105_v1/scenes/myd1WSucAz_rear_back/furniture.usda",
+    "mesh_npz": "/home/kadir/humanoid-sitting/experiments/furniture_examples_20261105_v1/scenes/myd1WSucAz_rear_back/mesh.npz",
+    "bounds": [
+      [
+        -0.8260654976137125,
+        -0.3528741421177984,
+        0.0
+      ],
+      [
+        -0.18,
+        0.3528741421177984,
+        0.8593945130191866
+      ]
+    ],
+    "target_center": [
+      -0.21089963981314017,
+      -1.6556434089696586e-09,
+      0.6978862802860034
+    ],
+    "target_normal": [
+      0.9821860371870924,
+      1.5525517129605495e-16,
+      -0.1879111182307093
+    ],
+    "translation": [
+      -0.5030327488068562,
+      0.0,
+      0.0
+    ],
+    "uniform_scale": 1.2,
+    "color": [
+      0.18,
+      0.42,
+      0.48
+    ],
+    "initial_triangle_AABB_clearance_m": 0.06,
+    "contact_scoring_validated": false
+  },
+  "variant": {
+    "id": "lean_myd1WSucAz_right",
+    "asset": "myd1WSucAz",
+    "case": "myd1WSucAz_rear_back",
+    "title": "Box armchair",
+    "task": "leaning",
+    "intent": "back",
+    "x": 0.0,
+    "y": -0.035,
+    "yaw_deg": -3.0,
+    "teacher": "validated_camera_back_teacher"
+  },
+  "profile": "rear_back",
+  "task": "leaning",
+  "actor_truth_input": false,
+  "action_limits_unchanged": true,
+  "success_thresholds_unchanged": true
+}
