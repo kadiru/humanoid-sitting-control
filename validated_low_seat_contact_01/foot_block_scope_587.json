@@ -1,0 +1,74 @@
+{
+  "utc": "2026-10-19T10:43:03.794296+00:00",
+  "preparation_only": true,
+  "last_sealed_closure": "closure_record_585.json",
+  "primary": {
+    "source_columns": 31016,
+    "reduced_columns": 14636,
+    "eliminated_leg_columns": 16380,
+    "retained_prior_controls": 10540,
+    "retained_rootxy_f_coordinates": 4095,
+    "exact_six_by_six_inversions": 2730,
+    "exact_block_coefficient_solves": 2730,
+    "rank_certificate_entries": 98280,
+    "inverse_nonzeros": 98280,
+    "graph_coefficient_nonzeros": 65520,
+    "original_scalar_column": 78790,
+    "source_scalar_column": 31015,
+    "reduced_scalar_column": 14635,
+    "all_inequalities_retained": true,
+    "conditions_discarded": 0,
+    "statistics": {
+      "inequality": {
+        "rows": 265967,
+        "nonzeros": 1891613,
+        "constant_rows": 0
+      },
+      "equality": {
+        "rows": 5462,
+        "nonzeros": 52506,
+        "constant_rows": 1366
+      }
+    },
+    "operations": {
+      "inverse_divisions": 106470,
+      "inverse_products": 532350,
+      "graph_coefficient_products": 147420,
+      "graph_RHS_products": 95082,
+      "substitution_coefficient_products": 4870920,
+      "substitution_RHS_products": 1217730
+    },
+    "largest_fraction_bits": 1698,
+    "rounded_coefficients_created": 0,
+    "primal_graph_values": 0,
+    "old_proofs_repeated": false
+  },
+  "preparation_elapsed_s": 32.40419098502025,
+  "audit_elapsed_s": 78.83441986795515,
+  "independent_products": {
+    "inverse_identity": 540528,
+    "graph_identity": 360352,
+    "graph_RHS_identity": 90088,
+    "reverse_multiplier": 7306380,
+    "reverse_coefficients": 10817099,
+    "reverse_RHS": 1545330
+  },
+  "exact_copy_error": 0,
+  "numerical_lp_calls": 0,
+  "numerical_linear_system_solves": 0,
+  "exact_leg_block_inverses_constructed": 2730,
+  "exact_block_coefficient_solves": 2730,
+  "model_calls": 0,
+  "root_calls": 0,
+  "finite_maps": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "primal_vectors_constructed": 0,
+  "analytic_dual_vectors_constructed": 0,
+  "rounded_coefficients_created": 0,
+  "physical_admission": false,
+  "complete_numerical_algorithm_exists": false,
+  "old_proofs_repeated": false,
+  "scientific_execution_recovery": false,
+  "scope": "NEW exact coupled6x6 bilateral-foot graph dimension reduction:16380 physicalleg columns/equalities eliminated,14636 originalretainedcoordinates,all265967inequalities and5462remainingequalities. Originalphysicalconstraints representedbyexactgraphs,notwaived. ExactREAL projectionto578/572zeroFACEonly,possiblyempty/proper; no finiteextension/feasibility/performance claim. New2730exactblockinverses/solves counted;no numericalLP/primalpoint/actualmodel/root. Newnumericencoding andcompleteboundedpathalgorithm/auditor neededbeforeLP. All64protected/all8unresolved;PPO/holdout unstarted."
+}
