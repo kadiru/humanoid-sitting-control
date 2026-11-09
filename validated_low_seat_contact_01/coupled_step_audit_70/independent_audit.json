@@ -1,0 +1,49 @@
+{
+  "utc": "2026-10-17T09:20:31.223054+00:00",
+  "passed": true,
+  "scope": "Independent arithmetic replay of all210 saved dense trajectory knots and2endpoint records, source hashes, frozen1s inputs, static support, cooked clearance, fixed stance foot/35mm swing targets, nominal pose preservation and schedule arithmetic. Original soft-penalty path and geometry-first refinement both retain their separately computed gates; no physical admission. Bounded unloaded swing attitude and exact flat landing independently checked; joint reserves unchanged. No simulator/optimizer. Pose-only arc/.15 is a nominal reference schedule metric, NOT a proven lower bound on actual PD command time or a dynamic/actuator certificate. Actual fixed-finger COMMAND and command-rate validation remain unperformed.",
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/coupled_step_timing_screen_67/results.json": "30dc4173bb33f4cc3f71b7efa1131e0b9bde890963118870a1e095bfb5a0b446",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/coupled_step_refined_69/results.json": "9719d3777e4441561e225826541d4c63f713603a42fc45af3af1db1c9e7bd810",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_coupled_step_70.py": "122ffd649ac74ceb7269cbfde2a8c7fff971d858f7edb62b49c48f96694f3a80"
+  },
+  "rows": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/coupled_step_timing_screen_67/results.json",
+      "parameters": [
+        0.17094008681814118,
+        0.4020468618114556
+      ],
+      "length_m": 0.1,
+      "knots": 105,
+      "max_replay_error": 1.9670360260466918e-16,
+      "failed_knots": [],
+      "model_screen_passed": false,
+      "min_clearance_mm": 3.6241370466431473,
+      "max_foot_position_error_mm": 1.1249196086743642,
+      "max_foot_orientation_error_deg": 0.4935754644914643,
+      "nominal_pose_schedule_at_0_15_rad_s": 13.690717942685543,
+      "min_actual_swing_sole_height_m": 0.02228283256393259
+    },
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/coupled_step_refined_69/results.json",
+      "parameters": [
+        0.17094008681814118,
+        0.4020468618114556
+      ],
+      "length_m": 0.1,
+      "knots": 105,
+      "max_replay_error": 1.9670360260466918e-16,
+      "failed_knots": [],
+      "model_screen_passed": false,
+      "min_clearance_mm": 3.6241370466431473,
+      "max_foot_position_error_mm": 1.1249196086743642,
+      "max_foot_orientation_error_deg": 0.4935754644914643,
+      "nominal_pose_schedule_at_0_15_rad_s": 13.690717942685543,
+      "min_actual_swing_sole_height_m": 0.02228283256393259
+    }
+  ],
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}
