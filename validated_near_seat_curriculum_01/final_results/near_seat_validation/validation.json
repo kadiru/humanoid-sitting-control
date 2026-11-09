@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "counts": {
+    "fixed": {
+      "stable": 18,
+      "strict": 18,
+      "physical": 0
+    },
+    "fixed_x": {
+      "stable": 5,
+      "strict": 0,
+      "physical": 0
+    },
+    "rolling": {
+      "stable": 18,
+      "strict": 18,
+      "physical": 0
+    }
+  },
+  "initial_states_exact": true,
+  "initial_settling_no_failure_or_slip": true,
+  "effort": {
+    "0.1": {
+      "whole20s": {
+        "rolling_Nm2": 89.55442810058594,
+        "fixed_Nm2": 92.62232971191406,
+        "change_percent": -3.3122699686677137,
+        "rolling_RMS_Nm": 1.5556762218475342,
+        "seat_vertical_load": 0.741192102432251,
+        "common_successes": 9,
+        "sampling_seconds": 0.1
+      },
+      "last10s": {
+        "rolling_Nm2": 90.15077209472656,
+        "fixed_Nm2": 92.62223052978516,
+        "change_percent": -2.6683210077345643,
+        "rolling_RMS_Nm": 1.5609220266342163,
+        "seat_vertical_load": 0.7513364553451538,
+        "common_successes": 9,
+        "sampling_seconds": 0.1
+      },
+      "last5s": {
+        "rolling_Nm2": 90.15087127685547,
+        "fixed_Nm2": 92.6221694946289,
+        "change_percent": -2.6681497866628434,
+        "rolling_RMS_Nm": 1.5609228610992432,
+        "seat_vertical_load": 0.7513359785079956,
+        "common_successes": 9,
+        "sampling_seconds": 0.1
+      }
+    },
+    "0.2": {
+      "whole20s": {
+        "rolling_Nm2": 94.16020965576172,
+        "fixed_Nm2": 140.15133666992188,
+        "change_percent": -32.81533241632678,
+        "rolling_RMS_Nm": 1.592431664466858,
+        "seat_vertical_load": 0.7243387699127197,
+        "common_successes": 9,
+        "sampling_seconds": 0.1
+      },
+      "last10s": {
+        "rolling_Nm2": 90.90966796875,
+        "fixed_Nm2": 140.15155029296875,
+        "change_percent": -35.1347396595221,
+        "rolling_RMS_Nm": 1.5674796104431152,
+        "seat_vertical_load": 0.7458033561706543,
+        "common_successes": 9,
+        "sampling_seconds": 0.1
+      },
+      "last5s": {
+        "rolling_Nm2": 90.90989685058594,
+        "fixed_Nm2": 140.15167236328125,
+        "change_percent": -35.134632846233735,
+        "rolling_RMS_Nm": 1.567481517791748,
+        "seat_vertical_load": 0.7458051443099976,
+        "common_successes": 9,
+        "sampling_seconds": 0.1
+      }
+    }
+  },
+  "scope": "Near-seated physical reference validation, not PPO or standing success.100ms sampled torque metrics; all-tick stability/contact/friction/slip counts."
+}
