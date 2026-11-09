@@ -6,8 +6,13 @@ contact/load estimation, and physical scoring.
 
 This repository was first imported on 2026-11-09. The commits group existing
 work by subsystem; they are **not** a reconstruction of historical Git commits.
-Versioned experiment directories and their original timestamps, receipts, and
-hashes remain the provenance record.
+Versioned experiment directories and their recorded timestamps, receipts, and
+hashes remain the provenance record. The [reconstructed saved-history branch](https://github.com/kadiru/humanoid-sitting-control/commits/reconstructed-saved-history/)
+now exposes 773 saved record groups as separate archive commits. These commits
+were created now; they do not invent original authors, dates, or unsaved edits.
+Archive order follows folder labels and local record numbers, not a verified
+global edit chronology. Its final tree exactly matches the complete seven-commit
+import (24,267 tracked files). See [reconstruction inventory](repository_metadata/reconstructed_history.json).
 
 ## Current result
 
