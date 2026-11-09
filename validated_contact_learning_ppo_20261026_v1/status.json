@@ -1,0 +1,13 @@
+{
+  "state": "stopped",
+  "error": "AssertionError(('INDEXED_ZERO_IDENTITY', 'estimated_root_x'))",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/scripts/launch_contact_ppo_v1.py\", line 94, in <module>\n    job('indexed_zero',cmd('indexed_zero',updates=2));indexed()\n                                                      ^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/scripts/launch_contact_ppo_v1.py\", line 71, in indexed\n    n=len(a[k]);assert np.array_equal(a[k],b[k][-n:],equal_nan=True),('INDEXED_ZERO_IDENTITY',k)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('INDEXED_ZERO_IDENTITY', 'estimated_root_x')\n",
+  "completed": [
+    "unit_audit",
+    "old_zero",
+    "calibrate",
+    "indexed_zero"
+  ],
+  "seconds": 1130.827112086,
+  "retry": false
+}
