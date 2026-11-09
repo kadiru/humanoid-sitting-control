@@ -1,0 +1,14 @@
+{
+  "correction": "Remove the inherited pelvis-only preliminary footprint rejection from a proximal-thigh contact construction. This check was based on an unused pelvis target: V6 endpoint residual already solves the actual legal support footprint jointly with feet,balance and12mmgap. Both V6/V7 stopped before any pose solve.",
+  "unchanged": "Actual22mmobserved support inset in endpoint residual and independent20mminset throughout path; all original joint/action/timing/hover and189pose6mmfullmesh checks. Same45degree object orientation, corrected connected camera points, cold measured standing initialization. No failed solver vector.",
+  "resources": {
+    "cases": 2,
+    "seconds_per_case_total": 45,
+    "CPU_threads": 2,
+    "physics_steps": 0,
+    "PPO_updates": 0,
+    "automatic_retries": 0
+  },
+  "source_audit_required": true,
+  "physical_success": false
+}
