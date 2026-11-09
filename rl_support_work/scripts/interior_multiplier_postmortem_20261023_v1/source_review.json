@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-23T17:11:10.624368+00:00",
+  "review_passed": true,
+  "classification": "Single-owner source review; separate independent postmortem implementation",
+  "checks": [
+    "positive_row",
+    "negative_row",
+    "positive_zero",
+    "negative_zero",
+    "positive_subnormal",
+    "lower_negative",
+    "upper_positive",
+    "unbounded_upper_negative",
+    "all_row_block_boundaries",
+    "synthetic_npz_decoding_preserves_words"
+  ],
+  "synthetic_checks_count": 10,
+  "no_study_arrays_loaded": true,
+  "review": [
+    "Producer interprets immutable raw IEEE754 words; auditor separately loads only marginals and native bounds through NumPy and uses scalar predicates.",
+    "Both preserve all failures and perform no sign correction, tolerance application, dual/primal admission or optimization.",
+    "Original solver, KKT residual/gap arithmetic, exact-margin proof and rejected primal are never evaluated. This is new failure attribution, not a repeated solver/audit or candidate reuse.",
+    "Hard shared45s cap includes source/input/runtime hashes, loads, report construction and independent attribution audit; producer30s reserves15s for auditor. Whole process wall must also fit45s.",
+    "Worst-case994645 records below512bytes each; no inner products or rational certificate, one worker at a time with40GiB cap.",
+    "Original source, output, rejected candidate and consumed one-shot authorization remain untouched. No exception or future launch permission is asserted."
+  ],
+  "source_read_failure": "Remote rg unavailable during wrapper source read; Python text fallback succeeded. No scientific data loaded by that failed read."
+}

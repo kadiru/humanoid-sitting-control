@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "name": "Actual hard-constraint reserve construction",
+  "status": "PREPARED_UNAPPROVED",
+  "problem": "The completed two-gap cycle reduced nonlinear mismatch24.4563% but introduced188 newly negative hard rows. Auxiliary feasibility did not preserve actual model feasibility.",
+  "experiment": "One new cold primary and conditional interior solve, followed only on audited success by one unchanged finite encoding and fresh nonlinear evaluation.",
+  "scientific_question": "Can a direction that protects all actual linearized hard rows, with a common reserve for measured finite/nonlinear error, achieve useful mismatch descent and retain actual feasibility?",
+  "initialization": {
+    "kind": "Cold solver; no x0/basis/warm start",
+    "accepted_origin": "finite_model_step_20261023_v1",
+    "current_state": "targeted_gap_primary_20261023_v1/state.npz",
+    "merit": 0.08605330623059242,
+    "last_rejected_cycle_not_used": true,
+    "physical_best": "best09,64/72clean;all8failuresunresolved"
+  },
+  "equations": [
+    "z0_s=(accepted X_s, fresh accepted Y_s); T_X=P_X; T_Y=J_accepted*P_X. Fixed states have zero profile and zero tangent.",
+    "For every kept hard signed source row i, rhat_i(d)=(c_i+M_i*(z0+T*d))/scale_i, scale_i>0. Canonical aliases are combined before absolute values.",
+    "kappa_i=sum_j |M_ij|*profile_j / scale_i, with profile=(original X feature_scale,original Y sigma); no new profile tuning.",
+    "A retains all original constraints and both gap targets; minimizes the original primary epigraph; additionally rhat_i(d)>=0 for all156647 hard rows.",
+    "B retains original interior constraints and both gap targets at A-derived ceiling(mu+theta)/2; maximizes original eta in[0,0.5]; additionally rhat_i(d)>=kappa_i*eta.",
+    "Finite binary64 coefficients are inward compensated over finite parameter boxes derived from exact signed-unit original interval witnesses. Both stages explicitly intersect original bounds with these outward witness boxes.",
+    "B reuses A encoded rows/RHS and appends upward-rounded kappa; exact new returned-row tests imply the unrounded raw inequalities. No point or multiplier editing.",
+    "C retains alpha1 and original205 binary64 drops/pivot203/U=2^-59 finite map. Fresh model zfin must satisfy |zfin_j-(z0+Td)_j|<=eta*profile_j for every feature used by a kept hard row; also check all unscaled actual hard rows and tangent reserves exactly."
+  ],
+  "target_premise_associations": {
+    "hard_rows": 156647,
+    "source_signed_rows": 331888,
+    "states": 1410,
+    "active_states": 1365,
+    "feature_order": "X24,Y51; canonical original row M and positive scale, fixed/varying masks and P/H/interval owners checked by adapter and independent audit.",
+    "retained_gap_rows": [
+      214643,
+      215327
+    ],
+    "gap_state_pairs": [
+      [
+        622,
+        1273
+      ],
+      [
+        1400,
+        631
+      ]
+    ],
+    "gap_buffer": "2^-20",
+    "parameter_dimension": 78790,
+    "original_control_intervals": 11906,
+    "varying_feature_intervals": 80155,
+    "drop_intervals": 206
+  },
+  "success_tests": [
+    "A: full strengthened numerical primal/equality/box/stationarity/absolute-gap<=1e-9, exact dual signs and infinite-bound zeros, unchanged primal/marginals, exact new guard/box checks, both gap slacks>=0 and >=1% predicted mismatch reduction.",
+    "B: full strengthened optimality tests as A, both gap rows, unchanged92267 original exact interval margins strictly positive; eta>0 and all new raw reserve implications verified through exact encoded guard/box tests.",
+    "C: original finite invariants and independent audit; >=1% actual mismatch reduction, original filter/auxiliary-domain gate, both actual gap targets nonnegative, no newly negative hard rows or worsened worst violation; additionally all actual kept-hard rows and reserves exactly nonnegative and all used feature errors within reserves.",
+    "All producer and independent audit work and finalization within each total cap. Positive process exit alone is insufficient. No claims of simulator/controller repair from numerical acceptance."
+  ],
+  "scope_and_limits": {
+    "stage_caps_seconds": [
+      600,
+      600,
+      45
+    ],
+    "all_audits_included": true,
+    "aggregate_address_space_gib": 40,
+    "cycle_executions": 1,
+    "max_cold_solves": 2,
+    "max_finite_maps": 1,
+    "max_fresh_value_batches": 1,
+    "max_conditional_J_batches": 1,
+    "retries": 0,
+    "simulation": 0,
+    "PPO": 0,
+    "heldout": 0,
+    "old_rejected_point_reuse": 0
+  },
+  "independent_audit": "Single execution owner. Separate Fraction reference for producer dyadic state/row/encoding; distinct integer accumulator for returned new rows; separate Fraction endpoint posterior audit; unchanged original stage audits. These are independent arithmetic implementations, not a second person or agent. Fresh oracle is not evaluated a second time.",
+  "expected_interpretation": {
+    "success": "New accepted nonlinear model iterate; still requires original motion admission and all72 full development trials before any physical improvement claim.",
+    "fail": "Stop at first failure; report infeasibility/deadline/certificate/remainder or actual-row failure. Save completed fresh observations even if posterior audit times out. No automatic retry.",
+    "limitation": "Conditional measured-error certificate, not a global nonlinear feasibility/convergence proof. May fail because eta is too small or nonlinear remainder too large."
+  },
+  "resource_accounting": {
+    "path": "resource_accounting.json",
+    "sha256": "eb0c5ea4490e03be900d235ca6d24b30fceb1acf71ade31e82bacb2cc3620c19"
+  },
+  "stage_contract_sha256": {
+    "A": "dde9ec4feb6fea0511a8782ef63e13ad199a1e85133f2ff1155ad83d266c0f8f",
+    "B": "f9a016310d28157c64451fa006c84bffb876da1888bd930272f2f8f38d011643",
+    "C": "9dd89e86684124380c0172ec31ac81c7254b7b055d74c641af6432ea8b2ef7de"
+  },
+  "governing_context_sha256": "baa22866e235a04c7d64c8fff6bad0c9ebd67030174919552e24892161b89ac5",
+  "approval": {
+    "required": true,
+    "reason": "The prior one-time600/600/45second exception and strengthened-optimality authorization were consumed. This is a different construction and needs a new bounded exception; all remaining numerical and physical gates stay unchanged.",
+    "exceptions": [
+      "single_actual_hard_reserve_construction",
+      "600_600_45_seconds_including_audits",
+      "strengthened_problem_optimality"
+    ],
+    "earlier_approvals_reused": false
+  },
+  "next_after_model_success": "Assess original numerical motion admission. Only an admitted controller may enter the full72-case retention test; then the specified new PPO comparison, reserved evaluation and complete subminute video. This proposal authorizes none of those downstream launches."
+}

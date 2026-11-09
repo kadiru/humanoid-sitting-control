@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "classification": "Implemented streaming actual-hard reserve components, synthetic validation only",
+  "scientific_launch_ready": false,
+  "scientific_executions": 0,
+  "base_specification": {
+    "path": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/actual_hard_reserve_prototype_v1/specification.json",
+    "sha256": "95a3bff8866434abfa42be7eb37413c9a956c8265c0d87f45129148037f11896"
+  },
+  "equations_unchanged": true,
+  "clarifications": [
+    "The common positive source row scale is retained. Raw affine numerators remain exact dyadics through aliasing, composition and RHS compensation; no millions-of-Fraction row cache is retained by the producer.",
+    "Witness boxes must also be installed as explicit outward-rounded variable bounds in the new primary/interior problems. Their exact satisfaction is mandatory at return. Original bounds are intersected/preserved. Strengthened optimality must include these bounds and all new rows.",
+    "C uses the numerical eta of the untouched new B point for the new posterior reserve. The separate old exact interval clearance still must be strictly positive and is not substituted, rescaled or edited.",
+    "All156647 kept hard rows including fixed/constant rows are required. Missing/duplicate rows, a negative constant, nonfinite encoding, missing parameter box or negative exact returned reserve terminate.",
+    "The a-posteriori guarantee is conditional on the measured finite nonlinear errors fitting the reserved intervals. The reserve may be too small; neither feasibility nor convergence is established."
+  ],
+  "implemented": {
+    "dyadic.py": "Exact bounded binary arithmetic and directed conversion",
+    "assemble.py": "Full hard-mask streaming assembly, shared physical tangent blocks, unit interval box witnesses, inward numerical encoding",
+    "adapter.py": "Inherited X24/Y51/75-feature and original CSR/interval adapters; explicit actualY rather than auxiliary Y; new H trace bindings",
+    "audit.py": "Separate Fraction implementations of state composition, box provenance, all-row encoding, exact point and posterior row checks; no producer imports",
+    "returned.py": "Posterior finite/nonlinear feature error and all-hard row certificate using new exact physical increments",
+    "packed.py": "Bounded CSR buffers, exhaustive audited stream consumption, explicit variable bounds, exact untouched new-point gate"
+  },
+  "tests": {
+    "latest": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/actual_hard_reserve_stream_v1/synthetic_run_04.json",
+    "sha256": "40c049dc27930504a01e9342f8641cf6300a3878e385c8e6ceeede81b9f95efa",
+    "unique_tests_passed": 33,
+    "study_reads": 0,
+    "solver_calls": 0,
+    "model_calls": 0,
+    "test_scope": "Synthetic cases only; study layout assumptions still require real input binding inside an authorized cycle."
+  },
+  "resource_accounting": {
+    "path": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/actual_hard_reserve_stream_v1/resource_accounting.json",
+    "sha256": "422b5a89eeecbfd9ef1ad39becddac3df2609265d6052a0c78e433fa4b367f1b"
+  },
+  "remaining_launch_requirements": [
+    "Wire the components into a complete primary/interior/finite runner with explicit preserved prefixes and independent full-input/output audits.",
+    "Freeze all source/input/runtime identities and complete integrated resource accounting; include every independent pass and finalization in shared externally enforced stage limits.",
+    "Only after that preparation, obtain any needed new strengthened-optimality/time exception. Prior cycles are consumed; no permission request is pending."
+  ],
+  "unchanged_physical_status": "best09 64/72 clean; all8 unresolved; no new simulation/PPO/holdout"
+}

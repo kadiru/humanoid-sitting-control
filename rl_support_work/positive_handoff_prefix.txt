@@ -1,0 +1,14 @@
+# Current continuation — positive-slope repair and earlier PPO (2026-10-16)
+
+Read `rl_support_work/POSITIVE_SLOPE_STATUS.md` and remote `docs/POSITIVE_SLOPE_PROTOCOL.md` first. Work directly by SSH kfuUbuntu; never launch another coding agent. Data `/data/humanoid-sitting-perception/positive_slope_01`.
+
+Repair06 independently validated: reference and existing59117 with conditional11/15s handoff each18/24 clean,22stable; exact first10s/startups. Current original reference/policies14clean. Six low/steep stress trials remain, including two physical housing contacts at36cm/+20deg. Train only9clean geometries×2 after explicit pre-main revision, retain all stress cases in comparisons. Current policy preserved exactly on14previous clean cases; repaired59117 saves1.0346%whole20/6.5922%final5torque² vs repairedreference on18commonclean; these are not newPPO gains.
+
+`positive_launch_v2` gates independent `positive_preflight_v2_gpu0/1`, then freezes and launches seeds61111/61117 only if passed. Inspect launch_v2_status.json/preflight_v2_status_gpu*.json before claiming main started. Proposed12updates perseed in4blocks,219600physics/seed,439200total;earlyintervention9→8→6s only through clean/effort gates. Conditional frozenparent11/15s,414sensorinputs,3symmetric boundedactions. Actual materialaudit disproved treating legacy0.6force ratio as staticcapacity;0.90warnings andactualslip/contact definitions remain unchanged. All failedpreflights/probes preserved. Holdout24trials is stillclosed untilbothfinals/selections.
+
+Main/freeze/independentverifier/report/finalizer built with separate v2 scripts. Full final comparison includes oldreference/current59111/59117/60117, repairedreference and repairedparent. Complete under60s outcomevideo;nohiddenfailures. Agent must independently rerunverified_03,copy/hashcheck/visuallyinspectfinal_export_01,updatehandoffs,anddeliveractualMP4beforepausingautomation.
+
+`positive_repair_export_02` creates updated interim repair_validation_export_02 (168developmentepisodes,old5controllers+repair06reference/parent). Copy to localvalidated_positive_slope_01/repair_validation_results whencomplete; do not call it finalPPO/unseen results. Olderdiagnosis_results alreadycopiedandvisuallyinspected usesrepair01/02. Automationfinish-resting-ppo-comparisonACTIVE with updatedprompt. No policy promoted.
+
+---
+

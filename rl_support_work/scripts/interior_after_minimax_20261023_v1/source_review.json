@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-23T16:52:27.511073+00:00",
+  "kind": "Single-owner source review with separately implemented input and return audits; no external reviewer or scientific execution claimed",
+  "review_passed": true,
+  "execution_authorized": false,
+  "assertions": [
+    "Uses new accepted-state full input, not the initial-state interior formulation. Accepted-state proof identity is inherited, with no replay.",
+    "Uses saved actual primary ceiling0.061901382259917585. The primary witness is never loaded as a numerical point or used as a warm start.",
+    "All652529 original rows and1366 zero equalities retained;184534 reserved-interval eta rows appended. Independent input checker compares coefficients and newly computed RHS without importing builder.",
+    "Unchanged full original numerical KKT functions were AST-compared to prior audited functions. Both require primal/dual/absolute gap<=1e-9, finite output and valid dual signs.",
+    "Exact unscaled margin computed using Fraction products; separate auditor uses dyadic integer accumulation and checks every trace row. Numerical eta alone never admits a point.",
+    "Nine synthetic fixtures passed on the target Python environment, covering boundary/outside rejection, subnormal exact products, trace corruption, full-shape numerical success/failure and blocked authorization. No study data or solver loaded.",
+    "All eight finalized Python sources compile on target Python; source hashes returned by compiler match local sources.",
+    "The source contains one linprog call; no new primary evaluation, finite map, mechanics/model call, simulation, PPO, holdout or retry.",
+    "Source/input/runtime hashes, input identity checks, imports, construction, audits, output writing and return checks are charged to one600-second clock. Hard producer480s and final600s endpoints; one scientific child at a time and40GiB address-space cap.",
+    "Separate outer owner claim prevents repeat launch; /usr/bin/time final process wall must also be <=600s before any candidate is accepted. Timeout or overshoot is terminal, including finalization.",
+    "Authorization and contract are false until scoped human approval; consumed primary approval cannot authorize this gate."
+  ],
+  "resources_sha256": "dd0e644f798b53c772a63587018117755f86c75a19962f65d6ce140f6ab7c3e6",
+  "local_checks_sha256": "4299d5032f7181f191fe954542c952517d6af1e7529a1288c0056e6b77c0c428",
+  "remote_checks_sha256": "12849c0942126cb3d2ab4147e539f9c8b5637ff08395ab1e1a238ae4b7e13dba",
+  "remote_final_compile_sha256": "88e059a07983c549b1e35f4296f0b8b9722e08696da1a8f105234961bc3df54a",
+  "limitations": [
+    "No convergence or peak native factorization cost guarantee;600s and40GiB are limits.",
+    "No scientific arrays evaluated during this preparation; source/preparation success is not model or physical success.",
+    "Exact margin alone is not nonlinear or physical admission; later finite/current-state model, full72-case, PPO and holdout gates remain."
+  ]
+}

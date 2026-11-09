@@ -1,0 +1,15 @@
+One full minimax diagnostic — prepared, not authorized or executed
+
+The last solve required the linearized mismatch to become exactly zero in one step. It reported that restricted problem infeasible after28.38seconds. That result does not establish that a smaller nonzero mismatch is unattainable, or that sitting is physically impossible.
+
+Proposed test: at the same accepted finite research state, solve the already saved full-original minimax problem once. Minimize its original mismatch scalar t instead of fixing it to zero. Keep all652529 original inequalities, both consistency signs, all closed bounds, trust, guards and tolerances. Use one cold HiGHS-IPM solve with its existing settings, without any old internal/rejected vector or warmstart.
+
+Accept a linear research witness only if the unchanged returned point and backend duals pass the full original numerical checks at1e-9 and an independent calculation confirms a modeled mismatch strictly below the current0.12270472005373632. Preserve the actual midpoint ceiling for any separately justified later interior step. A primary point is never decoded or executed.
+
+Limits:45seconds TOTAL, including input/runtime verification, imports, loading, solver, all return checks and independent audit;40GiB address space per worker, one scientific worker at a time. The solver receives only the time remaining in that clock. One cold solve, no retry or extension. Any failed check, absent point, deadline or allocation failure closes the attempt. No guarantee it will return within45seconds.
+
+This diagnostic includes no interior solve, finite map, mechanics/J evaluation, motion, simulation, PPO or holdout. Physical validation criteria are unchanged. Any future usable controller still needs a positive finite-encoding margin, exact finite return, all model/runtime/geometry checks and72-trial retention before PPO. Current physical performance remains64/72clean.
+
+Why approval is needed: governing_context.txt line154 says “Firstabsent/nonfinite/uncertified/infeasible/deadline terminatesENTIREconstruction,notrusttimeoutseries/otherfaces.” Lines135/172 also exclude a “same-matrixreencoding/nonzeroepigraphfacesequence” as a new construction. This proposal deliberately changes the failed zero-face formulation, so it needs a specific exception to those rules. It does NOT request a larger time allowance or looser physical criteria. Both previously enlarged diagnostic approvals are consumed.
+
+Reviewable implementation: producer.py, independent_return.py, supervise.py and common.py. resources.json freezes equations, target/premise associations, operation/storage costs and finite-return obligations. input_runtime.json binds the existing inputs/runtime. authorization.json blocks execution while execution_approved is false. The prior terminal failure and accepted38% model-merit reduction remain preserved.

@@ -1,0 +1,12 @@
+"""Saved-only index of570/571; no scientific arithmetic or optimizer."""
+from pathlib import Path
+import json,datetime
+D=Path('/data/humanoid-sitting-perception/low_seat_contact_01');read=lambda p:json.loads(Path(p).read_text())
+def main():
+ for name in ['coupled_support_preparation_exit_570.json','coupled_support_audit_exit_571.json']:assert read(D/name)['actual_exit']==0
+ p=read(D/'coupled_support_preparation_570/preparation.json');a=read(D/'coupled_support_audit_571/independent_audit.json');assert p['passed'] and a['passed']
+ counts={k:sum(s[k] for s in p['systems'].values()) for k in ['eligible_targets','selected_targets','unmatched_untested','new_positive_ratio_support_evaluations','new_residual_endpoint_products','proved_removed_rows','insufficient_targets','protected_rate_premises']}
+ counts.update({k:sum(s[k] for s in a['systems'].values()) for k in ['independent_positive_conic_coefficient_products','independent_positive_conic_rhs_products']})
+ r=dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),scope='Saved-result indexing only; exact coupled-rate plus inherited-box conic certificates, no new scientific calculation.',counts=counts,systems=p['systems'],preparation_elapsed_s=p['elapsed_s'],audit_elapsed_s=a['elapsed_s'],arithmetic_passed=True,physical_admission=False,preparation_only=True,new_closure=False,last_sealed_closure='closure_record_569.json',all_original_variables_retained=78791,original_cost_domain_equality_unchanged=True,exact_real_equivalence=True,tolerance_feasible_set_equivalence_claimed=False,unmatched_targets_untested=True,negative_results_not_nonredundancy_proofs=True,numerical_lp_calls=0,robot_lp_calls=0,small_numerical_lp_calls=0,linear_system_solves=0,model_calls=0,root_calls=0,finite_maps=0,physics_ticks=0,policy_updates=0,new_endpoints=0,old_box_tests_repeated=0,old_proofs_replayed=0,execution_recovery=False,authoring_read_failure='Read-only schema inspection e77eb4 requested group rather than observed groups; no scientific program executed.',new_solver_exists=False,new_candidate=False,new_actual_path=False,protected_clean=64,unresolved_cases=8,repair_complete=False,task_complete=False,automation_status='ACTIVE',current_reviewed_report='progress_report_568/findings.html',video='all_attempts_video_307/all_attempts.mp4',video_rerendered=False)
+ out=D/'coupled_support_scope_571.json';assert not out.exists();out.write_text(json.dumps(r,indent=2));print(json.dumps(r,indent=2),flush=True)
+if __name__=='__main__':main()
