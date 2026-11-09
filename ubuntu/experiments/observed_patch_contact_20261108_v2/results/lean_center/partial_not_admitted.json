@@ -1,0 +1,94 @@
+{
+  "seed": {
+    "source": "Original current encoders/static body hulls/current observed back plane only",
+    "pitch_rad": 0.38526074585326614,
+    "root_position": [
+      -0.13896818439433467,
+      0.0,
+      0.0
+    ],
+    "torso_pelvis_plane_separation_m": 0.0060100000000071485,
+    "reach_interval_m": [
+      -0.6,
+      0.007052493999437464
+    ],
+    "full_3D_foot_residual": 2.2676392015562544e-16,
+    "planar_knee_reserve_rad": 0.001,
+    "balance_certified": false,
+    "collision_certified": false,
+    "physical_success": false,
+    "spatial_feet": [
+      {
+        "side": "left",
+        "updates": 2,
+        "residual_history": [
+          2.3689464104898812e-05,
+          2.1773327585350444e-10,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "side": "right",
+        "updates": 2,
+        "residual_history": [
+          2.3996189818205108e-05,
+          2.236970608748834e-10,
+          2.2676392015562544e-16
+        ]
+      }
+    ],
+    "maximum_initialization_joint_correction_rad": 5.191875449115155e-05,
+    "root_and_contact_point_bitwise_unchanged": true,
+    "construction": "Original geometric seed followed by bounded bilateral6D foot closure; no terminal point read",
+    "endpoint_material_local": [
+      -0.054938774555921555,
+      0.0025237086229026318,
+      -0.1139453873038292
+    ],
+    "feature_selection": "Original analytic seed only; no failed candidate",
+    "readiness_initialization": "Exact maximum across ALL five constrained load levels, not only unloaded command",
+    "readiness_epigraph": 0.22651841838569883,
+    "initial_full_inequality_minimum": -0.0032419307651470053,
+    "expanded_housing_plane_residuals_m": [
+      -0.0032419307651470053,
+      -0.0032231314230069252
+    ],
+    "expanded_housing_vertex_counts": {
+      "left_hip_pitch_link": 1690,
+      "right_hip_pitch_link": 1690
+    }
+  },
+  "accepted_endpoint": false,
+  "optimizations": [
+    {
+      "stage": "load_transfer_endpoint",
+      "success": false,
+      "iterations": 1,
+      "equality": 2.2676392015562544e-16,
+      "inequality": -0.0032419307651470053,
+      "message": "Inequality constraints incompatible",
+      "foot_residual": 2.2676392015562544e-16,
+      "gap_m": 0.0,
+      "camera_minimum_m": 0.0,
+      "objective": 1.1394465977516959,
+      "solver_status": 4,
+      "readiness_graph": 0.22651841838569883,
+      "original_readiness_minimum": 0.0,
+      "retained_coordinates_bitwise_unchanged": true,
+      "all_original_rows_checked": 4932,
+      "negative_rows": [
+        {
+          "row": 4409,
+          "name": "left_hip_pitch_housing_clearance",
+          "residual": -0.0032419307651470053
+        },
+        {
+          "row": 4410,
+          "name": "right_hip_pitch_housing_clearance",
+          "residual": -0.0032231314230069252
+        }
+      ]
+    }
+  ],
+  "state_evaluations": 454
+}
