@@ -1,0 +1,26 @@
+{
+  "inputs": [
+    "depth",
+    "camera intrinsics/extrinsics",
+    "encoders",
+    "gravity",
+    "static robot kinematics/collision geometry"
+  ],
+  "simulator_truth_used": false,
+  "frame": "Gravity aligned; detected floor z=0; XY origin at current pelvis",
+  "seat_polygon": "Visible patch only; not complete hidden furniture bounds",
+  "measurements": [
+    {
+      "case": 0,
+      "estimated_seat_height_m": 0.34224307003636334,
+      "vertical_pelvis_clearance_m": 0.22751949280937356,
+      "visible_scene_points": 1495
+    },
+    {
+      "case": 8,
+      "estimated_seat_height_m": 0.2767373680442077,
+      "vertical_pelvis_clearance_m": 0.29471208885005373,
+      "visible_scene_points": 1439
+    }
+  ]
+}
