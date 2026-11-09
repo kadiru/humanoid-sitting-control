@@ -1,0 +1,130 @@
+{
+  "training_receipt.json": {
+    "owner_pid": 2029127,
+    "freeze_sha256": "2fe10ed20811723d9ed9fe08f6e311b773e34283f3dd20bbb54a9413f67265f1",
+    "protocol_sha256": "80dc5a563d772d97b78c1145c3e1ccb0f33a940b40e5c1bc2b7b40dd800b19aa",
+    "seed": 65011,
+    "gpu": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4",
+    "scientific_owners": 1
+  },
+  "prior_armchair11/independent_audit.json": {
+    "passed": true,
+    "clean": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "stable": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "clean_count": 11,
+    "rows": 11,
+    "independent_reward_equations": true,
+    "strict_predicates_exact": true,
+    "physical_tolerances_changed": false,
+    "numerical_reward_replay_tolerance": {
+      "rtol": 3e-06,
+      "atol": 3e-06
+    },
+    "files": {
+      "trajectory.npz": "2285ff5b771c4b14c32aa43e32bd80d03660dcec3bfc6232c885ab20e00bbca6",
+      "results.json": "f49adf86a4241e238042a35dfee42cf2f963bfe1bed5f50543e4791f595e2dcb"
+    },
+    "mapped": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "validated_clean": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "final_normalized_torque_squared": [
+      0.04426895081996918,
+      0.054411087185144424,
+      0.03172988444566727,
+      0.04399366304278374,
+      0.04399046301841736,
+      0.04395074397325516,
+      0.049881674349308014,
+      0.0506444051861763,
+      0.050618939101696014,
+      0.03741392120718956,
+      0.037132397294044495
+    ],
+    "final_mean_knee_angle_rad": [
+      1.4551503658294678,
+      1.448312759399414,
+      1.4416128396987915,
+      1.4552046060562134,
+      1.455227255821228,
+      1.453993558883667,
+      1.4300618171691895,
+      1.4514986276626587,
+      1.450954556465149,
+      1.4372174739837646,
+      1.4374555349349976
+    ],
+    "final_absolute_mechanical_power_W": [
+      4.253540515899658,
+      4.953797340393066,
+      3.3746066093444824,
+      4.2375593185424805,
+      4.235251426696777,
+      4.35256814956665,
+      5.393252372741699,
+      4.641575813293457,
+      4.652771949768066,
+      4.5365166664123535,
+      3.7931575775146484
+    ]
+  },
+  "training_65011/first_update_audit.json": {
+    "passed": true,
+    "frozen_priors_unchanged": true,
+    "checkpoint": "first_update.pt",
+    "changes_l2": {
+      "actor": 0.002006605010416256,
+      "critic": 0.26366699283249306
+    },
+    "updates": 1,
+    "actor_steps": 4,
+    "critic_steps": 4,
+    "checkpoint_sha256": "b0ac163c89d744b8b996bc16a2b791c53212cc3045676319e5fd5b00a2f6e9f9"
+  }
+}
