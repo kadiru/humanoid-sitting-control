@@ -1,0 +1,549 @@
+{
+  "sources": {
+    "eval_54211_holdout": {
+      "preserved_source_count": 23,
+      "source_hashes": {
+        "/home/kadir/humanoid-sitting/IsaacLab/../scripts/run_supported_transition.py": "d162f18110a737afce655ea8fd8c7ee897b31dcebee727481f026249988bad53",
+        "/home/kadir/humanoid-sitting/scripts/run_supported_postures.py": "a906a72c600f4334f1cd5b276ab7fa24ad365c5ae95284df9274424ef5dd6e7a",
+        "/home/kadir/humanoid-sitting/scripts/run_resting_posture.py": "2579e9c98a9cd7fbde8665acd542255fe0736f684b0c1d2d2f768b05a6b2fc21",
+        "/home/kadir/humanoid-sitting/runs/g1_kinematics_geometry_04/model.json": "fe29aa3c0b8da033c35b8abc1c40ae93b0706e8186f9163ad56d8e31c4d07690",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/supported_surface.py": "ffba8dd6c3d34e085839525d158051fc39e2d07ede7eb075002180733985c5fc",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/resting_objective.py": "be7db8f9462c7517867e672193a9186d317ef39ddd85590f17abf3c5d62adb73",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v12.py": "657c02b8444194caa599528057e1b81edb0da3e372dc21dfe40b30bdbad24aee",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/config.py": "4cd8f537466bfcb4546dd0a04c9d554ae1ff9533eb5f01127ae51762734dcec7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/balanced_reference.py": "e7e3eb4d2f49fdee0bd686ac10fa39dddac3615340decdee14a382ed318f9c11",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/env.py": "bd9d11fbf8a56275cceb86c4c150874968ca5a68aab15a46369ceb797731ff93",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/curriculum.py": "4d182ebfdd82d4058a39fa190900a2fbe3faaaedf9a8e9a96f5950b94b30f526",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_reference.py": "9872a86151cb632b3e57934ec6096bc6014bf254057d17cf8ee452b8b216b319",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_feedback.py": "e9a446b4a1c00f9fa35aa093f566169eda154203c9873d973982bf60c77dc90d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_curriculum.py": "e7ab13b459ed36f10e8dbea9d87ee01ba2f4a9c8a451b8d4d8248fedef92a5d7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/student.py": "9810d4a53e2575a1c1cb1b21133accbb38f583ea44cdf4cb4113e47baed2074d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/mdp.py": "2b13162c7d7cca5ec155f5e439377593cb4918e3affbfbb5cff47248e997d54d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v11.py": "c12e09097fbb82bd5dfdb8de7411ae02e0c692d777d335b0e695509056bb6306",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/full_transition.py": "e44f6a77f51453d47e1f2456b793b8a1eee9ba32f1c29b176ce46dce7a8f7e4c",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/furniture.py": "5e8b8dd617309604353f9f7f1ad25be528842ea5a87e4d0da1883cabd60bbf49",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact.py": "81aa9ec26a085b61b92506cf2a8942d9f80959a815ca2457f9e5a1f0e072f157",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded.py": "5307f57a43387519f2dd8c9bb2b7dbb45469f5b5b215d0d7204376aa60107185",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/__init__.py": "9eb7565301a20ba0e3c072201b2551ef41b9ec7257e7caac83bd6b67c91a4ef0",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact_v10.py": "2bafa5bdd45cb8a3604f7dd32a2fba39de6bf35b7728c39765fc0af96d400ec8"
+      },
+      "bank_hashes": {
+        "geometry.json": "4c05b990738c3c3a4136ec69cae2129386af179ecae057e41eae682e0d8a2791",
+        "reset_candidates.npz": "30a7ca792307191cc084b8c0d4dd61882d6186df5633438d79fd755f972644fe",
+        "candidates.npz": "17e9e723589ccc8b90568507e61a16605520896c3e45c34df3e331d2f00e34b8"
+      }
+    },
+    "eval_54211_train": {
+      "preserved_source_count": 23,
+      "source_hashes": {
+        "/home/kadir/humanoid-sitting/IsaacLab/../scripts/run_supported_transition.py": "d162f18110a737afce655ea8fd8c7ee897b31dcebee727481f026249988bad53",
+        "/home/kadir/humanoid-sitting/scripts/run_supported_postures.py": "a906a72c600f4334f1cd5b276ab7fa24ad365c5ae95284df9274424ef5dd6e7a",
+        "/home/kadir/humanoid-sitting/scripts/run_resting_posture.py": "2579e9c98a9cd7fbde8665acd542255fe0736f684b0c1d2d2f768b05a6b2fc21",
+        "/home/kadir/humanoid-sitting/runs/g1_kinematics_geometry_04/model.json": "fe29aa3c0b8da033c35b8abc1c40ae93b0706e8186f9163ad56d8e31c4d07690",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/supported_surface.py": "ffba8dd6c3d34e085839525d158051fc39e2d07ede7eb075002180733985c5fc",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/resting_objective.py": "be7db8f9462c7517867e672193a9186d317ef39ddd85590f17abf3c5d62adb73",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v12.py": "657c02b8444194caa599528057e1b81edb0da3e372dc21dfe40b30bdbad24aee",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/config.py": "4cd8f537466bfcb4546dd0a04c9d554ae1ff9533eb5f01127ae51762734dcec7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/balanced_reference.py": "e7e3eb4d2f49fdee0bd686ac10fa39dddac3615340decdee14a382ed318f9c11",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/env.py": "bd9d11fbf8a56275cceb86c4c150874968ca5a68aab15a46369ceb797731ff93",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/curriculum.py": "4d182ebfdd82d4058a39fa190900a2fbe3faaaedf9a8e9a96f5950b94b30f526",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_reference.py": "9872a86151cb632b3e57934ec6096bc6014bf254057d17cf8ee452b8b216b319",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_feedback.py": "e9a446b4a1c00f9fa35aa093f566169eda154203c9873d973982bf60c77dc90d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_curriculum.py": "e7ab13b459ed36f10e8dbea9d87ee01ba2f4a9c8a451b8d4d8248fedef92a5d7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/student.py": "9810d4a53e2575a1c1cb1b21133accbb38f583ea44cdf4cb4113e47baed2074d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/mdp.py": "2b13162c7d7cca5ec155f5e439377593cb4918e3affbfbb5cff47248e997d54d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v11.py": "c12e09097fbb82bd5dfdb8de7411ae02e0c692d777d335b0e695509056bb6306",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/full_transition.py": "e44f6a77f51453d47e1f2456b793b8a1eee9ba32f1c29b176ce46dce7a8f7e4c",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/furniture.py": "5e8b8dd617309604353f9f7f1ad25be528842ea5a87e4d0da1883cabd60bbf49",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact.py": "81aa9ec26a085b61b92506cf2a8942d9f80959a815ca2457f9e5a1f0e072f157",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded.py": "5307f57a43387519f2dd8c9bb2b7dbb45469f5b5b215d0d7204376aa60107185",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/__init__.py": "9eb7565301a20ba0e3c072201b2551ef41b9ec7257e7caac83bd6b67c91a4ef0",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact_v10.py": "2bafa5bdd45cb8a3604f7dd32a2fba39de6bf35b7728c39765fc0af96d400ec8"
+      },
+      "bank_hashes": {
+        "geometry.json": "2c94de5caab9ab0e70e1aadd9bc11af797ad0ac4f64bb7a3ccd956361eb352be",
+        "reset_candidates.npz": "65ad8587da1d68ef48a1319396a1b211177d799ce4ab7b729b052232871d9a36",
+        "candidates.npz": "2e5fc43ce5efce6c4d9ee45c6e1e0286ac1ac60e14b89d574144ebf6b9dd2f4d"
+      }
+    },
+    "eval_54217_holdout": {
+      "preserved_source_count": 23,
+      "source_hashes": {
+        "/home/kadir/humanoid-sitting/IsaacLab/../scripts/run_supported_transition.py": "d162f18110a737afce655ea8fd8c7ee897b31dcebee727481f026249988bad53",
+        "/home/kadir/humanoid-sitting/scripts/run_supported_postures.py": "a906a72c600f4334f1cd5b276ab7fa24ad365c5ae95284df9274424ef5dd6e7a",
+        "/home/kadir/humanoid-sitting/scripts/run_resting_posture.py": "2579e9c98a9cd7fbde8665acd542255fe0736f684b0c1d2d2f768b05a6b2fc21",
+        "/home/kadir/humanoid-sitting/runs/g1_kinematics_geometry_04/model.json": "fe29aa3c0b8da033c35b8abc1c40ae93b0706e8186f9163ad56d8e31c4d07690",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/supported_surface.py": "ffba8dd6c3d34e085839525d158051fc39e2d07ede7eb075002180733985c5fc",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/resting_objective.py": "be7db8f9462c7517867e672193a9186d317ef39ddd85590f17abf3c5d62adb73",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v12.py": "657c02b8444194caa599528057e1b81edb0da3e372dc21dfe40b30bdbad24aee",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/config.py": "4cd8f537466bfcb4546dd0a04c9d554ae1ff9533eb5f01127ae51762734dcec7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/balanced_reference.py": "e7e3eb4d2f49fdee0bd686ac10fa39dddac3615340decdee14a382ed318f9c11",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/env.py": "bd9d11fbf8a56275cceb86c4c150874968ca5a68aab15a46369ceb797731ff93",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/curriculum.py": "4d182ebfdd82d4058a39fa190900a2fbe3faaaedf9a8e9a96f5950b94b30f526",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_reference.py": "9872a86151cb632b3e57934ec6096bc6014bf254057d17cf8ee452b8b216b319",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_feedback.py": "e9a446b4a1c00f9fa35aa093f566169eda154203c9873d973982bf60c77dc90d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_curriculum.py": "e7ab13b459ed36f10e8dbea9d87ee01ba2f4a9c8a451b8d4d8248fedef92a5d7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/student.py": "9810d4a53e2575a1c1cb1b21133accbb38f583ea44cdf4cb4113e47baed2074d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/mdp.py": "2b13162c7d7cca5ec155f5e439377593cb4918e3affbfbb5cff47248e997d54d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v11.py": "c12e09097fbb82bd5dfdb8de7411ae02e0c692d777d335b0e695509056bb6306",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/full_transition.py": "e44f6a77f51453d47e1f2456b793b8a1eee9ba32f1c29b176ce46dce7a8f7e4c",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/furniture.py": "5e8b8dd617309604353f9f7f1ad25be528842ea5a87e4d0da1883cabd60bbf49",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact.py": "81aa9ec26a085b61b92506cf2a8942d9f80959a815ca2457f9e5a1f0e072f157",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded.py": "5307f57a43387519f2dd8c9bb2b7dbb45469f5b5b215d0d7204376aa60107185",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/__init__.py": "9eb7565301a20ba0e3c072201b2551ef41b9ec7257e7caac83bd6b67c91a4ef0",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact_v10.py": "2bafa5bdd45cb8a3604f7dd32a2fba39de6bf35b7728c39765fc0af96d400ec8"
+      },
+      "bank_hashes": {
+        "geometry.json": "4c05b990738c3c3a4136ec69cae2129386af179ecae057e41eae682e0d8a2791",
+        "reset_candidates.npz": "30a7ca792307191cc084b8c0d4dd61882d6186df5633438d79fd755f972644fe",
+        "candidates.npz": "17e9e723589ccc8b90568507e61a16605520896c3e45c34df3e331d2f00e34b8"
+      }
+    },
+    "eval_54217_train": {
+      "preserved_source_count": 23,
+      "source_hashes": {
+        "/home/kadir/humanoid-sitting/IsaacLab/../scripts/run_supported_transition.py": "d162f18110a737afce655ea8fd8c7ee897b31dcebee727481f026249988bad53",
+        "/home/kadir/humanoid-sitting/scripts/run_supported_postures.py": "a906a72c600f4334f1cd5b276ab7fa24ad365c5ae95284df9274424ef5dd6e7a",
+        "/home/kadir/humanoid-sitting/scripts/run_resting_posture.py": "2579e9c98a9cd7fbde8665acd542255fe0736f684b0c1d2d2f768b05a6b2fc21",
+        "/home/kadir/humanoid-sitting/runs/g1_kinematics_geometry_04/model.json": "fe29aa3c0b8da033c35b8abc1c40ae93b0706e8186f9163ad56d8e31c4d07690",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/supported_surface.py": "ffba8dd6c3d34e085839525d158051fc39e2d07ede7eb075002180733985c5fc",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/resting_objective.py": "be7db8f9462c7517867e672193a9186d317ef39ddd85590f17abf3c5d62adb73",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v12.py": "657c02b8444194caa599528057e1b81edb0da3e372dc21dfe40b30bdbad24aee",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/config.py": "4cd8f537466bfcb4546dd0a04c9d554ae1ff9533eb5f01127ae51762734dcec7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/balanced_reference.py": "e7e3eb4d2f49fdee0bd686ac10fa39dddac3615340decdee14a382ed318f9c11",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/env.py": "bd9d11fbf8a56275cceb86c4c150874968ca5a68aab15a46369ceb797731ff93",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/curriculum.py": "4d182ebfdd82d4058a39fa190900a2fbe3faaaedf9a8e9a96f5950b94b30f526",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_reference.py": "9872a86151cb632b3e57934ec6096bc6014bf254057d17cf8ee452b8b216b319",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_feedback.py": "e9a446b4a1c00f9fa35aa093f566169eda154203c9873d973982bf60c77dc90d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_curriculum.py": "e7ab13b459ed36f10e8dbea9d87ee01ba2f4a9c8a451b8d4d8248fedef92a5d7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/student.py": "9810d4a53e2575a1c1cb1b21133accbb38f583ea44cdf4cb4113e47baed2074d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/mdp.py": "2b13162c7d7cca5ec155f5e439377593cb4918e3affbfbb5cff47248e997d54d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v11.py": "c12e09097fbb82bd5dfdb8de7411ae02e0c692d777d335b0e695509056bb6306",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/full_transition.py": "e44f6a77f51453d47e1f2456b793b8a1eee9ba32f1c29b176ce46dce7a8f7e4c",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/furniture.py": "5e8b8dd617309604353f9f7f1ad25be528842ea5a87e4d0da1883cabd60bbf49",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact.py": "81aa9ec26a085b61b92506cf2a8942d9f80959a815ca2457f9e5a1f0e072f157",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded.py": "5307f57a43387519f2dd8c9bb2b7dbb45469f5b5b215d0d7204376aa60107185",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/__init__.py": "9eb7565301a20ba0e3c072201b2551ef41b9ec7257e7caac83bd6b67c91a4ef0",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact_v10.py": "2bafa5bdd45cb8a3604f7dd32a2fba39de6bf35b7728c39765fc0af96d400ec8"
+      },
+      "bank_hashes": {
+        "geometry.json": "2c94de5caab9ab0e70e1aadd9bc11af797ad0ac4f64bb7a3ccd956361eb352be",
+        "reset_candidates.npz": "65ad8587da1d68ef48a1319396a1b211177d799ce4ab7b729b052232871d9a36",
+        "candidates.npz": "2e5fc43ce5efce6c4d9ee45c6e1e0286ac1ac60e14b89d574144ebf6b9dd2f4d"
+      }
+    },
+    "fixed_holdout": {
+      "preserved_source_count": 23,
+      "source_hashes": {
+        "/home/kadir/humanoid-sitting/IsaacLab/../scripts/run_supported_transition.py": "d162f18110a737afce655ea8fd8c7ee897b31dcebee727481f026249988bad53",
+        "/home/kadir/humanoid-sitting/scripts/run_supported_postures.py": "a906a72c600f4334f1cd5b276ab7fa24ad365c5ae95284df9274424ef5dd6e7a",
+        "/home/kadir/humanoid-sitting/scripts/run_resting_posture.py": "2579e9c98a9cd7fbde8665acd542255fe0736f684b0c1d2d2f768b05a6b2fc21",
+        "/home/kadir/humanoid-sitting/runs/g1_kinematics_geometry_04/model.json": "fe29aa3c0b8da033c35b8abc1c40ae93b0706e8186f9163ad56d8e31c4d07690",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/supported_surface.py": "ffba8dd6c3d34e085839525d158051fc39e2d07ede7eb075002180733985c5fc",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/resting_objective.py": "be7db8f9462c7517867e672193a9186d317ef39ddd85590f17abf3c5d62adb73",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v12.py": "657c02b8444194caa599528057e1b81edb0da3e372dc21dfe40b30bdbad24aee",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/config.py": "4cd8f537466bfcb4546dd0a04c9d554ae1ff9533eb5f01127ae51762734dcec7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/balanced_reference.py": "e7e3eb4d2f49fdee0bd686ac10fa39dddac3615340decdee14a382ed318f9c11",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/env.py": "bd9d11fbf8a56275cceb86c4c150874968ca5a68aab15a46369ceb797731ff93",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/curriculum.py": "4d182ebfdd82d4058a39fa190900a2fbe3faaaedf9a8e9a96f5950b94b30f526",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_reference.py": "9872a86151cb632b3e57934ec6096bc6014bf254057d17cf8ee452b8b216b319",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_feedback.py": "e9a446b4a1c00f9fa35aa093f566169eda154203c9873d973982bf60c77dc90d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_curriculum.py": "e7ab13b459ed36f10e8dbea9d87ee01ba2f4a9c8a451b8d4d8248fedef92a5d7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/student.py": "9810d4a53e2575a1c1cb1b21133accbb38f583ea44cdf4cb4113e47baed2074d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/mdp.py": "2b13162c7d7cca5ec155f5e439377593cb4918e3affbfbb5cff47248e997d54d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v11.py": "c12e09097fbb82bd5dfdb8de7411ae02e0c692d777d335b0e695509056bb6306",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/full_transition.py": "e44f6a77f51453d47e1f2456b793b8a1eee9ba32f1c29b176ce46dce7a8f7e4c",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/furniture.py": "5e8b8dd617309604353f9f7f1ad25be528842ea5a87e4d0da1883cabd60bbf49",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact.py": "81aa9ec26a085b61b92506cf2a8942d9f80959a815ca2457f9e5a1f0e072f157",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded.py": "5307f57a43387519f2dd8c9bb2b7dbb45469f5b5b215d0d7204376aa60107185",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/__init__.py": "9eb7565301a20ba0e3c072201b2551ef41b9ec7257e7caac83bd6b67c91a4ef0",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact_v10.py": "2bafa5bdd45cb8a3604f7dd32a2fba39de6bf35b7728c39765fc0af96d400ec8"
+      },
+      "bank_hashes": {
+        "geometry.json": "4c05b990738c3c3a4136ec69cae2129386af179ecae057e41eae682e0d8a2791",
+        "reset_candidates.npz": "30a7ca792307191cc084b8c0d4dd61882d6186df5633438d79fd755f972644fe",
+        "candidates.npz": "17e9e723589ccc8b90568507e61a16605520896c3e45c34df3e331d2f00e34b8"
+      }
+    },
+    "fixed_train": {
+      "preserved_source_count": 23,
+      "source_hashes": {
+        "/home/kadir/humanoid-sitting/IsaacLab/../scripts/run_supported_transition.py": "d162f18110a737afce655ea8fd8c7ee897b31dcebee727481f026249988bad53",
+        "/home/kadir/humanoid-sitting/scripts/run_supported_postures.py": "a906a72c600f4334f1cd5b276ab7fa24ad365c5ae95284df9274424ef5dd6e7a",
+        "/home/kadir/humanoid-sitting/scripts/run_resting_posture.py": "2579e9c98a9cd7fbde8665acd542255fe0736f684b0c1d2d2f768b05a6b2fc21",
+        "/home/kadir/humanoid-sitting/runs/g1_kinematics_geometry_04/model.json": "fe29aa3c0b8da033c35b8abc1c40ae93b0706e8186f9163ad56d8e31c4d07690",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/supported_surface.py": "ffba8dd6c3d34e085839525d158051fc39e2d07ede7eb075002180733985c5fc",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/resting_objective.py": "be7db8f9462c7517867e672193a9186d317ef39ddd85590f17abf3c5d62adb73",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v12.py": "657c02b8444194caa599528057e1b81edb0da3e372dc21dfe40b30bdbad24aee",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/config.py": "4cd8f537466bfcb4546dd0a04c9d554ae1ff9533eb5f01127ae51762734dcec7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/balanced_reference.py": "e7e3eb4d2f49fdee0bd686ac10fa39dddac3615340decdee14a382ed318f9c11",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/env.py": "bd9d11fbf8a56275cceb86c4c150874968ca5a68aab15a46369ceb797731ff93",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/curriculum.py": "4d182ebfdd82d4058a39fa190900a2fbe3faaaedf9a8e9a96f5950b94b30f526",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_reference.py": "9872a86151cb632b3e57934ec6096bc6014bf254057d17cf8ee452b8b216b319",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_feedback.py": "e9a446b4a1c00f9fa35aa093f566169eda154203c9873d973982bf60c77dc90d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_curriculum.py": "e7ab13b459ed36f10e8dbea9d87ee01ba2f4a9c8a451b8d4d8248fedef92a5d7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/student.py": "9810d4a53e2575a1c1cb1b21133accbb38f583ea44cdf4cb4113e47baed2074d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/mdp.py": "2b13162c7d7cca5ec155f5e439377593cb4918e3affbfbb5cff47248e997d54d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v11.py": "c12e09097fbb82bd5dfdb8de7411ae02e0c692d777d335b0e695509056bb6306",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/full_transition.py": "e44f6a77f51453d47e1f2456b793b8a1eee9ba32f1c29b176ce46dce7a8f7e4c",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/furniture.py": "5e8b8dd617309604353f9f7f1ad25be528842ea5a87e4d0da1883cabd60bbf49",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact.py": "81aa9ec26a085b61b92506cf2a8942d9f80959a815ca2457f9e5a1f0e072f157",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded.py": "5307f57a43387519f2dd8c9bb2b7dbb45469f5b5b215d0d7204376aa60107185",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/__init__.py": "9eb7565301a20ba0e3c072201b2551ef41b9ec7257e7caac83bd6b67c91a4ef0",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact_v10.py": "2bafa5bdd45cb8a3604f7dd32a2fba39de6bf35b7728c39765fc0af96d400ec8"
+      },
+      "bank_hashes": {
+        "geometry.json": "2c94de5caab9ab0e70e1aadd9bc11af797ad0ac4f64bb7a3ccd956361eb352be",
+        "reset_candidates.npz": "65ad8587da1d68ef48a1319396a1b211177d799ce4ab7b729b052232871d9a36",
+        "candidates.npz": "2e5fc43ce5efce6c4d9ee45c6e1e0286ac1ac60e14b89d574144ebf6b9dd2f4d"
+      }
+    },
+    "train_54211": {
+      "preserved_source_count": 23,
+      "source_hashes": {
+        "/home/kadir/humanoid-sitting/IsaacLab/../scripts/run_supported_transition.py": "d162f18110a737afce655ea8fd8c7ee897b31dcebee727481f026249988bad53",
+        "/home/kadir/humanoid-sitting/scripts/run_supported_postures.py": "a906a72c600f4334f1cd5b276ab7fa24ad365c5ae95284df9274424ef5dd6e7a",
+        "/home/kadir/humanoid-sitting/scripts/run_resting_posture.py": "2579e9c98a9cd7fbde8665acd542255fe0736f684b0c1d2d2f768b05a6b2fc21",
+        "/home/kadir/humanoid-sitting/runs/g1_kinematics_geometry_04/model.json": "fe29aa3c0b8da033c35b8abc1c40ae93b0706e8186f9163ad56d8e31c4d07690",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/supported_surface.py": "ffba8dd6c3d34e085839525d158051fc39e2d07ede7eb075002180733985c5fc",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/resting_objective.py": "be7db8f9462c7517867e672193a9186d317ef39ddd85590f17abf3c5d62adb73",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v12.py": "657c02b8444194caa599528057e1b81edb0da3e372dc21dfe40b30bdbad24aee",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/config.py": "4cd8f537466bfcb4546dd0a04c9d554ae1ff9533eb5f01127ae51762734dcec7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/balanced_reference.py": "e7e3eb4d2f49fdee0bd686ac10fa39dddac3615340decdee14a382ed318f9c11",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/env.py": "bd9d11fbf8a56275cceb86c4c150874968ca5a68aab15a46369ceb797731ff93",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/curriculum.py": "4d182ebfdd82d4058a39fa190900a2fbe3faaaedf9a8e9a96f5950b94b30f526",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_reference.py": "9872a86151cb632b3e57934ec6096bc6014bf254057d17cf8ee452b8b216b319",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_feedback.py": "e9a446b4a1c00f9fa35aa093f566169eda154203c9873d973982bf60c77dc90d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_curriculum.py": "e7ab13b459ed36f10e8dbea9d87ee01ba2f4a9c8a451b8d4d8248fedef92a5d7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/student.py": "9810d4a53e2575a1c1cb1b21133accbb38f583ea44cdf4cb4113e47baed2074d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/mdp.py": "2b13162c7d7cca5ec155f5e439377593cb4918e3affbfbb5cff47248e997d54d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v11.py": "c12e09097fbb82bd5dfdb8de7411ae02e0c692d777d335b0e695509056bb6306",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/full_transition.py": "e44f6a77f51453d47e1f2456b793b8a1eee9ba32f1c29b176ce46dce7a8f7e4c",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/furniture.py": "5e8b8dd617309604353f9f7f1ad25be528842ea5a87e4d0da1883cabd60bbf49",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact.py": "81aa9ec26a085b61b92506cf2a8942d9f80959a815ca2457f9e5a1f0e072f157",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded.py": "5307f57a43387519f2dd8c9bb2b7dbb45469f5b5b215d0d7204376aa60107185",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/__init__.py": "9eb7565301a20ba0e3c072201b2551ef41b9ec7257e7caac83bd6b67c91a4ef0",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact_v10.py": "2bafa5bdd45cb8a3604f7dd32a2fba39de6bf35b7728c39765fc0af96d400ec8"
+      },
+      "bank_hashes": {
+        "geometry.json": "2c94de5caab9ab0e70e1aadd9bc11af797ad0ac4f64bb7a3ccd956361eb352be",
+        "reset_candidates.npz": "65ad8587da1d68ef48a1319396a1b211177d799ce4ab7b729b052232871d9a36",
+        "candidates.npz": "2e5fc43ce5efce6c4d9ee45c6e1e0286ac1ac60e14b89d574144ebf6b9dd2f4d"
+      }
+    },
+    "train_54217": {
+      "preserved_source_count": 23,
+      "source_hashes": {
+        "/home/kadir/humanoid-sitting/IsaacLab/../scripts/run_supported_transition.py": "d162f18110a737afce655ea8fd8c7ee897b31dcebee727481f026249988bad53",
+        "/home/kadir/humanoid-sitting/scripts/run_supported_postures.py": "a906a72c600f4334f1cd5b276ab7fa24ad365c5ae95284df9274424ef5dd6e7a",
+        "/home/kadir/humanoid-sitting/scripts/run_resting_posture.py": "2579e9c98a9cd7fbde8665acd542255fe0736f684b0c1d2d2f768b05a6b2fc21",
+        "/home/kadir/humanoid-sitting/runs/g1_kinematics_geometry_04/model.json": "fe29aa3c0b8da033c35b8abc1c40ae93b0706e8186f9163ad56d8e31c4d07690",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/supported_surface.py": "ffba8dd6c3d34e085839525d158051fc39e2d07ede7eb075002180733985c5fc",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/resting_objective.py": "be7db8f9462c7517867e672193a9186d317ef39ddd85590f17abf3c5d62adb73",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v12.py": "657c02b8444194caa599528057e1b81edb0da3e372dc21dfe40b30bdbad24aee",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/config.py": "4cd8f537466bfcb4546dd0a04c9d554ae1ff9533eb5f01127ae51762734dcec7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/balanced_reference.py": "e7e3eb4d2f49fdee0bd686ac10fa39dddac3615340decdee14a382ed318f9c11",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/env.py": "bd9d11fbf8a56275cceb86c4c150874968ca5a68aab15a46369ceb797731ff93",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/curriculum.py": "4d182ebfdd82d4058a39fa190900a2fbe3faaaedf9a8e9a96f5950b94b30f526",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_reference.py": "9872a86151cb632b3e57934ec6096bc6014bf254057d17cf8ee452b8b216b319",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_feedback.py": "e9a446b4a1c00f9fa35aa093f566169eda154203c9873d973982bf60c77dc90d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_curriculum.py": "e7ab13b459ed36f10e8dbea9d87ee01ba2f4a9c8a451b8d4d8248fedef92a5d7",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/student.py": "9810d4a53e2575a1c1cb1b21133accbb38f583ea44cdf4cb4113e47baed2074d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/mdp.py": "2b13162c7d7cca5ec155f5e439377593cb4918e3affbfbb5cff47248e997d54d",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_contact_v11.py": "c12e09097fbb82bd5dfdb8de7411ae02e0c692d777d335b0e695509056bb6306",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/full_transition.py": "e44f6a77f51453d47e1f2456b793b8a1eee9ba32f1c29b176ce46dce7a8f7e4c",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/furniture.py": "5e8b8dd617309604353f9f7f1ad25be528842ea5a87e4d0da1883cabd60bbf49",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact.py": "81aa9ec26a085b61b92506cf2a8942d9f80959a815ca2457f9e5a1f0e072f157",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded.py": "5307f57a43387519f2dd8c9bb2b7dbb45469f5b5b215d0d7204376aa60107185",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/__init__.py": "9eb7565301a20ba0e3c072201b2551ef41b9ec7257e7caac83bd6b67c91a4ef0",
+        "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/tasks/geometry_guarded_contact_v10.py": "2bafa5bdd45cb8a3604f7dd32a2fba39de6bf35b7728c39765fc0af96d400ec8"
+      },
+      "bank_hashes": {
+        "geometry.json": "2c94de5caab9ab0e70e1aadd9bc11af797ad0ac4f64bb7a3ccd956361eb352be",
+        "reset_candidates.npz": "65ad8587da1d68ef48a1319396a1b211177d799ce4ab7b729b052232871d9a36",
+        "candidates.npz": "2e5fc43ce5efce6c4d9ee45c6e1e0286ac1ac60e14b89d574144ebf6b9dd2f4d"
+      }
+    }
+  },
+  "training": {
+    "54211": {
+      "passed": true,
+      "completed_episodes": 7378,
+      "active_steps_in_completed_episodes": 188029,
+      "unfinished_active_steps": 388,
+      "pending_warmup_steps": 131,
+      "final_equals_last_update": true,
+      "checkpoint_iteration_zero_based": 223,
+      "initial_checkpoint_sha256": "ab27e1c04197490889eb0825fe3dc217688313177346d692ad247ad150c82f81",
+      "final_checkpoint_sha256": "6ad52e027522649fc72706e6f3a3936ab829694903ed6bbce0a9f31eb0036828"
+    },
+    "54217": {
+      "passed": true,
+      "completed_episodes": 6921,
+      "active_steps_in_completed_episodes": 199657,
+      "unfinished_active_steps": 242,
+      "pending_warmup_steps": 188,
+      "final_equals_last_update": true,
+      "checkpoint_iteration_zero_based": 223,
+      "initial_checkpoint_sha256": "6144c647e09b921db37fe261436b15db4eccee357c1883c5897544604660c4d2",
+      "final_checkpoint_sha256": "42080bb24b33ca67e42d1e099ddc5190805906e6550475676c822f4963095658"
+    }
+  },
+  "evaluations": {
+    "fixed_train": {
+      "full_duration": true,
+      "unactuated_commands_constant": true,
+      "first_failure_counts": {
+        "fall": 0,
+        "forbidden": 0,
+        "joint_limit": 0,
+        "impact": 0,
+        "torque": 0
+      },
+      "physical_failures": 0
+    },
+    "eval_54211_train": {
+      "full_duration": true,
+      "unactuated_commands_constant": true,
+      "first_failure_counts": {
+        "fall": 13,
+        "forbidden": 0,
+        "joint_limit": 4,
+        "impact": 0,
+        "torque": 0
+      },
+      "physical_failures": 13
+    },
+    "eval_54217_train": {
+      "full_duration": true,
+      "unactuated_commands_constant": true,
+      "first_failure_counts": {
+        "fall": 10,
+        "forbidden": 4,
+        "joint_limit": 0,
+        "impact": 0,
+        "torque": 0
+      },
+      "physical_failures": 13
+    },
+    "fixed_holdout": {
+      "full_duration": true,
+      "unactuated_commands_constant": true,
+      "first_failure_counts": {
+        "fall": 0,
+        "forbidden": 0,
+        "joint_limit": 0,
+        "impact": 0,
+        "torque": 0
+      },
+      "physical_failures": 0
+    },
+    "eval_54211_holdout": {
+      "full_duration": true,
+      "unactuated_commands_constant": true,
+      "first_failure_counts": {
+        "fall": 16,
+        "forbidden": 0,
+        "joint_limit": 1,
+        "impact": 0,
+        "torque": 0
+      },
+      "physical_failures": 16
+    },
+    "eval_54217_holdout": {
+      "full_duration": true,
+      "unactuated_commands_constant": true,
+      "first_failure_counts": {
+        "fall": 13,
+        "forbidden": 3,
+        "joint_limit": 0,
+        "impact": 0,
+        "torque": 0
+      },
+      "physical_failures": 16
+    }
+  },
+  "sensor": {
+    "fixed_train": {
+      "camera_samples_including_start": {
+        "count": 1313,
+        "valid": 1313,
+        "lost": 0,
+        "normal_p95_deg": 0.1784289546328043,
+        "offset_abs_p95_mm": 2.5705695152282715,
+        "offset_abs_max_mm": 2.57071852684021,
+        "maximum_age_s": 0.0
+      },
+      "recorded_10Hz_motion_samples": {
+        "count": 2600,
+        "valid": 2600,
+        "lost": 0,
+        "normal_p95_deg": 0.17853024350117347,
+        "offset_abs_p95_mm": 2.5705695152282715,
+        "offset_abs_max_mm": 2.570897340774536,
+        "maximum_age_s": 0.09999999403953552
+      },
+      "between_camera_samples": {
+        "count": 1300,
+        "valid": 1300,
+        "lost": 0,
+        "normal_p95_deg": 0.17882116945423934,
+        "offset_abs_p95_mm": 2.5705695152282715,
+        "offset_abs_max_mm": 2.570897340774536,
+        "maximum_age_s": 0.09999999403953552
+      },
+      "scope": "Only before first physical failure. Recorded 10 Hz motion includes the 50 Hz kinematic bridge at alternate samples; it does not audit every control tick."
+    },
+    "eval_54211_train": {
+      "camera_samples_including_start": {
+        "count": 52,
+        "valid": 52,
+        "lost": 0,
+        "normal_p95_deg": 0.34671419161096334,
+        "offset_abs_p95_mm": 2.155132889747629,
+        "offset_abs_max_mm": 2.570539712905884,
+        "maximum_age_s": 0.0
+      },
+      "recorded_10Hz_motion_samples": {
+        "count": 91,
+        "valid": 91,
+        "lost": 0,
+        "normal_p95_deg": 0.3499148466813107,
+        "offset_abs_p95_mm": 5.464515089988714,
+        "offset_abs_max_mm": 8.564582467079141,
+        "maximum_age_s": 0.09999999403953552
+      },
+      "between_camera_samples": {
+        "count": 52,
+        "valid": 52,
+        "lost": 0,
+        "normal_p95_deg": 0.3832836640524259,
+        "offset_abs_p95_mm": 6.515540615709047,
+        "offset_abs_max_mm": 8.564582467079141,
+        "maximum_age_s": 0.09999999403953552
+      },
+      "scope": "Only before first physical failure. Recorded 10 Hz motion includes the 50 Hz kinematic bridge at alternate samples; it does not audit every control tick."
+    },
+    "eval_54217_train": {
+      "camera_samples_including_start": {
+        "count": 52,
+        "valid": 52,
+        "lost": 0,
+        "normal_p95_deg": 0.2576691910624286,
+        "offset_abs_p95_mm": 2.4788513779640193,
+        "offset_abs_max_mm": 36.084651947021484,
+        "maximum_age_s": 0.19999997317790985
+      },
+      "recorded_10Hz_motion_samples": {
+        "count": 87,
+        "valid": 87,
+        "lost": 0,
+        "normal_p95_deg": 0.3672423560136614,
+        "offset_abs_p95_mm": 23.29086422920229,
+        "offset_abs_max_mm": 36.084651947021484,
+        "maximum_age_s": 0.19999997317790985
+      },
+      "between_camera_samples": {
+        "count": 49,
+        "valid": 49,
+        "lost": 0,
+        "normal_p95_deg": 0.3867806653075563,
+        "offset_abs_p95_mm": 23.774841441822478,
+        "offset_abs_max_mm": 36.084651947021484,
+        "maximum_age_s": 0.19999997317790985
+      },
+      "scope": "Only before first physical failure. Recorded 10 Hz motion includes the 50 Hz kinematic bridge at alternate samples; it does not audit every control tick."
+    },
+    "fixed_holdout": {
+      "camera_samples_including_start": {
+        "count": 1616,
+        "valid": 1616,
+        "lost": 0,
+        "normal_p95_deg": 0.1784547505512344,
+        "offset_abs_p95_mm": 2.570509910583496,
+        "offset_abs_max_mm": 2.570897340774536,
+        "maximum_age_s": 0.0
+      },
+      "recorded_10Hz_motion_samples": {
+        "count": 3200,
+        "valid": 3200,
+        "lost": 0,
+        "normal_p95_deg": 0.1786410523945769,
+        "offset_abs_p95_mm": 2.5704801082611084,
+        "offset_abs_max_mm": 2.5710761547088623,
+        "maximum_age_s": 0.09999999403953552
+      },
+      "between_camera_samples": {
+        "count": 1600,
+        "valid": 1600,
+        "lost": 0,
+        "normal_p95_deg": 0.1791731781857286,
+        "offset_abs_p95_mm": 2.5704503059387207,
+        "offset_abs_max_mm": 2.5710761547088623,
+        "maximum_age_s": 0.09999999403953552
+      },
+      "scope": "Only before first physical failure. Recorded 10 Hz motion includes the 50 Hz kinematic bridge at alternate samples; it does not audit every control tick."
+    },
+    "eval_54211_holdout": {
+      "camera_samples_including_start": {
+        "count": 64,
+        "valid": 64,
+        "lost": 0,
+        "normal_p95_deg": 0.3465717532332084,
+        "offset_abs_p95_mm": 2.5648222190949865,
+        "offset_abs_max_mm": 3.177703407482746,
+        "maximum_age_s": 0.0
+      },
+      "recorded_10Hz_motion_samples": {
+        "count": 112,
+        "valid": 112,
+        "lost": 0,
+        "normal_p95_deg": 0.3826438479386214,
+        "offset_abs_p95_mm": 6.517174854968236,
+        "offset_abs_max_mm": 8.032315969467184,
+        "maximum_age_s": 0.09999999403953552
+      },
+      "between_camera_samples": {
+        "count": 64,
+        "valid": 64,
+        "lost": 0,
+        "normal_p95_deg": 0.42703215301427455,
+        "offset_abs_p95_mm": 6.814356737468099,
+        "offset_abs_max_mm": 8.032315969467184,
+        "maximum_age_s": 0.09999999403953552
+      },
+      "scope": "Only before first physical failure. Recorded 10 Hz motion includes the 50 Hz kinematic bridge at alternate samples; it does not audit every control tick."
+    },
+    "eval_54217_holdout": {
+      "camera_samples_including_start": {
+        "count": 64,
+        "valid": 64,
+        "lost": 0,
+        "normal_p95_deg": 0.2674422946979545,
+        "offset_abs_p95_mm": 2.4808511137962115,
+        "offset_abs_max_mm": 35.200655460357666,
+        "maximum_age_s": 0.19999997317790985
+      },
+      "recorded_10Hz_motion_samples": {
+        "count": 108,
+        "valid": 108,
+        "lost": 0,
+        "normal_p95_deg": 0.3618734258687899,
+        "offset_abs_p95_mm": 23.925016321623513,
+        "offset_abs_max_mm": 35.200655460357666,
+        "maximum_age_s": 0.19999997317790985
+      },
+      "between_camera_samples": {
+        "count": 61,
+        "valid": 61,
+        "lost": 0,
+        "normal_p95_deg": 0.3917690999168307,
+        "offset_abs_p95_mm": 31.501937996609108,
+        "offset_abs_max_mm": 35.200655460357666,
+        "maximum_age_s": 0.19999997317790985
+      },
+      "scope": "Only before first physical failure. Recorded 10 Hz motion includes the 50 Hz kinematic bridge at alternate samples; it does not audit every control tick."
+    }
+  },
+  "passed": true
+}

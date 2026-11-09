@@ -1,0 +1,49 @@
+{
+  "utc": "2026-10-12T23:39:43.641579+00:00",
+  "phase": "training",
+  "seeds": {
+    "54211": {
+      "progress": {
+        "updates": 60,
+        "transitions": 99840,
+        "active": 40089,
+        "warmup": 59751,
+        "seconds": 445.61919557099463,
+        "loss": {
+          "value": 0.006309935473836958,
+          "surrogate": 0.10673933553819855,
+          "entropy": -36.099555333455406
+        },
+        "episodes": 2396,
+        "successes": 0,
+        "curriculum_index": 4
+      },
+      "initial_policy_check": {
+        "max_action_error": 4.172325134277344e-07,
+        "holds_initial_command": true
+      }
+    },
+    "54217": {
+      "progress": {
+        "updates": 59,
+        "transitions": 98176,
+        "active": 45083,
+        "warmup": 53093,
+        "seconds": 448.00979246903444,
+        "loss": {
+          "value": 0.006986316875554621,
+          "surrogate": 0.10996475916666289,
+          "entropy": -36.11850166320801
+        },
+        "episodes": 2128,
+        "successes": 0,
+        "curriculum_index": 4
+      },
+      "initial_policy_check": {
+        "max_action_error": 4.172325134277344e-07,
+        "holds_initial_command": true
+      }
+    }
+  },
+  "frozen_hashes_match": true
+}
