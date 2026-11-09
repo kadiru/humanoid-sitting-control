@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "review": "Single-owner separate static audit plus source inspection; no additional agent.",
+  "unchanged_independent_physical_predicates": true,
+  "unchanged_action_decoder": true,
+  "unchanged_live_physical_step_and_success_prefix": true,
+  "new_reward_uses_bounded_potential_with_zero_terminal": true,
+  "hard_imitation_ceiling_removed": true,
+  "no_privileged_state_or_case_identity_in_motion_selection": true,
+  "library_limits": "Frozen64 sitting and16 legacy resting motions;5 new camera-selected armchair motion priors. Live motion prior replay remains to be validated. No broad furniture or straight-leg success claim.",
+  "new_gpu_launches_serial_and4090only": true,
+  "mesh_review": "Original per-contact normal/legality/slip equations extended per environment; contact count must equal env count. No contact-truth actor input. Active contacts on ambiguous seams remain invalid.",
+  "physical_success_requires_actual_audited_rollouts": true,
+  "source_hashes": {
+    "/home/kadir/humanoid-sitting/experiments/armchair_rest_trainer_20261105_v1/audit.py": "921349fe57af85ee4917c3fc7dbd509d737c0c4c14cf994c23a38da1406c3b91",
+    "/home/kadir/humanoid-sitting/experiments/armchair_rest_trainer_20261105_v1/prepare.py": "7a7fc8416ca04bc1064e887448da817ab4bf1b82c86f870c7d3934b95ba941fc",
+    "/home/kadir/humanoid-sitting/experiments/armchair_rest_trainer_20261105_v1/owner.py": "075faaa4a020a57adc50e5d91f647776690a108f1acac7008b8ce6348500ee1c",
+    "/home/kadir/humanoid-sitting/experiments/armchair_rest_trainer_20261105_v1/common.py": "60894f7650dbb1982c1dc3fc5de28dc674fc0b386953ef9f8cf64ff625e81bc5",
+    "/home/kadir/humanoid-sitting/experiments/armchair_rest_trainer_20261105_v1/rewards.py": "b3e82ce8778d8a5f2db09082663cf0fdbd0377af9c2b81e6136d2ae72276f240",
+    "/home/kadir/humanoid-sitting/experiments/armchair_rest_trainer_20261105_v1/run_training.py": "8cef74fc4b70bba18dcc387843ec7eba7e4ad61b7f75ceed7809207c03b92605",
+    "/home/kadir/humanoid-sitting/experiments/armchair_rest_trainer_20261105_v1/policy.py": "e5a826c7165fb63447d5f328587f539c49cefe38b5b87d18c57aae992020d97b",
+    "/home/kadir/humanoid-sitting/experiments/armchair_rest_trainer_20261105_v1/preflight.py": "e0bb2cffb91cdba47817f49aef4951b9972b2761a3858bb61436c74c694708d3",
+    "/home/kadir/humanoid-sitting/experiments/armchair_rest_trainer_20261105_v1/source_review.py": "0c6d647a15ee8a659971de205e884c5c1aa302e8c6a2ba70855c2280f048052d",
+    "/home/kadir/humanoid-sitting/experiments/armchair_rest_trainer_20261105_v1/mesh_batch.py": "8f95b4c2fda41e18c9c1d659638f1ffe39995b1aaabec3ec283f4845930b47ce",
+    "/home/kadir/humanoid-sitting/experiments/armchair_rest_trainer_20261105_v1/environment.py": "5a96c0ca9376eb1b22c045d0d4868e1edcb5ead0e7b2f23b7cf2e0b7830da961"
+  }
+}

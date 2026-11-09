@@ -1,0 +1,31 @@
+{
+  "scope": "One frozen-sitting-prior plus new armchair resting PPO residual, seed65011; no automatic promotion or recurring schedule. GPU4090 only.4070 reserved for AIWorker.",
+  "demonstrations": "Original64 clean sitting motions preserved exactly; original16 leaning motions retained as frozen priors. New independently admitted armchair demonstrations selected per variant by measured effort. Failed pelvis prototype excluded; no relabeling. New residual enabled only for rest intent and sensor-selected new armchair prior.",
+  "initialization": "Seed65011,447 observed channels, actor128ELU128ELU23 with final layer zero, critic128ELU128ELU1, Gaussian std.0075; frozen sensor-selected time-indexed desired-command prior. No case ID, root truth or mesh truth actor input. Explicit task intent chooses sitting vs resting.",
+  "optimizer": "128 PPO updates maximum;64 controls per batch,7 armchair starts; gamma.999,GAE.97,4 epochs, ratio clip.2, actorAdam1e-4, criticAdam3e-4. Soft imitation coefficient1 on zero residual at2048 sampled successful-demo observations; no hard imitation veto. KL<=.02 with at most8 candidate scales; stop8 consecutive zero-actor-step updates. Original action limits unchanged.",
+  "reward": "Same bounded potential for tracking, contact and hold; terminal400 clean+20 stable. Only clean completion receives effort bonus40/(1+10*mean normalized torque squared over qualifying ticks). Alive .02/tick, first failure-20. Potential gamma*next-current terminalzero. Saved trajectories must verify clean outcomes outrank unclean. Torque proxy is not electrical energy.",
+  "reset": "Full recorded standing reset plus25 warmup controls. No episode-state resets. Initial root offsets:7 development starts;4 distinct interpolated starts only for evaluation. No original24 holdout access. All warmup failure flags and rear-camera validity checked.",
+  "evaluation": "Zero-residual and final policy:11 complete20s armchair rollouts. Final combined policy:all72 original complete20s sitting trials; independently reconstruct original predicates, report protected64 regressions and failed8 repairs separately. Count unvalidated contact mapping as non-success. Save body poses and actions for learned-policy video.",
+  "resources": {
+    "physics_substeps_per_control": 4,
+    "max_updates": 128,
+    "max_training_resets": 128,
+    "max_training_controls": 8192,
+    "max_training_physics_steps": 46568,
+    "max_train_samples": 57344,
+    "max_evaluation_control_steps": 3075,
+    "max_evaluation_physics_steps": 15300,
+    "max_total_physics_steps_including_initialization": 61868,
+    "max_total_env_transitions_including_warmup": 176869,
+    "max_training_seconds": 30000,
+    "max_each_evaluation_seconds": 3600,
+    "max_owner_seconds": 43200,
+    "output_bytes": 20000000000,
+    "minimum_free_disk_bytes": 20000000000,
+    "minimum_free_ram_bytes": 8000000000,
+    "maximum_gpu_temperature_C": 85,
+    "gpu_uuid": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4"
+  },
+  "finite_return": "1 preparation,1 CPU preflight,1 source audit; baseline11 then training128 then final11 then original72; each child timeout and nonzero exit terminate owner without retry. Every launch and failure preserved. One scientific owner locks original task locks. No PPO child starts until saved checks and baseline audit pass; baseline need not be universally successful. Require at least one independently clean baseline armchair rollout before optimizing; otherwise stop for diagnosis.",
+  "success_criteria": "UNCHANGED:original full-body force, friction, loaded slip, contact legality, torque, impact, actual joint margin, uprightness and motion thresholds; final>=5s continuous good hold, no whole-episode slipping or illegal contacts. No threshold rounding waiver beyond already authorized native float32 command representation tolerance2e-7rad."
+}
