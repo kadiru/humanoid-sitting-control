@@ -1,0 +1,118 @@
+{
+  "classification": "Source-defined spatial foot closure for the original geometric initialization, retaining exact readiness graph and original full motion checks",
+  "target": "lean_center original measured standing rear camera and box armchair back",
+  "new_mechanism": "The planar seed only approximates3D anchored-foot orientation/position. Close all6 errors of each foot using its six original leg joints while root and pelvis contact point stay bitwise fixed. At most5Newton updates/leg, total joint correction<=.001rad, unchanged joint/knee branch boxes. No executed motion, reset or contact-world correction.",
+  "initialization": "FIRST derive the original current-input pelvis/feet geometric seed against the original fitted plane, BEFORE any optimizer. Select the observed eligible triangle on that seed's exposed contact-point ray. Construct the full model against that measured facet and recompute the original geometric seed. No optimizer state or failure vector is read; both preparations charged inside45s. Auxiliary readiness initialization now includes all five original load levels; pose still comes only from original measurements/analytic seed.",
+  "equations": {
+    "equilibrium": "sum F=[0,0,W]; sum p cross F = COM cross [0,0,W]; full23joint gravity minus fixed-material contact Jacobian torque",
+    "contact": "Endpoint point = root*FK(body)*constant local material; every body vertex remains nonpenetrating and endpoint point lies on observed plane. Load transfer uses that same material. Marker comes only from the original analytic seed; unloaded backward approach retains exposed-min geometry.",
+    "loads": [
+      0,
+      0.05,
+      0.1,
+      0.15,
+      0.2
+    ],
+    "objective": "full23joint squared torque / original standing torque + readiness epigraph squared + .05 joint deviation squared + .05 fixed-material tangent error squared / .15^2 + normalized root lowering squared; backward connection adds .1 endpoint-guided posture distance squared + .01 interval seconds",
+    "clock": "joint command arc/.125; normal joint arc/.05 and .003/.0055 per normal edge; 0.5s explicit quiet reserve plus actual25CURRENT requirement; >=.25s/load edge; 1s settle; complete settled trajectory<14.4s",
+    "optimization": "SLSQP60iterations per named endpoint/edge,ftol1e-9; success mandatory, equality<=.002 and inequality>=-1e-6; total parent45s cap overrides all stages"
+  },
+  "unchanged": {
+    "action_increment_rad": 0.003,
+    "control_seconds": 0.02,
+    "filter": 0.1,
+    "desired_joint_margin": 0.03,
+    "fingers_fixed": 14,
+    "normal_speed_max": 0.006,
+    "quiet_current_samples": 25,
+    "actual_mesh_buffer_m": 0.006,
+    "finite_patch_construction_inset_m": 0.022,
+    "all_tick_contact_and_slip": "unchanged",
+    "full20s_and_final5s_hold": true,
+    "protected72": true,
+    "fresh_holdout": "closed"
+  },
+  "resources": {
+    "scientific_attempts": 1,
+    "targets": [
+      "lean_center"
+    ],
+    "total_wall_seconds_including_interpreter_hashes_initialization_all_audits_serialization": 45,
+    "address_space_GiB": 40,
+    "scientific_workers": 1,
+    "BLAS_threads": 1,
+    "GPU_devices": [],
+    "minimum_disk_free_bytes": 20000000000,
+    "inputs_read_only": true,
+    "output_max_expected_MiB": 10,
+    "retry": false,
+    "resume": false,
+    "timeout_output": "process receipt and already written seed/endpoint audit; no salvaged point admission",
+    "source_operations": "One original-input construction;30optimizer coordinates,60iterations/node unchanged; exact max over5x23commands at endpoint or1x23connection; bounded reconstruction cache64;all source/hash/init/audits/fullpath within45s."
+  },
+  "finite_return": "Reject unless complete path, fullmesh, between-node feet/normal speed, float32 action bounds/filter/fingers and hold reserve pass; current-input runtime, ankle quiet and actual physical fullrollout gates still separately required.",
+  "limitations": [
+    "Quasi-static model is not realized balance or contact force",
+    "ImplicitPD torque proxy is not physical energy",
+    "Sampled audit is not continuous geometry proof",
+    "Same-pose load transfer is a restriction; failure is not robot impossibility",
+    "Raw joint velocity guards remain unchanged",
+    "No simulation/PPO autostart on model pass",
+    "Exact derivatives may not resolve constrained optimization; failure remains reject, no retry/resume or iteration increase.",
+    "A single observed facet can still fail; no alternative facet, retry, continuation, budget or tolerance change. Depth triangulation is not a physical support certificate.",
+    "Exact readiness elimination removes only an auxiliary bottleneck; nonsmooth physical camera/contact constraints and feasibility remain unresolved until actual checks pass.",
+    "Spatial initialization is not a controller or a physical foot-stability result; no simulation if any original full-path gate fails."
+  ],
+  "derivatives": {
+    "dimensions": 31,
+    "FK": "Forward chain-rule derivative of original root rotation-vector and joint-axis transforms; full23active joints plus6floatingbase coordinates",
+    "forces": "Differentiate exact full6D equilibrium and both foot force allocations; no force or motor sensor claimed",
+    "torque": "Differentiate all23 gravity and material-fixed contact moments including axes/origins/CoM/force points and forces",
+    "feet": "Original position and rotation-log errors via exact SO3 right Jacobian inverse",
+    "camera": "At every callback recompute actual per-body minimum sample and its observed facet from saved current depth; derivative of selected material point signed plane distance. Row values must match original compressed rows to1e-10. Unknown rows derivative0, no free-space claim. Nonsmooth ties retain a piecewise derivative; no averaging or margin relaxation.",
+    "prelaunch_synthetic": "Independent SciPy rotation and logarithm central differences at zero and nonzero rotations",
+    "scientific_pre_solve_audit": "Central differences of ORIGINAL model at original analytic seed: all23torques,12footerrors,3materialpointcomponents vs exactJac; maximumabsolute<2e-5,scaled<2e-6,objectivegradient<2e-5. These are derivative implementation checks, not changed feasibility tolerances."
+  },
+  "fixed_link_correction": "Match original BodyModel.fk: fixed joints absent from encoder names have zero rotation, no axis lookup. Prior v1 stopped before derivative validation and optimization; no scientific point reused. Other equations/gates unchanged.",
+  "expanded_collection": "200target demonstrations:100sitting+100leaning,20/task/object,5furniture. Scenario manifest is preparation, no bulk simulation approved by a model result alone.",
+  "contact_association": {
+    "selection": "Exactly one current-input analytic-seed exposed-point ray; all old eligibility,finite triangle,normal and unknown checks retained. No nearest-facet search or multi-facet retries.",
+    "finite": "Three independently checked signed edge halfspaces retain the loaded point inside the selected observed triangle; retain full original patch22mm inset. During normal approach signed edges constrain its normal projection. Far approach need not project inside this tiny triangle.",
+    "original_camera": "The camera object is built using the ORIGINAL fitted target plane, before contact mechanics association. Its triangles, masks and6mm/zero-target margins remain unchanged.",
+    "proof": "At the model endpoint the fixed material point obeys observed N.p+d=0 and allthree signed edge rows>=0, so it lies on the actual observed finite triangle. This is measured geometry association, not evidence of realized contact or a ground-truth plane correction.",
+    "prelaunch": "Independent barycentric fixture for finite edge tests and normal projection; production association checks observed vertex plane residual, ray parameter and inside-triangle signs.",
+    "diagnostic": "Record original-goal to selected-facet signed gap; hypothesis of a conflicting fitted plane is not a proven cause until measured.",
+    "return": "Original full camera check, full mesh gate, mechanics/work audit, path/encoding/runtime/physical gates remain mandatory."
+  },
+  "source_correction": {
+    "prior_result": "v1 retained: selected standing target was not the material contact location of the pitched-pelvis seed; finite triangle constraint violated21.54mm. Prior measured plane/goal discrepancy1.1902697022447839e-8m does not support a fitted-plane error explanation.",
+    "scope": "Correct association before any v2 optimization; preserve prior rejected run; no recycled point, alternate-facet sweep or physical relaxation.",
+    "validation": "Record both standing goal and original seed exposed point, their displacement, exact chosen pixel,triangle vertices and independent contact membership.",
+    "no_further_reselection": true
+  },
+  "source_correction_v3": {
+    "finding": "Named original-seed audit found ONLY three negative inequalities: readiness epigraph at load.10,.15,.20 for left hip pitch. Initial scalar was set using only load0, despite enforcing all five loads. Maximum deficit.000627910841246998; assembled mechanical-row derivative error4.241969105400372e-10.",
+    "fix": "Set the initial auxiliary readiness epigraph to the maximum absolute standing-command change across all five constrained loads divided by(.15*14.4). Physical pose, equations, constraints, objective, solver,iterations,caps remain unchanged.",
+    "validation": "Record initial full inequality minimum and scalar before optimization. Report every negative endpoint row by exact concatenation association on failure.",
+    "interpretation": "This is an auxiliary initialization defect, not a physical action-limit violation. Correcting it is not evidence of motion or a proved cause of solver nonconvergence.",
+    "no_rejected_state_reused": true
+  },
+  "readiness_graph": {
+    "definition": "r=max over l in L and j<23 abs((command_j(pose,l)-previous_j)/(.15*14.4)); L=five original loads for endpoint,only0 for a backward unloaded connection.",
+    "equivalence": "All other constraints and physical quantities are independent of r. Original lower bound is0 with no upper bound. Objective adds r^2, monotone on r>=0. For every original feasible point objective>=objective(pose,r_graph); every reduced feasible point lifts via r_graph to all original epigraph constraints. Hence the reduced search preserves the original optimum and every physical condition; existence/global optimum is not asserted.",
+    "coordinates": "Delete optimizer column29 only:30 remaining coordinates retained bitwise. Full31vector lifted by inserting a maximum of already evaluated finite binary64 original ready values, no repair/clip/nextafter of returned coordinates.",
+    "rows": "Delete46readiness rows per constrained load:230endpoint,46connection. Original foot,command,geometry,timing boxes retained. Assert every retained row derivative in column29 is exactly0.",
+    "gradient": "Exact chain rule g_reduced=g_retained+g29*dr; dr selected from actual maximizing load/joint/sign. Ties remain piecewise differentiable; no smoothing/tolerance change.",
+    "independent_audit": "Finite differences of the reconstructed objective at original input seed; verify original readiness rows nonnegative and retained-row independence. Original full-model derivative/work checks remain.",
+    "return": "Solver success mandatory; reconstruct only r; check original full equations and EVERY original inequality, camera/fullmesh/path/float32/runtime gates. No reported success from eliminating a residual alone.",
+    "connection_bias": "Backward connection graph uses its exact fixed command bias from connection_context, matching mechanical_rows. Its derivative is zero because this bias is fixed per edge."
+  },
+  "spatial_initialization": {
+    "equations": "For side s, E_s(q_leg)=original6D position and rotation-log errors relative to ORIGINAL standing foot anchor. Solve J_s*d=-E_s using the original full-model analytic derivative and verify every step against independent original FK.",
+    "limits": "At most5updates/leg,original-FK max error<=1e-11,total joint correction<=.001rad; original lower+.031/upper-.031 and knee>=.04 preserved. Every step must strictly reduce error. No line search, alternate branch or fallback.",
+    "scope": "Only initialization from current encoders/static hulls/current contact facet. No prior returned state,13/15-root pose drift,force-only repair,simulation foot motion or extra actuator authority. All23joints remain available in subsequent optimizer.",
+    "contact": "Root coordinates and computed pelvis contact point must stay bitwise unchanged. Saved standing anchors never move.",
+    "derivatives": "The previous primitive foot Jacobian audits are retained; each fresh closure step is checked by original FK. All original model/graph derivative audits still precede endpoint solve.",
+    "resources": "Two seed builds in observed-facet association each can use<=10small6x6solves. All source/hash/initialization/solve/fullpath/audit remains within unchanged45s parent cap."
+  }
+}

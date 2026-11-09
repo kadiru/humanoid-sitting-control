@@ -1,0 +1,41 @@
+{
+  "utc": "2026-11-08T19:29:07.080150+00:00",
+  "experiment": "upper_thigh_support_20261108_v3",
+  "classification": "REJECTED_MODEL_CONSTRUCTION_NO_PHYSICS",
+  "error": "ValueError({'reason': 'NO_PROXIMAL_THIGH_CLEARANCE_BRACKET', 'at_zero_m': np.float64(-0.12172114694688765), 'at_max_pitch_m': np.float64(-0.02653203171524091)})",
+  "wall_seconds": 1.9670907099789474,
+  "cpu_seconds": 1.9652239999999999,
+  "peak_rss_kib": 286184,
+  "parent_wall_cap_seconds": 45,
+  "timeout": false,
+  "process_exit": 0,
+  "process_exit_is_not_success": true,
+  "physics_steps": 0,
+  "new_demonstrations": 0,
+  "PPO_updates": 0,
+  "full72_checks": 0,
+  "physical_repairs": 0,
+  "source_input_freeze_verified": true,
+  "source_review": "Sole owner separate source/equation review; not external human review",
+  "model_pass": false,
+  "model_audits": [
+    {
+      "path": "/home/kadir/humanoid-sitting/experiments/upper_thigh_support_20261108_v3/results/lean_center/standing_derivative_audit.json",
+      "passed": true,
+      "sha256": "1f36e43427a293ddf44d991123401cecfde5a0e03c6484422951636107c2a697"
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/experiments/upper_thigh_support_20261108_v3/results/lean_center/standing_paired_derivative_audit.json",
+      "passed": true,
+      "sha256": "6122c13e30202691b079202ab1fb717dbc8de4c52a03b72111f03331decab0c1"
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/experiments/upper_thigh_support_20261108_v3/results/lean_center/standing_virtual_work_audit.json",
+      "passed": true,
+      "sha256": "cfdc6790da751a595a803426ad0d4726c707c3820360488457469949a7602851"
+    }
+  ],
+  "receipt": "/home/kadir/humanoid-sitting/experiments/upper_thigh_support_20261108_v3/results/lean_center/receipt.json",
+  "process_receipt": "/home/kadir/humanoid-sitting/experiments/upper_thigh_support_20261108_v3/lean_center.process_receipt.json",
+  "no_retry": true
+}

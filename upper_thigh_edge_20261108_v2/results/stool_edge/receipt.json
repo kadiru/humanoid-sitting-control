@@ -1,0 +1,10 @@
+{
+  "model_pass": false,
+  "error": "ValueError(('CONTACT_OUTSIDE_OBSERVED_COMPONENT', (114, 80, 1)))",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/upper_thigh_edge_20261108_v2/validate.py\", line 93, in <module>\n    facets=[observed_patch.query(pt) for pt in seed_points]\n            ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/upper_thigh_edge_20261108_v2/observed_surface.py\", line 46, in query\n    N,d,edges,V=self.facet(key)\n                ^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/upper_thigh_edge_20261108_v2/observed_surface.py\", line 32, in facet\n    if key not in self.component:raise ValueError(('CONTACT_OUTSIDE_OBSERVED_COMPONENT',key))\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: ('CONTACT_OUTSIDE_OBSERVED_COMPONENT', (114, 80, 1))\n",
+  "total_seconds": 1.4873782210052013,
+  "physics_launch_ready": false,
+  "physical_success": false,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}

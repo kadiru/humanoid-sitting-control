@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "frames": [
+    {
+      "tick": 0,
+      "passed": true,
+      "outside_allowed_triangles_m2": 0.0,
+      "observed_safe_area_m2": 0.01963343073913853,
+      "measured_plane_max_residual_m": 0.00503417161313488,
+      "vertices": 147,
+      "depth_audit_inherited_by_hash": true
+    },
+    {
+      "tick": 50,
+      "passed": true,
+      "outside_allowed_triangles_m2": 0.0,
+      "observed_safe_area_m2": 0.013218243209973866,
+      "measured_plane_max_residual_m": 0.005028501439275274,
+      "vertices": 104,
+      "depth_audit_inherited_by_hash": true
+    }
+  ],
+  "elapsed_seconds": 0.37046328600263223,
+  "correction": "Fixed observed-region representation: original selected cloud includes5mm band and convex hull bridges grooves. Current3mmplane and5deg local normals produce a nonconvex polygon with holes.6mmerosion and full independent allowedtriangle coverage retained. No new camera/raycast.",
+  "numerical_geometry": "GEOS/float64 triangle-union coverage; not an exact rational certificate",
+  "new_physics_steps": 0,
+  "PPO_updates": 0
+}

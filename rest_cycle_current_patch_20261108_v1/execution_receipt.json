@@ -1,0 +1,72 @@
+{
+  "utc": "2026-11-08T21:28:06.728456+00:00",
+  "state": "RECORDER_AND_CURRENT_PATCH_INPUT_FIXED_MODEL_TIMING_REJECTED_NO_COMPLETED_CYCLE",
+  "human_priority": "Reliable complete sitting and upright-lean cycles, each3starts before scaling200demos/PPO.",
+  "changes": [
+    "Lossless NumPy audit serialization",
+    "Timer-module/local-diagnostics name collision fixed; original exception traceback retained",
+    "Production collector/cleanup tested on fake devices, including admission rejection and interrupted recording",
+    "Fresh cold sitting construction now uses actual current camera points rather than a translated old patch"
+  ],
+  "executed": {
+    "serializer_tests_passed": 2,
+    "production_block_software_tests_passed": 4,
+    "camera_separation_validations": 3,
+    "camera_separation_control_admissions": 0,
+    "GPU_process_launches": 2,
+    "diagnosed_software_startup_resumptions": 1,
+    "physical_outcome_retries": 0,
+    "standing_warmup_control_steps": 50,
+    "observed_physics_steps": 200,
+    "active_sitting_controls": 0,
+    "native_substep_measurements_collected": 0,
+    "new_cold_path_constructions": 1,
+    "complete_sitting_cycles": 0,
+    "complete_upright_lean_cycles": 0,
+    "new_demonstrations": 0,
+    "PPO_updates": 0,
+    "full72_rechecks": 0,
+    "accepted_repairs": 0
+  },
+  "outcomes": {
+    "first_launch": "UnboundLocalError before model validation;0activecontrols,100warmup substeps;failed cleanup also preserved",
+    "second_launch": "Corrected software reached live geometry audit;contact inset -0.0277984m failed required>0.02m;0activecontrols,100warmup substeps",
+    "camera": "5cm reset is correct. All126 previously observed front-boundary samples project below current image. No qualified surface-map localization available.",
+    "current_patch_model": {
+      "geometry_except_preliminary_timing_passed": true,
+      "contact_inset_m": 0.022297360122948834,
+      "collision_audit_passed": true,
+      "exact_action_filter_rate_margins_passed": true,
+      "nominal_settle_s": 18.34,
+      "required_final_hold_s": 5,
+      "original_window_s": 20,
+      "remaining_after_nominal_settle_s": 1.66,
+      "model_admitted": false,
+      "physical_success": false
+    },
+    "extra_failed_check": "Saved projection audit first compared to integer pixel indices; corrected to documented pixel centers+0.5, keeping0.01px criterion. Both scripts/exits preserved."
+  },
+  "resources": {
+    "GPU": "4090only",
+    "GPU_owner_combined_wall_s": 30.67694959801156,
+    "total_trial_cap_s": 900,
+    "current_construction_process_wall_s": 8.28821609201259,
+    "construction_cap_s": 45,
+    "AS_GiB": 40,
+    "CPU_threads": 1,
+    "foreign4070_untouched": true
+  },
+  "evidence": {
+    "recorder_fix": "/Users/kadir/humanoid-sitting-control/rest_cycle_startup_fix_20261108_v1/software_validation.json",
+    "live_rejection": "/Users/kadir/humanoid-sitting-control/rest_cycle_startup_fix_20261108_v1/results/sit_coffee_center/fresh_geometry_admission.json",
+    "camera_binding": "/Users/kadir/humanoid-sitting-control/rest_cycle_patch_binding_20261108_v1/result.json",
+    "camera_image": "/Users/kadir/humanoid-sitting-control/rest_cycle_patch_binding_20261108_v1/camera_patch_diagnosis.png",
+    "current_path_audit": "/Users/kadir/humanoid-sitting-control/rest_cycle_current_patch_20261108_v1/construction/audit.json",
+    "worker_check": "/Users/kadir/humanoid-sitting-control/rest_cycle_current_patch_20261108_v1/final_worker_check.json"
+  },
+  "next_work": "One new construction must jointly preserve camera/map coverage, satisfy unchanged contact/collision/action gates, and reach supported rest early enough for the original final5s hold. A qualified remembered surface and sensor load/unload signal are still missing. Integrate true stage primitives and return-to-stand before claiming a complete cycle. Do not launch or retime this rejected current-patch path, reuse its endpoint as a warm start, bypass the patch gate, extend the20s trial, or startPPO from it.",
+  "inherited_status": "Frozen original sitting branch64/72;all8unresolved. Historical armchair squat demonstrations are not upright-lean cycles. No successful new-cycle video exists.",
+  "worker_live": false,
+  "autostart": false,
+  "automation": "deleted by human; not recreated"
+}

@@ -1,0 +1,53 @@
+{
+  "scope": "Contact-mode transition at actual zero-gap, with explicit planned descent joint-speed constraint; two named target constructions",
+  "initialization": "Original saved standing encoders, gravity and previous command only; accepted within-run node continuation; no old rejected vectors",
+  "mechanism": "Unloaded approach and normal descent select exposed material without imposing a premature attachment constraint. Freeze the material coordinate only at zero geometric gap, before load begins. Add explicit normal-stage planned joint-speed<=.05rad/s and charge its time; actual current raw-speed quiet gate remains mandatory.",
+  "named_targets": [
+    "lean_center",
+    "stool_center"
+  ],
+  "source_association": "Current saved standing/camera input; one admitted known_old/8/frame999 orientation is an independent geometric/material-work witness only, never initializer; no rejected vectors.",
+  "resource_bound": {
+    "audit_outer_wall_s": 0,
+    "per_target_total_wall_s": 45,
+    "targets": 2,
+    "total_leaf_wall_ceiling_s": 90,
+    "CPU_threads": 1,
+    "GPU": 0,
+    "retries": 0,
+    "per_node_iterations": 60,
+    "approach_intervals": 8,
+    "normal_intervals": 4,
+    "load_intervals": 4,
+    "maximum_optimizer_calls_per_target": 16,
+    "imports_hashes_preparation_solve_and_audits_included": true,
+    "retained_failure_vectors_reusable": false
+  },
+  "equations": {
+    "clearance": "n_observed(sample) dot world_material_sample + d_observed - margin >= 0; fixed body material samples; 6mm forbidden-body margin; selected target-body margin min(6.01mm, current nonnegative normal gap)",
+    "balanced_feet": "Both foot 6D poses fixed; force/moment balance; each COP10mm inset, normal>=.05BW, friction<=.5",
+    "contact": "Zero-load approach/normal: closest-body-gap equality with exact exposed feature and finite patch constraints. At zero gap freeze material point. Loaded phase: three fixed-material-position equalities. No truth force or pose runtime input.",
+    "cost": "sum(tau_23^2)/standing + readiness_epigraph^2 + .05*joint_distance^2 + .05*tangent_distance^2/.15^2 + positive_root_lowering_fraction^2",
+    "timing": "Prefix deadlines9.66/12.36/13.36s, >=.5s quiet reserve but actual25current quiet gate mandatory,1s final settling reserve, full path<14.4s Normal-stage duration is max(commandarc/.125,modeljointarc/.05,3mm/5.5mmps) plus current-quiet reserve; sameprefix deadlines. A duplicate hover node encodes the0.5s zero-motion reservation explicitly; it is not timer authorization for actual hover release.",
+    "encoding": "Original .003rad/20ms,.1filter,.03desiredmargin,14fixedfingers; planned nominal.125rad/s only, no new feedback allowance"
+  },
+  "tests": [
+    "independent known-distance camera rows and missing-depth negative fixture",
+    "independent all23joint virtual-work and base-wrench audit",
+    "optimizer success + equality<=.002 + inequality>=-1e-6",
+    "full original6mm expanded mesh including rest body until contact",
+    "between-node feet, normal speed, loaded material drift",
+    "float32 complete command encoding and time reservation"
+  ],
+  "failure_policy": "One cold construction per named target for this contact-transition correction, same45s/60iterations/no rejected initialization. No further trial upon failure.",
+  "limitations": [
+    "Camera pixel facets do not certify unseen space",
+    "Sampled static paths do not establish continuous dynamic stability",
+    "Force and torque model are not observed contact or electrical energy",
+    "Fresh real reset/depth/current quiet and runtime checks required before a complete20s physical trial",
+    "No global optimum or completed repair claim"
+  ],
+  "independent_review": "No contact material can slip under load: the only positive-load phase follows zero-gap material freeze. Earlier zero-force phases have no physical attachment. Original minimumgap/camera/finitepatch constraints remain. Independent between-node auditor computes closest distance from all bodyvertices and checks both6mm/s normal speed and.05rad/s planned normal-phase joints. Existing exposed-material/work and objective-continuity audits inherited without replay.",
+  "resource_failure_addressed": "Inherit independently validated exact camera compression; no further row or iteration changes.",
+  "authoring_failure": "Local AST parse caught one missing closing parenthesis before any remote launch; corrected and allsource syntaxpassed."
+}

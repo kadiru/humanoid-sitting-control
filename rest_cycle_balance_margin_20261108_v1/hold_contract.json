@@ -1,0 +1,56 @@
+{
+  "purpose": "Fix two software-contract defects: apply qualified stable-rest evidence rather than raw precontact quiet during HOLD, and keep control1000 in HOLD before unloading at1001.",
+  "source": "Original resting_objective.good has no raw joint-speed threshold; original cycle_audit requires HOLD for controls751..1000 and no unload in first1000.",
+  "unchanged": "No change to physical criteria/scoring, raw25quiet before contact, qualified load requirement, unload/stand quiet gates, action contract or simulator. Unknown rest qualification defaults false.",
+  "equations": "H[t]=H[t-1]+1 iff current map/tracking/qualified_rest/load_lower>=.05; else0. Latch H[1000]>=250 at tick1000; never substitute later samples. First unload tick1001.",
+  "cases": [
+    {
+      "id": "legacy_armchair_0",
+      "trajectory": "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_0/trajectory.npz",
+      "previous_clean": true
+    },
+    {
+      "id": "legacy_armchair_1",
+      "trajectory": "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_1/trajectory.npz",
+      "previous_clean": true
+    },
+    {
+      "id": "legacy_armchair_2",
+      "trajectory": "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_2/trajectory.npz",
+      "previous_clean": true
+    },
+    {
+      "id": "wide_camera_slipping_sit",
+      "trajectory": "/home/kadir/humanoid-sitting/outputs/rest_cycle_wide_camera_20261108_v1/sit_coffee_wide/trajectory.npz",
+      "previous_clean": false
+    }
+  ],
+  "files": {
+    "/home/kadir/humanoid-sitting/experiments/rest_cycle_balance_margin_20261108_v1/stages.py": "0b1365d73ba5ca268ba54e6e3ff42c62cc366064689f6ab373e64f6a9634b856",
+    "/home/kadir/humanoid-sitting/experiments/rest_cycle_balance_margin_20261108_v1/test_core.py": "147de84e84b97454c7776dd9633268cc0fbea48184f7090a5cba37b909679b4e",
+    "/home/kadir/humanoid-sitting/experiments/rest_cycle_balance_margin_20261108_v1/validate_hold.py": "3904a08c641b59c0b126652a78abc5eee1dc9a3ababd0aa5a6c3eb2b063390ce",
+    "/home/kadir/humanoid-sitting/experiments/rest_cycles_20261108_v1/action.py": "125f8d6cb5176f69759f3be4359191c8b2911653c48754b7d6b7d1e5052e0ce8",
+    "/home/kadir/humanoid-sitting/experiments/rest_cycles_20261108_v1/surface_memory.py": "50e327db9151d9aef3638543538a723232e434e20846f2b60faf96924f10995e",
+    "/home/kadir/humanoid-sitting/experiments/rest_cycles_20261108_v1/cycle_audit.py": "37ffe00b6d77be4cd414157938d2518afd1fd8eb8358a2c6821de3b6a299fdd4",
+    "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_0/trajectory.npz": "85c0179bb84f2e5e26b69f89fc774da04a32f8b16d6dc7f600b5726da6502c8f",
+    "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_1/trajectory.npz": "3ad5af283d64d6abb6a19ad44f3cb21b9c4a5713c534dbb3d7dd2f543cfc7e63",
+    "/home/kadir/humanoid-sitting/outputs/box_armchair_lean_20261104_v4/trial_2/trajectory.npz": "50905e055280fd552d0ec317758e18a12c87ad45735c1e761ea4e0fb52aa1ab1",
+    "/home/kadir/humanoid-sitting/outputs/rest_cycle_wide_camera_20261108_v1/sit_coffee_wide/trajectory.npz": "534a6761a3d48391e0e633d28dee1976a9097e015d46a737ebed75c778623fd2"
+  },
+  "limits": {
+    "CPU_wall_s": 45,
+    "threads": 1,
+    "AS_GiB": 40,
+    "physics_steps": 0,
+    "retries": 0,
+    "PPO_updates": 0
+  },
+  "review": {
+    "independent_physical_auditor_unchanged": true,
+    "truth_labels_offline_only": true,
+    "control_adapter_ready": false,
+    "legacy_leans_not_upright": true,
+    "one_owner": true
+  },
+  "success": "All16 software tests and4saved hold-interface checks pass; three old clean labels preserved, slipping attempt remains failed. No complete cycle or qualified actor input claimed."
+}

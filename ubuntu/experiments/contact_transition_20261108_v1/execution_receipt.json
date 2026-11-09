@@ -1,0 +1,187 @@
+{
+  "utc": "2026-11-08T04:56:42.717032+00:00",
+  "state": "CONTACT_FEATURE_AND_TRANSITION_CORRECTED_PATHS_STILL_REJECTED",
+  "authorization": "Continue latest repair task;4090only,4070reserved,20demos across5objects,PPO,72checks; unchanged actions/successcriteria.",
+  "changes": {
+    "contact_feature": "Select the exposed pelvis feature during unloaded approach/descent instead of requiring the standing rear-face centroid to stay on the support plane. Freeze its material coordinate at zero gap before load.",
+    "preference": "Use a fixed material anchor for the soft tangent preference so support-feature switches do not make the cost discontinuous. New fixture: oldjump0.0046666656 vs correctedchange4.444445e-10 for1e-7rad perturbation.",
+    "ankle_descent_planning": "New planned normal-stage joint speed<=.05rad/s with duration fully charged; existing actual rawvelocity/current25quiet gate remains unchanged. No physical ankle stability claim.",
+    "finite_hover_reservation": "Duplicate constant-pose/constant-command hover node explicitly reserves0.5s. It does not authorize timer release in runtime.",
+    "collision": "Original camera constraints,6mmexpandedmesh gate,finitepatch,footbalance,commandlimits and original success gates retained."
+  },
+  "checks": {
+    "contact_feature_work": "All six new geometry/material-work tests computed aggregate PASS; report failed serializing NumPybool after aggregate true was written. Exactpartial and traceback preserved; aggregate recovered without rerunning science. Numericaldiagnostics unavailable.",
+    "continuous_preference": "New fixture PASS; inherited contact-work proof not replayed.",
+    "final_cold_constructions": {
+      "lean_center": {
+        "result": "REJECTED_NOT_DEPLOYABLE",
+        "last_optimizer": {
+          "phase": "normal",
+          "node": 4,
+          "success": false,
+          "iterations": 6,
+          "equality": 0.0013849566844574834,
+          "inequality": -0.003955717507853779,
+          "message": "Inequality constraints incompatible",
+          "foot_pose_residual": 0.0013849566844574834,
+          "gap_m": -8.002705997878223e-10,
+          "required_gap_m": 0.0,
+          "camera_minimum_m": -0.003955717507853779,
+          "model_contact_point_local": [
+            -0.054169133305549594,
+            -0.01872009970247745,
+            -0.1178673580288887
+          ],
+          "point_frozen": false
+        },
+        "accepted_internal_node_count": 13,
+        "last_internal_node": {
+          "phase": "normal",
+          "seconds": 8.791208551607182,
+          "gap": 0.0030000000000002247,
+          "load": 0.0
+        },
+        "full_mesh_and_encoding_completed": false,
+        "physical_success": false
+      },
+      "stool_center": {
+        "result": "REJECTED_NOT_DEPLOYABLE",
+        "last_optimizer": {
+          "phase": "load",
+          "node": 2,
+          "success": false,
+          "iterations": 60,
+          "equality": 8.405753193923747e-13,
+          "inequality": -0.001098140639957404,
+          "message": "Iteration limit reached",
+          "foot_pose_residual": 8.405753193923747e-13,
+          "gap_m": 3.3956171208160413e-13,
+          "required_gap_m": 0.0,
+          "camera_minimum_m": 1.0,
+          "model_contact_point_local": [
+            0.02351128309965133,
+            0.0038944864645600323,
+            -0.14779505133628842
+          ],
+          "point_frozen": true
+        },
+        "accepted_internal_node_count": 15,
+        "last_internal_node": {
+          "phase": "load",
+          "seconds": 11.237443065238388,
+          "gap": 5.551115123125783e-17,
+          "load": 0.125
+        },
+        "full_mesh_and_encoding_completed": false,
+        "physical_success": false
+      }
+    },
+    "earlier_rejections": [
+      "contact_mode_v1: approach7 iterationlimit despite near-feasible residuals; not accepted",
+      "contact_mode_v2: normal2 positive directional derivative; not accepted"
+    ],
+    "input_source": "Original saved standing/camera and independently admitted known_old/8 geometry witness only. No old failed vector initialization or resumed terminal optimizer."
+  },
+  "limitations": [
+    "No complete path admitted; fullmesh/between-node/float32 final gates not reached.",
+    "Uprightlean final camera residual -0.0039557175m is a clearance-margin shortfall, not measured physical penetration.",
+    "Stool inequality minimum -0.00109814064 has mixed constraint units; do not call it millimeters. Camera residual1 is the neutral no-observed-row value, not proof of free space.",
+    "Static fixedfoot/model force constraints do not establish physical ankle stability or actual contact/load.",
+    "New runtime and current-camera/depth checks are still required before physics."
+  ],
+  "resources": {
+    "scientific_owner_count": 1,
+    "other_agents": 0,
+    "GPU_used": false,
+    "leaf_processes": [
+      {
+        "file": "/Users/kadir/humanoid-sitting-control/contact_mode_20261108_v1/audit_process_receipt.json",
+        "wall_s": 1.4556841689918656,
+        "cpu_s": 1.453688,
+        "returncode": 1,
+        "timeout": false
+      },
+      {
+        "file": "/Users/kadir/humanoid-sitting-control/contact_mode_20261108_v1/lean_center.process_receipt.json",
+        "wall_s": 25.431503272004193,
+        "cpu_s": 25.422952000000002,
+        "returncode": 0,
+        "timeout": false
+      },
+      {
+        "file": "/Users/kadir/humanoid-sitting-control/contact_mode_20261108_v2/audit_process_receipt.json",
+        "wall_s": 0.33769526399555616,
+        "cpu_s": 0.33662899999999996,
+        "returncode": 0,
+        "timeout": false
+      },
+      {
+        "file": "/Users/kadir/humanoid-sitting-control/contact_mode_20261108_v2/lean_center.process_receipt.json",
+        "wall_s": 22.284323883010074,
+        "cpu_s": 22.277848,
+        "returncode": 0,
+        "timeout": false
+      },
+      {
+        "file": "/Users/kadir/humanoid-sitting-control/contact_transition_20261108_v1/lean_center.process_receipt.json",
+        "wall_s": 31.090682623005705,
+        "cpu_s": 31.081262000000002,
+        "returncode": 0,
+        "timeout": false
+      },
+      {
+        "file": "/Users/kadir/humanoid-sitting-control/contact_transition_20261108_v1/stool_center.process_receipt.json",
+        "wall_s": 22.55298089500866,
+        "cpu_s": 22.547777,
+        "returncode": 0,
+        "timeout": false
+      }
+    ],
+    "leaf_count": 6,
+    "leaf_wall_s": 103.15287010601605,
+    "leaf_cpu_s": 103.12015600000001,
+    "verified_imported_files": 61,
+    "unmetered_non_scientific_work": "Local authoring/source/metadata reads, hash preparation, report-only aggregate-verdict recovery, transport and worker queries. v1 launch-wrapper sourcehash verification preceded its metered child clock; no claim that this overhead was zero.",
+    "new_physics_steps": 0,
+    "new_demos": 0,
+    "new_PPO_updates": 0,
+    "new72checks": 0,
+    "new_video": false
+  },
+  "physical": {
+    "baseline_clean": 64,
+    "development_cases": 72,
+    "unresolved_old_failures": 8,
+    "accepted_repairs": 0,
+    "new_policy_promoted": false,
+    "action_limits_changed": false,
+    "success_criteria_changed": false
+  },
+  "workers": {
+    "utc": "2026-11-08T04:56:38.222659+00:00",
+    "gpu": "0, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 75 %, 43, 6200 MiB\n1, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 90 %, 60, 4843 MiB\n",
+    "gpu_processes": "232122, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 6140 MiB\n3934199, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 4628 MiB\n",
+    "worker_commands": [
+      {
+        "pid": 232122,
+        "command": "/workspace/venv/bin/python /workspace/studies/shot-benchmark-source-df8de16-v1/sircus/isaac/film_cylinder_farm.py --headless --enable_cameras --device cuda:0 --assets /workspace/assets --output /workspace/output/sweep-ppo-10k-20261106-v2/runs/ppo-seed20261123 --appearance silver --continuous-source /workspace/output/expanded-training-20261102-v4 --continuous-camera-json /workspace/output/expanded-training-20261102-v4/selected-camera.json --shot-benchmark-plan /workspace/output/sweep-ppo-10k-20261106-v2/experiment.json --shot-benchmark-method ppo --shot-benchmark-seed 20261123 "
+      },
+      {
+        "pid": 3934199,
+        "command": "/isaac-sim/kit/python/bin/python3 -u /workspace/src/run_fountain.py --allow-root "
+      }
+    ],
+    "own_scientific_workers": [],
+    "disk_free_bytes": {
+      "/": 58017501184,
+      "/data": 6257946624
+    },
+    "original_minimum_disk_reserve_bytes": 20000000000,
+    "GPU4070_untouched": true,
+    "recurring_automation_created": false,
+    "training_queue_created": false
+  },
+  "next_work": "Current greedy path reaches an unsafe or infeasible terminal contact. Construct a legal balanced final-contact witness from original sensor/static-model inputs, then a complete standing-to-contact path under the same45s,totaltrajectory,optimality,finiteencoding and physical gates; no rejected state reuse or further retry of these frozen constructors. Resolve stool loaded balance/time and live ankle/camera stability. After admission and4090availability:10sitting+10leaning clean20s demos across5objects,imitation/preflight,PPOweightupdate proof,all72,video.",
+  "automation": "Deleted by user. No recurring automation or training queue.",
+  "task_complete": false
+}

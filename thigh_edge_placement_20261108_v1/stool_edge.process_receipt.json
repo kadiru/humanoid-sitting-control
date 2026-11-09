@@ -1,0 +1,10 @@
+{
+  "target": "stool_edge",
+  "wall_seconds_including_interpreter_startup": 1.3993201880075503,
+  "timeout": false,
+  "returncode": 0,
+  "cpu_seconds": 1.397654,
+  "child_peak_rss_kib": 286388,
+  "output": "{\n  \"model_pass\": false,\n  \"error\": \"ValueError('CONTACT_GOAL_OUTSIDE_IMAGE')\",\n  \"traceback\": \"Traceback (most recent call last):\\n  File \\\"/home/kadir/humanoid-sitting/experiments/thigh_edge_placement_20261108_v1/validate.py\\\", line 71, in <module>\\n    _,_,_,_,anchor_facet=select(camera,depth,anchor)\\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/kadir/humanoid-sitting/experiments/thigh_edge_placement_20261108_v1/contact_facet.py\\\", line 24, in select\\n    if not (0<=row<camera.h-1 and 0<=col<camera.w-1):raise ValueError('CONTACT_GOAL_OUTSIDE_IMAGE')\\n                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nValueError: CONTACT_GOAL_OUTSIDE_IMAGE\\n\",\n  \"total_seconds\": 1.330845438002143,\n  \"physics_launch_ready\": false,\n  \"physical_success\": false,\n  \"physics_steps\": 0,\n  \"PPO_updates\": 0\n}\n",
+  "new_physics_steps": 0
+}

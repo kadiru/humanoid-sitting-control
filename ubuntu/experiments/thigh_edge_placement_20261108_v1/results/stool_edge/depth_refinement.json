@@ -1,0 +1,63 @@
+{
+  "expansion": {
+    "source": "actual_aligned_depth_connected_to_selected_patch",
+    "selected_patch_pixels": 456,
+    "expanded_support_points": 888,
+    "self_mask_margin_m": 0.009,
+    "normal_up_threshold": 0.75,
+    "actor_truth_input": false,
+    "flat_plane_residual_not_used_to_discard_curved_top": true
+  },
+  "refinement": {
+    "actor_truth_input": false,
+    "mode": "observed_piecewise_planar_height_field",
+    "contact_source_indices": [
+      415,
+      449,
+      450
+    ],
+    "contact_triangle_gravity": [
+      [
+        -0.3898999811077099,
+        0.004622892425507299,
+        -0.29624933082364835
+      ],
+      [
+        -0.3801246579760949,
+        -0.004830165893627281,
+        -0.29630507521039656
+      ],
+      [
+        -0.3800018172177649,
+        0.004576343809029952,
+        -0.2960290661055791
+      ]
+    ],
+    "contact_target_gravity": [
+      -0.38426702765298043,
+      -0.00037372611176786727,
+      -0.29626836223848796
+    ],
+    "longest_contact_triangle_edge_m": 0.013598542618571326,
+    "maximum_plane_residual_m": 0.0,
+    "whole_cloud_claimed_planar": false
+  },
+  "coarse_normal": [
+    -0.010644281791718939,
+    -0.017932634749586247,
+    0.9997825611398815
+  ],
+  "coarse_offset": 0.2874874770641327,
+  "refined_normal": [
+    -0.02237465925705537,
+    -0.029030441346972465,
+    0.9993280783097864
+  ],
+  "refined_offset": 0.2940459352918168,
+  "measured_goal": [
+    -0.08931645756575629,
+    -0.0008588399873096023,
+    -0.29626836223848796
+  ],
+  "source": "Existing connected current depth and actual central triangle; no target search or physical tolerance change"
+}

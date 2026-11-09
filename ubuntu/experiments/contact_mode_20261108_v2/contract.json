@@ -1,0 +1,51 @@
+{
+  "scope": "One named CPU-only exposed-material contact construction for upright pelvis lean",
+  "initialization": "Original saved standing encoders, gravity and previous command only; accepted within-run node continuation; no old rejected vectors",
+  "mechanism": "Retain exposed-material contact selection and freeze at hover. Correct secondary tangent preference to a fixed body material anchor instead of the discontinuous selected-support witness. The hard contact equations and collision guards continue using the true exposed witness.",
+  "named_targets": [
+    "lean_center"
+  ],
+  "source_association": "Current saved standing/camera input; one admitted known_old/8/frame999 orientation is an independent geometric/material-work witness only, never initializer; no rejected vectors.",
+  "resource_bound": {
+    "audit_outer_wall_s": 45,
+    "per_target_total_wall_s": 45,
+    "targets": 1,
+    "total_leaf_wall_ceiling_s": 90,
+    "CPU_threads": 1,
+    "GPU": 0,
+    "retries": 0,
+    "per_node_iterations": 60,
+    "approach_intervals": 8,
+    "normal_intervals": 4,
+    "load_intervals": 4,
+    "maximum_optimizer_calls_per_target": 16,
+    "imports_hashes_preparation_solve_and_audits_included": true,
+    "retained_failure_vectors_reusable": false
+  },
+  "equations": {
+    "clearance": "n_observed(sample) dot world_material_sample + d_observed - margin >= 0; fixed body material samples; 6mm forbidden-body margin; selected target-body margin min(6.01mm, current nonnegative normal gap)",
+    "balanced_feet": "Both foot 6D poses fixed; force/moment balance; each COP10mm inset, normal>=.05BW, friction<=.5",
+    "contact": "During unloaded approach, p=T_body*mean(argmin_v n dot T_body*v). Require targetgap and all original bodyclearances. Freeze p_local at12mmhover; all later contactwork, normal-motion and no-slip tests use this fixed material coordinate.",
+    "cost": "sum(tau_23^2)/standing + readiness_epigraph^2 + .05*joint_distance^2 + .05*tangent_distance^2/.15^2 + positive_root_lowering_fraction^2",
+    "timing": "Prefix deadlines9.66/12.36/13.36s, >=.5s quiet reserve but actual25current quiet gate mandatory,1s final settling reserve, full path<14.4s",
+    "encoding": "Original .003rad/20ms,.1filter,.03desiredmargin,14fixedfingers; planned nominal.125rad/s only, no new feedback allowance"
+  },
+  "tests": [
+    "independent known-distance camera rows and missing-depth negative fixture",
+    "independent all23joint virtual-work and base-wrench audit",
+    "optimizer success + equality<=.002 + inequality>=-1e-6",
+    "full original6mm expanded mesh including rest body until contact",
+    "between-node feet, normal speed, loaded material drift",
+    "float32 complete command encoding and time reservation"
+  ],
+  "failure_policy": "One new cold construction for this specific discontinuous-objective correction; unchanged60iterations/45s/physicalgates. No failed endpoint reused and no automatic further retries.",
+  "limitations": [
+    "Camera pixel facets do not certify unseen space",
+    "Sampled static paths do not establish continuous dynamic stability",
+    "Force and torque model are not observed contact or electrical energy",
+    "Fresh real reset/depth/current quiet and runtime checks required before a complete20s physical trial",
+    "No global optimum or completed repair claim"
+  ],
+  "independent_review": "Inherit frozen exposed-contact and fixed-work verdict without replay. New synthetic face-switch fixture checks the actual preference_point implementation: old exposed witness cost has a finite jump, fixed-anchor cost is continuous; no physical guard is weakened.",
+  "resource_failure_addressed": "Inherit independently validated exact camera compression; no further row or iteration changes."
+}

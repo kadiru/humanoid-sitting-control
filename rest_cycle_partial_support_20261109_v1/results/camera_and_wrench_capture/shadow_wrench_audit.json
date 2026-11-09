@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "tests": {
+    "native_pose_order": true,
+    "finite": true,
+    "mean_foot_force_error": true,
+    "p99_foot_force_error": true
+  },
+  "native_pose_max_error": 0.0,
+  "foot_force_mean_error_bw": 1.505314123206299e-07,
+  "foot_force_p99_error_bw": 3.104096585528608e-07,
+  "predicted_foot_vertical_mean_N": [
+    158.72551048024982,
+    157.53817479700902
+  ],
+  "truth_foot_vertical_mean_N": [
+    158.7255859375,
+    157.53819274902344
+  ],
+  "interpretation": "Joint-transmitted force plus foot inertia/gravity, not motor torque. Standing-only sensor mapping check; no loaded validation.",
+  "loaded_validation": false,
+  "actor_sensor_admitted": false,
+  "physical_hardware_validated": false,
+  "official_reference": "https://docs.isaacsim.omniverse.nvidia.com/latest/sensors/isaacsim_sensors_physics_articulation_force.html"
+}

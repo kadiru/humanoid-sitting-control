@@ -1,0 +1,62 @@
+{
+  "classification": "One new endpoint-first current-input construction; no physical admission from solver exit",
+  "target": "lean_center original measured standing rear camera and box armchair back",
+  "new_mechanism": "Analytic torso/pelvis plane-separation plus positive-knee reach seed; full23joint endpoint constrained at five load fractions; independent17load audit; endpoint actual-mesh veto; backward zero-load connection to exactly original standing. No failed endpoint is reused.",
+  "initialization": "seed.py constructs only from original encoders, current camera plane and static collision hulls/inertia; no historical/internal optimizer vector. Endpoint then seeds connection only if solver success, complete endpoint constraints, dense-load, independent virtual-work and fullmesh audits pass.",
+  "equations": {
+    "equilibrium": "sum F=[0,0,W]; sum p cross F = COM cross [0,0,W]; full23joint gravity minus fixed-material contact Jacobian torque",
+    "contact": "unloaded approach exposes true min-projection pelvis material; same-pose endpoint candidates share one material point for all five loads; freeze marker at zero gap before physical loading",
+    "loads": [
+      0,
+      0.05,
+      0.1,
+      0.15,
+      0.2
+    ],
+    "objective": "full23joint squared torque / original standing torque + readiness epigraph squared + .05 joint deviation squared + .05 fixed-material tangent error squared / .15^2 + normalized root lowering squared; backward connection adds .1 endpoint-guided posture distance squared + .01 interval seconds",
+    "clock": "joint command arc/.125; normal joint arc/.05 and .003/.0055 per normal edge; 0.5s explicit quiet reserve plus actual25CURRENT requirement; >=.25s/load edge; 1s settle; complete settled trajectory<14.4s",
+    "optimization": "SLSQP60iterations per named endpoint/edge,ftol1e-9; success mandatory, equality<=.002 and inequality>=-1e-6; total parent45s cap overrides all stages"
+  },
+  "unchanged": {
+    "action_increment_rad": 0.003,
+    "control_seconds": 0.02,
+    "filter": 0.1,
+    "desired_joint_margin": 0.03,
+    "fingers_fixed": 14,
+    "normal_speed_max": 0.006,
+    "quiet_current_samples": 25,
+    "actual_mesh_buffer_m": 0.006,
+    "finite_patch_construction_inset_m": 0.022,
+    "all_tick_contact_and_slip": "unchanged",
+    "full20s_and_final5s_hold": true,
+    "protected72": true,
+    "fresh_holdout": "closed"
+  },
+  "resources": {
+    "scientific_attempts": 1,
+    "targets": [
+      "lean_center"
+    ],
+    "total_wall_seconds_including_interpreter_hashes_initialization_all_audits_serialization": 45,
+    "address_space_GiB": 40,
+    "scientific_workers": 1,
+    "BLAS_threads": 1,
+    "GPU_devices": [],
+    "minimum_disk_free_bytes": 20000000000,
+    "inputs_read_only": true,
+    "output_max_expected_MiB": 10,
+    "retry": false,
+    "resume": false,
+    "timeout_output": "process receipt and already written seed/endpoint audit; no salvaged point admission"
+  },
+  "finite_return": "Reject unless complete path, fullmesh, between-node feet/normal speed, float32 action bounds/filter/fingers and hold reserve pass; current-input runtime, ankle quiet and actual physical fullrollout gates still separately required.",
+  "limitations": [
+    "Quasi-static model is not realized balance or contact force",
+    "ImplicitPD torque proxy is not physical energy",
+    "Sampled audit is not continuous geometry proof",
+    "Same-pose load transfer is a restriction; failure is not robot impossibility",
+    "Raw joint velocity guards remain unchanged",
+    "No simulation/PPO autostart on model pass"
+  ],
+  "correction": "JSON p1 vectors are lists; convert to ndarray before absolute-value zero-frame assertion. No optimizer ran in v1, no returned state reused; objective, initialization equations, methods, bounds and budgets unchanged."
+}

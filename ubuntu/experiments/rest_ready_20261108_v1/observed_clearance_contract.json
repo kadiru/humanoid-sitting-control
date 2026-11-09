@@ -1,0 +1,15 @@
+{
+  "purpose": "Reject body contact with surrounding observed surfaces before intended support. The old geometry guide excluded all torso vertices for leaning, so a selected materialpoint could approach legally while another part hit the chairtop.",
+  "inputs": "Saved rear depth/K, calibrated camera transform, encoder/gravity/current geometry and static collision model; no furniture truth mesh or worldroot used by guard.",
+  "validation": "One negative saved rejectedarmchair path, original standingpositivecontrol, missingdepthnegativecontrol. No path reused for action or optimization.",
+  "limits": "6mmexpandedwholebodycheck; alloriginalsuccess/actioncriteria unchanged. Observed targetplane<=2mmresidual,normalagreement.97; no depthtriangle spans>5cm or invalidpixel.",
+  "limitations": "Camera-only veto, does not certify hiddengeometry, boundaryinsets or currentphysicalforce. Fulloriginalmesh and livefreshcamera gates remain mandatory.",
+  "resources": {
+    "wall_s": 45,
+    "CPU_threads": 1,
+    "GPU": 0,
+    "simulation": 0,
+    "PPO": 0
+  },
+  "retry": 0
+}

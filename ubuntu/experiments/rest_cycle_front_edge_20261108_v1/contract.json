@@ -1,0 +1,18 @@
+{
+  "utc": "2026-11-08T23:54:00.925658+00:00",
+  "authorization": "Same authorized higher-support validation and sit/hold/stand task.",
+  "mechanism": "Replace an unsupported assumption that the center near-edge must be directly visible with a concrete bilateral line association. Both visible flanks of the same current selected plane must constrain a common front edge across the occluded contact lane. No old camera map or scene-ID input.",
+  "edge_requirements": "At least10points each side in y[-.45,-.15] and[.15,.45]m, within6mm of current measuredfront, at least2pixels insideimage. Commonline max residual<=3mm, independent side center intercept difference<=3mm, slope<=.03. Independent actual-mesh edge agreement<=6mm before motion construction.",
+  "safety": "This is an edge association change, not a waiver of the failed center-only rule. The center remains labeled inferred. Full actual mesh clearance is mandatory and unchanged. Plane/depth result is bound to its already-audited exact current capture.",
+  "construction": "Same fixed-material cold model; no previous rejected point/path input. New edge-visible snapshot has not previously reached an endpoint solve. Original time witness and all body/command/clearance tests retained.",
+  "resources": {
+    "CPU_total_wall_s": 45,
+    "AS_GiB": 40,
+    "threads": 1,
+    "physics_steps": 0,
+    "PPO_updates": 0,
+    "retries": 0
+  },
+  "return_policy": "One association and cold construction, stop on any gate failure; no tuning or retry. No GPU launch in this step.",
+  "source_review_passed": true
+}

@@ -1,0 +1,57 @@
+{
+  "utc": "2026-11-08T02:21:34.893348+00:00",
+  "state": "REWARD_AND_CAMERA_VETO_SAVED_TESTS_PASS_MOTION_REJECTED_NO_PHYSICS",
+  "user_objective": "Supported rest: low sustained joint-effort proxy, stable balance, minimal necessary legalcontact and readiness to stand; physical/actioncriteria unchanged. No lying/sprawling or needlesslean squat. Electricalenergy and actual stand-up readiness unmeasured.",
+  "meaningful_changes": {
+    "full_body_model": "23joint+floatingbase staticmodel withsixwrenchbalance, fixed-material contactwork, independent23joint virtualwork check. Alljointtorque-squared objective replaces ankle-vs-knee torque-capacity normalization. No rejectedoptimizer vector reused.",
+    "clock_and_encoding": "Explicit epigraph and signedconstraints remove nonsmooth maxima. Prefixdeadlines reserve futurecontact/load time. Inward40ms/10microradian reserves coverfiniteencoding; actualfloat32forwardfilter verified onreturned torso path. No limit/tolerancewaiver.",
+    "camera_clearance": "Wholecontactbody checked againstsurroundingcamera-visible surfaces. Veto rejects savedprematuretorso contact, acceptsinitialstanding, rejects missingdepth; 9677 observedtriangles. Exact firstwitness earlyexit11.28s afterearlierenumeration45stimeout. Veto not deployed or a hiddengeometrycertificate.",
+    "reward": "Bonus remains.2 andclean-completiononly; usesmean alljoint appliedtorque squared overfinal250ticks instead offinalinstant. Environmentintegration calls testedwindow; independentNumPy replay3000savedcontrols,reset,NaN,onetickdip checks pass. Notdeployed."
+  },
+  "executed_model_outcomes": {
+    "staged_three_joint": "12distinctleanstarts;allrejected geometric/convergence/timing. Centertime16.1223s;left/right~15.96s. No morethreejoint scans authorized bythisreceipt.",
+    "full_body_original": "Two namedtargets rejectedfirstnode convergence.",
+    "epigraph": "Both progress farther but exhaustfuturetime.",
+    "reserved": "Torso reaches fullpath butstrict14.4s timing fails by1.56e-10s; stool rejects finalnormal node. No boundarywaiver or failedpath reused.",
+    "encoded_torso": "Timing, footclosure,normalrate,materialdrift,commandboundsandfloat32 pass; fullmesh fails57early/forbidden intersections atchairback/topedge. Finalmodeltorqueproxy1.05975timesstanding, notaneffortsuccess.",
+    "pelvis_support": "Existingphysicalclassifieralready permits pelvis. Fullbodypelvisconstruction andexplicitvertex correction bothreject; latterapproachnode7 eqerror.3325/ineq-1.9719. No returnedvalidmotion or physicalresult."
+  },
+  "non_success_processes": {
+    "console_serialization": "encodedtorso childexit1 aftercomplete receipt was saved; NumPybool rejected byfinalstdoutprinter. Originalsource/log/exit retained; no calculation rerun to repair printing.",
+    "camera_enumeration": "45.052souterwatchdog,exit-9,no finishedvalidation. Separatefirstwitnessalgorithm validatedlater; originaltimeoutretained."
+  },
+  "resources": {
+    "leaf_executions": 24,
+    "sum_leaf_process_wall_s": 218.6178593839577,
+    "sum_leaf_cpu_s": 218.478699,
+    "threads_per_execution": 1,
+    "GPU_seconds_used_by_this_work": 0,
+    "per_execution_cap_s": 45,
+    "preparation_and_transfer_time": "Separatefreeze preparation timings preserved; totals above areprocesswall, not entire chatelapsed or a single45scycle.",
+    "latest": "/Users/kadir/humanoid-sitting-control/rest_ready_20261108_v1/final_resource_receipt.json"
+  },
+  "physical": {
+    "new_physics_steps": 0,
+    "new_full_rollouts": 0,
+    "new_successful_demos": 0,
+    "PPO_updates": 0,
+    "new_full72_checks": 0,
+    "accepted_repairs": 0,
+    "protected_clean": 64,
+    "unresolved_original_failures": 8,
+    "new_video": null,
+    "main_PPO": "Previousarmchair128 remains2/11 vs11/11baseline; notpromoted."
+  },
+  "next_work": "No safe newmotion is admitted. A new collision-aware contact/path construction must incorporate wholebody/currentcamera constraints while preservingbalance and futuretime, with credibleinitialization/witness beforelaunch; no blind retry or reused rejected states. Stool path remainsrejected. Freshcamera/reset/quiet/drive validation needed beforephysical. Then10sitting+10leaning on5furniture,imitationpreflight,4090PPO,weightproof,all72andvideo. GPU4090occupiedbyforeignPID3916534; original20GBdiskreservefails(root15.59GB,data6.26GB). Do not disturbforeignjobs or use4070.",
+  "worker_live": false,
+  "PPO_autostart": false,
+  "automation": "Deleted byhuman; not recreated",
+  "evidence": {
+    "reward_validation": "/Users/kadir/humanoid-sitting-control/rest_ready_20261108_v1/reward_repair/validation.json",
+    "camera_validation": "/Users/kadir/humanoid-sitting-control/rest_ready_20261108_v1/observed_clearance_v2_validation.json",
+    "torso_model": "/Users/kadir/humanoid-sitting-control/rest_ready_20261108_v1/encoded_results/lean_center/receipt.json",
+    "pelvis_model": "/Users/kadir/humanoid-sitting-control/rest_ready_20261108_v1/pelvis_vertex_results/lean_center/receipt.json",
+    "stool_model": "/Users/kadir/humanoid-sitting-control/rest_ready_20261108_v1/reserved_results/stool_center/receipt.json",
+    "import_manifest": "/Users/kadir/humanoid-sitting-control/rest_ready_20261108_v1/import_manifest.json"
+  }
+}

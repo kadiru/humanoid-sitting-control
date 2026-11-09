@@ -1,0 +1,15 @@
+#usda 1.0
+(
+    defaultPrim = "Furniture"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "Furniture" (
+    prepend references = @/home/kadir/humanoid-sitting/experiments/furniture_examples_20261105_v1/scenes/modern_coffee_table_01_top/furniture.usda@
+)
+{
+    matrix4d xformOp:transform = ( (1, 0, 0, 0), (-0, 1, 0, 0), (0, 0, 1, 0), (-0.01, -0.04, 0, 1) )
+    uniform token[] xformOpOrder = ["xformOp:transform"]
+}
+

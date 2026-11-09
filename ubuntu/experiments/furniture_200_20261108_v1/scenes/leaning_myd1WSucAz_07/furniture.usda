@@ -1,0 +1,15 @@
+#usda 1.0
+(
+    defaultPrim = "Furniture"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "Furniture" (
+    prepend references = @/home/kadir/humanoid-sitting/experiments/furniture_examples_20261105_v1/scenes/myd1WSucAz_rear_back/furniture.usda@
+)
+{
+    matrix4d xformOp:transform = ( (0.9986295347545738, -0.052335956242943835, 0, 0), (0.052335956242943835, 0.9986295347545738, 0, 0), (0, 0, 1, 0), (-0.010289030539987113, -0.05103763432318212, 0, 1) )
+    uniform token[] xformOpOrder = ["xformOp:transform"]
+}
+

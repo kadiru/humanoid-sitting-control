@@ -1,0 +1,46 @@
+{
+  "utc": "2026-11-08T20:33:13.531090+00:00",
+  "authorization": "Human explicitly restarts toward one reliable sitting cycle and one upright-lean cycle: Observe,position,contact,transfer weight,hold,stand again.",
+  "immediate_goal": "Two sensor-driven complete cycles on compatible furniture, each independently repeated from3starts before scaling.",
+  "deferred": "100sitting+100leaning and PPO follow reliable cycles; no newPPO or automated queue now.",
+  "preserve": {
+    "GPU": "4090only",
+    "4070": "AIWorker untouched",
+    "scientific_owners": 1,
+    "recurring_automation": false,
+    "joint_actions": 23,
+    "fixed_fingers": 14,
+    "dt_s": 0.02,
+    "maximum_command_increment_rad": 0.003,
+    "filter": 0.1,
+    "desired_joint_margin_rad": 0.03,
+    "original72": true,
+    "protected_successes": 64,
+    "unresolved_failures": 8,
+    "fresh24_holdout": "closed",
+    "physical_failure_slip_contact_thresholds": "unchanged"
+  },
+  "new_architecture": {
+    "stage_progress": "Measured tracking, qualified contact/load and stability; time only limits a stage, never asserts contact or stability.",
+    "surface_memory": "Rigid measured map with explicit pose uncertainty and last visual verification; blind extrapolation never marked fresh.",
+    "motion": "Valid feedback primitive perstage, not a time-indexed whole-motion prior. Exit from support is explicitly validated.",
+    "contact_trigger": "Sensor-only estimator requires separate whole-start validation including unknown/failure states. Simulator contact is labels and evaluation only.",
+    "upright_lean_intent": "Added posture qualification: both knees<=35deg during entire qualifying hold; no knee-lock or electrical-energy claim.",
+    "sit": "Preserve existing legal pelvis/thigh support definition.",
+    "cycle_timing": "Keep original first20s standing-to-rest trial, including its final5s support test. Append up to20s for unloading/standing; do not replace original rest test with standing success.",
+    "stand_again": "After explicit unload/clearance, verify near-original standing pose and two continuous quiet seconds without furniture support, in addition to unchanged all-tick safety.",
+    "reward": "First master safe contact/hold and stand-up. Later minimize holding-effort integral on complete successful cycles; no reward for failed prefixes."
+  },
+  "first_work": "Implement stage/memory/action/audit contracts and independently test them. Use saved armchair successes/failures only as contact-observer development fixtures; their83deg squat is not an upright lean success.",
+  "resources": {
+    "saved_data_validation_wall_seconds": 45,
+    "address_space_GiB": 40,
+    "CPU_threads": 1,
+    "saved_data_passes": 1,
+    "science_retries": 0,
+    "max_expected_output_MiB": 20,
+    "minimum_root_free_GB": 20,
+    "GPU_launches_now": 0
+  },
+  "completion_is_not": "Source tests, saved replay, source review, repeated teacher commands, partial starts or a process exit are not complete-cycle success."
+}

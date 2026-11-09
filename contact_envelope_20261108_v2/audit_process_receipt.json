@@ -1,0 +1,7 @@
+{
+  "wall_seconds": 1.579206910013454,
+  "cpu_seconds": 1.5778709999999998,
+  "returncode": 1,
+  "timeout": false,
+  "output": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/contact_envelope_20261108_v2/audit_compression.py\", line 22, in <module>\n    for label,q,root in [('standing',f['q'],transform(R0))]+[(str(i),data['q'][i,0],data['root'][i,0]) for i in (499,999)]:\n                                                                                    ~~~~^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/IsaacLab/.venv/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py\", line 243, in __getitem__\n    raise KeyError(f\"{key} is not a file in the archive\") from None\nKeyError: 'root is not a file in the archive'\n"
+}

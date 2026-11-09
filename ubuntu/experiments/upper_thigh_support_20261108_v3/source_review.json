@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "scope": "Source/equation review, not executed arithmetic or physical success",
+  "reviewer": "Sole scientific owner; no other agents",
+  "checks": [
+    "Both hip_yaw bodies legal in original scoring; proximal subset adds intent restriction.",
+    "Ground resultant and moments include both contacts; actual-leg descendant membership retained in torque.",
+    "Analytic derivatives include both support point cross forces; independent actual finite differences and four-contact virtual work required BEFORE geometry root.",
+    "Original foot anchors retained; two contact equations and full body nonpenetration prevent mean-point-only contact.",
+    "Per-face6mm expanded buffers retained; hip motor housings forbidden.",
+    "Complete paired system labelled and length-checked; no inherited fixed row count discards constraints.",
+    "Camera rows and derivatives use identical allowed-body tuples; original target mask unchanged.",
+    "Each contact gap/normal speed/loaded material drift checked separately.",
+    "No scientific script executed during authoring; inherited restrictions consulted."
+  ],
+  "source_hashes": {
+    "run.py": "c5d4d2d8aa3052f2db9b4e3b0cfe7f910a01937dd40067e41d2adde730299855",
+    "audit_full_mesh.py": "03f3d47b158cb3b826a6d908e9b645816dac37d73bdeef1b04fe6ac4b9eca66f",
+    "audit_facet.py": "e3b67fd5c606b8aa0c62d11497573dcf027196bd9b3ebd50e62cc841ef4a87cb",
+    "contact_facet.py": "57a847e6461485a8ac85293114b0d4a75a847164a6cf577a7b47d790d09211fe",
+    "analytic_model.py": "d69ed7b764b10104efc56baa77e09131911b7ca5a08476142e860ac6001456bc",
+    "terminal_plan.py": "65fe7eb1fc0179cd60bac49fccc8a6170859c35349e542d10552247a124edb7d",
+    "audit_equilibrium.py": "49c3f4ac3caf6a34106f4b4e2860049d47ac2b9d9cc02a232548f94f7cf0dcab",
+    "observed_surface.py": "108b6ccf118cf45ca4dea20c3a633356cf0f6003d1993536de90bef85c7be458",
+    "leg_geometry.py": "0303b55a2be2110f8ac023d241e99f898634abaed8b0f4552501bfddd3bbf011",
+    "validate.py": "3b9168de6d1caa4da7115f2fb1aabfc86998c57599655686918174a97c78c523",
+    "seed.py": "39c8a36cd3460356407e1574d82ab799eae6e52266ee89b725e3ff3743afc16a",
+    "camera_clearance.py": "f1f4073f60c9e0278d7fe308a3391b66faa84da45fd3bc2b22c1fa287788b0ef",
+    "readiness_graph.py": "29b6a78c83d2df597acc87196dbf9c1208eb7295656ba4f2b9283d23c61bf8b3",
+    "compact_camera.py": "053f9b685d680a5c5f4c715644ef46e6f14cdd2c0093389f72f9160e4a98e9bb",
+    "static_model.py": "82beb9b60676b0d9d57f14b4c9a6ea86dbcd3c9372e4903ccac42fb4188399a9",
+    "paired_contact.py": "5bbbd0d63d3e9ff893e75c5ebb0964deb3cfb2d1cf3e2a707eca30799c77bdd4"
+  },
+  "launch_requires_synthetic": true,
+  "target_correction_review": "An approach may start outside its future contact patch. Actual contact must be inside current observed connected region with22mm inset; every exact triangle membership and original ground-truth evaluator label remains. Component is anchored by original measured standing pelvis, not a rejected seed.",
+  "finite_geometry_scope_review": "Only new global plane constraints on pelvis/torso/logo removed; they were never physical scoring rules. Actual fullmesh for all bodies remains at6mm expansion; original camera6mm noncontact margins remain. Two hip motor-housing expansions stay unchanged."
+}

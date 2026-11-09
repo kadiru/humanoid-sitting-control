@@ -1,0 +1,10 @@
+{
+  "model_pass": false,
+  "error": "ValueError({'reason': 'FULL_BODY_NODE_REJECTED', 'phase': 'approach', 'node': 1, 'message': 'Iteration limit reached', 'maximum_equality': 3.348364321727187e-08, 'minimum_inequality': 0.022734146249744396})",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/rest_ready_20261108_v1/validate_full_body.py\", line 68, in <module>\n    result=plan.solve();write('plan.json',result)\n           ^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/rest_ready_20261108_v1/full_body_rest.py\", line 156, in solve\n    raise ValueError(dict(reason='FULL_BODY_NODE_REJECTED',phase=phase,node=i,message=str(fit.message),maximum_equality=float(max(abs(equal(fit.x)))),minimum_inequality=float(min(self.constraints(fit.x,load,preload,prior,spent,phase)))))\nValueError: {'reason': 'FULL_BODY_NODE_REJECTED', 'phase': 'approach', 'node': 1, 'message': 'Iteration limit reached', 'maximum_equality': 3.348364321727187e-08, 'minimum_inequality': 0.022734146249744396}\n",
+  "total_seconds": 4.815879913017852,
+  "physics_launch_ready": false,
+  "physical_success": false,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}

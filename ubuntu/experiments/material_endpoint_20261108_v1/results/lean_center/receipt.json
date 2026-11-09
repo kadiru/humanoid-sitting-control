@@ -1,0 +1,10 @@
+{
+  "model_pass": false,
+  "error": "ValueError({'reason': 'ENDPOINT_OR_CONNECTION_REJECTED', 'stage': 'load_transfer_endpoint', 'success': False, 'iterations': 60, 'equality': 1.2716084578645592e-06, 'inequality': -8.105313336736336e-07, 'message': 'Iteration limit reached', 'foot_residual': 1.2716084578645592e-06, 'gap_m': 1.5631940186722204e-13, 'camera_minimum_m': 4.2868253391503686e-09, 'objective': 0.9426825841345018, 'solver_status': 9})",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/material_endpoint_20261108_v1/validate.py\", line 90, in <module>\n    result=plan.solve();goal=plan.target.copy();marker=plan.marker.copy();write('plan.json',result)\n           ^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/material_endpoint_20261108_v1/terminal_plan.py\", line 142, in solve\n    endpoint=self.optimize(seed,0.,self.endpoint_rows,lambda x:self.posture_cost(x,.2),\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/material_endpoint_20261108_v1/terminal_plan.py\", line 110, in optimize\n    raise ValueError(dict(reason='ENDPOINT_OR_CONNECTION_REJECTED',**diagnostic))\nValueError: {'reason': 'ENDPOINT_OR_CONNECTION_REJECTED', 'stage': 'load_transfer_endpoint', 'success': False, 'iterations': 60, 'equality': 1.2716084578645592e-06, 'inequality': -8.105313336736336e-07, 'message': 'Iteration limit reached', 'foot_residual': 1.2716084578645592e-06, 'gap_m': 1.5631940186722204e-13, 'camera_minimum_m': 4.2868253391503686e-09, 'objective': 0.9426825841345018, 'solver_status': 9}\n",
+  "total_seconds": 13.805401973018888,
+  "physics_launch_ready": false,
+  "physical_success": false,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}

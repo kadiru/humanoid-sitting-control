@@ -1,0 +1,149 @@
+{
+  "utc": "2026-11-08T18:25:49.240810+00:00",
+  "requested_collection": {
+    "objects": 5,
+    "sitting_per_object": 20,
+    "leaning_per_object": 20,
+    "total": 200
+  },
+  "new_demonstrations": 0,
+  "new_physics_steps": 0,
+  "new_PPO_updates": 0,
+  "new_72_checks": 0,
+  "repairs": 0,
+  "physical_success": false,
+  "changes": [
+    "Readiness scalar initialization accounts for every constrained load; exact monotone scalar elimination retains all original return checks.",
+    "Original leg seed now closes both6D foot anchors without moving root/contact point; .001rad maximum initialization correction and original action constraints retained.",
+    "Planner hip-pitch housing geometry now matches the evaluator facewise6mm expanded convex shapes.",
+    "Contact can be associated with the same connected observed rear-surface patch; exact removal of3redundant endpoint triangle-edge rows, with all original return rows still checked."
+  ],
+  "endpoint_solver_outcome": {
+    "stage": "load_transfer_endpoint",
+    "success": true,
+    "iterations": 4,
+    "equality": 1.5543122344752192e-15,
+    "inequality": 0.0,
+    "message": "Optimization terminated successfully",
+    "foot_residual": 1.5543122344752192e-15,
+    "gap_m": 0.0,
+    "camera_minimum_m": 2.7755575615628914e-17,
+    "objective": 1.139446329125243,
+    "solver_status": 0,
+    "readiness_graph": 0.2265184518447345,
+    "original_readiness_minimum": 0.0,
+    "retained_coordinates_bitwise_unchanged": true,
+    "all_original_rows_checked": 4930,
+    "negative_rows": []
+  },
+  "endpoint_mesh_audit": {
+    "passed": false,
+    "sampled_poses": 1,
+    "triangle_tests": 14,
+    "forbidden_or_early_clearance_intersections": [
+      {
+        "sample": 0,
+        "body": "left_hip_pitch_link",
+        "face": 84,
+        "phase": "landing"
+      },
+      {
+        "sample": 0,
+        "body": "right_hip_pitch_link",
+        "face": 84,
+        "phase": "landing"
+      },
+      {
+        "sample": 0,
+        "body": "right_hip_pitch_link",
+        "face": 85,
+        "phase": "landing"
+      }
+    ],
+    "forbidden_or_early_clearance_intersection_count": 3,
+    "expected_target_approaches": 1,
+    "clearance_buffer_m": 0.006,
+    "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+    "simulation_success": false,
+    "accelerator": "cKDTree exact AABB + signed halfspace rejection/interior; original clip on boundary",
+    "fast_exclusions": 8,
+    "fast_inside": 0,
+    "slow_clips": 6
+  },
+  "final_endpoint_outcome": {
+    "stage": "load_transfer_endpoint",
+    "success": false,
+    "iterations": 1,
+    "equality": 2.2676392015562544e-16,
+    "inequality": -0.0032419307651470053,
+    "message": "Inequality constraints incompatible",
+    "foot_residual": 2.2676392015562544e-16,
+    "gap_m": 0.0,
+    "camera_minimum_m": 0.0,
+    "objective": 1.1394465977516959,
+    "solver_status": 4,
+    "readiness_graph": 0.22651841838569883,
+    "original_readiness_minimum": 0.0,
+    "retained_coordinates_bitwise_unchanged": true,
+    "all_original_rows_checked": 4932,
+    "negative_rows": [
+      {
+        "row": 4409,
+        "name": "left_hip_pitch_housing_clearance",
+        "residual": -0.0032419307651470053
+      },
+      {
+        "row": 4410,
+        "name": "right_hip_pitch_housing_clearance",
+        "residual": -0.0032231314230069252
+      }
+    ]
+  },
+  "observed_contact_patch": {
+    "connected_triangles": 2136,
+    "initial_triangle": [
+      82,
+      63,
+      1
+    ],
+    "patch_extent_m": [
+      0.04626606350321527,
+      0.6734555630453323,
+      0.24146959492842174
+    ],
+    "initial_triangle_extent_m": [
+      0.008721560431970143,
+      0.006104491815027152,
+      0.04558067315660884
+    ],
+    "queries": 0,
+    "visited_triangles": 0,
+    "original_target_mask_unchanged": true,
+    "physical_success": false
+  },
+  "scope": "Model/source fixes only. Endpoint convergence did not pass independent collision validation. Current rejection is not proof of actual physical contact or global infeasibility.",
+  "next_work": "A new posterior hip/upper-thigh contact construction is required. Current pelvis-only material/contact branch has no admitted motion. Derive a concrete geometry/mechanics witness from original measurements, including the actual buffered hip housings; do not retry the rejected solve or reuse its point. All complete-path, current-camera, ankle/quiet, action, mechanical and physical gates remain. Only after valid full rollouts continue200demos,imitation/PPO4090only,all72 and video.",
+  "worker_check": {
+    "utc": "2026-11-08T18:25:49.240810+00:00",
+    "own_scientific_workers": [],
+    "gpu": "0, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, NVIDIA GeForce RTX 4090, 0 %, 42, 17 MiB\n1, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, NVIDIA GeForce RTX 4070, 57 %, 47, 4937 MiB",
+    "gpu_processes": "1534723, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 4722 MiB",
+    "disk_free_bytes": {
+      "/": 53694152704,
+      "/data": 6257946624
+    },
+    "GPU4070_untouched": true,
+    "recurring_automation_created": false,
+    "training_queue_created": false
+  },
+  "local_preservation": {
+    "verified_files": 297,
+    "verified_manifests": 12
+  },
+  "resource_totals": {
+    "total_model_wall_seconds": 34.59385779601871,
+    "total_model_cpu_seconds": 34.568557000000006,
+    "maximum_peak_rss_kib": 286988,
+    "resource_scope": "Executed model children; source authoring/reads/synthetic fixture overhead separate and not included in model totals"
+  }
+}

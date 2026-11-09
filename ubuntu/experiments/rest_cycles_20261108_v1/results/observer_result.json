@@ -1,0 +1,161 @@
+{
+  "scope": "SAVED_SENSOR_OBSERVER_VALIDATION_ONLY",
+  "sensor_only": true,
+  "force_truth_used_for": "fit_labels_calibration_and_evaluation_only",
+  "excluded_inputs": [
+    "clock",
+    "task_id",
+    "case_id",
+    "initial_sensor_suffix",
+    "root_truth",
+    "force_truth_at_query"
+  ],
+  "alignment": "obs[t] -> support_bw[t-1]; first obs omitted; no frame-shuffled split",
+  "fit": [
+    "demo_rear_back_center",
+    "demo_rear_back_near",
+    "demo_rear_back_far",
+    "demo_rear_back_left",
+    "demo_rear_back_right"
+  ],
+  "calibration": [
+    "demo_rear_back_yaw_left"
+  ],
+  "test": [
+    "demo_rear_back_yaw_right",
+    "learned_armchair11"
+  ],
+  "resources": {
+    "cpu_threads": 1
+  },
+  "radius_bw": 0.07759922929108143,
+  "distance_cap": 18.157240309800677,
+  "k": 16,
+  "tests": {
+    "demo_rear_back_yaw_right": {
+      "path": "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/demo_rear_back_yaw_right/trajectory.npz",
+      "sha256": "582bb2444f9b3401dab4cdd5a48cb3a08f4b443322e9d3994e0391b9a868e574",
+      "complete_starts": 1,
+      "samples": 999,
+      "failed_samples": 0,
+      "illegal_samples": 0,
+      "slipping_samples": 0,
+      "geometry_valid": 961,
+      "in_calibration_distance": 998,
+      "loaded_truth": 423,
+      "unloaded_truth": 540,
+      "declared_loaded": 390,
+      "declared_unloaded": 0,
+      "false_loaded": 0,
+      "false_unloaded": 0,
+      "interval_misses": 0,
+      "loaded_recall": 0.9219858156028369,
+      "unloaded_recall": 0.0,
+      "mean_abs_error_bw": 0.016788920311615062,
+      "max_abs_error_bw": 0.05095917172729969
+    },
+    "learned_armchair11": {
+      "path": "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/learned_armchair11/trajectory.npz",
+      "sha256": "9746d567a9b2a48df084009fca1bdbaa378ce0b9e794cc58502fda483d4b2749",
+      "complete_starts": 11,
+      "samples": 10989,
+      "failed_samples": 7055,
+      "illegal_samples": 0,
+      "slipping_samples": 62,
+      "geometry_valid": 4110,
+      "in_calibration_distance": 1159,
+      "loaded_truth": 810,
+      "unloaded_truth": 10135,
+      "declared_loaded": 0,
+      "declared_unloaded": 0,
+      "false_loaded": 0,
+      "false_unloaded": 0,
+      "interval_misses": 0,
+      "loaded_recall": 0.0,
+      "unloaded_recall": 0.0,
+      "mean_abs_error_bw": 0.00948559939000445,
+      "max_abs_error_bw": 0.2193817226216197
+    }
+  },
+  "inputs": [
+    {
+      "path": "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/demo_rear_back_center/trajectory.npz",
+      "sha256": "63cbe312291acc0f6f65a843bf3f03cc9988db189e50ef8c4225bc48de8c21b8",
+      "complete_starts": 1,
+      "samples": 999,
+      "failed_samples": 0,
+      "illegal_samples": 0,
+      "slipping_samples": 0
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/demo_rear_back_near/trajectory.npz",
+      "sha256": "656412fa1a0ff875353d8191c52b3a9621d7913eddbb1de5465a84eb597c6884",
+      "complete_starts": 1,
+      "samples": 999,
+      "failed_samples": 0,
+      "illegal_samples": 0,
+      "slipping_samples": 0
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/demo_rear_back_far/trajectory.npz",
+      "sha256": "cd7eddcd9d948948f2533269cabe803938b469736823636f1435f7386b8ee3a6",
+      "complete_starts": 1,
+      "samples": 999,
+      "failed_samples": 0,
+      "illegal_samples": 0,
+      "slipping_samples": 0
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/demo_rear_back_left/trajectory.npz",
+      "sha256": "b9e1be5877f75e739f261809548aa98ec3b22d0645eecf20890df163a50d7856",
+      "complete_starts": 1,
+      "samples": 999,
+      "failed_samples": 0,
+      "illegal_samples": 0,
+      "slipping_samples": 0
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/demo_rear_back_right/trajectory.npz",
+      "sha256": "7c65cfbb66b9ad196060cdb6b99480201006c701b6adfc5f8b4650b3149f9b28",
+      "complete_starts": 1,
+      "samples": 999,
+      "failed_samples": 0,
+      "illegal_samples": 0,
+      "slipping_samples": 0
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/demo_rear_back_yaw_left/trajectory.npz",
+      "sha256": "d1f7608e801d52191ed507879929f94945c4bf0b9319e0f08dcc4877d584f07d",
+      "complete_starts": 1,
+      "samples": 999,
+      "failed_samples": 0,
+      "illegal_samples": 0,
+      "slipping_samples": 0
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/demo_rear_back_yaw_right/trajectory.npz",
+      "sha256": "582bb2444f9b3401dab4cdd5a48cb3a08f4b443322e9d3994e0391b9a868e574",
+      "complete_starts": 1,
+      "samples": 999,
+      "failed_samples": 0,
+      "illegal_samples": 0,
+      "slipping_samples": 0
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/learned_armchair11/trajectory.npz",
+      "sha256": "9746d567a9b2a48df084009fca1bdbaa378ce0b9e794cc58502fda483d4b2749",
+      "complete_starts": 11,
+      "samples": 10989,
+      "failed_samples": 7055,
+      "illegal_samples": 0,
+      "slipping_samples": 62
+    }
+  ],
+  "saved_data_screen_passed": false,
+  "deployment_admitted": false,
+  "reason": "Rejected: incomplete contact/unloaded coverage or incorrect empirical intervals on disjoint saved runs.",
+  "new_physics_steps": 0,
+  "PPO_updates": 0,
+  "complete_new_cycles": 0,
+  "elapsed_seconds": 5.152726567990612
+}

@@ -1,0 +1,142 @@
+{
+  "utc": "2026-11-08T11:22:28.914311+00:00",
+  "state": "ANALYTIC_DERIVATIVES_VALIDATED_ENDPOINT_REJECTED_NO_PHYSICS",
+  "authorization": "Latest human Continue: collision/ankle/stool/uprightlean repair,20demos across5objects,4090onlyPPO,all72,unchangedlimits and criteria; no other agents.",
+  "changes": {
+    "endpoint_first": "Original current-camera/static-model analytic positive-knee seed; full23joint endpoint constrained across0..20%BW load before attempting backward fullpath.",
+    "fixed_material": "Freeze contact feature from original analytic seed to remove loaded argmin torque discontinuity; wholebody nonpenetration unchanged. Syntheticdiscontinuity verified, but actual rejection unchanged, so not a sufficient fix.",
+    "analytic_derivatives": "Exact forward kinematic/force/torque/foot/clearance derivatives implemented. Original model values retained; same objective,SLSQP60iterations,ftol1e-9,allboxes and45s cap.",
+    "software_fixes": [
+      "Convert JSON list p1 to ndarray before abs zero-frame test.",
+      "Fixed links absent from encoder names have zero rotation; do not look up None axis."
+    ]
+  },
+  "checks": {
+    "synthetic_fixtures": "Five separate new fixtures passed:IK/time,JSONboundary,materialtorque discontinuity,SO3derivatives,fixed-link chain. Historical proofs inherited without replay.",
+    "real_seed_derivative_audit": {
+      "passed": true,
+      "maximum_primitive_derivative_error": 8.789363903360936e-09,
+      "maximum_scaled_error": 5.9040138092951614e-09,
+      "maximum_objective_derivative_error": 9.785464513689668e-07,
+      "camera_rows": 38,
+      "source": "Original analytic seed only; independent central differences of original model",
+      "physics_steps": 0
+    },
+    "latest_endpoint_optimizer": {
+      "stage": "load_transfer_endpoint",
+      "success": false,
+      "iterations": 43,
+      "equality": 2.9936493862422544e-05,
+      "inequality": -0.00011042679453287553,
+      "message": "Inequality constraints incompatible",
+      "foot_residual": 2.9936493862422544e-05,
+      "gap_m": -2.494116024820414e-13,
+      "camera_minimum_m": -0.00011042679453287553,
+      "objective": 0.9302802962134311,
+      "solver_status": 4,
+      "derivatives": "analytic full model, piecewise exact active camera row"
+    },
+    "full_endpoint_mesh_audit_reached": false,
+    "full_path_or_float32_audit_reached": false,
+    "earlier_endpoint_results": "Numerical-gradient and fixed-material endpoints each hit60iterationlimit with identical diagnostics; neither admitted. Two implementation failures stopped before optimization and are preserved."
+  },
+  "limitations": [
+    "Derivative agreement is at the original analytic seed, not global validation or physical success.",
+    "Latest camera residual-0.00011042679453287553m is a clearance-margin shortfall, not a measured physical collision.",
+    "Solver incompatible status is not an infeasibility proof.",
+    "No original/rejected optimizer state reused; no retry of any frozen scientific solver after its outcome.",
+    "No live ankle, stool, force-estimator or current-camera physical fix demonstrated."
+  ],
+  "resources": {
+    "scientific_owner_count": 1,
+    "other_agents": 0,
+    "leaf_processes": [
+      {
+        "path": "/Users/kadir/humanoid-sitting-control/terminal_rest_20261108_v1/lean_center.process_receipt.json",
+        "wall_seconds": 1.6158553110144567,
+        "cpu_seconds": 1.615088,
+        "timeout": false,
+        "returncode": 0,
+        "peak_rss_kib": 285588
+      },
+      {
+        "path": "/Users/kadir/humanoid-sitting-control/terminal_rest_20261108_v2/lean_center.process_receipt.json",
+        "wall_seconds": 14.527260258008027,
+        "cpu_seconds": 14.523157,
+        "timeout": false,
+        "returncode": 0,
+        "peak_rss_kib": 286388
+      },
+      {
+        "path": "/Users/kadir/humanoid-sitting-control/material_endpoint_20261108_v1/lean_center.process_receipt.json",
+        "wall_seconds": 13.886421491013607,
+        "cpu_seconds": 13.882382,
+        "timeout": false,
+        "returncode": 0,
+        "peak_rss_kib": 286348
+      },
+      {
+        "path": "/Users/kadir/humanoid-sitting-control/analytic_rest_20261108_v1/lean_center.process_receipt.json",
+        "wall_seconds": 1.801698414987186,
+        "cpu_seconds": 1.79976,
+        "timeout": false,
+        "returncode": 0,
+        "peak_rss_kib": 286284
+      },
+      {
+        "path": "/Users/kadir/humanoid-sitting-control/analytic_rest_20261108_v2/lean_center.process_receipt.json",
+        "wall_seconds": 4.395078557019588,
+        "cpu_seconds": 4.392251,
+        "timeout": false,
+        "returncode": 0,
+        "peak_rss_kib": 286420
+      }
+    ],
+    "total_leaf_wall_seconds": 36.226314032042865,
+    "total_leaf_cpu_seconds": 36.212638,
+    "synthetic_fixture_invocation_wall_seconds_including_SSH": 1.799976749,
+    "synthetic_fixture_CPU_seconds": "Not separately metered; not claimed zero",
+    "unmetered_work": "Authoring/source review/hash preparation/read-only process checks/transport; not part of scientific child clocks",
+    "GPU_compute_used": false,
+    "new_physics_steps": 0,
+    "new_successful_demos": 0,
+    "new_PPO_updates": 0,
+    "new_full72checks": 0,
+    "new_video": false,
+    "verified_imported_evidence_files": 102
+  },
+  "physical": {
+    "protected_clean": 64,
+    "development_cases": 72,
+    "unresolved_old_failures": 8,
+    "accepted_repairs": 0,
+    "new_policy_promoted": false,
+    "success_criteria_changed": false,
+    "action_limits_changed": false
+  },
+  "workers": {
+    "utc": "2026-11-08T11:22:26.036716+00:00",
+    "gpu": "0, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, NVIDIA GeForce RTX 4090, 0 %, 40, 17 MiB\n1, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, NVIDIA GeForce RTX 4070, 0 %, 51, 2457 MiB",
+    "gpu_processes": "988460, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 2241 MiB",
+    "worker_commands": [
+      {
+        "pid": 988460,
+        "command": "/isaac-sim/kit/python/bin/python3 -u /workspace/src/run_fountain.py --allow-root "
+      }
+    ],
+    "own_scientific_workers": [],
+    "disk_free_bytes": {
+      "/": 55077015552,
+      "/data": 6257946624
+    },
+    "original_minimum_disk_reserve_bytes": 20000000000,
+    "GPU4070_untouched": true,
+    "recurring_automation_created": false,
+    "training_queue_created": false
+  },
+  "next_work": "No endpoint or motion admitted. The exact-derivative endpoint still fails camera clearance and solver success. Next construction must address the named pelvis/chair-back finite-surface clearance/contact mode with a conservative relation to original6mm whole-body clearance, credible current-input initialization and complete45s resource accounting; this is an unexecuted direction, not a queued run. Do not resume/reuse failed endpoints or increase iterations/budgets/tolerances. Stool loaded balance/path, actual ankle/current-camera guards remain unresolved. Only after complete admissible paths and fresh runtime checks:10sitting+10leaning clean20s demos across5objects, imitation/preflight,4090PPO with weight-update proof,all72,video.4070reserved;automationdeleted.",
+  "automation": "Deleted by human; not recreated",
+  "PPO_autostart": false,
+  "worker_live": false,
+  "task_complete": false
+}

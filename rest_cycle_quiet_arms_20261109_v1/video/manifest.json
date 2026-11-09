@@ -1,0 +1,41 @@
+{
+  "duration_s": 16,
+  "frames": 160,
+  "video_sha256": "fb3e7b56e87bf0103bfcfe29cef6c86000e0cee1dcf6d6f9577838468ba6c0ad",
+  "scope": "Actual rear camera snapshot, then explicitly labelled static model poses; no invented physical rollout.",
+  "new_physics_steps": 0,
+  "new_solvers": 0,
+  "PPO_updates": 0,
+  "complete_cycle": false,
+  "elapsed_seconds": 3.27470293402439,
+  "timing": {
+    "fixed_path_continuous_rate_lower_bound_s": 9.523442658765964,
+    "with_existing1p5second_reserves_s": 11.023442658765964,
+    "scheduled_motion_s": 9.96,
+    "nominal_settled_s": 11.46,
+    "required_nominal_settle_below_s": 14.4,
+    "leading_rate_limiting_joints": [
+      [
+        "right_hip_pitch_joint",
+        7.523442658765964
+      ],
+      [
+        "left_knee_joint",
+        2.0000000000000018
+      ],
+      [
+        "left_hip_pitch_joint",
+        0.0
+      ],
+      [
+        "torso_joint",
+        0.0
+      ],
+      [
+        "left_hip_roll_joint",
+        0.0
+      ]
+    ],
+    "scope": "Fixed geometric/command path only; no impossibility claim for a different contact path or foot placement."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "utc": "2026-11-08T19:29:07.305393+00:00",
+  "experiment": "upper_thigh_edge_20261108_v2",
+  "classification": "REJECTED_MODEL_CONSTRUCTION_NO_PHYSICS",
+  "error": "ValueError(('CONTACT_OUTSIDE_OBSERVED_COMPONENT', (114, 80, 1)))",
+  "wall_seconds": 1.5590190759976394,
+  "cpu_seconds": 1.556719,
+  "peak_rss_kib": 286164,
+  "parent_wall_cap_seconds": 45,
+  "timeout": false,
+  "process_exit": 0,
+  "process_exit_is_not_success": true,
+  "physics_steps": 0,
+  "new_demonstrations": 0,
+  "PPO_updates": 0,
+  "full72_checks": 0,
+  "physical_repairs": 0,
+  "source_input_freeze_verified": true,
+  "source_review": "Sole owner separate source/equation review; not external human review",
+  "model_pass": false,
+  "model_audits": [
+    {
+      "path": "/home/kadir/humanoid-sitting/experiments/upper_thigh_edge_20261108_v2/results/stool_edge/standing_derivative_audit.json",
+      "passed": true,
+      "sha256": "2d7e2a5b5781f5eac0a6f6616105ffebd84fc0a861f399daa78aa2f163eb8c50"
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/experiments/upper_thigh_edge_20261108_v2/results/stool_edge/standing_paired_derivative_audit.json",
+      "passed": true,
+      "sha256": "4c66f0449df8166be6aa15d85f67e601af30ba18a4810aaf2ee07b68b193ff8c"
+    },
+    {
+      "path": "/home/kadir/humanoid-sitting/experiments/upper_thigh_edge_20261108_v2/results/stool_edge/standing_virtual_work_audit.json",
+      "passed": true,
+      "sha256": "b825c3344f35f141ba7a5e9531459d3761bc2b29e86eff9f7151506df0d87113"
+    }
+  ],
+  "receipt": "/home/kadir/humanoid-sitting/experiments/upper_thigh_edge_20261108_v2/results/stool_edge/receipt.json",
+  "process_receipt": "/home/kadir/humanoid-sitting/experiments/upper_thigh_edge_20261108_v2/stool_edge.process_receipt.json",
+  "no_retry": true
+}

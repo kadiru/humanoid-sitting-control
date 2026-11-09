@@ -1,0 +1,87 @@
+{
+  "classification": "One finite-camera-region witness construction from original inputs; no terminal-solver restart",
+  "target": "lean_center original measured standing rear camera and box armchair back",
+  "new_mechanism": "Each fixed8x8 image-cell tile has five sufficient separating halfspaces (left/right/top/bottom/front). Choose one per noncontact body/tile by maximum worst margin across ORIGINAL standing and ORIGINAL analytic seed hulls, freeze choices before optimization. Keep original detailed pelvis and full-camera return audit. This preserves finite angular support rather than extending one plane across the whole camera view.",
+  "initialization": "Original current encoder/hull/support-plane analytic seed with unchanged6.01mm torso-pelvis reserve; no prior endpoint/vector read. Witness selection includes original standing hull. No reselection or retry after launch.",
+  "equations": {
+    "equilibrium": "sum F=[0,0,W]; sum p cross F = COM cross [0,0,W]; full23joint gravity minus fixed-material contact Jacobian torque",
+    "contact": "Endpoint point = root*FK(body)*constant local material; every body vertex remains nonpenetrating and endpoint point lies on observed plane. Load transfer uses that same material. Marker comes only from the original analytic seed; unloaded backward approach retains exposed-min geometry.",
+    "loads": [
+      0,
+      0.05,
+      0.1,
+      0.15,
+      0.2
+    ],
+    "objective": "full23joint squared torque / original standing torque + readiness epigraph squared + .05 joint deviation squared + .05 fixed-material tangent error squared / .15^2 + normalized root lowering squared; backward connection adds .1 endpoint-guided posture distance squared + .01 interval seconds",
+    "clock": "joint command arc/.125; normal joint arc/.05 and .003/.0055 per normal edge; 0.5s explicit quiet reserve plus actual25CURRENT requirement; >=.25s/load edge; 1s settle; complete settled trajectory<14.4s",
+    "optimization": "SLSQP60iterations per named endpoint/edge,ftol1e-9; success mandatory, equality<=.002 and inequality>=-1e-6; total parent45s cap overrides all stages"
+  },
+  "unchanged": {
+    "action_increment_rad": 0.003,
+    "control_seconds": 0.02,
+    "filter": 0.1,
+    "desired_joint_margin": 0.03,
+    "fingers_fixed": 14,
+    "normal_speed_max": 0.006,
+    "quiet_current_samples": 25,
+    "actual_mesh_buffer_m": 0.006,
+    "finite_patch_construction_inset_m": 0.022,
+    "all_tick_contact_and_slip": "unchanged",
+    "full20s_and_final5s_hold": true,
+    "protected72": true,
+    "fresh_holdout": "closed"
+  },
+  "resources": {
+    "scientific_attempts": 1,
+    "targets": [
+      "lean_center"
+    ],
+    "total_wall_seconds_including_interpreter_hashes_initialization_all_audits_serialization": 45,
+    "address_space_GiB": 40,
+    "scientific_workers": 1,
+    "BLAS_threads": 1,
+    "GPU_devices": [],
+    "minimum_disk_free_bytes": 20000000000,
+    "inputs_read_only": true,
+    "output_max_expected_MiB": 10,
+    "retry": false,
+    "resume": false,
+    "timeout_output": "process receipt and already written seed/endpoint audit; no salvaged point admission",
+    "source_operations": "For T<=2ceil((h-1)/8)ceil((w-1)/8) tiles and B<=38 bodies: facet conversion plus at most5BT original-hull minimum evaluations; retained plane rows bounded by5BT,31variables,60SLSQP iterations per named node,13nodes maximum. All actual hash/init/row/solve/audit work stays inside45s parent cap."
+  },
+  "finite_return": "Reject unless complete path, fullmesh, between-node feet/normal speed, float32 action bounds/filter/fingers and hold reserve pass; current-input runtime, ankle quiet and actual physical fullrollout gates still separately required.",
+  "limitations": [
+    "Quasi-static model is not realized balance or contact force",
+    "ImplicitPD torque proxy is not physical energy",
+    "Sampled audit is not continuous geometry proof",
+    "Same-pose load transfer is a restriction; failure is not robot impossibility",
+    "Raw joint velocity guards remain unchanged",
+    "No simulation/PPO autostart on model pass",
+    "Exact derivatives may not resolve constrained optimization; failure remains reject, no retry/resume or iteration increase.",
+    "A fixed region witness may restrict the complete path. No branch reselection, tile-size tuning or follow-on solve is permitted on failure."
+  ],
+  "derivatives": {
+    "dimensions": 31,
+    "FK": "Forward chain-rule derivative of original root rotation-vector and joint-axis transforms; full23active joints plus6floatingbase coordinates",
+    "forces": "Differentiate exact full6D equilibrium and both foot force allocations; no force or motor sensor claimed",
+    "torque": "Differentiate all23 gravity and material-fixed contact moments including axes/origins/CoM/force points and forces",
+    "feet": "Original position and rotation-log errors via exact SO3 right Jacobian inverse",
+    "camera": "At every callback recompute actual per-body minimum sample and its observed facet from saved current depth; derivative of selected material point signed plane distance. Row values must match original compressed rows to1e-10. Unknown rows derivative0, no free-space claim. Nonsmooth ties retain a piecewise derivative; no averaging or margin relaxation.",
+    "prelaunch_synthetic": "Independent SciPy rotation and logarithm central differences at zero and nonzero rotations",
+    "scientific_pre_solve_audit": "Central differences of ORIGINAL model at original analytic seed: all23torques,12footerrors,3materialpointcomponents vs exactJac; maximumabsolute<2e-5,scaled<2e-6,objectivegradient<2e-5. These are derivative implementation checks, not changed feasibility tolerances."
+  },
+  "fixed_link_correction": "Match original BodyModel.fk: fixed joints absent from encoder names have zero rotation, no axis lookup. Prior v1 stopped before derivative validation and optimization; no scientific point reused. Other equations/gates unchanged.",
+  "expanded_collection": "200target demonstrations:100sitting+100leaning,20/task/object,5furniture. Scenario manifest is preparation, no bulk simulation approved by a model result alone.",
+  "region_proof": {
+    "plane": "Original camera-coordinate facet margin at p=z*[u,v,1] is z*N.ray+alpha-delta with delta=.006. Convert original world planes through the exact affine transform used by the original projection.",
+    "premise": "alpha>delta for every selected facet; finite positive front cutoff; reject otherwise.",
+    "front": "For each facet D=max over4rectangle corners(-N.ray). For D>0 let cut=(alpha-delta)/D; tile cutoff=min facet cut. Facets with D<=0 are automatically safe on positive rays. For any positive-z query in that tile and z<=cut, every assigned original plane meets delta.",
+    "other_four": "Outside any one rectangle side the query cannot select any pixel triangle assigned to that tile. The original z>.08 domain is retained.",
+    "body": "Enforce selected affine halfspace at EVERY original hull vertex; original material samples are convex combinations of them. Choose a single witness per body/tile from five fixed alternatives using only original start/seed hulls. Freeze for whole solve.",
+    "coverage": "Tile integer cell indices partition every original pixel triangle; feet exclude original ground facets only; contact pelvis retains original per-facet rule.",
+    "dedup": "Only bit-identical normals are merged, keeping minimum offset (strongest inequality). Persist every tile/facet and body/choice association.",
+    "limitations": "Conservative continuous region may still reject feasible paths; body support and motion are not certified until all original gates pass. No relaxation of full-original clearance.",
+    "boundary": "All four outside halfspaces have a10micrometre inward reserve after normalization: equality on an included pixel edge never certifies outside. This strengthens construction only; original physical margins unchanged."
+  }
+}

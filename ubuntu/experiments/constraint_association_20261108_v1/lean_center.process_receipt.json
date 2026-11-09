@@ -1,0 +1,10 @@
+{
+  "target": "lean_center",
+  "wall_seconds_including_interpreter_startup": 1.838548483006889,
+  "timeout": false,
+  "returncode": 0,
+  "cpu_seconds": 1.836261,
+  "child_peak_rss_kib": 285096,
+  "output": "{\n  \"diagnostic_complete\": true,\n  \"original_seed_only\": true,\n  \"optimizers_called\": 0,\n  \"full_inequality_rows\": 4930,\n  \"negative_original_seed_rows\": [\n    {\n      \"row\": 4698,\n      \"name\": \"load_0.1:readiness_negative:left_hip_pitch_joint\",\n      \"residual\": -0.00019495810099168231\n    },\n    {\n      \"row\": 4802,\n      \"name\": \"load_0.15000000000000002:readiness_negative:left_hip_pitch_joint\",\n      \"residual\": -0.0004129862889448721\n    },\n    {\n      \"row\": 4906,\n      \"name\": \"load_0.2:readiness_negative:left_hip_pitch_joint\",\n      \"residual\": -0.000627910841246998\n    }\n  ],\n  \"original_seed_maximum_equality_residual\": 2.3996189818205108e-05,\n  \"equality_jacobian_singular_values\": [\n    2.612956571668689,\n    2.37947172273012,\n    1.8248936468870645,\n    1.7384587260198119,\n    1.6113376501094745,\n    1.4825330370919374,\n    1.3991212436410965,\n    1.2689259396451644,\n    1.0117337014049488,\n    0.40716469739934547,\n    0.39772208417418004,\n    0.24853057533821524,\n    0.1251072046642453\n  ],\n  \"mechanical_row_derivative_max_error\": 4.241969105400372e-10,\n  \"mechanical_row_derivative_worst\": {\n    \"column\": 15,\n    \"row\": \"load_0.0:command_lower:right_hip_roll_joint\"\n  },\n  \"interpretation\": \"Named current-input seed associations and row-derivative audit only; no returned solver point reconstructed, no feasible motion or repair claimed\",\n  \"model_pass\": false,\n  \"physics_launch_ready\": false,\n  \"physical_success\": false,\n  \"physics_steps\": 0,\n  \"PPO_updates\": 0,\n  \"total_seconds\": 1.763199214998167\n}\n",
+  "new_physics_steps": 0
+}

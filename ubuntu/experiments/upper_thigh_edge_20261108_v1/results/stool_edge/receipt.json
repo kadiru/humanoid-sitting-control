@@ -1,0 +1,10 @@
+{
+  "model_pass": false,
+  "error": "ValueError('CONTACT_RAY_NOT_ORIGINAL_TARGET')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/upper_thigh_edge_20261108_v1/validate.py\", line 59, in <module>\n    _,_,_,_,anchor_facet=select(camera,depth,anchor)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/upper_thigh_edge_20261108_v1/contact_facet.py\", line 25, in select\n    if not camera.target[row,col,side] or camera.ground[row,col,side]:raise ValueError('CONTACT_RAY_NOT_ORIGINAL_TARGET')\n                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: CONTACT_RAY_NOT_ORIGINAL_TARGET\n",
+  "total_seconds": 1.2986961060087197,
+  "physics_launch_ready": false,
+  "physical_success": false,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}

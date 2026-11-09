@@ -1,0 +1,10 @@
+{
+  "model_pass": false,
+  "error": "ValueError({'reason': 'PAIRED_ROOT_NO_PROGRESS', 'residuals': [2.6939938854893264e-07, -4.753738484478132e-06, 8.872692425221373e-08, 5.498779899742123e-05, -1.4151535650120725e-08, -1.2254667532851915e-05, -2.750074459779636e-07, -5.052331768298779e-06, -8.329865797129798e-08, 5.5703037712751066e-05, -1.4225874261942451e-08, -1.1998783281430757e-05, 0.03283019268837417, 0.03278862224641543, -0.11981170628912623], 'history': [0.11981170628912623]})",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/upper_thigh_support_20261108_v4/validate.py\", line 79, in <module>\n    seed_x,seed_source=original_seed(provisional_plan)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/upper_thigh_support_20261108_v4/seed.py\", line 66, in construct\n    if not accepted:raise ValueError(dict(reason='PAIRED_ROOT_NO_PROGRESS',residuals=E.tolist(),history=history))\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: {'reason': 'PAIRED_ROOT_NO_PROGRESS', 'residuals': [2.6939938854893264e-07, -4.753738484478132e-06, 8.872692425221373e-08, 5.498779899742123e-05, -1.4151535650120725e-08, -1.2254667532851915e-05, -2.750074459779636e-07, -5.052331768298779e-06, -8.329865797129798e-08, 5.5703037712751066e-05, -1.4225874261942451e-08, -1.1998783281430757e-05, 0.03283019268837417, 0.03278862224641543, -0.11981170628912623], 'history': [0.11981170628912623]}\n",
+  "total_seconds": 1.9396374589996412,
+  "physics_launch_ready": false,
+  "physical_success": false,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}

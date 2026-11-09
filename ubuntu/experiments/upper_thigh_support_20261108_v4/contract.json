@@ -1,0 +1,100 @@
+{
+  "classification": "Bilateral proximal-thigh support construction",
+  "authorization": "2026-11-08 human: upper-thigh path,100sitting+100leaning on5objects,4090PPO,all72,unchanged limits and success",
+  "target": "Original measured armchair rear back center",
+  "inputs": "Original saved standing encoders/previouscommand/gravity/depth/calibration and frozen robot shapes/inertia only. Furniture triangle truth is independent audit only. No prior optimizer vector read.",
+  "associations": {
+    "legal_bodies": [
+      "left_hip_yaw_link",
+      "right_hip_yaw_link"
+    ],
+    "source": "rl_support_work/scripts/run_supported_postures.py CONTACTS",
+    "region": "Vertices whose projection along hip_yaw-body origin to knee joint origin is0..0.5 of segment length; all full-body vertices retain nonpenetration checks.",
+    "observation": "Each fixed thigh material projects onto an actual triangle in the same connected original observed target component; normal and offset separately associated. Missing/ground/disconnected candidates reject."
+  },
+  "mechanism": "Move support from a pelvis point obstructed by motor housings to two legal proximal-thigh material points. Equal scalar load split, independently measured normals; full23joint force/moment/torque allocation includes both points.",
+  "equations": {
+    "rest_forces": "F_i=0.5*W*load*N_i;load=[0,.05,.1,.15,.2]",
+    "ground": "G=[0,0,W]-sum F_i; M=COM cross[0,0,W]-sum(P_i cross F_i); original exact foot allocation from(G,M)",
+    "torques": "Full23 gravity minus both feet and both thigh fixed-material Jacobian-transpose forces",
+    "contact": "Separate N_i dot(root*FK_i*marker_i)+d_i=gap_i; all body vertices nonpenetrating.",
+    "clearance": "The two named hip_pitch housings retain the original per-face6mm expanded plane constraints. All other bodies retain original full camera clearance and mandatory expanded-shape/actual finite-furniture mesh audit. No upper-body infinite-plane constraint beyond the original checks.",
+    "objective": "Unchanged full23 squared-torque/readiness/jointdeviation/tangent/rootlowering cost; no electrical-energy claim.",
+    "time": "Original approach/25CURRENTquiet/normal5.5mm/s/load arc/1s settle;settled<14.4s. Both initial gaps connect to12mm hover; each body normal speed audited."
+  },
+  "initialization": {
+    "source": "Original inputs; no rejected vector",
+    "geometric": "Start at original measured root orientation, compute original-input paired thigh plane translation and bilateral positive-knee reach interval; planar IK then coupled contact root. No rigid-body tilt bracket prerequisite.",
+    "root": "15equations:12original foot anchors,2actual thighcontact gaps,min buffered motor-housing clearance10micrometers;16unknowns:12leg joints,rootx,z,roll,pitch. Minimum-norm exact linear correction via lstsq; reject rank deficiency or linear closure>1e-9. Knee angles are free within original>=.04 bounds; no fixed-knee endpoint.",
+    "limits": "12Newton updates,9fixed halvings/update; monotonic squared original residual decrease and all original joint/root/knee bounds; residual<=1e-10. No parameter/seed alternation. Later full23joint original cost decides effort/readiness, all original motion gates retained.",
+    "difference": "Former.001rad foot-roundoff patch is not reused as an iterative trust mechanism. This is a fresh coupled contact root within the same original full-model joint/root domain."
+  },
+  "gates": {
+    "action_increment_rad": 0.003,
+    "control_seconds": 0.02,
+    "filter": 0.1,
+    "desired_margin_rad": 0.03,
+    "fixed_fingers": 14,
+    "normal_speed_max": 0.006,
+    "quiet_samples": 25,
+    "physical_full_seconds": 20,
+    "final_good_seconds": 5,
+    "all_tick_slip_and_forbidden_contacts_unchanged": true,
+    "original72_protected": true,
+    "heldout": "closed",
+    "PPO_gate": "Validated full corpus/imitation/reset/rewards;actual weight updates and all72 required"
+  },
+  "audit": {
+    "source_review": "Separate source/equation review by sole owner",
+    "new_synthetic": "Two-contact force/moment allocation fixture",
+    "before_initialization": "Original standing fullmodel finite differences, both individual contact equations and independent four-contact virtual work.",
+    "return_checks": "Complete paired numerical system, original camera, fullmesh, both material drifts/normal speeds,fullfoot/path/float32/quiet/runtime/physical checks. Solver success insufficient."
+  },
+  "resources": {
+    "attempts": 1,
+    "targets": [
+      "lean_center"
+    ],
+    "parent_wall_cap_seconds": 45,
+    "address_space_GiB": 40,
+    "CPU_threads": 1,
+    "GPU_devices": [],
+    "minimum_free_disk_bytes": 20000000000,
+    "expected_output_MiB": 12,
+    "per_endpoint_or_edge_iterations": 60,
+    "ftol": 1e-09,
+    "total_cap_overrides_all": true,
+    "initialization_max_roots": 2,
+    "geometry_root_updates_per_root": 12,
+    "line_search_trials_per_update_max": 9,
+    "physics_steps": 0,
+    "autostart": false,
+    "retry": false,
+    "resume": false
+  },
+  "failure": "Record failure and halt. No parameter sweep,tolerance relaxation,rejected point reuse or automatic training.",
+  "limitations": [
+    "Model support is not physical support.",
+    "Equal split and seed branch restrict search; rejection is not global impossibility.",
+    "Nonlinear geometry/facet switches may defeat construction.",
+    "Count demos only after full20s physical audit."
+  ],
+  "observed_target_correction": {
+    "prior_result": "v1 stopped before any model audit,root or optimizer: standing thigh projected points were13.29/13.09mm below old torso-selected patch. This was not a failed contact endpoint.",
+    "correction": "Remove only requirement that standing already be inside final contact patch. Anchor same observed back component using original standing-pelvis ray and build finite target polygon from all actually observed component vertices. Final contacts require same22mm polygon inset AND exact triangle membership AND independent actual mesh patch audit.",
+    "not_relaxed": "No unknown space, disconnected target, mesh truth or increased physical contact region is admitted. Original physical target triangle labels, margins,action limits andsuccess unchanged.",
+    "resource": "One component traversal already bounded by camera dimensions; cached facet vertices and unique polygon vertices inside45s. Fresh original seed only; prior failure retained."
+  },
+  "finite_geometry_scope_correction": {
+    "prior_result": "v2 passed new independent23joint derivatives,dual-contact equations and4-contact virtual work; rigid-pitch seed rejected with a minimum over5globally expanded bodies. Which body attained that minimum was not saved and is not claimed.",
+    "source_finding": "An infinite support plane for every upper-body expanded shape is stronger than collision against a finite observed furniture back. Such planes were newly added in this construction, not an inherited physical criterion.",
+    "correction": "Retain precisely the2expanded housing conditions required by the recorded independent mesh failure; keep the existing all-body camera and independent finite-furniture mesh checks. No seeds,angles or solver results from v2 reused.",
+    "gate": "One fresh original-data paired geometry construction, existing45s cap and unchanged all-body physical criteria; reject any finite mesh collision regardless of model result."
+  },
+  "coupled_initialization_correction": {
+    "premise": "Original measured standing hip/knee angles cannot remain rigidly fixed as the robot shifts its hips with feet anchored. v3 tested only rigid tilts and never reached its coupled contact root. That bracket failure is not an articulated feasibility result.",
+    "new_mechanism": "Directly construct the articulated fixed-foot contact root from original measured orientation. Remove the arbitrary fixed-knee equality so the15necessary geometry equations can use16original degrees of freedom; minimal-norm linear corrections preserve the measured seed locally.",
+    "no_relaxation": "Original physical/joint/root domain,ankle actionlimits,hip buffers,finite observed contact,modeloptimality/fullpath gates unchanged. These initialization equalities/brackets were newly imposed construction choices, not physical success rules.",
+    "failure": "One fresh bounded construction; no reuse or replay of rejected state, no fallback."
+  }
+}

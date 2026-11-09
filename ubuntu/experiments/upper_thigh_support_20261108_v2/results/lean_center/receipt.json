@@ -1,0 +1,10 @@
+{
+  "model_pass": false,
+  "error": "ValueError({'reason': 'NO_PROXIMAL_THIGH_CLEARANCE_BRACKET', 'at_zero_m': np.float64(-0.23445131021564464), 'at_max_pitch_m': np.float64(-0.04444951355044851)})",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/upper_thigh_support_20261108_v2/validate.py\", line 79, in <module>\n    seed_x,seed_source=original_seed(provisional_plan)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/upper_thigh_support_20261108_v2/seed.py\", line 21, in construct\n    else:raise ValueError(dict(reason='NO_PROXIMAL_THIGH_CLEARANCE_BRACKET',at_zero_m=separation(0.),at_max_pitch_m=separation(.65)))\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: {'reason': 'NO_PROXIMAL_THIGH_CLEARANCE_BRACKET', 'at_zero_m': np.float64(-0.23445131021564464), 'at_max_pitch_m': np.float64(-0.04444951355044851)}\n",
+  "total_seconds": 1.8634624069964048,
+  "physics_launch_ready": false,
+  "physical_success": false,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}

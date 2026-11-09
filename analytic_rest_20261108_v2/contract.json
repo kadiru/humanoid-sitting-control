@@ -1,0 +1,73 @@
+{
+  "classification": "One new endpoint-first current-input construction; no physical admission from solver exit",
+  "target": "lean_center original measured standing rear camera and box armchair back",
+  "new_mechanism": "Exact forward kinematic/force/torque derivatives and active observed-material camera row derivatives replace SLSQP finite-difference Jacobians. Same fixed-material contact mode, original analytic seed, values/objective/60iterations/ftol/gates. Pre-optimizer independent original-model central differences reject a wrong derivative implementation.",
+  "initialization": "Unchanged analytic current-input seed, then freeze its exposed contact material. No failed solution, vector or multiplier is read.",
+  "equations": {
+    "equilibrium": "sum F=[0,0,W]; sum p cross F = COM cross [0,0,W]; full23joint gravity minus fixed-material contact Jacobian torque",
+    "contact": "Endpoint point = root*FK(body)*constant local material; every body vertex remains nonpenetrating and endpoint point lies on observed plane. Load transfer uses that same material. Marker comes only from the original analytic seed; unloaded backward approach retains exposed-min geometry.",
+    "loads": [
+      0,
+      0.05,
+      0.1,
+      0.15,
+      0.2
+    ],
+    "objective": "full23joint squared torque / original standing torque + readiness epigraph squared + .05 joint deviation squared + .05 fixed-material tangent error squared / .15^2 + normalized root lowering squared; backward connection adds .1 endpoint-guided posture distance squared + .01 interval seconds",
+    "clock": "joint command arc/.125; normal joint arc/.05 and .003/.0055 per normal edge; 0.5s explicit quiet reserve plus actual25CURRENT requirement; >=.25s/load edge; 1s settle; complete settled trajectory<14.4s",
+    "optimization": "SLSQP60iterations per named endpoint/edge,ftol1e-9; success mandatory, equality<=.002 and inequality>=-1e-6; total parent45s cap overrides all stages"
+  },
+  "unchanged": {
+    "action_increment_rad": 0.003,
+    "control_seconds": 0.02,
+    "filter": 0.1,
+    "desired_joint_margin": 0.03,
+    "fingers_fixed": 14,
+    "normal_speed_max": 0.006,
+    "quiet_current_samples": 25,
+    "actual_mesh_buffer_m": 0.006,
+    "finite_patch_construction_inset_m": 0.022,
+    "all_tick_contact_and_slip": "unchanged",
+    "full20s_and_final5s_hold": true,
+    "protected72": true,
+    "fresh_holdout": "closed"
+  },
+  "resources": {
+    "scientific_attempts": 1,
+    "targets": [
+      "lean_center"
+    ],
+    "total_wall_seconds_including_interpreter_hashes_initialization_all_audits_serialization": 45,
+    "address_space_GiB": 40,
+    "scientific_workers": 1,
+    "BLAS_threads": 1,
+    "GPU_devices": [],
+    "minimum_disk_free_bytes": 20000000000,
+    "inputs_read_only": true,
+    "output_max_expected_MiB": 10,
+    "retry": false,
+    "resume": false,
+    "timeout_output": "process receipt and already written seed/endpoint audit; no salvaged point admission"
+  },
+  "finite_return": "Reject unless complete path, fullmesh, between-node feet/normal speed, float32 action bounds/filter/fingers and hold reserve pass; current-input runtime, ankle quiet and actual physical fullrollout gates still separately required.",
+  "limitations": [
+    "Quasi-static model is not realized balance or contact force",
+    "ImplicitPD torque proxy is not physical energy",
+    "Sampled audit is not continuous geometry proof",
+    "Same-pose load transfer is a restriction; failure is not robot impossibility",
+    "Raw joint velocity guards remain unchanged",
+    "No simulation/PPO autostart on model pass",
+    "Exact derivatives may not resolve constrained optimization; failure remains reject, no retry/resume or iteration increase."
+  ],
+  "derivatives": {
+    "dimensions": 31,
+    "FK": "Forward chain-rule derivative of original root rotation-vector and joint-axis transforms; full23active joints plus6floatingbase coordinates",
+    "forces": "Differentiate exact full6D equilibrium and both foot force allocations; no force or motor sensor claimed",
+    "torque": "Differentiate all23 gravity and material-fixed contact moments including axes/origins/CoM/force points and forces",
+    "feet": "Original position and rotation-log errors via exact SO3 right Jacobian inverse",
+    "camera": "At every callback recompute actual per-body minimum sample and its observed facet from saved current depth; derivative of selected material point signed plane distance. Row values must match original compressed rows to1e-10. Unknown rows derivative0, no free-space claim. Nonsmooth ties retain a piecewise derivative; no averaging or margin relaxation.",
+    "prelaunch_synthetic": "Independent SciPy rotation and logarithm central differences at zero and nonzero rotations",
+    "scientific_pre_solve_audit": "Central differences of ORIGINAL model at original analytic seed: all23torques,12footerrors,3materialpointcomponents vs exactJac; maximumabsolute<2e-5,scaled<2e-6,objectivegradient<2e-5. These are derivative implementation checks, not changed feasibility tolerances."
+  },
+  "fixed_link_correction": "Match original BodyModel.fk: fixed joints absent from encoder names have zero rotation, no axis lookup. Prior v1 stopped before derivative validation and optimization; no scientific point reused. Other equations/gates unchanged."
+}

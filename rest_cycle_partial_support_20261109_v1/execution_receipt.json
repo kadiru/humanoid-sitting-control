@@ -1,0 +1,234 @@
+{
+  "utc": "2026-11-09T01:25:48.659812+00:00",
+  "state": "CAMERA_AND_STANDING_SENSOR_CHECKS_PASS_PARTIAL_SUPPORT_CONSTRUCTION_REJECTED",
+  "authorization": "Latest human: hip-housing clearance, camera edge detection, load release, sit/5s hold/stand;4090only;unchanged actions/criteria;partial legal hip/thigh support acceptable.",
+  "evidence": {
+    "saved_software": {
+      "software_tests": 7,
+      "software_passed": true,
+      "edge_passed": false,
+      "edge_audit_passed": false,
+      "release_state": "unknown",
+      "source_sha256": "39b6bd3034a395cfbb648acd4df1611030e1927803644c9727b53808f9dcb071",
+      "loaded_release_validation": false,
+      "runtime_control_admitted": false,
+      "physical_success": false,
+      "new_physics_steps": 0,
+      "new_solver_calls": 0,
+      "PPO_updates": 0,
+      "elapsed_seconds": 0.25708252101321705
+    },
+    "fresh_capture": {
+      "depth_passed": true,
+      "edge_passed": true,
+      "edge_envelope_passed": true,
+      "release_standing": "geometrically_separated",
+      "standing_joint_force_mapping_passed": true,
+      "sitting_controls": 0,
+      "complete_cycle": false,
+      "PPO_updates": 0,
+      "elapsed_seconds": 4.917047877999721,
+      "source_frame_sha256": "220bcd3552d0b86a288d42e4e22e5f360efd1609a740d9a2b0ffba670ce1f55b"
+    },
+    "edge": {
+      "candidate_dropoff_pixels": 311,
+      "rejected_foreground_occlusion_pixels": 0,
+      "selected_plane_pixels": 35108,
+      "actor_truth_input": false,
+      "center_directly_observed": false,
+      "source": "current calibrated depth ray discontinuities",
+      "left_count": 81,
+      "right_count": 81,
+      "passed": true,
+      "tests": {
+        "nonempty_each_side": true,
+        "common_pixel_interval": true,
+        "original_side_agreement": true,
+        "finite_edge_uncertainty": true
+      },
+      "side_intervals_m": [
+        [
+          -0.09291442028737636,
+          -0.0895443556723213
+        ],
+        [
+          -0.09292112315962361,
+          -0.08955253424256784
+        ]
+      ],
+      "front_x_interval_m": [
+        -0.09291442028737636,
+        -0.08955253424256784
+      ],
+      "side_center_difference_m": 7.4407212468929895e-06,
+      "assumption": "Straight frontal edge across the occluded contact lane; independent fixture audit still required."
+    },
+    "standing_force": {
+      "passed": true,
+      "tests": {
+        "native_pose_order": true,
+        "finite": true,
+        "mean_foot_force_error": true,
+        "p99_foot_force_error": true
+      },
+      "native_pose_max_error": 0.0,
+      "foot_force_mean_error_bw": 1.505314123206299e-07,
+      "foot_force_p99_error_bw": 3.104096585528608e-07,
+      "predicted_foot_vertical_mean_N": [
+        158.72551048024982,
+        157.53817479700902
+      ],
+      "truth_foot_vertical_mean_N": [
+        158.7255859375,
+        157.53819274902344
+      ],
+      "interpretation": "Joint-transmitted force plus foot inertia/gravity, not motor torque. Standing-only sensor mapping check; no loaded validation.",
+      "loaded_validation": false,
+      "actor_sensor_admitted": false,
+      "physical_hardware_validated": false,
+      "official_reference": "https://docs.isaacsim.omniverse.nvidia.com/latest/sensors/isaacsim_sensors_physics_articulation_force.html"
+    },
+    "endpoint": {
+      "solver_success": false,
+      "status": 9,
+      "message": "Iteration limit reached",
+      "iterations": 80,
+      "max_equality": 0.020575159316929086,
+      "minimum_inequality": -0.06627480324248762,
+      "initialization": "new current measured q0 only",
+      "endpoint_variables": [
+        -0.32874775141093726,
+        0.7436455275467656,
+        -0.27088864678271807,
+        -0.32839759583346967,
+        0.7431004583569358,
+        -0.27069999154611,
+        -0.07894378352101254,
+        -0.03097271059166526,
+        -0.14390749422389548,
+        -1.047305232838015,
+        0.8787640389038638
+      ],
+      "global_optimality": false
+    }
+  },
+  "changes": [
+    "Edge detection separates farther depth drop-off from nearer robot occlusion; whole-body convex separation replaces unsound per-vertex OR and infinite-plane release.",
+    "One geometry-derived virtual camera placement moved34.707mm rearward and aimed67.0548deg downward; actual simulation depth/mesh/edge checks passed. This is a changed sensor hardware assumption, not a validated real-robot mount.",
+    "Ankle total joint-wrench readings recorded in shadow only; mapped to foot forces with foot inertia/gravity. Standing mapping passes, loaded behavior and physical hardware unvalidated.",
+    "New endpoint objective permits partial support and minimizes full23joint static torque-squared; includes finite-front hip-housing constraints. Cold solve reached80iteration limit with invalid equalities/inequalities. Not a proof that the task is infeasible. No returned point/path executed or reused."
+  ],
+  "preparation_failures": [
+    "Metadata writer SyntaxError from reserved return keyword; missing contract/freeze rsync exit23; startup failed before numerical imports. Evidence preserved; corrected preparation used separate v2 output and exactly one numerical solve."
+  ],
+  "counts": {
+    "component_tests_passed": 7,
+    "GPU_launches": 1,
+    "standing_warmup_controls": 25,
+    "standing_recorded_controls": 50,
+    "physics_steps": 300,
+    "new_sitting_controls": 0,
+    "endpoint_solver_calls": 1,
+    "accepted_paths": 0,
+    "new_demonstrations": 0,
+    "complete_sitting_cycles": 0,
+    "complete_upright_lean_cycles": 0,
+    "PPO_updates": 0,
+    "full72_evaluations": 0,
+    "original_failure_repairs": 0
+  },
+  "resources": {
+    "saved_validation": {
+      "returncode": 0,
+      "total_wall_s": 0.36430165998172015,
+      "maxrss_KiB": 102660,
+      "new_physics_steps": 0,
+      "PPO_updates": 0
+    },
+    "camera_preparation_seconds": 1.3067997790058143,
+    "capture_owner": {
+      "owner_pid": 2174501,
+      "scientific_launches": 1,
+      "PPO_updates": 0,
+      "retries": 0,
+      "GPU": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4",
+      "state": "CAPTURE_COMPLETE_REQUIRES_INDEPENDENT_AUDIT",
+      "utc": "2026-11-09T01:02:06.886280+00:00",
+      "wall_seconds": 18.361269254994113,
+      "child_pid": 2174506,
+      "trial_returncode": 0,
+      "trial_seconds": 18.17112594700302,
+      "sitting_controls": 0,
+      "complete_cycle": false
+    },
+    "capture_audit": {
+      "returncode": 0,
+      "total_wall_s": 5.025671990995761,
+      "maxrss_KiB": 2193280
+    },
+    "pre_solver_startup_failure": {
+      "returncode": 1,
+      "total_wall_s": 0.06373329000780359,
+      "maxrss_KiB": 16896,
+      "new_physics_steps": 0,
+      "PPO_updates": 0
+    },
+    "partial_endpoint_construction": {
+      "returncode": 1,
+      "total_wall_s": 13.547900685982313,
+      "maxrss_KiB": 285348,
+      "new_physics_steps": 0,
+      "PPO_updates": 0
+    },
+    "CPU_video": {
+      "video_sha256": "88f696d0e4ebe611aa0aa8c6156bf1ea5ef1d077153800023009e0ca3ba11aec",
+      "duration_s": 18,
+      "frames": 180,
+      "fps": 10,
+      "new_simulation_steps": 0,
+      "new_solver_calls": 0,
+      "GPU_used": false,
+      "complete_cycle": false,
+      "content": "Actual old/current camera snapshots, current measured1second standing replay at1x then labelled frozen frame; no invented sitting or stand-up.",
+      "elapsed_seconds": 2.8828961600083858,
+      "source_freeze_sha256": "c96b819e7e346998d31bf00a79d712843fa952b206955a85f1aa374cab223eb5"
+    },
+    "measured_nonoverlapping_stage_wall_seconds": 41.55257282097591,
+    "accounting_scope": "Sum of recorded stage walls, not end-to-end chat time or CPU-seconds. Capture child is nested in owner and not double-counted. Source editing, transfers and read-only inspection walls are not included."
+  },
+  "worker_check": {
+    "utc": "2026-11-09T01:25:43.565475+00:00",
+    "gpus": [
+      "0, NVIDIA GeForce RTX 4090, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 0 %, 42, 17 MiB",
+      "1, NVIDIA GeForce RTX 4070, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 83 %, 59, 5055 MiB"
+    ],
+    "compute_apps": [
+      "GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 2016772, /isaac-sim/kit/python/bin/python3, 4840 MiB"
+    ],
+    "project_scientific_workers": [],
+    "own_worker_live": false,
+    "new_PPO_updates": 0,
+    "automation_changed": false
+  },
+  "distinctions": {
+    "camera": "Standing-view qualification only; descent tracking still needs validation.",
+    "load_release": "Finite geometry can certify separation in this captured standing configuration. No positive load observer or loaded-to-unloaded runtime control has been admitted.",
+    "model": "Endpoint rejected; no valid approach or stand-up primitive.",
+    "physical": "No new sitting, hold, standing-return, effort reduction, learned-policy improvement, or repair demonstrated."
+  },
+  "accepted_witness_inspection": {
+    "source": "/home/kadir/humanoid-sitting/outputs/armchair_rest_ppo_20261105_v1/learned_sitting72",
+    "case": 16,
+    "identity": "known_old/16",
+    "height_m": 0.44,
+    "tilt_deg": 5,
+    "previous_clean": true,
+    "previous_hold_s": 9.56,
+    "scope": "Read-only provenance/geometry inspection. The64accepted demonstrations remain intact. This is not a new trial or a50cm-table witness."
+  },
+  "video": "/Users/kadir/humanoid-sitting-control/rest_cycle_partial_support_20261109_v1/results/video/camera_and_release_checks.mp4",
+  "video_sha256": "88f696d0e4ebe611aa0aa8c6156bf1ea5ef1d077153800023009e0ca3ba11aec",
+  "next_work": "Construct a clearance-safe approach and a contact-preserving weight shift back over the feet before lifting off. An accepted lower-seat witness is available for geometry/mechanics analysis, but cannot be replayed on the50cm table without new current-camera registration and independent full-path/action/mechanical audits. Keep loaded release unknown until actual loaded validation; do not substitute simulator truth or timers. No launch-ready full cycle exists; no retry of the rejected endpoint.",
+  "automation": "Deleted by human; unchanged. No queued worker or PPO autostart.",
+  "previous_checkpoint_sha256": "62c6b554a8dbfbc7a5cd1ee25f2f7d9a106fcbd426e259d25638a5e9ca4ea977"
+}

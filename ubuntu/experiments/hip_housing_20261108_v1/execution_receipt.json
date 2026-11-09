@@ -1,0 +1,30 @@
+{
+  "utc": "2026-11-08T18:25:49.240810+00:00",
+  "experiment": "hip_housing_20261108_v1",
+  "result": {
+    "model_pass": false,
+    "error": "ValueError('SPATIAL_SEED_KNEE_BRANCH')",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/hip_housing_20261108_v1/validate.py\", line 82, in <module>\n    seed_x,seed_source=original_seed(provisional_plan)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/hip_housing_20261108_v1/seed.py\", line 136, in construct\n    upper=.65;last=evaluate(upper)\n                   ^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/hip_housing_20261108_v1/seed.py\", line 133, in evaluate\n    state,info=spatial_close(plan,*planar_at_pitch(plan,float(theta)))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/hip_housing_20261108_v1/seed.py\", line 107, in spatial_close\n    if trial[plan.model.names.index(side+'_knee_joint')]<.04:raise ValueError('SPATIAL_SEED_KNEE_BRANCH')\n                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: SPATIAL_SEED_KNEE_BRANCH\n",
+    "total_seconds": 1.5593545789888594,
+    "physics_launch_ready": false,
+    "physical_success": false,
+    "physics_steps": 0,
+    "PPO_updates": 0
+  },
+  "process": {
+    "target": "lean_center",
+    "wall_seconds_including_interpreter_startup": 1.624395741004264,
+    "timeout": false,
+    "returncode": 0,
+    "cpu_seconds": 1.6228960000000001,
+    "child_peak_rss_kib": 286796,
+    "new_physics_steps": 0
+  },
+  "physics_steps": 0,
+  "new_demonstrations": 0,
+  "PPO_updates": 0,
+  "new_72_case_evaluations": 0,
+  "worker_live": false,
+  "physical_repairs": 0,
+  "admitted_motion": false
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "new input-association arithmetic from the stopped live admission; no proof/model/solver replay",
+  "equation": "p_new=(p_old @ R_old.T+t_old-t_new) @ R_new; p_cam=(p_new-camera_translation) @ camera_rotation; pixel=K projection",
+  "test": "Compare saved pixel projection within0.01px; count previously observed front-edge points now outside actual image bounds. No control admission from truth-aligned transformed points.",
+  "files": {
+    "/home/kadir/humanoid-sitting/experiments/rest_cycle_patch_binding_20261108_v1/analyze.py": "1495a2fb06a1b1af527bf49dea9c50ad6fb4615adf97627303582a4963630ea7",
+    "/home/kadir/humanoid-sitting/outputs/furniture_examples_20261105_v2/sit_modern_coffee_table_01_center/frame_0.npz": "7233160d17f4a858c3676d1e5cf7daba1299a78c131a93e50e80b6894e333032",
+    "/home/kadir/humanoid-sitting/outputs/rest_cycle_startup_fix_20261108_v1/sit_coffee_center/frame_0.npz": "599681d29a3038a4725dc472fa7cddfcc25608c7c005dde1f329294b16f77b97",
+    "/home/kadir/humanoid-sitting/outputs/rest_cycle_startup_fix_20261108_v1/sit_coffee_center/fresh_geometry_admission.json": "892e899a594236fa78bb16637225484285c28d5cc7232e8e580a4e53633a86b6",
+    "/home/kadir/humanoid-sitting/experiments/furniture_load_repair_20261106_v3/seat_models/sit_modern_coffee_table_01_center.audit.json": "b8e1034942d8b86cbfdc9bb2fa9fa319667524d59121a2a027f5bf92e19a675f",
+    "/home/kadir/humanoid-sitting/experiments/rest_cycle_patch_binding_20261108_v1/analyze_pixel_centers.py": "0bf7a5116b5495a853023b343adf0311f6b449e20a7df8b4fbfdff5d909b56bc",
+    "/home/kadir/humanoid-sitting/experiments/furniture_perception_repair_20261029_v1/perception.py": "90fb4b64be79205e796b62b47b22eef69f56ed8d1dc75da0f883bafa77b8100d"
+  },
+  "CPU_wall_cap_s": 45,
+  "AS_GiB": 40,
+  "threads": 1,
+  "physics_steps": 0,
+  "retries": 0,
+  "independent_review": "Uses saved world pose only for diagnosis; does not label memory/current pose qualified, change geometry guards or retarget motion.",
+  "correction": "Saved selected_pixels are integer indices. Compare projected K pixel-edge coordinates with indices+0.5, matching perception.cloud. The0.01pixel check is unchanged; no geometry/control threshold change.",
+  "previous_exit": {
+    "returncode": 1,
+    "wall_seconds": 0.06977788999211043,
+    "physics_steps": 0,
+    "model_solves": 0
+  }
+}

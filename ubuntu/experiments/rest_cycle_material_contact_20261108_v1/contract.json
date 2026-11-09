@@ -1,0 +1,35 @@
+{
+  "utc": "2026-11-08T23:40:30.247985+00:00",
+  "authorization": "Validate higher support and complete sit/hold/stand under unchanged criteria.",
+  "defect": "The previous state() used pelvis[height.argmin()] for tangential position. That material identity can jump between vertices as pitch changes, even though the minimum height is continuous. Interpolating its tangential coordinate can demand a nonexistent intermediate point.",
+  "correction": "Choose one actual lowest-z rear-most pelvis collider vertex at initialization, record shape/vertex indices, and use its transformed tangential coordinate throughout. Minimum whole-pelvis clearance remains recomputed independently. Contact-footprint erosion uses offsets from that same material point over the original pitch box.",
+  "initialization": "Only the measured higher-table standing snapshot q0/IMU/camera and bound reset command. No rejected pose/vector/path input.",
+  "equations": "Cold constrained endpoint: original eight bilateral-foot/minimum-hover/fixed-material tangent equalities; minimize COM distance to sole center; unchanged boxes. Actual endpoint command schedule <=10.4s before33node path; each path uses fixed material tangent with continuous minimum gap. Existing independent geometry, action/filter/time and all-mesh clearance must pass.",
+  "sources": "The passed current-depth audit is read/hash-bound to the exact saved frame, not recomputed. Fixed vertex membership is independently checked against original collider source. SLSQP local success is not global optimality.",
+  "resources": {
+    "CPU_total_wall_s": 45,
+    "AS_GiB": 40,
+    "CPU_threads": 1,
+    "max_endpoint_iterations": 80,
+    "max_node_evaluations": 60,
+    "physics_steps": 0,
+    "PPO_updates": 0,
+    "retries": 0
+  },
+  "return_policy": "One new construction. Stop on any original gate failure. No relaxation, retiming or failed-point reuse. Fresh actual-start matching required before any newGPU motion.",
+  "unchanged": [
+    ".003rad/20ms",
+    ".1filter",
+    ".03margin",
+    "14fixedfingers",
+    "25rawquiet",
+    "20s/final5s",
+    "alltickslip/legal/failure",
+    "PhysX/gains/materials"
+  ],
+  "review": {
+    "source_review_passed": true,
+    "launch_ready": false,
+    "return_to_stand_still_gated": true
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "utc": "2026-11-08T22:06:55.432160+00:00",
+  "state": "CURRENT_CAMERA_VALIDATED_PHYSICAL_SIT_FAILED_TRANSITION_SLIP_ANKLE_READOUT_INCONSISTENCY",
+  "authorization": "Continue under the latest reliable two-cycle restart; one scientific execution owner; no agents or recurring automation.",
+  "construction": {
+    "mechanism": "Wider and higher-resolution simulated rear camera supplies a fresh near-edge patch; one cold current-state construction. Rejected narrow-camera path and endpoint were not reused.",
+    "simulation_sensor_configuration_changed": true,
+    "width": 384,
+    "height": 288,
+    "focal_length_mm": 15,
+    "horizontal_aperture_mm": 39,
+    "hardware_camera_compatibility_validated": false,
+    "preflight": "preflight.json",
+    "source_freeze": "freeze.json",
+    "contract": "contract.json"
+  },
+  "executed_model": {
+    "cold_constructions": 1,
+    "process_seconds": 9.53368678301922,
+    "model_internal_seconds": 9.478901597001823,
+    "geometry_pass": true,
+    "command_pass": true,
+    "sampled_clearance_pass": true,
+    "nominal_settle_s": 12.34,
+    "guaranteed_physical_settle": false,
+    "result": "results/sit_coffee_wide/model_construction/audit.json"
+  },
+  "physical": {
+    "full20s_trials": 1,
+    "passed": false,
+    "final_qualifying_hold_s": 6.46,
+    "minimum_final5s_intended_support_BW": 0.18980072438716888,
+    "loaded_slip_controls": 21,
+    "illegal_contact_controls": 0,
+    "fall_or_other_failure_flags": false,
+    "pelvis_slide_controls": 19,
+    "pelvis_slide_window_s": [
+      13.12,
+      13.48
+    ],
+    "left_foot_slide_controls": 1,
+    "right_foot_slide_controls": 1,
+    "maximum_command_increment_rad": 0.003000020980834961,
+    "action_limits_unchanged": true,
+    "success_criteria_unchanged": true,
+    "teacher_not_PPO": true,
+    "complete_return_to_stand_cycle": false,
+    "result": "results/sit_coffee_wide/independent_audit.json"
+  },
+  "perception": {
+    "valid_control_samples": 1000,
+    "total_control_samples": 1000,
+    "max_sample_age_s": 0.17999997735023499,
+    "scope": "This one simulated furniture start; not all placements or hardware"
+  },
+  "controller": {
+    "approach_controls": 417,
+    "hover_controls": 583,
+    "landing_controls": 0,
+    "hold_controls": 0,
+    "interpretation": "Physical support occurred while hover was still commanded; quiet-state gate never admitted the normal landing stroke. Do not count this as a completed staged weight transfer."
+  },
+  "telemetry": {
+    "native_substeps": 4000,
+    "final5s_force_impulse_residual_Ns": [
+      -1.3197516091168441e-06,
+      -4.804518539460935e-07,
+      -0.0002785404912631863
+    ],
+    "force_accounting_scope": "Current direct-readout balance only; does not establish cause of historical imbalance or validate an actor load estimator.",
+    "ankle_audit": "results/sit_coffee_wide/ankle_clock_audit.json",
+    "ankle_summary": [
+      {
+        "joint": "left_ankle_roll_joint",
+        "final_substep_projection_vs_recorded_joint_velocity_max_error_rad_s": 1.9973115400473418e-07,
+        "final5s_raw_control_velocity_mean_rad_s": 0.27670013904571533,
+        "final5s_projected_substep_phase_means_rad_s": [
+          0.2767064898258068,
+          0.27670282821149456,
+          0.27670240819362535,
+          0.2767001074238004
+        ],
+        "final5s_approximate_all_substep_velocity_mean_rad_s": 0.2767029584136818,
+        "final5s_approximate_all_substep_velocity_rms_rad_s": 0.2767030300262579,
+        "final5s_joint_position_change_rad": -7.167982403188944e-07,
+        "final5s_joint_position_range_rad": [
+          -0.00037560093915089965,
+          -0.0003740937099792063
+        ],
+        "final5s_approximate_velocity_integral_rad": 1.383514792068409
+      },
+      {
+        "joint": "right_ankle_roll_joint",
+        "final_substep_projection_vs_recorded_joint_velocity_max_error_rad_s": 2.1891346557723068e-07,
+        "final5s_raw_control_velocity_mean_rad_s": 0.2632692754268646,
+        "final5s_projected_substep_phase_means_rad_s": [
+          0.26326760777331887,
+          0.2632686582565174,
+          0.26326946974321047,
+          0.26326925385029415
+        ],
+        "final5s_approximate_all_substep_velocity_mean_rad_s": 0.2632687474058353,
+        "final5s_approximate_all_substep_velocity_rms_rad_s": 0.2632688126675007,
+        "final5s_joint_position_change_rad": -9.343202691525221e-07,
+        "final5s_joint_position_range_rad": [
+          -0.0002489079488441348,
+          -0.00024731759913265705
+        ],
+        "final5s_approximate_velocity_integral_rad": 1.3163437370291764
+      }
+    ],
+    "ankle_interpretation": "End-substep axis projections agree with native joint velocities to2.2e-7rad/s. All four phase means stay positive around.277/.263rad/s, ruling out simple control-substep cancellation. Final5s q changes under1e-6rad, versus approximate integrals1.38/1.32rad. Intermediate parent orientations approximate. Underlying cause unproven; no altered velocity, control, or physical score.",
+    "source_read_review": "Active FullBodyEnv.reset writes state only at reset, warms25controls; FullBodyEnv.step applies position targets and raw.step. trial loop does not rewrite joint states. This is source inspection, not a proof about all backend behavior.",
+    "qualified_actor_load_estimator": false
+  },
+  "resources": {
+    "GPU_UUID": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4",
+    "GPU_launches": 1,
+    "physical_retries": 0,
+    "owner_wall_s": 97.23344215800171,
+    "GPU_child_wall_s": 96.84427972201956,
+    "preflight_process_s": 0.3817178290046286,
+    "cold_construction_nested_within_GPU_child": true,
+    "post_audits_s": 0.19372212199959904,
+    "transition_analysis_process_s": 0.10559993502101861,
+    "ankle_analysis_process_s": 1.0798878300120123,
+    "warmup_controls": 25,
+    "active_controls": 1000,
+    "physics_steps": 4100,
+    "initialization_steps": 0,
+    "additional_saved_analysis_physics": 0,
+    "finite_return": "One full1000control trial and terminal original audit; no follow-on retry or autostart",
+    "rendering": "CPU-only from saved poses; render wall time was not instrumented;250frames20s1x",
+    "limits": "GPU900s/85C/20GBrootfree; each separate CPU scientific stage45s/40GiB/1thread; no changed allowance",
+    "final_worker_check": "results/final_worker_check.json"
+  },
+  "counts": {
+    "new_successful_demonstrations": 0,
+    "complete_sitting_cycles": 0,
+    "complete_upright_lean_cycles": 0,
+    "PPO_updates": 0,
+    "new_full72_evaluations": 0,
+    "accepted_repairs": 0
+  },
+  "video": {
+    "path": "/Users/kadir/humanoid-sitting-control/rest_cycle_wide_camera_20261108_v1/results/wide_camera_sitting_trial.mp4",
+    "sha256": "8f2dc6a4d3e107c7720c01b18d943d779b945998ea40799088378b8632683f60",
+    "duration_s": 20,
+    "frames": 250,
+    "width": 1280,
+    "height": 900,
+    "visual_QA": "Mid-transition and final frames inspected; original failure andholdtime visible; camera snapshots timestamped; normal-speed saved-pose reconstruction, no resimulation"
+  },
+  "next_work": "Resolve the native ankle-velocity/position inconsistency before changing quiet-state or feedback logic: raw qd and projected native relative angular velocity agree, but neither their four-substep means nor their integral matches the nearly stationary ankle angles. Source inspection found no repeated joint-state reset in the active rollout loop; underlying solver/cache/constraint cause remains unproven. No finite-difference substitution, smoothing, relaxed gate, or blind gain/physics retry. Then construct a sensor-guided contact transition that prevents the measured pelvis sliding and qualifies support/load/unload, and integrate stand-up with the stage core. Repeat one sitting and one upright-lean complete cycle from3starts before scaling200demos/PPO/all72. Preserve original limits and criteria,4090only/4070AIWorker,64protected/8unresolved,holdoutclosed,automationdeleted."
+}

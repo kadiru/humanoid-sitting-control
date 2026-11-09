@@ -1,0 +1,33 @@
+{
+  "candidate_dropoff_pixels": 311,
+  "rejected_foreground_occlusion_pixels": 0,
+  "selected_plane_pixels": 35108,
+  "actor_truth_input": false,
+  "center_directly_observed": false,
+  "source": "current calibrated depth ray discontinuities",
+  "left_count": 81,
+  "right_count": 81,
+  "passed": true,
+  "tests": {
+    "nonempty_each_side": true,
+    "common_pixel_interval": true,
+    "original_side_agreement": true,
+    "finite_edge_uncertainty": true
+  },
+  "side_intervals_m": [
+    [
+      -0.09291442028737636,
+      -0.0895443556723213
+    ],
+    [
+      -0.09292112315962361,
+      -0.08955253424256784
+    ]
+  ],
+  "front_x_interval_m": [
+    -0.09291442028737636,
+    -0.08955253424256784
+  ],
+  "side_center_difference_m": 7.4407212468929895e-06,
+  "assumption": "Straight frontal edge across the occluded contact lane; independent fixture audit still required."
+}

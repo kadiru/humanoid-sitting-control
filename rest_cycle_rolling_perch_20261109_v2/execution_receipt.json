@@ -1,0 +1,201 @@
+{
+  "utc": "2026-11-09T02:03:29.370104+00:00",
+  "state": "ROLLING_CONTACT_AND_TIMING_PASS_COMPLETE_MODEL_REJECTED",
+  "authorization": "Human Continue, retaining partial legalhip/thigh support, sit5shold/stand,4090only, unchanged actionlimits/physicalcriteria.",
+  "changes": [
+    "Retargeted independently successful known_old/16 into current-camera geometry, then constructed fixed-foot contactpivot and balancedstand-return. Balance/action/return checks passed, but fixed-point rotation penetratedpelvisgeometry and failedclearance/timing.",
+    "Implemented actualconvexsupport-envelope rolling and shallow10%BW perch with wholelower2mmcontactcapinsideconservativecameraedge. First enumerationhit itsfixed100000event cap afterendpointsolve; this failure is preserved.",
+    "Replacedallpairgeometrywithconvexadjacency, retainingindependentanalyticdominance checks againstall4345convexhullvertices.13,029adjacentpairs replace9,437,340pairs;415candidateangles/10activeintervals. This is a numerical geometric validation usingQhull andfloat64, not a rational certificate. Recomputedtheendpointfromaccepteddemo andchargedallwork; reusedno failednumericvector. Same45secondcap.",
+    "Complete rolling model passesfeet/balance/plane/patch/tilt/wrench/action/holdreserve/returntime/virtualworkchecks.6mmfullmeshhip-housingclearance stillfails; no motionadmitted. Static10%BWrest torque-squaredratio1.22656vsstanding, sofootunloadingdoesnotdemonstrateeffortreduction."
+  ],
+  "counts": {
+    "model_construction_processes": 3,
+    "endpoint_solver_calls": 3,
+    "unique_software_tests": 12,
+    "software_test_executions": 17,
+    "new_physics_steps": 0,
+    "new_sitting_controls": 0,
+    "GPU_launches": 0,
+    "PPO_updates": 0,
+    "new_demonstrations": 0,
+    "complete_cycles": 0,
+    "new_full72_checks": 0,
+    "original_case_repairs": 0
+  },
+  "phases": [
+    {
+      "folder": "/Users/kadir/humanoid-sitting-control/rest_cycle_witness_pivot_20261109_v1",
+      "process": {
+        "returncode": 0,
+        "total_wall_s": 24.280209654010832,
+        "maxrss_KiB": 295884,
+        "outer_deadline": false,
+        "worker_pid": 2255193,
+        "new_physics_steps": 0,
+        "PPO_updates": 0
+      },
+      "freeze_sha256": "adcb5a4f4da6b746a5442bc52136cee627151c9aea008c8b654836184328273f",
+      "result": {
+        "model_admitted": false,
+        "physical_success": false,
+        "new_physics_steps": 0,
+        "PPO_updates": 0,
+        "nominal_rest_settle_s": 17.18,
+        "nominal_return_settle_s": 18.18,
+        "rest_load": 0.6234568861624044,
+        "model_effort_ratio": 0.274382613145787,
+        "elapsed_seconds": 24.222463076002896
+      }
+    },
+    {
+      "folder": "/Users/kadir/humanoid-sitting-control/rest_cycle_rolling_perch_20261109_v1",
+      "process": {
+        "returncode": 1,
+        "total_wall_s": 3.6751776519813575,
+        "maxrss_KiB": 1624432,
+        "outer_deadline": false,
+        "worker_pid": 2270317,
+        "new_physics_steps": 0,
+        "PPO_updates": 0
+      },
+      "freeze_sha256": "6edcef093c329a21e6e554844c0203aa537ae1e2108ad85ee3d4939b43b5e97d",
+      "failure": {
+        "error": "ValueError('ROLLING_EVENT_RESOURCE_CAP')",
+        "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/rest_cycle_rolling_perch_20261109_v1/construct.py\", line 40, in main\n    result=plan.construct();write('plan.json',result);write('stage_evidence.json',plan.evidence)\n           ^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/rest_cycle_rolling_perch_20261109_v1/perch.py\", line 52, in construct\n    roll=Rolling(self.vertices,self.n,self.angles,pitch,np.deg2rad(38))\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/rest_cycle_rolling_perch_20261109_v1/rolling.py\", line 20, in __init__\n    if len(candidates)>100000:raise ValueError('ROLLING_EVENT_RESOURCE_CAP')\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: ROLLING_EVENT_RESOURCE_CAP\n",
+        "elapsed_seconds": 3.60151925298851,
+        "physical_success": false,
+        "new_physics_steps": 0
+      }
+    },
+    {
+      "folder": "/Users/kadir/humanoid-sitting-control/rest_cycle_rolling_perch_20261109_v2",
+      "process": {
+        "returncode": 0,
+        "total_wall_s": 24.426833010016708,
+        "maxrss_KiB": 296128,
+        "outer_deadline": false,
+        "worker_pid": 2274638,
+        "new_physics_steps": 0,
+        "PPO_updates": 0
+      },
+      "freeze_sha256": "6c4c70a6c4f45c1a22dd3526d57c82c0880c404cf712a981325608dfb55b4267",
+      "result": {
+        "model_admitted": false,
+        "physical_success": false,
+        "new_physics_steps": 0,
+        "PPO_updates": 0,
+        "nominal_rest_settle_s": 14.120000000000001,
+        "nominal_return_settle_s": 15.120000000000001,
+        "rest_load": 0.10000000054515587,
+        "model_effort_ratio": 1.2265585089179178,
+        "elapsed_seconds": 24.3440024080046
+      }
+    }
+  ],
+  "latest_model_result": {
+    "model_admitted": false,
+    "physical_success": false,
+    "new_physics_steps": 0,
+    "PPO_updates": 0,
+    "nominal_rest_settle_s": 14.120000000000001,
+    "nominal_return_settle_s": 15.120000000000001,
+    "rest_load": 0.10000000054515587,
+    "model_effort_ratio": 1.2265585089179178,
+    "elapsed_seconds": 24.3440024080046
+  },
+  "latest_audit": "/Users/kadir/humanoid-sitting-control/rest_cycle_rolling_perch_20261109_v2/construction/audit.json",
+  "latest_audit_sha256": "271ee617e448bba2535d77decf8399ad1fad2298e06d7a4c854b0481ccb3a24a",
+  "latest_audit_checks": {
+    "feet": true,
+    "balance": true,
+    "plane_nonpenetration": true,
+    "patch_reserve": true,
+    "tilt": true,
+    "base_wrench": true,
+    "first20s_hold_reserve": true,
+    "return20s": true,
+    "partial_support": true,
+    "original_command_limits": true,
+    "full_mesh_clearance": false,
+    "independent_virtual_work": true
+  },
+  "clearance": {
+    "buffer_m": 0.006,
+    "sampled_poses": 249,
+    "triangle_tests": 8810,
+    "expanded_shape_intersections": 2648,
+    "first_violations": [
+      {
+        "sample": 63,
+        "body": "left_hip_roll_link",
+        "face": 2806,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "left_hip_roll_link",
+        "face": 2807,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "left_hip_roll_link",
+        "face": 2808,
+        "phase": "approach"
+      },
+      {
+        "sample": 63,
+        "body": "left_hip_roll_link",
+        "face": 2809,
+        "phase": "approach"
+      }
+    ],
+    "interpretation": "Clearance-buffer violation inmodel; doesnotbyitself prove actualphysicalpenetration."
+  },
+  "rolling_geometry": {
+    "passed": true,
+    "minimum_body_plane_gap_m": -2.7755575615628914e-17,
+    "maximum_contact_gap_m": 2.7755575615628914e-17,
+    "maximum_material_point_drift_m": 2.7755575615628914e-17,
+    "active_segments": 10,
+    "convex_vertices": 4345,
+    "minimum_all_vertex_dominance": -1.8137795440368523e-19,
+    "resource_counts": {
+      "vertices": 4345,
+      "adjacent_pairs": 13029,
+      "all_pairs_not_materialized": 9437340,
+      "candidate_angles": 415,
+      "active_segments": 10
+    },
+    "scope": "Piecewise rigid rolling on exact local plane; no dynamics or hardware-success claim."
+  },
+  "effort": {
+    "kind": "23jointquasistatic torque-squared proxy",
+    "relative_to_standing": 1.2265585089179178,
+    "electrical_energy_measured": false,
+    "physical_effort_reduction_verified": false
+  },
+  "resources": {
+    "each_scientific_process_cap_seconds": 45,
+    "each_cores": 1,
+    "each_address_space_GiB": 40,
+    "measured_total_scientific_process_wall_seconds": 52.3822203160089,
+    "maximum_child_peak_RSS_KiB": 1624432,
+    "scope": "Three separate fullycharged processes includingfailed geometryenumeration and repeatedfreshendpoint in correctedstructuralconstruction; sum isnot a45second singleprocessclaim. Authoring,transfers andread-onlyinspection not included in scientificprocesswall."
+  },
+  "physical_status": "Unchanged:64protected successes/8unresolved; no newrepair,fullcycle,PPOor72evaluation. Positive-load/releasecontrolunvalidated.4070AIWorker untouched;automationdeleted;noqueuedwork.",
+  "worker_check": {
+    "utc": "2026-11-09T02:02:12.701396+00:00",
+    "gpus": [
+      "0, NVIDIA GeForce RTX 4090, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 0 %, 42, 17 MiB",
+      "1, NVIDIA GeForce RTX 4070, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 88 %, 58, 5123 MiB"
+    ],
+    "compute_apps": [
+      "GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 2016772, /isaac-sim/kit/python/bin/python3, 4908 MiB"
+    ],
+    "project_workers": [],
+    "own_worker_live": false
+  },
+  "next_work": "The50cm full-width front still violates6mm hip-housing clearance. A shallow10%BW perch also raises static23joint torque-squared vsstanding. Next prepare ONE compatible contact region that leaves space for the hip housings: a tablecorner or narrow upper edge, with actual currentcamera polygon/edge associations and independentmesh validation, rather than varying the failed endpoint parameters. Reconstruct from the accepted demonstration, not rejected vectors. Select a posture only if completeapproach/hold/rollingunload/return clearsallhousings and supports an effort-reduction hypothesis. Newfixture/placement is a changed setup, never a repairclaim for this tablefront. Freezeinputs/equations/resources/audits beforemotion. Runtimepositive-load/releaseobserver remains unvalidated; no truthfeedback or timers as qualification.",
+  "previous_checkpoint_sha256": "14ce04eda65513dd73afba15e95d971a61de7a410f44583a774cf26f8e5b4a32"
+}

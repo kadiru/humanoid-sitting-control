@@ -1,0 +1,42 @@
+{
+  "utc": "2026-11-08T22:43:50.420145+00:00",
+  "authorization": "Continue reliable sitting/upright-lean cycle restart.",
+  "mechanism": "Replace artificial linear pelvis gap/tangent interpolation by a bilateral-foot-anchored knee/pitch curve with constant initial COM_x. Arms stay at measured standing angles. Furniture is pre-positioned under the reachable endpoint. This changes path equations, not rate, timing or contact limits.",
+  "endpoint_equations": "Nine variables: six sagittal leg angles, root x,z,pitch. Nine residuals: bilateral foot x,z,pitch(6), pelvis min plane gap=.012(1), COM_x=initial COM_x(1), equal left/right knee displacement from q0(1). Original boxes and q0 initialization. One least_squares max80nfev; residual<=2e-6.",
+  "path_equations": "For33nodes, interpolate left knee and root pitch from q0 to cold endpoint. Solve bilateral foot x,z,pitch(6), left knee(1), root pitch(1), COM_x=initial(1), max60nfev each, residual<=2e-6. Pelvis height and tangent are outputs, not imposed straight lines. Verify terminal gap/tangent agree<=2mm with chosen endpoint.",
+  "setup": "Same saved wide standing patch supplies shape/height only. Translation along its tangent in[0,.25]m aligns a22mm-eroded target with endpoint. The predicted translated cloud is not a current observation.",
+  "witness": "Exact static-bias endpoint direct command schedule<=10.4s, original .003rad step,.1 filter,.03 desired margin before any full-path solve. This actuator-only witness does not prove curved-path feasibility.",
+  "inputs": "Measured standing frame0 and independently bound reset command; frozen robot/inertia/collider models. No rejected endpoint/vector/path input.",
+  "return_policy": "One endpoint, one direct witness, one33node curve, one16node landing and independent audits. Stop on any failure; no retiming/retry. No global optimality claim. All intermediate solve records saved on failure.",
+  "resources": {
+    "total_CPU_wall_s": 45,
+    "address_space_GiB": 40,
+    "threads": 1,
+    "physics_steps": 0,
+    "PPO_updates": 0,
+    "retries": 0,
+    "outputs_MiB": 20
+  },
+  "independent_audits": [
+    "Full geometry recomputation",
+    "Exact discrete command/filter/margin and original hold timing",
+    "Sampled mesh clearance with full furniture translation",
+    "Independent endpoint balance/translation/direct schedule/finger recomputation"
+  ],
+  "unchanged": [
+    "23activejoints/14fixedfingers",
+    ".003rad/control",
+    ".1filter",
+    ".03margin",
+    "20s/final5s",
+    "raw25quiet before descent",
+    "alltickslip/legal/failurecriteria",
+    "PhysX/gains/materials"
+  ],
+  "review": {
+    "source_review_passed": true,
+    "source_compiles": true,
+    "launch_ready": false
+  },
+  "further_admission": "Require actual pre-positioned fixture with consistent collision/scoring and fresh camera/reset checks before any4090 motion. Model pass is not physical support or complete-cycle success."
+}

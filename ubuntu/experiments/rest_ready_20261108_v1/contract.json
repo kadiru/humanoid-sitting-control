@@ -1,0 +1,45 @@
+{
+  "authorization": "Latest human: fix ankle/stool/uprightlean,20demos,4090PPO,72checks; minimizeeffort/improvebalance/retainreadytostand/minimalnecessarysurfacecontacts; unchangedactionlimits/successcriteria.",
+  "construction": "One named armchair-center current-camera material rear-torso point, zero-load balanced approach to12mm hover, originalcurrentquiet reserve,6mm/s normalcontact, then explicit0to.20BW normal-load allocation with same materialpoint fixed tangent. Positiveknee branch; no rejected endpoint reuse.",
+  "substantive_mechanisms": [
+    "Fix externalwork derivative: force acts at fixed material point, not varying clipped closestpoint. Analytic articulated gravity/contact Jacobian independently checked by finite work differences.",
+    "Balance constraints at every approach and loaded state, rather than only supported endpoint.",
+    "Only after contact optimize normalized torque, supportcenter margin, height loss and return posture distance.",
+    "Full expandedconvex geometry broadphase replaces rawAABBplus6mm, which can underbound expanded corners."
+  ],
+  "objective": "sum((per-leg modeltorque/[300,300,20]Nm)^2)+((CoP-mid)/halfwidth)^2+(positive_root_height_loss/leglength)^2+sum(((q-standing)/pi)^2); modelproxy, not measured electricalpower or energy.",
+  "readiness": "Reverse same zero/positive-load equilibrium states is a model return path under originalactionrate. No successful physical returnclaimed; sitting successstilloriginalfull20s/final5s.",
+  "contact_scope": "twofeet plus one eligible rear-torso region;nohands/knees/sprawl. Do not minimize area below stable observed patch requirements.",
+  "freeze": {
+    "case": "demo_rear_back_center",
+    "init": "currentstandingencoders",
+    "data": "savedframe0camera,q,gravity plusfirstpreviouscommand;actualsceneonlyindependentaudit",
+    "phases": {
+      "approach_nodes": 25,
+      "normal_nodes": 4,
+      "load_nodes": 12
+    },
+    "SLSQP_iterations_per_node": 60,
+    "one_case_total_wall_s": 45,
+    "thread_count": 1,
+    "GPU": 0,
+    "retries": 0,
+    "physical_autolaunch": false
+  },
+  "independent_audit": [
+    "fixed-materialpotential/work finite-difference error<=2e-6Nm",
+    "full3Dfeet<3mm",
+    "CoP>=5mm",
+    "fullsampledexpandedcollisiongeometry",
+    "originalfloatfilter,rate,margin,fingers",
+    "14.4smodelholdreserve"
+  ],
+  "unchanged": [
+    "rawvelocityquietgate",
+    "actionandphysicalcriteria",
+    "driver/material/gains",
+    "4070reserved",
+    "all64originalsuccessesprotected",
+    "freshholdoutclosed"
+  ]
+}

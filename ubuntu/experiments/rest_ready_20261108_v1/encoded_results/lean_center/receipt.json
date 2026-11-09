@@ -1,0 +1,348 @@
+{
+  "model_pass": false,
+  "float32_maximum_increment_rad": 0.0025000572204589844,
+  "float32_minimum_desired_margin_rad": 0.204630540058782,
+  "float32_forward_filter_error_rad": 4.656612873077393e-10,
+  "tests": {
+    "float32_action_increment": true,
+    "float32_desired_margin": true,
+    "float32_fingers": true,
+    "encoded_settled_time": true,
+    "original_action_increment": true,
+    "original_desired_margin": true,
+    "fingers_fixed": true,
+    "full_mesh": false,
+    "hold_time_reserved": true,
+    "between_node_feet": true,
+    "normal_speed": true,
+    "loaded_material_contact_drift": true
+  },
+  "collision": {
+    "passed": false,
+    "sampled_poses": 65,
+    "triangle_tests": 212,
+    "forbidden_or_early_clearance_intersections": [
+      {
+        "sample": 26,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 26,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 27,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 27,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 28,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 28,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 29,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 29,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 30,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 30,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 31,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 31,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 32,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 32,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 33,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 33,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 34,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 34,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 35,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 35,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 36,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 36,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 37,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 37,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 38,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 38,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 39,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 39,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 40,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 40,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 41,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 41,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 42,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 42,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 43,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "approach"
+      },
+      {
+        "sample": 43,
+        "body": "torso_link",
+        "face": 85,
+        "phase": "approach"
+      },
+      {
+        "sample": 44,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      },
+      {
+        "sample": 45,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      },
+      {
+        "sample": 46,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      },
+      {
+        "sample": 47,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      },
+      {
+        "sample": 48,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      },
+      {
+        "sample": 49,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      },
+      {
+        "sample": 50,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      },
+      {
+        "sample": 51,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      },
+      {
+        "sample": 52,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      },
+      {
+        "sample": 53,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      },
+      {
+        "sample": 54,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      },
+      {
+        "sample": 55,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      },
+      {
+        "sample": 56,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      },
+      {
+        "sample": 57,
+        "body": "torso_link",
+        "face": 67,
+        "phase": "landing"
+      }
+    ],
+    "forbidden_or_early_clearance_intersection_count": 57,
+    "expected_target_approaches": 21,
+    "clearance_buffer_m": 0.006,
+    "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+    "simulation_success": false,
+    "accelerator": "cKDTree exact AABB + signed halfspace rejection/interior; original clip on boundary",
+    "fast_exclusions": 134,
+    "fast_inside": 0,
+    "slow_clips": 78
+  },
+  "maximum_increment_rad": 0.0025000000000002798,
+  "minimum_desired_margin_rad": 0.204630537636097,
+  "maximum_foot_error": 0.0005406246362188769,
+  "maximum_normal_speed": 0.005515619573798541,
+  "maximum_loaded_material_point_drift": 1.7801626484016578e-05,
+  "model_effort_ratio": 1.0597498305579598,
+  "return_model": "reverse force allocation and contact path, then unloaded approach; not physically validated",
+  "total_seconds": 19.626702568028122,
+  "physics_launch_ready": false,
+  "physical_success": false,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}

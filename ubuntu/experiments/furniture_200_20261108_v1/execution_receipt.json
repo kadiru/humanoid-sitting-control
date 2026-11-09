@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "created_utc": "2026-11-08T12:31:11.650484+00:00",
+  "state": "200_SCENES_PREPARED_BASE_MOTION_REJECTED_NO_ROLLOUTS",
+  "authorization": "2026-11-08 human:20sitting and20leaning per furniture,5objects; vary position/angle; lean using posterior hips/upper thighs against suitable rear surfaces.",
+  "target": {
+    "sitting_demonstrations": 100,
+    "leaning_demonstrations": 100,
+    "objects": 5,
+    "per_object_per_task": 20
+  },
+  "objects": {
+    "myd1WSucAz": {
+      "title": "Box armchair",
+      "sitting": 20,
+      "leaning": 20
+    },
+    "6MoOyPtetL": {
+      "title": "Box-arm couch",
+      "sitting": 20,
+      "leaning": 20
+    },
+    "1kwsjhpY84": {
+      "title": "L-shaped couch",
+      "sitting": 20,
+      "leaning": 20
+    },
+    "wooden_stool_01": {
+      "title": "Round wooden stool",
+      "sitting": 20,
+      "leaning": 20
+    },
+    "modern_coffee_table_01": {
+      "title": "Rectangular coffee table",
+      "sitting": 20,
+      "leaning": 20
+    }
+  },
+  "prepared_scenes": {
+    "count": 200,
+    "static_visual_collision_evaluator_correspondence_passed": true,
+    "scope": "Static visual/collider/evaluator correspondence only",
+    "verified_scene_files": 600,
+    "scene_bytes": 9746847,
+    "proposed_target_regions": 160,
+    "unselected_hip_rim_regions": 40,
+    "native_height_materials_unchanged": true,
+    "robot_reset_clearance_support_validated": false
+  },
+  "variation": {
+    "yaw_deg": [
+      0,
+      -3,
+      3,
+      -6,
+      6
+    ],
+    "placements": [
+      "center",
+      "near",
+      "left",
+      "right"
+    ],
+    "same_rigid_transform_applied_to_visual_collision_and_region": true
+  },
+  "leaning_intent": "Posterior pelvis or proximal thigh support with minimal necessary knee bend and readiness to stand; do not relabel deep squat sitting or shoulder-only support as hip leaning.",
+  "motion_construction": {
+    "directory": "/Users/kadir/humanoid-sitting-control/continuous_clearance_20261108_v1",
+    "derivative_audit": {
+      "passed": true,
+      "maximum_primitive_derivative_error": 7.354735487297148e-09,
+      "maximum_scaled_error": 4.788116394751556e-09,
+      "maximum_objective_derivative_error": 9.786300024993907e-07,
+      "camera_rows": 74,
+      "source": "Original analytic seed only; independent central differences of original model",
+      "physics_steps": 0
+    },
+    "endpoint": {
+      "stage": "load_transfer_endpoint",
+      "success": false,
+      "iterations": 1,
+      "equality": 2.2119437464662717e-05,
+      "inequality": -0.018095988098876553,
+      "message": "Inequality constraints incompatible",
+      "foot_residual": 2.2119437464662717e-05,
+      "gap_m": 0.0,
+      "camera_minimum_m": -9.756422642004381e-09,
+      "construction_clearance_minimum_m": -0.018095988098876553,
+      "objective": 1.936188896331887,
+      "solver_status": 4,
+      "derivatives": "analytic full model, piecewise exact active camera row"
+    },
+    "accepted_endpoint": false,
+    "full_path_validation_reached": false,
+    "interpretation": "Stronger conservative clearance bound rejected the candidate. This is neither a measured18mm penetration nor a proof the requested lean is impossible. Original camera rows alone do not certify the other required gates."
+  },
+  "resources": {
+    "scene_build": {
+      "returncode": 0,
+      "timeout": false,
+      "wall_seconds": 1.5991024459945038,
+      "cpu_seconds": 3.762392,
+      "peak_rss_kib": 158728,
+      "physics_steps": 0,
+      "PPO_updates": 0
+    },
+    "model_run": {
+      "target": "lean_center",
+      "wall_seconds_including_interpreter_startup": 1.8219177770079114,
+      "timeout": false,
+      "returncode": 0,
+      "cpu_seconds": 1.820404,
+      "child_peak_rss_kib": 286328,
+      "new_physics_steps": 0
+    },
+    "synthetic_audit_wall_seconds_including_ssh": 0.376330458,
+    "synthetic_cpu_seconds": null,
+    "unmetered": "Authoring, transfers and source/hash bookkeeping are not claimed zero. USD scene build used library threads; CPU time is separately reported.",
+    "collection_launch_accounting_pending": "Initial settling and recorder storage profile must be accounted before collection launch."
+  },
+  "evidence_verified": {
+    "scene_files": 600,
+    "research_files": 24
+  },
+  "new_robot_rollouts": 0,
+  "new_validated_demonstrations": 0,
+  "new_PPO_updates": 0,
+  "new_72_case_evaluations": 0,
+  "physical_baseline": {
+    "clean": 64,
+    "total": 72,
+    "protected_successes": 64,
+    "unresolved_failures": 8
+  },
+  "physics_launch_ready": false,
+  "training_launch_ready": false,
+  "training_queue_created": false,
+  "automation_created": false,
+  "criteria_action_limits_unchanged": true,
+  "historical_rounding_metadata": "Copied protocol metadata does not renew any consumed one-time waiver; apply the original finite-encoding and currently authorized action gates at launch.",
+  "worker_check": {
+    "utc": "2026-11-08T12:26:14.402309+00:00",
+    "gpu": "0, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, NVIDIA GeForce RTX 4090, 0 %, 43, 17 MiB\n1, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, NVIDIA GeForce RTX 4070, 90 %, 58, 4895 MiB",
+    "gpu_processes": "1020621, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 4680 MiB",
+    "own_scientific_workers": [],
+    "disk_free_bytes": {
+      "/": 54574071808,
+      "/data": 6257946624
+    },
+    "GPU4070_untouched": true,
+    "recurring_automation_created": false,
+    "training_queue_created": false
+  },
+  "next_work": "Complete 100 sitting and 100 leaning valid demonstrations,20 per task per each of5 furniture objects. All200 static scenes are built and correspondence checked. No robot rollout is admitted yet. First construct and validate a complete ankle-stable/current-camera motion: the global conservative clearance envelope was mathematically audited but its endpoint solve rejected; this is not a physical collision or infeasibility proof. No retry/reuse of that rejected endpoint. A substantive finite-surface/contact construction must preserve original6mm clearance and all mechanical, runtime, float32 and45s total-resource gates, with original-input initialization and independent source audit. Stool/table hip-rim targets remain unselected. Then fresh200 resets/current-depth/full20s rollouts and final5s holds, record physical criteria and hip/upper-thigh support intent separately; complete corpus/imitation validation,4090-only PPO with weight-update proof,all72 repair/regression checks and video.4070 reserved;holdout closed;automation deleted."
+}

@@ -1,0 +1,19 @@
+{
+  "equation": "qd_axis=(omega_child-omega_parent) dot (R_parent*joint_local_axis). Matching end-of-control comparison and four substep phase means over final5s.",
+  "purpose": "Resolve whether .27rad/s ankle readings are consistent with native link velocity or aliasing, without substituting finite differences or relaxing quiet gate.",
+  "limits": "Within-control parent rotation approximated by end pose; disclose this. No dynamics or physical-success conclusion from arithmetic alone.",
+  "files": {
+    "/home/kadir/humanoid-sitting/experiments/rest_cycle_wide_camera_20261108_v1/audit_ankle_clock.py": "c4785903bb87cf50a75f61212825c42b9691b26f8b5a2093e140da7da0e65b51",
+    "/home/kadir/humanoid-sitting/outputs/rest_cycle_wide_camera_20261108_v1/sit_coffee_wide/trajectory.npz": "534a6761a3d48391e0e633d28dee1976a9097e015d46a737ebed75c778623fd2",
+    "/home/kadir/humanoid-sitting/outputs/rest_cycle_wide_camera_20261108_v1/sit_coffee_wide/substeps.npz": "49be3ce9416478539924783e713e403894ae9088ebdb34b4d246a05bea063ded",
+    "/home/kadir/humanoid-sitting/outputs/rest_cycle_wide_camera_20261108_v1/sit_coffee_wide/results.json": "358e3e02ef34d70dae534e255ca17b88cec7b05982c0b8c3b68ab53a8029d19a",
+    "/home/kadir/humanoid-sitting/runs/g1_kinematics_geometry_04/model.json": "fe29aa3c0b8da033c35b8abc1c40ae93b0706e8186f9163ad56d8e31c4d07690",
+    "/home/kadir/humanoid-sitting/sitting_task/src/humanoid_sitting/shared_frame.py": "daec7a1c769c68579cebfafe79d2063cb19660ca6e09ced705f460218f9fcf5c"
+  },
+  "CPU_wall_cap_s": 45,
+  "AS_GiB": 40,
+  "CPU_threads": 1,
+  "retries": 0,
+  "physics_steps": 0,
+  "independent_review_passed": true
+}

@@ -1,0 +1,26 @@
+{
+  "utc": "2026-11-09T02:35:50.928784+00:00",
+  "reason": "Fresh camera shows a real clipped corner. Two-line premise rejected, evidence preserved. Represent observed tabletop as convex hull eroded6mm and independently verify entire polygon lies inside allowed actual triangle union. No raycast replay, camera rerun, hidden extrapolation or threshold relaxation.",
+  "pose": "Accepted known_old/16 orientation, full2mmconvexpelviscap includingedgeclips. Boundingcircle centeredatcapboundingboxcenter contains entirecap. Erode nonconvex currentobservedcomponent withholes byradius+22mm; selectmostforward finiteboundaryvertexwithinoriginaltranslationbox; actualcap polygon mustbecontained andboundarydistance>=22mm. Original6mmcameraerosion alreadyapplied. No failedposeoroldplaninput.",
+  "foot_assumption": "Current full foot poses fixed; explicit choice for first safe cycle, no feet slide. Compare full23joint torque proxy and supportBW separately. No claim of fair electrical-energy baseline.",
+  "path": "Exact pelvis-envelope rolling until zero support load,12mmnormalretraction, balancedlift; reverse forapproach. Source-witness legIK plus exact fullwrench. Samefullmesh6mm/20mmpatch/10mmfootCoP/5%BWfeet/.03desired/.003increment/.1filter and fullphysicalcriteria. Scheduler nowusesoriginal.003ceiling ratherthanpreviousconservative.0025; no command limitincrease.",
+  "bounds": {
+    "total_each_process_s": 45,
+    "cores": 1,
+    "ASGiB": 40,
+    "placementLPvariables": 0,
+    "placementLPmaxiter": 0,
+    "placementLPtimelimit_s": 0,
+    "footIKmax_nfev": 60,
+    "loadroot_maxiter": 24,
+    "rollingevents": 100000,
+    "activeintervals": 64,
+    "controls_each_direction": 1000,
+    "scienceretries": 0,
+    "observedcomponents": 32,
+    "buffer_resolution": 32
+  },
+  "audit": "Full nonconvex actualcapcoverage and20mmboundarydistance atalllandingnodes; independentfullmesh6mm,virtualwork,feet10mm,filter/command/timing checks. Staticjointtorque\u00b2<standing isonlyefforthypothesis. Runtimepositiveloadobserver remains unvalidated.",
+  "actor_truth_input": false,
+  "superseded_unexecuted": "Two-variable placement LP was authored but never launched; replaced before construction by nonconvex observed-region circle erosion. No LP result exists."
+}

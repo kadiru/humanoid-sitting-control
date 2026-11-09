@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "reviewer": "Sole scientific owner; separate source/equation review, not a separate agent",
+  "classification": "Source association correction, not model or physical success",
+  "checks": [
+    "Existing expand returns startup-root points; associate transforms them to gravity frame exactly once. Its target uses observed triangulated height, not coarse projected centroid.",
+    "Refined normal and offset share gravity frame with target and camera; original2mm mask,50mm triangle continuity,22mm inset and exact ray membership remain.",
+    "No completed optimizer rerun: v1 failed before any mechanics or optimizer. V2 uses original measured input and same admitted reference only.",
+    "Every untouched source identical to v1. Existing finite-camera/equilibrium fixtures inherited by hash without replay.",
+    "No modified action bounds, collision margins, physical criteria, attempt budget or GPU use."
+  ],
+  "source_hashes": {
+    "analytic_model.py": "f075ae6a22d6105dfef1c5508983d210091e46a5625ad97d955b4d23b20a097c",
+    "audit_equilibrium.py": "49c3f4ac3caf6a34106f4b4e2860049d47ac2b9d9cc02a232548f94f7cf0dcab",
+    "audit_facet.py": "e3b67fd5c606b8aa0c62d11497573dcf027196bd9b3ebd50e62cc841ef4a87cb",
+    "audit_finite_camera.py": "8ce56019de8e97069d7406a02bc9851efb6597483b94aed4bb86cef5145884f3",
+    "audit_full_mesh.py": "03f3d47b158cb3b826a6d908e9b645816dac37d73bdeef1b04fe6ac4b9eca66f",
+    "camera_clearance.py": "0b933f8f75de946b7a2b0278e26b81341a14277c758de7881fabedb7d9176ec5",
+    "compact_camera.py": "1ef920b98c3b53af43cf0e69e9127b3a28c3c6a45c48aad40648d864cddf9933",
+    "contact_facet.py": "57a847e6461485a8ac85293114b0d4a75a847164a6cf577a7b47d790d09211fe",
+    "leg_geometry.py": "0303b55a2be2110f8ac023d241e99f898634abaed8b0f4552501bfddd3bbf011",
+    "observed_surface.py": "108b6ccf118cf45ca4dea20c3a633356cf0f6003d1993536de90bef85c7be458",
+    "paired_contact.py": "2a0c2772620d23b1c5ecab367dfac174c6c270ff55377b6f3b66db1ee742537d",
+    "readiness_graph.py": "29b6a78c83d2df597acc87196dbf9c1208eb7295656ba4f2b9283d23c61bf8b3",
+    "run.py": "daaf229cfa8de6a4c10244765c79fd03ffa75727c3d41462cc499ec3900e7604",
+    "seed.py": "e2089335650d2827bd23901ae5f8c882c407550335dd6d311499dbb7d72e4312",
+    "static_model.py": "82beb9b60676b0d9d57f14b4c9a6ea86dbcd3c9372e4903ccac42fb4188399a9",
+    "terminal_plan.py": "adfda66ed535e5c1eef6620f38be6d0bbce2ea56e06d0f526e1c1393b26a6da1",
+    "validate.py": "71d3d37cb954da644ec6b1776c650427d2eb80b51409ec0b5348335e7f15bbf7"
+  },
+  "requires_new_synthetic_fixture": false
+}

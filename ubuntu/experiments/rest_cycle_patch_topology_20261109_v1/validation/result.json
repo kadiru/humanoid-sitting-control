@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "frames": [
+    {
+      "tick": 0,
+      "passed": true,
+      "identical_sensor_mask": true,
+      "independent_mask_connected_components": 1,
+      "old_eligible_components": 4,
+      "new_eligible_components": 1,
+      "old_selected_area_m2": 0.008334418557934544,
+      "new_selected_area_m2": 0.03354651674347777,
+      "outside_allowed_triangles_m2": 0.0,
+      "frame_sha256": "78c4b36f0e7990b0f9c87cfe0404f171cf20165a048d6f10fb222206ced2c86c"
+    },
+    {
+      "tick": 50,
+      "passed": true,
+      "identical_sensor_mask": true,
+      "independent_mask_connected_components": 1,
+      "old_eligible_components": 3,
+      "new_eligible_components": 1,
+      "old_selected_area_m2": 0.01568023843608078,
+      "new_selected_area_m2": 0.03354582423957139,
+      "outside_allowed_triangles_m2": 0.0,
+      "frame_sha256": "e4a0c23104367a51bd6daeaa9b44347ab54574ad00390811e22b66f8138261e3"
+    }
+  ],
+  "tests_passed": 4,
+  "elapsed_seconds": 0.4272833499708213,
+  "new_physics_steps": 0,
+  "PPO_updates": 0,
+  "explanation": "Samepixelclassification; integerpixelunion avoids separatelyprojectedrun roundoff cracks. Originalnormal/plane/erosion/meshcriteria unchanged. Newpolygoncoverage checkedindependently."
+}

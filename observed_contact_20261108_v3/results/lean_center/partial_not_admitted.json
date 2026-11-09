@@ -1,0 +1,55 @@
+{
+  "seed": {
+    "source": "Original current encoders/static body hulls/current observed back plane only",
+    "pitch_rad": 0.38526074585326614,
+    "root_position": [
+      -0.13896818439433467,
+      0.0,
+      0.0
+    ],
+    "torso_pelvis_plane_separation_m": 0.0060100000000071485,
+    "reach_interval_m": [
+      -0.6,
+      0.007112118866755108
+    ],
+    "full_3D_foot_residual": 2.3996189818205108e-05,
+    "balance_certified": false,
+    "collision_certified": false,
+    "physical_success": false,
+    "endpoint_material_local": [
+      -0.054938774555921555,
+      0.0025237086229026318,
+      -0.1139453873038292
+    ],
+    "feature_selection": "Original analytic seed only; no failed candidate",
+    "readiness_initialization": "Exact maximum across ALL five constrained load levels, not only unloaded command",
+    "readiness_epigraph": 0.22652101728794247,
+    "initial_full_inequality_minimum": -2.7755575615628914e-17
+  },
+  "accepted_endpoint": false,
+  "optimizations": [
+    {
+      "stage": "load_transfer_endpoint",
+      "success": false,
+      "iterations": 60,
+      "equality": 2.237210416922153e-12,
+      "inequality": -2.3848407154358764e-06,
+      "message": "Iteration limit reached",
+      "foot_residual": 2.237210416922153e-12,
+      "gap_m": 1.1851630787873546e-14,
+      "camera_minimum_m": -4.256972408259174e-09,
+      "construction_clearance_minimum_m": -4.256972408259174e-09,
+      "objective": 0.9913291006650591,
+      "solver_status": 9,
+      "derivatives": "analytic full model, piecewise exact active camera row",
+      "negative_rows": [
+        {
+          "row": 4906,
+          "name": "load_0.2:readiness_negative:left_hip_pitch_joint",
+          "residual": -2.3848407154358764e-06
+        }
+      ]
+    }
+  ],
+  "state_evaluations": 1555
+}

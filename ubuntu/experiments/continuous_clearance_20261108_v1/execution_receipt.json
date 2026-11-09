@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "created_utc": "2026-11-08T12:31:11.650484+00:00",
+  "state": "CONSERVATIVE_ENVELOPE_VALIDATED_ENDPOINT_REJECTED",
+  "collection_receipt": "/Users/kadir/humanoid-sitting-control/furniture_200_20261108_v1/execution_receipt.json",
+  "endpoint": {
+    "stage": "load_transfer_endpoint",
+    "success": false,
+    "iterations": 1,
+    "equality": 2.2119437464662717e-05,
+    "inequality": -0.018095988098876553,
+    "message": "Inequality constraints incompatible",
+    "foot_residual": 2.2119437464662717e-05,
+    "gap_m": 0.0,
+    "camera_minimum_m": -9.756422642004381e-09,
+    "construction_clearance_minimum_m": -0.018095988098876553,
+    "objective": 1.936188896331887,
+    "solver_status": 4,
+    "derivatives": "analytic full model, piecewise exact active camera row"
+  },
+  "derivative_audit_passed": true,
+  "accepted_endpoint": false,
+  "physical_success": false,
+  "physics_steps": 0,
+  "PPO_updates": 0,
+  "restart_or_reuse_allowed": false,
+  "resources": {
+    "target": "lean_center",
+    "wall_seconds_including_interpreter_startup": 1.8219177770079114,
+    "timeout": false,
+    "returncode": 0,
+    "cpu_seconds": 1.820404,
+    "child_peak_rss_kib": 286328,
+    "new_physics_steps": 0
+  },
+  "interpretation": "Stronger conservative clearance bound rejected the candidate. This is neither a measured18mm penetration nor a proof the requested lean is impossible. Original camera rows alone do not certify the other required gates.",
+  "next_work": "Complete 100 sitting and 100 leaning valid demonstrations,20 per task per each of5 furniture objects. All200 static scenes are built and correspondence checked. No robot rollout is admitted yet. First construct and validate a complete ankle-stable/current-camera motion: the global conservative clearance envelope was mathematically audited but its endpoint solve rejected; this is not a physical collision or infeasibility proof. No retry/reuse of that rejected endpoint. A substantive finite-surface/contact construction must preserve original6mm clearance and all mechanical, runtime, float32 and45s total-resource gates, with original-input initialization and independent source audit. Stool/table hip-rim targets remain unselected. Then fresh200 resets/current-depth/full20s rollouts and final5s holds, record physical criteria and hip/upper-thigh support intent separately; complete corpus/imitation validation,4090-only PPO with weight-update proof,all72 repair/regression checks and video.4070 reserved;holdout closed;automation deleted."
+}
