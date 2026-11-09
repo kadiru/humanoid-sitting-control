@@ -1,0 +1,40 @@
+{
+  "utc": "2026-10-17T23:08:10.953188+00:00",
+  "scope": "One complete constrained phase-coordination formulation, zero physics.\n336failed at ankle-pitch bound when descent and pelvis orientation were tied.\nKeep330 foot path/lift/COM/endpoint and existing orientation range. Separate two\nnondecreasing phase variables (descent and orientation) while enforcing nominal\npeak knee and both foot poses. No extra angle or feedback authority.\n",
+  "case": 2,
+  "height_m": 0.024274582606774276,
+  "peak_knot": 55,
+  "peak_u": 0.8125,
+  "nominal_peak_knee_rad": 1.0280132412591372,
+  "original_landing_knee_rad": 0.9331056180263754,
+  "construction": "Retain330 records through nominal swing knee peak. Subsequent swing knots minimize squared departure of descent/orientation progress from330 subject to bothfeet+COM+nominalpeak-knee equalities and unchangedjointbounds. Descent>=max(previous,old); orientation>=previous, both<=1. The full approach maps both resulting progress values to1; finalapproach/load exact330. This is one constrained construction, not a pose/gain/arm/rate sweep.",
+  "maximum_complete_path_builds": 1,
+  "maximum_parameter_searches": 0,
+  "maximum_constraint_iterations_per_changed_swing_knot": 80,
+  "nominal_knee_constraint_rad": 1e-07,
+  "nominal_com_constraint_m": 1e-07,
+  "inputs": "Actual saved1s development q/IMU/geometry/command only; no runtime.",
+  "fixed_prior_parameters": [
+    0.13249248997109972,
+    0.4351349021283094,
+    -0.1883883483030849,
+    0.023619600000000004
+  ],
+  "fixed_endpoint": true,
+  "fixed_prior_swing_rotation_targets": true,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/build_low_seat_decoupled_phase_338.py": "57bdf15916977dd51c64f7c973e82a903ad6f1fe130fa68a948f2455c32e7766",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/clearance_lift_path_330/results.json": "495f70a6764e7c821bc8a1f2e0ad3819d45b3841b795bbd6153410aec39f3831",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/coordinated_landing_path_336/results.json": "b8a7e885b7b546720d1159531ec15921588914c41b93d0023f9c715eaa566fb5",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/coordinated_landing_audit_337/independent_audit.json": "678ac74831326a4ca6b27245f84c1fb943f6827385a863e7a69b5e51808c9d55",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_stance_screen_89/results.json": "3cc9f72110080a0f207c81b0f29e1c1eee60a9eff9e8323abc07a582f949cbf2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340",
+    "/data/humanoid-sitting-perception/crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json": "69e0920e2bec88a43b7a6dc41d0fc361500d060ef09e3e3a07bb04cdaf569584",
+    "/data/humanoid-sitting-perception/contact_effort_repair_01/plane_calibration.json": "6a6a0f078ced3d3510897e96670c26226dee25d495653a222cf1dd52e97a8009",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/trace.npz": "c380356202f31c64d5667f48bd2f8d13d3391c6f751dd19db2dc002101d020d2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/normal_landing3s_06/candidate/sensor_inputs.npz": "468d3637bc09c404b000b15f48bdbc1f2e8c6aacc23e51d966c2604801afb6d6"
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}
