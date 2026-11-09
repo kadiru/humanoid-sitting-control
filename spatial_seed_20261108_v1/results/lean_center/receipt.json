@@ -1,0 +1,10 @@
+{
+  "model_pass": false,
+  "error": "ValueError('ENDPOINT_FULL_MESH_REJECTED')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/spatial_seed_20261108_v1/validate.py\", line 103, in <module>\n    result=plan.solve();goal=plan.target.copy();marker=plan.marker.copy();write('plan.json',result)\n           ^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/spatial_seed_20261108_v1/terminal_plan.py\", line 167, in solve\n    if not mesh['passed']:raise ValueError('ENDPOINT_FULL_MESH_REJECTED')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: ENDPOINT_FULL_MESH_REJECTED\n",
+  "total_seconds": 2.5436385339999106,
+  "physics_launch_ready": false,
+  "physical_success": false,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}

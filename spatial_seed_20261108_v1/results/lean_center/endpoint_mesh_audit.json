@@ -1,0 +1,34 @@
+{
+  "passed": false,
+  "sampled_poses": 1,
+  "triangle_tests": 14,
+  "forbidden_or_early_clearance_intersections": [
+    {
+      "sample": 0,
+      "body": "left_hip_pitch_link",
+      "face": 84,
+      "phase": "landing"
+    },
+    {
+      "sample": 0,
+      "body": "right_hip_pitch_link",
+      "face": 84,
+      "phase": "landing"
+    },
+    {
+      "sample": 0,
+      "body": "right_hip_pitch_link",
+      "face": 85,
+      "phase": "landing"
+    }
+  ],
+  "forbidden_or_early_clearance_intersection_count": 3,
+  "expected_target_approaches": 1,
+  "clearance_buffer_m": 0.006,
+  "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+  "simulation_success": false,
+  "accelerator": "cKDTree exact AABB + signed halfspace rejection/interior; original clip on boundary",
+  "fast_exclusions": 8,
+  "fast_inside": 0,
+  "slow_clips": 6
+}

@@ -1,0 +1,120 @@
+{
+  "original_goal": [
+    -0.22924274301734418,
+    0.0024859406590637158,
+    -0.08861441304684801
+  ],
+  "camera_pixel": [
+    82,
+    63,
+    1
+  ],
+  "observed_vertices": [
+    [
+      -0.22295019232367916,
+      0.0027631337868485244,
+      -0.05572433250645638
+    ],
+    [
+      -0.23167012986637142,
+      0.003010166567096601,
+      -0.10130253969760047
+    ],
+    [
+      -0.2316717527556493,
+      -0.003094325247930551,
+      -0.10130500566306522
+    ]
+  ],
+  "observed_normal": [
+    0.9821860415133594,
+    -0.00018520741492492003,
+    -0.18791100434655528
+  ],
+  "observed_offset": 0.20850786331807272,
+  "ray_contact_point": [
+    -0.22924275353640258,
+    0.002485940828436622,
+    -0.0886144470146829
+  ],
+  "original_goal_signed_facet_distance_m": 3.948773696915708e-09,
+  "plane_vertex_residual_m": 2.7755575615628914e-17,
+  "triangle_edge_insets_m": [
+    0.0004554502235956696,
+    0.01291843136512022,
+    0.003918328374387499
+  ],
+  "edges": [
+    [
+      -0.0011822216894446875,
+      -0.999985813719545,
+      -0.005193718469123893,
+      0.0022101015403083878
+    ],
+    [
+      0.18791090755788886,
+      -0.0004467194610522152,
+      0.9821859759040004,
+      0.14303262287167182
+    ],
+    [
+      -0.023350529439925296,
+      0.9921284522928132,
+      -0.12302799244863807,
+      -0.014803041435724796
+    ]
+  ],
+  "actual_triangle_contact_required": true,
+  "original_camera_target_mask_unchanged": true,
+  "original_fitted_patch_inset_retained": true,
+  "physical_success": false,
+  "source": "Original standing-pelvis support goal ray in original current depth; exactly one facet, no alternate search",
+  "standing_goal": [
+    -0.20629113126906484,
+    3.192896956378732e-05,
+    0.0313530899579585
+  ],
+  "contact_selection": "Exposed material point of ORIGINAL current-input analytic seed projected to original observed fitted plane; no failed-state file read",
+  "seed_source": {
+    "source": "Original current encoders/static body hulls/current observed back plane only",
+    "pitch_rad": 0.38526067166334466,
+    "root_position": [
+      -0.13896818822951065,
+      0.0,
+      0.0
+    ],
+    "torso_pelvis_plane_separation_m": 0.0060100000000071485,
+    "reach_interval_m": [
+      -0.6,
+      0.0071121227617122855
+    ],
+    "full_3D_foot_residual": 2.0323521460794246e-16,
+    "balance_certified": false,
+    "collision_certified": false,
+    "physical_success": false,
+    "spatial_feet": [
+      {
+        "side": "left",
+        "updates": 2,
+        "residual_history": [
+          2.3689467492517943e-05,
+          2.177330538088995e-10,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "side": "right",
+        "updates": 2,
+        "residual_history": [
+          2.3996193263342255e-05,
+          2.236970608748834e-10,
+          2.0323521460794246e-16
+        ]
+      }
+    ],
+    "maximum_initialization_joint_correction_rad": 5.191875366028357e-05,
+    "root_and_contact_point_bitwise_unchanged": true,
+    "construction": "Original geometric seed followed by bounded bilateral6D foot closure; no terminal point read"
+  },
+  "standing_to_seed_contact_m": 0.12216791899850066
+}
