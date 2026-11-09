@@ -1,0 +1,69 @@
+{
+  "geometry": {
+    "passed": true,
+    "tests": {
+      "bilateral_feet_fixed": true,
+      "balance_in_foot_support": true,
+      "hover_clearance": true,
+      "contact_patch_observed_interior": true,
+      "command_margin_unchanged": true,
+      "initial_command_exact": true,
+      "time_for_original_hold": true
+    },
+    "max_foot_error": 0.000202838115541871,
+    "min_command_margin": 0.25999997307436695,
+    "min_patch_inset": 0.023604743559259095,
+    "com_range": [
+      -0.05027189158832738,
+      0.04514998984862813
+    ],
+    "earliest_settled_seconds": 13.71865560587422,
+    "missing_before_physics": [
+      "full observed-obstacle clearance",
+      "final landing/load controller",
+      "live quiet-state gate"
+    ],
+    "simulation_admitted": false,
+    "physical_success": false
+  },
+  "commands": {
+    "passed": true,
+    "tests": {
+      "discrete_filter_exact": true,
+      "original_rate_limit": true,
+      "desired_command_margin": true,
+      "normal_approach": true,
+      "feet_fixed": true,
+      "landing_command_rate": true,
+      "original_hold_time_reserved": true
+    },
+    "maximum_increment_rad": 0.002999970000000296,
+    "minimum_desired_margin_rad": 0.25999997307436695,
+    "normal_path_tangent_drift_m": 0.0002491235566810624,
+    "nominal_latest_settled_s": 12.700000000000001,
+    "final_model_gap_m": -0.002995861353453144,
+    "actual_quiet_gate_may_delay": true,
+    "missing_before_physics": [
+      "full collision clearance",
+      "live sensor controller and reset checks"
+    ],
+    "simulation_admitted": false,
+    "physical_success": false
+  },
+  "collision": {
+    "passed": true,
+    "sampled_poses": 189,
+    "triangle_tests": 392,
+    "forbidden_or_early_clearance_intersections": [],
+    "forbidden_or_early_clearance_intersection_count": 0,
+    "expected_target_approaches": 38,
+    "clearance_buffer_m": 0.006,
+    "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+    "simulation_success": false,
+    "accelerator": "cKDTree exact AABB + signed halfspace rejection/interior; original clip on boundary",
+    "fast_exclusions": 350,
+    "fast_inside": 0,
+    "slow_clips": 42
+  },
+  "seconds": 8.89099019599962
+}
