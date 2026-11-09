@@ -1,0 +1,372 @@
+{
+  "model_admitted": false,
+  "geometry_audit": {
+    "passed": true,
+    "tests": {
+      "bilateral_feet_fixed": true,
+      "balance_in_foot_support": true,
+      "hover_clearance": true,
+      "contact_patch_observed_interior": true,
+      "command_margin_unchanged": true,
+      "initial_command_exact": true,
+      "time_for_original_hold": true
+    },
+    "max_foot_error": 0.0002667454247918741,
+    "min_command_margin": 0.25999997307436695,
+    "min_patch_inset": 0.02616712709556758,
+    "com_range": [
+      0.03131120297810946,
+      0.045149964107713554
+    ],
+    "earliest_settled_seconds": 12.750915442728843,
+    "missing_before_physics": [
+      "full observed-obstacle clearance",
+      "final landing/load controller",
+      "live quiet-state gate"
+    ],
+    "simulation_admitted": false,
+    "physical_success": false
+  },
+  "command_audit": {
+    "passed": true,
+    "tests": {
+      "discrete_filter_exact": true,
+      "original_rate_limit": true,
+      "desired_command_margin": true,
+      "normal_approach": true,
+      "feet_fixed": true,
+      "landing_command_rate": true,
+      "original_hold_time_reserved": true
+    },
+    "maximum_increment_rad": 0.002999970000000296,
+    "minimum_desired_margin_rad": 0.25999997307436695,
+    "normal_path_tangent_drift_m": 9.653406956544835e-09,
+    "nominal_latest_settled_s": 11.879999999999999,
+    "final_model_gap_m": -0.002999999999622971,
+    "actual_quiet_gate_may_delay": true,
+    "missing_before_physics": [
+      "full collision clearance",
+      "live sensor controller and reset checks"
+    ],
+    "simulation_admitted": false,
+    "physical_success": false
+  },
+  "clearance_audit": {
+    "passed": false,
+    "sampled_poses": 189,
+    "triangle_tests": 4458,
+    "forbidden_or_early_clearance_intersections": [
+      {
+        "sample": 95,
+        "body": "left_hip_roll_link",
+        "face": 2808,
+        "phase": "approach"
+      },
+      {
+        "sample": 95,
+        "body": "left_hip_roll_link",
+        "face": 2809,
+        "phase": "approach"
+      },
+      {
+        "sample": 95,
+        "body": "left_hip_roll_link",
+        "face": 2810,
+        "phase": "approach"
+      },
+      {
+        "sample": 95,
+        "body": "left_hip_roll_link",
+        "face": 2811,
+        "phase": "approach"
+      },
+      {
+        "sample": 95,
+        "body": "left_hip_roll_link",
+        "face": 2812,
+        "phase": "approach"
+      },
+      {
+        "sample": 95,
+        "body": "right_hip_roll_link",
+        "face": 3080,
+        "phase": "approach"
+      },
+      {
+        "sample": 95,
+        "body": "right_hip_roll_link",
+        "face": 3081,
+        "phase": "approach"
+      },
+      {
+        "sample": 95,
+        "body": "right_hip_roll_link",
+        "face": 3082,
+        "phase": "approach"
+      },
+      {
+        "sample": 95,
+        "body": "right_hip_roll_link",
+        "face": 3083,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "left_hip_roll_link",
+        "face": 2806,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "left_hip_roll_link",
+        "face": 2807,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "left_hip_roll_link",
+        "face": 2808,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "left_hip_roll_link",
+        "face": 2809,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "left_hip_roll_link",
+        "face": 2810,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "left_hip_roll_link",
+        "face": 2811,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "left_hip_roll_link",
+        "face": 2812,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "left_hip_roll_link",
+        "face": 2813,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "right_hip_roll_link",
+        "face": 3078,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "right_hip_roll_link",
+        "face": 3079,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "right_hip_roll_link",
+        "face": 3080,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "right_hip_roll_link",
+        "face": 3081,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "right_hip_roll_link",
+        "face": 3082,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "right_hip_roll_link",
+        "face": 3083,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "right_hip_roll_link",
+        "face": 3084,
+        "phase": "approach"
+      },
+      {
+        "sample": 96,
+        "body": "right_hip_roll_link",
+        "face": 3085,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "left_hip_roll_link",
+        "face": 14,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "left_hip_roll_link",
+        "face": 25,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "left_hip_roll_link",
+        "face": 2806,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "left_hip_roll_link",
+        "face": 2807,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "left_hip_roll_link",
+        "face": 2808,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "left_hip_roll_link",
+        "face": 2809,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "left_hip_roll_link",
+        "face": 2810,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "left_hip_roll_link",
+        "face": 2811,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "left_hip_roll_link",
+        "face": 2812,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "left_hip_roll_link",
+        "face": 2813,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "right_hip_roll_link",
+        "face": 37,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "right_hip_roll_link",
+        "face": 66,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "right_hip_roll_link",
+        "face": 3078,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "right_hip_roll_link",
+        "face": 3079,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "right_hip_roll_link",
+        "face": 3080,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "right_hip_roll_link",
+        "face": 3081,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "right_hip_roll_link",
+        "face": 3082,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "right_hip_roll_link",
+        "face": 3083,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "right_hip_roll_link",
+        "face": 3084,
+        "phase": "approach"
+      },
+      {
+        "sample": 97,
+        "body": "right_hip_roll_link",
+        "face": 3085,
+        "phase": "approach"
+      },
+      {
+        "sample": 98,
+        "body": "left_hip_roll_link",
+        "face": 14,
+        "phase": "approach"
+      },
+      {
+        "sample": 98,
+        "body": "left_hip_roll_link",
+        "face": 25,
+        "phase": "approach"
+      },
+      {
+        "sample": 98,
+        "body": "left_hip_roll_link",
+        "face": 2806,
+        "phase": "approach"
+      },
+      {
+        "sample": 98,
+        "body": "left_hip_roll_link",
+        "face": 2807,
+        "phase": "approach"
+      },
+      {
+        "sample": 98,
+        "body": "left_hip_roll_link",
+        "face": 2808,
+        "phase": "approach"
+      }
+    ],
+    "forbidden_or_early_clearance_intersection_count": 2079,
+    "expected_target_approaches": 73,
+    "clearance_buffer_m": 0.006,
+    "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+    "simulation_success": false
+  },
+  "current_patch_binding": "/home/kadir/humanoid-sitting/experiments/rest_cycle_material_contact_20261108_v1/model_construction/input_binding.json",
+  "elapsed_seconds": 18.38212952800677,
+  "physical_success": false,
+  "complete_cycle": false,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}
