@@ -1,0 +1,10 @@
+{
+  "model_admitted": false,
+  "error": "TypeError(\"bad operand type for abs(): 'list'\")",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/furniture_saved_repair_20261107_v2/run_target.py\", line 64, in <module>\n    plan=SeatPlan(m,inertia,shapes,q,gravity,geometry,observed,previous,intent,reference=reference)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/furniture_saved_repair_20261107_v2/branch_plan.py\", line 33, in __init__\n    assert all(np.max(abs(j['p1']))==0 for j in js)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/furniture_saved_repair_20261107_v2/branch_plan.py\", line 33, in <genexpr>\n    assert all(np.max(abs(j['p1']))==0 for j in js)\n                      ^^^^^^^^^^^^\nTypeError: bad operand type for abs(): 'list'\n",
+  "seconds_inside_process": 1.2973443400114775,
+  "simulation_steps": 0,
+  "PPO_updates": 0,
+  "physical_success": false,
+  "physics_launch_ready": false
+}
