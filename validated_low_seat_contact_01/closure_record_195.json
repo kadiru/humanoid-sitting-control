@@ -1,0 +1,109 @@
+{
+  "utc": "2026-10-17T14:31:15.729546+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_active_physics_ticks": 15600,
+  "new_initial_settling_ticks": 600,
+  "new_indexed_warmup_ticks": 0,
+  "new_optimizer_updates": 0,
+  "new_full20s_trials": 0,
+  "new_diagnostic_prefixes": 24,
+  "new_shared5ms_steps": 2600,
+  "holdout_started": false,
+  "diagnostic": "substep_diagnostic_189",
+  "diagnostic_completed": true,
+  "original_runtime_exit_failed_after_saved_outputs": true,
+  "diagnostic_checks_passed": false,
+  "exact_prefix_replay": false,
+  "physical_admission_passed": false,
+  "internally_exact_raw_checks": 4016,
+  "frozen_sources_checked": 43,
+  "prior_recheck": {
+    "utc": "2026-10-17T14:31:15.729546+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "mismatches": [],
+        "passed": true
+      },
+      {
+        "manifest": "completed_probes_preservation_188.json",
+        "checked": 4139,
+        "mismatches": [],
+        "passed": true
+      },
+      {
+        "manifest": "supplemental_preservation_188.json",
+        "checked": 3,
+        "mismatches": [],
+        "passed": true
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_195.json",
+  "protected_completed_files": 4288,
+  "manifest_sha256": "02b6a36dbb87ef0af237517df9469401c282359348a1402e17063aa7f428b4da",
+  "physical_workers_running": false,
+  "model_workers_running": false,
+  "audit_workers_running": false,
+  "report": "progress_report_194",
+  "video": "all_attempts_video_192/all_attempts.mp4",
+  "video_summary": {
+    "full_trials": 792,
+    "successes": 461,
+    "failures": 331,
+    "recorded_prefixes": 96,
+    "aborted_prefixes_disclosed": 72,
+    "event_frames_checked": 544,
+    "source_runs": 37
+  },
+  "local_review": {
+    "utc": "2026-10-17T14:30:52.636540+00:00",
+    "local_hashes_verified": true,
+    "manifest_counts": {
+      "progress_report_194": 17,
+      "substep_audit_v2_190": 1,
+      "substep_diagnosis_v3_191": 3,
+      "all_attempts_video_192": 3,
+      "all_attempts_video_audit_193": 7,
+      "substep_shutdown_recovery_189": 3,
+      "substep_audit_recovery_190": 3,
+      "substep_diagnosis_recovery_191": 6
+    },
+    "total_hash_entries": 43,
+    "browser_visually_inspected": true,
+    "browser_url": "http://127.0.0.1:8807/progress_report_194/findings.html",
+    "plots_visually_inspected": [
+      "substep_velocity.png",
+      "hover_feedback.png"
+    ],
+    "video_frames_visually_inspected": true,
+    "video_frames": [
+      "new_prefix189.png",
+      "known_success.png",
+      "browser_intro"
+    ],
+    "embedded_video_loaded": true,
+    "tables_checked": [
+      "previous178_geometry_before_events",
+      "substep_velocity",
+      "hover_feedback",
+      "effort_limitation_and_preserved178_pairs",
+      "all24_previous178_outcomes"
+    ],
+    "video_current": true,
+    "video_duration_s": 58.4,
+    "video_full_trials": 792,
+    "video_recorded_prefixes": 96,
+    "video_aborted_case_attempts": 72,
+    "new_full20s_trials": 0,
+    "new_recorded_prefixes": 24,
+    "exact_diagnostic_prefix_replay": false,
+    "physical_admission": false,
+    "task_complete": false
+  },
+  "handoff_sha256": "95747995302271f511fa8cb261ad5348b7029b05cdec01463c0ed07f2ff041e3",
+  "next": "# Substep diagnosis189 \u2014 global replay failed; repair remains unfinished\n\nContinue the user's authorized low-seat slipping/housing repair, preserve ALL64 current clean successes, then the small two-seed PPO stability/all-joint-effort comparison in THIS chat. Maintain the sub-minute video of ALL attempts, success and failure. Work directly Mac SSH kfuUbuntu, project /home/kadir/humanoid-sitting; never another coding agent. Python is /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python. Read docs/LOW_SEAT_CONTACT_PROTOCOL.md, docs/LOW_SEAT_CONTACT_STATUS.md, study status.json and closure_record_195.json. Check actual workers before any launch. All189\u2013194 work is complete; do not repeat diagnostic189 or completed audits/rejected candidates. No new full20s repair,72-case retention, optimizer, PPO, fresh holdout or promotion. Stay quiet during ordinary progress; notify meaningful failure/completion or required input.\n\nBest verified physical controller remains current_retention_09:64/72 clean,70 stable,8 slipping,2 housing-contact cases. All64 successes remain protected. Latest full20s probe178 remains rejected:18 stable,14 clean,6 slipping,2 hip-housing/physical-failure cases,0 illegal-patch,16 conservative warnings. Four selected rows0/1/6/7 hover without legal seated support; absence of slip is NOT repair. All8 targets remain unresolved.\n\nNEW diagnostic189 completed one13s prefix on GPU1/24 environments using unchanged178 controller/physics. It added recording after scene.update at every5ms from8\u201313s:1001 states,15600 active20ms environment ticks plus600 initial settling separately,0 indexed warmup/complete20s episodes/optimizer. No saved observations were explicitly fed to control. HOWEVER its global exact replay FAILED and remains failed. First torque telemetry difference8.1s; first unselected q/body/command/reference/geometry differences10.8s. Max body component0.595286mm, q0.001212001rad;3 slip-label and2 physical-failure-label samples differ. Actual414 global inputs also differ. Selected0/1/6/7 sampled q/body/command/reference/geometry stayed EXACT, but their torque telemetry did NOT. No equality tolerance was relaxed.\n\nIndependent substep_audit_v2_190 reports diagnostic_checks_passed=false, exact_prefix_replay=false, physical_admission=false. Starts, every substep-to-own-trace q/body/command/torque sample,4016 available raw q/qd/gravity/gyro comparisons,14 fixed fingers, frozen parent inference and43 source hashes passed their checks. These internal checks do not override the global failure. Source/data: run_low_seat_substep_diagnostic_189.py, substep_diagnostic_189, substep_revision_189.json. Original runtime exit failed AFTER all13s recordings and environment outputs were saved: shutdown attempted to restore a scene callback after env.close deleted the scene. Original source/log and failed exit are preserved in substep_shutdown_recovery_189; physics was NOT rerun. Prelaunch process-scan self-match stopped before any simulation, documented in substep_launch_recovery_189.json.\n\nNew diagnosis substep_diagnosis_v3_191 covers all24 cases/all37 joints. Selected ankle-roll qd medians11\u201313s are0.213\u20130.379rad/s, with ZERO sign changes in401 samples/case, while |delta q/5ms| median is about0.00050\u20130.00059rad/s and q range0.42\u20130.55mrad. Integrated raw qd is0.426\u20130.759rad over2s, unlike the tiny net q change. This is not a simple alternating oscillation at the saved5ms cadence. Solver-internal motion remains unobserved; it does NOT establish a bad sensor, actual continuous velocity, or permission to replace qd by finite differences/loosen settling guards.\n\nRecorded hover pitch bias persists: mean actual-target pitch about\u22121.35 to\u22121.37deg. Root-anchor term invalid for all100 selected samples/case; ankle-pitch feedback about\u22120.0136 to\u22120.0139rad versus0.06rad available, zero saturation. Existing160 balance has proportional pitch/gyro/conditional root terms, no integral. Finite proportional correction/static-model assumptions can coexist with bias, but no single cause or repaired controller has been established. Parent15s handoff lies outside this13s prefix. Preserve164's approach-balance improvement; diagnose bounded steady tracking/settling and parent composition before any new contact attempt. Other36/+20 and36.5/+17.5 still lack proven complete contact transitions.\n\nImportant telemetry finding: actual G1 actuator groups are ImplicitActuator. Installed applied_torque is approximate implicit-PD telemetry, NOT direct solver or hardware motor effort. Reconstructing it from the PREVIOUS5ms q/qd and current command gives max3.8147e\u22126Nm error; using end-of-step state gives4.81634Nm. Installed actuator_collection.py launches the implicit kernel with cached state arrays before refreshing public joint_pos/joint_vel. Extra recorder reads refresh those buffers earlier. This is a concrete mechanism consistent with first torque differences, not an isolated causal proof of every later divergence. No Isaac library/controller/reward/material/criteria source was modified. Keep every old result intact and qualify ALL torque claims with this limitation.\n\nNEXT: design a nonperturbing recorder that reads direct backend joint state into separate copies and proves it does not refresh/mutate the public buffers used by implicit-actuator telemetry. Inspect actual joint ordering and aliasing, not assumptions. Do not repeat189 unchanged, silently patch the installed simulator, substitute replayed/truth sensors, or treat existing failed global replay as passed. Only after a verified diagnostic should a bounded feedback/approach revision be designed/audited; no blind gain, rate, arm, lean or endpoint sweeps. A held pose/static force allocation does not guarantee dynamic support, common-foot-slip estimation or actual force realization.\n\nNarrow offline recoveries preserved: audit190 Boolean-array subtraction raised in its error summary; v2 uses float64 only for max-difference reporting, unchanged exact comparisons. Original diagnosis191 stopped on the REAL failed global-exact gate. V3 reports internally consistent data while explicitly retaining that failed gate; intermediate v2 NumPy-integer JSON serialization error/source/log preserved. No physics rerun, threshold or data change. See substep_audit_recovery_190 and substep_diagnosis_recovery_191.\n\nUpdated complete video all_attempts_video_192/all_attempts.mp4 is58.4s,3840x2160,15fps,H264:37 recorded sources,792 complete20s trials(461 clean/331 failure),96 diagnostic prefixes,72 aborted case attempts without saved motion disclosed as static panels. Independent193 checked complete inventory,labels,544 first-event samples,source hashes and duration. It is a recorded XYZW/body-COM schematic, not camera footage;0.1s poses bracket0.02s events. Historical repeated/rejected counts are not controller accuracy. Keep previous182 and all earlier videos unchanged; update coverage after future physical/PPO attempts and omit no failure.\n\nLocal current report /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_194/findings.html and video /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/all_attempts_video_192/all_attempts.mp4 are copied/hash-verified and visually inspected.17 original report hashes plus26 diagnostic/audit/recovery/video entries verified. Both new plots, new-prefix/success/intro frames, HTML geometry/velocity/feedback/effort/all24 tables and embedded video checked. URL http://127.0.0.1:8807/progress_report_194/findings.html. Closure195 records final preservation counts/worker status. This is interim diagnostic evidence, not repair/PPO/unseen completion.\n\nNo new full-duration effort comparison from diagnostic189. Preserved178 vs bestnormal3s on14 common clean complete trials:whole20 torque\u00b2+0.005358%,final10+0.01119%,final5+0.03041%; strict-both3 whole20+0.00414%,final5+0.03618%. These are tiny differences in unselected successes, not repair/savings. Verified09 vs61111 common-clean exact; vsselected62111@8 old20 common-clean whole20+4.38%,final5+25.45%. All effort is approximate implicit-PD telemetry; torque proxy, not energy/global optimum. Do not rewrite reward/results or infer savings from failed prefixes/hover fragments.\n\nGoverning constraints unchanged: removeALL8 failures AND retainALL64 in72 matched full20s development tests BEFORE smallPPO. Best09 uses frozen early61111@6\u20137s/resting59117@11/15s with guardednormal3s:height<38cm/slope>10.5 ORheight<41.5cm/slope>18. Old22stable20clean4slip2housing;transfer24/22/2/0;recent24/22/2/0. Four gains beyond60originalunion:37cm/+11.25 and36.5cm/+12.5 twice. Remaining36cm/+15,+20;37cm/+16.25;36.5cm/+17.5 twice.50 warnings22 strict-clean. Earlier studies/verified09 read-only. Isolating probes omit early61111; unchanged mild parent slips are not current-policy regressions.\n\nFresh24 holdout CLOSED through repair/normalization/training/selection:36.75/37.75/39.5/41.5cm\u00d7positive8.75/13.75/18.75deg twice,reserved before new simulation. Priorholdouts are development;negative slopes excluded. Runtime current measured sensors/reference/staticmodel only;truth reset/reward/evaluation. No relaxation of materials,all-tick slip,forbidden-body ORillegal-patch contact UNION,physicalfailure orstable-support. Rest<=40deg AND legal seat normal load>=.05BW plusoriginalconditions;55deg fall separate;38deg model reserve separate. Robotstatic/dynamic.5/.5,seat/floor.8/.6;legacy.6ratioNOTactualcapacity;.90 warningsseparate. Nofootdrag/teleport. Cooked50 offlinecollision is not live-shape/perceptionselfmask;frozenbridgeinertia unchanged,5\u20136mm raw/cooked discrepancy and unknownoffsets remain. Earlier changed-scene rendering divergence27 remains unwaived.\n\nOnly after physical prerequisite freezePPO63111/63117:8 complete-episode updates/seed,ONE uninterrupted optimizer/seed;24envs192000active+4200indexedwarmup=196200/seed392400total;1200settling separately. Document exact windows/control/reward/sensorinputs/accounting. Verify zero/global/indexed replay,actual channels,finite changed actor/critic,CPUoptimizer replay,fingers/bounds,smoke retention,freshmain=smokeINITIAL nottrainedsmoke. No extra training/post-freeze changes/promotion. Both fullfinals/devselection precede freshholdout. Exactmatchedstarts/full20s comparisons:physicalfailures/slip/contactunion/lost-gained first,warnings separate;effortONLY common complete clean both/strict subsets,all37 whole20/final10/final5 squared/absolute/time-mean instantaneous RMS,leg/upper contributions. Reference-assisted rigid-slab simulation/two seeds do not establish unassisted/real-robot/anywhere sitting or leaning;leaning has not broadened.\n\nAutomation remainsACTIVE. PauseONLY after actualrepair,newPPOcomparison andupdated complete subminute video delivered. Video/diagnostic completion is not task completion.\n"
+}
