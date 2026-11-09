@@ -1,0 +1,5 @@
+{
+  "utc": "2026-10-17T18:52:16.979922+00:00",
+  "reason": "Original audit finished all7600 checks then JSON serialization rejected NumPy int64 ranks. No completed audit artifact was saved.",
+  "correction": "V2 converts only reported min/max ranks to Python int. Same finite-difference calculations/tolerances/source checks. One offline recomputation required because original process exited before persisting its numerical arrays. No physics or source-result change."
+}
