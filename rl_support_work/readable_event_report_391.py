@@ -1,0 +1,21 @@
+from pathlib import Path
+import re, json, hashlib, datetime
+b=Path('/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_390')
+s=(b/'findings.html').read_text()
+replacements={
+'Preparation386v2':'Preparation 386v2','independent387':'independent 387','solve388':'solve 388','independent389':'independent 389','path388':'path 388','one20ms':'one 20 ms','Best09':'Best 09','remains64':'remains 64','clean,70':'clean, 70','stable,8':'stable, 8','and2 housing':'and 2 housing','All64':'All 64','all8':'all 8','All8':'All 8','complete115':'complete 115','retains379':'retains 379','exactly:93':'exactly: 93','completion,194':'completion, 194','touchdown,246':'touchdown, 246','the12mm':'the 12 mm','hover,101':'hover, 101','and16':'and 16','Total650':'Total 650','plus25':'plus 25','equals13.5s':'equals 13.5 s','The109':'The 109','unchanged20ms':'unchanged 20 ms','All786':'All 786','bounded30':'bounded 30','All20,284':'All 20,284','All21,600':'All 21,600','all21,600':'all 21,600','expression10':'expression 10','unchanged0.1':'unchanged 0.1','original5mm':'original 5 mm','and3mm':'and 3 mm','screens,140mm':'screens, 140 mm','step,24.2745826068mm':'step, 24.2745826068 mm','roll0.1125':'roll 0.1125','plus0.0375':'plus 0.0375','otherjoint0.15':'other joint 0.15','desiredmargin0.03,14':'desired margin 0.03, 14','fingers,164balance/207v2bias/175quiet/130load':'fingers, 164 balance / 207v2 bias / 175 quiet / 130 load','retain379\'s8':'retain 379\'s 8','support8ULP':'support 8 ULP','rate4ULP':'rate 4 ULP','target32ULP':'target 32 ULP','measured1s':'measured 1 s','concerns36cm':'concerns 36 cm','fixed675':'fixed 675','full20s':'full 20 s','original386':'original 386','errors0.00031724585937081135':'errors 0.00031724585937081135','and0.002692401010555433':'and 0.002692401010555433','Version2':'Version 2','unchanged2e−6':'unchanged 2e−6','Independent387':'Independent 387','all675':'all 675','All675':'All 675','and43,200':'and 43,200','Independent389':'Independent 389','rebuilds115':'rebuilds 115','with16':'with 16','5.6407394311e-09Nm':'5.6407394311e-09 Nm','All43,200':'All 43,200','All115':'All 115','Below−1e−8':'Below −1e−8','Latestphysical273':'Latest physical 273','rejected:20':'rejected: 20','stable,14':'stable, 14','clean,8':'clean, 8','slipping,2':'slipping, 2','failures,0':'failures, 0','and19':'and 19','Selected36':'Selected 36','all64':'all 64','across72':'across 72','PPO63111':'PPO 63111','video307:58.4s,4K,15fps,H264;44':'video 307: 58.4 s, 4K, 15 fps, H264; 44','sources,864':'sources, 864','complete20s':'complete 20 s','trials(503':'trials (503','failed),192':'failed), 192','prefixes,120':'prefixes, 120','disclosed,49':'disclosed, 49','Independent308':'Independent 308','checked1056':'checked 1056','and624':'and 624','firstevents':'first events','modelheadCOM':'model head COM','footage;0.1s':'footage; 0.1 s','bracket0.02s':'bracket 0.02 s'
+}
+parts=re.split(r'(<[^>]*>)',s)
+for i in range(0,len(parts),2):
+ for a,z in replacements.items():parts[i]=parts[i].replace(a,z)
+t=''.join(parts)
+assert re.sub(r'\s','',s)==re.sub(r'\s','',t)
+assert re.findall(r'<[^>]*>',s)==re.findall(r'<[^>]*>',t)
+num=r'(?<![\d.])[-−+]?\d+(?:\.\d+)?(?:[eE][-−+]?\d+)?'
+assert re.findall(num,s)==re.findall(num,t)
+assert not (b/'readable.html').exists()
+(b/'readable.html').write_text(t)
+proof={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'Whitespace inserted into text nodes only; original HTML, tags, attributes, numbers, plots and data unchanged.','initial_numeric_check': 'Initial formatting verification conflated comma-adjacent prose numbers with thousands groups and stopped before writing output. Corrected token check separates comma-delimited numbers; no source/data changes or calculation rerun.', 'canonical_nonwhitespace_exact':True,'tags_attributes_exact':True,'numeric_tokens_exact':True,'original_sha256':hashlib.sha256(s.encode()).hexdigest(),'readable_sha256':hashlib.sha256(t.encode()).hexdigest()}
+(b/'readable_review.json').write_text(json.dumps(proof,indent=2))
+(b/'readable_SHA256.json').write_text(json.dumps({n:hashlib.sha256((b/n).read_bytes()).hexdigest() for n in ['readable.html','readable_review.json']},indent=2))
+print(json.dumps(proof))
