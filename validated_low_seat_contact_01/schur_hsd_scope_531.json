@@ -1,0 +1,80 @@
+{
+  "utc": "2026-10-19T00:43:21.114830+00:00",
+  "scope": "Saved530/531 counts only; no matrix scaling, solver, factor or iteration replay.",
+  "source_systems": {
+    "primary": {
+      "source_rows": 408842,
+      "cone_rows": 408844,
+      "nonzeros": 2147927,
+      "added_bounds": 2,
+      "all_coefficients_exact_dyadic": true,
+      "source_copy_error": 0,
+      "529_support_proof_inherited_not_repeated": true
+    },
+    "witness": {
+      "source_rows": 577755,
+      "cone_rows": 577757,
+      "nonzeros": 2697206,
+      "added_bounds": 2,
+      "all_coefficients_exact_dyadic": true,
+      "source_copy_error": 0,
+      "529_support_proof_inherited_not_repeated": true
+    }
+  },
+  "new_small_LP_calls": 2,
+  "new_full_size_LP_calls": 0,
+  "new_full_size_local_factors": 0,
+  "small_test_statistics": {
+    "local_cholesky_blocks": 4,
+    "local_rhs_blocks": 1526,
+    "K_solves": 255,
+    "CG_iterations": 253,
+    "schur_matvecs": 253,
+    "DR_iterations": 253
+  },
+  "small_tests": {
+    "infeasible_start_primary": {
+      "exact_optimum": "2",
+      "independent_exact_primal_dual_certificate": true,
+      "iterations_checked": 131,
+      "maximum_resolvent_residual": 2.0920506204726484e-16,
+      "returned_numeric_witness_certified": true,
+      "final_metrics": {
+        "primal": 7.025535708748976e-10,
+        "dual": 1.9085544256114417e-10,
+        "gap": 3.4541480786742795e-11,
+        "objective_error": -5.064531016785168e-10,
+        "objective_lower_error_allowance": 1.4051071417497951e-09,
+        "objective_upper_error_allowance": 9.888186935924637e-10
+      },
+      "solver_repeated": false,
+      "status": 0,
+      "stop_reason": "numerical primal-dual witness"
+    },
+    "clearance_maximization": {
+      "exact_optimum": "-1",
+      "independent_exact_primal_dual_certificate": true,
+      "iterations_checked": 122,
+      "maximum_resolvent_residual": 2.2887833992611187e-16,
+      "returned_numeric_witness_certified": true,
+      "final_metrics": {
+        "primal": 8.613236790466772e-10,
+        "dual": 9.351186491812769e-11,
+        "gap": 7.678118141285495e-10,
+        "objective_error": -8.613236790466772e-10,
+        "objective_lower_error_allowance": 8.613236790466772e-10,
+        "objective_upper_error_allowance": 8.613236790466772e-10
+      },
+      "solver_repeated": false,
+      "status": 0,
+      "stop_reason": "numerical primal-dual witness"
+    }
+  },
+  "new_actual_model_path": false,
+  "latest_actual_model_construction": 484,
+  "latest_bounded_actual_path_execution": 524,
+  "last_sealed_closure": 527,
+  "full_size_followup": "Before any full robot LP, freeze a bounded-memory trace implementation/child40GiB+120s supervision and complete parent path/backsubstitution/actual-state auditor. Current source stores every small-fixture iteration vector; do not launch it on full matrices without bounded trace adaptation. Immediate nonfinite decoded-candidate terminal handling also needs an explicit guard in the full-size adapter; current successful tests do not exercise that branch.",
+  "task_complete": false,
+  "physical_admission": false
+}
