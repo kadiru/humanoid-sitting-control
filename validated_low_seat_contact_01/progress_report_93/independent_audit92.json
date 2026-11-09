@@ -1,0 +1,70 @@
+{
+  "utc": "2026-10-17T10:08:52.942440+00:00",
+  "passed": true,
+  "scope": "Independent all115-node corrected geometry/full-foot/stance/airborne-attitude/tilt/joint replay plus separate16joint finite-difference virtual work, nonnegative static force equilibrium, zero modeled seat loading before zero-gap contact, measured loads NOT established, exact recorded initial/fixed commands, command bounds and specific command-polyline timing. Reports separate geometry/command/time gates. No actual commands applied, no sensed support/dynamics/physical admission. A model pass is not permission to start PPO or holdout.",
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_path_screen_v2_91/results.json": "68ea540246c66bf3c01ae63ec23736b920c8ad0eb6166fd123c5e55b2f272cc0",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_contact_path_v2_92.py": "ba0101857ba98f0e41e93a45bc2d86a62a40e9590f96d7e13630c2b08ce73e04"
+  },
+  "geometry": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_path_screen_v2_91/results.json",
+      "parameters": [
+        0.2263667969846776,
+        0.43,
+        -0.14938544931267378
+      ],
+      "length_m": 0.13999999999993848,
+      "knots": 115,
+      "max_replay_error": 2.2820625136768493e-16,
+      "failed_knots": [
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "pose_schedule_metric_passed": false,
+      "min_clearance_mm": 3.7310788216351494,
+      "max_foot_position_error_mm": 5.489656110953612,
+      "max_foot_orientation_error_deg": 2.3708613241747627,
+      "nominal_pose_schedule_at_0_15_rad_s": 15.83223855871354,
+      "min_actual_swing_sole_height_m": 0.01575182341478476
+    }
+  ],
+  "command": {
+    "nodes": 115,
+    "max_virtual_work_error_Nm": 6.924793183316069e-09,
+    "max_equilibrium_residual": 6.661338147750939e-16,
+    "minimum_command_margin_rad": 0.029375169209396035,
+    "maximum_effort_utilization": 0.8118564418424512,
+    "force_allocation_failures": [],
+    "model_command_passed": false,
+    "specific_command_time_s": 15.453437175740369,
+    "command_schedule_passed": false,
+    "initial_command_exact": true,
+    "all_fixed_commands_exact": true
+  },
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false
+}
