@@ -1,0 +1,68 @@
+{
+  "utc": "2026-11-06T08:13:16.784981+00:00",
+  "state": "REFERENCE_COMPLETE_LOAD_ESTIMATOR_REJECTED_PPO_SAMPLING_FIXED_OFFLINE",
+  "model_placements": 2,
+  "model_command_and_collision_passes": 2,
+  "physical_demonstrations_added": 0,
+  "ppo_updates": 0,
+  "repairs_claimed": 0,
+  "model_audits": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/complete_path_results/receipt.json",
+  "motor_observer_saved_validation": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/lean_observer_check.json",
+  "source_finding": "Implicit PD effort telemetry and transmitted joint reaction are different quantities. The attempted static load reconstruction failed against current saved contacts. Existing rigid-body furniture fixtures balance their forces. Exact cause of the articulated discrepancy remains unproven.",
+  "original20_start_results": "Unchanged:1pass,14failed rollouts,5planning rejections. Closer model placements are new positions, not original-start repairs.",
+  "original72": "64clean protected;8unresolved; no new72 evaluation",
+  "GPU4070": "untouched, reserved forAIWorker",
+  "automation": "deleted; finite one-job owner only",
+  "worker_live": false,
+  "reference_run": {
+    "rollouts": 1,
+    "new_diverse_examples": 0,
+    "active_controls": 1000,
+    "warmup_controls": 25,
+    "physical_substeps": 4100,
+    "final_hold_s": 7.0,
+    "unchanged_physical_audit_passed": true,
+    "new_load_estimator_admitted": false,
+    "actor_received_new_sensor": false,
+    "measurement_audit": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/motor_axis_readout/motor_axis_audit.json",
+    "physical_audit": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/motor_axis_readout/independent_audit.json",
+    "owner_closure": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/measurement_owner/status.json"
+  },
+  "load_measurement": {
+    "mean_absolute_normal_error_N": 6.6362757,
+    "mean_absolute_shear_error_N": 25.3070268,
+    "mean_final5s_force_imbalance_N": [
+      -1.2015957,
+      -0.6307938,
+      28.2768804
+    ],
+    "result": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/motor_axis_readout/force_balance_audit.json",
+    "interpretation": "Measurement hypothesis failed; no force correction, score change or root-cause proof. Control-rate forces are final-substep reports, not full-interval averages. Prior rigid-body furniture fixtures satisfy force balance, whereas this articulated record disagrees with pose-derived momentum.",
+    "limitations": "Raw friction anchors and all-substep wrenches absent; no replay launched to recover them. TGS endpoint velocity and pose finite differences are distinct; prior306/310 evidence retained."
+  },
+  "measurement_semantics_correction": {
+    "actual_backend": "physx confirmed by saved launch log; ovphysx source read during diagnosis was not the active backend",
+    "incoming_joint_axis_component": "Total transmitted joint reaction projected onto axis; not independently isolated motor effort. Historical306 already establishes this distinction. Filenames are retained as evidence, not a motor-sensor certification.",
+    "source_claim": "No new sensor is admitted for actor control."
+  },
+  "policy_sampling_fix": {
+    "source": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/policy_repair/policy.py",
+    "validation": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/policy_repair/validation.json",
+    "all72_saved_cases": true,
+    "control_observations": 72000,
+    "two_seed_stochastic_checks": 144000,
+    "protected_action_difference_rad": 0.0,
+    "active_exploration_and_synthetic_updates_passed": true,
+    "physical_PPO_updates": 0,
+    "deployed": false,
+    "scope": "Masks exploration as well as residual mean on protected routes. It does not fix the9regressions on trainable new-skill branches."
+  },
+  "remaining_model_results": {
+    "additional_seat_constructions": 8,
+    "admitted": 0,
+    "rejections": "Pose, time or clearance checks. No physical trial for these rejected models.",
+    "receipt": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/remaining_seats_results/receipt.json"
+  },
+  "next_work": "Construct and validate a current-sensor contact/load trigger without treating implicit PD telemetry or incoming total joint reaction as isolated motor effort. No available replacement is admitted. Do not retry the stopped measurement, use its failure as a waiver, or launch seat_controller.py. Then obtain10sitting+10leaning clean full rollouts on5actual furniture objects, recovery/imitation validation,4090PPO,all72physical regression evaluation,and new video. Offline route-distribution fix is ready for integration only when these gates pass.",
+  "resource_receipt": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/final_resource_receipt.json"
+}

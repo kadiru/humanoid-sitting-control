@@ -1,0 +1,180 @@
+{
+  "backend": "physx (confirmed by saved launch log; not ovphysx)",
+  "mass_kg": 32.23892676584296,
+  "final5s_mean_total_force_N": [
+    -1.2015956573486328,
+    -0.6307938346862793,
+    344.540751953125
+  ],
+  "final5s_mean_net_force_N": [
+    -1.2015956573486328,
+    -0.6307938346862793,
+    28.27688038020572
+  ],
+  "final5s_COM_range_m": [
+    4.0709353072501675e-06,
+    1.1104971723043672e-05,
+    1.1350577394209083e-05
+  ],
+  "endpoint_window_duration_s": 4.78,
+  "reported_contact_impulse_Ns": [
+    -5.740037040710449,
+    -2.9967330741882323,
+    135.11618533652393
+  ],
+  "pose_momentum_change_Ns": [
+    3.543218223437334e-05,
+    -0.000188360145283179,
+    -1.6758403668079026e-05
+  ],
+  "impulse_discrepancy_Ns": [
+    -5.740072472892684,
+    -2.9965447140429493,
+    135.1162020949276
+  ],
+  "final5s_max_wrong_force_N": 0.0,
+  "final_channels": [
+    {
+      "body": "pelvis",
+      "normal_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "resultant_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inferred_friction_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    {
+      "body": "left_hip_yaw_link",
+      "normal_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "resultant_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inferred_friction_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    {
+      "body": "right_hip_yaw_link",
+      "normal_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "resultant_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inferred_friction_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    {
+      "body": "torso_link",
+      "normal_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "resultant_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inferred_friction_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 5
+    },
+    {
+      "body": "logo_link",
+      "normal_N": [
+        55.346742707003614,
+        1.2687877325852316e-06,
+        -10.588899859720414
+      ],
+      "resultant_N": [
+        60.202823638916016,
+        -3.660238742828369,
+        14.793161392211914
+      ],
+      "inferred_friction_N": [
+        4.856080931912402,
+        -3.660240011616102,
+        25.382061251932328
+      ],
+      "contact_count": 5
+    },
+    {
+      "body": "left_ankle_roll_link",
+      "normal_N": [
+        0.0009383725549099798,
+        -0.07880853694072765,
+        165.44203498739535
+      ],
+      "resultant_N": [
+        -29.310325622558594,
+        0.04338289797306061,
+        165.4422607421875
+      ],
+      "inferred_friction_N": [
+        -29.311263995113503,
+        0.12219143491378825,
+        0.00022575479215447558
+      ],
+      "contact_count": 4
+    },
+    {
+      "body": "right_ankle_roll_link",
+      "normal_N": [
+        0.0027281958935190254,
+        -0.08788609583156415,
+        164.2497362792783
+      ],
+      "resultant_N": [
+        -32.138633728027344,
+        2.7608439922332764,
+        164.2517852783203
+      ],
+      "inferred_friction_N": [
+        -32.14136192392086,
+        2.8487300880648405,
+        0.0020489990420173854
+      ],
+      "contact_count": 4
+    }
+  ],
+  "conclusion": "Saved contact reporting and pose momentum disagree. These data do not identify the faulty producer. Do not fit a force correction to this discrepancy.",
+  "limitations": [
+    "Pose finite differences are at control rate, not physics substeps.",
+    "Raw friction anchors and all-substep incoming wrenches were not saved.",
+    "No scoring correction or physical-success reclassification is justified."
+  ],
+  "simulator_steps": 0,
+  "ppo_updates": 0,
+  "trajectory_sha256": "00121f6ac76753d7ff69430a5488699e5f62f545dd2bbecf900c96c27b1a2efb"
+}

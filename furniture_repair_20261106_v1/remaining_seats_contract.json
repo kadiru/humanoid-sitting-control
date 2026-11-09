@@ -1,0 +1,9 @@
+{
+  "scope": "Apply the same completed camera-interior and arm-counterbalance construction once to eight remaining new closer seat starts, across the other four objects",
+  "target_premise": "Original flat-seat transfers failed on every seat and often met front edges or arms. The coffee-table construction now has an explicit rate-compatible normal landing and independent full-mesh clearance check. Test the same construction on the named other furniture geometries; do not assume a transferable success.",
+  "new_placement": "Original each standing start shifted50mm closer along its gravity-aligned forward/backward axis; analytically transformed saved camera inputs only. Fresh real camera/reset checks remain mandatory. Original20 outcomes remain unchanged.",
+  "equations_sources": "Identical frozen model_v4/seat_plan.py, complete_seat_path.py and independent audits. No algorithm or parameter search. Joint/action bounds, physical criteria,14.4s settling deadline and45s construction cap unchanged.",
+  "finite_accounting": {"new_model_inputs": 8, "attempts_per_input": 1, "maximum_approach_fits_per_input": 32, "maximum_landing_fits_per_input": 16, "maximum_evaluations_per_fit": 60, "maximum_total_seconds_per_input_including_audits": 45, "outer_timeout_seconds": 390, "simulation_steps": 0, "PPO_updates": 0, "GPU_use": false},
+  "success_failure": "Keep every infeasibility, timeout or clearance failure. Model admission requires both feet, balance, observed interior, all23 command margins, exact discrete filter/rate, original final-hold time and full-mesh sampled clearance. Model admission never counts as a successful demonstration.",
+  "no_automatic_launch": true
+}

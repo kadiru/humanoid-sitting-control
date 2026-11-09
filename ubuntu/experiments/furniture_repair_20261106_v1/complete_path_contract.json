@@ -1,0 +1,10 @@
+{
+  "scope": "Finish the two new closer placements with explicit discrete actions and mesh clearance; no original-start repair claimed",
+  "substantive_mechanism": "Replace a conservative .125rad/s arc-time estimate with an explicit .1-filter inverse and per20ms commands at or below the unchanged .003rad step. Integrate an analytic trapezoidal progress clock with1s acceleration/deceleration ramps. Every actual command and desired target is independently checked; neither physical action bound nor20s horizon changes.",
+  "landing": "Keep pelvis orientation and tangential position fixed while moving along the measured negative normal, capped6mm/s, at most15mm from12mm hover. Require25 CURRENT quiet samples before release in the live controller. Load feedback must use encoders, IMU and motor-torque wrench estimates, not physical contact truth. Maximum1s nominal settling is reserved after the slow search; any additional delay is a real trial failure if the5s hold cannot complete.",
+  "reuse": "Newly computed camera/whole-body geometric waypoints only, not an old solver direction. No approach optimization is rerun. Sixteen fresh bilateral-foot landing fits per placement; original tolerances and joint bounds unchanged.",
+  "independent_audits": ["Every discrete filter update, step and23 desired target margins", "Constant tangent and original normal speed", "Remaining time for original final hold", "Full robot convex collision shapes against actual furniture triangles at189 interpolated poses,6mm clearance before contact; actual contact scoring still unchanged"],
+  "resources": {"placements": 2, "maximum_seconds_per_placement_including_audits": 45, "outer_timeout_seconds": 120, "maximum_landing_fits": 32, "maximum_evaluations_per_fit": 60, "GPU": false, "simulation_steps": 0, "PPO_updates": 0, "retries": 0},
+  "remaining_before_physics": ["Live sensor-only controller implementation and independent source audit", "Fresh standing reset and actual camera observation", "4090 free and cooperative GPU lock held"],
+  "physical_success_claimed": false
+}

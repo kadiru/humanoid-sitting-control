@@ -1,0 +1,9 @@
+{
+  "purpose": "Fix a source-proven stochastic protection bug: residual_mask previously masked only mean, leaving Gaussian noise on every frozen route.",
+  "initialization": "Immutable zero-update prepared initial.pt from armchair_rest_ppo_20261105_v1. No trained checkpoint resumed.",
+  "equations": "a=prior+m*residual+m*epsilon, epsilon~N(0,.0075^2I); m is binary. Log density and actor objective only on active routes; protected log contribution zero. Critic retains both kinds of transition.",
+  "unchanged": "23joint action recurrence,0.003rad increments,0.1filter,0.03rad margins, robot physics, reward equations, success criteria, old checkpoint files.",
+  "validation": "Every one of1000saved control observations in each of72cases at two seeds; active exploration; exact masked likelihood; mixed actor/critic synthetic update; fully protected batch no actor step; old optimized checkpoint rejection.",
+  "resources": {"CPU_threads":1,"wall_seconds":240,"GPU_use":false,"simulation_steps":0,"real_PPO_updates":0,"validation_processes":1,"retries":0},
+  "admission": "Offline software correctness only; no scientific rollout or PPO is launched by this check. New demonstrations, recovery and reward-ranking checks remain necessary before training."
+}

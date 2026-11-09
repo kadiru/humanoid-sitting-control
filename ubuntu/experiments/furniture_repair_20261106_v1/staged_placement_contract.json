@@ -1,0 +1,12 @@
+{
+  "authorization": "Human requested many sitting/leaning examples with objects in different relative positions and angles; latest instruction do it all.",
+  "construction": "Closer standing placements coupled to the new arm-assisted, camera-interior approach",
+  "premise": "The previous two endpoints require1.83/1.92rad shoulder command travel. Even at unchanged0.15rad/s maximum, their sequential hover/contact/load construction cannot settle by14.4s. They are rejected, not re-timed beyond limits.",
+  "new_cases": ["sit_modern_coffee_table_01_center_closer", "sit_modern_coffee_table_01_angled_closer"],
+  "placement_rule": "Stand50mm closer along the gravity-aligned forward/backward axis. This offsets the50mm inward contact target without reducing the original20mm model patch inset or10mm physical scoring inset. Two new demonstration positions only; neither counts as repairing the original start.",
+  "input_transformation": "Saved camera cloud p becomes p+R_level^T*[.05,0,0]; plane offset becomes d-n dot translation; plane center shifts by translation. Encoder, gravity, previous command and physical furniture shape remain unchanged. All optimization starts cold from standing encoders.",
+  "audit": "Same independent foot, mass-COM, patch-inset, command-margin, initial-command and timing checks. Physics additionally requires actual fresh rear camera, actual collision clearance, warmup/reset and full20s independent scoring.",
+  "resources": {"cases": 2, "seconds_per_case_including_audit": 45, "outer_timeout_seconds": 120, "GPU": false, "simulation_steps": 0, "PPO_updates": 0, "retries": 0},
+  "thresholds_and_action_limits_changed": false,
+  "original20_results_changed": false
+}
