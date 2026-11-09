@@ -1,0 +1,110 @@
+{
+  "utc": "2026-10-18T09:30:11.287039+00:00",
+  "completed_work": "422\u2013426 complete once; candidate outcome retained, physical admission false",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_421.json",
+      "files": 7770,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_421.json",
+      "files": 3,
+      "passed": true
+    }
+  ],
+  "protected_files": 7896,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_427.json",
+  "manifest_sha256": "2cf166155b3d7d4aca38210482ebd3fb1af50bc671c48387fe614a42fe5e7704",
+  "original_report_manifests": 6,
+  "original_manifest_entries": 89,
+  "supplemental_readable_entries": 0,
+  "local_review": {
+    "utc": "2026-10-18T09:27:34.558340+00:00",
+    "visual_review_complete": true,
+    "original_manifests": 6,
+    "original_entries": 89,
+    "checks": [
+      {
+        "folder": "budget_preparation_422",
+        "entries": 4,
+        "passed": true
+      },
+      {
+        "folder": "budget_preparation_audit_423",
+        "entries": 1,
+        "passed": true
+      },
+      {
+        "folder": "budget_path_424",
+        "entries": 66,
+        "passed": true
+      },
+      {
+        "folder": "budget_path_audit_425",
+        "entries": 1,
+        "passed": true
+      },
+      {
+        "folder": "budget_report_draft_revision_426",
+        "entries": 2,
+        "passed": true
+      },
+      {
+        "folder": "progress_report_426",
+        "entries": 15,
+        "passed": true
+      }
+    ],
+    "report": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_426/findings.html",
+    "url": "http://127.0.0.1:8807/progress_report_426/findings.html",
+    "plots_inspected": [
+      "path_and_nodes.png",
+      "clock_and_window.png"
+    ],
+    "html_reviewed": [
+      "scope and fixed-waveform conditional timing bounds",
+      "five-node cap and six unvisited branches",
+      "fractional root is not executable",
+      "all exact gate values and signed construction residuals",
+      "independent423/425",
+      "all5node table/all34callback CSV",
+      "all28unit groups/all115knots/CSVlinks",
+      "physical and effort status",
+      "loaded unchanged58.4s video307"
+    ],
+    "csv_counts": {
+      "all_nodes.csv": 5,
+      "all_callbacks.csv": 34,
+      "all_115_knots.csv": 115,
+      "all_constraint_groups.csv": 28,
+      "all_clock_rows.csv": 43200,
+      "all_window_rows.csv": 7424
+    },
+    "original_artifacts_unchanged_after_execution": true,
+    "supplemental_readable_entries": 0,
+    "physics_ticks": 0,
+    "policy_optimizer_updates": 0,
+    "physical_admission": false
+  },
+  "workers": [],
+  "main_actual_exit": 0,
+  "independent_audit_actual_exit": 0,
+  "report_actual_exit": 0,
+  "physics_ticks": 0,
+  "actual_candidate_command_schedule_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "best_clean": "64/72",
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "main_ppo_started": false,
+  "fresh_holdout_started": false,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}
