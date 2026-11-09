@@ -1,0 +1,10 @@
+{
+  "scope": "Supplemental whitespace-only local readable HTML. Original HTML/plots/data retained.",
+  "initial_verification_exit_code": 1,
+  "initial_tool": "6004e5",
+  "failure": "Numeric token assertion conflated comma-delimited adjacent prose numbers as a grouped numeric token; stopped before output write.",
+  "corrected_verification_exit_code": 0,
+  "corrected_tool": "62d4c7",
+  "correction": "Numeric tokens parsed without treating prose commas as decimal/grouping separators. Canonical non-whitespace text, all tags/attributes, and numeric tokens identical.",
+  "scientific_or_audit_rerun": false
+}

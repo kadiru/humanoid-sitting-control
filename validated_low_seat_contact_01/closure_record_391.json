@@ -1,0 +1,147 @@
+{
+  "utc": "2026-10-18T05:15:58.596508+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_active_physics_ticks": 0,
+  "new_initial_settling_ticks": 0,
+  "new_optimizer_updates": 0,
+  "new_full20s_trials": 0,
+  "new_diagnostic_prefixes": 0,
+  "new_aborted_case_attempts": 0,
+  "new_command_schedule_ticks": 0,
+  "holdout_started": false,
+  "physical_admission_passed": false,
+  "best_verified_controller": "current_retention_09",
+  "best_development_clean": 64,
+  "latest_physical_candidate": "roll_feedback_probe_273",
+  "offline_optimizer": {
+    "success": false,
+    "message": "Iteration limit reached",
+    "iterations": 30,
+    "evaluations": 31,
+    "minimum_augmented_inequality": -9.94113446183692e-07,
+    "objective_time_s": 13.499999999999998,
+    "objective_slack": 0.0017745189048592983,
+    "max_equality_residual": 2.590459675470373e-10,
+    "minimum_inequality": -5.323267868506676e-05,
+    "numerical_constraints_passed": false,
+    "local_not_global": true,
+    "objective_is_dimensionless_slack": true,
+    "objective_time_s_is_legacy_duration_field": true,
+    "scaled_original_violation": 0.001775513018305482,
+    "scaled_hard_violation": 2.1716576742899135e-07,
+    "scaled_soft_violation": 0.001775513018305482,
+    "slack_is_not_admission_tolerance": true
+  },
+  "offline_geometry_passed": true,
+  "offline_static_commands_passed": false,
+  "actual_schedule_executed": false,
+  "hover_guard_exercised": false,
+  "observed_solver_process_exit": {
+    "utc": "2026-10-18T05:06:31.689134+00:00",
+    "observed_exit_code": 0,
+    "observed_tool_chunk": "230283",
+    "unified_exec_session": 28934,
+    "model_results_complete": true,
+    "source_hashes_intact": true,
+    "optimizer_success": false,
+    "optimizer_status": "Iteration limit reached",
+    "no_restart_or_extension": true,
+    "physical_admission": false
+  },
+  "postprocessing_exit_evidence": {
+    "utc": "2026-10-18T05:09:39.932708+00:00",
+    "audit_exit_code": 0,
+    "audit_tool": "5856ed",
+    "report_exit_code": 0,
+    "report_tool": "3415ac",
+    "all_postprocessing_complete": true,
+    "actual_candidate_schedule_executed": false,
+    "intermediate_geometry_executed": false,
+    "model_restarted": false,
+    "scientific_recovery": false,
+    "preflight_recovery": "event_clock_derivative_recovery_386",
+    "metadata_index_recovery": "event_constraint_index_recovery_391.json",
+    "physical_admission": false
+  },
+  "independent_audit_passed": true,
+  "prior_recheck": {
+    "utc": "2026-10-18T05:15:58.596508+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "event_evidence_preservation_388.json",
+        "checked": 7192,
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "manifest": "supplemental_preservation_385.json",
+        "checked": 3,
+        "passed": true,
+        "mismatches": []
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_391.json",
+  "protected_completed_files": 7246,
+  "manifest_sha256": "a44362b98a8760ee6a8119b6fcdc08c1c5189a8e2cb5204b1809f7e334a22f4c",
+  "physical_workers_running": false,
+  "model_workers_running": false,
+  "audit_workers_running": false,
+  "report": "progress_report_390/readable.html",
+  "video": "all_attempts_video_307/all_attempts.mp4",
+  "video_unchanged": true,
+  "original_folder_manifests": 8,
+  "original_manifest_entries": 30,
+  "local_review": {
+    "utc": "2026-10-18T05:15:01.614175+00:00",
+    "local_hashes_verified": true,
+    "original_manifests": 8,
+    "original_entries": 30,
+    "original_folders": [
+      "event_clock_preparation_386",
+      "event_clock_preparation_v2_386",
+      "event_clock_preparation_audit_387",
+      "event_clock_derivative_recovery_386",
+      "event_path_388",
+      "event_path_audit_389",
+      "progress_report_390",
+      "event_report_draft_revision_390"
+    ],
+    "visual_layout_inspected": true,
+    "browser_visually_inspected": true,
+    "embedded_video_loaded": true,
+    "video_current_and_unchanged": true,
+    "video_duration_seconds_from_preserved_metadata": 58.4,
+    "browser_url": "http://127.0.0.1:8807/progress_report_390/readable.html",
+    "local_report": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_390/readable.html",
+    "plots_inspected": [
+      "path_and_clock.png",
+      "clock_residuals.png"
+    ],
+    "reviewed": [
+      "scope and unchanged physical status",
+      "mandatory-event timing and ideal-clock limitations",
+      "all admission gates and exact signed failed values",
+      "independent audit and original386 derivative recovery",
+      "all26 constraint groups",
+      "full115-knot table and CSV links",
+      "physical/effort disclosure",
+      "loaded unchanged all-attempt video"
+    ],
+    "supplemental_manifests": [
+      "readable_SHA256.json"
+    ],
+    "supplemental_entries": 2,
+    "readability_recovery": "event_report_readability_391",
+    "no_scientific_rerun": true
+  },
+  "next": "# Event-aligned complete path388 rejected \u2014 original command/rate/headroom gates fail\n\nContinue the authorized low-seat repair in THIS chat directly Mac SSH kfuUbuntu,/home/kadir/humanoid-sitting; never another coding agent. Python /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python. Read docs protocol/status,study status.json,handoff_update_391.txt andclosure_record_391.json first. Check actualworkers. Completed386v2/387/388/389/390. Session28934 returned ACTUALexit0(tool230283); PID1278355 ended. active_run_388 andactive snapshots are HISTORY,notliveworkers. DoNOTrestart/extend388,rerun386/387/389,execute failed-path381/382/353,repeat379/373/367/361/351/344\u2013348/330\u2013340 orcompletedpassive303v2/physical273. User renewedcontinuationaftersubscriptionupgrade. Ordinaryprogressquiet;notifymeaningfulfailure/completion/input. No promotion. Inspectcompilation/ACTUALexitbeforedependencies.\n\nBestverified current_retention_09 remains64/72clean,70stable,8slipping,2housing. All64protected;all8unresolved. MainPPO63111/63117/freshholdoutUNSTARTED. Thisround addsZEROphysics,settling,full20sepisodes,diagnosticprefixes,abortedphysics,actualcandidatecommand-schedule ticks,policyoptimizerupdates orvideomotion. Latestphysical273rejected;selected36/+15cases0/1hoverwithZEROlegal load/hold/quietrelease. No-sliphoveringisNOTsitting. No new72retention.\n\nNEW388 finished2026-10-18T05:06:20.850344UTC afterONEbounded30-iteration/31-evaluation SLSQP run: successFALSE,Iterationlimitreached. No restart/extension/secondobjective. Finaldimensionlessslack.0017745189048592983,scaledunslackedconstructionviolation.001775513018305482,augmentedmin\u22129.94113446183692e\u22127. ProcessEXIT0isNOToptimizer/feasibilitysuccess; event_path_exit_388.json recordsobservedtool230283. Independent389ranONCEACTUALexit0(tool5856ed); report390actualexit recordedin event_postprocessing_390.json. Completedcallbacks are not candidates toselectbytimealone.\n\n388wasONECOMPLETE115-knot nominalgeometry/COM/force/time formulation for36cm/+20case2,ONEplacement. Original373/379 modeled330feet/frames/targets,140mmrearwardstep,24.2745826068mmlift,\u2212.35armreference,initialand104\u2013114endpoint/loadposes retained. Saved1sdevelopmentfixtureOFFLINEonly. It reused379FIVEmandatory-event budgetsEXACTLY:93shiftcompletion16,194swing/touchdown64,246hover99,101normaldescent104,16load114.650movement+25syntheticquiet=675ticks13.5s. NOallocationsweep. Interior geometricknotsfallBETWEENticks.109durationlogratios+786pose/COM/force=895freepathvariables+ONEslack. Softmax+unchanged20msresearchsegmentfloor fixeseach eventduration algebraically. Floatingresidualsretained; no skippedcontact/hoverevent orcorner-cuttingcertificate.\n\nALL20284original/supportrows checked;392exactconstantcontactrows andone timeidentity omittedoptimizerONLY. ALL21600idealclocktargetheadroomrows enterexplicitly (41884solverineq),ALL21600clockraterows retained/finalchecked. Originalcontinuous tightenedsegmentrates imply idealclockrates byindependentlyverifiedNONNEGATIVEintervaloverlap.675idealsteps include25syntheticholds,NOTactualCURRENTquietpermission. Rawtarget10*next\u22129*previous isreal-arithmeticinverse ofunchanged.1filter; exactfloat32forwardlatticenotexecuted. Original.03margin/rates/5mmsupport/3mmhousing and32ULPtarget/4ULPrate/8epscontact-phase/supportinwardresearchreserves retained. Fullclippedgeometry remainsFINALmandatoryscreen,notdifferentiatedNLP. Noactualforce/rawsettling/dynamicscertificate.\n\nFinal388sampledgeometryPASS115/115: housing3.731078343242842mm,CoP5.000953674305877mm,footposition.841101836mm/orientation.498543667deg,interiorswingsole13mm. NonnegativecornerfractionsPASS withZEROnegativeentries;inactivefootsEXACTzero. ButstaticcommandgateFAILS: minimumphysicalmargin.029979059398359847rad<.03;effortutilization.8159496397. Donotround. Originalphaseincrementspositive,min9.536743154070493e\u22127.11tightercontactfloorrowsfailwhileoriginalforcesnonnegative. Strictmodeledsupportisnotactualsupport/commonslip orcontinuous/livecollisioncertificate.\n\nOriginalrate/headroom/NLPgatesFAIL. event_saved_constraint_groups_391.jsonindexesSAVEDarraysonly:\n-54increasing/116decreasingsegmentrate negatives;worst\u22124.36983478350637e\u22126rad/segment at27rightknee and\u22124.369834761968044e\u22126at27lefthippitch.\n-Clockrate negatives169increasing/410decreasing;worst\u22124.3696187330714495e\u22126rad/tick at93leftknee(1.86s),decreasing\u22124.3696182838197026e\u22126at93righthippitch.\n-41lowerlinearheadroom negatives,worst\u22121.0551741401951493e\u22126rad*s at105leftankleroll;uppernone. Rawlinear desiredtargetdeficit5.275616466987598e\u22125rad.\n-49lowerCLOCKtargetnegatives,worst\u22125.2755841526863634e\u22125rad at660rightankleroll(13.2s);uppernone. Withresearchenvelopeworst\u22125.323267868506676e\u22125rad.\n-Hover.012000000003108524m,normalizedeq2.590459675470373e\u221210. Threeoriginalnormaldescentdeficits,max2.6059892091478964e\u221211mretained.\nDifferentunitsarenotonephysicalseverityranking. Continuousfloatingduration13.499999999999998s andfixed675tickidentity donotadmitfailedcommands,filter,settlingorphysics. Notexecutedtime/optimizedlowerbound. Noactualfloat32candidate schedule/intermediategeometry/currentruntime/secondplacement/parent/balance/bias/physicsfollowedfailedgates.\n\nIndependent389 PASSEDarithmeticONLY:115fullgeometry/commandnodes\u00d716jointfinitework;all41884solverrows+21600finalclockrates;COM/support,logratiodurations,clockinterpolation/overlap,initial/fixed/fingers/equilibrium andhard/slackpartition. Maxgeometry1.665334537e\u221216,work5.640739431e\u22129Nm,equilibrium1.259756188e\u221214,eqreplay2.312964635e\u221215,ineq/clock7.105427358e\u221215,local4.093947403e\u221216,kinematic8.559819520e\u221214,clockoverlap3.217912048e\u221216. Dependentplanningmargin3.720422445e\u22125rad. Naiveglobal.15pose13.943459528/command11.881773104somitguardedrequirements,NOTadmission. PhysicaladmissionFALSE.\n\nCompleted386v2preflightEXIT0: saved373reconstructionEXACT0,fullnewdirectional4.704965750335077e\u22129<UNCHANGED2e\u22126. Completed387independentEXIT0: all675clockstates/43200clockrows/20284originalrows/timeJacobian,clockerror7.105e\u221215,overlap2.159e\u221216,scalar-dot8.882e\u221216. NoFK/projectionrerunby387. These arearithmeticnotcandidatefloat32schedule.\nOriginal386failedpreflightEXIT1 BEFOREoptimizer: compressedminimum rate rows hadnondifferentiableties,centralderivativeerrors.00031724585937081135/.002692401010555433. Originalsource/log/fixturepreserved inevent_clock_preparation_386/event_clock_derivative_recovery_386. V2removesargminoptimizerderivatives;fullclocktargetrows andcontinuousrate/overlapproof,unchangedderivativebound andphysicalcriteria. ExactlyONEnew388optimizer followedpassed386v2/387. No completedmodel/physics repeated.\n\nMetadata-onlyindex391 firstfailed because per-knotcornerlists arevariablelength, beforewritingoutput. Correctedindex flattensONLYexistingentries; noentriesadded/zeroed, no model/auditrerun. event_constraint_index_recovery_391 recordsactualexit/tool/error. Report390originalunexecuteddraft preserved; prosewhitespaceaddedbeforenumericalvalues BEFOREfirstexecution, no calculationchange. Seeevent_report_draft_revision_390. No model/audit/physicsrecovery thisturn.\n\nNEXT: event-only alignment andexplicitidealclocktargetconstraints didNOTproducefeasiblecommands undertheseFIXEDeventbudgets. This doesNOTprove thosebudgets infeasible,identifyasolecause orglobalimpossibility. DoNOTrestart388,roundsignedresiduals,relaxforce/phase/limits,selectinfeasiblecallbacks,force-onlytuneitsfixedposes orrunanactualscheduleonit. Use SAVEDper-phase/per-jointconstraintlocalization andpreviousfeasiblegeometry to chooseONEjustified COMPLETE nominalformulation. Ifchangingeventtiming,researchtarget/supportgeometry, deriveitfromwholepathconstraints withanexplicitboundedformulation; doNOTblindlytryintegerallocations orpose/arm/gain/rates. Alloriginalgeometry/support/commands/reservedrates/actualforwardfilter/headroom/6mm/s/25CURRENTquiet/total13.5constraintsremain. Mandatorycontactandhover events cannotbeskipped. No particularnewpathcertified. Fullintermediategeometry/actualfilter/bothplacements/current-inputruntime/frozenparent/164balance/207v2bias/175/130precedeboundedfull20sphysics. No gain/Ki scaling,extra hip/pitchFEEDBACK,solver/materialchange,truth/FDqd/conditionalvelocitysubstitution,footdrag/teleport,endpoint-onlylaunch. MissinginternalstagesmustNOTrestartendlesspassiveinvestigations.\n\nEarlier379/373/367/361/351/344/330andallfailedoriginalsREADONLY.379fixedEVERYknotinteger retainedstrictstatic/geometrybutrate/headroomFAIL;373continuousnumerical13.5passedbuttinynegativeforces/noactualclock. No repeatedsearch. Othercentered22736/+20,37/+16.25,36.5/+17.5stillFAIL3mm;388onlyone36/+20steppedpath,notall8repair.303v2/259/246/198exactprefixes andfailed189unchanged;all37backendgains/armature/limitsmatchedconfigured,ankle160/4,.01,20Nm,friction0. IncomingwrenchTOTALtransmitted notmotoronly. PreparedCFM/rest/bias/frictionpatch/stagevelocity/impulse/effectivecountsnotrecoverablefromendpoints; nofit/defaultzero/solverchanges. PublicPhysX110.0notproveninstalled110.3.2.312conditionalvelocitynotquietpass,317/290idealmodelsfailedrawvelocity,255staticwrenchNOTfeedback. Authoredinertianotliveeffective,sixfinger1ULPdifferencesretained. Contact/bodytruth evaluationonly.\n\nLocal report /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_390/readable.html, URL http://127.0.0.1:8807/progress_report_390/readable.html. Closure391 recordslocalhash/visualreviewstatus andpreservationcounts. Offlineaudit/reportcompletionNOTrepair/PPO/unseencompletion.\n\nVideo307CURRENTunchanged /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/all_attempts_video_307/all_attempts.mp4:58.4s4K15fpsH264,44sources864full20s503clean361failed,192prefixes120abortednomotion49panels. Independent3081056records624firstevents. XYZWLINKposes+modelheadCOMschematic,NOTcamera;.1sposesbracket.02slabels. HistoricalrepeatsNOTaccuracy. No newmotion386\u2013390:doNOTrerenderunchangedvideo. Futurephysical/PPOupdateALLattemptcoverage,omitnofailure.\n\nNo neweffortresult. ApproximateimplicitPDtelemetryNOTactualsolver/hardwaremotor effort,energy/globaloptimum. No failedhover/prefix/fragmentsavings. Oldrewards/resultsunchanged. All64protected/all8unresolved. AutomationACTIVE;taskunfinished. PauseONLYafteractualrepair,newPPOcomparisonandupdatedcomplete subminutevideo delivered. Closure391 recordsfinalpreservation/workers.\n\nGoverning requirements remain unchanged:\n\n\nController/physical constraints remain exact. Quiet175 requires25 consecutive CURRENT samples with moving raw qd<=.05rad/s, pitch error<=.5deg, abs gyro-y<=.02rad/s, fresh geometry and130 guards before12mm hover release; normal descent<=.006m/s. No finite-difference velocity substitution, timer release or early unloading. Desired margin.03, filter.1, global rate.15rad/s and14fixed fingers remain. Existing269 roll gain.025s,cap.01 inside per-ankle abs(pitch)+abs(roll)<=.06;207 pitch priority; feedback.0375 plus nominal.1125 stays within.15. Frozen59117 acts at15s selected/11\u201315 elsewhere; early61111 is omitted only in isolating probes. Physical273's unselected full20s exactness FAILED (body.769615mm,q.000864387rad,command.000684381rad); no equality waiver. Static force/foot estimates do not establish realized forces or common-slip detection.\n\nBest09 uses frozen early61111 at6\u20137s and resting59117 at11/15s with guardednormal3s. Routing: measured height<38cm and slope>10.5deg OR height<41.5cm and slope>18deg. Old bank22stable/20clean/4slip/2housing; transfer24/22/2/0; recent24/22/2/0. Four gains beyond original60 union are37/+11.25 and36.5/+12.5, twice each. Eight remaining cases are36/+15,+20;37/+16.25;36.5/+17.5, twice each. Fifty warnings and22strict-clean cases. Isolating mild slips are not current-policy regressions.\n\nNever relax materials, all-tick slip, forbidden-body OR illegal-patch contact UNION, physical failure or stable support. Rest requires tilt<=40deg AND legal seat normal load>=.05BW plus original criteria;55deg fall and38deg model reserve are separate. Robot friction.5/.5, seat/floor.8/.6; legacy.6 ratio is NOT capacity and.90 warnings stay separate. Runtime uses current measured sensors/reference/static model only; truth is reset/reward/evaluation only. Cooked50 offline collision is not a live-shape certificate or perception self-mask; frozen bridge inertia, raw/cooked5\u20136mm difference and unknown offsets remain. Render-coupling27 exactness failure remains unwaived.\n\nPPO is gated on ALL8 failures removed AND ALL64 successes retained in72 matched full20s development trials. Then freeze63111/63117: eight complete-episode updates per seed, ONE uninterrupted optimizer per seed;24envs192,000active+4,200indexed warmup=196,200/seed,392,400total;1,200initial settling separate. Document exact controls/windows/rewards/sensor inputs/accounting. Verify zero/global/indexed replay, actual channels, finite changed actor/critic, CPU optimizer replay, fingers/bounds, smoke retention and fresh main exactly smoke INITIAL, not trained smoke weights. No extra/post-freeze training or promotion. Both full-budget finals and development selections precede ANY fresh holdout. Fresh24 stays CLOSED through repair/normalization/training/selection:36.75/37.75/39.5/41.5cm \u00d7positive8.75/13.75/18.75deg, twice. Prior holdouts are development; negative slopes excluded.\n\nCompare matched starts/full20s with physical failure/slip/contact union/clean/stable/lost-gained first, warnings separate. Effort ONLY common COMPLETE clean successes in BOTH controllers and strict subsets: all37joints whole20/final10/final5 squared/absolute/time-mean instantaneous RMS, leg/upper contributions. Applied torque is approximate implicit-PD telemetry, NOT solver/hardware effort, energy or global optimum. No failed-hover/prefix/fragment savings. No new effort result this round; old273 versus bestnormal14 common-clean whole20+0.0126472%,final10+0.0264487%,final5+0.0794278% are unselected-success differences, not repair/PPO gains. Reference-assisted simulation, two seeds and nearby rigid slabs do not establish unassisted/real-robot/anywhere sitting or leaning; leaning has not broadened.\n\nAutomation ACTIVE; task unfinished. Pause ONLY after actual repair, new PPO comparison and updated complete subminute video delivered. Offline path/audit/report completion is NOT task completion. Closure391 records preservation counts and worker state.\n\nLocal review completed: 8 original manifests/30 entries and 2 supplemental readable entries hashverified. Original plots, scope/gates/exact margins/26 groups/audits/all115 table/CSVs/physical-effort status and loaded58.4s video inspected. ReadableHTML adds whitespaceONLY; canonicalnonwhitespace, tags/attributes and numeric tokens EXACT, originalHTML/plots/data unchanged. Initial readability token check conflated comma-adjacent prose numbers and stopped before output; corrected verification only, no scientific/audit/physics rerun. Original formatting sources preserved in event_report_readability_391.\n"
+}
