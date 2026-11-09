@@ -1,0 +1,264 @@
+{
+  "utc": "2026-10-18T03:47:07.963082+00:00",
+  "scope": "Index saved final arrays only; no model/projection/optimizer/filter/audit rerun.",
+  "groups": [
+    {
+      "name": "local_command_effort_corner",
+      "start": 0,
+      "stop": 9120,
+      "raw_unit": "rad / Nm / BW fraction",
+      "scale_reason": "command reserve .03 rad; configured effort limits; whole body weight fraction",
+      "raw_minimum": -1.0555792351318871e-15,
+      "minimum_index": 7105,
+      "negative_rows": 15,
+      "below_numerical_minus1e8": 0
+    },
+    {
+      "name": "dependent_planning_bounds",
+      "start": 9120,
+      "stop": 12004,
+      "raw_unit": "m / rad",
+      "scale_reason": "same .1 m root and 1 rad joint nondimensionalization as357",
+      "raw_minimum": 9.74571621861764e-06,
+      "minimum_index": 11979,
+      "negative_rows": 0,
+      "below_numerical_minus1e8": 0
+    },
+    {
+      "name": "phase_order",
+      "start": 12004,
+      "stop": 12212,
+      "raw_unit": "fraction",
+      "scale_reason": "unit interval phase",
+      "raw_minimum": -8.576472865229334e-15,
+      "minimum_index": 12044,
+      "negative_rows": 18,
+      "below_numerical_minus1e8": 0
+    },
+    {
+      "name": "increasing_rate",
+      "start": 12212,
+      "stop": 14036,
+      "raw_unit": "rad per segment",
+      "scale_reason": "one 20 ms interval at actual reserved nominal rates",
+      "raw_minimum": -1.2384190894998426e-14,
+      "minimum_index": 12493,
+      "negative_rows": 30,
+      "below_numerical_minus1e8": 0
+    },
+    {
+      "name": "decreasing_rate",
+      "start": 14036,
+      "stop": 15860,
+      "raw_unit": "rad per segment",
+      "scale_reason": "one 20 ms interval at actual reserved nominal rates",
+      "raw_minimum": -5.8043847506183965e-15,
+      "minimum_index": 14036,
+      "negative_rows": 65,
+      "below_numerical_minus1e8": 0
+    },
+    {
+      "name": "upper_linear_headroom",
+      "start": 15860,
+      "stop": 17684,
+      "raw_unit": "rad s",
+      "scale_reason": "existing .03 rad desired reserve times one 20 ms interval",
+      "raw_minimum": 0.00039563575735440573,
+      "minimum_index": 16713,
+      "negative_rows": 0,
+      "below_numerical_minus1e8": 0
+    },
+    {
+      "name": "lower_linear_headroom",
+      "start": 17684,
+      "stop": 19508,
+      "raw_unit": "rad s",
+      "scale_reason": "existing .03 rad desired reserve times one 20 ms interval",
+      "raw_minimum": -1.6503081724534435e-16,
+      "minimum_index": 19439,
+      "negative_rows": 7,
+      "below_numerical_minus1e8": 0
+    },
+    {
+      "name": "prehover_gap",
+      "start": 19508,
+      "stop": 19606,
+      "raw_unit": "m",
+      "scale_reason": "existing 12 mm hover height",
+      "raw_minimum": 0.004595288729998908,
+      "minimum_index": 19605,
+      "negative_rows": 0,
+      "below_numerical_minus1e8": 0
+    },
+    {
+      "name": "posthover_gap",
+      "start": 19606,
+      "stop": 19611,
+      "raw_unit": "m",
+      "scale_reason": "existing 12 mm hover height",
+      "raw_minimum": 0.005652140594870698,
+      "minimum_index": 19606,
+      "negative_rows": 0,
+      "below_numerical_minus1e8": 0
+    },
+    {
+      "name": "nonnegative_gap",
+      "start": 19611,
+      "stop": 19715,
+      "raw_unit": "m",
+      "scale_reason": "existing 12 mm hover height",
+      "raw_minimum": 1.2863819015264113e-08,
+      "minimum_index": 19714,
+      "negative_rows": 0,
+      "below_numerical_minus1e8": 0
+    },
+    {
+      "name": "approach_gap_order",
+      "start": 19715,
+      "stop": 19754,
+      "raw_unit": "m",
+      "scale_reason": "existing 12 mm hover height",
+      "raw_minimum": 0.0002447777994033229,
+      "minimum_index": 19753,
+      "negative_rows": 0,
+      "below_numerical_minus1e8": 0
+    },
+    {
+      "name": "normal_descent",
+      "start": 19754,
+      "stop": 19759,
+      "raw_unit": "m",
+      "scale_reason": "one 20 ms interval at existing 6 mm/s descent cap",
+      "raw_minimum": -1.3556863964758747e-15,
+      "minimum_index": 19754,
+      "negative_rows": 2,
+      "below_numerical_minus1e8": 0
+    },
+    {
+      "name": "total_time",
+      "start": 19759,
+      "stop": 19760,
+      "raw_unit": "s",
+      "scale_reason": "existing total nominal transition budget",
+      "raw_minimum": 1.2434497875801753e-14,
+      "minimum_index": 19759,
+      "negative_rows": 0,
+      "below_numerical_minus1e8": 0
+    },
+    {
+      "name": "nominal_support_polygon",
+      "start": 19760,
+      "stop": 20284,
+      "raw_unit": "m",
+      "scale_reason": "original 5 mm support margin; scaling only",
+      "raw_minimum": -9.540979117872439e-18,
+      "minimum_index": 20042,
+      "negative_rows": 1,
+      "below_numerical_minus1e8": 0
+    }
+  ],
+  "negative_corner_rows": [
+    {
+      "knot": 45,
+      "corner": 2,
+      "value": -3.469446951953614e-17
+    },
+    {
+      "knot": 47,
+      "corner": 2,
+      "value": -3.937822290467352e-16
+    },
+    {
+      "knot": 49,
+      "corner": 2,
+      "value": -1.1275702593849246e-16
+    },
+    {
+      "knot": 56,
+      "corner": 2,
+      "value": -5.273559366969494e-16
+    },
+    {
+      "knot": 65,
+      "corner": 7,
+      "value": -3.5561831257524545e-16
+    },
+    {
+      "knot": 66,
+      "corner": 7,
+      "value": -2.706168622523819e-16
+    },
+    {
+      "knot": 67,
+      "corner": 2,
+      "value": -3.2959746043559335e-17
+    },
+    {
+      "knot": 67,
+      "corner": 5,
+      "value": -2.42861286636753e-16
+    },
+    {
+      "knot": 67,
+      "corner": 6,
+      "value": -5.377642775528102e-17
+    },
+    {
+      "knot": 85,
+      "corner": 4,
+      "value": -1.0174153186603974e-15
+    },
+    {
+      "knot": 89,
+      "corner": 1,
+      "value": -1.0555792351318871e-15
+    },
+    {
+      "knot": 95,
+      "corner": 2,
+      "value": -5.637851296924623e-17
+    },
+    {
+      "knot": 104,
+      "corner": 0,
+      "value": -5.243201706139899e-16
+    },
+    {
+      "knot": 104,
+      "corner": 6,
+      "value": -8.831910897066919e-16
+    },
+    {
+      "knot": 105,
+      "corner": 3,
+      "value": -5.286840843582441e-16
+    }
+  ],
+  "negative_corner_count": 15,
+  "negative_corner_knots": [
+    45,
+    47,
+    49,
+    56,
+    65,
+    66,
+    67,
+    85,
+    89,
+    95,
+    104,
+    105
+  ],
+  "max_COM_changes_m": [
+    0.025360517176465466,
+    0.008141661801064293
+  ],
+  "naive_per_segment_ceil_ticks": 731,
+  "naive_per_segment_ceil_s": 14.620000000000001,
+  "ceiling_is_not_executed_schedule": true,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/support_path_373/final.npz": "8878f2040e955392867f0c8b4ed619fb920b7451565e8197ecacf708a4571c37"
+  },
+  "physics_ticks": 0,
+  "physical_admission": false
+}
