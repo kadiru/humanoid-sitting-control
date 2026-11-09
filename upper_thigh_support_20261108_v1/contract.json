@@ -1,0 +1,82 @@
+{
+  "classification": "Bilateral proximal-thigh support construction",
+  "authorization": "2026-11-08 human: upper-thigh path,100sitting+100leaning on5objects,4090PPO,all72,unchanged limits and success",
+  "target": "Original measured armchair rear back center",
+  "inputs": "Original saved standing encoders/previouscommand/gravity/depth/calibration and frozen robot shapes/inertia only. Furniture triangle truth is independent audit only. No prior optimizer vector read.",
+  "associations": {
+    "legal_bodies": [
+      "left_hip_yaw_link",
+      "right_hip_yaw_link"
+    ],
+    "source": "rl_support_work/scripts/run_supported_postures.py CONTACTS",
+    "region": "Vertices whose projection along hip_yaw-body origin to knee joint origin is0..0.5 of segment length; all full-body vertices retain nonpenetration checks.",
+    "observation": "Each fixed thigh material projects onto an actual triangle in the same connected original observed target component; normal and offset separately associated. Missing/ground/disconnected candidates reject."
+  },
+  "mechanism": "Move support from a pelvis point obstructed by motor housings to two legal proximal-thigh material points. Equal scalar load split, independently measured normals; full23joint force/moment/torque allocation includes both points.",
+  "equations": {
+    "rest_forces": "F_i=0.5*W*load*N_i;load=[0,.05,.1,.15,.2]",
+    "ground": "G=[0,0,W]-sum F_i; M=COM cross[0,0,W]-sum(P_i cross F_i); original exact foot allocation from(G,M)",
+    "torques": "Full23 gravity minus both feet and both thigh fixed-material Jacobian-transpose forces",
+    "contact": "Separate N_i dot(root*FK_i*marker_i)+d_i=gap_i; all body vertices nonpenetrating.",
+    "clearance": "Per-face6mm expanded pelvis,torso,logo,both hip_pitch hulls clear both measured planes; independent full furniture-mesh gate retained.",
+    "objective": "Unchanged full23 squared-torque/readiness/jointdeviation/tangent/rootlowering cost; no electrical-energy claim.",
+    "time": "Original approach/25CURRENTquiet/normal5.5mm/s/load arc/1s settle;settled<14.4s. Both initial gaps connect to12mm hover; each body normal speed audited."
+  },
+  "initialization": {
+    "source": "Original inputs; no rejected vector",
+    "geometric": "Least bracketed rigid pitch exposing proximal thighs relative to5expanded guards,0..0.65rad. Bilateral positive-knee reach intervals then planar IK and one coupled16-equation root.",
+    "root": "12anchored-foot+2thighcontact+minimum expanded guard clearance10micrometers+one knee=.041. Unknown12legjoints,rootx,z,roll,pitch;rooty/yaw and other joints initially original. All23joints free in subsequent fullmodel.",
+    "limits": "12Newton updates,9fixed halvings/update;16x16 derivative; monotonic squared original residual decrease;residual<=1e-10. Original full joint/root bounds,knee>=.04; failure terminal. Initialization not executed control.",
+    "difference": "Former.001rad foot-roundoff patch is not reused as an iterative trust mechanism. This is a fresh coupled contact root within the same original full-model joint/root domain."
+  },
+  "gates": {
+    "action_increment_rad": 0.003,
+    "control_seconds": 0.02,
+    "filter": 0.1,
+    "desired_margin_rad": 0.03,
+    "fixed_fingers": 14,
+    "normal_speed_max": 0.006,
+    "quiet_samples": 25,
+    "physical_full_seconds": 20,
+    "final_good_seconds": 5,
+    "all_tick_slip_and_forbidden_contacts_unchanged": true,
+    "original72_protected": true,
+    "heldout": "closed",
+    "PPO_gate": "Validated full corpus/imitation/reset/rewards;actual weight updates and all72 required"
+  },
+  "audit": {
+    "source_review": "Separate source/equation review by sole owner",
+    "new_synthetic": "Two-contact force/moment allocation fixture",
+    "before_initialization": "Original standing fullmodel finite differences, both individual contact equations and independent four-contact virtual work.",
+    "return_checks": "Complete paired numerical system, original camera, fullmesh, both material drifts/normal speeds,fullfoot/path/float32/quiet/runtime/physical checks. Solver success insufficient."
+  },
+  "resources": {
+    "attempts": 1,
+    "targets": [
+      "lean_center"
+    ],
+    "parent_wall_cap_seconds": 45,
+    "address_space_GiB": 40,
+    "CPU_threads": 1,
+    "GPU_devices": [],
+    "minimum_free_disk_bytes": 20000000000,
+    "expected_output_MiB": 12,
+    "per_endpoint_or_edge_iterations": 60,
+    "ftol": 1e-09,
+    "total_cap_overrides_all": true,
+    "initialization_max_roots": 2,
+    "geometry_root_updates_per_root": 12,
+    "line_search_trials_per_update_max": 9,
+    "physics_steps": 0,
+    "autostart": false,
+    "retry": false,
+    "resume": false
+  },
+  "failure": "Record failure and halt. No parameter sweep,tolerance relaxation,rejected point reuse or automatic training.",
+  "limitations": [
+    "Model support is not physical support.",
+    "Equal split and seed branch restrict search; rejection is not global impossibility.",
+    "Nonlinear geometry/facet switches may defeat construction.",
+    "Count demos only after full20s physical audit."
+  ]
+}
