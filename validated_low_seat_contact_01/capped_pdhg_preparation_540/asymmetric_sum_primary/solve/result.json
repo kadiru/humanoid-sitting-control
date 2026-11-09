@@ -1,0 +1,26 @@
+{
+  "status": 0,
+  "success": true,
+  "candidate": true,
+  "message": "original-source numerical KKT witness",
+  "elapsed_s": 0.07221163308713585,
+  "elapsed_including_evidence_s": 0.0818870150251314,
+  "iterations": 635,
+  "weighted_proximal_evaluations": 635,
+  "scalar_reconstruction_attempts": 1,
+  "actual_lp_call": true,
+  "full_size_robot_LP": false,
+  "small_test": true,
+  "physical_admission": false,
+  "linear_system_solves": 0,
+  "gram_factorizations": 0,
+  "method": "capped-maximum-native-PDHG",
+  "trace_policy": "all SMALL transitions only when explicitly bounded; otherwise last transition plus scalar ledger",
+  "budget": {
+    "seconds_total": 45.0,
+    "maximum_PDHG_steps": 4096,
+    "maximum_LP_calls_per_invocation": 1,
+    "address_space_GiB": 40,
+    "parent_wall_seconds": 120
+  }
+}
