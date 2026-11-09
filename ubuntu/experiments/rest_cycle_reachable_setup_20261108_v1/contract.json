@@ -1,0 +1,42 @@
+{
+  "utc": "2026-11-08T22:38:43.617104+00:00",
+  "authorization": "Continue the reliable sitting/upright-lean cycle restart; 4090 only, unchanged limits and criteria.",
+  "premise": "The old target fixes backward reach; its balanced path fails the original timing. Choose an action-reachable balanced posture first and pre-place compatible furniture at its contact point.",
+  "initialization": "Original wide-camera standing snapshot q0 and independent reset command only. No rejected endpoint, direction, or path input.",
+  "equations": "Minimize slack r+1e-5||arm-arm_initial||^2 subject to six bilateral foot x,z,pitch equalities and pelvis plane gap=.012m; abs(q_active-previous_command)<=r<=1.4099859rad; COM_x in [sole_min+.04,sole_max-.04]; unchanged joint/root/arm boxes. Tangent is free. Translation=(endpoint tangent-original22mm-eroded target)*plane tangent, constrained to [0,.25]m. Same plane normal and height.",
+  "success_tests": [
+    "SLSQP success, equality <=2e-6 and inequality >=-1e-8",
+    "Gravity-compensated endpoint direct command schedule <=10.4s before full path construction; exact original rate/filter/margins",
+    "Fresh33node path and16node normal landing pass independent geometry, command, timing and mesh-clearance checks",
+    "Independent recomputation of endpoint margin, translation, direct schedule and fixed fingers"
+  ],
+  "return_policy": "One solve(max80 iterations), one witness, one path construction and audits; stop on first failed gate. No retry, retiming, relaxed thresholds or rejected-point reuse. Local convergence only; no global optimality claim.",
+  "resources": {
+    "total_CPU_wall_s": 45,
+    "address_space_GiB": 40,
+    "threads": 1,
+    "outputs_MiB": 20,
+    "physics_steps": 0,
+    "PPO_updates": 0,
+    "retries": 0
+  },
+  "source_snapshot": "/home/kadir/humanoid-sitting/outputs/rest_cycle_wide_camera_20261108_v1/sit_coffee_wide/frame_0.npz",
+  "geometry_scope": "Translated saved cloud is a prediction for a proposed physical setup. It cannot authorize motion. Actual fixture, physical collision mesh and scoring must be shifted consistently before reset; fresh camera observation and reset validation remain mandatory.",
+  "unchanged": [
+    ".003rad/control",
+    ".1filter",
+    ".03margin",
+    "14fixedfingers",
+    "25currentrawquietticks",
+    "20s/final5s",
+    "alltickslip/legal/failurecriteria",
+    "PhysX/gains/materials"
+  ],
+  "independent_audit": "audit_setup.py independently recomputes schedule and COM; existing geometry, exact-filter and sampled mesh auditors recompute full path. No second agent.",
+  "limitations": "Endpoint schedule is actuator-only. COM projection, sampled clearance and nominal timing are model evidence, not dynamic stability, current perception or a complete cycle.",
+  "review": {
+    "source_review_passed": true,
+    "source_compiles": true,
+    "launch_ready": false
+  }
+}
