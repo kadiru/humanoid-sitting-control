@@ -1,0 +1,108 @@
+{
+  "solve_diagnostic.py": {
+    "source": "solve_low_seat_balance_path_lp_598.py",
+    "source_sha256": "6b6ecc3e1b689040ae6c3c82d9efff42bbd7f28be0300a394f6ca3e4ff381477",
+    "replacements": [
+      {
+        "before": "from low_seat_balance_return_598 import exact_point,lift",
+        "after": "from low_seat_balance_return_598 import exact_point as original_exact_point,lift as original_lift\nfrom diagnostic_common import O, event\ndef exact_point(*args):\n event('exact_point_'+args[-1]+'_started',START)\n value=original_exact_point(*args)\n event('exact_point_'+args[-1]+'_finished',START)\n return value\ndef lift(*args):\n event('lift_started',START)\n value=original_lift(*args)\n event('lift_finished',START)\n return value",
+        "count": 1
+      },
+      {
+        "before": "if time.monotonic()-START>45:raise Terminal('45s total solver wall deadline')",
+        "after": "if time.monotonic()-START>=600:raise Terminal('600s total diagnostic wall deadline')",
+        "count": 1
+      },
+      {
+        "before": "full==D/'balance_path_598/major_00/primary'",
+        "after": "full==O/'primary'",
+        "count": 2
+      },
+      {
+        "before": "try:\n  check();A,a,E=",
+        "after": "try:\n  assert inherited and primary, 'Only the frozen initial primary is authorized'\n  event('input_checks_started',START)\n  check();A,a,E=",
+        "count": 1
+      },
+      {
+        "before": "check();configured_remaining=45-(time.monotonic()-START)",
+        "after": "check();configured_remaining=300-(time.monotonic()-START)\n  if configured_remaining<=0:raise Terminal('300s backend deadline exhausted during setup')\n  event('input_checks_finished',START)",
+        "count": 1
+      },
+      {
+        "before": "actual=True;bs=time.monotonic();r=linprog",
+        "after": "event('backend_started',START)\n  actual=True;bs=time.monotonic();r=linprog",
+        "count": 1
+      },
+      {
+        "before": "backend_elapsed=time.monotonic()-bs\n  nit=",
+        "after": "backend_elapsed=time.monotonic()-bs\n  event('backend_returned',START,backend_elapsed_s=backend_elapsed)\n  if time.monotonic()-START>=300:raise Terminal('backend returned at or after 300s deadline')\n  nit=",
+        "count": 1
+      },
+      {
+        "before": "checks={};res={};saved_duals={}",
+        "after": "event('numeric_checks_started',START)\n  checks={};res={};saved_duals={}",
+        "count": 1
+      },
+      {
+        "before": "dual,up,lo,ed=duals[name];checks[name]",
+        "after": "event('numeric_'+name+'_started',START)\n   dual,up,lo,ed=duals[name];checks[name]",
+        "count": 1
+      },
+      {
+        "before": "for tag,val in [('row',dual)",
+        "after": "event('numeric_'+name+'_finished',START)\n   for tag,val in [('row',dual)",
+        "count": 1
+      },
+      {
+        "before": "write(out/'result.json',result);print",
+        "after": "write(out/'result.json',result);event('numerical_result_written',START,candidate=result['candidate']);print",
+        "count": 1
+      }
+    ],
+    "derived_sha256": "2544d2b8973f78ffa8128d1f2b8c5b8fca61859c17fc6af6aac0e97e51831ac7"
+  },
+  "audit_solver.py": {
+    "source": "audit_low_seat_balance_path_solver_599.py",
+    "source_sha256": "2a2bf14d59d33171fe6d3258f8fd66ea36adb1f201b1c4b479010e4d9adf3f5b",
+    "replacements": [
+      {
+        "before": "from pathlib import Path",
+        "after": "from pathlib import Path\nfrom diagnostic_common import O",
+        "count": 1
+      },
+      {
+        "before": "0<opt['time_limit']<=45",
+        "after": "0<opt['time_limit']<=300",
+        "count": 1
+      },
+      {
+        "before": "Q==D/'balance_path_598/major_00/primary'",
+        "after": "Q==O/'primary'",
+        "count": 1
+      },
+      {
+        "before": "from audit_low_seat_balance_return_599 import audit_return",
+        "after": "from audit_return import audit_return",
+        "count": 1
+      },
+      {
+        "before": "r['elapsed_s']<=45",
+        "after": "r['elapsed_s']<600",
+        "count": 1
+      }
+    ],
+    "derived_sha256": "31dedb2ce27f8c571134f2237b7f1df063a279416dc289e882f418598e1dfb18"
+  },
+  "audit_return.py": {
+    "source": "audit_low_seat_balance_return_599.py",
+    "source_sha256": "179953d666d209e85a66eedfc49aa739ee6acf4b5bc1ab9a8b4ff59af8b8db13",
+    "replacements": [
+      {
+        "before": "progress=read(T/'result.json')['new_point_arithmetic_progress']",
+        "after": "# A hard-killed worker has no final progress dictionary. Independently verified\n # saved prefixes remain incomplete evidence, never acceptance certificates.\n if not (T/'result.json').exists():\n  return dict(exact_reduced=dict(passed=False,complete=False,balance594=bcheck,foot586=fcheck,auxiliary578=acheck),graph_lift=lift,independent_original_point_lift_verified=False,old_graph_or_encoding_proofs_repeated=False,incomplete_prefix_is_not_certificate=True,hard_terminated=True)\n progress=read(T/'result.json')['new_point_arithmetic_progress']",
+        "count": 1
+      }
+    ],
+    "derived_sha256": "5d19b2ce2ea8f931aa5d481078995c23376faf7a5ea475480c5b4d9abb914c51"
+  }
+}

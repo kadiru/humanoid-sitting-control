@@ -1,0 +1,54 @@
+"""Independent replay of offline single-step poses; no admission or simulation."""
+from pathlib import Path
+import json,hashlib,datetime
+import numpy as np
+from scipy.spatial import ConvexHull,QhullError
+from scipy.spatial.transform import Rotation
+from humanoid_sitting.shared_frame import BodyModel,apply,transform,level_rotation
+from low_seat_joint_path_controller_17 import measured
+from low_seat_terminal_contract_42 import terminal_posture_check
+from plan_seat_load_targets import clipped_vertices
+D=Path('/data/humanoid-sitting-perception/low_seat_contact_01');O=D/'single_step_audit_63'
+read=lambda p:json.loads(Path(p).read_text())
+def sha(p):
+ h=hashlib.sha256()
+ with Path(p).open('rb') as f:
+  for b in iter(lambda:f.read(4194304),b''):h.update(b)
+ return h.hexdigest()
+def main():
+ O.mkdir(exist_ok=False);source=D/'single_step_transition_screen_62/results.json';res=read(source)
+ for p,h in res['source_input_sha256'].items():assert sha(p)==h,p
+ m=BodyModel(D/'cooked_model_50/model.json');inertia=read(D.parent/'crouch_rest_bridge_01/balanced_standing10_01/static_inertial_model.json');cal=read(D.parent/'contact_effort_repair_01/plane_calibration.json');src=D/'normal_landing3s_06/candidate';tr=np.load(src/'trace.npz');ss=np.load(src/'sensor_inputs.npz')['sensors'];c=2;at=int(np.argmin(abs(tr['t']-1)));q0=tr['q'][at,c].astype(float);g=ss[0,10,c,339:342];assert np.array_equal(q0[:23].astype(np.float32),ss[0,10,c,270:293]);n,d,origin,h,slope,_,_=measured(m,q0,g,tr['geometry'][at,c],[tr['estimated_root_x'][at,c],0,0],cal);R0=level_rotation(g);f0=m.fk(q0);sides=['left','right'];feet0={s:(R0@f0[s+'_ankle_roll_link'][:3,3]+origin,R0@f0[s+'_ankle_roll_link'][:3,:3]) for s in sides};mass=np.array(inertia['mass']);SR=Rotation.from_euler('y',slope,degrees=True).as_matrix();center=np.array([-.4,0,h]);arms=[m.names.index(s+'_'+j+'_joint') for s in sides for j in ['shoulder_pitch','elbow_pitch']];legs=[m.names.index(s+'_'+j+'_joint') for s in sides for j in ['hip_pitch','hip_roll','hip_yaw','knee','ankle_pitch','ankle_roll']];fixed=[j for j in range(len(m.names)) if j not in arms+legs];out=[]
+ for row in res['rows']:
+  assert row['endpoint'] is not None
+  records=[('endpoint',row['endpoint'])]+[(f'knot_{i}',e) for i,e in enumerate(row['path'])];errors=[];failed=[];qpath=[]
+  for label,e in records:
+   q=np.array(e['q']);root=np.array(e['root']);T=transform(Rotation.from_quat(root[3:]).as_matrix(),root[:3]);fk=m.fk(q);assert np.isfinite(q).all() and np.isfinite(root).all();assert np.array_equal(q[fixed],q0[fixed]);f=e.get('approach_fraction',1.);assert np.max(abs(q[arms]-(q0[arms]-.35*f)))<1e-13
+   feet={s:(np.array(e['foot_targets'][s]['position']),np.array(e['foot_targets'][s]['rotation'])) for s in sides};assert np.array_equal(feet['left'][0],feet0['left'][0]) and np.array_equal(feet['left'][1],feet0['left'][1]);assert np.array_equal(feet['right'][1],feet0['right'][1])
+   C=np.average([apply(T@fk[b],v) for b,v in zip(inertia['body_names'],inertia['local_com'])],axis=0,weights=mass);foot={s:apply(T@fk[s+'_ankle_roll_link'],m.vertices[s+'_ankle_roll_link']) for s in sides};v=np.concatenate([foot[s] for s in e['stance']]);sole=v[v[:,2]<v[:,2].min()+.003]
+   try:H=ConvexHull(sole[:,:2]).equations;cop=float(np.min(-(H[:,:2]@C[:2]+H[:,2])));deg=False
+   except QhullError:cop=-1.;deg=True
+   pelvis=apply(T,m.vertices['pelvis']);dep=pelvis@n+d;patch=dep<dep.min()+.002;local=(pelvis-center)@SR;pm=float(min(.25-abs(local[patch,0]).max(),.45-abs(local[patch,1]).max()));clear=[];floor=[]
+   for b,v in m.vertices.items():
+    w=apply(T@fk[b],v)
+    if b not in ['left_ankle_roll_link','right_ankle_roll_link']:floor.append(float(w[:,2].min()))
+    if b in ['pelvis','left_hip_yaw_link','right_hip_yaw_link','torso_link','logo_link','left_ankle_roll_link','right_ankle_roll_link']:continue
+    v=(w-center)@SR;v[:,0]-=.4;v=clipped_vertices(v)
+    if len(v):clear.append((float(v[:,2].min()),b))
+   mi=min(clear) if clear else (1.,'none_over_finite_seat');pe=max(np.linalg.norm((T@fk[s+'_ankle_roll_link'])[:3,3]-feet[s][0]) for s in sides);re=max(np.linalg.norm(Rotation.from_matrix(feet[s][1].T@(T@fk[s+'_ankle_roll_link'])[:3,:3]).as_rotvec()) for s in sides);term=terminal_posture_check(root);vals=dict(clearance_m=mi[0],pelvis_gap_m=float(dep.min()),patch_margin_m=pm,foot_cop_margin_m=cop,floor_clearance_m=min(floor),foot_position_error_m=pe,foot_orientation_error_rad=re);err=max(abs(e[k]-v) for k,v in vals.items());assert err<1e-9;errors.append(err);assert e['nearest_body']==mi[1] and e['support_degenerate']==deg and e['terminal']==term
+   other=bool(pe<=.003 and re<=np.deg2rad(.5) and cop>=.005 and min(floor)>=.005 and term['passed'] and (dep.min()>=.02 or pm>=.015) and dep.min()>=-1e-8);passed=bool(other and mi[0]>=.003);assert e['other_model_passed']==other and e['model_pose_passed']==passed
+   if label!='endpoint':
+    i=int(label.split('_')[1]);qpath.append(q)
+    if not passed:failed.append(i)
+  path=row['path'];Q=np.array(qpath);arc=float(np.max(abs(np.diff(Q,axis=0)),axis=1).sum());assert abs(arc-row['pose_arc_rad'])<1e-10 and abs(arc/.15-row['pose_only_necessary_time_at_existing_cap_s'])<1e-9
+  assert row['failed_knots']==len(failed) and row['first_failed_knot']==(failed[0] if failed else None);assert row['whole_path_screen_passed']==bool(not failed and arc/.15<=13.5)
+  moves=[]
+  for a,b in zip(path,path[1:]):
+   p=np.array(a['foot_targets']['right']['position']);q=np.array(b['foot_targets']['right']['position'])
+   if np.linalg.norm((p-q)[:2])>1e-8:moves.append(min(p[2],q[2])-feet0['right'][0][2])
+  assert abs(min(moves)-row['minimum_swing_target_lift_during_horizontal_motion_m'])<1e-12 and min(moves)>.03
+  assert np.max(abs(np.array(path[-1]['foot_targets']['right']['position'])-(feet0['right'][0]+[-row['length_m'],0,0])))<1e-14
+  out.append(dict(length_m=row['length_m'],knots=len(path),max_replay_error=max(errors),failed_knots=failed,model_screen_passed=row['whole_path_screen_passed'],min_clearance_mm=row['min_clearance_m']*1000,max_foot_position_error_mm=row['max_foot_position_error_m']*1000,max_foot_orientation_error_deg=np.rad2deg(row['max_foot_orientation_error_rad']),nominal_pose_schedule_at_0_15_rad_s=arc/.15))
+ result=dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),passed=True,scope='Independent arithmetic replay of all210 trajectory knots and2endpoints, source hashes, frozen1s inputs, static support, cooked clearance, fixed stance foot/35mm swing targets, nominal pose preservation and schedule arithmetic. Both model-path failures remain failures. No simulator/optimizer. Pose-only arc/.15 is a nominal reference schedule metric, NOT a proven lower bound on actual PD command time or a dynamic/actuator certificate. Actual fixed-finger COMMAND and command-rate validation remain unperformed.',source_sha256={str(source):sha(source),str(Path(__file__).resolve()):sha(__file__)},rows=out,physics_ticks=0,optimizer_updates=0,physical_admission=False)
+ (O/'independent_audit.json').write_text(json.dumps(result,indent=2));(O/'SHA256.json').write_text(json.dumps({p.name:sha(p) for p in O.iterdir() if p.is_file()},indent=2));print(json.dumps(dict(passed=True,rows=out)))
+if __name__=='__main__':main()

@@ -1,0 +1,120 @@
+{
+  "rows": [
+    {
+      "final_heading_error_mean_deg": 2.2904009456072885,
+      "final_heading_error_max_deg": 5.819647682427366,
+      "run": "geometry_reference_v12_confirmation_pilot_01",
+      "trials": 144,
+      "successes": 144,
+      "success_percent": 100.0,
+      "falls_percent": 0.0,
+      "unintended_percent": 0.0,
+      "excessive_force_percent": 0.0,
+      "torque_violation_percent": 0.0,
+      "peak_force_N": 487.20855712890625,
+      "mean_trial_peak_force_N": 366.54244380527075,
+      "peak_descent_m_s": 0.25129562616348267,
+      "minimum_hold_s": 7.459993839263916,
+      "median_hold_s": 8.740010261535645,
+      "final_linear_speed_mean_m_s": 0.001342902542091906,
+      "final_angular_speed_mean_rad_s": 0.007699448615312576,
+      "residual_rms_rad": 0.012068597599864006
+    },
+    {
+      "final_heading_error_mean_deg": 2.366559956113207,
+      "final_heading_error_max_deg": 5.668413583855849,
+      "run": "geometry_reference_v12_confirmation_ppo_01",
+      "trials": 144,
+      "successes": 144,
+      "success_percent": 100.0,
+      "falls_percent": 0.0,
+      "unintended_percent": 0.0,
+      "excessive_force_percent": 0.0,
+      "torque_violation_percent": 0.0,
+      "peak_force_N": 482.9061584472656,
+      "mean_trial_peak_force_N": 358.1500704023573,
+      "peak_descent_m_s": 0.2105376124382019,
+      "minimum_hold_s": 6.779994487762451,
+      "median_hold_s": 8.680008888244629,
+      "final_linear_speed_mean_m_s": 0.0015468054916709661,
+      "final_angular_speed_mean_rad_s": 0.008617818355560303,
+      "residual_rms_rad": 0.009216311387717724
+    },
+    {
+      "final_heading_error_mean_deg": 2.3463546822766856,
+      "final_heading_error_max_deg": 5.456006777880155,
+      "run": "geometry_reference_v12_confirmation_scripted_01",
+      "trials": 144,
+      "successes": 144,
+      "success_percent": 100.0,
+      "falls_percent": 0.0,
+      "unintended_percent": 0.0,
+      "excessive_force_percent": 0.0,
+      "torque_violation_percent": 0.0,
+      "peak_force_N": 616.0780639648438,
+      "mean_trial_peak_force_N": 370.30315611097546,
+      "peak_descent_m_s": 0.18097670376300812,
+      "minimum_hold_s": 7.399993896484375,
+      "median_hold_s": 8.760010719299316,
+      "final_linear_speed_mean_m_s": 0.001759841339662671,
+      "final_angular_speed_mean_rad_s": 0.008596012368798256,
+      "residual_rms_rad": 0.0
+    }
+  ],
+  "paired": [
+    {
+      "reference": "geometry_reference_v12_confirmation_scripted_01",
+      "comparison": "geometry_reference_v12_confirmation_pilot_01",
+      "initial_conditions_bitwise_identical": true,
+      "success_gain_percentage_points": 0.0,
+      "wins": 0,
+      "losses": 0,
+      "geometry_block_bootstrap_95_percent_interval_pp": [
+        0.0,
+        0.0
+      ],
+      "mean_peak_force_difference_N": -3.7607123057047525,
+      "geometry_block_bootstrap_95_percent_force_difference_N": [
+        -9.261291000578138,
+        2.013724899291992
+      ]
+    },
+    {
+      "reference": "geometry_reference_v12_confirmation_scripted_01",
+      "comparison": "geometry_reference_v12_confirmation_ppo_01",
+      "initial_conditions_bitwise_identical": true,
+      "success_gain_percentage_points": 0.0,
+      "wins": 0,
+      "losses": 0,
+      "geometry_block_bootstrap_95_percent_interval_pp": [
+        0.0,
+        0.0
+      ],
+      "mean_peak_force_difference_N": -12.153085708618164,
+      "geometry_block_bootstrap_95_percent_force_difference_N": [
+        -22.14202420446608,
+        -2.6154672357771154
+      ]
+    },
+    {
+      "reference": "geometry_reference_v12_confirmation_ppo_01",
+      "comparison": "geometry_reference_v12_confirmation_pilot_01",
+      "initial_conditions_bitwise_identical": true,
+      "success_gain_percentage_points": 0.0,
+      "wins": 0,
+      "losses": 0,
+      "geometry_block_bootstrap_95_percent_interval_pp": [
+        0.0,
+        0.0
+      ],
+      "mean_peak_force_difference_N": 8.392373402913412,
+      "geometry_block_bootstrap_95_percent_force_difference_N": [
+        0.23581905894809316,
+        17.43398680157131
+      ]
+    }
+  ],
+  "safety_thresholds_unchanged": true,
+  "initial_conditions_bitwise_identical": true,
+  "bootstrap_unit": "furniture geometry, preserving the nine correlated initialization trials"
+}

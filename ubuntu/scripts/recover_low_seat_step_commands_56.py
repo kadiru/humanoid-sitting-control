@@ -1,0 +1,17 @@
+"""Offline command-only correction, preserving both failed paths and originals."""
+from pathlib import Path
+import json,hashlib,datetime
+import numpy as np
+D=Path('/data/humanoid-sitting-perception/low_seat_contact_01');O=D/'supported_step_commands_v3_56'
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def main():
+ O.mkdir(exist_ok=False);p=D/'supported_step_screen_v2_53/results.json';old=json.loads(p.read_text());data=json.loads(p.read_text());m=json.loads((D/'cooked_model_50/model.json').read_text());names=m['joint_names'];legs=[i for i,n in enumerate(names) if any(s in n for s in ['hip_','knee_','ankle_'])];other=[i for i in range(len(names)) if i not in legs];fingers=[i for i,n in enumerate(names) if any('_'+s+'_joint' in n for s in ['zero','one','two','three','four','five','six'])];assert len(legs)==12 and len(fingers)==14
+ tracep=D/'normal_landing3s_06/candidate/trace.npz';tr=np.load(tracep);start=tr['command'][int(np.argmin(abs(tr['t']-1.))),2].astype(float);assert np.all(start[fingers]==0)
+ errors=[]
+ for row,original in zip(data['rows'],old['rows']):
+  for n,o in zip(row['nodes'],original['nodes']):
+   c=np.array(n['command']);errors.append(float(abs(c[other]-start[other]).max()));c[other]=start[other];n['command']=c.tolist();assert np.array_equal(c[legs],np.array(o['command'])[legs]);assert all(n[k]==o[k] for k in n if k!='command')
+  cc=np.asarray([n['command'] for n in row['nodes']]);arc=float(np.sum(np.max(abs(np.diff(cc,axis=0)),axis=1)));assert abs(arc-row['necessary_command_arc_rad'])<1e-12;row['gate']['frozen_nonleg_commands']=bool(np.array_equal(cc[:,other],np.broadcast_to(start[other],cc[:,other].shape)));row['gate']['fixed_14_fingers']=bool(np.all(cc[:,fingers]==0));row['all_prerequisite_gates_passed']=bool(all(row['gate'].values()))
+ data['utc']=datetime.datetime.now(datetime.timezone.utc).isoformat();data['scope']+=' Command-only correction56: old53 used measured non-leg joint positions as commands; this erroneously dropped existing upper-body preload and fixed-finger targets. Derived copy uses the recorded initial non-leg commands exactly, with all14 fingers zero. Leg commands, every IK/root/foot/COM/clearance result and command arc are unchanged. No model path or physical episode rerun. Both timing/orientation gates still fail.';data['source_input_sha256'][str(Path(__file__).resolve())]=sha(__file__);data['source_input_sha256'][str(p)]=sha(p)
+ (O/'results.json').write_text(json.dumps(data,indent=2));rec=dict(utc=data['utc'],scope='Offline data correction, not runtime or physics repair; no new path computed.',original_model_gate_passed=False,original_fixed_nonleg_command_contract_passed=False,original_maximum_nonleg_command_difference_rad=max(errors),corrected_all14_finger_commands_exact_zero=True,corrected_other_nonleg_commands_exact_recorded=True,all_leg_commands_and_kinematics_exactly_preserved=True,command_arc_unchanged=True,physics_ticks=0,optimizer_updates=0,original_result_sha256=sha(p),corrected_result_sha256=sha(O/'results.json'));(O/'recovery.json').write_text(json.dumps(rec,indent=2));(O/'SHA256.json').write_text(json.dumps({p.name:sha(p) for p in O.iterdir() if p.is_file()},indent=2));print(json.dumps(rec,indent=2))
+if __name__=='__main__':main()

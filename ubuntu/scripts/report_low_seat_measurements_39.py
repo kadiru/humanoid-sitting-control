@@ -1,0 +1,30 @@
+from pathlib import Path
+import json,shutil,hashlib,datetime,html
+D=Path('/data/humanoid-sitting-perception/low_seat_contact_01');OUT=D/'measurement_report_39'
+read=lambda p:json.loads(Path(p).read_text());sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def main():
+ a=read(D/'dual_view_audit_39/independent_audit.json');assert a['diagnostic_checks_passed'];OUT.mkdir(exist_ok=False)
+ for n in ['independent_audit.json','recorded_depth.png','availability.png']:shutil.copy2(D/'dual_view_audit_39'/n,OUT/n)
+ for n in ['diagnostic_protocol.json','diagnostic_accounting.json']:shutil.copy2(D/'dual_view_diagnostic_39'/n,OUT/n)
+ s=a['summaries'];rows=''
+ for label,key in [('All recorded case-frames','all'),('Eight target cases','target'),('Targets with unavailable rear tracker','target_rear_tracker_unavailable')]:
+  for view in ['rear','down']:
+   v=s[key][view];err=v['errors'];h=err.get('height_error_mm',{}).get('max_abs');slope=err.get('slope_error_deg',{}).get('max_abs')
+   rows+=f"<tr><td>{label}</td><td>{view}</td><td>{v['valid']}/{s[key]['frames']}</td><td>{h:.3f}</td><td>{slope:.3f}</td></tr>" if h is not None else f"<tr><td>{label}</td><td>{view}</td><td>0/{s[key]['frames']}</td><td>unavailable</td><td>unavailable</td></tr>"
+ per=''
+ for i in [0,1,2,3,6,7,10,11]:
+  rr=[x for x in a['records'] if x['case']==i];lost=[x for x in rr if not x['recorded_rear_tracker_valid']];per+=f"<tr><td>{i}</td><td>{rr[0]['height_cm']:g} / +{rr[0]['slope_deg']:g}°</td><td>{len(lost)}</td><td>{sum(x['views']['down']['valid'] for x in lost)}</td></tr>"
+ utc=datetime.datetime.now(datetime.timezone.utc).isoformat()
+ page=f'''<!doctype html><html><head><meta charset="utf-8"><title>Measured seat visibility</title><style>body{{font:17px/1.55 system-ui;margin:40px auto;max-width:1180px;color:#22313a;padding:0 24px}}h1{{font-size:32px}}h2{{margin-top:36px}}.note{{background:#fff2d7;border-left:5px solid #a87927;padding:20px}}img{{width:100%;height:auto}}table{{border-collapse:collapse;width:100%;font-size:15px}}td,th{{padding:10px;text-align:left;border-bottom:1px solid #d7dce0}}a{{color:#285d7b}}footer{{font-size:13px;color:#596775}}</style></head><body>
+<h1>A current second view recovers the missing seat plane</h1><div class="note"><b>Measurement diagnosis passed; physical repair remains unresolved.</b> Best full-development motion remains 64/72 clean, 70 stable, eight slips and two housing-contact cases. No PPO or fresh holdout has started. The controlled fallback-view trial40 is a separate, pending physical experiment at this snapshot.</div>
+<p>One recording-only 13-second prefix ran in 24 development environments: 15,600 active ticks plus 600 initial settling ticks, no complete 20-second episode and no optimizer. The added downward view never entered control. All original startup and full-prefix body, joint, command, reference, geometry and torque arrays exactly reproduced the staged36 recording.</p>
+<h2>Actual depth, unchanged plane-fit checks</h2><img src="recorded_depth.png" alt="Recorded rear and downward depth images at twelve seconds"><p>The rear camera sees only a narrow seat strip at the held posture. The downward camera returns a larger current patch. Both mount transforms were independently checked against 864 recorded poses per camera, within 1 micrometre in position and 1e−6 in rotation-matrix components. The fitter retained its self-mask, plane size and conditioning, floor exclusion and largest-patch rule.</p>
+<table><tr><th>Subset</th><th>View</th><th>Valid fits / frames</th><th>Largest absolute height error (mm)</th><th>Largest absolute slope error (degrees)</th></tr>{rows}</table>
+<p>These are independent fits with no association prior. They are not exact replay of the live tracked geometry. Truth geometry was used only to score errors after plane selection, never to choose the plane or control the robot. The 5 mm height / 1 degree check is a measurement research screen, not a relaxed physical slip or contact criterion.</p>
+<img src="availability.png" alt="Current-view fit availability and measured height errors"><table><tr><th>Case</th><th>Height (cm) / slope</th><th>Rear-tracker unavailable frames</th><th>Current down fits in those frames</th></tr>{per}</table>
+<h2>What is being tested next</h2><p>Revision40 retains the staged36 motion and prefers every available current rear fit. Only selected staged rows with no rear fit may use a current downward exposure under the unchanged association checks. Recorded-data routing tests passed on 6, 10 and 13-second frames, including exact rear preference and no downward use by unselected rows. One separate 24-case full20s physical probe is running; its results and independent audits must be read before any repair claim. It cannot start retention, PPO or holdout automatically.</p>
+<p>The preceding staged36 motion was rejected: 16/24 stable, 14 clean and three housing contacts. All eight targets paused before descent after losing measured geometry and ended with zero seat support. Avoiding slip without sitting does not meet the task. See the <a href="../progress_report_37/findings.html">complete physical comparison and common-clean effort report</a>.</p>
+<p>Current frozen parent inputs were exactly the recorded 414 channels; independent CPU inference passed the unchanged 1e−5 absolute/relative tolerance. No learned controller was trained or promoted. Reference-assisted simulation on these rigid slabs is not unassisted sitting, real-robot validation, or sitting/leaning anywhere; leaning has not broadened.</p>
+<p><a href="independent_audit.json">Independent measurement audit</a> · <a href="diagnostic_protocol.json">Recording scope and hashes</a> · <a href="diagnostic_accounting.json">Physics accounting</a></p><footer>{utc} — Interim development measurement report. Physical repair and the requested PPO comparison remain unfinished.</footer></body></html>'''
+ (OUT/'findings.html').write_text(page);(OUT/'SHA256.json').write_text(json.dumps({p.name:sha(p) for p in OUT.iterdir() if p.is_file()},indent=2));print('REPORT_COMPLETE',str(OUT))
+if __name__=='__main__':main()
