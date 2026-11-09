@@ -1,0 +1,73 @@
+{
+  "utc": "2026-10-18T02:13:05.608086+00:00",
+  "passed": true,
+  "scope": "Independent complete projected-path geometry/finite-work/timing audit; no admission or simulation.",
+  "geometry": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/projected_complete_path_v2_359/results.json",
+      "parameters": [
+        0.13249248997109972,
+        0.4351349021283094,
+        -0.1883883483030849,
+        0.023619600000000004
+      ],
+      "length_m": 0.13999999999993848,
+      "knots": 115,
+      "max_replay_error": 2.220446049250313e-16,
+      "failed_knots": [],
+      "pose_schedule_metric_passed": false,
+      "min_clearance_mm": 3.731078343242842,
+      "max_foot_position_error_mm": 0.8411018361374456,
+      "max_foot_orientation_error_deg": 0.49854366657171784,
+      "nominal_pose_schedule_at_0_15_rad_s": 13.631840519670705,
+      "min_actual_swing_sole_height_m": 0.013000000000093215
+    }
+  ],
+  "command": {
+    "nodes": 115,
+    "max_virtual_work_error_Nm": 6.414085707007189e-09,
+    "max_equilibrium_residual": 8.549730368123676e-12,
+    "minimum_command_margin_rad": 0.029961108785271695,
+    "maximum_effort_utilization": 0.8157102520556236,
+    "force_allocation_failures": [
+      15,
+      88,
+      91,
+      94,
+      95,
+      96,
+      99,
+      103,
+      105,
+      113
+    ],
+    "model_command_passed": false,
+    "specific_command_time_s": 11.632416906101877,
+    "command_schedule_passed": true,
+    "initial_command_exact": true,
+    "all_fixed_commands_exact": true
+  },
+  "timing": {
+    "saved351_durations_s": 13.558907845603063,
+    "fixed_projected_command_reserved_rate_normal_plus_quiet_s": 13.843043118077345,
+    "maximum_saved_duration_rate_violation_rad": 0.004005392850872234,
+    "minimum_linear_desired_headroom_rad": -0.010068608318127892,
+    "hover_gap_m": 0.01206340840818218,
+    "hover_equality_error_m": 6.340840818217994e-05,
+    "maximum_normal_descent_violation_m": 2.8457728729274802e-05,
+    "minimum_phase_increment": -8.404105988901733e-08
+  },
+  "maximum_timing_replay_error": 1.7763568394002505e-15,
+  "exact_saved_projected_coordinates": true,
+  "phases_exact351": true,
+  "corner_forces_exact351": true,
+  "projection_or_optimization_repeated": false,
+  "physical_admission": false,
+  "repair_complete": false,
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/projected_complete_path_v2_359/results.json": "3a1144fe42b3898c2f0af8f46e0341fcb7d88958ea46d805bf6bcc952023f308",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_projected_path_360.py": "beb652929e7788b26f166adebee1f4c0dd0c769496e56f4d53a4352c2d525f4f"
+  }
+}
