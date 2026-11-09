@@ -1,0 +1,109 @@
+{
+  "utc": "2026-10-17T23:13:59.335258+00:00",
+  "runs": [
+    {
+      "run": 336,
+      "formulation": "Tied descent/orientation; knee hold",
+      "geometry_failed_knots": [
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77
+      ],
+      "construction_failed_knots": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "landing_descent_fraction": 0.49614194199113926,
+      "landing_orientation_fraction": 0.49614194199113926,
+      "minimum_housing_mm": 3.731078343242842,
+      "max_foot_error_mm": 3.5411008530313,
+      "max_foot_error_deg": 1.5366462153862521,
+      "minimum_command_margin_rad": 0.029374339197009047,
+      "prescribed_command_polyline_s": 14.123607727655981,
+      "audit_passed": true,
+      "physical_admission": false
+    },
+    {
+      "run": 338,
+      "formulation": "Separate phases; knee hold",
+      "geometry_failed_knots": [
+        63,
+        64
+      ],
+      "construction_failed_knots": [
+        62,
+        63,
+        64
+      ],
+      "landing_descent_fraction": 0.4744339258136108,
+      "landing_orientation_fraction": 0.9701636503081362,
+      "minimum_housing_mm": 3.731078343242842,
+      "max_foot_error_mm": 3.7582056665755417,
+      "max_foot_error_deg": 0.9797157513189392,
+      "minimum_command_margin_rad": 0.027732283869513125,
+      "prescribed_command_polyline_s": 14.103698417285191,
+      "audit_passed": true,
+      "physical_admission": false
+    },
+    {
+      "run": 340,
+      "formulation": "Separate phases; knee-extension objective",
+      "geometry_failed_knots": [
+        63,
+        64
+      ],
+      "construction_failed_knots": [
+        63,
+        64
+      ],
+      "landing_descent_fraction": 0.47258392652573045,
+      "landing_orientation_fraction": 0.9714800291442293,
+      "minimum_housing_mm": 3.731078343242842,
+      "max_foot_error_mm": 2.721757802764957,
+      "max_foot_error_deg": 0.7532138988731726,
+      "minimum_command_margin_rad": 0.027725640632267595,
+      "prescribed_command_polyline_s": 14.041930447347578,
+      "audit_passed": true,
+      "physical_admission": false
+    }
+  ],
+  "full_path_builds": 3,
+  "policy_optimizer_updates": 0,
+  "physical_ticks": 0,
+  "settling_ticks": 0,
+  "complete_physical_trials": 0,
+  "force_timing_LPs": 0,
+  "repair_complete": false,
+  "best_clean": 64,
+  "best_stable": 70,
+  "remaining_slipping": 8,
+  "remaining_housing": 2,
+  "main_ppo_started": false,
+  "holdout_started": false,
+  "video_unchanged": true,
+  "scope_correction": {
+    "source": "scripts/build_low_seat_minimum_extension_340.py",
+    "source_preserved": true,
+    "original_docstring_wording": "338exact nominal knee-hold is infeasible at final sampled foot targets.",
+    "correction": "This wording overstates the evidence. The bounded sequential local construction did not satisfy all final constraints. No infeasibility certificate or global nonlinear search was computed; another trajectory is not disproved.",
+    "calculation_changed": false,
+    "physics_ticks": 0
+  }
+}
