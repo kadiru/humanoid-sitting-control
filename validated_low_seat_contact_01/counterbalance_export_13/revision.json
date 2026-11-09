@@ -1,0 +1,24 @@
+{
+  "scope": "One pre-training physical hypothesis: guarded normal3s landing, plus symmetric shoulder/elbow pitch -0.35rad over3.5s only measuredheight<38cm and slope>14deg. Model leg feedforward recomputed for the changed arm mass distribution. No pelvis-path or feedback-gain change.",
+  "rationale": "The failed housing events coincide with inward root error and backward pitch drift. Model arm counterbalance moves COM forward without rotating pelvis or requiring a larger leg-path excursion. This is a hypothesis, not causal proof; narrow housing clearance remains.",
+  "initial_approach_seconds": 10,
+  "unchanged_command_slew_rad_s": 0.15,
+  "max_selected_arm_target_rate_rad_s": 0.1498015820980072,
+  "scope_limit": "Model housing clearance stays narrow. New reference arm commands are distinct from the zero learned body residual. All14 fingers stay fixed; physical outcomes decide admission.",
+  "physical_gpu": 1,
+  "episodes": 24,
+  "active_ticks": 24000,
+  "initial_settling_excluded": 600,
+  "optimizer_updates": 0,
+  "fresh_holdout": false,
+  "sources": {
+    "/home/kadir/humanoid-sitting/scripts/low_seat_counterbalance_controller.py": "149f898ce899deecdcc84ba577cc6823e37dc8912a23233b2a010ed9321599f5",
+    "/home/kadir/humanoid-sitting/scripts/run_low_seat_counterbalance_probe.py": "ac56e9f5099c0e8dc5905396b7a71163b4276c223beba5549abf8c697c70e065",
+    "/home/kadir/humanoid-sitting/scripts/launch_low_seat_counterbalance_13.py": "0b061975fa7dc2aeb924636dc25067004cfce189fe39080ca118c6339310657c",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_normal_timing_controller.py": "de292246267592ac2bcd32fd7f4369e6ae6b8f011252408258b7ca18aca27795",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_load_controller.py": "510b8644cdb99a3910e1a2f4bdb7f941dcb6a3d3ddb70af0b2092397ed605dcf",
+    "/home/kadir/humanoid-sitting/scripts/low_seat_contact_controller.py": "b14886026d552e098f296a362f404bc616ba33daf99de3bee6e1eac21e2fe5c2"
+  },
+  "screen_sha256": "9c98364da2bc4aa098a9664a3e4ce819741a8290ac0019f805d6a18edb92b206",
+  "config_sha256": "efe6f90adf6d1ca4507cbf2e528423a0cf1e29deb10578b897fcd990bd3ca3ab"
+}

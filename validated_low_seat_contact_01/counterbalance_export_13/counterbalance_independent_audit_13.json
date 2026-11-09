@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "actual_sensor_parent_reward_accounting": {
+    "passed": true,
+    "physical": {
+      "trials": 24,
+      "stable": 22,
+      "clean": 14,
+      "slip": 10,
+      "illegal": 0,
+      "physical": 2,
+      "strict": 3,
+      "max_friction_utilization": 1.7878587245941162,
+      "max_conservative_margin_ticks": 65,
+      "ratio_definition": "Tangential/normal force divided by legacy dynamic coefficient0.6; not a measured static friction limit"
+    },
+    "actual417_inputs": true,
+    "full_reward_audited": true,
+    "bounds_and_slew": true,
+    "parent_exact": true,
+    "CPU_optimizer_replay": false,
+    "actor_steps": 0,
+    "critic_steps": 0,
+    "numerical_tolerances": {
+      "action_atol": 1e-05,
+      "action_rtol": 1e-05,
+      "weight_atol": 5e-05,
+      "weight_rtol": 0.0005
+    },
+    "active": 24000,
+    "warmup": 0
+  },
+  "arm_reference_checks": [
+    {
+      "case": 0,
+      "maximum_reference_arm_offset_rad": 0.3500000238418579
+    },
+    {
+      "case": 1,
+      "maximum_reference_arm_offset_rad": 0.3500000238418579
+    },
+    {
+      "case": 2,
+      "maximum_reference_arm_offset_rad": 0.3500000238418579
+    },
+    {
+      "case": 3,
+      "maximum_reference_arm_offset_rad": 0.3500000238418579
+    },
+    {
+      "case": 6,
+      "maximum_reference_arm_offset_rad": 0.3500000238418579
+    },
+    {
+      "case": 7,
+      "maximum_reference_arm_offset_rad": 0.3500000238418579
+    },
+    {
+      "case": 10,
+      "maximum_reference_arm_offset_rad": 0.3500000238418579
+    },
+    {
+      "case": 11,
+      "maximum_reference_arm_offset_rad": 0.3500000238418579
+    }
+  ],
+  "sampled_command_step_rad_per_0p1s": 0.015000104904174805,
+  "physical_admission_not_implied": true
+}
