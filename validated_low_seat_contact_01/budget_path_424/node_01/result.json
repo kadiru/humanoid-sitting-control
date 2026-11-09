@@ -1,0 +1,69 @@
+{
+  "node": 1,
+  "parent": 0,
+  "kind": "branch_lower",
+  "optimizer": {
+    "success": true,
+    "status": 0,
+    "message": "Optimization terminated successfully",
+    "iterations": 2,
+    "objective_nfev": 3,
+    "jacobian_njev": 2
+  },
+  "decision": "branched_fractional_relaxation",
+  "branch": {
+    "budget": 1,
+    "value": 193.88694864084206,
+    "floor": 193.0,
+    "ceil": 194.0
+  },
+  "slack": 5.310016605258971e-17,
+  "soft_merit": 3.010169806084571e-12,
+  "minimum_augmented": -3.0101167059185187e-12,
+  "minimum_hard": -5.551115123125783e-17,
+  "coordinate_margin": 0.0001889191323538597,
+  "box_margin": 0.0,
+  "budgets": [
+    92.88697088301092,
+    193.88694864084206,
+    245.0,
+    101.00000329460725,
+    17.226077181539722
+  ],
+  "integer_error": 0.226077181539722,
+  "numerical_branching_gate_passed": true,
+  "strict_model_point": false,
+  "callback_count": 2,
+  "history": [
+    {
+      "callback": 0,
+      "slack": 2.75144770977621e-16,
+      "soft_merit": 0.00010174067755298748,
+      "minimum_hard": -1.9747658369650978e-13,
+      "minimum_augmented": -0.00010174067755271234,
+      "budgets": [
+        92.88697088054946,
+        193.8869486382824,
+        245.0,
+        101.0000032943082,
+        17.226077186859925
+      ],
+      "not_selected": true
+    },
+    {
+      "callback": 1,
+      "slack": 5.310016605258971e-17,
+      "soft_merit": 3.010169806084571e-12,
+      "minimum_hard": -5.551115123125783e-17,
+      "minimum_augmented": -3.0101167059185187e-12,
+      "budgets": [
+        92.88697088301092,
+        193.88694864084206,
+        245.0,
+        101.00000329460725,
+        17.226077181539722
+      ],
+      "not_selected": true
+    }
+  ]
+}
