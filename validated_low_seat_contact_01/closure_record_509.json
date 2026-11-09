@@ -1,0 +1,618 @@
+{
+  "utc": "2026-10-18T20:19:39.867246+00:00",
+  "scope": "Seal completed506/507/508 after actual report exit and local review; preserve physical repair/PPO as unfinished.",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "sparse_gap_evidence_preservation_503.json",
+      "files": 11113,
+      "passed": true
+    },
+    {
+      "manifest": "sparse_gap_supplemental_503.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 11237,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_509.json",
+  "manifest_sha256": "e841c025bf7a94001902b581ae11375470f003bcc2c1391b6a078eca2ce2cd52",
+  "workers": [],
+  "actual_exits": {
+    "utc": "2026-10-18T20:15:10.190238+00:00",
+    "main_actual_exit": 0,
+    "main_observed_tool": "d77519",
+    "main_session": 43740,
+    "independent_audit_actual_exit": 0,
+    "audit_observed_tool": "c6d270",
+    "audit_session": 17833,
+    "report_actual_exit": 0,
+    "report_observed_tool": "138724",
+    "report_session": 20072,
+    "scope": "504/505 arithmetic preparation complete;506 bounded run one primary timeout/no witness;507 conditional exact473inheritance complete;508report saved-only. Zero new model/root/map/physics. Empty certificate/map replay flags are empty-set statements, not successful witness evidence."
+  },
+  "preparation_actual_exits": {
+    "mixed_compile_exit_504.json": {
+      "utc": "2026-10-18T20:08:49.062804+00:00",
+      "actual_exit": 0,
+      "observed_tool": "eef805"
+    },
+    "mixed_freeze_exit_504.json": {
+      "utc": "2026-10-18T20:09:08.585901+00:00",
+      "actual_exit": 0,
+      "observed_tool": "d4ee2a",
+      "session_id": 57708
+    },
+    "mixed_preparation_exit_504.json": {
+      "utc": "2026-10-18T20:09:26.513377+00:00",
+      "actual_exit": 0,
+      "observed_tool": "8fc445",
+      "session_id": 17232
+    },
+    "mixed_audit_exit_505.json": {
+      "utc": "2026-10-18T20:11:06.803618+00:00",
+      "actual_exit": 0,
+      "observed_tool": "e3fee2",
+      "session_id": 3931
+    }
+  },
+  "preparation": {
+    "utc": "2026-10-18T20:09:14.430553+00:00",
+    "passed": true,
+    "specification": {
+      "scope": "NEW partial residual/native auxiliary coordinate preparation. No optimizer, model, root, finite map, actual path or execution budget.",
+      "rationale": "Full496 residual coordinates spread each native command/torque/COM auxiliary across all local residuals.502 localizes normal-gap incidence but still has23.7M primary coefficients. Keep35 native auxiliary increments perstate and transform only the15 rootxy/f/leg coordinates. This controls a different source of fill without deleting any constraint or coefficient from an old matrix.",
+      "seed": "ONLY sealed472INITIAL actualX/Y/J and490canonical auxiliary, immutable original490 chains,496savedQ/L,497saved directed certificate, and503audited502 integer gap incidence. No old accepted/rejected/internal solver vector.",
+      "partition": "The50 local outputs are split into15 kinematic outputs (feet12,moments2,gap1) and35 commands16/torques16/COM3. The50 local direct variables are15 rootxy/f/legs and35 native output auxiliaries. The15kinematic rows of L have EXACTzero coefficients on the35 nativeauxiliary columns.",
+      "inverse_inheritance": "Take R=Q[root15,kin15] from immutable496. Since L[kin,aux35]=0 EXACTLY, (K*R-I15) is the kin/kin principal submatrix of (L*Q-I50), where K=L[kin,root15]. Inherit the existing497 outward per-entry intervals and full selected-row norm bounds (<1); no new inverse or repeated directed product certificate. Thus R is nonsingular. Nonsingularity ofQ alone would NOT justify its submatrix.",
+      "map": "old_u=T_joint*new_u; old_root=-Rblock*Ckin0*T_joint*new_u +Rblock*zkin -Rblock*hkin; old_aux=new_aux. Same78790 coordinates:10540joint plus20475kinematic-residual plus47775nativeauxiliary. All206normal-drop bounds and endpoint contract remain.",
+      "invertibility": "After grouping local slots, the new exact-real map is block triangular with invertible T_joint, certified R blocks, and identity native auxiliaries. Rounded lower-left products do not affect invertibility. This is a new basis definition, not dropping tiny entries from oldQ orSn.",
+      "shift": "NEW shift acts only on15root variables perstate. It is not the old496a. newzero is not olddirectionzero. Original direction must be reconstructed BEFORE any shared dyadic scaling.",
+      "consistency": "Every literal C*Snew and h+C*anew entry is retained. Both signs of ALL68250 normalized mechanics-consistency rows and frozen unit scales remain. Nativeauxiliary closure is fully coupled, not forced tozero, replaced by an ideal identity, or omitted. No posthoc15-root.",
+      "rows": "All331888final/331495retained inequalities,156647HARD/noepigraph,174848rate/window,1411normal/hoverfinal,1366homogeneous equalities,11906fullcontrolboxes,80155featuretrust intervals,206dropbounds including pivot,27708old/support/window+1572bounds retained. Same392constantcontact+timeidentity omittedoptimizerONLY. Original440 +/-.02box and8eps/4ULP/32ULP/4302^-23reserves unchanged.",
+      "numerical": "Sparse products are binary64; no bitwise equivalence to old transformed LPs is asserted. Future transformed AND reconstructed ORIGINAL LP witnesses must pass unchanged1e-7. Exact original interval eta>0 required before unchanged490 finite encoding. No returned-vector edits, coefficient threshold, clipping or normalization.",
+      "finite": "New coordinates are continuous directions only. The existing205binary64drop/exactFractionpivot endpoint,468encoding,207Ugaptrust,2e-13+2Uactualgapguard and120-maploadbound remain separate. No finite map is executed/certified by this preparation.",
+      "reference": "SavedJ/R are valid only at EXACT initialstate. ChangedX would need fresh mechanics/J and valid new local map/proof; no execution wrapper or resource/LP budget is designed here.",
+      "witness": "Reference witness ceiling.09895564659603738 is an inherited assembly fixture, not a solved value. Both complete primary/witness matrices are preserved for arithmetic audit only.",
+      "scope_limits": "Fewer stored coefficients if observed do not demonstrate solver speed or feasibility, explain prior timeouts, or admit actual commands/geometry. Off-consistency auxiliaries remain infeasible research variables. Original actual/physical/PPO gates remain.",
+      "model_calls": 0,
+      "root_calls": 0,
+      "ad_calls": 0,
+      "local_inverse_solves": 0,
+      "directed_inverse_product_proofs": 0,
+      "lp_calls": 0,
+      "finite_maps": 0,
+      "new_actual_path": false,
+      "physical_admission": false
+    },
+    "coordinates": 78790,
+    "kinematic_residual_coordinates": 20475,
+    "native_auxiliary_coordinates": 47775,
+    "local_zero_kinematic_auxiliary_block_exact": true,
+    "inherited_R_nonsingularity_bound": 2.003691821005633e-14,
+    "prior_directed_proof_inherited_not_repeated": true,
+    "prior_integer_incidence_inherited_not_repeated": true,
+    "new_transform_nnz": 523743,
+    "native_auxiliary_identity_exact": true,
+    "new_shift_differs_from_496": true,
+    "literal_kinematic_identity_defect": 4.8009447979613373e-14,
+    "literal_kinematic_shift_defect": 1.6155871338926322e-27,
+    "literal_auxiliary_shift_max": 4.823509099780236e-12,
+    "all_consistency_rows_retained": 68250,
+    "chains": {
+      "feature_basis": {
+        "shape": [
+          105750,
+          78790
+        ],
+        "original_nnz": 107105,
+        "prior_502_nnz": 2145246,
+        "new_nnz": 531351
+      },
+      "all_rows_chain": {
+        "shape": [
+          331888,
+          78790
+        ],
+        "original_nnz": 552084,
+        "prior_502_nnz": 15248813,
+        "new_nnz": 1468054
+      },
+      "consistency_chain": {
+        "shape": [
+          68250,
+          78790
+        ],
+        "original_nnz": 749166,
+        "prior_502_nnz": 1862004,
+        "new_nnz": 1580103
+      },
+      "interval_matrix": {
+        "shape": [
+          92267,
+          78790
+        ],
+        "original_nnz": 125867,
+        "prior_502_nnz": 2203896,
+        "new_nnz": 579763
+      },
+      "normal_drop_chain": {
+        "shape": [
+          206,
+          78790
+        ],
+        "original_nnz": 410,
+        "prior_502_nnz": 410,
+        "new_nnz": 410
+      },
+      "primary": {
+        "shape": [
+          652529,
+          78791
+        ],
+        "original_nnz": 2613498,
+        "prior_502_nnz": 23691961,
+        "new_nnz": 6099134,
+        "rows_preserved": true
+      },
+      "witness": {
+        "shape": [
+          837063,
+          78791
+        ],
+        "original_nnz": 2738418,
+        "prior_502_nnz": 27972939,
+        "new_nnz": 7131846,
+        "rows_preserved": true
+      }
+    },
+    "original_reconstructed_witness_still_required": true,
+    "actual_X_Y_J_changed": false,
+    "reference_auxiliary_changed": false,
+    "new_solver_exists": false,
+    "model_calls": 0,
+    "root_calls": 0,
+    "local_inverse_solves": 0,
+    "directed_product_proofs": 0,
+    "lp_calls": 0,
+    "finite_maps": 0,
+    "new_complete_path": false,
+    "physical_admission": false
+  },
+  "preparation_audit": {
+    "utc": "2026-10-18T20:09:28.795016+00:00",
+    "passed": true,
+    "scope": "Independent partial-residual map assembly and inherited subblock proof audit.\nNo inverse solve, repeated directed product/integer fixture, LP, map or model.\n",
+    "local_zero_kinematic_auxiliary_block_exact": true,
+    "inherited_R_norm_upper": 2.003691821005633e-14,
+    "inherited_proof": "K*R-I is the kin/kin principal submatrix of certified LQ-I because L[kin,aux]=0 exactly; selected full-row outward bounds imply norm<1. No old products or inverse repeated.",
+    "coordinate_transform_independent_rebuild_error": 0.0,
+    "native_auxiliary_identity_exact": true,
+    "new_shift_exact": true,
+    "checks": {
+      "feature_basis": {
+        "error": 0.0,
+        "rows": 105750,
+        "new_nnz": 531351,
+        "no_thresholding": true
+      },
+      "all_rows_chain": {
+        "error": 0.0,
+        "rows": 331888,
+        "new_nnz": 1468054,
+        "no_thresholding": true
+      },
+      "consistency_chain": {
+        "error": 0.0,
+        "rows": 68250,
+        "new_nnz": 1580103,
+        "no_thresholding": true
+      },
+      "interval_matrix": {
+        "error": 0.0,
+        "rows": 92267,
+        "new_nnz": 579763,
+        "no_thresholding": true
+      },
+      "normal_drop_chain": {
+        "error": 0.0,
+        "rows": 206,
+        "new_nnz": 410,
+        "no_thresholding": true
+      },
+      "primary": {
+        "error": 0.0,
+        "rhs_error": 0.0,
+        "shape": [
+          652529,
+          78791
+        ],
+        "new_nnz": 6099134,
+        "cost_bounds_equalities_exact": true
+      },
+      "witness": {
+        "error": 0.0,
+        "rhs_error": 0.0,
+        "shape": [
+          837063,
+          78791
+        ],
+        "new_nnz": 7131846,
+        "cost_bounds_equalities_exact": true
+      }
+    },
+    "literal_kinematic_identity_defect_retained": 4.8009447979613373e-14,
+    "literal_auxiliary_consistency_shift_retained": 4.823509099780236e-12,
+    "all_original_rows_and_both_consistency_signs_retained": true,
+    "original_witness_and_exact_interval_checks_still_required": true,
+    "solver_speedup_demonstrated": false,
+    "actual_model_calls": 0,
+    "local_inverse_calls": 0,
+    "directed_inverse_product_proof_calls": 0,
+    "integer_incidence_proof_repeats": 0,
+    "lp_calls": 0,
+    "finite_maps": 0,
+    "new_complete_path": false,
+    "physical_admission": false
+  },
+  "main_result": {
+    "utc": "2026-10-18T20:13:26.585180+00:00",
+    "scope": "ONE bounded partial-kinematic/native-auxiliary interior-point minimax run; no root or physical execution.",
+    "specification": {
+      "scope": "One bounded partial-residual/native-auxiliary whole-path algorithm.\nEvery reconstructed original direction is certified before finite encoding.\n",
+      "seed": "Sealed472 INITIAL X and actualY/J; new auxiliary identities explicitly canonicalized. No484 final/rejected state is used.",
+      "identities": "Nonfixed auxiliary feet/moments=0; auxiliary normal=EXACT Fraction sum of binary64 loads minus1 rounded once; auxiliary gap=encoded target gap. Fixed45states untouched.",
+      "coordinates": "10540 prior g/p/load/drop directions plus50 direct X/auxiliary coordinates per1365nonfixed state=78790. Analytic elimination of15 auxiliary identities from488, not deletion of actual criteria.",
+      "actual_consistency": "50 outputs pernonfixed state: feet/moments14,commands16,torques16,gap1,COM3. All must match actual mechanics for admission. Actual normal checked separately at unchanged1e-13; normal consistency is a roundoff identity, not a zero residual restoration problem.",
+      "scaling": "Frozen dimensional feature scales v=.02*sum(abs(original446G),axis=controls). Closure scale sigma=sum(abs(saved472J)*vX)+vY. This is numerical nondimensionalization, not a new physical threshold or new-state Jacobian.",
+      "merit": "phi=max(0,negative normalized auxiliary rate/window rows,abs(50-output consistency/sigma)). Actual all331888 rows are separately mandatory and never replaced by auxiliary feasibility.",
+      "primary": "Minimize one nonnegative feasibility epigraph for rate/window rows AND both signs of linearized50-output consistency. All156647 original affine HARD rows remain without epigraph. Nonzero consistency epigraph is explicitly INFEASIBLE mechanics, never admission.",
+      "witness": "Second LP maximizes exact-certifiable relative interval clearance while retaining half the ACTUAL primary predicted phi reduction. Primary vector never decoded. This extends whole-feature consistency feasibility, not another482-only clearance run.",
+      "finite": "One shared affine direction, exact Fraction row products, one binary64 rounding of direct features and loads. Existing468 directed joint drop encoding, exact pivot/endpoint sum, once-rounded cumulative gaps. No clipping/normalization/root fallback.",
+      "gap_reference": "Canonical auxiliary gaps are explicitly assigned the saved decoded targets; inherited actual gaps are not silently treated as identical. Their initial consistency defects are saved. Normal-gap interval clearance reserves207U for old-gap rounding plus205U drop encoding plus new-gap rounding.",
+      "intervals": "All11906 ORIGINAL full f/p/load boxes and206drop bounds, including pivots, plus per-feature trust intervals. Direct scalar endpoints one nextafter inward; normal-gap trust intervals207U inward; drop intervals U/205U inward. Exact positive certificate before every map; alpha>1 forbidden.",
+      "original_equalities": "All1411 actual normal/hover primal tests retained. Under this EXPLICIT new identity elimination their tangent is zero; fixed-source constants and actual residuals remain checked. Do not apply this zero assembly to the uneliminated488 coordinates.",
+      "prospective_algorithm": "At each major iteration recompute actual mechanics/J at current X, assemble primary and certified interior witness. Test at most five shared dyadic scales1,1/2,1/4,1/8,1/16, recertifying each unchanged scaled witness. No15-root. Post-map auxiliary hard rows/fullboxes/fixed/inactive must pass exactly. Recompute actualY; accept only positive phi reduction and actual/predicted>=.1 using the SAME encoded finite feature delta. An accepted off-consistency iterate is NOT a hard-feasible physical/model path. All actual rows/closure/geometry remain final admission gates.",
+      "prospective_budget": {
+        "max_major_iterations": 24,
+        "max_actual_lps": 48,
+        "max_finite_maps": 120,
+        "lp_seconds": 45,
+        "maximum_dyadic_trials": 5,
+        "initial_trust": 1.0,
+        "minimum_trust": 0.03125,
+        "load_rounding_chain_cap": 120
+      },
+      "budget_rationale": "ONE distinct24major/48LP/120map process, same45s LP/native1e-9/linear1e-7,120s child wallcap and40GiB addressspace.120maps preservesloadrounding proof. Terminal failure policy disallows numerical-method retries. No old budget extended.",
+      "trust_policy": "Existing trust1..1/32: halve after all5 trials reject; double up to1 only after acceptance ratio>.75. Stop belowfloor or atmajorcap; no polishing. Original440 +/- .02 global fullcontrol box unchanged.",
+      "numerical_limits": "HiGHS1e-9/independentlinear1e-7; old2^-20 row guards; all8eps/4ULP/32ULP/2^-23 reserves unchanged. Max merit is a numerical feasibility objective, not physical severity or effort.",
+      "physical_admission": false,
+      "executable_run_wrapper": true,
+      "max_major_iterations": 24,
+      "max_actual_lps": 48,
+      "max_maps": 120,
+      "max_dyadic_trials": 5,
+      "lp_time_limit_s": 45.0,
+      "linear_bound": 1e-07,
+      "lp_tolerance": 1e-09,
+      "acceptance_ratio": 0.1,
+      "minimum_trust": 0.03125,
+      "closure_admission": {
+        "feet_m": 1e-13,
+        "orientation_0_1_vee": 1e-13,
+        "moment_BW_m": 1e-13,
+        "command_rad": 1e-13,
+        "torque_Nm": 1e-13,
+        "gap_m": 1e-13,
+        "COM_m": 1e-13
+      },
+      "closure_admission_scope": "Separate conservative numerical construction tests; actual signed rows and original normal/hover/kinematics gates never replaced.",
+      "unchanged_state_policy": "Exact unchanged X inherits saved actualY/J; genuinely changed X is freshly evaluated. No root projection.",
+      "coordinate_system": "Audited504 mixed15 kinematic-residual and35 nativeauxiliary coordinates perstate, with inherited502 normal-gap incidence.",
+      "method": "highs-ipm",
+      "resource_address_space_GiB": 40,
+      "per_lp_worker_wall_cap_s": 120,
+      "solver_failure_policy": "Terminate entire run at first absent/nonoptimal/uncertified LP witness or resource failure. No timeout-driven trust retry or alternative method.",
+      "rationale": "504/505 preserves native commands/torques/COM as direct coordinates and only normalizes the15kinematic rows. All consistency and original rows remain literal. Saved primary coefficient count6099134 is below50223691961/49832076557 but above original4902613498. This justifies a separately bounded complete attempt, not a demonstrated speedup, timeout-cause claim, old-run retry or relaxation.",
+      "source_504": "Exact initial C/h inherits SEALED504 S/a/R and505 subblock certificate without inverse/proof repeats. New changed C requires fresh15x15 inverse and its directed nonsingularity certificate; only changed h updates the affine shift.",
+      "reconstruction": "Original t=S*z+a is formed without edits; transformed and original LP witnesses must pass1e-7, status0 only. Reconstruct complete original direction BEFORE dyadic scaling. Original exact positive interval certificate before490decoder. No15-root or direct assignment of new-coordinate gaps.",
+      "initial_coordinate_solves": 0,
+      "initial_inverse_certificates_repeated": 0
+    },
+    "stop": "terminal LP failure: no optimal independently certified reconstructed witness; no retry",
+    "major_iterations": 1,
+    "assembled_subproblems": 1,
+    "actual_lp_calls": 1,
+    "finite_maps": 0,
+    "actual_trial_evaluations": 0,
+    "certificate_failures": 0,
+    "map_failures": 0,
+    "accepted_solver_iterates": 0,
+    "last_accepted": null,
+    "initial": {
+      "phi": 0.19791129319207476,
+      "auxiliary_soft_merit": 0.19791129319207476,
+      "consistency_scaled_max": 4.995198591033159e-12,
+      "auxiliary_hard_min": -9.788105462815722e-07,
+      "auxiliary_hard_pass": false,
+      "auxiliary_phase_min": -9.788105462815722e-07,
+      "actual_all_rows_min": -0.19791129319207476,
+      "actual_hard_min": -9.788105462815722e-07,
+      "actual_soft_merit": 0.19791129319207476,
+      "actual_phase_min": -9.788105462815722e-07,
+      "full_control_box_min": 2.8206304524295775e-06,
+      "actual_normal_max": 6.661338147750939e-16,
+      "actual_hover_normalized": 8.881784197001252e-16,
+      "auxiliary_hover_normalized": 0.0,
+      "actual_foot_moment_max": 9.85878045867139e-14,
+      "consistency_by_unit": {
+        "feet_m": 9.85878045867139e-14,
+        "orientation_0_1_vee": 3.950864043729683e-14,
+        "moment_BW_m": 6.972894484036374e-14,
+        "command_rad": 0.0,
+        "torque_Nm": 0.0,
+        "gap_m": 1.192622389734055e-16,
+        "COM_m": 0.0
+      },
+      "consistency_pass": true,
+      "fixed_exact": true,
+      "inactive_exact": true,
+      "nonnegative_loads": true,
+      "auxiliary_acceptance_domain_pass": false,
+      "actual_numerical_admission_gate": false,
+      "physical_admission": false
+    },
+    "final": {
+      "phi": 0.19791129319207476,
+      "auxiliary_soft_merit": 0.19791129319207476,
+      "consistency_scaled_max": 4.995198591033159e-12,
+      "auxiliary_hard_min": -9.788105462815722e-07,
+      "auxiliary_hard_pass": false,
+      "auxiliary_phase_min": -9.788105462815722e-07,
+      "actual_all_rows_min": -0.19791129319207476,
+      "actual_hard_min": -9.788105462815722e-07,
+      "actual_soft_merit": 0.19791129319207476,
+      "actual_phase_min": -9.788105462815722e-07,
+      "full_control_box_min": 2.8206304524295775e-06,
+      "actual_normal_max": 6.661338147750939e-16,
+      "actual_hover_normalized": 8.881784197001252e-16,
+      "auxiliary_hover_normalized": 0.0,
+      "actual_foot_moment_max": 9.85878045867139e-14,
+      "consistency_by_unit": {
+        "feet_m": 9.85878045867139e-14,
+        "orientation_0_1_vee": 3.950864043729683e-14,
+        "moment_BW_m": 6.972894484036374e-14,
+        "command_rad": 0.0,
+        "torque_Nm": 0.0,
+        "gap_m": 1.192622389734055e-16,
+        "COM_m": 0.0
+      },
+      "consistency_pass": true,
+      "fixed_exact": true,
+      "inactive_exact": true,
+      "nonnegative_loads": true,
+      "auxiliary_acceptance_domain_pass": false,
+      "actual_numerical_admission_gate": false,
+      "physical_admission": false
+    },
+    "wrapper_counts": {
+      "value_requests": 0,
+      "value_state_records": 0,
+      "jacobian_requests": 0,
+      "jacobian_state_records": 0,
+      "root_updates": 0,
+      "initial_lifts": 0
+    },
+    "new_local_block_solves": 0,
+    "new_inverse_certificates": 0,
+    "initial_inverse_inherited": true,
+    "accepted_solver_iterate_is_not_actual_path": true,
+    "initial_actualX_Y_J_inherited": true,
+    "initial_root_repeated": false,
+    "final_actual_state_changed": false,
+    "sampled_geometry_pending": true,
+    "independent_audit_pending": true,
+    "actual_forward_filter_ticks": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "physical_admission": false,
+    "elapsed_s": 50.90258121595252
+  },
+  "independent_audit": {
+    "utc": "2026-10-18T20:13:56.065112+00:00",
+    "scope": "Conditional NEW506 result audit; unchanged initial states inherit sealed473.\nNo completed geometry/finite-work loop is repeated on an identical export.\n",
+    "passed": true,
+    "arithmetic_only": true,
+    "records": 1467,
+    "new_finite_work_columns": 0,
+    "inherited441_exact_records": 0,
+    "duplicate_new_records": 0,
+    "maximum_errors": {
+      "com": 3.3306690738754696e-16,
+      "gap": 2.220446049250313e-16,
+      "frame": 2.2994378889660747e-13,
+      "equilibrium": 2.220446049250313e-16,
+      "torque": 3.160756989473157e-09,
+      "command": 1.8948564939336165e-11
+    },
+    "sampled_geometry_passed": true,
+    "sampled_geometry_failures": [],
+    "minimum_housing_m": 0.00373107834324284,
+    "minimum_cop_m": 0.005000954272362884,
+    "minimum_command_margin_rad": 0.0,
+    "minimum_moving_command_margin_rad": 0.030147325375236594,
+    "all37_margin_includes_fixed_fingers": true,
+    "original_clock_rate_minimum": -0.00043837897576593215,
+    "original_clock_target_minimum": 3.477566778986585e-06,
+    "prior_clock_rate_minimum": -0.0004393326500823384,
+    "prior_clock_target_minimum": 3.5762788286319847e-09,
+    "step_audit": {
+      "passed": true,
+      "actual_state_assemblies_replayed": true,
+      "exact_certificates_maps_replayed": true,
+      "certificate_map_scope": "Empty-set truth if finite_maps=0; no successful witness/map implied",
+      "all_actual_and_auxiliary_rows_retained": true,
+      "final_selection_exact": true,
+      "actual_lp_calls": 1,
+      "assembled_subproblems": 1,
+      "major_iterations": 1,
+      "finite_maps": 0,
+      "actual_trial_evaluations": 0,
+      "accepted_solver_iterates": 0,
+      "certificate_failures": 0,
+      "map_failures": 0,
+      "linear_violation_maximum": 0.0,
+      "load_sum_rounding_maximum": 0.0,
+      "row_replay_error": 0.0,
+      "details": [],
+      "model_calls": 0,
+      "root_calls": 0,
+      "optimizer_calls": 0,
+      "physical_admission": false
+    },
+    "actual_forward_filter_ticks": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "physical_admission": false,
+    "inherited473_exact_records": 1467,
+    "all_geometry_and_work_inherited": true,
+    "inherited_error_scope": "Sealed473 aggregate over205 new473 states plus1262 inherited441 states; no new507 geometry/work computation",
+    "source_audit_sha256": "8be42f132fea68b91cf94712fc806dc94e9da596e2f9fd09200f8859209354dc",
+    "source_manifest_sha256": "a484287819899d6838ffa8020802a7102472fab00b164fd1dc710e5659bb4f4b",
+    "model_calls": 0,
+    "root_calls": 0,
+    "geometry_calls": 0
+  },
+  "saved_scope": {
+    "utc": "2026-10-18T20:14:28.289738+00:00",
+    "scope": "Saved-only accounting for506; no model, matrix rebuild, map or solve.",
+    "actual_scipy_linprog_calls": 1,
+    "assembled_subproblems": 1,
+    "worker_actual_exits": [
+      0
+    ],
+    "worker_wall_cap_hits": 0,
+    "transformed_returned_witnesses": 0,
+    "primary_calls": 1,
+    "interior_calls": 0,
+    "time_limits_without_witness": 1,
+    "returned_witnesses": 0,
+    "certificate_attempts": 0,
+    "finite_maps": 0,
+    "actual_new_trial_evaluations": 0,
+    "accepted_solver_iterates": 0,
+    "actual_X_exact472": true,
+    "actual_Y_exact472": true,
+    "actual_J_exact472": true,
+    "auxiliary_Y_exact_actual_Y": false,
+    "stage_records": [
+      {
+        "major": 0,
+        "trust": 1.0,
+        "role": "primary",
+        "status": 1,
+        "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+        "candidate": false,
+        "success": false,
+        "iterations": 18,
+        "crossover_iterations": 0,
+        "elapsed_s": 45.62738273607101,
+        "actual_lp_call": true,
+        "worker_actual_exit": 0,
+        "worker_wall_timeout": false,
+        "worker_elapsed_s": 45.98304006503895,
+        "method": "highs-ipm",
+        "transformed_nnz": 6099134,
+        "transformed_candidate": false,
+        "terminal_failure": true
+      }
+    ],
+    "trial_records": [],
+    "model_calls": 0,
+    "optimizer_calls": 0,
+    "physical_admission": false
+  },
+  "local_review": {
+    "utc": "2026-10-18T20:16:41.919729+00:00",
+    "all_hashes_verified": true,
+    "manifests": [
+      {
+        "folder": "mixed_coordinate_preparation_504",
+        "files": 20,
+        "passed": true
+      },
+      {
+        "folder": "mixed_coordinate_audit_505",
+        "files": 1,
+        "passed": true
+      },
+      {
+        "folder": "mixed_path_506",
+        "files": 27,
+        "passed": true
+      },
+      {
+        "folder": "mixed_path_audit_507",
+        "files": 5,
+        "passed": true
+      },
+      {
+        "folder": "progress_report_508",
+        "files": 17,
+        "passed": true
+      }
+    ],
+    "total_verified_entries": 70,
+    "visual_review": true,
+    "url": "http://127.0.0.1:8807/progress_report_508/findings.html",
+    "report": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_508/findings.html",
+    "browser": "IAB3/tab11",
+    "counts": {
+      "all_stages.csv": 1,
+      "all_finite_trials.csv": 0,
+      "all_constraint_groups.csv": 43,
+      "all_1467_samples.csv": 1467,
+      "all_331888_rows.csv": 331888,
+      "all_27708_original_rows.csv": 27708
+    },
+    "reviewed": [
+      "actual source identity and no-new-path notice",
+      "partial inverse subblock inheritance and literal closure scope",
+      "both plots and metric table",
+      "oneLP stage/18IPM0crossover/no witness",
+      "empty certificate/map scope",
+      "seven unit closures",
+      "43group and1467state disclosures expanded",
+      "CSV links and signed original/normalized rows",
+      "physical/PPO/effort limits",
+      "unchanged58.4s video loaded"
+    ],
+    "outcome_scope": "506 one primary time limit/no witness; zero reconstructed direction/interior/certificate/map/new model/J/root. ActualX/Y/J exact472INITIAL, all1467sealed473geometry/work inherited by507. 504/505 saved matrix proof/assembly arithmetic only. All64protected/all8unresolved.",
+    "report_source_and_results_unchanged_after_execution": true,
+    "new_video": false,
+    "new_physics": false,
+    "repair_complete": false,
+    "task_complete": false
+  },
+  "new_closure": true,
+  "accepted_solver_iterates": 0,
+  "actual_final_state_changed": false,
+  "all_final_geometry_inherited": true,
+  "new_finite_work_columns": 0,
+  "actual_scipy_lp_calls": 1,
+  "finite_maps": 0,
+  "nonlinear_trials": 0,
+  "actual_forward_filter_ticks": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "best_clean": "64/72",
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}
