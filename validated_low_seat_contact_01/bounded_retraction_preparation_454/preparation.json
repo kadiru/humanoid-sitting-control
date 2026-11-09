@@ -1,0 +1,42 @@
+{
+  "utc": "2026-10-18T12:36:46.707405+00:00",
+  "passed": true,
+  "specification": {
+    "max_predictors": 24,
+    "max_corrections_per_predictor": 4,
+    "max_linear_programs": 120,
+    "lp_time_limit_s": 45.0,
+    "lp_method": "highs",
+    "lp_primal_dual_tolerance": 1e-09,
+    "independent_linear_bound": 1e-07,
+    "coordinate_domain_radius": 0.02,
+    "initial_trust_fraction": 1.0,
+    "minimum_trust_fraction": 0.03125,
+    "root_max_updates": 10,
+    "root_max_halvings": 9,
+    "root_absolute_tolerance": 1e-13,
+    "hover_numerical_bound": 1e-08,
+    "strict_inequality_bound": 0.0,
+    "predictor_guard": 9.5367431640625e-07,
+    "acceptance_ratio": 0.1,
+    "correction_radius_fraction": 0.25,
+    "coordinate_retraction": "endpoint exponential with exact-rational binary64 convex blend",
+    "seed": "immutable440 original; never450 final or rejected trials",
+    "budget_justification": "18 half-reductions cover source merit .1979113 down to the unchanged 2^-20 step guard; six additional predictors bound rejected steps. Four corrections bound new nonlinear normal-balance/geometry defects. No extension is allowed.",
+    "correction_target": "unchanged half predicted soft improvement; hard rows have no slack",
+    "physical_admission": false
+  },
+  "free_controls": 11906,
+  "seed_reconstruction_exact": true,
+  "map_derivative_maximum_error": 1.482568512400917e-09,
+  "derivative_bound": 2e-06,
+  "minimum_mapped_bound_margin": 0.002352882578760522,
+  "endpoint_outward_rejections": [
+    "outward tangent at an exact coordinate endpoint: 0",
+    "outward tangent at an exact coordinate endpoint: 0"
+  ],
+  "model_calls": 0,
+  "root_calls": 0,
+  "optimizer_calls": 0,
+  "physical_admission": false
+}
