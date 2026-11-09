@@ -1,0 +1,239 @@
+{
+  "utc": "2026-11-09T04:56:23.891253+00:00",
+  "state": "CURRENT_CAMERA_AND_MEASURED_MODEL_PASS_RUNTIME_LOAD_VALIDATION_OUTSTANDING",
+  "changes": [
+    "Corrected capture-local integernormal conversion tofloat64 with exactnumericidentity assertion. Oldqueuedstartup failurebeforephysics andallsourcefiles retained. 4090standingcapture anddepth/regionaudit completed;300physicssteps,0sitting.",
+    "Measuredmodelv1 failedonlyobservedpatchreserve/coverage;clearance/balance/timing/actionchecks passed. Investigatedstableflatdepth producingdifferent fragmentedpolygons.",
+    "Fixed numericaltopology: unionexactintegerpixelruns beforeprojectingwholepolygonrings. Same sensorclassification/masks; no threshold/holefilling change. Independentmaskcomponents1 versusold4/3; new1/1. Safearea stable0.0335465/0.0335458m2 andfullallowedtrianglecoverage.4synthetictests pass.",
+    "Reconstructedfromoriginalaccepteddemonstration andcurrentstandingangles usingcorrectedactualcamera region; allmodelchecks pass. No rejectednumericplan used asinitialization. No sitting/stand-up/PPO physicalsuccess claimed."
+  ],
+  "startup_failure": {
+    "owner_pid": 2381865,
+    "scientific_launches": 1,
+    "simulation_launches": 1,
+    "PPO_updates": 0,
+    "recurring": false,
+    "queue_deadline_s": 7200,
+    "state": "STOPPED_NO_RETRY",
+    "utc": "2026-11-09T03:59:09.492869+00:00",
+    "wall_s": 3644.5307533229934,
+    "purpose": "One standing camera capture and independent depth/region audits only; no sitting, PPO, forced job interruption or recurring automation.",
+    "error": "RuntimeError(('CHILD_FAILED_NO_RETRY', 1, '/home/kadir/humanoid-sitting/outputs/rest_cycle_narrow_support_20261109_v1/queued_trial.log'))"
+  },
+  "corrected_capture": {
+    "owner_pid": 2521339,
+    "scientific_launches": 3,
+    "simulation_launches": 1,
+    "PPO_updates": 0,
+    "recurring": false,
+    "queue_deadline_s": 60,
+    "state": "CAMERA_AND_REGION_VALIDATED_REQUIRES_MOTION_LOAD_VALIDATION",
+    "utc": "2026-11-09T04:49:36.247759+00:00",
+    "wall_s": 22.576510066981427,
+    "purpose": "One standing camera capture and independent depth/region audits only; no sitting, PPO, forced job interruption or recurring automation.",
+    "capture_seconds": 18.23660705401562,
+    "depth_audit_seconds": 2.0003938479931094,
+    "region_audit_seconds": 2.000522058981005,
+    "sitting_controls": 0,
+    "complete_cycle": false
+  },
+  "capture": {
+    "standing_controls": 50,
+    "warmup_controls": 25,
+    "physics_steps": 300,
+    "sitting_controls": 0,
+    "force_sensor_controls_action": false,
+    "joint_force_is_not_motor_torque": true,
+    "sensor_layout_changed": true,
+    "physical_sensor_hardware_validated": false,
+    "PPO_updates": 0,
+    "complete_cycle": false
+  },
+  "depth": {
+    "passed": true,
+    "frames": [
+      {
+        "tick": 0,
+        "depth": {
+          "frame": 0,
+          "input_sha256": "78c4b36f0e7990b0f9c87cfe0404f171cf20165a048d6f10fb222206ced2c86c",
+          "projected_pixels": 313,
+          "matching_pixels": 313,
+          "occluded_pixels": 0,
+          "mismatch_pixels": 0,
+          "geometry_pass": true,
+          "visible_target_pixels": 313,
+          "target_observable": true,
+          "depth_p99_m": 1.5325759328721478e-07,
+          "selected_point_count": 2513,
+          "selected_target_fraction": 1.0,
+          "selected_max_mesh_distance_m": 1.6965029597804104e-07,
+          "original_plane_gate": true,
+          "normal_error_deg": 0.0,
+          "offset_error_m": 1.4901161193847656e-08
+        }
+      },
+      {
+        "tick": 50,
+        "depth": {
+          "frame": 50,
+          "input_sha256": "e4a0c23104367a51bd6daeaa9b44347ab54574ad00390811e22b66f8138261e3",
+          "projected_pixels": 313,
+          "matching_pixels": 313,
+          "occluded_pixels": 0,
+          "mismatch_pixels": 0,
+          "geometry_pass": true,
+          "visible_target_pixels": 313,
+          "target_observable": true,
+          "depth_p99_m": 1.1898019775635758e-07,
+          "selected_point_count": 2513,
+          "selected_target_fraction": 1.0,
+          "selected_max_mesh_distance_m": 1.643474223378405e-07,
+          "original_plane_gate": true,
+          "normal_error_deg": 0.0,
+          "offset_error_m": -2.9802322387695312e-08
+        }
+      }
+    ],
+    "elapsed_seconds": 0.6051488060038537,
+    "physics_steps": 0,
+    "sitting_controls": 0,
+    "complete_cycle": false
+  },
+  "topology": {
+    "passed": true,
+    "frames": [
+      {
+        "tick": 0,
+        "passed": true,
+        "identical_sensor_mask": true,
+        "independent_mask_connected_components": 1,
+        "old_eligible_components": 4,
+        "new_eligible_components": 1,
+        "old_selected_area_m2": 0.008334418557934544,
+        "new_selected_area_m2": 0.03354651674347777,
+        "outside_allowed_triangles_m2": 0.0,
+        "frame_sha256": "78c4b36f0e7990b0f9c87cfe0404f171cf20165a048d6f10fb222206ced2c86c"
+      },
+      {
+        "tick": 50,
+        "passed": true,
+        "identical_sensor_mask": true,
+        "independent_mask_connected_components": 1,
+        "old_eligible_components": 3,
+        "new_eligible_components": 1,
+        "old_selected_area_m2": 0.01568023843608078,
+        "new_selected_area_m2": 0.03354582423957139,
+        "outside_allowed_triangles_m2": 0.0,
+        "frame_sha256": "e4a0c23104367a51bd6daeaa9b44347ab54574ad00390811e22b66f8138261e3"
+      }
+    ],
+    "tests_passed": 4,
+    "elapsed_seconds": 0.4272833499708213,
+    "new_physics_steps": 0,
+    "PPO_updates": 0,
+    "explanation": "Samepixelclassification; integerpixelunion avoids separatelyprojectedrun roundoff cracks. Originalnormal/plane/erosion/meshcriteria unchanged. Newpolygoncoverage checkedindependently."
+  },
+  "measured_model": {
+    "measured_model_passed": true,
+    "model_admitted": true,
+    "motion_admitted": false,
+    "current_camera_validated": true,
+    "physical_success": false,
+    "new_physics_steps": 0,
+    "PPO_updates": 0,
+    "nominal_rest_settle_s": 12.120000000000001,
+    "nominal_return_settle_s": 13.120000000000001,
+    "rest_load": 0.47038958040321494,
+    "model_effort_ratio": 0.33092858395933783,
+    "elapsed_seconds": 12.985738273942843
+  },
+  "model_checks": {
+    "feet": true,
+    "balance": true,
+    "plane_nonpenetration": true,
+    "patch_reserve": true,
+    "tilt": true,
+    "base_wrench": true,
+    "first20s_hold_reserve": true,
+    "return20s": true,
+    "partial_support": true,
+    "effort_hypothesis": true,
+    "original_command_limits": true,
+    "entire_observed_corner_polygon": true,
+    "full_mesh_clearance": true,
+    "independent_virtual_work": true
+  },
+  "model_clearance": {
+    "passed": true,
+    "sampled_poses": 321,
+    "triangle_tests": 2926,
+    "forbidden_or_early_clearance_intersections": [],
+    "forbidden_or_early_clearance_intersection_count": 0,
+    "expected_target_approaches": 177,
+    "clearance_buffer_m": 0.006,
+    "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+    "simulation_success": false
+  },
+  "counts": {
+    "new_GPU_captures": 1,
+    "new_physics_steps": 300,
+    "new_sitting_controls": 0,
+    "complete_cycles": 0,
+    "new_demonstrations": 0,
+    "new_PPO_updates": 0,
+    "new_full72_checks": 0,
+    "physical_repairs": 0,
+    "new_mechanical_constructions": 2,
+    "new_topology_validations": 1,
+    "unit_tests_passed": 4
+  },
+  "resources": {
+    "capture_owner_wall_s": 22.576510066981427,
+    "capture_child_wall_s": 18.23660705401562,
+    "depth_scientific_s": 0.6051488060038537,
+    "region_v2_scientific_s": 0.36575360695132986,
+    "model_v1": {
+      "returncode": 0,
+      "total_wall_s": 14.694895427965093,
+      "maxrss_KiB": 295784,
+      "outer_deadline": false,
+      "worker_pid": 2525429,
+      "new_physics_steps": 0,
+      "PPO_updates": 0
+    },
+    "topology": {
+      "returncode": 0,
+      "total_wall_s": 0.514802857011091,
+      "maxrss_KiB": 114572
+    },
+    "model_v2": {
+      "returncode": 0,
+      "total_wall_s": 13.039375379041303,
+      "maxrss_KiB": 295924,
+      "outer_deadline": false,
+      "worker_pid": 2530970,
+      "new_physics_steps": 0,
+      "PPO_updates": 0
+    },
+    "each_CPU_cap_s": 45,
+    "CPUcores": 1,
+    "ASGiB": 40,
+    "prior_queue_wait_andfailedstartup_preserved": true
+  },
+  "worker_check": {
+    "utc": "2026-11-09T04:55:31.291707+00:00",
+    "gpus": [
+      "0, NVIDIA GeForce RTX 4090, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 0 %, 43, 17 MiB",
+      "1, NVIDIA GeForce RTX 4070, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 86 %, 60, 4973 MiB"
+    ],
+    "compute_apps": [
+      "GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 2516468, /isaac-sim/kit/python/bin/python3"
+    ],
+    "queue_finished": true,
+    "own_motion_worker": false,
+    "own_PPO_worker": false
+  },
+  "next_work": "Camera capture now COMPLETE; no queued worker remains. Do not restart originalqueuedcapture, correctedcapture or completedtopology/modelchecks. Use observed_patch_v3.py in rest_cycle_patch_topology_20261109_v1 for futurecurrent-region processing, not oldproject-each-row v2. Measured support model v2 passes fullgeometry/mechanics/action/timing usingactualframe0 SHA78c4b36f0e7990b0f9c87cfe0404f171cf20165a048d6f10fb222206ced2c86c;12.12snominalsettle/13.12sreturn,47.04%BWsupport,torque-squared0.33093xstanding. Motion isNOTadmitted: loadedcontact/releaseobserver andsensor-drivenruntime stillunvalidated. Implement/freeze bounded runtime execution/calibration andindependentaudit preservingcurrentdepth/proprio inputs, <=.003radstep/.1filter/.03margin, originalfirst20s/final5shold plus<=20sreturn/2squiet. Treat unknownload asunknown; nativejointwrench shadowmapping isnotmotor torque/actoradmission; no truthfeedback or timer-assertedqualification. Then one actualsit-hold-stand cycle on4090only, verifyunloading/totaljoint-effort separately, repeat3starts before scaling/demos/PPO/all72. Footposes fixedinthismodel; step/repositionunvalidated. All64protected,8unresolved;freshholdoutclosed;4070untouched;automationdeleted.",
+  "prior_checkpoint_sha256": "28973c32a9a8dcdcaa255cb9a734063dd5033555b90475d4e03c4684cef1e6a7"
+}
