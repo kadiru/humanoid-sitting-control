@@ -1,0 +1,298 @@
+{
+  "utc": "2026-10-18T13:53:13.932190+00:00",
+  "scope": "Seal completed conserved-load construction evidence; no accepted new path or user-task completion.",
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "simplex_evidence_preservation_461.json",
+      "files": 8717,
+      "passed": true
+    },
+    {
+      "manifest": "simplex_supplemental_461.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "protected_files": 9118,
+  "manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_465.json",
+  "manifest_sha256": "35b091ad39c85ab629283583f0312c7c71b2cf5eccbeec3be3626cb98bd6e1c3",
+  "workers": [],
+  "actual_exits": {
+    "462_preparation": "8c8feb/session21387/exit0",
+    "463_assembly": "9a0220/session22304/exit0",
+    "462_freeze": "da136f/session57019/exit0",
+    "462_main": "24a10e/session55554",
+    "463_result": "440795/session29821",
+    "464_report": "d50495/session84829",
+    "465_index": "e81ce8/immediate"
+  },
+  "local_review": {
+    "utc": "2026-10-18T13:50:17.298243+00:00",
+    "visual_review_completed": true,
+    "report": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_464/findings.html",
+    "hash_verification": {
+      "utc": "2026-10-18T13:49:44.665970+00:00",
+      "checks": [
+        {
+          "folder": "simplex_solver_preparation_462",
+          "entries": 11,
+          "passed": true
+        },
+        {
+          "folder": "simplex_solver_preparation_audit_463",
+          "entries": 1,
+          "passed": true
+        },
+        {
+          "folder": "simplex_path_462",
+          "entries": 324,
+          "passed": true
+        },
+        {
+          "folder": "simplex_path_audit_463",
+          "entries": 5,
+          "passed": true
+        },
+        {
+          "folder": "progress_report_464",
+          "entries": 15,
+          "passed": true
+        }
+      ],
+      "entries": 356,
+      "all_passed": true
+    },
+    "reviewed": [
+      "Both plots",
+      "Formulation and reduced full-pivot bounds",
+      "Exact zero accepted and original440 inheritance",
+      "All26 conservation/bounds passes vs all26 hard failures",
+      "Two last normal-speed deficits and unchanged buffers",
+      "460/461v2/463 arithmetic evidence",
+      "27 LP table including one timeout",
+      "43 constraint groups",
+      "All1467 table and CSV records",
+      "All27708 unit-labeled original rows",
+      "All11 data links",
+      "Video307 loaded58.4s unchanged",
+      "No physics/filter/PPO or effort claim"
+    ],
+    "browser_url": "http://127.0.0.1:8807/progress_report_464/findings.html",
+    "browser_video_duration_s": 58.4,
+    "original_files_unchanged": true,
+    "report_executions": 1,
+    "scientific_or_audit_reruns": 0,
+    "formatting_recovery": false
+  },
+  "solver_summary": {
+    "utc": "2026-10-18T13:43:28.235117+00:00",
+    "scope": "ONE new conserved bounded-load whole-path feasibility construction.\nThe immutable440 source initializes the entire joint clock domain. No450 point\nis continued. New common-alpha exact-rational null-space chart preserves both\nload sums and unchanged full control boxes; no456 step is reused. Full nonlinear normal/hover,\ngeometry-derived hard rows and original/reserved/buffered rate/target rows remain.\n24 predictors/four corrections/120 LPs are the predeclared total budget. No\npost-budget extension, hidden fallback, force/target clipping or callback choice.\n",
+    "specification": {
+      "max_predictors": 24,
+      "max_corrections_per_predictor": 4,
+      "max_linear_programs": 120,
+      "lp_time_limit_s": 45.0,
+      "lp_method": "highs",
+      "lp_primal_dual_tolerance": 1e-09,
+      "independent_linear_bound": 1e-07,
+      "coordinate_domain_radius": 0.02,
+      "initial_trust_fraction": 1.0,
+      "minimum_trust_fraction": 0.03125,
+      "root_max_updates": 10,
+      "root_max_halvings": 9,
+      "root_absolute_tolerance": 1e-13,
+      "hover_numerical_bound": 1e-08,
+      "strict_inequality_bound": 0.0,
+      "predictor_guard": 9.5367431640625e-07,
+      "acceptance_ratio": 0.1,
+      "correction_radius_fraction": 0.25,
+      "max_consecutive_map_roundings": 120,
+      "coordinate_retraction": "exact rational common-alpha bounded load null-space chart460",
+      "seed": "immutable440, no450/456 final or rejected trial",
+      "budget_justification": "18 half-reductions cover original440 rate merit to unchanged2^-20 step guard; six rejection opportunities. Four correctors bound kinematic/gap defects.120 maps also satisfies the independently audited normal-rounding contract. This is one new algorithm; no extension.",
+      "normal_equation_policy": "All original normal rows checked at every path; zero tangent normal rows impose homogeneous conservation, never correction of their tiny already-admissible rounding residual.",
+      "physical_admission": false
+    },
+    "stop": "declared trust floor",
+    "predictors": 6,
+    "linear_programs": 27,
+    "nonlinear_trial_paths": 26,
+    "coordinate_map_failures": 0,
+    "accepted_steps": 0,
+    "last_accepted_linear_index": null,
+    "initial": {
+      "minimum_retained_buffered_row": -0.19791129319207476,
+      "minimum_hard_row": -9.788228589879822e-07,
+      "minimum_soft_row": -0.19791129319207476,
+      "soft_merit": 0.19791129319207476,
+      "hard_pass": false,
+      "all_inequalities_pass": false,
+      "minimum_phase": -9.788228589879822e-07,
+      "monotone_phase_pass": false,
+      "coordinate_bound_minimum": 2.8206304524295775e-06,
+      "maximum_retained_equality": 8.881784197001252e-16,
+      "maximum_kinematic_residual": 9.85878045867139e-14,
+      "minimum_corner_weight": 0.0,
+      "fixed_states_exact": true,
+      "inactive_exact_zero": true
+    },
+    "final": {
+      "minimum_retained_buffered_row": -0.19791129319207476,
+      "minimum_hard_row": -9.788228589879822e-07,
+      "minimum_soft_row": -0.19791129319207476,
+      "soft_merit": 0.19791129319207476,
+      "hard_pass": false,
+      "all_inequalities_pass": false,
+      "minimum_phase": -9.788228589879822e-07,
+      "monotone_phase_pass": false,
+      "coordinate_bound_minimum": 2.8206304524295775e-06,
+      "maximum_retained_equality": 8.881784197001252e-16,
+      "maximum_kinematic_residual": 9.85878045867139e-14,
+      "minimum_corner_weight": 0.0,
+      "fixed_states_exact": true,
+      "inactive_exact_zero": true
+    },
+    "wrapper_counts": {
+      "value_requests": 92,
+      "jacobian_requests": 54,
+      "trial_paths": 26,
+      "root_updates": 33
+    },
+    "source440_unchanged": true,
+    "source450_used_as_seed": false,
+    "source456_used_as_seed": false,
+    "reduced_coordinates": 10541,
+    "new_final_differs_from_source": false,
+    "sampled_full_geometry_pending": true,
+    "independent_audit_pending": true,
+    "actual_forward_filter_ticks": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "physical_admission": false,
+    "elapsed_s": 276.5571344390046
+  },
+  "independent_audit_summary": {
+    "utc": "2026-10-18T13:47:47.285901+00:00",
+    "scope": "Conditional result audit: new final states get new checks; exact old input\ninherits sealed441 geometry/work without repeating that completed model loop.\nThe frozen full-state auditor remains unchanged and is invoked only if needed.\n",
+    "passed": true,
+    "arithmetic_only": true,
+    "records": 1467,
+    "new_full_geometry_records": 0,
+    "new_finite_work_columns": 0,
+    "inherited441_exact_records": 1467,
+    "duplicate_new_records": 0,
+    "maximum_errors": {
+      "geometry": 2.584328882716121e-16,
+      "equilibrium": 2.220446049250313e-16,
+      "frame": 1.1102230246251565e-15,
+      "force_interpolation": 1.1102230246251565e-16,
+      "work": 6.276646757896742e-09,
+      "command": 4.184430579812215e-11,
+      "source_equivalence": 2.8606450541701633e-11,
+      "clock": 0.0,
+      "prior_rows": 0.0
+    },
+    "maximum_errors_scope": "inherited441, not new finite-work measurements",
+    "sampled_geometry_passed": true,
+    "sampled_geometry_failures": [],
+    "minimum_housing_m": 0.003731078343242842,
+    "minimum_cop_m": 0.00500095427236287,
+    "moving_command_margin_rad": 0.030147325375236594,
+    "maximum_static_effort_utilization": 0.938187298286034,
+    "original_clock_rate_minimum": -0.00043837897576593215,
+    "original_clock_target_minimum": 3.477566778986585e-06,
+    "prior_clock_rate_minimum": -0.0004393326500823384,
+    "prior_clock_target_minimum": 3.5762788286319847e-09,
+    "inheritance": {
+      "final_X_exact_initial": true,
+      "final_Y_exact_initial": true,
+      "final_features_exact_saved444": true,
+      "source440_manifest_sha256": "c82deffbf3edced7d28e1887f374436fe1b1388abc3e64f76b3ff51eb47b6a3a",
+      "source441_manifest_sha256": "c3410af58863420bb648af06eb90a5d87b3d5db8a9374511f83ab0ef4f0a44b8",
+      "preparation444_manifest_sha256": "d2d0146aa5f00ba9a0b468fc36e6bc9bac7ad5f2899109a81aba6e07484d07fe",
+      "new_full_geometry_records": 0,
+      "new_finite_work_columns": 0,
+      "details": "All1467 geometry/work records inherit sealed441; no completed geometry/root/finite-work loop repeated. Independent trial and row audits are new saved-array calculations."
+    },
+    "actual_forward_filter_ticks": 0,
+    "physics_ticks": 0,
+    "policy_updates": 0,
+    "physical_admission": false
+  },
+  "conservation": {
+    "utc": "2026-10-18T13:48:21.872664+00:00",
+    "scope": "Saved-only new-trial conservation and original-versus-buffered final rejection; no model/root/J/optimizer/audit replay",
+    "trials": 26,
+    "normal_pass_count": 26,
+    "maximum_normal": 6.661338147750939e-16,
+    "bounds_pass_count": 26,
+    "hard_pass_count": 0,
+    "hover_pass_count": 2,
+    "last_linear_index": 26,
+    "last_rows": [
+      {
+        "row": 215327,
+        "group": "mesh_normal_descent",
+        "scaled_residual": -7.425154811112521e-06,
+        "unscaled_residual": -5.0737623000068606e-11,
+        "scale": 6.833207426750813e-06,
+        "states": [
+          631,
+          1400
+        ],
+        "labels": [
+          656,
+          1455
+        ],
+        "times_s": [
+          13.12,
+          13.118861132095542
+        ],
+        "additional_buffer_m": 8.145818026960865e-13,
+        "original_unbuffered_residual_m": -4.992304119737252e-11
+      },
+      {
+        "row": 215435,
+        "group": "mesh_normal_descent",
+        "scaled_residual": -5.817120026279761e-06,
+        "unscaled_residual": -3.4902720157678566e-10,
+        "scale": 6e-05,
+        "states": [
+          632,
+          1283
+        ],
+        "labels": [
+          657,
+          1333
+        ],
+        "times_s": [
+          13.14,
+          13.15
+        ],
+        "additional_buffer_m": 7.152557373046875e-12,
+        "original_unbuffered_residual_m": -3.4187464420373877e-10
+      }
+    ],
+    "physical_admission": false
+  },
+  "source450_final_unchanged": true,
+  "source440_export_exact": true,
+  "no_geometry_or_finite_work_repeat": true,
+  "trajectory_lp_calls": 27,
+  "accepted_paths": 0,
+  "actual_forward_filter_ticks": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "video307_unchanged": true,
+  "best_clean": "64/72",
+  "protected_clean": 64,
+  "unresolved_cases": 8,
+  "repair_complete": false,
+  "task_complete": false,
+  "automation_status": "ACTIVE"
+}
