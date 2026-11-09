@@ -1,0 +1,83 @@
+{
+  "utc": "2026-10-17T07:51:58.140695+00:00",
+  "passed": true,
+  "physical_admission": false,
+  "source_input_hashes_passed": true,
+  "serialization_only_recovery_verified": true,
+  "rolling": [
+    {
+      "case": 0,
+      "path_knots": 181,
+      "maximum_independent_numeric_error": 3.9768535686768303e-16,
+      "maximum_relative_foot_transform_component_error": 6.87746887888252e-06,
+      "clearance_failed_knots": 0,
+      "peak_command_rate_rad_s": 0.20670153699478072,
+      "command_arc_rad": 0.6158522686094288,
+      "necessary_constant_rate_seconds_at_015": 4.105681790729525,
+      "necessary_constant_rate_seconds_at_0175": 3.5191558206253073,
+      "original_model_gate_passed": false
+    },
+    {
+      "case": 2,
+      "path_knots": 181,
+      "maximum_independent_numeric_error": 3.3306690738754696e-16,
+      "maximum_relative_foot_transform_component_error": 7.05131168712847e-06,
+      "clearance_failed_knots": 181,
+      "peak_command_rate_rad_s": 0.21146977604461345,
+      "command_arc_rad": 0.6287214826592991,
+      "necessary_constant_rate_seconds_at_015": 4.191476551061994,
+      "necessary_constant_rate_seconds_at_0175": 3.5926941866245663,
+      "original_model_gate_passed": false
+    },
+    {
+      "case": 6,
+      "path_knots": 181,
+      "maximum_independent_numeric_error": 3.3306690738754696e-16,
+      "maximum_relative_foot_transform_component_error": 7.1117866654590856e-06,
+      "clearance_failed_knots": 0,
+      "peak_command_rate_rad_s": 0.20768523820555349,
+      "command_arc_rad": 0.6193251082156626,
+      "necessary_constant_rate_seconds_at_015": 4.128834054771084,
+      "necessary_constant_rate_seconds_at_0175": 3.5390006183752147,
+      "original_model_gate_passed": false
+    },
+    {
+      "case": 10,
+      "path_knots": 181,
+      "maximum_independent_numeric_error": 4.510281037539698e-16,
+      "maximum_relative_foot_transform_component_error": 7.094554457853786e-06,
+      "clearance_failed_knots": 57,
+      "peak_command_rate_rad_s": 0.20889554561412357,
+      "command_arc_rad": 0.6225833487259729,
+      "necessary_constant_rate_seconds_at_015": 4.150555658173153,
+      "necessary_constant_rate_seconds_at_0175": 3.557619135576988,
+      "original_model_gate_passed": false
+    }
+  ],
+  "authority": [
+    {
+      "case": 0,
+      "com_replay_max_error": 0.0,
+      "physical_admission": false
+    },
+    {
+      "case": 2,
+      "com_replay_max_error": 0.0,
+      "physical_admission": false
+    },
+    {
+      "case": 6,
+      "com_replay_max_error": 0.0,
+      "physical_admission": false
+    },
+    {
+      "case": 10,
+      "com_replay_max_error": 0.0,
+      "physical_admission": false
+    }
+  ],
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "holdout_used": false,
+  "limits": "Checks recorded model arithmetic/FK/clearance/rates and source identity. Static allocation is hypothetical. No contact generation, friction/dynamics, collision cooking or executable approach certificate. Arm authority has no self-collision/path validation. All44 model gates remain failed."
+}

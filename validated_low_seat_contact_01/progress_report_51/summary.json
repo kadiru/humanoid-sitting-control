@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-17T08:06:11.270107+00:00",
+  "repair_complete": false,
+  "task_complete": false,
+  "main_training_started": false,
+  "fresh_holdout_started": false,
+  "policy_promoted": false,
+  "new_physical_ticks": 0,
+  "new_optimizer_updates": 0,
+  "best_current": {
+    "clean": 64,
+    "stable": 70,
+    "slip": 8,
+    "housing_contacts": 2,
+    "trials": 72,
+    "original_union_retained": 60,
+    "new_successes_retained": 4,
+    "warnings": 50,
+    "strict_clean": 22
+  },
+  "finding": "Queried cooked pelvis contact surface is about5.03\u20135.95mm above raw-planner hull in the selected recorded late/first-event samples. Raw vertices match configured asset exactly; collision approximation, not a different source mesh, explains this model discrepancy. Recorded force timing is consistent with it, not a single-cause proof. Actual contacts and unsupported outcomes remain failures.",
+  "geometry_only": true,
+  "recorded_episodes_reviewed": 120,
+  "queried_meshes": 32,
+  "primitives_unchanged": 6,
+  "model50_scope": "Separate offline planning collision model; never replace current sensors or visual self-mask with cooked collision points.",
+  "no_new_effort_result": true,
+  "next": "Design a complete support/clearance-feasible approach using the corrected collision representation, including an actual legal load transition and existing40deg terminal support. Deep36/+20 still fails3mm even with hypothetical seat support; do not execute endpoints or repeat blind gain/rate/arm changes. Retain64 and remove8 before PPO."
+}
