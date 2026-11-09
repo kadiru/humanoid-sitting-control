@@ -1,0 +1,21 @@
+Verified status: 2026-10-29T06:34:40.773633+00:00
+
+Training
+The new sensor-selected motion library plus 23-joint residual reproduced 64 clean successes in all 72 full, autonomous 20-second trials. There were no regressions and no repairs of the original eight failures. This is a development-set motion library, not evidence of generalization to new furniture.
+
+Saved-trajectory reward ranking and action/reset checks passed. The hard imitation-error ceiling was removed; optimizer logs now identify why each proposed update was rejected. Seed 64111 is running on the 4090: 28 completed updates, policy changes on all 28, 109 accepted actor steps. Both actor and critic changes were independently verified from checkpoint tensors. Seed 64117 follows sequentially. Full 72-case checks at updates 128 and 256 remain pending. The 4070 remains reserved for AIWorker.
+
+Furniture perception
+All 14 layouts appear in the rear-camera captures. The current single-plane recognizer matched the intended target in only 3 of 14 initial views. Strict depth-to-triangle agreement passed in only one layout; the remaining projection/render discrepancy is unresolved. These results do not qualify the whole perception pipeline as correct.
+Collage: ../motion_prior_ppo_20261029_v1/results/rear_depth_collage.jpg
+
+Furniture physics
+All 42 small 10 N presses found solid surfaces; 30 stayed in the intended contact patch. A numerical audit error was corrected by reproducing the logger's subtraction order with the original tolerances. No physical criteria changed.
+
+Actual G1 pelvis, thigh and torso hulls were tested under a controlled 158.1 N load (half the robot's weight). 24/42 tests met the steady support criteria, including the central test on every layout. Only 8/42 also passed the intended-patch check. Edge overhang and neighboring-face contacts need attention. These are controlled fixtures with gravity disabled and orientation held, not successful whole-robot rollouts. Furniture is rigid and anchored; softness and tipping were not tested.
+
+Video: results/media/furniture_support_and_forces.mp4
+50 seconds: all 24 seconds of small probes and 18 seconds of body tests at 1x, plus titles. Collision meshes and measured forces are shown. The downloaded file hash and center/edge frames were checked. No extra simulation was used to render it.
+
+Execution evidence
+The first body-test process stopped before physics because its exporter omitted instanced colliders. Version 2 extracts all four required body colliders from the same cached G1 asset. Completed benchmark and camera tests were reused. One finite scientific owner is active (PID 1139195). No recurring automation was created.
