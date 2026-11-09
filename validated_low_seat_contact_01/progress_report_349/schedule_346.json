@@ -1,0 +1,113 @@
+{
+  "utc": "2026-10-17T23:41:02.183842+00:00",
+  "scope": "Command-only inherited-filter/hover/normal-descent check on FIXED344 path.\nThree synthetic quiet/load modes; no simulation/current sensors/control installation.\nThis is not a dynamic prediction or a minimum-duration proof. No parent composition yet.\n",
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/multiknot_path_344/results.json": "6e337ba89f9baef840e63dc3f30785f66e618dcfdde325b2906e22a7e7f2590c",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/multiknot_audit_345/independent_audit.json": "001357417a4a9e37c3ce1ee6a59fdba2beedb93b3c56d4e2ac88230b84673d8c",
+    "/home/kadir/humanoid-sitting/scripts/schedule_low_seat_multiknot_346.py": "8867e59602eb958908427f0fcd1e35c9741e67632658e8c24e5d83c38f28ae00",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/cooked_model_50/model.json": "f31f0adccc3097c0fca195aba70d6f56f9f3e3add9f47e048e41042d7b90f340"
+  },
+  "rows": [
+    {
+      "mode": "synthetic_quiet_and_load",
+      "complete": false,
+      "command_ticks": 810,
+      "maximum_ticks": 1500,
+      "duration_s": 16.2,
+      "time_gate": false,
+      "stalled": {
+        "tick": 810,
+        "position": 1.8322856797931466,
+        "limit": 1.8385701197873137
+      },
+      "synthetic_quiet_count": 0,
+      "hover_released": false,
+      "final_position": 1.8322856797931466,
+      "hover": 1.8385701197873137,
+      "contact": 1.8801873664468316,
+      "final_gap_m": 0.01436167124898401,
+      "maximum_assumed_load_bw": 0.0,
+      "endpoint_exact": false,
+      "max_applied_vs_polyline_rad": 2.3283064365386963e-10,
+      "phase_time_s": {
+        "shift": 1.8800000000000001,
+        "swing": 6.32,
+        "approach": 8.0,
+        "load": 0.0
+      },
+      "physical_admission": false
+    },
+    {
+      "mode": "no_quiet",
+      "complete": false,
+      "command_ticks": 810,
+      "maximum_ticks": 1500,
+      "duration_s": 16.2,
+      "time_gate": false,
+      "stalled": {
+        "tick": 810,
+        "position": 1.8322856797931466,
+        "limit": 1.8385701197873137
+      },
+      "synthetic_quiet_count": 0,
+      "hover_released": false,
+      "final_position": 1.8322856797931466,
+      "hover": 1.8385701197873137,
+      "contact": 1.8801873664468316,
+      "final_gap_m": 0.01436167124898401,
+      "maximum_assumed_load_bw": 0.0,
+      "endpoint_exact": false,
+      "max_applied_vs_polyline_rad": 2.3283064365386963e-10,
+      "phase_time_s": {
+        "shift": 1.8800000000000001,
+        "swing": 6.32,
+        "approach": 8.0,
+        "load": 0.0
+      },
+      "physical_admission": false
+    },
+    {
+      "mode": "no_load",
+      "complete": false,
+      "command_ticks": 810,
+      "maximum_ticks": 1500,
+      "duration_s": 16.2,
+      "time_gate": false,
+      "stalled": {
+        "tick": 810,
+        "position": 1.8322856797931466,
+        "limit": 1.8385701197873137
+      },
+      "synthetic_quiet_count": 0,
+      "hover_released": false,
+      "final_position": 1.8322856797931466,
+      "hover": 1.8385701197873137,
+      "contact": 1.8801873664468316,
+      "final_gap_m": 0.01436167124898401,
+      "maximum_assumed_load_bw": 0.0,
+      "endpoint_exact": false,
+      "max_applied_vs_polyline_rad": 2.3283064365386963e-10,
+      "phase_time_s": {
+        "shift": 1.8800000000000001,
+        "swing": 6.32,
+        "approach": 8.0,
+        "load": 0.0
+      },
+      "physical_admission": false
+    }
+  ],
+  "necessary_continuous_reserved_rate_plus_hover_normal_time_s": 17.269704231935616,
+  "nominal_ankle_pitch_roll_rate": 0.1125,
+  "other_nominal_rate": 0.15,
+  "feedback_rate_reserve": 0.0375,
+  "synthetic_hover_s": 0.5,
+  "normal_descent_m_s": 0.006,
+  "allowance_s": 13.5,
+  "material_criteria_runtime_unchanged": true,
+  "parent_composition_checked": false,
+  "current_sensor_runtime": false,
+  "physics_ticks": 0,
+  "optimizer_updates": 0,
+  "physical_admission": false,
+  "limitations": "Only nominal command arithmetic on fixed344polyline. Current25sample rawqd/pitch/gyro/freshgeometry/load guards are not replaced by fixtures. No measured support, lift authorization, parent/feedback composition, bothplacement or dynamic certificate; static modeled foot loads are assumptions."
+}
