@@ -1,0 +1,81 @@
+{
+  "utc": "2026-10-18T11:25:15.985479+00:00",
+  "scope": "Saved-array-only stencil correction. No model/Jacobian/root rerun.\nOriginal446 accidentally started dense approach-gap order at node64; the\nunchanged original ordered-gap domain starts at node65. Remove ONLY those\nextra64->65 edges. Original27708/1572 rows and every inward reserve stay exact.\nBoth source/result versions remain immutable and separately named.\n",
+  "passed": true,
+  "total_inequality_rows": 331888,
+  "retained_optimizer_rows": 331495,
+  "explicit_equality_rows": 1411,
+  "retained_equality_rows": 1366,
+  "old_original_rows": 27708,
+  "old_coordinate_bound_rows": 1572,
+  "all_original_rows_replay_error": 6.394884621840902e-14,
+  "all_prior_rows_replay_error": 6.394884621840902e-14,
+  "old_buffered_rows_replay_error": 1.3642420526593924e-12,
+  "state_blocks": 1410,
+  "free_joint_phase_load_coordinates": 11906,
+  "root_dependent_coordinates_per_nonfixed_state": 14,
+  "maximum_root_condition": 20.406672800390062,
+  "maximum_implicit_equation_tangent": 5.012357750624117e-16,
+  "new_root_directional_error": 2.6728271818043936e-09,
+  "unchanged_directional_bound": 2e-06,
+  "new_perturbed_root_states": 12,
+  "full_path_roots_repeated": 0,
+  "sparse_chain_error": 1.1368683772161603e-13,
+  "minimum_scaled_row": -0.19791129319207476,
+  "minimum_soft_row": -0.19791129319207476,
+  "minimum_hard_row": -9.788228589879822e-07,
+  "new_candidate": false,
+  "solver_specification_frozen": false,
+  "optimizer_launch_allowed": false,
+  "actual_forward_filter_ticks": 0,
+  "physics_ticks": 0,
+  "policy_updates": 0,
+  "physical_admission": false,
+  "elapsed_s": 4.64248838997446,
+  "new_root_states_this_finalize": 0,
+  "removed_extra_approach_edges": [
+    {
+      "original_row": 189755,
+      "start_time": [
+        "287",
+        "50"
+      ],
+      "residual_m": -0.00024660457137726244
+    },
+    {
+      "original_row": 189790,
+      "start_time": [
+        "23",
+        "4"
+      ],
+      "residual_m": -0.00024768357096405236
+    },
+    {
+      "original_row": 189825,
+      "start_time": [
+        "144",
+        "25"
+      ],
+      "residual_m": -0.00024876310898225285
+    },
+    {
+      "original_row": 189860,
+      "start_time": [
+        "577",
+        "100"
+      ],
+      "residual_m": -0.0002498431810262214
+    },
+    {
+      "original_row": 189895,
+      "start_time": [
+        "289",
+        "50"
+      ],
+      "residual_m": -3.0114114383195112e-05
+    }
+  ],
+  "unchanged_evidence_source": "/data/humanoid-sitting-perception/low_seat_contact_01/clock_row_preparation_446",
+  "original_source_preparation_preserved": true,
+  "global_independent_audit_pending": true
+}
