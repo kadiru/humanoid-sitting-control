@@ -1,0 +1,140 @@
+{
+  "utc": "2026-10-17T08:57:06.654391+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "best_verified": {
+    "controller": "current_retention_09",
+    "clean": 64,
+    "stable": 70,
+    "total": 72,
+    "slipping": 8,
+    "housing_contacts": 2,
+    "retained_original_union": 60,
+    "additional_clean": 4,
+    "conservative_warnings": 50,
+    "strict_clean": 22
+  },
+  "new_physical_ticks": 0,
+  "new_optimizer_updates": 0,
+  "main_training_started": false,
+  "fresh_holdout_started": false,
+  "policy_promoted": false,
+  "spatial_endpoints": [
+    {
+      "case": 0,
+      "geometry": "36cm / +15\u00b0",
+      "clearance_mm": 4.503658668739818,
+      "endpoint_model_pass": true,
+      "tilt_deg": 14.837059032170565,
+      "parameters": [
+        -0.13285774607534348,
+        0.04999999999999737,
+        -0.004847802049077752,
+        0.2589111692590588,
+        -0.011144906673894983
+      ]
+    },
+    {
+      "case": 2,
+      "geometry": "36cm / +20\u00b0",
+      "clearance_mm": 1.2150036385654075,
+      "endpoint_model_pass": false,
+      "tilt_deg": 18.999651420116965,
+      "parameters": [
+        -0.12833881846204806,
+        -0.04997972838012187,
+        -0.03296178659342556,
+        0.33002441043202435,
+        -0.08606495976491503
+      ]
+    },
+    {
+      "case": 6,
+      "geometry": "37cm / +16.25\u00b0",
+      "clearance_mm": 4.301367205757079,
+      "endpoint_model_pass": true,
+      "tilt_deg": 15.639482774724582,
+      "parameters": [
+        -0.13215312036325738,
+        -0.05,
+        -0.016534017848286887,
+        0.27247172735021963,
+        -0.048702351910830374
+      ]
+    },
+    {
+      "case": 10,
+      "geometry": "36.5cm / +17.5\u00b0",
+      "clearance_mm": 3.06033880338187,
+      "endpoint_model_pass": true,
+      "tilt_deg": 16.8395530855228,
+      "parameters": [
+        -0.13057284594051186,
+        0.04999999999991093,
+        0.010807275329671828,
+        0.29371263095569217,
+        0.041725136599408144
+      ]
+    }
+  ],
+  "single_step_paths": [
+    {
+      "length_m": 0.06,
+      "knots": 105,
+      "max_replay_error": 1.713229142180622e-16,
+      "failed_knots": [
+        103,
+        104
+      ],
+      "model_screen_passed": false,
+      "min_clearance_mm": 2.0020837261003104,
+      "max_foot_position_error_mm": 0.26934812916866896,
+      "max_foot_orientation_error_deg": 0.18437801893156525,
+      "nominal_pose_schedule_at_0_15_rad_s": 14.5015064976179
+    },
+    {
+      "length_m": 0.1,
+      "knots": 105,
+      "max_replay_error": 1.8957816868854926e-16,
+      "failed_knots": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        104
+      ],
+      "model_screen_passed": false,
+      "min_clearance_mm": 2.7041979422642686,
+      "max_foot_position_error_mm": 5.908813251722805,
+      "max_foot_orientation_error_deg": 2.60802674321906,
+      "nominal_pose_schedule_at_0_15_rad_s": 14.81496807789753
+    }
+  ],
+  "video": {
+    "seconds": 58.4,
+    "codec": "h264",
+    "width": 3840,
+    "height": 2160,
+    "complete_trials": 696,
+    "successes": 405,
+    "failures": 291,
+    "recorded_prefixes": 72,
+    "aborted_prefixes_disclosed": 72,
+    "event_frames_checked": 462,
+    "sha256": "4858fef607fc083af3cbbb95cce4705dae54aac30458939033c860546a4e6890",
+    "scope": "All recorded physical attempts within this low-seat repair study through closure57; includes repeated trials and rejected controllers, not a success-rate estimate for the best controller. Diagnostic prefixes receive no full-trial verdict. Aborted attempts without a saved trace are disclosed without fabricated motion."
+  },
+  "next_requirement": "A complete sensor-driven contact transition with corrected cooked clearance, valid foot support and actual command/force feasibility must remove all8 failures and preserve all64 clean cases across72development trials before small PPO. Current endpoint/path studies do not meet this prerequisite. Limited searches do not establish impossibility.",
+  "rate_caveat": "The single-step pose arc divided by0.15rad/s is a nominal pose schedule metric. It is not a proven lower bound on actual PD command time; feedforward/command/rate/dynamic contact checks are still missing.",
+  "effort": "No new physical effort comparison. Best09 equals current61111 on common complete clean pairs; versus selected62111@8 on20 old-development common-clean cases whole20 torque\u00b2+4.38%, final5+25.45%. Torque is a proxy, not energy; no failed-fragment savings.",
+  "recoveries": "58 first search stopped on a degenerate sole polygon; v2 treats it as infeasible without changing any threshold.59 first video render expected completed episode summaries in diagnostic-prefix runs; v2 validates the same probe geometry mapping and labels prefixes separately. Originals/logs preserved in offline_recovery_58_59. No simulation rerun."
+}

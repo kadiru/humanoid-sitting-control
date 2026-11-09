@@ -1,0 +1,192 @@
+{
+  "utc": "2026-10-17T08:59:59.253779+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "notes": "## 2026-10-17 \u2014 closure64: audited planning failures and complete attempt video\n\nPhysical repair remains unresolved. Best verified current_retention_09 remains64/72clean,70stable,8slipping,2housing contacts; preserve all64. No physical trial, optimizer, fresh holdout or promotion ran in58\u201364. All jobs completed. Do not rerun completed studies.\n\nSpatial fixed-foot search58 used cooked50 collision/frozen inertia/current1s sensors, full6joint IK, bounded pelvis roll/yaw/lateral motion, fixed previously tested-.35rad arm poses and unchanged terminal40deg criterion (38deg research reserve). Best clearances:36/+15=4.504mm,36/+20=1.215mm,37/+16.25=4.301mm,36.5/+17.5=3.060mm. Deepest fails unchanged3mm model screen. These are static endpoints, not paths or sensed support. Independent61 replayed16endpoint records with max error<1e-9; no physical admission.\n\nSingle-step62 tested two complete105-knot kinematic sequences on deepest development case only: right rearward60/100mm step with35mm lift, left foot stationary, COM closest point5.5mm inside left sole,40percent crouch during swing then both-foot approach. Both fail.60mm:2failedknots,minimumclearance2.002mm,footerror.269mm/.184deg.100mm:14failedknots,clearance2.704mm,footerror5.909mm/2.608deg. Independent63 replayed all210pathknots plus2endpoints at unchanged1e-9. Horizontal foot motion begins with>=34.607mm target lift, no target foot dragging/teleportation. No physics or dynamic/force/self-collision/actual-command certificate. Pose arc/.15 gives14.50/14.81s nominal schedules; this is NOT a proven lower bound on actual PD command time. Fixed nominal finger poses are checked, not new fixed-command execution. Do not call these paths feasible or increase rates to bypass clearance/foot failures.\n\nUser additionally requested all attempts, success and failure, in a one-minute video. all_attempts_video_v2_59/all_attempts.mp4 is ready locally:58.4s,3840x2160,15fps,H264. All32 recorded sources:696complete20s trials (405success,291failure),72recorded diagnostic prefixes. Three aborted diagnostic runs/72case attempts have no saved motion and are explicitly disclosed as static panels. No fabricated trajectories. Independent all_attempts_video_audit_60 verifies complete inventory, exact saved labels,462first-event samples,sourcehashes,H264/duration. Counts aggregate historical rejected/repeated trials, not best-controller performance. Video is an offline schematic from recordedXYZW/bodyCOM transforms;0.1s poses bracket0.02s events. Update the video when future physical attempts/PPO add trials; keep every failure.\n\nRecoveries offline_recovery_58_59 preserve first58 degenerate sole Qhull error (now explicitly infeasible, thresholds unchanged) and first59 assumption that diagnostic prefixes had completed episode summaries (now checked geometry mapping, diagnostic labels). No physics rerun. Original artifacts remain unchanged.\n\nLocal progress_report_64 and video/audit folders copied and hash-verified:9original reportentries,2supplemental original/review hashes,3videoentries,6auditentries. Bothplots,HTML/tables and representative success/contact/intro frames visually inspected. URLhttp://127.0.0.1:8807/progress_report_64/review.html. This is interim DEVELOPMENT/model evidence and video, not repaired/PPO/unseen completion. No new effort result. Existing paired effort conclusions remain unchanged.\n\nNext work must produce a complete corrected-model contact transition with sufficient housing clearance and valid stance/swing foot constraints, actual bounded commands, sensed load and terminal support. These limited searches do not establish impossibility. Preserve64 and remove8 across72development BEFORE small PPO63111/63117; freshholdout staysclosed. No blind gain/arm/rate sweeps, endpoint-only physical launches, sensor substitution, physical threshold/material relaxation or promotion. Automation remainsACTIVE and taskunfinished; do not pause until requested repair/comparison delivered.\n",
+  "report": {
+    "utc": "2026-10-17T08:57:06.654391+00:00",
+    "task_complete": false,
+    "repair_complete": false,
+    "best_verified": {
+      "controller": "current_retention_09",
+      "clean": 64,
+      "stable": 70,
+      "total": 72,
+      "slipping": 8,
+      "housing_contacts": 2,
+      "retained_original_union": 60,
+      "additional_clean": 4,
+      "conservative_warnings": 50,
+      "strict_clean": 22
+    },
+    "new_physical_ticks": 0,
+    "new_optimizer_updates": 0,
+    "main_training_started": false,
+    "fresh_holdout_started": false,
+    "policy_promoted": false,
+    "spatial_endpoints": [
+      {
+        "case": 0,
+        "geometry": "36cm / +15\u00b0",
+        "clearance_mm": 4.503658668739818,
+        "endpoint_model_pass": true,
+        "tilt_deg": 14.837059032170565,
+        "parameters": [
+          -0.13285774607534348,
+          0.04999999999999737,
+          -0.004847802049077752,
+          0.2589111692590588,
+          -0.011144906673894983
+        ]
+      },
+      {
+        "case": 2,
+        "geometry": "36cm / +20\u00b0",
+        "clearance_mm": 1.2150036385654075,
+        "endpoint_model_pass": false,
+        "tilt_deg": 18.999651420116965,
+        "parameters": [
+          -0.12833881846204806,
+          -0.04997972838012187,
+          -0.03296178659342556,
+          0.33002441043202435,
+          -0.08606495976491503
+        ]
+      },
+      {
+        "case": 6,
+        "geometry": "37cm / +16.25\u00b0",
+        "clearance_mm": 4.301367205757079,
+        "endpoint_model_pass": true,
+        "tilt_deg": 15.639482774724582,
+        "parameters": [
+          -0.13215312036325738,
+          -0.05,
+          -0.016534017848286887,
+          0.27247172735021963,
+          -0.048702351910830374
+        ]
+      },
+      {
+        "case": 10,
+        "geometry": "36.5cm / +17.5\u00b0",
+        "clearance_mm": 3.06033880338187,
+        "endpoint_model_pass": true,
+        "tilt_deg": 16.8395530855228,
+        "parameters": [
+          -0.13057284594051186,
+          0.04999999999991093,
+          0.010807275329671828,
+          0.29371263095569217,
+          0.041725136599408144
+        ]
+      }
+    ],
+    "single_step_paths": [
+      {
+        "length_m": 0.06,
+        "knots": 105,
+        "max_replay_error": 1.713229142180622e-16,
+        "failed_knots": [
+          103,
+          104
+        ],
+        "model_screen_passed": false,
+        "min_clearance_mm": 2.0020837261003104,
+        "max_foot_position_error_mm": 0.26934812916866896,
+        "max_foot_orientation_error_deg": 0.18437801893156525,
+        "nominal_pose_schedule_at_0_15_rad_s": 14.5015064976179
+      },
+      {
+        "length_m": 0.1,
+        "knots": 105,
+        "max_replay_error": 1.8957816868854926e-16,
+        "failed_knots": [
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          104
+        ],
+        "model_screen_passed": false,
+        "min_clearance_mm": 2.7041979422642686,
+        "max_foot_position_error_mm": 5.908813251722805,
+        "max_foot_orientation_error_deg": 2.60802674321906,
+        "nominal_pose_schedule_at_0_15_rad_s": 14.81496807789753
+      }
+    ],
+    "video": {
+      "seconds": 58.4,
+      "codec": "h264",
+      "width": 3840,
+      "height": 2160,
+      "complete_trials": 696,
+      "successes": 405,
+      "failures": 291,
+      "recorded_prefixes": 72,
+      "aborted_prefixes_disclosed": 72,
+      "event_frames_checked": 462,
+      "sha256": "4858fef607fc083af3cbbb95cce4705dae54aac30458939033c860546a4e6890",
+      "scope": "All recorded physical attempts within this low-seat repair study through closure57; includes repeated trials and rejected controllers, not a success-rate estimate for the best controller. Diagnostic prefixes receive no full-trial verdict. Aborted attempts without a saved trace are disclosed without fabricated motion."
+    },
+    "next_requirement": "A complete sensor-driven contact transition with corrected cooked clearance, valid foot support and actual command/force feasibility must remove all8 failures and preserve all64 clean cases across72development trials before small PPO. Current endpoint/path studies do not meet this prerequisite. Limited searches do not establish impossibility.",
+    "rate_caveat": "The single-step pose arc divided by0.15rad/s is a nominal pose schedule metric. It is not a proven lower bound on actual PD command time; feedforward/command/rate/dynamic contact checks are still missing.",
+    "effort": "No new physical effort comparison. Best09 equals current61111 on common complete clean pairs; versus selected62111@8 on20 old-development common-clean cases whole20 torque\u00b2+4.38%, final5+25.45%. Torque is a proxy, not energy; no failed-fragment savings.",
+    "recoveries": "58 first search stopped on a degenerate sole polygon; v2 treats it as infeasible without changing any threshold.59 first video render expected completed episode summaries in diagnostic-prefix runs; v2 validates the same probe geometry mapping and labels prefixes separately. Originals/logs preserved in offline_recovery_58_59. No simulation rerun."
+  },
+  "local_review": {
+    "utc": "2026-10-17T08:59:21.419616+00:00",
+    "original_report_sha_entries": 9,
+    "supplemental_original_and_review_hashes": 2,
+    "video_original_sha_entries": 3,
+    "video_audit_sha_entries": 6,
+    "sha_verified": true,
+    "visually_inspected": [
+      "comparison.png",
+      "single_step_constraints.png",
+      "findings.html",
+      "review.html",
+      "video intro",
+      "video first_contact frame",
+      "video known_success frame"
+    ],
+    "video_duration_s": 58.4,
+    "video_codec": "h264",
+    "video_full_trials": 696,
+    "video_successes": 405,
+    "video_failures": 291,
+    "scope": "Interim report and all-attempts recorded-state schematic; repair/PPO comparison unfinished.",
+    "url": "http://127.0.0.1:8807/progress_report_64/review.html",
+    "video_sha256": "4858fef607fc083af3cbbb95cce4705dae54aac30458939033c860546a4e6890"
+  },
+  "preserved_prior_count": 24242,
+  "preserved_previous_evidence_count": 2722,
+  "new_completed_evidence_count": 2789,
+  "preservation_sha256": "81feaa78e15eee6e3977db01ab8a0bc7a94f110fcba07cd1e74ba5e3634eaa44",
+  "handoff_sha256": "c2682ba1c339db923c9aad20317252b8790759970528d491afef5642a68d21d1",
+  "protocol_sha256": "e1fab5d623f33625611491aad5be3a6ac666a020fd51501ac18cc050744457ad",
+  "new_physical_ticks": 0,
+  "new_optimizer_updates": 0,
+  "workers_running": false,
+  "next": "A complete sensor-driven contact transition with corrected cooked clearance, valid foot support and actual command/force feasibility must remove all8 failures and preserve all64 clean cases across72development trials before small PPO. Current endpoint/path studies do not meet this prerequisite. Limited searches do not establish impossibility.",
+  "completed_evidence_manifest": "completed_probes_preservation_v2_64.json",
+  "manifest_recovery": {
+    "utc": "2026-10-17T09:00:44.834030+00:00",
+    "scope": "Manifest-only recovery: closure64 captured its own active log before the final status line was appended. The exact two-line prefix reproduces the original hash. No prior/source/result changes. Original manifest and closure preserved; v2 records the finalized log.",
+    "original_manifest_sha256": "4c5b194062cebc7bcf9f3190cd74704bdfc0e5533234fe8874103f084b5a377d",
+    "original_closure_sha256": "32af1ed3083b1751742b7cac14d2f691fa61d66891cb7fd71654e78dcc4f70ea",
+    "old_log_prefix_hash": "3a89bdc6c0ad3326f97f756ae77248eb6295b86e5a27eed5e01918c8340c7725",
+    "final_log_hash": "673906398c36d9e988414e69126941a382ccea831fc2a96f72df8507ae68fe7a",
+    "physics_ticks": 0,
+    "optimizer_updates": 0
+  }
+}
