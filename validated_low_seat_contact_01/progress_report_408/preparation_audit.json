@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-18T07:42:53.305274+00:00",
+  "passed": true,
+  "scope": "Independent structural-map audit404; no root/projection/path optimization.\nRebuild positive loads and derivatives, moment equations, cumulative phases, gap\ntargets and their implicit derivatives from saved states. The original derivative\nbound is retained; arithmetic pass is not path, filter or physical admission.\n",
+  "variables": 895,
+  "positive_load_nodes": 114,
+  "endpoint_moment_nodes": 11,
+  "analytic_gap_root_records": 5,
+  "analytic_gap_columns": 90,
+  "all_rows": 27708,
+  "maximum_errors": {
+    "moment": 2.853273173286652e-14,
+    "moment_derivative": 8.90910898204028e-16,
+    "loads": 1.1102230246251565e-16,
+    "load_derivative": 1.925543058334256e-15,
+    "coordinates": 4.550396517921662e-16,
+    "root_equations": 2.731148640577885e-14,
+    "gap": 4.2587461335230614e-16,
+    "implicit_phase_derivative": 8.66934649068618e-12,
+    "full_map": 8.66934649068618e-12,
+    "chain_rule": 9.147416157873067e-11,
+    "directional": 4.5519663455229065e-09
+  },
+  "unchanged_derivative_bound": 2e-06,
+  "posthover_phase_order_still_explicit": true,
+  "full_geometry_checked": false,
+  "actual_float32_schedule": false,
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "physical_admission": false,
+  "source_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_structural_preparation_v2_405.py": "a8b965f88d61e86fe94cd9ec33ed7732c574dc68917bec8c24dd1f33cf9cb4f7",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/structural_preparation_404/preparation.json": "eca6dcc7bfcf9a5fd5d4bc3f5035b509d3feee015a0681e79737e392c453ee5b",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/structural_preparation_404/fixture.npz": "5ff69dc5e361773ee638dff0a59addc9844dd2271689c0dc9240ad9a2e56e05c"
+  }
+}
