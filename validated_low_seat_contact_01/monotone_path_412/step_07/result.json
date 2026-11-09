@@ -1,0 +1,66 @@
+{
+  "iteration": 7,
+  "elapsed_s": 133.00371363398153,
+  "trust_scale": 0.0078125,
+  "current_merit": 0.16358959295969405,
+  "solver_status": 0,
+  "solver_success": true,
+  "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "solver_wall_s": 2.1174427620135248,
+  "mip_nodes": 1,
+  "mip_gap": 0.0,
+  "candidate_available": true,
+  "accepted": true,
+  "linear_minimum": -9.193612269587682e-11,
+  "bound_minimum": 0.0,
+  "integer_decode_error": 0.0,
+  "linear_numerical_passed": true,
+  "predicted_merit": 0.14111510471152644,
+  "trials": [
+    {
+      "index": 0,
+      "alpha": 1.0,
+      "evaluated": true,
+      "predicted_merit": 0.1411151047546099,
+      "trial_merit": 0.14132579006233523,
+      "predicted_reduction": 0.02247448820508416,
+      "actual_reduction": 0.022263802897358825,
+      "acceptance_ratio": 0.9906255792878224,
+      "hard_nonlinear_passed": false,
+      "minimum_actual_hard_row": -7.55389400570669e-08,
+      "actual_coordinate_bound_margin": 0.00016433266388282686,
+      "actual_hover_residual": 1.4456028966473393e-15,
+      "accepted": false,
+      "trial_budgets": [
+        93.0,
+        194.0,
+        246.0,
+        101.0,
+        16.0
+      ]
+    },
+    {
+      "index": 1,
+      "alpha": 0.5,
+      "evaluated": true,
+      "predicted_merit": 0.1523523488356102,
+      "trial_merit": 0.1523553700346307,
+      "predicted_reduction": 0.011237244124083862,
+      "actual_reduction": 0.011234222925063347,
+      "acceptance_ratio": 0.9997311441322131,
+      "hard_nonlinear_passed": true,
+      "minimum_actual_hard_row": 1.2863819015264113e-08,
+      "actual_coordinate_bound_margin": 0.00016443883795302927,
+      "actual_hover_residual": 8.673617379884035e-16,
+      "accepted": true,
+      "trial_budgets": [
+        93.0,
+        194.0,
+        246.0,
+        101.0,
+        16.0
+      ]
+    }
+  ],
+  "integer_budget_changed": false
+}
