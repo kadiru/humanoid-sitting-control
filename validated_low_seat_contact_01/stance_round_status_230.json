@@ -1,0 +1,144 @@
+{
+  "utc": "2026-10-17T16:05:16.672022+00:00",
+  "phase": "offline_stance_paths_audited_physical_repair_unresolved",
+  "physical_admission_passed": false,
+  "main_training_started": false,
+  "fresh_holdout_started": false,
+  "workers_running": false,
+  "physical_ticks": 0,
+  "optimizer_updates": 0,
+  "model_candidate_case0": {
+    "case": 0,
+    "evaluations": 39,
+    "budget_reached": true,
+    "optimizer_message": "bounded evaluation cap",
+    "best_coarse": {
+      "index": 34,
+      "parameters": [
+        -0.13382720377355053,
+        0.0,
+        -0.0044589493119288675,
+        0.2525613749909242,
+        -0.008636370891299615
+      ],
+      "optimization_variables": [
+        -0.13382720377355053,
+        -0.0044589493119288675,
+        0.2525613749909242,
+        -0.008636370891299615
+      ],
+      "model_passed": true,
+      "other_research_passed": true,
+      "constraints": [
+        0.032505000567834244,
+        3.285332205588132e-07,
+        0.10276108929998859,
+        0.0029999963502223273,
+        0.008726638089843987,
+        0.22446108341531937,
+        0.633867856479161,
+        0.027659729016510263,
+        0.09228886127089206,
+        0.03975669245421583
+      ],
+      "clearance_m": 0.00311153441758859,
+      "maximum_assumed_foot_load_difference_BW": 0.007711138729107947,
+      "maximum_ankle_roll_command_change_rad": 0.00024330754578417177,
+      "summary": {
+        "geometry_passed": true,
+        "failed_geometry_knots": [],
+        "knots": 19,
+        "minimum_housing_clearance_mm": 3.11153441758859,
+        "max_foot_position_error_mm": 3.649777672844159e-06,
+        "max_foot_orientation_error_deg": 4.6811383306366586e-07,
+        "minimum_command_margin_rad": 0.25446108341531937,
+        "commands_passed": true,
+        "command_polyline_time_s": 8.812524871335235,
+        "time_gate_passed": true,
+        "endpoint_model_passed": true,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": -1,
+        "geometry_unchanged": true,
+        "failed_knots": [],
+        "maximum_effort_utilization": 0.366132143520839,
+        "first_command_change_max_rad": 0.019276024394390245,
+        "max_adjacent_ankle_torque_change_Nm": 1.505093094762306,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.32264287041678,
+            7.235171311095194
+          ],
+          [
+            7.171322808570875,
+            7.083834279739847
+          ]
+        ]
+      }
+    },
+    "dense_summary": {
+      "geometry_passed": true,
+      "failed_geometry_knots": [],
+      "knots": 91,
+      "minimum_housing_clearance_mm": 3.111534417591836,
+      "max_foot_position_error_mm": 3.6169163155608815e-06,
+      "max_foot_orientation_error_deg": 1.121938772598035e-07,
+      "minimum_command_margin_rad": 0.2544491398275493,
+      "commands_passed": true,
+      "command_polyline_time_s": 8.821610312854167,
+      "time_gate_passed": true,
+      "endpoint_model_passed": true,
+      "actual_filter_checked": false,
+      "load_is_measured": false,
+      "whole_sampled_path_checked": true,
+      "case": -1,
+      "geometry_unchanged": true,
+      "failed_knots": [],
+      "maximum_effort_utilization": 0.366132143520839,
+      "first_command_change_max_rad": 0.0008048151056797015,
+      "max_adjacent_ankle_torque_change_Nm": 0.4455075560495749,
+      "first_ankle_pitch_torque_Nm": [
+        [
+          7.32264287041678,
+          7.235171311095194
+        ],
+        [
+          7.316350693846302,
+          7.228878320165646
+        ]
+      ]
+    },
+    "model_passed": true,
+    "research_pass": true,
+    "dense_research_constraints": [
+      0.03243966918539494,
+      3.285332205588132e-07,
+      0.10272878383441805,
+      0.0029999963830836846,
+      0.00872664430181909,
+      0.2244491398275493,
+      0.633867856479161,
+      0.02765972901651032,
+      0.09228886127388405,
+      0.03975669245421436
+    ],
+    "maximum_assumed_foot_load_difference_BW": 0.007711138726115951,
+    "maximum_ankle_roll_command_change_rad": 0.00024330754578564092,
+    "schedule": {
+      "checked": true,
+      "synthetic_quiet_and_load": true,
+      "duration_s": 11.040000000000001,
+      "ticks": 552,
+      "complete": true,
+      "time_gate_passed": true,
+      "physical_admission": false
+    }
+  },
+  "audits": {
+    "centered_path_audit_222": 364,
+    "centered_contact_audit_224": 980,
+    "lateral_demand_audit_226": 1512,
+    "centered_orientation_audit_v2_228": 3385
+  }
+}

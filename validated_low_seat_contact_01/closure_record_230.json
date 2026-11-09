@@ -1,0 +1,795 @@
+{
+  "utc": "2026-10-17T16:05:16.672022+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_active_physics_ticks": 0,
+  "new_initial_settling_ticks": 0,
+  "new_indexed_warmup_ticks": 0,
+  "new_optimizer_updates": 0,
+  "new_full20s_trials": 0,
+  "new_diagnostic_prefixes": 0,
+  "new_aborted_case_attempts": 0,
+  "holdout_started": false,
+  "physical_admission_passed": false,
+  "best_verified_controller": "current_retention_09",
+  "latest_physical_candidate": "bias_probe_210",
+  "best_model_candidate": "/data/humanoid-sitting-perception/low_seat_contact_01/centered_orientation_refinement_v2_227/case_0.json",
+  "model_summary": {
+    "case": 0,
+    "evaluations": 39,
+    "budget_reached": true,
+    "optimizer_message": "bounded evaluation cap",
+    "best_coarse": {
+      "index": 34,
+      "parameters": [
+        -0.13382720377355053,
+        0.0,
+        -0.0044589493119288675,
+        0.2525613749909242,
+        -0.008636370891299615
+      ],
+      "optimization_variables": [
+        -0.13382720377355053,
+        -0.0044589493119288675,
+        0.2525613749909242,
+        -0.008636370891299615
+      ],
+      "model_passed": true,
+      "other_research_passed": true,
+      "constraints": [
+        0.032505000567834244,
+        3.285332205588132e-07,
+        0.10276108929998859,
+        0.0029999963502223273,
+        0.008726638089843987,
+        0.22446108341531937,
+        0.633867856479161,
+        0.027659729016510263,
+        0.09228886127089206,
+        0.03975669245421583
+      ],
+      "clearance_m": 0.00311153441758859,
+      "maximum_assumed_foot_load_difference_BW": 0.007711138729107947,
+      "maximum_ankle_roll_command_change_rad": 0.00024330754578417177,
+      "summary": {
+        "geometry_passed": true,
+        "failed_geometry_knots": [],
+        "knots": 19,
+        "minimum_housing_clearance_mm": 3.11153441758859,
+        "max_foot_position_error_mm": 3.649777672844159e-06,
+        "max_foot_orientation_error_deg": 4.6811383306366586e-07,
+        "minimum_command_margin_rad": 0.25446108341531937,
+        "commands_passed": true,
+        "command_polyline_time_s": 8.812524871335235,
+        "time_gate_passed": true,
+        "endpoint_model_passed": true,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": -1,
+        "geometry_unchanged": true,
+        "failed_knots": [],
+        "maximum_effort_utilization": 0.366132143520839,
+        "first_command_change_max_rad": 0.019276024394390245,
+        "max_adjacent_ankle_torque_change_Nm": 1.505093094762306,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.32264287041678,
+            7.235171311095194
+          ],
+          [
+            7.171322808570875,
+            7.083834279739847
+          ]
+        ]
+      }
+    },
+    "dense_summary": {
+      "geometry_passed": true,
+      "failed_geometry_knots": [],
+      "knots": 91,
+      "minimum_housing_clearance_mm": 3.111534417591836,
+      "max_foot_position_error_mm": 3.6169163155608815e-06,
+      "max_foot_orientation_error_deg": 1.121938772598035e-07,
+      "minimum_command_margin_rad": 0.2544491398275493,
+      "commands_passed": true,
+      "command_polyline_time_s": 8.821610312854167,
+      "time_gate_passed": true,
+      "endpoint_model_passed": true,
+      "actual_filter_checked": false,
+      "load_is_measured": false,
+      "whole_sampled_path_checked": true,
+      "case": -1,
+      "geometry_unchanged": true,
+      "failed_knots": [],
+      "maximum_effort_utilization": 0.366132143520839,
+      "first_command_change_max_rad": 0.0008048151056797015,
+      "max_adjacent_ankle_torque_change_Nm": 0.4455075560495749,
+      "first_ankle_pitch_torque_Nm": [
+        [
+          7.32264287041678,
+          7.235171311095194
+        ],
+        [
+          7.316350693846302,
+          7.228878320165646
+        ]
+      ]
+    },
+    "model_passed": true,
+    "research_pass": true,
+    "dense_research_constraints": [
+      0.03243966918539494,
+      3.285332205588132e-07,
+      0.10272878383441805,
+      0.0029999963830836846,
+      0.00872664430181909,
+      0.2244491398275493,
+      0.633867856479161,
+      0.02765972901651032,
+      0.09228886127388405,
+      0.03975669245421436
+    ],
+    "maximum_assumed_foot_load_difference_BW": 0.007711138726115951,
+    "maximum_ankle_roll_command_change_rad": 0.00024330754578564092,
+    "schedule": {
+      "checked": true,
+      "synthetic_quiet_and_load": true,
+      "duration_s": 11.040000000000001,
+      "ticks": 552,
+      "complete": true,
+      "time_gate_passed": true,
+      "physical_admission": false
+    }
+  },
+  "all_model_summaries": [
+    {
+      "case": 0,
+      "evaluations": 39,
+      "budget_reached": true,
+      "optimizer_message": "bounded evaluation cap",
+      "best_coarse": {
+        "index": 34,
+        "parameters": [
+          -0.13382720377355053,
+          0.0,
+          -0.0044589493119288675,
+          0.2525613749909242,
+          -0.008636370891299615
+        ],
+        "optimization_variables": [
+          -0.13382720377355053,
+          -0.0044589493119288675,
+          0.2525613749909242,
+          -0.008636370891299615
+        ],
+        "model_passed": true,
+        "other_research_passed": true,
+        "constraints": [
+          0.032505000567834244,
+          3.285332205588132e-07,
+          0.10276108929998859,
+          0.0029999963502223273,
+          0.008726638089843987,
+          0.22446108341531937,
+          0.633867856479161,
+          0.027659729016510263,
+          0.09228886127089206,
+          0.03975669245421583
+        ],
+        "clearance_m": 0.00311153441758859,
+        "maximum_assumed_foot_load_difference_BW": 0.007711138729107947,
+        "maximum_ankle_roll_command_change_rad": 0.00024330754578417177,
+        "summary": {
+          "geometry_passed": true,
+          "failed_geometry_knots": [],
+          "knots": 19,
+          "minimum_housing_clearance_mm": 3.11153441758859,
+          "max_foot_position_error_mm": 3.649777672844159e-06,
+          "max_foot_orientation_error_deg": 4.6811383306366586e-07,
+          "minimum_command_margin_rad": 0.25446108341531937,
+          "commands_passed": true,
+          "command_polyline_time_s": 8.812524871335235,
+          "time_gate_passed": true,
+          "endpoint_model_passed": true,
+          "actual_filter_checked": false,
+          "load_is_measured": false,
+          "whole_sampled_path_checked": true,
+          "case": -1,
+          "geometry_unchanged": true,
+          "failed_knots": [],
+          "maximum_effort_utilization": 0.366132143520839,
+          "first_command_change_max_rad": 0.019276024394390245,
+          "max_adjacent_ankle_torque_change_Nm": 1.505093094762306,
+          "first_ankle_pitch_torque_Nm": [
+            [
+              7.32264287041678,
+              7.235171311095194
+            ],
+            [
+              7.171322808570875,
+              7.083834279739847
+            ]
+          ]
+        }
+      },
+      "dense_summary": {
+        "geometry_passed": true,
+        "failed_geometry_knots": [],
+        "knots": 91,
+        "minimum_housing_clearance_mm": 3.111534417591836,
+        "max_foot_position_error_mm": 3.6169163155608815e-06,
+        "max_foot_orientation_error_deg": 1.121938772598035e-07,
+        "minimum_command_margin_rad": 0.2544491398275493,
+        "commands_passed": true,
+        "command_polyline_time_s": 8.821610312854167,
+        "time_gate_passed": true,
+        "endpoint_model_passed": true,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": -1,
+        "geometry_unchanged": true,
+        "failed_knots": [],
+        "maximum_effort_utilization": 0.366132143520839,
+        "first_command_change_max_rad": 0.0008048151056797015,
+        "max_adjacent_ankle_torque_change_Nm": 0.4455075560495749,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.32264287041678,
+            7.235171311095194
+          ],
+          [
+            7.316350693846302,
+            7.228878320165646
+          ]
+        ]
+      },
+      "model_passed": true,
+      "research_pass": true,
+      "dense_research_constraints": [
+        0.03243966918539494,
+        3.285332205588132e-07,
+        0.10272878383441805,
+        0.0029999963830836846,
+        0.00872664430181909,
+        0.2244491398275493,
+        0.633867856479161,
+        0.02765972901651032,
+        0.09228886127388405,
+        0.03975669245421436
+      ],
+      "maximum_assumed_foot_load_difference_BW": 0.007711138726115951,
+      "maximum_ankle_roll_command_change_rad": 0.00024330754578564092,
+      "schedule": {
+        "checked": true,
+        "synthetic_quiet_and_load": true,
+        "duration_s": 11.040000000000001,
+        "ticks": 552,
+        "complete": true,
+        "time_gate_passed": true,
+        "physical_admission": false
+      }
+    },
+    {
+      "case": 2,
+      "evaluations": 40,
+      "budget_reached": true,
+      "optimizer_message": "bounded evaluation cap",
+      "best_coarse": {
+        "index": 4,
+        "parameters": [
+          -0.17421941980338063,
+          0.0,
+          0.0,
+          0.33187887301558855,
+          1e-05
+        ],
+        "optimization_variables": [
+          -0.17421941980338063,
+          0.0,
+          0.33187887301558855,
+          1e-05
+        ],
+        "model_passed": false,
+        "other_research_passed": false,
+        "constraints": [
+          -0.0007270454633836352,
+          0.04871265888052202,
+          0.10554094458464683,
+          0.002999996463402053,
+          0.008726645738624389,
+          0.22976562409843007,
+          0.4776342043621249,
+          -0.005,
+          0.09229416085005296,
+          0.03936389016327962
+        ],
+        "clearance_m": -0.000573758539596466,
+        "maximum_assumed_foot_load_difference_BW": 0.007705839149947047,
+        "maximum_ankle_roll_command_change_rad": 0.0006361098367203862,
+        "summary": {
+          "geometry_passed": false,
+          "failed_geometry_knots": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "knots": 19,
+          "minimum_housing_clearance_mm": -0.5737585395964659,
+          "max_foot_position_error_mm": 3.536597947144729e-06,
+          "max_foot_orientation_error_deg": 2.9870997547384294e-08,
+          "minimum_command_margin_rad": 0.25976562409843007,
+          "commands_passed": false,
+          "command_polyline_time_s": 9.792980461372101,
+          "time_gate_passed": true,
+          "endpoint_model_passed": false,
+          "actual_filter_checked": false,
+          "load_is_measured": false,
+          "whole_sampled_path_checked": true,
+          "case": -1,
+          "geometry_unchanged": true,
+          "failed_knots": [
+            13,
+            14,
+            15,
+            16
+          ],
+          "maximum_effort_utilization": 0.5223657956378751,
+          "first_command_change_max_rad": 0.021274242884575134,
+          "max_adjacent_ankle_torque_change_Nm": 2.5936645385332593,
+          "first_ankle_pitch_torque_Nm": [
+            [
+              7.3227377675681575,
+              7.235293090202627
+            ],
+            [
+              7.0870585222247895,
+              6.999682992508072
+            ]
+          ]
+        }
+      },
+      "dense_summary": {
+        "geometry_passed": false,
+        "failed_geometry_knots": [
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90
+        ],
+        "knots": 91,
+        "minimum_housing_clearance_mm": -0.5737585395896595,
+        "max_foot_position_error_mm": 3.8093151596236815e-06,
+        "max_foot_orientation_error_deg": 3.994670290598473e-08,
+        "minimum_command_margin_rad": 0.25976562409843007,
+        "commands_passed": false,
+        "command_polyline_time_s": 9.879527357617881,
+        "time_gate_passed": true,
+        "endpoint_model_passed": false,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": -1,
+        "geometry_unchanged": true,
+        "failed_knots": [
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81
+        ],
+        "maximum_effort_utilization": 0.5253098402637211,
+        "first_command_change_max_rad": 0.0008875081275368513,
+        "max_adjacent_ankle_torque_change_Nm": 1.4147043524327678,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.3227377675681575,
+            7.235293090202627
+          ],
+          [
+            7.312917851941564,
+            7.22547607051943
+          ]
+        ]
+      },
+      "model_passed": false,
+      "research_pass": false,
+      "dense_research_constraints": [
+        -0.000727045463325973,
+        0.04871265888052202,
+        0.10554094458471552,
+        0.0029999961906848403,
+        0.008726645562770157,
+        0.22976562409843007,
+        0.4746901597362789,
+        -0.005000000000000007,
+        0.09229416085005296,
+        0.039363890163286445
+      ],
+      "maximum_assumed_foot_load_difference_BW": 0.007705839149947047,
+      "maximum_ankle_roll_command_change_rad": 0.0006361098367135545,
+      "schedule": {
+        "checked": false,
+        "physical_admission": false
+      }
+    },
+    {
+      "case": 6,
+      "evaluations": 40,
+      "budget_reached": true,
+      "optimizer_message": "bounded evaluation cap",
+      "best_coarse": {
+        "index": 30,
+        "parameters": [
+          -0.13151084194018772,
+          0.0,
+          -0.0034579573418886,
+          0.27773314226451135,
+          -0.004534164463123436
+        ],
+        "optimization_variables": [
+          -0.13151084194018772,
+          -0.0034579573418886,
+          0.27773314226451135,
+          -0.004534164463123436
+        ],
+        "model_passed": false,
+        "other_research_passed": true,
+        "constraints": [
+          0.035750258696076495,
+          8.989934403985655e-07,
+          0.1031184240309205,
+          0.00299999497970772,
+          0.008726637048574473,
+          0.2281658942905204,
+          0.6338398131710916,
+          0.027653538098265696,
+          0.09200969099615611,
+          0.03984270368976535
+        ],
+        "clearance_m": 0.0029279878564556975,
+        "maximum_assumed_foot_load_difference_BW": 0.007990309003843898,
+        "maximum_ankle_roll_command_change_rad": 0.00015729631023465138,
+        "summary": {
+          "geometry_passed": false,
+          "failed_geometry_knots": [
+            16,
+            17,
+            18
+          ],
+          "knots": 19,
+          "minimum_housing_clearance_mm": 2.9279878564556974,
+          "max_foot_position_error_mm": 5.020292279847571e-06,
+          "max_foot_orientation_error_deg": 5.277741815005409e-07,
+          "minimum_command_margin_rad": 0.2581658942905204,
+          "commands_passed": true,
+          "command_polyline_time_s": 8.878683942302953,
+          "time_gate_passed": true,
+          "endpoint_model_passed": false,
+          "actual_filter_checked": false,
+          "load_is_measured": false,
+          "whole_sampled_path_checked": true,
+          "case": -1,
+          "geometry_unchanged": true,
+          "failed_knots": [],
+          "maximum_effort_utilization": 0.36616018682890833,
+          "first_command_change_max_rad": 0.019337189739746574,
+          "max_adjacent_ankle_torque_change_Nm": 1.5255022225359332,
+          "first_ankle_pitch_torque_Nm": [
+            [
+              7.323203736578167,
+              7.235786616952473
+            ],
+            [
+              7.177979978224912,
+              7.090480081989937
+            ]
+          ]
+        }
+      },
+      "dense_summary": {
+        "geometry_passed": false,
+        "failed_geometry_knots": [
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90
+        ],
+        "knots": 91,
+        "minimum_housing_clearance_mm": 2.9279878564589734,
+        "max_foot_position_error_mm": 3.583850619243588e-06,
+        "max_foot_orientation_error_deg": 1.1633235203867e-07,
+        "minimum_command_margin_rad": 0.2581653866280561,
+        "commands_passed": true,
+        "command_polyline_time_s": 8.88688485115692,
+        "time_gate_passed": true,
+        "endpoint_model_passed": false,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": -1,
+        "geometry_unchanged": true,
+        "failed_knots": [],
+        "maximum_effort_utilization": 0.36616018682890833,
+        "first_command_change_max_rad": 0.0008070889132569259,
+        "max_adjacent_ankle_torque_change_Nm": 0.45154865787057386,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.323203736578167,
+            7.235786616952473
+          ],
+          [
+            7.317162313760454,
+            7.229741692663381
+          ]
+        ]
+      },
+      "model_passed": false,
+      "research_pass": false,
+      "dense_research_constraints": [
+        0.03566574136847238,
+        8.989934403985655e-07,
+        0.1030860794471826,
+        0.002999996416149381,
+        0.008726644229589077,
+        0.2281653866280561,
+        0.6338398131710916,
+        0.027653538098265738,
+        0.09200969099615589,
+        0.03984270368976354
+      ],
+      "maximum_assumed_foot_load_difference_BW": 0.00799030900384412,
+      "maximum_ankle_roll_command_change_rad": 0.00015729631023645997,
+      "schedule": {
+        "checked": false,
+        "physical_admission": false
+      }
+    },
+    {
+      "case": 10,
+      "evaluations": 40,
+      "budget_reached": true,
+      "optimizer_message": "bounded evaluation cap",
+      "best_coarse": {
+        "index": 35,
+        "parameters": [
+          -0.1315430920872243,
+          0.0,
+          -0.0019125385329833607,
+          0.28763011366846214,
+          0.0017310072522936245
+        ],
+        "optimization_variables": [
+          -0.1315430920872243,
+          -0.0019125385329833607,
+          0.28763011366846214,
+          0.0017310072522936245
+        ],
+        "model_passed": false,
+        "other_research_passed": true,
+        "constraints": [
+          0.036346319782754065,
+          9.602988211565577e-08,
+          0.1028942963100283,
+          0.0029999948921810935,
+          0.008726635228164187,
+          0.2293778094092169,
+          0.6338412616545049,
+          0.02764177588137164,
+          0.0909055852315254,
+          0.03991217529156294
+        ],
+        "clearance_m": 0.0017000819850018591,
+        "maximum_assumed_foot_load_difference_BW": 0.009094414768474612,
+        "maximum_ankle_roll_command_change_rad": 8.782470843705908e-05,
+        "summary": {
+          "geometry_passed": false,
+          "failed_geometry_knots": [
+            16,
+            17,
+            18
+          ],
+          "knots": 19,
+          "minimum_housing_clearance_mm": 1.7000819850018591,
+          "max_foot_position_error_mm": 5.107818906624663e-06,
+          "max_foot_orientation_error_deg": 6.320760078914863e-07,
+          "minimum_command_margin_rad": 0.2593778094092169,
+          "commands_passed": true,
+          "command_polyline_time_s": 9.141843784253528,
+          "time_gate_passed": true,
+          "endpoint_model_passed": false,
+          "actual_filter_checked": false,
+          "load_is_measured": false,
+          "whole_sampled_path_checked": true,
+          "case": -1,
+          "geometry_unchanged": true,
+          "failed_knots": [],
+          "maximum_effort_utilization": 0.36615873834549506,
+          "first_command_change_max_rad": 0.019837396939480723,
+          "max_adjacent_ankle_torque_change_Nm": 1.54762373273588,
+          "first_ankle_pitch_torque_Nm": [
+            [
+              7.323174766909902,
+              7.235459298251309
+            ],
+            [
+              7.18246138263626,
+              7.094550912901449
+            ]
+          ]
+        }
+      },
+      "dense_summary": {
+        "geometry_passed": false,
+        "failed_geometry_knots": [
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90
+        ],
+        "knots": 91,
+        "minimum_housing_clearance_mm": 1.700081985006519,
+        "max_foot_position_error_mm": 3.838850257822555e-06,
+        "max_foot_orientation_error_deg": 1.3373877911613727e-07,
+        "minimum_command_margin_rad": 0.2593778094092159,
+        "commands_passed": true,
+        "command_polyline_time_s": 9.153040230816401,
+        "time_gate_passed": true,
+        "endpoint_model_passed": false,
+        "actual_filter_checked": false,
+        "load_is_measured": false,
+        "whole_sampled_path_checked": true,
+        "case": -1,
+        "geometry_unchanged": true,
+        "failed_knots": [],
+        "maximum_effort_utilization": 0.36615873834549506,
+        "first_command_change_max_rad": 0.000827991469466105,
+        "max_adjacent_ankle_torque_change_Nm": 0.4580966248897256,
+        "first_ankle_pitch_torque_Nm": [
+          [
+            7.323174766909902,
+            7.235459298251309
+          ],
+          [
+            7.3173229412249485,
+            7.229599389739946
+          ]
+        ]
+      },
+      "model_passed": false,
+      "research_pass": false,
+      "dense_research_constraints": [
+        0.03628851503802192,
+        9.602988211565577e-08,
+        0.10285583379348007,
+        0.0029999961611497424,
+        0.008726643925789614,
+        0.2293778094092159,
+        0.6338412616545049,
+        0.027641775881371598,
+        0.09090558523152628,
+        0.03991217529155772
+      ],
+      "maximum_assumed_foot_load_difference_BW": 0.009094414768473724,
+      "maximum_ankle_roll_command_change_rad": 8.78247084422867e-05,
+      "schedule": {
+        "checked": false,
+        "physical_admission": false
+      }
+    }
+  ],
+  "audits": {
+    "centered_path_audit_222": 364,
+    "centered_contact_audit_224": 980,
+    "lateral_demand_audit_226": 1512,
+    "centered_orientation_audit_v2_228": 3385
+  },
+  "prior_recheck": {
+    "utc": "2026-10-17T16:05:16.672022+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "mismatches": [],
+        "passed": true
+      },
+      {
+        "manifest": "completed_probes_preservation_218.json",
+        "checked": 4743,
+        "mismatches": [],
+        "passed": true
+      },
+      {
+        "manifest": "supplemental_preservation_218.json",
+        "checked": 3,
+        "mismatches": [],
+        "passed": true
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_230.json",
+  "protected_completed_files": 5279,
+  "manifest_sha256": "a56f1e454f6229b280ed2c77668d4dbef87c3fb0aa9984846e7a68dfecf62fd5",
+  "physical_workers_running": false,
+  "model_workers_running": false,
+  "audit_workers_running": false,
+  "report": "progress_report_229",
+  "video": "all_attempts_video_213/all_attempts.mp4",
+  "video_unchanged": true,
+  "local_review": {
+    "utc": "2026-10-17T16:05:03.107577+00:00",
+    "local_hashes_verified": true,
+    "manifests": 12,
+    "entries": 481,
+    "plots_visually_inspected": true,
+    "browser_visually_inspected": true,
+    "embedded_video_loaded": true,
+    "video_unchanged": true,
+    "physical_admission": false,
+    "report": "progress_report_229/findings.html",
+    "scope": "Read-only browser visual review of physical/model/audit tables, both PNG plots and loaded58s embedded existing video. Numeric outcomes and source files unchanged."
+  },
+  "handoff_sha256": "6b2f566bda4ae66c247d7113e512a740f35b276d796ad9d77f0fb3c1111b9ec1",
+  "next": "# Centered-stance planning through228 audited \u2014 physical repair still unresolved\n\nContinue the user's low-seat slipping/housing-contact repair in THIS chat, preserve ALL64 current successes, then the small two-seed PPO stability/all37-joint effort comparison. Maintain the sub-minute video of ALL attempts, including failures. Work directly Mac SSH kfuUbuntu, /home/kadir/humanoid-sitting; never another coding agent. Python: /home/kadir/humanoid-sitting/IsaacLab/.venv/bin/python. Read docs/LOW_SEAT_CONTACT_PROTOCOL.md, docs/LOW_SEAT_CONTACT_STATUS.md, study status.json and closure_record_230.json. Check actual workers before launching. All219\u2013228 calculations/audits are COMPLETE; do not rerun them or rejected physical210. No new physical motion, optimizer, holdout or promotion occurred. Ordinary progress stays quiet; notify meaningful failure/completion or required input.\n\nBest verified full-development controller remains current_retention_09:64/72 clean,70 stable,8 slipping,2 housing-contact cases. Preserve all64. MainPPO63111/63117 and fresh holdout are UNSTARTED. Latest physical210 is still rejected:18stable14clean6slip2housing/physical,0illegal16warnings. Four selected0/1/6/7 remained hovering with ZERO legal seat load/hold. No-slip hovering is not successful sitting. All8 target rows0/1/2/3/6/7/10/11 remain unresolved; no72-case retention followed.\n\nNEW model candidate: centered_orientation_refinement_v2_227/case_0.json,36cm/+15deg ONLY. Its complete91-knot fixed-foot path has ZERO lateral root shift, minimum modeled housing clearance3.111534mm>=unchanged3mm screen, command margin.254449rad, assumed L/R foot-load difference at most.007711BW and ankle-roll command change at most.00024331rad. Endpoint parameters [rootx,rooty,roll,pitch,yaw]=[-.13382720377355053,0,-.0044589493119288675,.2525613749909242,-.008636370891299615]. Uses cooked50 collision/frozen inertia, actual saved1s development inputs, previous-.35rad arms, unchanged staged126 full path/145v2 force objective and175 guarded timing. Normal seat forces are ZERO at positive gaps and ASSUMED0\u2013.1BW after zero-gap; no sensed support or actual force realization. No runtime installed.\n\nThe552-tick/11.04s command-only schedule passes exact independent TorchCPUfloat32 inherited filter replay:desiredmargin.03,alpha.1,global.003rad/20ms=.15rad/s,anklepitch nominal.00225/20ms reserves existing balance feedback. Zero clipped targets, endpoint/fixed14fingers exact, max applied increment.002999991rad. The quiet/load fixtures were synthetic. This is NOT GPU runtime, parent-composition, raw-speed settling, dynamic support or physical admission. Do not execute an endpoint alone. The whole path is saved, but a current-sensor runtime/reconstruction/guard/parent preparation and separately bounded physical test are still necessary. Preserve210's bias feedback,164's approach balance and unchanged quiet guards unless a separately justified bounded controller revision is explicitly documented. Never feed saved fixture observations to runtime. Check BOTH placements before a probe; only case0 fixture is newly model-passing so far.\n\nThe other227 geometries remain REJECTED:36/+20 minimumclearance\u2212.573759mm;37/+16.25=2.927988mm;36.5/+17.5=1.700082mm. Do not round the37cm miss into a pass. Four bounded searches used rootx[-.28,-.10],roll\u00b112deg,pitch5\u201338deg,yaw\u00b135deg from prior58,rooty0, with separate research limits assumedfootdifference<=.1BW and anklerollcommandchange<=.04rad. Max40coarse19-knot builds/10iterations plusone91-knot dense pergeometry. This is a bounded local result, not impossibility proof or all8 repair.\n\nIndependent centered_orientation_audit_v2_228 passed3385 geometry records and available force/finite-work calculations; maxgeometryerror2.226e-16,workerror7.788e-9Nm. It explicitly leaves76 records across4 unallocated coarse paths without force certificates; unavailable forces stay unavailable, corresponding model gates false. No independent infeasibility proof is claimed for those records. All originals/source hashes retained. ExactCPU filter check for case0 passed. No physical launch follows automatically.\n\nRecovery orientation_force_recovery_227 preserves original227 source/log/revision and unexecuted original228 source remains preserved. Original227 stopped on candidate6 because an infeasible original force LP lacked corner_world_points. V2 classifies such paths infeasible/unavailable instead of assuming fields, persists proposals before evaluation, and reuses all5 completed candidates byte-for-byte. Case0 allows34new coarse builds:5original completed+1original failed+34new=40total;39unique saved candidates include the reconstructed failed proposal. Other geometries retain40. No model threshold, runtime, physical criterion, force value or computation budget was relaxed. No simulation ran during recovery.\n\nCompleted219/220 diagnosis covers ALL24cases in3 recorded runs(normal3s06,hover178,bias210),144case-windows and5328joint records.592 available rawqd/joint-window records are separately checked; unavailable raw channels remain null. Selected old paths shift pelvis\u00b150mm. At11\u201314.9s actual foot loading is about.675/.325BW (reversed for37cm), while ankle-roll rawqd dominates the quiet guard. Independent220 arithmetic exact. This is association, not causal proof; rawqd is never replaced by finite differences or discarded.\n\nEarlier offline221 centered all4 paths failed3mm clearance.223 bounded x/pitch-only refinement still failed2.838647/2.650947mm forcases0/6; independent224 replayed980records.225 reduced lateral demand while retaining old roll/yaw:case0 y29.238mm,clear3.200081mm,11.26s;case6 y\u221249.990mm essentially unchanged,clear3.209182mm,11.42s. Independent226 replayed1512records and both exactCPU schedules.225 used a separate3.2mm research reserve;227 maximized clearance subject to original3mm screen and stronger centered-stance reserves. These research objectives are different and documented; physical criteria unchanged. Do not repeat completed searches or mistake225's nearly unchangedcase6 for a substantive repair.\n\nNext: prepare and audit the newly centered case0 COMPLETE path against current measured inputs/bothplacements, exact filter and frozenparent composition, unchanged raw-velocity/pitch/gyro/fresh-geometry guards, bounded balance/antiwindup and measured load permission BEFORE a separately bounded physical trial. Keep the other three failed geometries rejected. Their corrected-model contact transitions remain unresolved and need a justified new design, not repeated gain/lean/arm/rate sweeps. Do not increaseKi or weaken settling just because210 hovered. Any physical gains must subsequently retain all64 and remove all8 across72 matched full20s development trials before PPO.\n\nNo new physical effort comparison this round. All effort uses approximate implicit-PD applied_torque telemetry, NOT direct solver or hardware motor effort. Verified09vs61111 commonclean exact;vsselected62111@8 on20old commonclean whole20torque\u00b2+4.38%,final5+25.45%. Probe210vsbestnormal14commonclean whole20+.00286852%,final10+.00596108%,final5+.0153440%;strictboth3whole20+.00447459%,final5+.03256846%. These small changes are in unselected clean cases; no savings from failed hovering/prefixes/fragments. Torqueproxy,not energy/globaloptimum.\n\nLatest local report: /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/progress_report_229/findings.html . New results/audits/recovery copied locally,12manifests/481entries hashverified; bothplots and HTML physical/model/audit tables visuallychecked, embeddedvideo loaded. Browser http://127.0.0.1:8807/progress_report_229/findings.html . Interim OFFLINE/development evidence,not physical repair/PPO/unseen completion. Closure230 is written after final local review/prior hash checks and gives exact preservation counts/worker state. Earlier reports unchanged.\n\nVideo remains CURRENT and unchanged: /Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/all_attempts_video_213/all_attempts.mp4 .58.4s,4K15fpsH264,39recorded sources,816full20s trials475clean341fail,120recordedprefixes,96abortedcaseattempts without savedmotion disclosed; independent214 verifies564firstevents.8x6 layout43recorded/abortedpanels. RecordedXYZW/bodyCOM schematic,notcamerafootage;.1sposes bracket.02s labels. Historical totalsnotcontrolleraccuracy. No new motion219\u2013228; don't rerender unchanged video. Update fullcoverage after futurephysical/PPO,omitnofailure.\n\nGoverning unchanged requirements\n\nBest09 frozenearly61111@6\u20137s/resting59117@11/15s,guardednormal3s measuredheight<38cm/slope>10.5 ORheight<41.5cm/slope>18. Old22stable20clean4slip2housing;transfer24/22/2/0;recent24/22/2/0. Original60unionplus4gains37/+11.25 and36.5/+12.5 twice. Remaining36/+15,+20;37/+16.25;36.5/+17.5 twice.50warnings22strictclean. Earlierstudies/verified09readonly. Isolatingprobes omit early61111; unchangedmildparent slips are notcurrent-policyregressions.\n\nProbe210's bounded hover integral207v2 Ki.3/s,cap\u00b1.03 inside\u00b1.06 totalanklepitch/.0375rad/s feedback authority improved pitch but rawspeed remained>.05. Keep frozen178/175 quiet contract:25current consecutive samples pitcherror<=.5deg,abs gyro_y<=.02rad/s,raw movingqd<=.05,freshgeometry and130 guards before12mmhover releases;normalapproach<=.006m/s. No timer-only release/earlyunloading. Parent59117@15s selected,11/15elsewhere. Actual417/rewards/parent/3800filter+balance+settlingrecords/fingers/softwarepassed; physical/exactpreservationFAILED(maxunselectedbody1.585305mm,q.002786333rad). No equalitywaiver. Hold originalphysical210/source/recoveries unchanged.\n\nVerified private diagnostic198 exactly replayed17813s with1001private5ms records/publiccache unchanged; don'trerun. Earlier189 failedglobalreplay remainsfailed.198 rawanklerollqd.213\u2013.379rad/s with0signchanges despite tiny qrange isnotproof ofbad sensors. PhysX solver velocity differsfrompose differences;205 installed defaultsTGS8pos4vel/externalforcesperiterationTRUE,livevaluesnotcaptured,noflagschanged.198 telemetry reconstructionresiduals1.534319/1.467443/4.851362Nm;don'treuse189tinyresidual. Rendercoupling27 exactness failure remains unwaived.\n\nFresh24holdout CLOSED throughrepair/normalization/training/selection:36.75/37.75/39.5/41.5cm\u00d7positive8.75/13.75/18.75deg twice,reservedbeforenewsimulation. Priorholdoutsdevelopment;negativesexcluded. Runtimecurrentmeasured sensors/reference/staticmodel only;truthreset/reward/evaluationonly. Neverrelaxmaterials,alltickslip,forbiddenbodyORillegalpatchUNION,physicalfailure/stablesupport. Rest<=40deg ANDlegalseatnormalload>=.05BW plusoriginalconditions;55degfallseparate;38degmodelreserve. Robot.5/.5 seat/floor.8/.6;legacy.6ratioNOTcapacity;.90warningsseparate. Nofootdrag/teleport. Cooked50offlinecollisionNOTlive-shapecertificate/perceptionselfmask;frozenbridgeinertia,5\u20136mmraw/cookeddiscrepancy,unknownoffsets remain.\n\nOnlyafterall8removed+all64retained across72full20s,freezePPO63111/63117:8completeepisodeupdates/seed,ONEuninterruptedoptimizer each;24env192000active+4200warmup=196200/seed392400total;1200settlingseparate. Documentexactwindows/control/reward/sensorinputs/accounting. Verifyzero/global/indexedreplay,actualchannels,finitechangedactor/critic,CPUoptimizerreplay,fingers/bounds,smokeretention,freshmain=smokeINITIALnottrainedweights. Noextratraining/postfreezechanges/promotion. Bothfullfinals/devselectionbeforefreshholdout. Exactmatchedstarts/full20s:physicalfailures/slip/contactunion/lost-gainedfirst,warningsseparate;effortONLYcommoncompletecleanBOTH/strictsubsets,all37whole20/final10/final5squared/absolute/time-meaninstantaneousRMS,leg/upper. Referenceassistedsim/twoseeds/nearbyrigidslabs doNOT establishunassisted/realrobot/anywhere sittingorleaning;leaningnotbroadened.\n\nAutomation staysACTIVE. PauseONLYafteractualrepair,newPPOcomparison andupdatedcomplete subminutevideo delivered. Completion of offline model/audit/report work is NOT task completion.\n"
+}
