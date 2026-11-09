@@ -1,0 +1,18 @@
+{
+  "passed_source_review": true,
+  "independence": "Separate audit.py reads only final predictions and held-out labels; never imports fit.py",
+  "causality_checked": true,
+  "test_episode_ids_absent_from_fit_selection": true,
+  "label_world_rotation_absent_from_features": true,
+  "uses_reported_forces_not_hardware_truth": true,
+  "non_admitted_default": true,
+  "new_runtime_controller_use": false,
+  "sha256": {
+    "fit.py": "be4ab9c2a7a7f6a5c2bb665121e3d41eac61794f18d95e0809edbe0f1bc4ffa4",
+    "audit.py": "639257ddab7eb86e36e1e493b72fe2f39314daba1a2dae02f13652f3950b0a11",
+    "inputs.json": "1d7fa5b29a715886056ae2993fbdfd438c79b9b783526cfee75d64df567b682d",
+    "estimator.py": "10afb9b025a0a8667b111e417d6ab7b138ff00f23515b1400dfe7e318fb016ea",
+    "prepare.py": "e2e893686c17c8beda8414c6523eed0ce2b12a1302745ad9f785c015185e1405",
+    "contract.json": "0bfdc7413adc8f3f0f8b37d88c6645790264b5f219d8347d8848ebcb979d26e3"
+  }
+}
