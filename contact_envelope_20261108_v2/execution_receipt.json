@@ -1,0 +1,151 @@
+{
+  "utc": "2026-11-08T03:54:25.119094+00:00",
+  "state": "EXACT_CAMERA_CONSTRAINT_COMPRESSION_VALIDATED_TWO_PATHS_REJECTED_NO_PHYSICS",
+  "authorization": "Latest human: collision avoidance, ankle stability, stool/upright leaning while4090busy, then20demos,4090PPO,all72; unchanged actions and criteria.",
+  "changes": {
+    "collision_avoidance": "Current rear-depth facet constraints included inside full23joint construction, including intended contact body and adjacent forbidden surfaces. Contact tangent coordinates free during approach, fixed before normal contact/load.",
+    "resource_fix": "235234sample rows represented by38per-body minimum rows; exact frustum culling; all original residual feasibility conditions preserved. Independent saved-pose equivalence maxerror0; evaluation7.36x faster in three audited poses.",
+    "stool": "Only actually observed saved triangles rigidly transformed/rasterized for previously audited closer45degree placement; actual furniture mesh remains evaluator-only. Fresh physical camera/reset still required.",
+    "ankles": "Full model retains bothfoot6Danchors, positive normals,10mmCoPinset, friction and23jointvirtualwork. No new feedback/gain/velocity substitution; physical ankle rocking remains unresolved."
+  },
+  "validation": {
+    "camera_row_fixture": "v1/camera_row_audit.json: known-distance transformed plane, penetration, target margin and missing-depth tests PASS",
+    "compression": "compression_audit.json: saved standing and two successful armchair states, identical original minima",
+    "runtime": "v1 two45s timeouts preserved; compressed v2 lean23.523s, stool31.686s, both numerical rejection",
+    "lean": {
+      "accepted_internal_nodes": 7,
+      "rejected_phase": "approach",
+      "rejected_node": 7,
+      "iterations": 60,
+      "maximum_equality_residual": 0.0022424304010535056,
+      "minimum_mixed_unit_inequality_residual": -0.0034230685122390806
+    },
+    "stool": {
+      "accepted_internal_nodes": 14,
+      "rejected_phase": "load",
+      "rejected_node": 2,
+      "iterations": 60,
+      "maximum_equality_residual": 0.001585696318667747,
+      "minimum_mixed_unit_inequality_residual": -0.007192534416428253
+    },
+    "not_completed": [
+      "complete path",
+      "independent full mesh",
+      "between-node validation",
+      "float32 command encoding",
+      "fresh reset/depth/runtime",
+      "physical stability/hold"
+    ]
+  },
+  "failures_preserved": {
+    "v1": "Both watchdog terminations have no returned solution. No inference about their last internal state.",
+    "audit_schema": "First v2 compression audit used nonexistent root field; corrected to recorded body/pelvis with metadata assertion. Original error and corrected source both retained. No optimizer was launched before audit PASS.",
+    "v2": "No failed endpoint reused; no terminal continuation or extraiterations. Partial accepted nodes retained for provenance, not for deployment/initialization."
+  },
+  "resources": {
+    "owner_count": 1,
+    "other_agents": 0,
+    "bounded_leaf_processes": [
+      {
+        "file": "/Users/kadir/humanoid-sitting-control/contact_envelope_20261108_v1/audit_process_receipt.json",
+        "wall_s": 0.3657966350147035,
+        "cpu_s": 0.36154299999999995,
+        "timeout": false,
+        "returncode": 0
+      },
+      {
+        "file": "/Users/kadir/humanoid-sitting-control/contact_envelope_20261108_v1/lean_center.process_receipt.json",
+        "wall_s": 45.05384568698355,
+        "cpu_s": 45.041267999999995,
+        "timeout": true,
+        "returncode": -9
+      },
+      {
+        "file": "/Users/kadir/humanoid-sitting-control/contact_envelope_20261108_v1/stool_center.process_receipt.json",
+        "wall_s": 45.05511226601084,
+        "cpu_s": 45.043292,
+        "timeout": true,
+        "returncode": -9
+      },
+      {
+        "file": "/Users/kadir/humanoid-sitting-control/contact_envelope_20261108_v2/audit_process_receipt.json",
+        "wall_s": 1.579206910013454,
+        "cpu_s": 1.5778709999999998,
+        "timeout": false,
+        "returncode": 1
+      },
+      {
+        "file": "/Users/kadir/humanoid-sitting-control/contact_envelope_20261108_v2/lean_center.process_receipt.json",
+        "wall_s": 23.52322214000742,
+        "cpu_s": 23.516822,
+        "timeout": false,
+        "returncode": 0
+      },
+      {
+        "file": "/Users/kadir/humanoid-sitting-control/contact_envelope_20261108_v2/audit_process_receipt_v2.json",
+        "wall_s": 1.6064090659783687,
+        "cpu_s": 1.605018,
+        "timeout": false,
+        "returncode": 0
+      },
+      {
+        "file": "/Users/kadir/humanoid-sitting-control/contact_envelope_20261108_v2/stool_center.process_receipt.json",
+        "wall_s": 31.685878325020894,
+        "cpu_s": 31.679227,
+        "timeout": false,
+        "returncode": 0
+      }
+    ],
+    "bounded_leaf_count": 7,
+    "total_leaf_wall_s": 148.86947102902923,
+    "total_leaf_cpu_s": 148.825041,
+    "maximum_per_case_wall_allowance_s": 45,
+    "timeout_termination_overhead_s": [
+      0.05384568698354997,
+      0.05511226601083763
+    ],
+    "GPU_used": false,
+    "unmetered_non_scientific_work": "Local code authoring, source reads, metadata/schema reads, SHA256 preparation/transport and live worker queries; not included or claimed as zero CPU.",
+    "new_physics_steps": 0,
+    "new_demonstrations": 0,
+    "new_PPO_updates": 0,
+    "new72checks": 0,
+    "new_video": false
+  },
+  "physical_status": {
+    "baseline_clean": 64,
+    "development_cases": 72,
+    "old_failures_unresolved": 8,
+    "accepted_repairs": 0,
+    "20new_furniture_demo_requirement_complete": false,
+    "action_limits_changed": false,
+    "success_criteria_changed": false
+  },
+  "workers": {
+    "utc": "2026-11-08T03:53:41.327061+00:00",
+    "gpu": "0, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 57 %, 43, 6200 MiB\n1, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 86 %, 62, 4870 MiB\n",
+    "gpu_processes": "232122, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 6140 MiB\n3934199, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 4626 MiB\n",
+    "worker_commands": [
+      {
+        "pid": 232122,
+        "command": "/workspace/venv/bin/python /workspace/studies/shot-benchmark-source-df8de16-v1/sircus/isaac/film_cylinder_farm.py --headless --enable_cameras --device cuda:0 --assets /workspace/assets --output /workspace/output/sweep-ppo-10k-20261106-v2/runs/ppo-seed20261123 --appearance silver --continuous-source /workspace/output/expanded-training-20261102-v4 --continuous-camera-json /workspace/output/expanded-training-20261102-v4/selected-camera.json --shot-benchmark-plan /workspace/output/sweep-ppo-10k-20261106-v2/experiment.json --shot-benchmark-method ppo --shot-benchmark-seed 20261123 "
+      },
+      {
+        "pid": 3934199,
+        "command": "/isaac-sim/kit/python/bin/python3 -u /workspace/src/run_fountain.py --allow-root "
+      }
+    ],
+    "own_scientific_workers": [],
+    "disk_free_bytes": {
+      "/": 59052589056,
+      "/data": 6257946624
+    },
+    "original_minimum_disk_reserve_bytes": 20000000000,
+    "GPU4070_untouched": true,
+    "recurring_automation_created": false,
+    "training_queue_created": false
+  },
+  "next_work": "Do not deploy or resume either rejected construction. Need a genuinely new feasible contact/load path with an audited witness and complete runtime/encoding/mesh admission; preserve raw-speed ankle quiet gate. Then fresh standing-start physical trials on4090only when free; obtain10sitting+10leaning clean20s demonstrations on5objects; imitation/recovery validation, PPOweight-update proof,all72,video. GPUavailability alone does not clear failed motion gates.",
+  "automation": "Deleted by human; no recurring automation or training queue created",
+  "task_complete": false
+}

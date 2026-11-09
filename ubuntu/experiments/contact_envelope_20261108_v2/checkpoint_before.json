@@ -1,0 +1,2136 @@
+{
+  "utc": "2026-11-08T02:21:34.893348+00:00",
+  "scope": "Current successor index; preserve inherited603/601 evidence and unchanged physical criteria",
+  "latest_scientific_result": "Sustained5s clean-only effort reward passes3000savedcontrols; camera-onlywholebodyveto detects prematurechair-edgecontact. Full23jointmodel/work/clock/finiteencoding fixes implemented, buttorsofullmesh andstool/pelvispath gatesreject.0newphysics/demos/PPO/72checks;64protected,8unresolved.",
+  "authorizations": {
+    "primary_diagnostic": "completed and consumed",
+    "interior_diagnostic": "explicitly approved; completed and consumed",
+    "pending_approval_question": false,
+    "further_budget_exception_approved": false,
+    "full_minimax_exception": "Explicitly approved single diagnostic completed and consumed; deadline failure. No further retry/exception authorized.",
+    "forwarded_encoding_validation": "Human request confirmed in source chat; requested finite encoding/nonlinear evaluation already completed in finite_model_step_20261020_v1. No repeat.",
+    "consistency_ray_diagnostic": "Explicitly approved one-shot primal/model-descent exception completed and consumed. Exact primal diagnostic passed; no optimum, interior, encoding, model, simulation or PPO admission.",
+    "feasibility_research_revision": "CONSUMED; A passed, B failed; cycle terminated. C/D not permitted after failed B.",
+    "budget_diagnostic_20261023": "COMPLETED and consumed: one approved cold solve returned an audited numerical candidate in327.81s. No retry or automatic downstream execution authorized.",
+    "interior_after_minimax_20261023": "COMPLETED and consumed: one600-second validation rejected returned multipliers after175.86s; no retry, point reuse or downstream.",
+    "certificate_revalidation_20261023": "COMPLETED and consumed: one45-second-cap named correction/revalidation passed numerical and strict exact margin checks in3.02s. No retry or automatic downstream.",
+    "finite_model_20261023": "COMPLETED and consumed: one current-state finite/model step passed encoding/audit and reduced merit29.8696% in18.21s. Actual motion admission failed; no retry or automatic downstream.",
+    "targeted_gap_primary_20261023": "Completed one substantive construction under standing45s continuation; terminal time limit after8IPM; no retry or automatic extension authorized.",
+    "gap_guarded_cycle_v1": "COMPLETED and consumed: A308.276s passed, B186.180s passed, C9.288s finite encoding passed but nonlinear acceptance failed; stopped. No retry, new cycle or simulation/PPO/holdout authorized.",
+    "actual_hard_cycle_v1": "NOT APPROVED. Preparation complete; new one-cycle exception requested. No scientific launches.",
+    "contact_ppo_pilot_20261026_v1": "Human explicitly requested PPO now; bounded simulation-only sitting pilot, two seeds and8mainupdates perseed. Repair-before-training prerequisite superseded; physical acceptance unchanged. No old solver cycle or fresh holdout authorized.",
+    "contact_ppo_restart_20261026_v2": "Fix the reset mismatch and NVIDIA driver issue, then restart PPO training and verify that it actually starts updating weights.",
+    "contact_reward_comparison_128_v3": "Fix the rewards and validate them against the saved trajectories, then run the 128-update PPO comparison with both seeds. Keep the current action limits and check all 72 cases for repairs and regressions.",
+    "parallel_ppo_recorded_hardware_rounding_v2": {
+      "instruction": "Yes, allow those recorded rounding differences and start parallel training on both GPUs. Keep the action limits and success criteria unchanged, and verify that both runs are updating weights.",
+      "receipt": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/hardware_rounding_authorization_v2.json",
+      "sha256": "547590c55bdd2184e7fd1a6c816342e3601750a6b347ee2f1189b16c2158aca5",
+      "scope": "recorded_hardware_rounding_only",
+      "status": "Applied to the recorded GPU1 hardware check only; training active. No general tolerance change."
+    },
+    "full_23_joint_demo_staged_20261027": "Human explicitly authorized implementation, demonstration/staged-reward validation, and training after current comparison finishes, with unchanged physical criteria and repair/regression evaluation. One finite dependency queue; no recurring automation.",
+    "full_body_4090_recorder_fix_20261028": "Fix the sitting recorder, finish the demonstration, reset and reward checks, then start PPO on the4090 only. Leave the4070 for AIWorker and verify that the weights are actually updating.",
+    "box_armchair_lean_20261104": "Go ahead and get the robot to lean against the back of the box armchair using the rear camera. Use only the 4090, keep the success criteria unchanged, and show me a video when it can repeat the five-second hold.",
+    "armchair_rest_ppo_20261105": "Expand armchair demonstrations across positions and angles, train PPO on4090 only, unchanged action limits and success criteria, evaluate all72 for regressions and show learned-policy video. Preserve old sitting demonstrations; prefer straight-leg pelvis/back resting on high surfaces where mechanically valid.",
+    "furniture_repair_and_ppo_20261106": "User: do it all, do not ask questions. Fix furniture approaches and contact measurements; validate >=10 sitting and>=10 leaning demonstrations across five actual furniture objects; then PPO4090 only and all72 development cases.",
+    "furniture_load_estimator_and_ppo_20261106": "Fix and validate the load estimator, collect10sitting+10leaning demos across5furnitureobjects, then trainPPO4090only. Unchanged actionlimits and successcriteria;all72;video.",
+    "load_false_contact_repair_20261106": "Latest human explicitly authorizes fixing false load estimates,20demonstrations,4090PPO,andall72checks with unchanged action limits/success criteria. No new questions. Six audited sensor-only collection jobs queued; old research waivers stay consumed.",
+    "saved_furniture_collision_repair_20261106": "While4090busy,fixstool/L-couchfromsaveddata;continue20demos/PPO/all72whenfree;unchangedactionlimits/successcriteria. Executedboundedcamera/geometrycorrections andtwofullLCtrials; no newwaiver/recurringautomation.",
+    "furniture_rest_repair_20261107": "Latest human request: ankle stability, rear-camera tracking during descent, stool collisions,20demos,4090PPO,72checks; retain action and success limits; prefer less squat for leaning.",
+    "saved_data_repair_20261107": "While4090busy fix remainingankle,camera,stool,uprightlean fromsaveddata;then20demos,4090PPO,all72;unchangedactionlimits/successcriteria.",
+    "rest_ready_full_body_20261108": "Latesthuman: fix ankle/stool/uprightlean;20demos,4090PPO,all72;unchangedaction/successcriteria; supportedrest reduces sustainedeffort, improvesbalance, minimalnecessarycontact, readytostand;do notstopatstatus."
+  },
+  "next_work": "No safe newmotion is admitted. A new collision-aware contact/path construction must incorporate wholebody/currentcamera constraints while preservingbalance and futuretime, with credibleinitialization/witness beforelaunch; no blind retry or reused rejected states. Stool path remainsrejected. Freshcamera/reset/quiet/drive validation needed beforephysical. Then10sitting+10leaning on5furniture,imitationpreflight,4090PPO,weightproof,all72andvideo. GPU4090occupiedbyforeignPID3916534; original20GBdiskreservefails(root15.59GB,data6.26GB). Do not disturbforeignjobs or use4070.",
+  "physical": {
+    "clean": "64/72",
+    "stable": 70,
+    "slipping": 8,
+    "housing_contact": 2,
+    "categories_overlap": true,
+    "all64_protected": true,
+    "all8_unresolved": true,
+    "main_PPO": "Historical sitting PPO256 results retained in checkpoint_before.json. Latest armchair PPO128 complete:2/11 vsprior11/11, no promotion. Frozen sitting branch64/72 with0regressions and0repairs.",
+    "fresh_holdout": "closed",
+    "candidate_repairs_with_regressions": [
+      {
+        "arm": "revised",
+        "seed": 63117,
+        "updates": 64,
+        "clean": 64,
+        "stable": 70,
+        "slipping": 8,
+        "lost_protected": [
+          [
+            "known_recent",
+            20
+          ],
+          [
+            "known_recent",
+            21
+          ]
+        ],
+        "repaired_old_failures": [
+          [
+            "known_transfer",
+            4
+          ],
+          [
+            "known_transfer",
+            5
+          ]
+        ]
+      },
+      {
+        "arm": "revised",
+        "seed": 63111,
+        "updates": 128,
+        "clean": 62,
+        "stable": 70,
+        "slipping": 10,
+        "lost_protected": [
+          [
+            "known_old",
+            22
+          ],
+          [
+            "known_old",
+            23
+          ],
+          [
+            "known_recent",
+            22
+          ],
+          [
+            "known_recent",
+            23
+          ]
+        ],
+        "repaired_old_failures": [
+          [
+            "known_transfer",
+            4
+          ],
+          [
+            "known_transfer",
+            5
+          ]
+        ]
+      }
+    ],
+    "accepted_repairs": 0,
+    "latest_full72_recheck": {
+      "source": "/Users/kadir/humanoid-sitting-control/armchair_rest_policy_video_20261105_v1/results.json",
+      "clean": 64,
+      "stable": 70,
+      "cases_with_slipping": 7,
+      "cases_with_contact_failure_flag": 2,
+      "regressions": 0,
+      "repairs": 0,
+      "note": "Current frozen-sitting recheck; best09 historical category counts above are preserved separately. Overlapping failure categories are not clean-case repairs."
+    }
+  },
+  "historical_artifacts": {
+    "last_sealed_historical": 601,
+    "report": 600,
+    "video": 307
+  },
+  "last_remote_worker_check": {
+    "utc": "2026-11-08T02:21:04.197457+00:00",
+    "gpu": "0, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 64 %, 43, 6170 MiB\n1, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 82 %, 57, 4977 MiB\n",
+    "gpu_processes": "3916534, GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4, 6110 MiB\n3934199, GPU-cde23916-c5fa-f18e-a343-127f732cc2f6, 4754 MiB\n",
+    "own_scientific_workers": [],
+    "disk_free_bytes": {
+      "/": 15590780928,
+      "/data": 6257946624
+    },
+    "original_minimum_disk_reserve_bytes": 20000000000,
+    "GPU4070_untouched": true,
+    "recurring_automation_created": false,
+    "training_queue_created": false
+  },
+  "heartbeat_policy": "Quiet when unchanged/non-actionable; meaningful scientific results distinct from physical success. No delegated coding agents or duplicate automation.",
+  "automation": "DELETED by human; unchanged",
+  "authorization_notes": "Historical solver exceptions remain consumed. Latest human authorization governs separate23-joint simulation-only demonstration/PPO training after the active comparison. Physical criteria and fresh holdout remain unchanged; no recurring automation or old solver restart.",
+  "last_accepted_research_iterate": {
+    "kind": "Audited current-state finite encoding and fresh nonlinear research iterate; actual numerical motion admission FAILED",
+    "folder": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/finite_model_step_20261023_v1",
+    "closure": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/finite_model_closure_20261023_v1.json",
+    "closure_sha256": "ad32bd3f3bccbfd6ccf2e8645af37c75b6d1406463b4866f330092714fda0269",
+    "summary_sha256": "8b55e9fb961c01041bfdb43b9a6efd7e89e48dbdabff711f7e56025fdb54d614",
+    "manifest_sha256": "a96ae43e9373e0ffc517fc67ba970679948240bfb6150dd2399833b050dd5d64",
+    "total_seconds": 18.21,
+    "solver_calls": 0,
+    "trial_merit_accepted": true,
+    "actual_numerical_admission_gate": false,
+    "physical_success": false,
+    "finite_map_passed": true,
+    "independent_audit_passed": true,
+    "merit_before": 0.12270472005373632,
+    "merit_after": 0.08605330623059242,
+    "predicted_merit_after": 0.06190138226005615,
+    "fractional_merit_reduction": 0.2986960388083937,
+    "actual_to_predicted_ratio": 0.6027862145908939,
+    "finite_output_sha256": {
+      "decision.json": "8a2ae8f6abb602d5df559e0011e690d4d555671a39dc165aed4acb3080996d75",
+      "actual.npz": "222f3db712851263811d0c0e90d151c39bfd850976a38bdf4442dfcc43573324",
+      "accepted_J.npz": "1a16ca4278f665bb8ea108b518f4c08614730a86b1ec4c5446df29c78daedf13",
+      "map.json": "9293339866fd48cb46161a995457964af63808ebaa5cc7f97d5ad11661b25750",
+      "mapped.npz": "a5de4d3bcf43addf6116e49723416c7df86ce38ba33988f76ac3df2d394fc984"
+    },
+    "fresh_value_states": 1365,
+    "fresh_J_states": 1365,
+    "total_cap_seconds": 45,
+    "source_input_runtime_freeze_passed": true,
+    "solvers": 0,
+    "worst_actual_hard_row_worsened": true
+  },
+  "last_design_review": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/normal_drop_interior_bound_design_20261024_v1.json",
+    "sha256": "20d596d24a5c828f9642e474a8737dcac380c1adfd2343981fdde5cc69902682",
+    "classification": "Conditional analytic bound design and synthetic-only prototype; not a selected scientific construction",
+    "decision": "Keep the checked bound helper as a conditional component. Do not launch a bound-only study diagnostic or an interior solve without a genuinely new accepted current-state primary and a concrete full primal witness mechanism. Do not use historical/rejected/internal points, the unsupported half-step shortcut, or this design as a terminal-solver retry rationale.",
+    "launch_ready": false,
+    "local_only": true,
+    "scientific_execution": false,
+    "synthetic_fixtures_passed": 6
+  },
+  "prepared_source_review": {
+    "local_helper_fixtures": 5,
+    "remote_interval_fixtures": 2,
+    "remote_indexing_fixture": 1,
+    "remote_compile_actual_exit": 0,
+    "remote_compile_tool": "fb3900",
+    "scientific_data_loaded_or_executed": false
+  },
+  "prior_scientific_result_reference": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/clone_diagnosis_20261028_v1/checkpoint_before_20261028T235023Z.json",
+  "proposed_research_revision": {
+    "utc": "2026-10-22T17:04:34.695007+00:00",
+    "proposal": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/feasibility_research_revision_20261022_v1.txt",
+    "proposal_sha256": "7e5f7d1a981178f1349add0b254db90fb1b53e85cd2f4cf93d8b69b53f3e9af6",
+    "status": "COMPLETED_AS_NEGATIVE_CYCLE",
+    "scientific_launches": 2,
+    "maximum_scientific_stages": 4,
+    "seconds_total_per_stage": 45,
+    "maximum_combined_scientific_seconds": 180,
+    "address_space_gib_per_worker": 40,
+    "concurrent_scientific_workers": 1,
+    "minimum_predicted_fractional_reduction_for_new_construction": 0.01,
+    "exceptions_requested": [
+      "One targeted saved-ray attribution may repeat the minimal coefficient arithmetic needed for previously missing diagnostics; no old construction or proof rerun.",
+      "One genuinely new constructive primary point may advance without primary optimality if exact original primal feasibility and useful modeled descent pass; interior and later gates unchanged."
+    ],
+    "construction_selected": true,
+    "stage_sources_and_independent_audits_frozen": true,
+    "no_simulation_PPO_holdout": true,
+    "protocol_active": false
+  },
+  "cycle_authorization": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/feasibility_research_cycle_authorization_20261022_v1.json",
+  "cycle_closure": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/feasibility_research_cycle_closure_20261022_v1.json",
+    "sha256": "9652f7bbccb78fcfd8939f3a02ed025249ec5594791194a7afada9a029d745eb"
+  },
+  "automation_prompt_revision": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/heartbeat_checkpoint_refresh_20261022_v1.json",
+    "sha256": "860560fe2e85fe8f67383fe9d31b2de126102539e894e753c4085f17b9181e2a"
+  },
+  "prior_design_review": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/ankle_adjoint_design_assessment_20261022_v1.json",
+    "sha256": "9f39e0fb0f74bd2be3e29c3b20082e43e4c8f2b682ddd5c076b767077c7c3819",
+    "decision": "Do not select or launch this as the next repair construction. It could at most supply an obstruction certificate; no credible useful bound, primal witness mechanism or resource-complete audited implementation is established. It does not restore the consumed primary-optimality waiver or authorize another diagnostic cycle.",
+    "new_scientific_execution": false
+  },
+  "prior_structural_design_review": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/local_block_design_assessment_20261023_v1.json",
+    "sha256": "c78996d2b836ac4c352a45d84965cce7afa3ce1f3070f2daacad0fcf9867b7ec",
+    "decision": "Keep as one source-level structural observation, not a selected launch or a reason to retry a solver. Proceed further only if a concrete algorithm establishes an advantage beyond ordinary factor ordering and supplies complete initialization, resource, finite-return and independent-audit specifications under all remaining gates. Do not run a generic incidence/eligibility scan or a benchmark to rescue this observation.",
+    "new_scientific_execution": false,
+    "local_only": true,
+    "remote_certificate": false
+  },
+  "time_window_extension_review": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/time_window_extension_decision_20261023_v1.json",
+    "sha256": "4b2a4142eed39b1634d727f21ccbf1e4c1554c83b126ee980b3336371d13c2fd",
+    "decision": "No. Stop pursuing time-window locality alone as the extension of the unselected local-block proposal. No scientific launch is selected.",
+    "classification": "Source-only decision on the proposed time-window extension; no scientific execution",
+    "new_scientific_execution": false
+  },
+  "prepared_budget_diagnostic_proposal": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/full_minimax_budget_proposal_20261023_v1.json",
+    "sha256": "afe48c052b7afd94583dc3c5d3614300b60bad7edf1087f0a14876fb0b562493",
+    "proposal_text": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/full_minimax_budget_review_20261023_v1/proposal.txt",
+    "status": "COMPLETED_SUCCESSFUL_NUMERICAL_DIAGNOSTIC",
+    "execution_approved": true,
+    "scientific_execution": true,
+    "approval_request": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/full_minimax_budget_approval_request_20261023_v1.json",
+    "approval_request_sha256": "00646f37b295bfccd09520726a0ba7c509dd00f2d0452d3a81a0d15bec7d213b",
+    "approval_receipt": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/full_minimax_budget_authorization_20261023_v1/human_approval_receipt.json",
+    "approved_contract_sha256": "622780e120e202d0d3b0f5567967119824b84b8700a53f6bf27c46b54525f279",
+    "authorization_consumed": true
+  },
+  "current_execution": {
+    "state": "COMPLETED_TERMINAL_NO_CANDIDATE",
+    "scope": "One new-state primary with two actual-gap tangent constraints and exact-zero added-marginal certificate gate;45s total, no exception or retry",
+    "launch_tool": "1ff1a8",
+    "local_session_id": 16342,
+    "contract_sha256": "9b7b765080fd47465b154e989acbfe8b28d5cbf1b93c2bbfdaad99dc6ba8d4f2",
+    "relaunch_permitted": false,
+    "actual_exit": 0,
+    "total_seconds": 32.85,
+    "IPM_iterations": 8,
+    "candidate_accepted": false,
+    "scientific_outcome": "SOLVER_TIME_LIMIT_NO_POINT;NEW_INPUT_AND_FAILURE_AUDIT_PASSED"
+  },
+  "previous_scientific_result_before_budget_diagnostic": {
+    "kind": "Terminal failure of approved cycle stage B; no admissible candidate",
+    "folder": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/ankle_bound_construction_20261022_v1",
+    "summary_sha256": "fd90af746c988d46d96e6a240e744774f77c071d5301ba1ef08564636e0db95c",
+    "manifest_sha256": "1da38024470838c0959134408edefb86456ba24a2f5e1ac4ed03dccc25126d8c",
+    "candidate_accepted": false,
+    "physical_success": false
+  },
+  "budget_diagnostic_closure": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/full_minimax_budget_closure_20261023_v1.json",
+    "sha256": "e990a0b252855c94ac17c9ae20cad6d486b598a30178b050740173a12bff1635"
+  },
+  "prepared_interior_validation": {
+    "utc": "2026-10-23T16:52:27.511073+00:00",
+    "kind": "Prepared new-state strict-interior validation; source and synthetic checks only",
+    "source_directory": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_after_minimax_20261023_v1",
+    "proposal": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_after_minimax_20261023_v1/proposal.txt",
+    "contract": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_after_minimax_20261023_v1/contract.json",
+    "contract_sha256": "20a0d0720f3a8b78f5dcd9b8a6eafcbb2c910780b3de5037b2fd8c1a6c60e726",
+    "source_review": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_after_minimax_20261023_v1/source_review.json",
+    "source_review_sha256": "05f44eec36038a3a62b8bbcd8a26e32b2eecdbb0b78063baf972af3d02704fdc",
+    "execution_approved": true,
+    "scientific_launches": 1,
+    "status": "COMPLETED_REJECTED_RETURN",
+    "requested_exception": "One600-second total interior-validation allowance instead of45seconds; prior primary exception consumed; all other gates retained.",
+    "input_bindings": 34,
+    "runtime_bindings": 2362,
+    "source_bindings": 15,
+    "synthetic_checks_passed": 9,
+    "final_target_python_compile_passed": true,
+    "physical_success": false,
+    "approved_contract_sha256": "e94d217433e790b5a1a98814b43682cd73515a90bd4d9eb55885cdef7b23e9e9",
+    "authorization_consumed": true
+  },
+  "last_accepted_primary_result": {
+    "kind": "Audited full-original primary candidate;99.1%predicted reduction;nonlinear and physical validation unperformed",
+    "folder": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/full_minimax_budget_review_20261023_v1",
+    "summary_sha256": "a86656f86c96104a90e33a1d830e0f3eaa54cc506cc64852715ddbb3a70fffe2",
+    "manifest_sha256": "68cdfd790226d324e421b65d1a97814e848e0b2e756f9d1079c09ad724977149",
+    "candidate_accepted": true,
+    "physical_success": false,
+    "predicted_fractional_reduction": 0.9910513265861494,
+    "total_seconds": 327.81
+  },
+  "interior_validation_closure": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_after_minimax_closure_20261023_v1.json",
+    "sha256": "c38c7876db1e036906271dd6df6c99e0764e0b5d1658ffe4a6437f276fd3c8be"
+  },
+  "last_solver_result": {
+    "kind": "Terminal solver deadline failure of one substantively new current-state two-gap construction; no candidate",
+    "folder": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/targeted_gap_primary_20261023_v1",
+    "closure": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/targeted_gap_primary_closure_20261023_v1.json",
+    "closure_sha256": "db31eb5caea3d49d28914a92c296ce7eae61e07ae4960021f107a8a11c78ec20",
+    "result_sha256": "37080560db4ba0309bf5fbad30a52cb23aaabec9d3e4e36ad4038c82e16970b8",
+    "manifest_sha256": "d538c0327e14f9bb3232019404b5268a49d9286b65d3a28395acc46e6098eabe",
+    "total_seconds": 32.85,
+    "solver_calls": 1,
+    "IPM_iterations": 8,
+    "crossover_iterations": 0,
+    "candidate_returned": false,
+    "candidate_accepted": false,
+    "physical_success": false,
+    "actual_exit": 0,
+    "independent_failure_audit_passed": true,
+    "terminal": true
+  },
+  "last_read_only_diagnostic": {
+    "kind": "Completed saved-residual attribution with independent audit; no model/solver execution or motion admission",
+    "closure": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/hard_row_attribution_closure_20261023_v1.json",
+    "closure_sha256": "87205251b816ecf44d4b36162d94e8868b5a60d6cd2079c0c200de6f3c74d91a",
+    "folder": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/hard_row_attribution_20261023_v1",
+    "actual_exit": 0,
+    "total_seconds": 0.9,
+    "shared_cap_seconds": 45,
+    "authorization_basis": "Existing continuation/read-only analysis; no policy waiver",
+    "source_contract_sha256": "946cec56ccbc3a67ed06b9bd504e18b0e60ed416be0e77d47d4eff95fa9b7ca6",
+    "attribution_complete": true,
+    "do_not_repeat": true,
+    "solver_calls": 0,
+    "model_calls": 0,
+    "new_worst_row": 215327,
+    "new_worst_group": "mesh_normal_descent",
+    "no_followup_scientific_launch_authorized": true
+  },
+  "prepared_certificate_revalidation": {
+    "utc": "2026-10-23T17:41:16.407730+00:00",
+    "status": "COMPLETED_ACCEPTED_NUMERICAL_AND_EXACT_MARGIN",
+    "classification": "Source preparation and synthetic checks only",
+    "proposal": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_certificate_revalidation_20261023_v1/proposal.txt",
+    "source_directory": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_certificate_revalidation_20261023_v1",
+    "contract": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/interior_certificate_revalidation_20261023_v1/contract.json",
+    "contract_sha256": "15227b32ff0e39b516a5f13f8a29b4304b3873f577cd488a49e35ae1c1c659fa",
+    "source_review_sha256": "e73948be975712ef7d625c592cbc7a0136bc9bf62330f2d08ea29fa0f5afb6fb",
+    "execution_approved": true,
+    "scientific_launches": 1,
+    "source_files": 12,
+    "inputs": 51,
+    "runtime_files": 2362,
+    "synthetic_checks_passed": 9,
+    "total_seconds": 45,
+    "address_space_gib": 40,
+    "solver_calls": 0,
+    "named_dual_row": 753917,
+    "named_raw_hex": "0x1.d500000000000p-49",
+    "primal_unchanged": true,
+    "requested_policy_exceptions": [
+      "Revisit the one named rejected primal unchanged, without warm starting any optimizer.",
+      "Replace one identified returned dual multiplier by exact positive zero; all other dual and primal bytes unchanged.",
+      "Repeat only the original full numerical checks needed to validate the changed certificate; no prior model/proof/solver replay."
+    ],
+    "no_automatic_downstream": true,
+    "approval_request": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/certificate_revalidation_approval_request_20261023_v1.json",
+    "approved_contract_sha256": "d8d1c0623c0fe5aabfe96c44e2a7cb0f19b1925ad7b3fefcae8a4b445a4585f7",
+    "approval_receipt": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/certificate_revalidation_authorization_20261023_v1/human_approval_receipt.json",
+    "authorization_consumed": true
+  },
+  "previous_execution_before_certificate_revalidation": {
+    "launch_utc": "2026-10-23T16:56:31.076167+00:00",
+    "launch_tool": "1b9f87",
+    "local_session_id": 21650,
+    "remote_supervisor_pid": 1973946,
+    "approved_contract_sha256": "e94d217433e790b5a1a98814b43682cd73515a90bd4d9eb55885cdef7b23e9e9",
+    "scope": "One cold new-state interior validation,600s total;no retry or downstream",
+    "state": "COMPLETED",
+    "relaunch_permitted": false,
+    "actual_exit": 0,
+    "total_seconds": 175.86,
+    "candidate_accepted": false,
+    "scientific_outcome": "REJECTED_FULL_ORIGINAL_DUAL_SIGN_OR_BOUND_CONDITION"
+  },
+  "previous_scientific_result_before_certificate_revalidation": {
+    "kind": "Executed saved-record attribution: one positive inequality marginal3.25434124093249e-15; independent check passed; no candidate admission",
+    "folder": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_multiplier_postmortem_20261023_v1",
+    "closure_sha256": "6c94e54dc2b9117cf5fe1ba90ea8cc36d07d1f62861751639990731713450768",
+    "manifest_sha256": "52144d243657b1031a8258a29bd9c6b122b5324c36543e15c3fe39c6ed54d716",
+    "total_seconds": 0.53,
+    "solver_calls": 0,
+    "candidate_accepted": false,
+    "physical_success": false
+  },
+  "last_accepted_interior_result": {
+    "kind": "Audited numerical certificate and strict exact rounding-margin success on the unchanged stored point; no finite/model/physical execution",
+    "folder": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_certificate_revalidation_20261023_v1",
+    "closure": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/certificate_revalidation_closure_20261023_v1.json",
+    "closure_sha256": "28d3d61cb350938364af8399d7db679b3ee4a93eb21275a0e10cdab448f3f495",
+    "summary_sha256": "7a2676b78bd010ce4de55a5c74904ae1bf78cd512c3a8349b0d41d8f81ec517b",
+    "manifest_sha256": "ecd439323df7f6ce17db8e226a1caac7af1864bf0bf0eff91d118ebaa44e9000",
+    "total_seconds": 3.02,
+    "solver_calls": 0,
+    "candidate_accepted": true,
+    "physical_success": false,
+    "witness": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_certificate_revalidation_20261023_v1/witness.npy",
+    "witness_sha256": "c16f1f5092ba4a025e7b8356a14ba2dde4fe38ce7ff895de2569e93c4d9e8322",
+    "exact_rows": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_certificate_revalidation_20261023_v1/exact_rows.jsonl",
+    "exact_rows_sha256": "c431ff256bfa0081e45c77ddbad35eeb430ebe090b32970cf884d1079689583d",
+    "exact_eta": [
+      228304098722825,
+      23058430092136896
+    ],
+    "interior_mismatch_ceiling": 0.061901382259917585
+  },
+  "certificate_revalidation_closure": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/certificate_revalidation_closure_20261023_v1.json",
+    "sha256": "28d3d61cb350938364af8399d7db679b3ee4a93eb21275a0e10cdab448f3f495"
+  },
+  "prepared_finite_model_validation": {
+    "status": "COMPLETED_RESEARCH_ITERATE_ACCEPTED_MOTION_ADMISSION_FAILED",
+    "source_directory": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/finite_model_step_20261023_v1",
+    "contract_sha256": "ff681dbf790dfffa279362b624fab2175a6d127b6198cdfc12de9532a92a3be1",
+    "source_review_sha256": "d8b6831fc7454786e972f5369c72b163404bd49a2880c17de0a4cb569845fa06",
+    "authorization_receipt": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/finite_model_authorization_20261023_v1/human_approval_receipt.json",
+    "execution_approved": true,
+    "scientific_launches": 1,
+    "total_seconds": 45,
+    "address_space_gib": 40,
+    "solver_calls": 0,
+    "synthetic_checks_passed": 7,
+    "input_bindings": 46,
+    "runtime_bindings": 6701,
+    "authorization_consumed": true
+  },
+  "previous_execution_before_finite_model_20261023": {
+    "launch_utc": "2026-10-23T22:54:00.422209+00:00",
+    "launch_tool": "d335b5",
+    "local_session_id": 57301,
+    "remote_supervisor_pid": 2007087,
+    "approved_contract_sha256": "d8d1c0623c0fe5aabfe96c44e2a7cb0f19b1925ad7b3fefcae8a4b445a4585f7",
+    "scope": "Single named certificate revalidation;45s total;no solve,retry or downstream",
+    "state": "COMPLETED",
+    "relaunch_permitted": false,
+    "actual_exit": 0,
+    "total_seconds": 3.02,
+    "candidate_accepted": true,
+    "scientific_outcome": "PASSED_FULL_ORIGINAL_NUMERICAL_AND_STRICT_EXACT_MARGIN"
+  },
+  "previous_scientific_result_before_finite_model_20261023": {
+    "kind": "Audited numerical certificate and strict exact rounding-margin success on the unchanged stored point; no finite/model/physical execution",
+    "folder": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_certificate_revalidation_20261023_v1",
+    "closure": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/certificate_revalidation_closure_20261023_v1.json",
+    "closure_sha256": "28d3d61cb350938364af8399d7db679b3ee4a93eb21275a0e10cdab448f3f495",
+    "summary_sha256": "7a2676b78bd010ce4de55a5c74904ae1bf78cd512c3a8349b0d41d8f81ec517b",
+    "manifest_sha256": "ecd439323df7f6ce17db8e226a1caac7af1864bf0bf0eff91d118ebaa44e9000",
+    "total_seconds": 3.02,
+    "solver_calls": 0,
+    "candidate_accepted": true,
+    "physical_success": false
+  },
+  "previous_accepted_research_iterate_20261020": {
+    "kind": "Audited finite encoding and accepted nonlinear research iterate; actual numerical motion admission FAILED",
+    "folder": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/finite_model_step_20261020_v1",
+    "summary_sha256": "8bf2a6243926bbc72efbb325801e67769d4d6784861753eeca0dda1109b1b4ba",
+    "manifest_sha256": "efccce575114edaa94ae999677c4654a5f341a419e1c01cb1a73ad5a137f1eb4",
+    "trial_merit_accepted": true,
+    "actual_numerical_admission_gate": false,
+    "finite_map_passed": true,
+    "independent_audit_passed": true,
+    "merit_before": 0.19791129319207476,
+    "merit_after": 0.12270472005373632,
+    "fractional_merit_reduction": 0.3800014234930482,
+    "actual_to_predicted_ratio": 0.7600028470906671,
+    "finite_output_sha256": {
+      "decision.json": "ab20bcf2bea951bd18237552637474a0f0378e647366f2157e15a4f1c5a7c781",
+      "actual.npz": "992a1602a85b55a91c11b65695c1fea89047c6c6d93712b041b0e709b6bde770",
+      "accepted_J.npz": "9b70ecd8bc0620cf466878707bff63506971cf97f6f7873945f7ad71aed18e40",
+      "map.json": "02173c8583b7bbf181146b763c0ab20021afbf375c0b3c9aa453d58835ffd511",
+      "mapped.npz": "e6d44ae6b99322663889f1136106c3d64a44a42f5d879e2dd004ed7dc2ea1262"
+    },
+    "fresh_value_states": 1365,
+    "fresh_J_states": 1365,
+    "total_seconds": 8.269158354960382,
+    "total_cap_seconds": 45,
+    "source_input_runtime_freeze_passed": true,
+    "solvers": 0,
+    "physical_success": false
+  },
+  "finite_model_validation_closure": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/finite_model_closure_20261023_v1.json",
+    "sha256": "ad32bd3f3bccbfd6ccf2e8645af37c75b6d1406463b4866f330092714fda0269"
+  },
+  "previous_execution_before_targeted_gap_20261023": {
+    "launch_utc": "2026-10-23T22:59:34.735759+00:00",
+    "launch_tool": "ee2c23",
+    "local_session_id": 94236,
+    "remote_supervisor_pid": 2008986,
+    "approved_contract_sha256": "ff681dbf790dfffa279362b624fab2175a6d127b6198cdfc12de9532a92a3be1",
+    "scope": "Single current-state finite encoding/fresh nonlinear validation;45s total;no solver,retry or downstream",
+    "state": "COMPLETED",
+    "relaunch_permitted": false,
+    "actual_exit": 0,
+    "total_seconds": 18.21,
+    "trial_merit_accepted": true,
+    "scientific_outcome": "FINITE_MAP_AND_RESEARCH_MERIT_ACCEPTED;ACTUAL_MOTION_ADMISSION_FAILED"
+  },
+  "previous_latest_result_before_targeted_gap": {
+    "closure": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/finite_model_closure_20261023_v1.json",
+    "closure_sha256": "ad32bd3f3bccbfd6ccf2e8645af37c75b6d1406463b4866f330092714fda0269",
+    "kind": "Audited current-state finite encoding and fresh nonlinear research iterate; actual numerical motion admission FAILED"
+  },
+  "targeted_gap_primary_closure": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/targeted_gap_primary_closure_20261023_v1.json",
+    "sha256": "db31eb5caea3d49d28914a92c296ce7eae61e07ae4960021f107a8a11c78ec20"
+  },
+  "historical_completed_stage_next_work": {
+    "scope": "Archived fields for completed October23 primary/interior/certificate/finite-model stages. Their points belong to the preceding model origin; approvals are consumed. These fields are not current launch eligibility.",
+    "fields": {
+      "prepared_budget_diagnostic_proposal": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/full_minimax_budget_proposal_20261023_v1.json",
+      "proposal_authorization_boundary": "The600-second diagnostic exception was explicitly approved and completed once;it does not carry into later stages.",
+      "primary_candidate": null,
+      "primary_candidate_sha256": "61ac76f498e74f1fa525706f334b4a2c1de35272948ced7757544a1b6aed9193",
+      "interior_ceiling": 0.061901382259917585,
+      "prepared_interior_proposal": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_after_minimax_proposal_20261023_v1.json",
+      "prepared_interior_contract_sha256": "20a0d0720f3a8b78f5dcd9b8a6eafcbb2c910780b3de5037b2fd8c1a6c60e726",
+      "interior_validation_terminal": true,
+      "finite_nonlinear_gate_not_admitted": false,
+      "multiplier_postmortem": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_multiplier_postmortem_20261023_v1/closure.json",
+      "failure_attribution_complete": true,
+      "do_not_repeat_multiplier_inspection": true,
+      "identified_violation": {
+        "row": 753917,
+        "group": "reserved_lower_interval",
+        "interval": 9121,
+        "raw_inequality_marginal": 3.25434124093249e-15
+      },
+      "prepared_certificate_revalidation": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/certificate_revalidation_proposal_20261023_v1.json",
+      "finite_nonlinear_preparation_admitted": true,
+      "finite_nonlinear_execution_approved": false,
+      "accepted_interior_witness": null,
+      "accepted_interior_witness_sha256": "c16f1f5092ba4a025e7b8356a14ba2dde4fe38ce7ff895de2569e93c4d9e8322",
+      "exact_margin_complete": true,
+      "do_not_repeat_certificate_revalidation": true,
+      "finite_nonlinear_validation_complete": true
+    }
+  },
+  "checkpoint_index_maintenance": {
+    "kind": "Metadata-only separation of completed-stage fields from current next work",
+    "backup": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/checkpoint_before_historical_field_separation_20261024_v1.json",
+    "backup_sha256": "1992a1da8607b0aa9ca321c4117382a21dcd8f04e6a48ee4e230ff23cbda8c0e",
+    "historical_fields_moved": 21,
+    "scientific_results_changed": false,
+    "authorizations_changed": false,
+    "scientific_execution": false
+  },
+  "prepared_gap_guarded_cycle": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_preparation_v1.json",
+    "sha256": "a779c48f91d26ec257c3284da8d63d9993f172115eb6efd79f5441791c896c04",
+    "approval_received": true,
+    "scientific_launch_ready": false,
+    "source_preparation_complete": true,
+    "scientific_launches": 1,
+    "approval_receipt": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_authorization_v1/human_approval_receipt.json",
+    "approval_sha256": "51447f73465b43d9f5892eadb4954eb3b1660de460b1eab43c28b54a1f555f5d",
+    "authorization_consumed": true,
+    "status": "CLOSED_NONLINEAR_ACCEPTANCE_FAILED"
+  },
+  "previous_execution_before_gap_guarded_cycle_v1": null,
+  "execution": {
+    "state": "WAITING_FOR_4090",
+    "study": "furniture_load_repair_20261106_v3",
+    "owner_pid": 1581376,
+    "worker_live": true,
+    "scientific_child_live": false,
+    "worker_checked_utc": "2026-11-06T21:59:07.729809+00:00",
+    "GPU": "4090 only",
+    "queued_full_rollouts": 6,
+    "remote_status": "/home/kadir/humanoid-sitting/outputs/furniture_load_repair_20261106_v3/calibration_owner/status.json",
+    "recurring_automation": false,
+    "physical_repair_claimed": false,
+    "prior_execution_preserved_in": "/Users/kadir/humanoid-sitting-control/furniture_load_repair_20261106_v3/checkpoint_before.json"
+  },
+  "previous_latest_result_before_gap_guarded_cycle_v1": {
+    "kind": "Terminal solver deadline failure of one substantively new current-state two-gap construction; no candidate",
+    "folder": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/targeted_gap_primary_20261023_v1",
+    "closure": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/targeted_gap_primary_closure_20261023_v1.json",
+    "closure_sha256": "db31eb5caea3d49d28914a92c296ce7eae61e07ae4960021f107a8a11c78ec20",
+    "result_sha256": "37080560db4ba0309bf5fbad30a52cb23aaabec9d3e4e36ad4038c82e16970b8",
+    "manifest_sha256": "d538c0327e14f9bb3232019404b5268a49d9286b65d3a28395acc46e6098eabe",
+    "total_seconds": 32.85,
+    "solver_calls": 1,
+    "IPM_iterations": 8,
+    "crossover_iterations": 0,
+    "candidate_returned": false,
+    "candidate_accepted": false,
+    "physical_success": false,
+    "actual_exit": 0,
+    "independent_failure_audit_passed": true,
+    "terminal": true
+  },
+  "next_work_before_gap_guarded_cycle_closure": {
+    "kind": "Observe this single active scientific cycle and report result; no second execution",
+    "cycle_closure": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/feasibility_research_cycle_closure_20261022_v1.json",
+    "cycle_closure_sha256": "9652f7bbccb78fcfd8939f3a02ed025249ec5594791194a7afada9a029d745eb",
+    "remaining_requirement": "Run approved cycle once; report exact failure or nonlinear improvement and concrete next step.",
+    "pending_approval_question": false,
+    "no_retry": true,
+    "no_automatic_downstream_execution": true,
+    "last_accepted_model_state_motion_admissible": false,
+    "design_assessment": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/local_block_novelty_review_20261023_v1.json",
+    "joint_constraint_plan_clarification": "The full original matrix already contains joint bounds, phase ordering, command timing and both consistency signs together. Simply requesting a jointly constrained solve, fixing a progress epigraph, or renaming its objective would repeat the existing formulation, not supply a substantive new construction.",
+    "design_scope": "The local-block proposal and its short-time-window extension remain unselected. Source-only review closed the 20 ms locality argument as insufficient; do not repeat its timing-source survey or use it to justify an incidence scan, factorization benchmark or terminal-solver retry. A further construction needs an additional concrete witness or certified structural mechanism with complete costs.",
+    "time_window_extension_review": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/time_window_extension_decision_20261023_v1.json",
+    "current_model_origin": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/finite_model_step_20261023_v1",
+    "current_model_origin_merit": 0.08605330623059242,
+    "do_not_repeat_completed_map_or_model": true,
+    "worst_actual_hard_row_worsened": true,
+    "actual_hard_failure_attribution": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/hard_row_attribution_closure_20261023_v1.json",
+    "actual_hard_failure_attribution_complete": true,
+    "do_not_repeat_actual_hard_attribution": true,
+    "targeted_gap_design_launch_ready": false,
+    "targeted_gap_construction_terminal": true,
+    "targeted_gap_primary_result": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/targeted_gap_primary_closure_20261023_v1.json",
+    "targeted_gap_prepared_input": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/targeted_gap_primary_20261023_v1",
+    "targeted_gap_prepared_input_proof_sha256": "1799c6ad773d1904c2842c1fc33ac26c21a70eab738fa95793b693e807454b45",
+    "targeted_gap_target_proof_sha256": "e442f7aea4c99480b4f2ff74af711a8fae6622d0187a338c6506428d955a3d09",
+    "do_not_repeat_targeted_gap_construction": true,
+    "current_state_primary_candidate": null,
+    "historical_primary_candidate_not_current_state": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/full_minimax_budget_review_20261023_v1/witness.npy",
+    "historical_accepted_interior_witness_not_current_state": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/interior_certificate_revalidation_20261023_v1/witness.npy",
+    "dual_transport_review": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/dual_transport_scope_review_20261024_v1.json",
+    "direct_old_certificate_transport_selected": false,
+    "explicit_gap_coordinate_review": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_coordinate_scope_review_20261024_v1.json",
+    "explicit_gap_projection_selected": false,
+    "conditional_normal_drop_interior_bound": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/normal_drop_interior_bound_design_20261024_v1.json",
+    "conditional_normal_drop_bound_selected": false,
+    "current_state_interior_candidate": null,
+    "next_scientific_launch_ready": false,
+    "next_scientific_launch_requirement": "All sources/input bindings/audits frozen and explicit human approval received. Fresh deployment then one driver invocation; all caps include audits. No retries after this cycle.",
+    "human_requested_concrete_experiment": {
+      "path": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_proposal_v1.json",
+      "sha256": "72c4aafa098419ba2ee69623ff5597b4fab14fd8626befb5a99a835f975253b2",
+      "status": "RUNNING_AUTHORIZATION_CONSUMED",
+      "approval_received": true,
+      "scientific_launch_ready": false,
+      "scientific_launches": 1,
+      "source_preparation_complete": true,
+      "preparation_record": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_preparation_v1.json",
+      "preparation_record_sha256": "a779c48f91d26ec257c3284da8d63d9993f172115eb6efd79f5441791c896c04",
+      "freeze": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/gap_guarded_cycle_v1/freeze.json",
+      "freeze_sha256": "419ba7c90c232439c506c9fd9c461beb47e0150f69a13f27b218911b70729ecf",
+      "synthetic_tests_passed": 21
+    },
+    "policy_decision_requested": null
+  },
+  "prepared_actual_hard_cycle": {
+    "record": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/actual_hard_cycle_preparation_20261024_v1.json",
+    "record_sha256": "6814a45ba3cf44d8576d7e0348a8d7d3f1a8fbb914814f1bc47ac73d53b2309c",
+    "source_preparation_complete": true,
+    "execution_approved": false,
+    "scientific_launches": 0,
+    "pending_approval_question": true
+  },
+  "previous_execution_before_contact_ppo_pilot": {
+    "launch_utc_recorded": "2026-10-24T07:56:38.826144+00:00",
+    "launch_tool": "f695f1",
+    "local_session_id": 85553,
+    "state": "COMPLETED",
+    "cycle": "gap_guarded_cycle_v1",
+    "source_freeze_sha256": "419ba7c90c232439c506c9fd9c461beb47e0150f69a13f27b218911b70729ecf",
+    "approval_sha256": "51447f73465b43d9f5892eadb4954eb3b1660de460b1eab43c28b54a1f555f5d",
+    "stage_caps_seconds": [
+      600,
+      600,
+      45
+    ],
+    "relaunch_permitted": false,
+    "scope": "One cold primary with two gap constraints; conditional interior and finite/nonlinear checks; stop on first failure.",
+    "remote_owner_pid": 2061496,
+    "current_stage": null,
+    "primary_passed": true,
+    "primary_total_seconds": 308.2760663391091,
+    "primary_theta": 0.010328466852877602,
+    "primary_mu": 0.08605330623059242,
+    "primary_manifest_sha256": "4339601e2a9112dfcd7349efc7f98c91ed22f3b6d6826e6c8fb954092ced4535",
+    "actual_exit": 0,
+    "scientific_outcome": "A_B_AND_FINITE_PASS;C_ACTUAL_HARD_FEASIBILITY_FAIL",
+    "closure": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_closure_20261024_v1.json"
+  },
+  "next_work_before_contact_ppo_pilot": {
+    "kind": "Prepared actual-hard reserve cycle; awaiting explicit new human authorization",
+    "closure": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/gap_guarded_cycle_closure_20261024_v1.json",
+    "closure_sha256": "578c311ed9b977dd9294941f2d6eced9524a4f04e8052f88a42766624a47c04b",
+    "design": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/actual_hard_feasibility_next_experiment_20261024_v1.json",
+    "design_sha256": "3c46bfbb39a9189ac1b94661178ca502ad8477c9397ba9f0134e087149622607",
+    "current_model_origin": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/finite_model_step_20261023_v1",
+    "current_model_origin_merit": 0.08605330623059242,
+    "last_accepted_model_state_motion_admissible": false,
+    "next_scientific_launch_ready": false,
+    "pending_approval_question": true,
+    "no_retry": true,
+    "no_automatic_downstream_execution": true,
+    "do_not_promote_rejected_gap_guarded_C": true,
+    "remaining_requirement": "New human approval of the frozen actual-hard reserve construction and600/600/45second budgets including audits, plus strengthened-problem optimum. Then verify governing context/workers, deploy source-bound package and execute once. Old approvals are consumed; no launch without the new receipt.",
+    "human_priority": "A concrete experiment that advances the 8-case repair; do not substitute unchanged checkpoint/worker polling for preparation.",
+    "preparation": "/Users/kadir/humanoid-sitting-control/validated_low_seat_contact_01/actual_hard_cycle_preparation_20261024_v1.json",
+    "preparation_sha256": "6814a45ba3cf44d8576d7e0348a8d7d3f1a8fbb914814f1bc47ac73d53b2309c",
+    "current_specification": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/actual_hard_cycle_v1/proposal.json",
+    "current_specification_sha256": "3955c09430d2aec28bd0b30658459ecfc7305a3337d4b5fb7677f1a3ec4e91fd",
+    "source_component_tests_passed": 67,
+    "source_freeze": "/Users/kadir/humanoid-sitting-control/rl_support_work/scripts/actual_hard_cycle_v1/freeze.json",
+    "source_freeze_sha256": "e154cdbb0f736076eccba8a80fba61cf2f720d384d9a7101f7436403297009c4",
+    "source_preparation_complete": true,
+    "final_integration_tests_passed": 9,
+    "total_distinct_synthetic_tests_passed": 76,
+    "prior_new_scope_approval_consumed": false,
+    "execution_approved": false
+  },
+  "automation_human_revision_20261026": "finish-resting-ppo-comparison deleted at human request; no recurring monitor authorized.",
+  "previous_execution_before_contact_ppo_v2": {
+    "state": "STOPPED_PREFLIGHT",
+    "study": "contact_learning_ppo_20261026_v1",
+    "owner_pid": 8601,
+    "remote": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_learning_ppo_20261026_v1",
+    "protocol": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v1/protocol.json",
+    "receipt": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v1/launch_receipt.json",
+    "main_optimizer_started": false,
+    "physical_repair_claimed": false,
+    "smoke_optimizer_started": false,
+    "new_ppo_updates": 0,
+    "error": "AssertionError(('INDEXED_ZERO_IDENTITY', 'estimated_root_x'))",
+    "completed_phases": [
+      "unit_audit",
+      "old_zero",
+      "calibrate",
+      "indexed_zero"
+    ],
+    "seconds": 1130.827112086,
+    "status_file": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v1/status.json",
+    "worker_live": false
+  },
+  "latest_ppo_result": {
+    "kind": "Completed bounded armchair PPO comparison; sitting branch frozen",
+    "path": "/Users/kadir/humanoid-sitting-control/armchair_rest_policy_video_20261105_v1/results.json",
+    "sha256": "35909c02c32d7ec78dc3826de15a7e899db3ebb43a927a186d8aa8567c261bb7",
+    "updates": 128,
+    "seed": 65011,
+    "armchair_prior_clean": 11,
+    "armchair_learned_clean": 2,
+    "armchair_trials": 11,
+    "original_sitting_clean": 64,
+    "original_sitting_regressions": 0,
+    "repairs_of_original_eight": 0,
+    "physical_repair_claimed": false,
+    "comparison_complete": true,
+    "checkpoint_promoted": false
+  },
+  "latest_ppo_learning_analysis": {
+    "reference": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/clone_diagnosis_20261028_v1/report.json",
+    "read_only": true,
+    "training_uninterrupted": true
+  },
+  "previous_execution_before_contact_reward_comparison": {
+    "state": "COMPLETED_NO_REPAIR",
+    "study": "contact_learning_ppo_20261026_v2",
+    "owner_pid": 6453,
+    "remote": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_learning_ppo_20261026_v2",
+    "protocol": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v2/protocol.json",
+    "receipt": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v2/launch_receipt.json",
+    "repair_record": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v2/repair_and_restart_record.json",
+    "new_ppo_updates_verified": 20,
+    "main_optimizer_started": true,
+    "physical_repair_claimed": false,
+    "smoke_optimizer_process_started": true,
+    "smoke_optimizer_updates_verified": 4,
+    "reset_audit": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v2/reset_identity_audit.json",
+    "reset_exact_passed": true,
+    "smoke_optimizer_started": true,
+    "smoke_weight_audit": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v2/smoke_63111_model_01_weight_audit.json",
+    "main_training_process_started": true,
+    "smoke_CPU_replay_passed": true,
+    "main_updates_verified": 16,
+    "training_python_pid": 12912,
+    "worker_live_as_of": "2026-10-26T23:38:14.387692+00:00",
+    "restart_verification": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v2/restart_verification.json",
+    "main_updates_per_seed": {
+      "63111": 8,
+      "63117": 8
+    },
+    "worker_live": false,
+    "all_development_evaluations_complete": true,
+    "CPU_replay_passed_both_seeds": true,
+    "status_file": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v2/completed/status.json",
+    "result": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v2/pilot_outcome_20261026_v1.json"
+  },
+  "previous_execution_before_contact_reward_comparison_v4": {
+    "state": "STOPPED_STARTUP",
+    "study": "contact_reward_comparison_128_v3",
+    "remote": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v3",
+    "owner_pid": 27005,
+    "protocol": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v3/protocol.json",
+    "receipt": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v3/launch_receipt.json",
+    "source_review": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v3/source_review.json",
+    "saved_reward_audit": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v3/saved_reward_audit.json",
+    "new_training_updates_verified": 0,
+    "physical_repair_claimed": false,
+    "status_file": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v3/status.json",
+    "worker_checked_utc": "2026-10-27T02:48:48.511697+00:00",
+    "worker_live": false,
+    "error": "NumPy env.index incorrectly accessed using .cpu(); 600 initial settling transitions, zero active episodes or PPO updates."
+  },
+  "prior_ppo_pilot_result": {
+    "kind": "PPO pilot completed with no repair:63111clean62/72,63117clean64/72;0/8original failures repaired by either seed.",
+    "path": "/Users/kadir/humanoid-sitting-control/validated_contact_learning_ppo_20261026_v2/pilot_outcome_20261026_v1.json",
+    "sha256": "b744eb749de52f02d93b673b9bd2e69dcf94b4af58a32553139d501819e3bee5",
+    "physical_repair_claimed": false
+  },
+  "latest_ppo_action_authority_analysis": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v4/failure_analysis_20261027_v1/analysis_result.json",
+    "sha256": "73a8c9ee36b00a53d9d59134fa9141a55196ae4ba6d2c3b851223bc222fd416a",
+    "classification": "Observed saved-trajectory diagnostics and bounded inferences; no new simulation, training update, causal intervention or physical repair. Existing queue left running.",
+    "conclusion": "Amplitude saturation not demonstrated; four failure identities have isolated clean stochastic training samples within bounds. Two housing identities fail320/320 attempts. Slew filters63.4percent of landing exploration. Current128 comparison remains unchanged."
+  },
+  "latest_parallel_gpu_review": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/hardware_admission_review_v1.json",
+    "sha256": "8c5b0b8ef759637ca672de29a28a3fe73fa4dcd12d9273f2069c28b3c2fa9f07",
+    "utc": "2026-10-27T19:16:23.640679+00:00",
+    "design_ready": true,
+    "hardware_check_executed": true,
+    "exact_command_identity_passed": false,
+    "parallel_training_started": true,
+    "physical_repair_claimed": false,
+    "approval_received": true,
+    "authorization": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/hardware_rounding_authorization_v2.json",
+    "both_gpus_weight_updates_verified": true,
+    "verification": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/dual_gpu_weight_verification_v2.json",
+    "activation_utc": "2026-10-27T20:48:24.062383+00:00"
+  },
+  "execution_before_parallel_activation_v2": {
+    "state": "RUNNING_PPO_COMPARISON",
+    "study": "contact_reward_comparison_128_v4",
+    "remote": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4",
+    "owner_pid": 28553,
+    "protocol": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v4/protocol.json",
+    "receipt": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v4/launch_receipt.json",
+    "source_review": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v4/source_review.json",
+    "saved_reward_audit": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v4/saved_reward_audit.json",
+    "new_training_updates_verified": 160,
+    "physical_repair_claimed": false,
+    "status_file": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v4/status.json",
+    "worker_checked_utc": "2026-10-27T19:16:23.640679+00:00",
+    "worker_live": true,
+    "error": null,
+    "reset_identity_passed": true,
+    "reset_identity_audit": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v4/reset_identity_audit.json",
+    "live_reward_audit_passed": true,
+    "live_reward_audit": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v4/identity_reward_audit.json",
+    "initialization_audit": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v4/initialization_audit.json",
+    "training_phase": "train_original_63111_064",
+    "child_pid": 64401,
+    "main_optimizer_started": true,
+    "first_update_audit": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v4/first_update_weight_audit.json",
+    "first_update_audit_sha256": "041dee163e916aec6464c09737afd00d751089d41df04cea327113a1e901b569",
+    "pending_training": "Complete existing finite queue through128 per arm/seed, with all72 full20s evaluations at64 and128; no restart or reward change.",
+    "all72_evaluations_complete": false,
+    "training_python_pid": 64406,
+    "training_updates_produced": 183,
+    "updates_produced_by_run": {
+      "revised_63117": 32,
+      "original_63117": 32,
+      "original_63111": 55,
+      "revised_63111": 64
+    },
+    "interim_result": "/Users/kadir/humanoid-sitting-control/validated_contact_reward_comparison_128_v4/interim_result_20261027_v1.json",
+    "completed_all72_milestones": [
+      16,
+      32
+    ],
+    "dual_gpu_preparation": {
+      "state": "GPU1_EXACT_COMMAND_IDENTITY_FAILED_PENDING_NARROW_HARDWARE_EXCEPTION",
+      "hardware_review": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/hardware_admission_review_v1.json",
+      "parallel_protocol": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/parallel_protocol.json",
+      "gpu1_PPO_launched": false,
+      "legacy_queue_unchanged": true,
+      "legacy_guard_armed": false,
+      "all48_complete_episode_records_exact": true,
+      "physical_trace_arrays_exact": true,
+      "independent_reward_geometry_audit_passed": true,
+      "maximum_applied_offset_difference_rad": 1.3969838619232178e-09
+    }
+  },
+  "latest_ppo_status_snapshot": {
+    "utc": "2026-10-28T19:11:03.361460+00:00",
+    "reference": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/status_20261028T191103Z.json",
+    "comparison_finished": true,
+    "completed_128_results": [
+      {
+        "arm": "revised",
+        "seed": 63111,
+        "updates": 128,
+        "clean": 62,
+        "stable": 70,
+        "slipping": 10,
+        "physical_failures": 2,
+        "lost_protected": [
+          [
+            "known_old",
+            22
+          ],
+          [
+            "known_old",
+            23
+          ],
+          [
+            "known_recent",
+            22
+          ],
+          [
+            "known_recent",
+            23
+          ]
+        ],
+        "repaired_old_failures": [
+          [
+            "known_transfer",
+            4
+          ],
+          [
+            "known_transfer",
+            5
+          ]
+        ]
+      },
+      {
+        "arm": "original",
+        "seed": 63117,
+        "updates": 128,
+        "clean": 64,
+        "stable": 70,
+        "slipping": 8,
+        "physical_failures": 2,
+        "lost_protected": [],
+        "repaired_old_failures": []
+      },
+      {
+        "arm": "original",
+        "seed": 63111,
+        "updates": 128,
+        "clean": 62,
+        "stable": 70,
+        "slipping": 10,
+        "physical_failures": 2,
+        "lost_protected": [
+          [
+            "known_old",
+            12
+          ],
+          [
+            "known_old",
+            13
+          ],
+          [
+            "known_old",
+            21
+          ],
+          [
+            "known_transfer",
+            21
+          ]
+        ],
+        "repaired_old_failures": [
+          [
+            "known_transfer",
+            4
+          ],
+          [
+            "known_transfer",
+            5
+          ]
+        ]
+      },
+      {
+        "arm": "revised",
+        "seed": 63117,
+        "updates": 128,
+        "clean": 58,
+        "stable": 68,
+        "slipping": 12,
+        "physical_failures": 2,
+        "lost_protected": [
+          [
+            "known_old",
+            2
+          ],
+          [
+            "known_old",
+            3
+          ],
+          [
+            "known_transfer",
+            2
+          ],
+          [
+            "known_transfer",
+            3
+          ],
+          [
+            "known_transfer",
+            6
+          ],
+          [
+            "known_transfer",
+            7
+          ],
+          [
+            "known_transfer",
+            22
+          ],
+          [
+            "known_transfer",
+            23
+          ]
+        ],
+        "repaired_old_failures": [
+          [
+            "known_transfer",
+            4
+          ],
+          [
+            "known_transfer",
+            5
+          ]
+        ]
+      }
+    ],
+    "promoted": false
+  },
+  "latest_ppo_regression_analysis": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/regression_analysis_20261027_v1/analysis_result.json",
+    "sha256": "eb3e515f32b416283dc0fe2572138ea3ff57297356c77cffbae7f36ae9d829f8",
+    "utc": "2026-10-27T21:49:12.989724+00:00",
+    "classification": "Read-only saved-trajectory/component analysis and frozen-critic inference; recommendations only. No training, simulator, reward, action-limit or success-criterion changes.",
+    "summary": "Revised regressions remain5 from32to64; original improves6to2. Rare slip regressions, incomplete protected-case coverage, noisy-versus-deterministic mismatch and flat slip severity shaping identified; no repairs and no causal ablation. Comparison continues unchanged.",
+    "recommendations_not_launched": true
+  },
+  "latest_literature_and_failure_video_review": {
+    "path": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/literature_failure_review_20261027_v1/review.html",
+    "research": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/literature_failure_review_20261027_v1/literature_review.json",
+    "video": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/literature_failure_review_20261027_v1/failing_cases_revised64_v2.mp4",
+    "video_sha256": "7f0753f95bf3240ac6930b8c37443adcf6d0a8a747866e334b1d850c5f660c34",
+    "scores": "/Users/kadir/humanoid-sitting-control/validated_contact_parallel_gpu_v1/literature_failure_review_20261027_v1/scores_all72.csv",
+    "classification": "Read-only primary-literature review, saved-data score audit, and offline schematic video; no new experiment or changed criteria.",
+    "new_training_authorized_or_started": false
+  },
+  "full_body_demonstration_preparation": {
+    "utc": "2026-10-28T00:32:52.676126+00:00",
+    "folder": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1",
+    "plan": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/experiment_plan.json",
+    "manifest_sha256": "f09a29d66dd446917b8b9b94d390e5a7c6d8e6eae777e156d2d35d734987e559",
+    "audit_sha256": "b6238e09ba850af7ca082245f3eace4c4cedad415ec3e2878581a0c2fe1b4c57",
+    "status": "Local reference preparation complete;64 clean sitting references,16 leaning candidates pending full-rate validation,2 leaning examples excluded from positive use. New trainer not implemented or launched. Existing comparison unchanged.",
+    "authorization": "Can we train full sitting and leaning with demonstrations and staged rewards instead, while letting the current comparison finish?",
+    "scientific_success_or_repair": false,
+    "training_launch_ready": false
+  },
+  "full_body_23_joint_execution": {
+    "utc": "2026-10-29T03:00:02.460973+00:00",
+    "status": "COMPLETED_V5_ALL_FINAL_SITTING_AND_LEANING_EVALUATIONS_FAILED",
+    "owner_pid": 373085,
+    "remote_source": "/home/kadir/humanoid-sitting/experiments/full_body_contact_trainer_4090_step_v5",
+    "remote_output": "/home/kadir/humanoid-sitting/outputs/full_body_contact_imitation_v5",
+    "cpu_tests_passed": true,
+    "saved_72_trajectory_reward_components_passed": true,
+    "full_rate_demo_and_simulator_validation": "PASSED:64sitting/16leaning admitted; all original/staged eligible resets; both-seed cloning; both full teacher reward/physical audits",
+    "new_simulator_processes_started": 18,
+    "synthetic_cpu_weight_update_verified": true,
+    "main_training": {
+      "updates_per_seed_task": 256,
+      "seeds": [
+        64111,
+        64117
+      ],
+      "tasks": [
+        "sitting",
+        "rear_trunk_leaning"
+      ],
+      "same_trainer_separate_policies": true
+    },
+    "evaluation": {
+      "sitting_cases": 72,
+      "leaning_cases": 18,
+      "full_standing_start_seconds": 20,
+      "checkpoints": [
+        0,
+        128,
+        256
+      ],
+      "success_criteria_unchanged": true,
+      "holdout_opened": false,
+      "automatic_promotion": false
+    },
+    "existing_comparison": {
+      "state": "comparison_complete",
+      "completed_128_results": [
+        {
+          "arm": "revised",
+          "seed": 63111,
+          "updates": 128,
+          "clean": 62,
+          "stable": 70,
+          "slipping": 10,
+          "physical_failures": 2,
+          "lost_protected": [
+            [
+              "known_old",
+              22
+            ],
+            [
+              "known_old",
+              23
+            ],
+            [
+              "known_recent",
+              22
+            ],
+            [
+              "known_recent",
+              23
+            ]
+          ],
+          "repaired_old_failures": [
+            [
+              "known_transfer",
+              4
+            ],
+            [
+              "known_transfer",
+              5
+            ]
+          ]
+        },
+        {
+          "arm": "original",
+          "seed": 63117,
+          "updates": 128,
+          "clean": 64,
+          "stable": 70,
+          "slipping": 8,
+          "physical_failures": 2,
+          "lost_protected": [],
+          "repaired_old_failures": []
+        },
+        {
+          "arm": "original",
+          "seed": 63111,
+          "updates": 128,
+          "clean": 62,
+          "stable": 70,
+          "slipping": 10,
+          "physical_failures": 2,
+          "lost_protected": [
+            [
+              "known_old",
+              12
+            ],
+            [
+              "known_old",
+              13
+            ],
+            [
+              "known_old",
+              21
+            ],
+            [
+              "known_transfer",
+              21
+            ]
+          ],
+          "repaired_old_failures": [
+            [
+              "known_transfer",
+              4
+            ],
+            [
+              "known_transfer",
+              5
+            ]
+          ]
+        },
+        {
+          "arm": "revised",
+          "seed": 63117,
+          "updates": 128,
+          "clean": 58,
+          "stable": 68,
+          "slipping": 12,
+          "physical_failures": 2,
+          "lost_protected": [
+            [
+              "known_old",
+              2
+            ],
+            [
+              "known_old",
+              3
+            ],
+            [
+              "known_transfer",
+              2
+            ],
+            [
+              "known_transfer",
+              3
+            ],
+            [
+              "known_transfer",
+              6
+            ],
+            [
+              "known_transfer",
+              7
+            ],
+            [
+              "known_transfer",
+              22
+            ],
+            [
+              "known_transfer",
+              23
+            ]
+          ],
+          "repaired_old_failures": [
+            [
+              "known_transfer",
+              4
+            ],
+            [
+              "known_transfer",
+              5
+            ]
+          ]
+        }
+      ],
+      "unchanged": true
+    },
+    "accepted_baseline": "Final128 original rewards:62/72(seed63111),64/72(seed63117); revised:62/72,58/72. Revised repaired2 old failures per seed with4/8 regressions; no accepted regression-free repair. Best09 remains64/72.",
+    "protocol": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_4090_step_v5/protocol.json",
+    "source_review": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_4090_step_v5/source_review.json",
+    "cpu_tests": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_v1/cpu_tests.json",
+    "freeze": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_4090_step_v5/freeze.json",
+    "launch_receipt": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/status_20261028T220000Z.json",
+    "verified_queue_status": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/queue_status_at_launch.json",
+    "local_remote_source_bindings_checked": 25,
+    "recurring_automation": "Remains deleted; this is one finite dependency process",
+    "paper_summaries": {
+      "PhysHSI": "Teach natural scene interactions using example movements plus task rewards.",
+      "WoCoCo": "Learn whole-body skills through a sequence of contacts; does not require demonstrations."
+    },
+    "original_execution_deadline_unix": 1793364525.027288,
+    "total_resource_accounting_including_failed_captures": {
+      "teacher_capture_control_transitions": 92250,
+      "reset_validation_control_transitions": 9000,
+      "teacher_replay_control_transitions": 92250,
+      "evaluation_control_transitions": 553500,
+      "main_active_control_transitions": 2949120,
+      "main_warmup_control_transitions_cap": 576000,
+      "smoke_active_control_transitions": 11520,
+      "smoke_warmup_control_transitions_cap": 288000,
+      "physics_substeps_per_control": 4,
+      "behavior_cloning_minibatch_samples": 8192000,
+      "rendering": "Camera every10control steps plus each reset; no added physics; all wall/storage accounted",
+      "cpu_audits": "600s per evaluation/weight audit,900s dataset,1800s per cloning job, all included in48h execution cap",
+      "initial_raw_reset_steps": "1000 initial physics steps per process;32 aggregate processes including failures",
+      "total_control_transitions_cap": 4696698,
+      "simulator_processes": 32,
+      "per_process_initialization_physics_cap": 1000,
+      "total_env_physics_transitions_cap": 21090792,
+      "prior_failed_capture_control_transitions_cap": 116850,
+      "output_accounting": "16GiB total across v1,v2,v3,v4,v5 outputs",
+      "failed_ppo_smoke_control_transitions": 8208,
+      "prior_failed_actor_updates": 0,
+      "prior_critic_steps": 4
+    },
+    "new_ppo_updates_scope": "main sitting seed64111; additionally2smokeupdates per behavior; priorv4critic-only failed update preserved",
+    "main_updates_observed_by_seed": {
+      "64111": 256,
+      "64117": 256
+    },
+    "latest_status_reference": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v2/evidence/full_body_contact_imitation_v5/comparison.json"
+  },
+  "latest_23_joint_status_check": {
+    "utc": "2026-10-29T03:00:02.460973+00:00",
+    "reference": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v2/evidence/full_body_contact_imitation_v5/comparison.json",
+    "state": "V5_COMPLETE_NO_PROMOTION",
+    "weights_verified": true,
+    "physical_improvement": false
+  },
+  "storage_failure_and_correction": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/storage_correction_20261028_v2.json",
+  "capture_failure_and_correction": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/status_20261028T193337Z.json",
+  "latest_gpu_coordination": {
+    "reference": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/status_20261028T220000Z.json",
+    "gpu4090": "Exclusive humanoid scientific device",
+    "gpu4070": "Reserved for AIWorker; untouched",
+    "scheduling_changed": true
+  },
+  "latest_optimizer_step_correction": {
+    "reference": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/status_20261028T220000Z.json",
+    "source_review": "/Users/kadir/humanoid-sitting-control/full_body_contact_imitation_20261027_v1/trainer_4090_step_v5/source_review.json",
+    "fixed_kl": 0.02,
+    "bounded_candidate_tests_per_update": 32,
+    "action_reward_physical_criteria_unchanged": true
+  },
+  "furniture_test_environment": {
+    "reference": "/Users/kadir/humanoid-sitting-control/furniture_test_20261028_v1/README.txt",
+    "static_validation": "/Users/kadir/humanoid-sitting-control/furniture_test_20261028_v1/static_validation.json",
+    "objects": 5,
+    "layouts": 14,
+    "physics_tested": false,
+    "new_gpu_workers": 0
+  },
+  "updated_utc": "2026-11-06T22:01:48.387281+00:00",
+  "latest_recovery_imitation_execution": {
+    "utc": "2026-10-29T03:30:59.866052+00:00",
+    "human_authorization": "Fix the cloning with recovery demonstrations and validate complete sitting rollouts. After the current runs finish, restart PPO with an imitation loss. Keep the action limits and success criteria unchanged, and use only the 4090.",
+    "state": "IMITATION_PPO_RUNNING_FIRST_REAL_WEIGHT_UPDATE_VERIFIED_CLONING_STILL_FAILED",
+    "owner_pid": 823237,
+    "active": {
+      "label": "train_sitting_64111",
+      "pid": 862250
+    },
+    "protocol": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v2/protocol.json",
+    "source_review": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v2/source_review.json",
+    "construction_audit": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v2/construction_audit.json",
+    "freeze": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v2/freeze.json",
+    "remote_output": "/home/kadir/humanoid-sitting/outputs/recovery_imitation_sitting_20261028_v2",
+    "local_evidence": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v2/evidence",
+    "initial_clone_fit": {
+      "seed": 64111,
+      "round": 0,
+      "steps": 12000,
+      "batch_size": 2048,
+      "samples": 64000,
+      "initial": {
+        "desired_rmse_rad": 0.203954652590395,
+        "desired_max_error_rad": 0.9212791919708252
+      },
+      "final": {
+        "desired_rmse_rad": 0.0006513742763666623,
+        "desired_max_error_rad": 0.021550297737121582
+      },
+      "source": [
+        {
+          "source": "original_teacher",
+          "cases": [
+            "known_old/0",
+            "known_old/1",
+            "known_old/2",
+            "known_old/3",
+            "known_old/8",
+            "known_old/9",
+            "known_old/10",
+            "known_old/11",
+            "known_old/12",
+            "known_old/13",
+            "known_old/14",
+            "known_old/15",
+            "known_old/16",
+            "known_old/17",
+            "known_old/18",
+            "known_old/19",
+            "known_old/20",
+            "known_old/21",
+            "known_old/22",
+            "known_old/23",
+            "known_recent/0",
+            "known_recent/1",
+            "known_recent/2",
+            "known_recent/3",
+            "known_recent/6",
+            "known_recent/7",
+            "known_recent/8",
+            "known_recent/9",
+            "known_recent/10",
+            "known_recent/11",
+            "known_recent/12",
+            "known_recent/13",
+            "known_recent/14",
+            "known_recent/15",
+            "known_recent/16",
+            "known_recent/17",
+            "known_recent/18",
+            "known_recent/19",
+            "known_recent/20",
+            "known_recent/21",
+            "known_recent/22",
+            "known_recent/23",
+            "known_transfer/0",
+            "known_transfer/1",
+            "known_transfer/2",
+            "known_transfer/3",
+            "known_transfer/6",
+            "known_transfer/7",
+            "known_transfer/8",
+            "known_transfer/9",
+            "known_transfer/10",
+            "known_transfer/11",
+            "known_transfer/12",
+            "known_transfer/13",
+            "known_transfer/14",
+            "known_transfer/15",
+            "known_transfer/16",
+            "known_transfer/17",
+            "known_transfer/18",
+            "known_transfer/19",
+            "known_transfer/20",
+            "known_transfer/21",
+            "known_transfer/22",
+            "known_transfer/23"
+          ],
+          "bank_sha256": "74d2ba3a44cdc55202f01c485f9d7ada18a90ac280258f4cfd1e05c616fa17f6"
+        }
+      ],
+      "seconds": 8.139495266019367,
+      "measured_on_all_training_data": true,
+      "generalization_claimed": false,
+      "closed_loop_gate_pending": true,
+      "checkpoint_sha256": "12f4e91cffb34940568ba824b1d7564be2cd2bd60bb1d7016d866ffb05a6e999",
+      "demonstrations_sha256": "d3cccc88fbc39f199898891d02ea179f8175c3316e587e3ef9a15bf370999420"
+    },
+    "gate": "Both complete72-case autonomous evaluations and independent measurement/reward audits must finish; current fixed action/rate/joint/physical criteria remain. Each fresh clone and its clean demonstration bank are hash-bound before the requested256-update PPO stage.",
+    "ppo_started": true,
+    "gpu4090_live_process_verified": true,
+    "gpu4070": "AIWorker reserved and untouched",
+    "limits_and_success_criteria_changed": false,
+    "fresh_holdout_opened": false,
+    "automatic_promotion": false,
+    "recurring_automation": false,
+    "preserved_preflight_failures": [
+      "Reporting-only retained-vs-rejected KL diagnostic corrected; optimizer guards unchanged.",
+      "v1 owner command JSON serialization failed before any child; v2 corrects string argv, original48h deadline preserved."
+    ],
+    "recovery_results": [
+      {
+        "stage": "recovery_64111_0",
+        "clean": 63,
+        "stable": 70,
+        "teacher_assistance": true,
+        "passed_independent_audit": true
+      },
+      {
+        "stage": "recovery_64111_1",
+        "clean": 59,
+        "stable": 66,
+        "teacher_assistance": true,
+        "passed_independent_audit": true
+      },
+      {
+        "stage": "recovery_64117_0",
+        "clean": 63,
+        "stable": 70,
+        "teacher_assistance": true,
+        "passed_independent_audit": true
+      },
+      {
+        "stage": "recovery_64117_1",
+        "clean": 59,
+        "stable": 66,
+        "teacher_assistance": true,
+        "passed_independent_audit": true
+      }
+    ],
+    "autonomous_results_so_far": [
+      {
+        "seed": 64111,
+        "clean": 0,
+        "repairs": [],
+        "regressions": [
+          "known_old/0",
+          "known_old/1",
+          "known_old/10",
+          "known_old/11",
+          "known_old/12",
+          "known_old/13",
+          "known_old/14",
+          "known_old/15",
+          "known_old/16",
+          "known_old/17",
+          "known_old/18",
+          "known_old/19",
+          "known_old/2",
+          "known_old/20",
+          "known_old/21",
+          "known_old/22",
+          "known_old/23",
+          "known_old/3",
+          "known_old/8",
+          "known_old/9",
+          "known_recent/0",
+          "known_recent/1",
+          "known_recent/10",
+          "known_recent/11",
+          "known_recent/12",
+          "known_recent/13",
+          "known_recent/14",
+          "known_recent/15",
+          "known_recent/16",
+          "known_recent/17",
+          "known_recent/18",
+          "known_recent/19",
+          "known_recent/2",
+          "known_recent/20",
+          "known_recent/21",
+          "known_recent/22",
+          "known_recent/23",
+          "known_recent/3",
+          "known_recent/6",
+          "known_recent/7",
+          "known_recent/8",
+          "known_recent/9",
+          "known_transfer/0",
+          "known_transfer/1",
+          "known_transfer/10",
+          "known_transfer/11",
+          "known_transfer/12",
+          "known_transfer/13",
+          "known_transfer/14",
+          "known_transfer/15",
+          "known_transfer/16",
+          "known_transfer/17",
+          "known_transfer/18",
+          "known_transfer/19",
+          "known_transfer/2",
+          "known_transfer/20",
+          "known_transfer/21",
+          "known_transfer/22",
+          "known_transfer/23",
+          "known_transfer/3",
+          "known_transfer/6",
+          "known_transfer/7",
+          "known_transfer/8",
+          "known_transfer/9"
+        ]
+      },
+      {
+        "seed": 64117,
+        "clean": 0,
+        "repairs": [],
+        "regressions": [
+          "known_old/0",
+          "known_old/1",
+          "known_old/10",
+          "known_old/11",
+          "known_old/12",
+          "known_old/13",
+          "known_old/14",
+          "known_old/15",
+          "known_old/16",
+          "known_old/17",
+          "known_old/18",
+          "known_old/19",
+          "known_old/2",
+          "known_old/20",
+          "known_old/21",
+          "known_old/22",
+          "known_old/23",
+          "known_old/3",
+          "known_old/8",
+          "known_old/9",
+          "known_recent/0",
+          "known_recent/1",
+          "known_recent/10",
+          "known_recent/11",
+          "known_recent/12",
+          "known_recent/13",
+          "known_recent/14",
+          "known_recent/15",
+          "known_recent/16",
+          "known_recent/17",
+          "known_recent/18",
+          "known_recent/19",
+          "known_recent/2",
+          "known_recent/20",
+          "known_recent/21",
+          "known_recent/22",
+          "known_recent/23",
+          "known_recent/3",
+          "known_recent/6",
+          "known_recent/7",
+          "known_recent/8",
+          "known_recent/9",
+          "known_transfer/0",
+          "known_transfer/1",
+          "known_transfer/10",
+          "known_transfer/11",
+          "known_transfer/12",
+          "known_transfer/13",
+          "known_transfer/14",
+          "known_transfer/15",
+          "known_transfer/16",
+          "known_transfer/17",
+          "known_transfer/18",
+          "known_transfer/19",
+          "known_transfer/2",
+          "known_transfer/20",
+          "known_transfer/21",
+          "known_transfer/22",
+          "known_transfer/23",
+          "known_transfer/3",
+          "known_transfer/6",
+          "known_transfer/7",
+          "known_transfer/8",
+          "known_transfer/9"
+        ]
+      }
+    ],
+    "cloning_fixed": false,
+    "training_entry_correction": "The all64-before-PPO requirement was added by the assistant in this turn, not requested by the human. It is removed only as a training-entry condition to carry out the explicit request to restart PPO with imitation after validation. Physical pass/fail predicates and acceptance/retention requirements remain unchanged. Failed clones stay failed; no promotion or holdout.",
+    "ppo_continuation": {
+      "owner_pid": 854179,
+      "source": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v3",
+      "remote_output": "/home/kadir/humanoid-sitting/outputs/recovery_imitation_sitting_20261028_v3",
+      "state": "ppo_with_imitation",
+      "scientific_worker_started": true,
+      "protocol": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v3/protocol.json",
+      "same_deadline_and_total_training_budget": true,
+      "no_extra_recovery_or_ppo_retries": true,
+      "active": {
+        "label": "train_sitting_64117",
+        "pid": 972499
+      },
+      "updates_observed": 48,
+      "first_weight_verification": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v2/evidence/recovery_imitation_sitting_20261028_v3/train_sitting_64111_verified.json",
+      "accepted_actor_steps_observed": 18,
+      "critic_steps_observed": 40,
+      "last_observed_update_with_actor_change": 8,
+      "completed": [
+        "train_sitting_64111",
+        "eval_sitting_64111_128",
+        "eval_sitting_64111_128_audit",
+        "eval_sitting_64111_256",
+        "eval_sitting_64111_256_audit"
+      ],
+      "latest_status_evidence": "/Users/kadir/humanoid-sitting-control/furniture_validation_20261028_v2/status_20261029T050546Z.json"
+    },
+    "ppo_weight_updates_verified": true,
+    "latest_result": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v3/ppo_start_verified.json",
+    "superseded_by": "motion_prior_ppo_20261029_v2; oldv3bothseedsfinishedall72at128/256with0clean/0repairs/64regressions."
+  },
+  "furniture_validation_after_ppo": {
+    "human_authorization": "Go ahead and validate the furniture collisions and contact scoring. After PPO finishes, use only the 4090 to test the seats, arms and backs. Show me a video with collision shapes and contact forces, keeping success criteria unchanged.",
+    "state": "OLD_OWNER_STOPPED_AUDIT_ARITHMETIC_ERROR_NEW_TESTS_COMPLETED",
+    "owner_pid": 935949,
+    "remote_source": "/home/kadir/humanoid-sitting/experiments/furniture_validation_20261028_v2",
+    "remote_output": "/home/kadir/humanoid-sitting/outputs/furniture_validation_20261028_v2",
+    "local_source": "/Users/kadir/humanoid-sitting-control/furniture_validation_20261028_v2",
+    "protocol": "/Users/kadir/humanoid-sitting-control/furniture_validation_20261028_v2/protocol.json",
+    "freeze": "/Users/kadir/humanoid-sitting-control/furniture_validation_20261028_v2/freeze.json",
+    "CPU_checks_passed": true,
+    "physics_validation_executed": true,
+    "video_ready": true,
+    "gpu": "4090 only after current PPO plus all evaluations finish and release owner locks",
+    "gpu4070": "AIWorker untouched",
+    "scope": "14 new furniture layouts;3surfacepresses+emptyspace control;full20s robot trials on validated layouts;unchangedphysical/actionthresholds",
+    "recurring_automation": false,
+    "delivery_status": "/Users/kadir/humanoid-sitting-control/furniture_validation_20261028_v2/delivery_status.json",
+    "results_directory": "/Users/kadir/humanoid-sitting-control/furniture_validation_20261028_v2/results",
+    "future_video": "/Users/kadir/humanoid-sitting-control/furniture_validation_20261028_v2/results/furniture_collisions_and_forces.mp4",
+    "last_checked_utc": "2026-10-29T05:05:46.449529+00:00",
+    "latest_status_evidence": "/Users/kadir/humanoid-sitting-control/furniture_validation_20261028_v2/status_20261029T050546Z.json",
+    "owner_confirmed_live": false,
+    "original_fullrobot_trials_ran": false,
+    "saved_probe_audit_correction": "/Users/kadir/humanoid-sitting-control/furniture_validation_20261029_saved_audit_v1/results/audit.json",
+    "latest_body_support_result": "/Users/kadir/humanoid-sitting-control/motion_prior_ppo_20261029_v2/results/body_support/independent_audit.json",
+    "latest_depth_result": "/Users/kadir/humanoid-sitting-control/motion_prior_ppo_20261029_v1/results/depth_overview.json",
+    "video": "/Users/kadir/humanoid-sitting-control/motion_prior_ppo_20261029_v2/results/media/furniture_support_and_forces.mp4",
+    "video_scope": "50s saved controlledprobes/bodyfixtures withcollisionmeshesandmeasuredforces. Notwhole-robotfurniturebalance."
+  },
+  "latest_saved_ppo_diagnosis": {
+    "checked_utc": "2026-10-29T05:11:16.937259+00:00",
+    "report": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v3/diagnosis_20261029_v1/REPORT.txt",
+    "arithmetic": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v3/diagnosis_20261029_v1/results.json",
+    "supplemental": "/Users/kadir/humanoid-sitting-control/recovery_imitation_sitting_20261028_v3/diagnosis_20261029_v1/supplemental.json",
+    "scope": "CPU-only saved-data analysis; no simulation or training changes",
+    "first_seed": {
+      "updates": 256,
+      "clean": 0,
+      "accepted_actor_steps": 34,
+      "updates_without_actor_change": 246,
+      "median_first_failure_s": 4.52,
+      "first_impact_failures": 69,
+      "first_forbidden_contact_failures": 33,
+      "categories_overlap": true
+    },
+    "conclusion": "Closed-loop imitation drifts despite tiny offline MSE; recovery control bursts only0.02\u20130.10s; actor acceptance nearly frozen. Exact rejection causes were not logged. Fix imitation/recovery and optimizer acceptance before extending identical training. Reward ranking also needs correction.",
+    "second_seed_observed": {
+      "updates": 74,
+      "actor_steps": 7,
+      "last_actor_change": 3,
+      "state": "training"
+    },
+    "training_interrupted": false,
+    "constraints_changed": false
+  },
+  "latest_authorized_continuation": {
+    "authorization": "Fix imitation, update bottleneck and reward ranking; validate all72 complete rollouts then restartPPO aftercurrentrun;4090only; unchangedactionlimitsandphysicalcriteria. Also validate rear depth/pointcloud visibility and physical support byfurniture.",
+    "source": "/Users/kadir/humanoid-sitting-control/motion_prior_ppo_20261029_v2",
+    "remote_source": "/home/kadir/humanoid-sitting/experiments/motion_prior_ppo_20261029_v2",
+    "remote_output": "/home/kadir/humanoid-sitting/outputs/motion_prior_ppo_20261029_v2",
+    "owner_pid": 1139195,
+    "state": "PPO_COMPLETE_TASK_PAUSED_BY_USER",
+    "frozen_files": 192,
+    "saved_command_reconstruction_max_error_rad": 0.0,
+    "new_reward_saved_trajectory_ranking_passed": true,
+    "optimizer_controlled_updates_passed": 16,
+    "full72_new_physical_validation_done": true,
+    "new_PPO_started": true,
+    "dependencies": "ExistingPPOcomparisonandqueuedfurniturevalidationmustfinishandreleasebothscientificlocks.",
+    "new_method": "Sensorselecteddemonstrationmotionlibraryplus23trainableresiduals;softimitationwithout hardanchor;potentialshapingwithcorrectterminalranking. Does not claim novel-furniture generalization.",
+    "furniture_checks": "ActualrearRGB/depth/pointcloudversusmeshraysandrecognizer;42controlledloadswithactualG1collidersat0.5bodyweight;separatefromautonomoussuccess.",
+    "historical_automation_deleted": true,
+    "recurring_automation": false,
+    "fresh_holdout_opened": false,
+    "initial_prior_validation": {
+      "label": "prior_full72",
+      "seed": 64111,
+      "clean": 64,
+      "repairs": [],
+      "regressions": [],
+      "complete_trials": 72,
+      "duration_s": 20,
+      "all64_retained": true,
+      "zero_teacher_interventions": true,
+      "no_case_id_actor_input": true,
+      "development_library_generalization_not_claimed": true
+    },
+    "first_update_weight_evidence": {
+      "passed": true,
+      "checkpoint": "first_update.pt",
+      "changes_l2": {
+        "actor": 0.005407326479233099,
+        "critic": 0.20368453938957973
+      },
+      "updates": 1,
+      "actor_steps": 4,
+      "critic_steps": 4,
+      "checkpoint_sha256": "0630b1c648726eb0e4737e7c83deeabf130e722874437a8837d1b0e9fcf04c8d"
+    },
+    "latest_update": 225,
+    "actor_changed_updates": null,
+    "saved_reward_ranking_passed": true,
+    "software_correction": "v1bodyexportmissedinstanceproxies;failedbeforephysics. v2CPUexportusesactualcachedG1instancecolliders;allcompletedvalidationreused.",
+    "furniture_results": {
+      "camera_all14captured": true,
+      "recognizer_matched_target": 3,
+      "camera_geometry_audit_passed": 1,
+      "camera_geometry_residual_cause_not_fully_resolved": true,
+      "body_load_passes": 24,
+      "body_load_tests": 42,
+      "central_body_support_passes": 14,
+      "body_contact_patch_passes": 8,
+      "small_probe_mechanical_passes": 42,
+      "autonomous_furniture_trials_completed": 0,
+      "whole_robot_furniture_success_claimed": false
+    },
+    "live_progress_evidence": "/Users/kadir/humanoid-sitting-control/motion_prior_ppo_20261029_v2/results/verified_progress_snapshot.json",
+    "perception_retest_followup": "/Users/kadir/humanoid-sitting-control/furniture_perception_repair_20261029_v1/continuation_record.json",
+    "updates_with_accepted_actor_steps": 225
+  },
+  "furniture_perception_repair_after_ppo": {
+    "authorization": "Fix depth alignment and surface recognition, then retest seats, arms and backs after PPO finishes.4090only, unchanged success criteria, updated video.",
+    "state": "SAVED_TRAJECTORY_AUDITS_AND_VIDEO_COMPLETE",
+    "owner_pid": 1246789,
+    "source": "/Users/kadir/humanoid-sitting-control/furniture_perception_repair_20261029_v1",
+    "remote_source": "/home/kadir/humanoid-sitting/experiments/furniture_perception_repair_20261029_v1",
+    "remote_output": "/home/kadir/humanoid-sitting/outputs/furniture_perception_repair_20261029_v1",
+    "protocol": "/Users/kadir/humanoid-sitting-control/furniture_perception_repair_20261029_v1/protocol.json",
+    "freeze": "/Users/kadir/humanoid-sitting-control/furniture_perception_repair_20261029_v1/freeze.json",
+    "source_review": "/Users/kadir/humanoid-sitting-control/furniture_perception_repair_20261029_v1/source_review.json",
+    "cpu_contract_checks": "/Users/kadir/humanoid-sitting-control/furniture_perception_repair_20261029_v1/cpu_contract_checks.json",
+    "frozen_files": 215,
+    "latest_result": "/Users/kadir/humanoid-sitting-control/furniture_saved_review_20261104_v1/results/audit_summary.json",
+    "saved_findings": {
+      "alignment_max_m": 0.000271258818049791,
+      "all42_saved_frames_zero_mismatches": true,
+      "original_plane_gate_passes": 9,
+      "total_layouts": 14,
+      "minimum_selected_target_fraction": 0.9490254872563718,
+      "no_physical_repair_claim": true,
+      "world_pose_only_for_offline_audit": true
+    },
+    "finite_plan": "Wait both256updatePPOseeds plusall4full72evaluations; onecorrected-perception72regressioncheck;14full20sfurnituretrials+42freshcameraframes;upto42observedinteriorbodyloadfixtures;independentaudits;54svideo.",
+    "scientific_launches": 16,
+    "dependency_owner_pid": 1139195,
+    "gpu": "4090 only",
+    "gpu4070": "AIWorker untouched",
+    "recurring_automation": false,
+    "video_ready": true,
+    "live_review": "/Users/kadir/humanoid-sitting-control/furniture_perception_repair_20261029_v1/review.html",
+    "local_delivery_pid": 58539,
+    "local_delivery_finite_seconds": 65100,
+    "video_target": "/Users/kadir/humanoid-sitting-control/furniture_saved_review_20261104_v1/results/media/updated_furniture_depth_contacts.mp4",
+    "unchanged_success_criteria": true,
+    "unchanged_action_limits": true,
+    "fresh_holdout_opened": false,
+    "automatic_promotion": false,
+    "checked_utc": "2026-10-30T16:09:16.032764+00:00",
+    "report_error": "FileNotFoundError: robot_6MoOyPtetL_seat/independent_audit.json",
+    "worker_live": false,
+    "offline_recovery": {
+      "date": "2026-11-04",
+      "audits": 14,
+      "validated_clean": 0,
+      "raw_clean": 0,
+      "ambiguous_scores": 9,
+      "fixture_load_passes": 23,
+      "fixture_on_target_load_passes": 12,
+      "fixture_tests": 42,
+      "extra_simulation_steps": 0,
+      "extra_ppo_updates": 0,
+      "local_video_sha256_verified": true,
+      "all_490_frames_decoded": true,
+      "reviewed_all_four_video_sections": true,
+      "historical_failure_preserved": true
+    }
+  },
+  "user_pause": {
+    "state": "PAUSED_BY_USER",
+    "instruction": "We won't run anything new right now; we'll come back to this task later.",
+    "record": "/Users/kadir/humanoid-sitting-control/task_pause_20261030_v1/pause_receipt.json",
+    "no_new_scientific_launches": true,
+    "resume_requires_human": true,
+    "limited_resume": "November5 human resumed expanded armchair demonstrations,4090-onlyPPO and72-case regression evaluation; historical automation stays deleted."
+  },
+  "box_armchair_lean_completion": {
+    "state": "SPECIFIC_ARMCHAIR_LEAN_COMPLETE",
+    "receipt": "/Users/kadir/humanoid-sitting-control/box_armchair_lean_review_20261104_v1/completion.json",
+    "repeatability": "/Users/kadir/humanoid-sitting-control/box_armchair_lean_20261104_v4/results/repeatability.json",
+    "video": "/Users/kadir/humanoid-sitting-control/box_armchair_lean_20261104_v4/results/video/repeatable_armchair_lean.mp4",
+    "qualifying_trials": 3,
+    "total_final_trials": 3,
+    "full72_retested": false,
+    "PPO_updates": 0,
+    "capability_review": {
+      "video": "/Users/kadir/humanoid-sitting-control/capability_review_20261105_v1/capabilities_and_limits.mp4",
+      "manifest": "/Users/kadir/humanoid-sitting-control/capability_review_20261105_v1/video_manifest.json",
+      "duration_s": 57,
+      "physics_steps": 0,
+      "ppo_updates": 0,
+      "historical_failures_separately_labeled": true,
+      "utc": "2026-11-05T18:55:50.073720+00:00"
+    }
+  },
+  "armchair_rest_ppo_20261105": {
+    "state": "FINITE_COMPARISON_AND_VIDEO_COMPLETE_NOT_PROMOTED",
+    "source": "/Users/kadir/humanoid-sitting-control/armchair_rest_ppo_20261105_v1",
+    "protocol": "/Users/kadir/humanoid-sitting-control/armchair_rest_ppo_20261105_v1/protocol.json",
+    "scientific_launches": 12,
+    "new_PPO_started": true,
+    "utc": "2026-11-05T21:17:07.826357+00:00",
+    "demonstrations": {
+      "attempted": 8,
+      "rear_back_clean": 5,
+      "rear_back_total": 7,
+      "pelvis_clean": 0,
+      "pelvis_attempts": 1,
+      "remaining_pelvis_cancelled": 6,
+      "first_pelvis_failure_s": 3.28,
+      "reason": "Torso reaches ambiguous upper seam before intended pelvis contact; needs whole-body clearance planning."
+    },
+    "demonstration_result": "/Users/kadir/humanoid-sitting-control/armchair_rest_ppo_20261105_v1/demo_selection.json",
+    "trainer_source": "/Users/kadir/humanoid-sitting-control/armchair_rest_trainer_20261105_v1",
+    "cpu_reward_and_preservation_checks_passed": true,
+    "physical_benchmark_unchanged": "best09:64/72; no accepted repairs",
+    "automated_recurring_task": "DELETED; no recreation",
+    "next_work": "Preserve successful approach, collect balance/recovery data around ankle deviations, and construct whole-body-clearance-aware straighter-leg pelvis support before further learning. This is an untested recommendation, not a queued run.",
+    "owner_pid": null,
+    "prior_armchair_clean": 11,
+    "prior_armchair_total": 11,
+    "first_real_weight_audit": "/Users/kadir/humanoid-sitting-control/armchair_rest_ppo_20261105_v1/launch_validation_receipt.json",
+    "new_PPO_completed": true,
+    "updates": 128,
+    "worker_live": false,
+    "armchair_prior_clean": "11/11",
+    "armchair_learned_clean": "2/11",
+    "armchair_regressions": 9,
+    "original_sitting_clean": "64/72",
+    "original_sitting_regressions": 0,
+    "original_sitting_repairs": 0,
+    "results": "/Users/kadir/humanoid-sitting-control/armchair_rest_policy_video_20261105_v1/results.json",
+    "diagnosis": "/Users/kadir/humanoid-sitting-control/armchair_rest_policy_video_20261105_v1/regression_diagnosis.json",
+    "video": "/Users/kadir/humanoid-sitting-control/armchair_rest_policy_video_20261105_v1/learned_policy_and_limits.mp4",
+    "video_manifest": "/Users/kadir/humanoid-sitting-control/armchair_rest_policy_video_20261105_v1/video_manifest.json",
+    "resource_receipt": "/Users/kadir/humanoid-sitting-control/armchair_rest_ppo_20261105_v1/results/final_resource_receipt.json",
+    "recommended_checkpoint": "/Users/kadir/humanoid-sitting-control/armchair_rest_ppo_20261105_v1/checkpoints/validated_prior.pt",
+    "learned_checkpoint_not_promoted": "/Users/kadir/humanoid-sitting-control/armchair_rest_ppo_20261105_v1/checkpoints/ppo_128_not_promoted.pt"
+  },
+  "previous_result_before_armchair_rest_20261105": "/Users/kadir/humanoid-sitting-control/armchair_rest_ppo_20261105_v1/checkpoint_before.json",
+  "furniture_examples_20261105": {
+    "state": "FINISHED_WITH14_FAILED_ROLLOUTS_AND5_PLANNING_REJECTIONS",
+    "authorization": "Check4090; run20new furniture trials with unchanged action limits and success criteria; show video/pass-fail/holdtimes;4070 reserved forAIWorker.",
+    "local": "/Users/kadir/humanoid-sitting-control/furniture_examples_20261105_v1",
+    "remote": "/home/kadir/humanoid-sitting/experiments/furniture_examples_20261105_v2",
+    "counts": {
+      "sitting_scenarios": 10,
+      "leaning_scenarios": 12,
+      "distinct_objects": 5,
+      "verified_reused_armchair_leans": 2,
+      "new_successful_demonstrations": 1,
+      "new_starts_processed": 20,
+      "full20s_new_rollouts": 15,
+      "failed_new_rollouts": 14,
+      "planning_rejections_without_motion": 5,
+      "new_sitting_successes": 0,
+      "new_leaning_successes": 1
+    },
+    "objects": [
+      "box armchair",
+      "box-arm couch",
+      "L-shaped couch",
+      "round wooden stool",
+      "coffee table"
+    ],
+    "static_layout_check": "22/22 passed",
+    "independent_audit_fixture_check": "saved positive accepted; saved failure rejected",
+    "physics_and_camera_validation": "15full20s recorded/audited rollouts:1clean,14failed;5starts rejected after reset before motion. Frozen actionlimits/criteria preserved.",
+    "ppo_started": false,
+    "owner_started": true,
+    "worker_live": false,
+    "recurring_automation": false,
+    "resource_blocker": null,
+    "prelaunch_receipt": "/Users/kadir/humanoid-sitting-control/furniture_examples_20261105_v1/prelaunch_receipt.json",
+    "preview": "/Users/kadir/humanoid-sitting-control/furniture_examples_20261105_v1/review.html",
+    "protocol": "/Users/kadir/humanoid-sitting-control/furniture_examples_20261105_v1/protocol.json",
+    "source_review": "/Users/kadir/humanoid-sitting-control/furniture_examples_20261105_v1/source_review.json",
+    "utc": "2026-11-06T02:33:55.899928+00:00",
+    "owner_pid": null,
+    "continuation": "/Users/kadir/humanoid-sitting-control/furniture_examples_continuation_20261105_v1",
+    "remote_live_status": "/home/kadir/humanoid-sitting/outputs/furniture_examples_continuation_20261105_v1/status.json",
+    "shared_gpu_lock": "/home/kadir/sircus-isaac/scene.lock",
+    "preserved_stops": [
+      "v1 reporting crash after1control, fixed only reporting compatibility in v2",
+      "v2 stopped beforetrial5 when foreign4090study appeared;4complete trials preserved;continuation skips all4"
+    ],
+    "last_owner_pid": 18808,
+    "results": "/Users/kadir/humanoid-sitting-control/furniture_trials_review_20261105_v1/results.json",
+    "report": "/Users/kadir/humanoid-sitting-control/furniture_trials_review_20261105_v1/review.html",
+    "video": "/Users/kadir/humanoid-sitting-control/furniture_trials_review_20261105_v1/furniture_trials_20.mp4",
+    "video_manifest": "/Users/kadir/humanoid-sitting-control/furniture_trials_review_20261105_v1/video_manifest.json",
+    "resource_receipt": "/Users/kadir/humanoid-sitting-control/furniture_trials_review_20261105_v1/resource_receipt.json",
+    "final_passes": 1,
+    "final_failed_rollouts": 14,
+    "final_planning_rejections": 5,
+    "holds": {
+      "lean_myd1WSucAz_right": {
+        "final_s": 7.0,
+        "passed": true
+      },
+      "sit_modern_coffee_table_01_angled": {
+        "final_s": 8.04,
+        "passed": false,
+        "reason": "42loaded-slip ticks earlier inepisode"
+      },
+      "other13_complete_rollouts": "final qualifying hold0s",
+      "five_planner_rejected_starts": "no motion rollout; no measured hold"
+    }
+  },
+  "latest_preparation_result": {
+    "path": "/Users/kadir/humanoid-sitting-control/furniture_collision_review_20261106_v1/execution_receipt.json",
+    "summary": "Correctedinitialsensor/geometryassociation but no physical repair. Latesttwo20sLCrolloutsfailed. All-depthtrackingproposalfailedsaved-framevalidation; not deployed."
+  },
+  "previous_result_before_furniture_trials_20261105": "/Users/kadir/humanoid-sitting-control/furniture_examples_continuation_20261105_v1/checkpoint_before.json",
+  "furniture_repair_20261106": {
+    "utc": "2026-11-06T08:13:16.784981+00:00",
+    "state": "REFERENCE_COMPLETE_LOAD_ESTIMATOR_REJECTED_PPO_SAMPLING_FIXED_OFFLINE",
+    "model_placements": 2,
+    "model_command_and_collision_passes": 2,
+    "physical_demonstrations_added": 0,
+    "ppo_updates": 0,
+    "repairs_claimed": 0,
+    "model_audits": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/complete_path_results/receipt.json",
+    "motor_observer_saved_validation": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/lean_observer_check.json",
+    "source_finding": "Implicit PD effort telemetry and transmitted joint reaction are different quantities. The attempted static load reconstruction failed against current saved contacts. Existing rigid-body furniture fixtures balance their forces. Exact cause of the articulated discrepancy remains unproven.",
+    "original20_start_results": "Unchanged:1pass,14failed rollouts,5planning rejections. Closer model placements are new positions, not original-start repairs.",
+    "original72": "64clean protected;8unresolved; no new72 evaluation",
+    "GPU4070": "untouched, reserved forAIWorker",
+    "automation": "deleted; finite one-job owner only",
+    "worker_live": false,
+    "reference_run": {
+      "rollouts": 1,
+      "new_diverse_examples": 0,
+      "active_controls": 1000,
+      "warmup_controls": 25,
+      "physical_substeps": 4100,
+      "final_hold_s": 7.0,
+      "unchanged_physical_audit_passed": true,
+      "new_load_estimator_admitted": false,
+      "actor_received_new_sensor": false,
+      "measurement_audit": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/motor_axis_readout/motor_axis_audit.json",
+      "physical_audit": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/motor_axis_readout/independent_audit.json",
+      "owner_closure": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/measurement_owner/status.json"
+    },
+    "load_measurement": {
+      "mean_absolute_normal_error_N": 6.6362757,
+      "mean_absolute_shear_error_N": 25.3070268,
+      "mean_final5s_force_imbalance_N": [
+        -1.2015957,
+        -0.6307938,
+        28.2768804
+      ],
+      "result": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/motor_axis_readout/force_balance_audit.json",
+      "interpretation": "Measurement hypothesis failed; no force correction, score change or root-cause proof. Control-rate forces are final-substep reports, not full-interval averages. Prior rigid-body furniture fixtures satisfy force balance, whereas this articulated record disagrees with pose-derived momentum.",
+      "limitations": "Raw friction anchors and all-substep wrenches absent; no replay launched to recover them. TGS endpoint velocity and pose finite differences are distinct; prior306/310 evidence retained."
+    },
+    "measurement_semantics_correction": {
+      "actual_backend": "physx confirmed by saved launch log; ovphysx source read during diagnosis was not the active backend",
+      "incoming_joint_axis_component": "Total transmitted joint reaction projected onto axis; not independently isolated motor effort. Historical306 already establishes this distinction. Filenames are retained as evidence, not a motor-sensor certification.",
+      "source_claim": "No new sensor is admitted for actor control."
+    },
+    "policy_sampling_fix": {
+      "source": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/policy_repair/policy.py",
+      "validation": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/policy_repair/validation.json",
+      "all72_saved_cases": true,
+      "control_observations": 72000,
+      "two_seed_stochastic_checks": 144000,
+      "protected_action_difference_rad": 0.0,
+      "active_exploration_and_synthetic_updates_passed": true,
+      "physical_PPO_updates": 0,
+      "deployed": false,
+      "scope": "Masks exploration as well as residual mean on protected routes. It does not fix the9regressions on trainable new-skill branches."
+    },
+    "remaining_model_results": {
+      "additional_seat_constructions": 8,
+      "admitted": 0,
+      "rejections": "Pose, time or clearance checks. No physical trial for these rejected models.",
+      "receipt": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/remaining_seats_results/receipt.json"
+    },
+    "next_work": "Construct and validate a current-sensor contact/load trigger without treating implicit PD telemetry or incoming total joint reaction as isolated motor effort. No available replacement is admitted. Do not retry the stopped measurement, use its failure as a waiver, or launch seat_controller.py. Then obtain10sitting+10leaning clean full rollouts on5actual furniture objects, recovery/imitation validation,4090PPO,all72physical regression evaluation,and new video. Offline route-distribution fix is ready for integration only when these gates pass.",
+    "resource_receipt": "/Users/kadir/humanoid-sitting-control/furniture_repair_20261106_v1/final_resource_receipt.json"
+  },
+  "furniture_load_estimator_20261106_v2": {
+    "state": "REJECTED_SAVED_DATA_LOAD_ESTIMATOR",
+    "receipt": "/Users/kadir/humanoid-sitting-control/furniture_load_estimator_20261106_v2/result_receipt.json",
+    "validation": "/Users/kadir/humanoid-sitting-control/furniture_load_estimator_20261106_v2/validation.json",
+    "new_physics_steps": 0,
+    "PPO_updates": 0,
+    "worker_live": false,
+    "video": "/Users/kadir/humanoid-sitting-control/furniture_load_review_20261106_v1/recorded_behavior_and_load_estimator.mp4"
+  },
+  "furniture_load_repair_20261106_v3": {
+    "receipt": "/Users/kadir/humanoid-sitting-control/furniture_load_repair_20261106_v3/execution_receipt.json",
+    "state": "QUEUE_STOPPED_BEFORE_LAUNCH_DISK_RESERVE_THEN_SUPERSEDED_BY_RECORDED_FINITE_ATTEMPTS",
+    "local": "/Users/kadir/humanoid-sitting-control/furniture_load_repair_20261106_v3",
+    "remote": "/home/kadir/humanoid-sitting/experiments/furniture_load_repair_20261106_v3",
+    "owner_status": "/home/kadir/humanoid-sitting/outputs/furniture_load_repair_20261106_v3/calibration_owner/status.json",
+    "owner_pid": null,
+    "waiting_jobs": 0,
+    "PPO_autostart": false,
+    "new_successful_demos": 0,
+    "physical_repairs": 0
+  },
+  "furniture_collision_repair_20261106": {
+    "receipt": "/Users/kadir/humanoid-sitting-control/furniture_collision_review_20261106_v1/execution_receipt.json",
+    "state": "TWO_FULL_LCOUCH_TRIALS_FAILED_STOOL_UNRESOLVED_NO_PPO",
+    "new_complete_rollouts": 2,
+    "new_successful_demos": 0,
+    "new_PPO_updates": 0,
+    "new_full72_checks": 0,
+    "worker_live": false,
+    "PPO_autostart": false,
+    "video": "/Users/kadir/humanoid-sitting-control/furniture_collision_review_20261106_v1/l_couch_two_full_trials.mp4",
+    "source_freezes": [
+      "/Users/kadir/humanoid-sitting-control/furniture_camera_coverage_20261106_v1/calibration_freeze.json",
+      "/Users/kadir/humanoid-sitting-control/furniture_stool_placement_20261106_v1/construction_freeze.json"
+    ]
+  },
+  "furniture_rest_repair_20261107_v1": {
+    "receipt": "/Users/kadir/humanoid-sitting-control/furniture_rest_repair_20261107_v1/execution_receipt.json",
+    "state": "PARTIAL_SOFTWARE_REPAIRS_NO_ADMISSIBLE_NEW_MOTION",
+    "worker_live": false,
+    "PPO_autostart": false,
+    "new_successful_demos": 0,
+    "new_PPO_updates": 0,
+    "new_full72_checks": 0,
+    "physical_repairs": 0
+  },
+  "furniture_saved_repair_20261107_v2": {
+    "receipt": "/Users/kadir/humanoid-sitting-control/furniture_saved_repair_20261107_v2/execution_receipt.json",
+    "state": "CAMERA_SAVED_FRAME_CHECKS_PASS_MOTION_CONSTRUCTIONS_REJECTED_NO_PHYSICS",
+    "camera_validation": "/Users/kadir/humanoid-sitting-control/furniture_saved_repair_20261107_v2/registered_camera/validation.json",
+    "worker_live": false,
+    "PPO_autostart": false,
+    "new_successful_demos": 0,
+    "new_PPO_updates": 0,
+    "new_full72_checks": 0,
+    "physical_repairs": 0
+  },
+  "rest_ready_20261108_v1": {
+    "receipt": "/Users/kadir/humanoid-sitting-control/rest_ready_20261108_v1/execution_receipt.json",
+    "state": "REWARD_AND_CAMERA_VETO_SAVED_TESTS_PASS_MOTION_REJECTED_NO_PHYSICS",
+    "worker_live": false,
+    "PPO_autostart": false,
+    "new_successful_demos": 0,
+    "new_PPO_updates": 0,
+    "new_full72_checks": 0,
+    "physical_repairs": 0
+  }
+}

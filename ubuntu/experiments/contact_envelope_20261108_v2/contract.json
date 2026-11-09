@@ -1,0 +1,52 @@
+{
+  "scope": "Two named CPU-only new constructions: current pelvis back contact and camera-augmented stool top; no physics admission",
+  "initialization": "Original saved standing encoders, gravity and previous command only; accepted within-run node continuation; no old rejected vectors",
+  "mechanism": "Exact per-body minimum of every v1 camera residual; analytic whole-body camera-frustum exclusion; same equations, clearances and method. New cold construction only, no timeout state/rejected vector retained or reused.",
+  "named_targets": [
+    "lean_center",
+    "stool_center"
+  ],
+  "source_association": "lean: original standing pelvis rear face within observed back; stool: admitted known_old/8 final pelvis support face, saved depth only with independently audited rigid placement",
+  "resource_bound": {
+    "audit_outer_wall_s": 45,
+    "per_target_total_wall_s": 45,
+    "targets": 2,
+    "total_leaf_wall_ceiling_s": 135,
+    "CPU_threads": 1,
+    "GPU": 0,
+    "retries": 0,
+    "per_node_iterations": 60,
+    "approach_intervals": 8,
+    "normal_intervals": 4,
+    "load_intervals": 4,
+    "maximum_optimizer_calls_per_target": 16,
+    "imports_hashes_preparation_solve_and_audits_included": true,
+    "retained_failure_vectors_reusable": false
+  },
+  "equations": {
+    "clearance": "n_observed(sample) dot world_material_sample + d_observed - margin >= 0; fixed body material samples; 6mm forbidden-body margin; selected target-body margin min(6.01mm, current nonnegative normal gap)",
+    "balanced_feet": "Both foot 6D poses fixed; force/moment balance; each COP10mm inset, normal>=.05BW, friction<=.5",
+    "contact": "Approach: one normal-gap equality and finite target facet22mm inset near hover. Normal: frozen hover tangent and <=5.5mm/s normal schedule. Load: fixed material position and increasing normal force proxy.",
+    "cost": "sum(tau_23^2)/standing + readiness_epigraph^2 + .05*joint_distance^2 + .05*tangent_distance^2/.15^2 + positive_root_lowering_fraction^2",
+    "timing": "Prefix deadlines9.66/12.36/13.36s, >=.5s quiet reserve but actual25current quiet gate mandatory,1s final settling reserve, full path<14.4s",
+    "encoding": "Original .003rad/20ms,.1filter,.03desiredmargin,14fixedfingers; planned nominal.125rad/s only, no new feedback allowance"
+  },
+  "tests": [
+    "independent known-distance camera rows and missing-depth negative fixture",
+    "independent all23joint virtual-work and base-wrench audit",
+    "optimizer success + equality<=.002 + inequality>=-1e-6",
+    "full original6mm expanded mesh including rest body until contact",
+    "between-node feet, normal speed, loaded material drift",
+    "float32 complete command encoding and time reservation"
+  ],
+  "failure_policy": "One frozen cold construction per named target following independent exact-compression audit; no further retries if either fails.",
+  "limitations": [
+    "Camera pixel facets do not certify unseen space",
+    "Sampled static paths do not establish continuous dynamic stability",
+    "Force and torque model are not observed contact or electrical energy",
+    "Fresh real reset/depth/current quiet and runtime checks required before a complete20s physical trial",
+    "No global optimum or completed repair claim"
+  ],
+  "independent_review": "Compare compressed scalar-per-body minima against original full vector minima at original saved standing and two saved successful armchair states. Frustum pruning is valid only when all8AABB corners lie outside one linear frustum halfspace. All physical, timing and float32 gates remain.",
+  "resource_failure_addressed": "v1 exhausted45s on each named target with235234sample inequalities; dense SQP Jacobian was ~56.5MB for camera rows alone. New camera constraint dimension at most number of bodies; all underlying sample conditions remain checked."
+}

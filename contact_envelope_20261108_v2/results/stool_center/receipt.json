@@ -1,0 +1,10 @@
+{
+  "model_pass": false,
+  "error": "ValueError({'reason': 'COLLISION_AWARE_NODE_REJECTED', 'phase': 'load', 'node': 2, 'success': False, 'iterations': 60, 'equality': 0.001585696318667747, 'inequality': -0.007192534416428253, 'message': 'Iteration limit reached'})",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/experiments/contact_envelope_20261108_v2/validate.py\", line 82, in <module>\n    result=plan.solve();goal=plan.target.copy();write('plan.json',result)\n           ^^^^^^^^^^^^\n  File \"/home/kadir/humanoid-sitting/experiments/contact_envelope_20261108_v2/construct.py\", line 75, in solve\n    if not fit.success or eq>.002 or ineq<-1e-6:raise ValueError({'reason':'COLLISION_AWARE_NODE_REJECTED',**self.optimizations[-1]})\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: {'reason': 'COLLISION_AWARE_NODE_REJECTED', 'phase': 'load', 'node': 2, 'success': False, 'iterations': 60, 'equality': 0.001585696318667747, 'inequality': -0.007192534416428253, 'message': 'Iteration limit reached'}\n",
+  "total_seconds": 31.609583711979212,
+  "physics_launch_ready": false,
+  "physical_success": false,
+  "physics_steps": 0,
+  "PPO_updates": 0
+}
