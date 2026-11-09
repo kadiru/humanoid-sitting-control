@@ -1,0 +1,150 @@
+{
+  "utc": "2026-11-09T00:03:08.142856+00:00",
+  "state": "FIXTURE_AND_DEPTH_PASS_MOTION_ADMISSION_FAILED_NO_COMPLETE_CYCLE",
+  "authorization": "Validate higher support, then sit, hold5seconds, stand again;4090only;unchangedactionlimits/successcriteria.",
+  "fixture": {
+    "height_m": 0.5,
+    "separate_variant": true,
+    "original_fixture_modified": false,
+    "mesh_and_material_checks_passed": true,
+    "current_depth_geometry_passed": true,
+    "physical_support_validated": false
+  },
+  "executed_results": [
+    {
+      "step": "First current-camera construction",
+      "outcome": "Rejected: 2.356mm tangential residual exceeds2mm path gate; no sitting controls."
+    },
+    {
+      "step": "Fixed material-point association",
+      "change": "Bind tangential target to one actual pelvis collider vertex instead of switching argmin-height vertex.",
+      "geometry_passed": true,
+      "commands_passed": true,
+      "nominal_settled_s": 11.879999999999999,
+      "clearance_passed": false,
+      "clearance_intersections": 2079,
+      "first_forbidden_bodies": [
+        "left_hip_roll_link",
+        "right_hip_roll_link"
+      ],
+      "physical_motion": false
+    },
+    {
+      "step": "Analytic initial placement",
+      "change": "Move initial standing position forward45.5766mm from previous reset to bring predicted fixture edge inside camera.",
+      "outcome": "Fresh startup depth passes; center contact lane has no visible near-edge points. Stops before endpoint solve."
+    },
+    {
+      "step": "Bilateral visible-edge association",
+      "outcome": "Rejected before endpoint solve: independent side predictions differ3.19057mm > frozen3mm.",
+      "sensor_result": {
+        "left_points": 28,
+        "right_points": 27,
+        "current_points_only": true,
+        "scene_id_input": false,
+        "center_directly_observed": false,
+        "passed": false,
+        "tests": {
+          "collinear": true,
+          "agreement_at_contact_lane": false,
+          "front_orientation": true,
+          "supported_interpolation": true
+        },
+        "edge_x_at_center_m": -0.0985192545785012,
+        "edge_slope": -1.5735386672471047e-06,
+        "max_line_residual_m": 0.002747598818737637,
+        "left_right_center_predictions_m": [
+          -0.1275560602427456,
+          -0.13074662771345996
+        ],
+        "minimum_image_margin_px": 12,
+        "interpretation": "A common line supported on both visible flanks; occluded center is inferred. Independent fixture clearance remains mandatory."
+      }
+    }
+  ],
+  "counts": {
+    "GPU_startup_captures": 2,
+    "standing_warmup_controls": 50,
+    "physics_steps": 200,
+    "active_sitting_controls": 0,
+    "cold_endpoint_path_constructions": 2,
+    "pre_endpoint_edge_rejections": 2,
+    "new_demonstrations": 0,
+    "complete_sitting_cycles": 0,
+    "PPO_updates": 0,
+    "new_full72_checks": 0,
+    "accepted_repairs": 0
+  },
+  "resources": {
+    "GPU_uuid": "GPU-ab1950b0-01dd-0fab-407f-2d17936b27f4",
+    "GPU_4070_used": false,
+    "GPU_owner_wall_s": [
+      24.417030768003315,
+      21.420540141989477
+    ],
+    "CPU_in_GPU_construction_wall_s": [
+      10.788976630981779,
+      8.385305056988727
+    ],
+    "separate_CPU_construction_wall_s": [
+      18.499671393015888,
+      1.4170410329825245
+    ],
+    "CPU_AS_cap_GiB": 40,
+    "CPU_stage_wall_cap_s": 45,
+    "GPU_child_wall_cap_s": 900,
+    "render_CPU_only": true,
+    "render_wall_s": [
+      4.538841608009534,
+      4.672174160979921
+    ],
+    "max_measured_CPU_child_RSS_KiB": 312560,
+    "accounting_note": "GPU owner wall includes each in-GPU CPU construction; do not double count. Preparation timings recorded by producers exclude uninstrumented final serialization/process shutdown, so no exact grand-total wall claim.",
+    "data_directory_written": false
+  },
+  "failures_preserved": [
+    "Initial fixture preparation JSON numpy.bool serialization failure after asset creation; native-bool validation-only recovery retained unchanged assets.",
+    "First current-camera path gate rejection.",
+    "Fixed material-contact full collision audit rejection.",
+    "Center-only edge visibility rejection.",
+    "Bilateral edge association rejection.",
+    "Final read-only worker check append-open PermissionError on shared scene lock; corrected to read-only open without changing permissions."
+  ],
+  "video": {
+    "path": "/Users/kadir/humanoid-sitting-control/rest_cycle_high_support_20261108_v1/results/diagnostic_v2/higher_support_validation.mp4",
+    "sha256": "0149be587062fac89db3c6123a0eee10652b3141d826453c6454ed08a22417f7",
+    "duration_s": 24,
+    "type": "Saved actual startup RGB/depth plus explicitly labelled rejected kinematic plan; NOT a new simulated sitting rollout.",
+    "QA": "Reviewed preview frames and matched local video SHA256 to remote manifest."
+  },
+  "remaining": [
+    "A current-camera collision-aware approach that clears hip housings; no failed vector/path reuse or tolerance/edge-threshold tuning.",
+    "Qualified runtime sensor load/rest/unload adapter and independently admitted return-to-stand primitive.",
+    "Actual20s sit with final5s hold and all-tick original physical criteria, then <=20s return and2s quiet standing; repeat3starts."
+  ],
+  "worker_live": false,
+  "autostart": false,
+  "automation": "deleted",
+  "completion": false,
+  "references": {
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_high_support_20261108_v1/preflight.json": "7322084d27af2903bf0aaf3fa70a2663d05a98d141192daa8a7d6c85ff95ce79",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_high_support_20261108_v1/source_review.json": "c68161a8f3e3fbbe06e21d1d5769eeda6825b20268b002f76d61af152d294d54",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_high_support_20261108_v1/freeze.json": "d81efba9a5ed08c614fca8634399f5f0184affc50d262df21943a877a3dc8981",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_high_support_20261108_v1/results/owner_status.json": "026beef144ecc588d0cfb68c9d81230ec803a7c89514be883c3d71a2631f5cdd",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_high_support_20261108_v1/results/sit_high_support/model_construction/current_depth_audit.json": "8dfa52c77a0f329c0c6259c8a1c6dc6b7d39f78c2ee331c22fae4a2e74ed0658",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_material_contact_20261108_v1/contract.json": "8e14d5ae2397077c61f566d9cc83063672646ff86fd0483fb852ecb6b9e58d5b",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_material_contact_20261108_v1/freeze.json": "32035f3cdfa8fc6a6a9e5c0a0f833ad63f88c1a2803fd009c656eaa2da5461ae",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_material_contact_20261108_v1/model_construction/audit.json": "0173beddaacdde840c1f992a8fb11aab87ba8d9075cc07fa8659f896ede811ba",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_material_contact_20261108_v1/process_receipt.json": "04c539e7433d648a6fc925ba65cae358189475006486a4c6efaa85beb061b202",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_edge_visible_20261108_v1/preflight.json": "a18c71705bf69eedd6ef61ea047f4cf2aa04a23daf78372b00e382a6a00af7cb",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_edge_visible_20261108_v1/freeze.json": "8fa0fd11c86ae43d3f04c60bffbcb0282ec3d07f5cf27b6ff2f5b2f1b6912ed0",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_edge_visible_20261108_v1/results/owner_status.json": "ec1bee8dc69cc42776461e303feb61cb63f520775c8a0826227ccf89589df10e",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_edge_visible_20261108_v1/results/sit_edge_visible/model_construction/failure.json": "5d32eab04246e924951d944c737e00bbb449322146ee0c22096e59f3a75a79a7",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_front_edge_20261108_v1/contract.json": "059a8d8b8fb26f768cd4afbef3dd086582946469e7071f3270c694c0f38ef3fb",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_front_edge_20261108_v1/freeze.json": "382afc471c8073809cc745e1e7aedc4403572477b02daea8b774963f96a47d6a",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_front_edge_20261108_v1/model_construction/edge_sensor_association.json": "ef81390f2146cd4b56e766f88e74d94133280276ccf9bdaf413a46087bb545cf",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_front_edge_20261108_v1/process_receipt.json": "d44db7d09334948c0e3c799559eda5e9529bb02f18f1a2ce6d98d4e5b1f51891",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_high_support_20261108_v1/results/diagnostic_v2/manifest.json": "c747711b0a0440e07d9b13dab484f5002663a7a3a3eb5dff1427f7a66ea5f761",
+    "/Users/kadir/humanoid-sitting-control/rest_cycle_high_support_20261108_v1/results/final_worker_check.json": "6c18c843147cb579cc3fa6cd83f53b4aa975ab180860679b3e72f6c77e89b7da"
+  }
+}
