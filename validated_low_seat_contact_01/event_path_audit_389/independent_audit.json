@@ -1,0 +1,98 @@
+{
+  "utc": "2026-10-18T05:06:46.267506+00:00",
+  "passed": true,
+  "scope": "Independent full-path geometry, finite-work, COM/support and original-primal replay for388. No physical admission.",
+  "geometry": [
+    {
+      "source": "/data/humanoid-sitting-perception/low_seat_contact_01/event_path_388/results.json",
+      "parameters": [
+        0.13249248997109972,
+        0.4351349021283094,
+        -0.1883883483030849,
+        0.023619600000000004
+      ],
+      "length_m": 0.13999999999993848,
+      "knots": 115,
+      "max_replay_error": 1.6653345369377348e-16,
+      "failed_knots": [],
+      "pose_schedule_metric_passed": false,
+      "min_clearance_mm": 3.731078343242842,
+      "max_foot_position_error_mm": 0.8411018361374456,
+      "max_foot_orientation_error_deg": 0.49854366657171784,
+      "nominal_pose_schedule_at_0_15_rad_s": 13.943459527671667,
+      "min_actual_swing_sole_height_m": 0.013000000000093229
+    }
+  ],
+  "command": {
+    "nodes": 115,
+    "max_virtual_work_error_Nm": 5.640739431100883e-09,
+    "max_equilibrium_residual": 1.2597561882543573e-14,
+    "minimum_command_margin_rad": 0.029979059398359847,
+    "maximum_effort_utilization": 0.8159496396586974,
+    "force_allocation_failures": [],
+    "model_command_passed": false,
+    "specific_command_time_s": 11.881773103956982,
+    "command_schedule_passed": true,
+    "initial_command_exact": true,
+    "all_fixed_commands_exact": true
+  },
+  "feasibility_epigraph": {
+    "slack": 0.0017745189048592983,
+    "scaled_original_violation": 0.001775513018305482,
+    "scaled_hard_violation": 2.1716576742899135e-07,
+    "scaled_soft_violation": 0.001775513018305482,
+    "minimum_augmented_inequality": -9.94113446183692e-07,
+    "augmented_rows": 41491,
+    "all_original_rows_replayed": 19760,
+    "additional_support_rows": 524,
+    "all_explicit_clock_target_rows": 21600,
+    "all_clock_rate_final_rows": 21600,
+    "removed_contact_constant_rows": 392,
+    "removed_exact_integer_time_rows": 1,
+    "original_numerical_feasibility": false,
+    "hard_hover_equality": true,
+    "positive_slack_is_not_admission": true
+  },
+  "primal": {
+    "equalities": 1,
+    "inequalities": 41884,
+    "max_equation_replay_error": 2.3129646346529757e-15,
+    "max_inequality_replay_error": 7.105427357601002e-15,
+    "max_local_replay_error": 4.0939474033052647e-16,
+    "maximum_kinematic_residual": 8.559819519859957e-14,
+    "minimum_dependent_planning_bound": 3.720422444900007e-05,
+    "numerical_constraints_passed": false,
+    "minimum_inequality": -5.323267868506676e-05
+  },
+  "timing": {
+    "event_budgets": [
+      93,
+      194,
+      246,
+      101,
+      16
+    ],
+    "clock_replay_error": 7.105427357601002e-15,
+    "clock_overlap_error": 3.217912047936977e-16,
+    "clock_original_rate_minimum": -4.3696187330714495e-06,
+    "clock_original_target_minimum": -5.2755841526863634e-05,
+    "integer_movement_ticks": 650,
+    "minimum_synthetic_quiet_ticks": 25,
+    "integer_duration_s": 13.5,
+    "original_minimum_inequality": -2.095083086448013e-05,
+    "new_construction_minimum_inequality": -5.323267868506676e-05,
+    "continuous_guarded_s": 13.499999999999998,
+    "raw_target_minimum_headroom_rad": -5.275616466987598e-05,
+    "hover_gap_m": 0.012000000003108524,
+    "actual_float32_schedule": false,
+    "quiet_guard_exercised": false
+  },
+  "physics_ticks": 0,
+  "policy_optimizer_updates": 0,
+  "physical_admission": false,
+  "repair_complete": false,
+  "source_sha256": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/event_path_388/results.json": "396428d465750ba74a559f65c530d237dfcff7051a255501ef3e723ccc6c21d5",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_event_path_389.py": "cecc20ef52d97ea4f7247fc12be604bf56fd19331d265656225accbe9fe66a5b"
+  }
+}
