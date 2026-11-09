@@ -1,0 +1,75 @@
+{
+  "utc": "2026-10-19T01:38:14.910661+00:00",
+  "compile_actual_exit": 0,
+  "compile_exit_evidence": {
+    "actual_exit": 0,
+    "observed_chunk": "1e2597",
+    "utc": "2026-10-19T01:37:56.805226+00:00"
+  },
+  "prior_checks": [
+    {
+      "manifest": "prior_hashes.json",
+      "files": 24242,
+      "passed": true
+    },
+    {
+      "manifest": "completed_probes_preservation_535.json",
+      "files": 11883,
+      "passed": true
+    },
+    {
+      "manifest": "supplemental_preservation_535.json",
+      "files": 4,
+      "passed": true
+    }
+  ],
+  "workers": [],
+  "source_input_sha256": {
+    "/home/kadir/humanoid-sitting/scripts/low_seat_command_forest_536.py": "c31a10520274a41d2d5b3e5f2c1604d959c6b7665bfd31c5a56d7e7feaa13199",
+    "/home/kadir/humanoid-sitting/scripts/prepare_low_seat_command_forest_536.py": "62f5f6b8e39e187214d703efde4f9b839e0c00421228286a9c6a27678d9079ec",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_command_forest_537.py": "dda227ee7cffc9b4284a54a31c7985515545a21c96260795a73ecc65ed9ce033",
+    "/home/kadir/humanoid-sitting/scripts/freeze_low_seat_command_forest_536.py": "5e74a1131d1f4f0e87ac32c4244f4d4bac6706ccd9092973dff840593192aa1d",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/new_projection_examples.json": "d23a463d6b02fb8627fc432c74b702857153b45be24133e86f72199d4daaea82",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/preparation.json": "8e2c712ab648730e91d83805bd301081aaeeabe488313bc3adc318ad590e9b56",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/primary/projection_ledger.npz": "9085164c196f08c5657d0ca156fff93f88c5f849822d095820a9a0df1f032fff",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/primary/equality.npz": "73f7b0f0f50d506371f53a0aca263c19633707737c465db83833e723699b01be",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/primary/arrays.npz": "e50bc03acf198d8eaa4bc401896f376a76cf6ab464b7f9f2808468624b74640b",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/primary/matrix.npz": "d89dca75bd98755b8212c8113ee74affd456665253808dd5c5f0a91876210ec2",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/primary/source_row_ids.npy": "6104c8f043686a3f53db95ef11022c53314e1bf5c68bc38e17fadb8ad90229bb",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/witness/projection_ledger.npz": "31d6a8ccec73bfc0a2215d34ac4c53c991959705ec9eecc805f71b0ca6794443",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/witness/equality.npz": "73f7b0f0f50d506371f53a0aca263c19633707737c465db83833e723699b01be",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/witness/arrays.npz": "b7b5b57d39d95cc144663894023ef29ab9e6a9d1d6d9b9dacd6446c2692c9e1c",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/witness/matrix.npz": "c2116cd22c9cbe536fe0050919b7b35f5b5d54d83312f1ce97ac1ac9e1ce9dc6",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/witness/source_row_ids.npy": "b237c1366faf7c95167f6563a94a456506f72f19c981f75a0ccd04eb7ce15d31",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_preparation_522/SHA256.json": "5bcf77d235d9dcb57526694bd4031cd50151a601049a0a5efa926911ffab4fcc",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_audit_523/primary_pair_proof.npz": "57d62d2df60ce19cd94284134e37fab71dbf905079cd96edcf1d29ff91da8c51",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_audit_523/independent_audit.json": "10ca13df3ae24e0d4a0a6927dabd0de23b731c993f1f590c469b59ecf85ce1cb",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_audit_523/witness_pair_proof.npz": "ef7cb2beeb731f0cde5f1d7e5dde2616b30d407b73fb03d4dae84459a1f7b83f",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/torque_projection_audit_523/SHA256.json": "7c6f7f65b3a349710c3fa39c734188cb7c7183406fd52e5254f5d6ff76840aaa",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/lifted_feasibility_preparation_490/reference.npz": "46bcab7048c74bb930ee72b9ac8a7b3add947d738d68a14fadbf77e791594265"
+  },
+  "specification": {
+    "scope": "NEW exact multirow implication reduction of the saved522 projected NUMERIC systems, using a bidirected command forest and retained unary command rows. Preparation only; no solver/trajectory wrapper or candidate.",
+    "source": "All saved522 primary/witness rows, costs, bounds and zero equality systems; inherited523 projection and517 original implication provenance. No532 state or unfinished K vector, old grouping/projection/scaling/factor/solve is input or repeated.",
+    "graph": "Only rows containing exactly two command columns of the SAME joint, opposite strictly nonzero signs, and optionally epigraph/eta qualify. Normalize by the positive command coefficient to x_v-g*x_u+e*z<=b with g>0. All other rows remain explicit. A row with three commands, different joints, same-sign commands or any other feature is never treated as an edge.",
+    "forest": "Use unordered pairs possessing BOTH directed edges. Sort pairs by absolute source-state-index distance, then column IDs; Kruskal constructs a deterministic spanning forest. This ordering is combinatorial, not a coefficient/violation threshold. Keep ALL rows on every forest pair. For each direction use its smallest original row ID. Keep all unary rows. Nonforest edge candidates use the unique oriented forest path only, at least two edges; paths over128 edges stay explicit as an arithmetic resource bound.",
+    "derivation": "Compose positive-gain edges exactly: x_t-G*x_s+E*z<=B. Every path multiplier is strictly positive (a product of later gains divided by positive source coefficient). To imply target x_t-g*x_s+e*z<=b, if G-g is nonzero, add the smallest-ID retained unary source row with its x_s sign matching G-g, normalized by abs(coefficient), multiplied by abs(G-g). This cancels the remaining command coefficient exactly. The residual involves ONLY z. Check B_total+(e-E_total)*z<=b at BOTH unchanged finite z bounds using exact Fractions. This is a nonnegative conic combination plus direct bound implication, not positive-ray grouping or deletion based on a numerical residual.",
+    "equivalence": "Every removed row follows from explicitly retained forest/unary rows and the unchanged z bounds. No removed row is used by any proof, so no circular implication. Subset inclusion gives the converse. This proves exact-real equivalence over the stored binary64 projected numeric matrix, not equivalence to the earlier unrounded522 projection or actual mechanics.",
+    "exact": "All coefficients and RHS are exact binary64 dyadic Fractions; all gain products, coefficient cancellations and endpoint comparisons exact. No coefficient threshold, sign rounding, fitted weights, additional guard, constraint relaxation or returned-vector repair. Stored kept CSR coefficients/RHS and objective/bounds/equalities copied unchanged.",
+    "coverage": "Every original/inward criterion remains explicit, proved here, or covered by inherited517/523 provenance. Both signs/frozen units of consistency remain mandatory. Command variables are NOT eliminated and are NOT assumed disjoint like torque variables. All coupled rate/window/three-command/clock rows not proved remain explicit.",
+    "future": "A future unmodified retained vector must pass the FULL522 projected numeric system at unchanged1e-7, exact21840-auxiliary source endpoint/midpoint backsubstitution, all FULLORIGINAL490 rows/equalities/bounds1e-7, primary-derived actual witness ceiling, exact intervaleta>0 and immutable490 finite encoding. A small reduced residual does not transfer through conic multipliers. All actual unit/geometry/filter/runtime/physical/PPO gates remain.",
+    "limitations": "Saved reference systems only. Witness old illustrative ceiling is not a solved result. Changed state/trust/actual ceiling needs valid new full assembly/provenance and proofs. This is not a new LP algorithm, performance result or feasibility witness. No small arithmetic example/old synthetic test is run.",
+    "max_path_edges": 128,
+    "lp_calls": 0,
+    "model_calls": 0,
+    "root_calls": 0,
+    "finite_maps": 0,
+    "new_candidate": false,
+    "physical_admission": false
+  },
+  "disk_free_bytes": 28830113792,
+  "lp_calls": 0,
+  "model_calls": 0,
+  "finite_maps": 0,
+  "physical_admission": false
+}
