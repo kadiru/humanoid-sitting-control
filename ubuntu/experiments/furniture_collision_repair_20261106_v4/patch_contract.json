@@ -1,0 +1,9 @@
+{
+  "authorization": "Latest human: fix stool and L-couch collisions using saved data while4090busy; then continue20demos,PPO,all72. Keep action limits/physical criteria.",
+  "premise": "Existing camera patch averages distant cushion/rim points: saved residual extrema approach8mm and original path intersects actual cushion or hip housing. Associate a local observed support patch at the intended pelvis lane instead of that global fit.",
+  "construction": "One deterministic local140mmfront-depth by150mmlateral window. Compute its plane bySVD; require>=30actual selected depth points,max residual<=2mm,and original n_z>.97. No groundtruth normals/meshes enter patch inference.",
+  "placement": "Stool retains its recorded lateral start. L-couch center/angled starts shift world-y+55mm/+25mm to place the pelvis over one cushion side rather than its central ridge. This is a new reset placement,not a repair claim for the old start. Full actual geometry must independently approve the new placement and path.",
+  "inputs": "Only four named saved frame0sensor packets and frozen body model. No old optimization vector. Shifting a saved cloud is preparation; fresh rear-camera validation remains mandatory before physical admission.",
+  "test": "Reject insufficient/nonplanar local clouds. Later independent full mesh clearance and unchanged motion/physical checks remain mandatory; this arithmetic pass cannot admit a demo.",
+  "resources": {"CPU_threads":2,"wall_seconds":30,"RAM_GiB":2,"GPU":false,"optimization_solves":0,"physics_steps":0,"PPO_updates":0,"retries":0}
+}
