@@ -1,0 +1,69 @@
+{
+  "utc": "2026-11-08T19:30:32.855658+00:00",
+  "state": "UPPER_THIGH_CONSTRUCTIONS_REJECTED_NO_ADMITTED_MOTION",
+  "scope": "New paired upper-thigh contacts and finite furniture edge; seven bounded CPU constructions, not physical trials",
+  "implemented": [
+    "Independent left/right proximal-thigh contact points, normals and forces in the23-joint gravity/contact model and derivatives. Hip motor housings remain forbidden contact bodies.",
+    "Exact6mm expanded hip-housing samples included in finite observed-camera constraints and full-mesh audit.",
+    "Corrected stool contact association from coarse fitted-plane centroid to actual observed surface height.",
+    "Curved-top labelled reprojection and one contact-driven rigidXY furniture placement; preserves unknown space, actual camera extrinsics, object height, scale and shape."
+  ],
+  "validated": {
+    "paired_force_synthetic_cases": 12,
+    "finite_camera_synthetic_cases": 4,
+    "placement_synthetic_checks": 6,
+    "current_standing_derivative_and_virtual_work_checks": "Passed in pairedv2/v3/v4 and edgev2; source/equation review by sole owner, independent numerical checks, not an external reviewer",
+    "accepted_complete_motion_models": 0
+  },
+  "failures": {
+    "back_face": "No admitted two-thigh path clearing buffered hip housings: rigid pitch bracket failed and coupled geometry root made no progress. These limited failures do not prove global infeasibility.",
+    "stool": "Native reference contacts fall outside observed selected component. Whole-plane model represented only an11.5cm-wide patch of a curved top.",
+    "contact_driven_placement": "Aligning measured stool centre to admitted sitting-reference upper thighs requiredXY shift[0.29495057008722414,-0.000485113875541735]m. Target then lay outside original rear-camera image; rejected before endpoint optimizer.",
+    "not_claimed": [
+      "No physical housing-contact repair",
+      "No learned-policy improvement",
+      "No global infeasibility",
+      "No new video or successful demonstration"
+    ]
+  },
+  "collection": {
+    "prepared_scenes": 200,
+    "objects": 5,
+    "requested_sitting": 100,
+    "requested_leaning": 100,
+    "new_admitted_sitting": 0,
+    "new_admitted_leaning": 0
+  },
+  "execution": {
+    "full_endpoint_optimizer_calls": 0,
+    "geometry_root_attempted": true,
+    "new_physical_rollouts": 0,
+    "new_PPO_updates": 0,
+    "new_full72_checks": 0,
+    "all64_protected": true,
+    "all8_unresolved": true,
+    "GPU4090_only_for_eventual_simulation": true,
+    "GPU4070_untouched": true,
+    "autostart": false
+  },
+  "resources": {
+    "construction_parent_wall_seconds": 11.597406998946099,
+    "construction_CPU_seconds": 11.581101,
+    "maximum_peak_rss_kib": 286944,
+    "each_wall_cap_seconds": 45,
+    "construction_launches": 7,
+    "verified_evidence_files": 187,
+    "verified_bytes": 935582,
+    "synthetic_fixture_wall_time": "Not separately instrumented; not included in construction total. New fixtures: paired-force and finite-camera and placement; no physics or scientific saved states in fixtures."
+  },
+  "next_work": "Construct a camera-visible upper-thigh target and reachable bilateral-foot pose together, with actual buffered housings. Current centred-stool placement is rejected, not launch-ready; no replay or reuse of failed points. Full approach/hold model and fresh current-camera reset must pass before complete20s rollouts. Then admit100sitting+100leaning across5objects, validate imitation/reset/reward, train4090only, verifyweightupdates, evaluateall72, produce video. No criterion relaxation or automatic retry.",
+  "evidence": [
+    "/Users/kadir/humanoid-sitting-control/upper_thigh_support_20261108_v1/execution_receipt.json",
+    "/Users/kadir/humanoid-sitting-control/upper_thigh_support_20261108_v2/execution_receipt.json",
+    "/Users/kadir/humanoid-sitting-control/upper_thigh_support_20261108_v3/execution_receipt.json",
+    "/Users/kadir/humanoid-sitting-control/upper_thigh_support_20261108_v4/execution_receipt.json",
+    "/Users/kadir/humanoid-sitting-control/upper_thigh_edge_20261108_v1/execution_receipt.json",
+    "/Users/kadir/humanoid-sitting-control/upper_thigh_edge_20261108_v2/execution_receipt.json",
+    "/Users/kadir/humanoid-sitting-control/thigh_edge_placement_20261108_v1/execution_receipt.json"
+  ]
+}
