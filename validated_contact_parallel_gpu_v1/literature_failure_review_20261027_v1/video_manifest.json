@@ -1,0 +1,81 @@
+{
+  "scope": "All13 failed revised63111 checkpoint64 full development episodes and one clean reference; not all historical attempts.",
+  "pose_samples_per_episode": 200,
+  "pose_dt_s": 0.1,
+  "measurement_samples_per_episode": 1000,
+  "measurement_dt_s": 0.02,
+  "pages": [
+    [
+      "known_old/4",
+      "known_old/5",
+      "known_old/6",
+      "known_old/7",
+      "known_recent/4",
+      "known_recent/5",
+      "known_transfer/4",
+      "known_transfer/5"
+    ],
+    [
+      "known_old/14",
+      "known_old/15",
+      "known_recent/14",
+      "known_recent/15",
+      "known_transfer/0",
+      "known_old/0"
+    ]
+  ],
+  "playback_speed": 1,
+  "duration_s": 46,
+  "strict_clean": 59,
+  "stable": 70,
+  "failed": 13,
+  "original_failures": 8,
+  "regressions": 5,
+  "scoring_checks": "All72 slip and illegal counts, physical flags, final hold, stable success and reward-component totals checked against saved arrays.",
+  "source_bindings": {
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_old/geometry.json": "92167aca7f71df948a8049cc07c383eff3a6127006f3163952008558b7926c5e",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_old/every_tick.npz": "288ee6a33979d44cdb4e0bc6d0586ea569b4c29039e2fbfd8262a976b5ab0d2a",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_old/results.json": "7fa37c88bd7f281f0145b7e9b8e7b8f25ad57daf21e2b8c66a13ec35e712a8a5",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_old/trace.npz": "311432ec3c13a9bd21e0fdc07408626643232ea9f55f74e784a5e1b188e50b0e",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_old/manifest.json": "c683ef66e76c7008c4689ab327f0617d980a201a2582557d9a674c73fbd2c6df",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_old/independent_audit.json": "a30d7d63a88d56edf81d6048f75a12d14a9e6df7bdf110f02790c299e83c2dbc",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_old/reward_audit.json": "eb4cf02271978ab888b031ddc4ef87dc7c0fa3a8e8d4336e1b5d7fa7403449dd",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_old/static_inertial_model.json": "92d77b993ef80d78af0440a1066af421555aff2794f14ff37f3df3d09669c801",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_recent/geometry.json": "ebdb738376820bb5141e7cdf5ddd1b6f3e2d01e127d7f5e1638ffbc7b697b355",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_recent/every_tick.npz": "7fd112ad26ddfd4df9d47da55c2d851f1878e6632a03331fa17598fee172687c",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_recent/results.json": "64878bd1cb073d60b81b3072ae85dda77e9c7a417e42b121580ac25b58d259ac",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_recent/trace.npz": "8ff6c9333f780265add316b56509b60efd5fdf641c1c03680c67226ded6cfe1e",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_recent/manifest.json": "96ebe67463cd8f34dc7407ddff42c3931883d0b2b3f7a4081caecd25e69e80eb",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_recent/independent_audit.json": "4e86879ad057f6aa1783ed46cf4f7cd11ed8308cd68bbc766bf89faa697c36e3",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_recent/reward_audit.json": "311878c3fa534afab1519957ac5f67fa1d41ade52df34c3570e6a91a81b66dfa",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_recent/static_inertial_model.json": "92d77b993ef80d78af0440a1066af421555aff2794f14ff37f3df3d09669c801",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_transfer/geometry.json": "5db3bd9b40ca2e9dc05206f9fe87f92a84bc5165a76aadb080c634037bb3c8cc",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_transfer/every_tick.npz": "9ee69be04ab352e94fca58d766f6cf2dbc4a259d2fe6f667ffe7bbcc0a0fcc0b",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_transfer/results.json": "acfbae4983cf46ea09c11a8ac4097d30d1cfaeb06e6a0ed6aaca783e30865b3d",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_transfer/trace.npz": "2f90102d2a7481dd911c74493cc56da75217511d916634660e52a06eea49f44c",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_transfer/manifest.json": "4d36648155f7ecc6f898f8467490376367552808c7c63f32b258e80e505f515d",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_transfer/independent_audit.json": "2e8fa9d1f0deee51342bbc0d322191873625d71a388225070083dcc5c6152b39",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_transfer/reward_audit.json": "58d7ec2b0e66f52880ad63f6ef21a34110ab83700fca8d0041d3ff745a5f818c",
+    "inputs/contact_reward_comparison_128_v4/eval_revised_63111_064_known_transfer/static_inertial_model.json": "92d77b993ef80d78af0440a1066af421555aff2794f14ff37f3df3d09669c801"
+  },
+  "renderer_sha256": "564aac85582de3b52c23d8510fb3ed017bce2724948af2b742bd5c64516bb27e",
+  "video_sha256": "7f0753f95bf3240ac6930b8c37443adcf6d0a8a747866e334b1d850c5f660c34",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "nb_frames": "460"
+      }
+    ],
+    "format": {
+      "duration": "46.000000"
+    }
+  },
+  "new_simulation_steps": 0,
+  "optimizer_steps": 0,
+  "training_interrupted": false
+}

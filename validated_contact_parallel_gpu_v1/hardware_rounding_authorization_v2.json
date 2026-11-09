@@ -1,0 +1,19 @@
+{
+  "approved": true,
+  "scope": "recorded_hardware_rounding_only",
+  "human_instruction": "Yes, allow those recorded rounding differences and start parallel training on both GPUs. Keep the action limits and success criteria unchanged, and verify that both runs are updating weights.",
+  "recorded_utc": "2026-10-27T20:42:22.902991+00:00",
+  "exception": "Accept only the already-recorded GPU1 parent_action and offsets differences in the frozen hardware check. No tolerance changes in training, action bounds, physical acceptance, future audits or all72 evaluations. Original exact-reset failure is retained. No hardware-check rerun.",
+  "recorded_artifact_bindings": {
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_parallel_gpu_v1/identity_zero/applied_offsets.npz": "3c661f578ecd91c9909066dbfaada1c0f1f0c7c99ae0157a9fc4697cdd6e66f3",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_parallel_gpu_v1/identity_zero/sensor_inputs.npz": "aa978bcd95bd9d100b14449702ffc0b19c95836cfc2505cf2dd260b530141141",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_parallel_gpu_v1/identity_zero/trace.npz": "4f92b672dcc33e20df8a40f98cdb23a4d22196f5599bf7ecc0ec6e0c3d7fce8d",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_parallel_gpu_v1/identity_zero/results.json": "e05306dd80f300f364ab4b566dc6fe92fb651456ee82a55614a55c6f263a74dc",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_parallel_gpu_v1/identity_zero/independent_audit.json": "238569e80877f0c48744b691e7ea07b9e24a14ff914a9431209f092535af9c2c",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_parallel_gpu_v1/preflight_status.json": "c6dccccbc77978b7b566c3a77a07df9b58ccc7f25cc6a900f0e96344f6480697",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/contact_reward_comparison_128_v4/protocol.json": "ca6f67768c376035cde36ee27aba8d6c18bcaad01d6c5a46cd659bcd68ab78db"
+  },
+  "review_sha256": "8c5b0b8ef759637ca672de29a28a3fe73fa4dcd12d9273f2069c28b3c2fa9f07",
+  "max_recorded_offset_difference_rad": 1.3969838619232178e-09,
+  "max_recorded_normalized_parent_action_difference": 1.7881393432617188e-07
+}

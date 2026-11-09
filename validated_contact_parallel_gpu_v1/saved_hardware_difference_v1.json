@@ -1,0 +1,51 @@
+{
+  "array_differences": {
+    "startup.npz": {},
+    "traction_startup.npz": {},
+    "trace.npz": {},
+    "applied_offsets.npz": {
+      "offsets": {
+        "dtype": "float32",
+        "shape": [
+          400,
+          3,
+          24,
+          3
+        ],
+        "max_abs": 1.3969838619232178e-09,
+        "changed": 8384,
+        "max_ref": 0.004038674756884575,
+        "max_gpu1": 0.004038673359900713,
+        "max_index": [
+          150,
+          1,
+          7,
+          1
+        ]
+      }
+    },
+    "sensor_inputs.npz": {
+      "parent_action": {
+        "dtype": "float32",
+        "shape": [
+          2,
+          24,
+          3
+        ],
+        "max_abs": 1.7881393432617188e-07,
+        "changed": 76,
+        "max_ref": 0.524851381778717,
+        "max_gpu1": 0.5248515605926514,
+        "max_index": [
+          0,
+          3,
+          1
+        ]
+      }
+    }
+  },
+  "fresh_vs_indexed": {},
+  "case_outcome_differences": [],
+  "reference_episodes": 48,
+  "candidate_episodes": 48
+}

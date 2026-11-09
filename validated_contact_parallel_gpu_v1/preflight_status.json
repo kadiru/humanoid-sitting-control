@@ -1,0 +1,11 @@
+{
+  "state": "failed",
+  "error": "AssertionError(('exact_reset_audit', 1))",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/kadir/humanoid-sitting/scripts/launch_contact_parallel_preflight_v1.py\", line 41, in <module>\n    run('exact_reset_audit',[str(PY),str(ROOT/'scripts/audit_contact_comparison_v3.py'),'reset',str(OUT),str(OLD)],180)\n  File \"/home/kadir/humanoid-sitting/scripts/launch_contact_parallel_preflight_v1.py\", line 31, in run\n    assert p.returncode==0,(label,p.returncode)\n           ^^^^^^^^^^^^^^^\nAssertionError: ('exact_reset_audit', 1)\n",
+  "completed": [
+    "identity_gpu1"
+  ],
+  "seconds": 867.4959659169981,
+  "retry": false,
+  "gpu0_queue_untouched": true
+}
