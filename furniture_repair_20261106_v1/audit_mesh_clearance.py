@@ -19,7 +19,7 @@ def clip_triangle(triangle, equations, expansion):
         polygon=np.asarray(out)
     return polygon
 
-def audit(model, shapes, furniture, allowed_faces, nodes, world_basis, initial_world_position):
+def audit(model, shapes, furniture, allowed_faces, nodes, world_basis, initial_world_position, *, include_terminal=True):
     triangles=furniture['vertices'][furniture['faces']]
     tlo=triangles.min(1);thi=triangles.max(1)
     prepared=[]
@@ -34,7 +34,8 @@ def audit(model, shapes, furniture, allowed_faces, nodes, world_basis, initial_w
         for u in (0.,.25,.5,.75):
             rt=np.eye(4);rt[:3,:3]=rotations(u).as_matrix();rt[:3,3]=(1-u)*ra[:3,3]+u*rb[:3,3]
             sampled.append((np.asarray(a['q'])*(1-u)+np.asarray(b['q'])*u,rt,a['phase']))
-    sampled.append((np.asarray(nodes[-1]['q']),np.asarray(nodes[-1]['root']),nodes[-1]['phase']))
+    if include_terminal:
+        sampled.append((np.asarray(nodes[-1]['q']),np.asarray(nodes[-1]['root']),nodes[-1]['phase']))
     collisions=[];expected=[];tests=0
     for sample,(q,root,phase) in enumerate(sampled):
         fk=model.fk(q);rt=np.eye(4);rt[:3,:3]=world_basis@root[:3,:3]

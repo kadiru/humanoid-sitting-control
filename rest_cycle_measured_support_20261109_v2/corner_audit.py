@@ -6,7 +6,7 @@ from audit_mesh_clearance import audit as mesh_audit
 from plan_contract import check_plan
 from interpolation_audit import audit_interpolation
 
-def audit(plan,result,shapes,furniture,allowed,frame):
+def audit(plan,result,shapes,furniture,allowed,frame,*,clearance_evaluator=None):
     m=plan.mechanics;named=[];worst={};balance=[];gaps=[];patch=[];tilt=[];foot=[];bias=[]
     contract=check_plan(result,m.lower,m.upper,plan.previous)
     if not contract['passed']:
@@ -76,7 +76,8 @@ def audit(plan,result,shapes,furniture,allowed,frame):
         coverage.append(plan.observed.covers(hull));corner_margins.append(float(hull.distance(plan.observed.boundary)-.02))
     checks['entire_observed_corner_polygon']=all(coverage) and min(corner_margins)>=-1e-8
     basis=frame['root_rotation']@plan.R0.T
-    clearance=mesh_audit(plan.model,shapes,furniture,allowed,nodes,basis,frame['root_position'])
+    clearance=(mesh_audit if clearance_evaluator is None else clearance_evaluator)(
+        plan.model,shapes,furniture,allowed,nodes,basis,frame['root_position'])
     checks['full_mesh_clearance']=clearance['passed']
     work=m.independent_work_audit(plan.x(np.asarray(nodes[len(result['nodes'])-1]['q']),np.asarray(nodes[len(result['nodes'])-1]['root'])),result['rest_load'])
     checks['independent_virtual_work']=bool(work['passed'] and

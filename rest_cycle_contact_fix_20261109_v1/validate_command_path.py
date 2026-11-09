@@ -29,8 +29,10 @@ def check(plan_path, metadata_path, policy_directory):
     spec.loader.exec_module(policy)
     source = json.loads(Path(plan_path).read_text())
     metadata = json.loads(Path(metadata_path).read_text())
-    plan = CyclePlan(source, metadata['lower'][:23], metadata['upper'][:23],
-                     hover_node=16, touch_node=20, loaded_node=24, release_node=24)
+    boundaries=source.get('cycle_boundaries',dict(hover_node=16,touch_node=20,loaded_node=24,release_node=24))
+    if set(boundaries)!={'hover_node','touch_node','loaded_node','release_node'} or any(type(v) is not int for v in boundaries.values()):
+        raise ValueError('EXPLICIT_INTEGER_CYCLE_BOUNDARIES_REQUIRED')
+    plan = CyclePlan(source, metadata['lower'][:23], metadata['upper'][:23],**boundaries)
     # These flags permit this synthetic protocol test only. They are not
     # written back to the plan, runtime configuration, or admission records.
     executor = CycleExecutor(plan, current_path_admitted=True, loaded_observer_admitted=True)
@@ -100,7 +102,7 @@ def check(plan_path, metadata_path, policy_directory):
     return dict(passed=True, synthetic_measurements=True, G1_trials=0, PPO_updates=0,
         physical_success=False, path_admission_changed=False, original_filter='Torch CPU float32',
         numpy_version=np.__version__,torch_version=torch.__version__,
-        command_counts=counts, stage_samples=stage_samples,
+        command_counts=counts, stage_samples=stage_samples,cycle_boundaries=boundaries,
         return_start_control=returned_at, completion_control=control,
         synthetic_cycle_time_s=control*.02, maximum_command_difference_rad=max_command_error,
         maximum_applied_step_rad=max_step, actual_wall_s=time.monotonic()-started,
