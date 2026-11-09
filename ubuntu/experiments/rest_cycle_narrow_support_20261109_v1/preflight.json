@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "tests": {
+    "closed_manifold": true,
+    "exact_topology": true,
+    "visual_collision_match": true,
+    "standing_clearance": true,
+    "collision_enabled": true,
+    "exact_triangles": true,
+    "anchored": true
+  },
+  "clearance": {
+    "passed": true,
+    "sampled_poses": 5,
+    "triangle_tests": 0,
+    "forbidden_or_early_clearance_intersections": [],
+    "forbidden_or_early_clearance_intersection_count": 0,
+    "expected_target_approaches": 0,
+    "clearance_buffer_m": 0.006,
+    "scope": "Evaluation-only mesh geometry at sampled kinematic poses. Continuous dynamics, actual contact membership, load and slip still require unchanged simulation audit.",
+    "simulation_success": false
+  },
+  "case": {
+    "id": "narrow_support_050",
+    "asset": "analytic_narrow_pedestal",
+    "title": "Dedicated12cm narrow support test fixture",
+    "approach": "top",
+    "yaw_deg": 0,
+    "task": "sitting",
+    "mesh_usd": "/home/kadir/humanoid-sitting/experiments/rest_cycle_narrow_support_20261109_v1/assets/scenes/narrow_support_050/furniture.usda",
+    "mesh_npz": "/home/kadir/humanoid-sitting/experiments/rest_cycle_narrow_support_20261109_v1/assets/scenes/narrow_support_050/mesh.npz",
+    "bounds": [
+      [
+        -0.48,
+        -0.06,
+        0.0
+      ],
+      [
+        -0.08,
+        0.06,
+        0.5
+      ]
+    ],
+    "target_center": [
+      -0.28,
+      0,
+      0.5
+    ],
+    "target_normal": [
+      0,
+      0,
+      1
+    ],
+    "translation": [
+      -0.48000001192092895,
+      0.0,
+      0.0
+    ],
+    "uniform_scale": 1.0,
+    "color": [
+      0.57,
+      0.39,
+      0.22
+    ],
+    "initial_triangle_AABB_clearance_m": 0.06,
+    "contact_scoring_validated": false,
+    "geometry_variant": {
+      "width_m": 0.12,
+      "depth_m": 0.4,
+      "height_m": 0.5,
+      "anchored": true,
+      "old_assets_modified": false
+    }
+  },
+  "elapsed_seconds": 1.5469822059967555,
+  "physical_support_validated": false,
+  "new_physics_steps": 0
+}
