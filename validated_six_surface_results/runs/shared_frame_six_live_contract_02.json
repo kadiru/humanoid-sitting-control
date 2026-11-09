@@ -1,0 +1,23 @@
+{
+  "samples": 966,
+  "live_capture": "shared_frame_rear_down_six_live_02",
+  "replay": "shared_frame_rear_down_six_clean_02",
+  "replay_capture": "shared_frame_rear_down_six_capture_01",
+  "runtime_sensor_arrays_exactly_identical": {
+    "depth": true,
+    "K": true,
+    "q": true,
+    "gravity": true,
+    "delta_rotation": true,
+    "stamp": true,
+    "T_P_C": true
+  },
+  "maximum_absolute_difference": {
+    "T_O_P": 0.0,
+    "T_S_P": 0.0,
+    "direct_clearance_m": 0.0
+  },
+  "all_nested_quality_values_identical": true,
+  "observer_sha256": "50000e1a059f380d033f9435194ccf7101c4cd6a8418ce81dca085e1cb53fbb7",
+  "scope": "Fresh six-scene online physics capture, same revised estimator. Existing replay reused only after exact equality of every consumed sensor array and calibration was verified; no truth input is used."
+}
