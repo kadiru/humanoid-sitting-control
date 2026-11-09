@@ -1,0 +1,490 @@
+{
+  "status_mtime_utc": "2026-10-26T23:32:41.203193+00:00",
+  "seeds": {
+    "63111": {
+      "reward": {
+        "mean_return_to_go_each_update": [
+          15.750745954428123,
+          15.002195145698522,
+          15.909692010551211,
+          15.598961680069504,
+          15.29684143033977,
+          15.416721478629812,
+          15.087352221522591,
+          16.079617484833868
+        ],
+        "first4_mean": 15.56539869768684,
+        "last4_mean": 15.47013315383151,
+        "first": 15.750745954428123,
+        "last": 16.079617484833868,
+        "min": 15.002195145698522,
+        "max": 16.079617484833868,
+        "actor_steps": 64,
+        "critic_steps": 64,
+        "value_mse_first": 652.9629246006973,
+        "value_mse_last": 586.7713988679544
+      },
+      "independent_case_check": {
+        "clean": 62,
+        "stable": 70,
+        "slipping": 10,
+        "illegal": 0,
+        "physical_failures": 2,
+        "lost_protected": [
+          [
+            "known_recent",
+            14
+          ],
+          [
+            "known_recent",
+            15
+          ]
+        ],
+        "repaired_old_failures": []
+      },
+      "failure_details": [
+        {
+          "bank": "known_old",
+          "case": 4,
+          "profile": "transfer15_pitch55",
+          "height": 0.36,
+          "pitch_deg": 15,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 20,
+          "new_slip_ticks": 18,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        },
+        {
+          "bank": "known_old",
+          "case": 5,
+          "profile": "transfer15_pitch55",
+          "height": 0.36,
+          "pitch_deg": 15,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 20,
+          "new_slip_ticks": 16,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        },
+        {
+          "bank": "known_old",
+          "case": 6,
+          "profile": "transfer15_pitch55",
+          "height": 0.36,
+          "pitch_deg": 20,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 19,
+          "new_slip_ticks": 21,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": true,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": false
+        },
+        {
+          "bank": "known_old",
+          "case": 7,
+          "profile": "transfer15_pitch55",
+          "height": 0.36,
+          "pitch_deg": 20,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 26,
+          "new_slip_ticks": 22,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": true,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": false
+        },
+        {
+          "bank": "known_transfer",
+          "case": 4,
+          "profile": "transfer15_pitch55",
+          "height": 0.37,
+          "pitch_deg": 16.25,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 27,
+          "new_slip_ticks": 27,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        },
+        {
+          "bank": "known_transfer",
+          "case": 5,
+          "profile": "transfer15_pitch55",
+          "height": 0.37,
+          "pitch_deg": 16.25,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 27,
+          "new_slip_ticks": 26,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        },
+        {
+          "bank": "known_recent",
+          "case": 4,
+          "profile": "transfer15_pitch55",
+          "height": 0.365,
+          "pitch_deg": 17.5,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 23,
+          "new_slip_ticks": 21,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        },
+        {
+          "bank": "known_recent",
+          "case": 5,
+          "profile": "transfer15_pitch55",
+          "height": 0.365,
+          "pitch_deg": 17.5,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 24,
+          "new_slip_ticks": 19,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        },
+        {
+          "bank": "known_recent",
+          "case": 14,
+          "profile": "transfer15_pitch55",
+          "height": 0.405,
+          "pitch_deg": 12.5,
+          "baseline_clean": true,
+          "new_clean": false,
+          "baseline_slip_ticks": 0,
+          "new_slip_ticks": 1,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        },
+        {
+          "bank": "known_recent",
+          "case": 15,
+          "profile": "transfer15_pitch55",
+          "height": 0.405,
+          "pitch_deg": 12.5,
+          "baseline_clean": true,
+          "new_clean": false,
+          "baseline_slip_ticks": 0,
+          "new_slip_ticks": 1,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        }
+      ],
+      "cpu_replay": {
+        "passed": true,
+        "max_parameter_error": {
+          "actor": 5.029141902923584e-7,
+          "critic": 3.8370490074157715e-7
+        },
+        "absolute_tolerance": 0.0002,
+        "updates": 8
+      }
+    },
+    "63117": {
+      "reward": {
+        "mean_return_to_go_each_update": [
+          15.698723326546228,
+          15.3883635663418,
+          15.325944755933817,
+          15.162842572617109,
+          15.070994319569103,
+          15.967404733052868,
+          15.625905389453889,
+          15.150730871218128
+        ],
+        "first4_mean": 15.393968555359738,
+        "last4_mean": 15.453758828323497,
+        "first": 15.698723326546228,
+        "last": 15.150730871218128,
+        "min": 15.070994319569103,
+        "max": 15.967404733052868,
+        "actor_steps": 64,
+        "critic_steps": 64,
+        "value_mse_first": 681.9133441306388,
+        "value_mse_last": 558.2795207432564
+      },
+      "independent_case_check": {
+        "clean": 64,
+        "stable": 70,
+        "slipping": 8,
+        "illegal": 1,
+        "physical_failures": 2,
+        "lost_protected": [],
+        "repaired_old_failures": []
+      },
+      "failure_details": [
+        {
+          "bank": "known_old",
+          "case": 4,
+          "profile": "transfer15_pitch55",
+          "height": 0.36,
+          "pitch_deg": 15,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 20,
+          "new_slip_ticks": 27,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        },
+        {
+          "bank": "known_old",
+          "case": 5,
+          "profile": "transfer15_pitch55",
+          "height": 0.36,
+          "pitch_deg": 15,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 20,
+          "new_slip_ticks": 27,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        },
+        {
+          "bank": "known_old",
+          "case": 6,
+          "profile": "transfer15_pitch55",
+          "height": 0.36,
+          "pitch_deg": 20,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 19,
+          "new_slip_ticks": 20,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": true,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": false
+        },
+        {
+          "bank": "known_old",
+          "case": 7,
+          "profile": "transfer15_pitch55",
+          "height": 0.36,
+          "pitch_deg": 20,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 26,
+          "new_slip_ticks": 25,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 1,
+          "failures": {
+            "fall": false,
+            "forbidden": true,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": false
+        },
+        {
+          "bank": "known_transfer",
+          "case": 4,
+          "profile": "transfer15_pitch55",
+          "height": 0.37,
+          "pitch_deg": 16.25,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 27,
+          "new_slip_ticks": 19,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        },
+        {
+          "bank": "known_transfer",
+          "case": 5,
+          "profile": "transfer15_pitch55",
+          "height": 0.37,
+          "pitch_deg": 16.25,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 27,
+          "new_slip_ticks": 19,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        },
+        {
+          "bank": "known_recent",
+          "case": 4,
+          "profile": "transfer15_pitch55",
+          "height": 0.365,
+          "pitch_deg": 17.5,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 23,
+          "new_slip_ticks": 26,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        },
+        {
+          "bank": "known_recent",
+          "case": 5,
+          "profile": "transfer15_pitch55",
+          "height": 0.365,
+          "pitch_deg": 17.5,
+          "baseline_clean": false,
+          "new_clean": false,
+          "baseline_slip_ticks": 24,
+          "new_slip_ticks": 26,
+          "baseline_illegal_ticks": 0,
+          "new_illegal_ticks": 0,
+          "failures": {
+            "fall": false,
+            "forbidden": false,
+            "torque": false,
+            "impact": false,
+            "joint_limit": false
+          },
+          "stable": true
+        }
+      ],
+      "cpu_replay": {
+        "passed": true,
+        "max_parameter_error": {
+          "actor": 8.102506399154663e-7,
+          "critic": 3.7997961044311523e-7
+        },
+        "absolute_tolerance": 0.0002,
+        "updates": 8
+      }
+    }
+  },
+  "classification": "Bounded PPO pilot completed; both full72 development evaluations completed; no original failed case repaired.",
+  "observed_utc": "2026-10-26T23:38:14.387692+00:00",
+  "live_training_workers": [],
+  "main_updates_total": 16,
+  "smoke_updates_total": 4,
+  "reward_interpretation": "Mean training return-to-go fluctuated around15-16. First-four versus last-four means do not show a consistent improving trend across seeds; these are stochastic training batches, not a controlled deterministic reward comparison.",
+  "promoted": false,
+  "fresh_holdout_opened": false,
+  "leaning_trained": false,
+  "remote_evidence_root": "/data/humanoid-sitting-perception/low_seat_contact_01/contact_learning_ppo_20261026_v2"
+}
