@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-09T01:45:47.032064+00:00",
+  "authorization": "Continue the requested4090only sit/5srest/stand cycle, unchanged physical/action criteria and partial legal hip/thigh support intent.",
+  "construction": "One source-bound accepted-witness contact registration plus fixed-material-point balance pivot, purely normal12mm retraction, then COM-controlled fixed-foot lift. Inverse ordering builds approach/contact/load. No cold endpoint objective restart, old rejected vector, generic scan, parameter sweep or solver retry.",
+  "inputs": "Accepted known_old/16 endpoint from independently validated64/72 data; source44cm,+5deg slab and original body-pose/q. Source-case selection fixed because highest old support with smallest tilt. Current50cm startup capture from rear camera, edge interval, q/gravity/calibration/exact previous command. Static URDF/collision/inertial models. Actual furniture mesh used only by independent audit.",
+  "associations": "One actual pelvis collider vertex lowest against source supportnormal. Preserve its sourcefront inset or22mm if source inset smaller. Align source and current normals; targetat measuredfront midpoint minus inset. Current full6D foot poses remain fixed through12legIK.",
+  "equations": "Contact roottranslation p_target-R*marker eliminates point drift. Endpoint legs solve12scaled foot equalities. Pivot solves those12plusCOMx=midpoint of current ankle x positions. Static load l=(copx-COMx)/((pz-floor)*nx+(copx-px)*nz), then independent full6Dwrench and23joint virtual-work audit.9pivotnodes;5pure-normalnodes;17lift nodes with COMx interpolation. No force-only solve or simulated worldtruth actor input.",
+  "bounds": "Existing jointbounds+.031 for IK, pelvispitch[-.15,38deg], liftrootx[-.5,.15]. Unchanged fullmesh6mm clearance,20mm patchinset,10mmfootCoPreserve,5%BWeachfoot,mu.5,original23joint/14fixedfinger action/filter/margins. Positive support0.05..0.8BW. No relaxed physical hold/slip/contact/failure rule.",
+  "scheduler": "Exact .1 inverse filter and .003rad/20ms bound; choose<=.0025rad segments plus directional desired-headroom N>=9abs(delta)/headroom. Independently check original .03rad desiredmargin at EVERYtick. This replaces only the prior construction-specific .05501 sufficient bound with actual original per-tick inequality; it does not relax actuator limits. Normal speed<=.0055m/s (original cap.006). Finite<=1000controls eachpath; no shortest-path or optimality claim.",
+  "audits": "Separateaudit.py recomputes fullfootposes, actual lowest2mm patch, all static force/CoP/friction/base-wrench constraints, exactdiscreteactions, firsthold timing, return timing and fulltriangle/convexbuffer intersections; independentvirtualwork. Construction failure preserves namedstage evidence and terminates. Soleexecutionowner, no external auditagent.",
+  "resources": {
+    "total_science_wall_s": 45,
+    "cores": 1,
+    "address_space_GiB": 40,
+    "max_source_endpoint_reads": 1,
+    "max_registered_endpoint_IK_nfev": 60,
+    "max_pivot_fit_nfev": 80,
+    "max_other_IK_nfev": 60,
+    "pivot_nodes": 9,
+    "normal_nodes": 5,
+    "lift_nodes": 17,
+    "max_scheduled_controls_each_direction": 1000,
+    "max_outputs_MiB": 25,
+    "GPU_launches_this_stage": 0,
+    "PPO_updates": 0,
+    "retries": 0
+  },
+  "return_policy": "Modelresult only. No motion launch unless allgeometry/mechanics/action/timeaudits pass and runtimecontroller/sourcefreeze supplied. Positive-load/release sensing remains separately unvalidated; do not turn unknown intozero or contact. Preserve first20s/final5s physical audit and<=20sreturn plus2squietstanding,3starts before scaling.4070untouched;noautomation."
+}
