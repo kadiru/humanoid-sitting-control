@@ -1,0 +1,26 @@
+{
+  "construction": "Previous upright models hit pelvis against measured back facet, faces51/84. Add6mm pelvis-plane clearance only for body vertices projecting inside the original measured facet hull. Fresh standing endpoint initialization, no rejected endpoint reuse. Full original triangle collision audit remains admission gate; this guide alone is not a collision proof.",
+  "inputs": "Preserved center/far standing frame0 and original first previous command; no failed endpoint initializes a solver.",
+  "cases": [
+    "demo_rear_back_center",
+    "demo_rear_back_far"
+  ],
+  "budgets": {
+    "total_seconds_per_case": 45,
+    "cases": 2,
+    "CPU_threads": 2,
+    "simulation_steps": 0,
+    "PPO_updates": 0,
+    "retries": 0
+  },
+  "independent_audit": "Separate discrete filter/margin/finger checks; bilateral FK pose check; complete sampled original triangle collision audit with original leaning body/target eligibility. No physical launch based only on model pass.",
+  "source_review": {
+    "objective_no_longer_imposes_lower_phase": true,
+    "initialization_from_encoders": true,
+    "original_physical_criteria": true,
+    "independent_audit_prepared": true,
+    "physical_launch_ready": false,
+    "specific_collision_premise": "Prior independent original-mesh results and measured back-patch footprint"
+  },
+  "not_yet_resolved": "Raw ankle speed/quiet gate, qualified load feedback and complete current-camera tracking remain blockers to motion/training."
+}

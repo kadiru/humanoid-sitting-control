@@ -1,0 +1,18 @@
+{
+  "purpose": "Exact stool collision placement with bound-ordered first-contact search and all-triangle independent clipping audit",
+  "inputs": "Two named stool frame0/startup, original mesh at prior45degreeorientation, fresh standing initialization; no rejected pose vectors",
+  "equations": "Triangle intersects expanded hull when A*(v0+u*(v1-v0)+v*(v2-v0)-p-t*d)+b<=.006,u>=0,v>=0,u+v<=1. Swept expanded-hull AABB provides lower t bound. Sort bounds; skip only lower>best+1e-9.",
+  "mechanism": "An early actual closest-triangle witness bounds all farther candidates. Expanded-hull vertices replace insufficient unexpanded AABB+6mm. No LP count increase.",
+  "independent_audit": "Clip all furniture triangles against every expanded robot hull at returned placement; verify barycentric first-contact witness independently. No AABB exclusion in final placement audit.",
+  "resources": {
+    "cases": 2,
+    "total_seconds_each": 45,
+    "LPs_each_max": 2000,
+    "LP_seconds_max": 1,
+    "CPU_threads": 2,
+    "physics_steps": 0,
+    "PPO_updates": 0,
+    "retries": 0
+  },
+  "tests": "Require full original cold-pose, path, timing,20mm inset,12mm hover,6mm mesh clearance and action audit after placement; failure stops named case. No simulation authorized by numerical outcome alone."
+}

@@ -1,0 +1,154 @@
+{
+  "utc": "2026-11-07T03:56:18.244560+00:00",
+  "status": "PARTIAL_SOFTWARE_REPAIRS_NO_ADMISSIBLE_NEW_MOTION",
+  "authorization": "Latest human request: ankle stability, rear-camera tracking during descent, stool collisions,20demos,4090PPO,72checks; retain action and success limits; prefer less squat for leaning.",
+  "stool": {
+    "placement_code_fixed": true,
+    "placement_witnesses": [
+      {
+        "case": "sit_wooden_stool_01_angled",
+        "translation_m": 0.2757388032292677,
+        "LPs": 78,
+        "pruned": 3884,
+        "audit": {
+          "passed": true,
+          "triangles": 10946,
+          "bodies": 38,
+          "clips": 0,
+          "witness_max_residual_m": 2.688821387764051e-17
+        },
+        "witness": {
+          "body": "right_knee_link",
+          "shape": 9,
+          "face": 3272,
+          "barycentric": [
+            0.0,
+            0.22311451655130796,
+            0.776885483448692
+          ]
+        }
+      },
+      {
+        "case": "sit_wooden_stool_01_center",
+        "translation_m": 0.2689748497324567,
+        "LPs": 59,
+        "pruned": 3520,
+        "audit": {
+          "passed": true,
+          "triangles": 10946,
+          "bodies": 38,
+          "clips": 0,
+          "witness_max_residual_m": 1.3444106938820255e-16
+        },
+        "witness": {
+          "body": "right_knee_link",
+          "shape": 9,
+          "face": 3227,
+          "barycentric": [
+            0.901879994671041,
+            0.0,
+            0.09812000532895902
+          ]
+        }
+      }
+    ],
+    "full_sitting_pose_admitted": 0,
+    "full_sitting_pose_attempts": 2,
+    "physical_collision_repair_verified": false,
+    "results": "seat_models/receipt.json"
+  },
+  "camera": {
+    "source": "surface_observer.py",
+    "validation": "connected_facet_float32_validation.json",
+    "mechanism": "Track a visible neighbouring portion of the same initially measured connected facet; match its piecewise surface; fit maximum plane distance to unchanged2mm gate; preserve original contact boundary/span.",
+    "frames_tested": 8,
+    "recovered_before_failure": [
+      {
+        "case": "sit_1kwsjhpY84_angled_local_patch_normal_landing",
+        "frame": 650,
+        "residual_m": 0.0019718467543109464
+      },
+      {
+        "case": "sit_1kwsjhpY84_center_local_patch_normal_landing",
+        "frame": 350,
+        "residual_m": 0.001959027722894857
+      }
+    ],
+    "still_rejected_before_failure": [
+      {
+        "case": "sit_1kwsjhpY84_angled_local_patch_normal_landing",
+        "frame": 350,
+        "reason": "ValueError('CURRENT_FACET_PLANE_INCONSISTENT')"
+      }
+    ],
+    "missing_depth_rejected": true,
+    "whole_descent_validated": false,
+    "deployed_to_rollouts": false
+  },
+  "ankles": {
+    "fixed": false,
+    "source": "ankle_diagnosis.json",
+    "finding": "Raw ankle-roll speeds around0.35rad/s coexist with milliradian angle variation. Feet pitch upward by5\u20137degrees in the saved L-couch trials. Raw-speed quiet gate remains unchanged; driver/API bug not established.",
+    "static_feedforward": "Six saved model poses passed analytic-versus-virtual-work audit; proposed roll offsets only1\u20133microradians. Too small to explain recorded raw speed; not deployed.",
+    "centered_support_construction": "Unique midpoint of both sole-support intervals replaces deliberate heel-biased target. Cold pose failed tangent/balance residuals; no failed vector reuse or physical rollout.",
+    "result": "balance_center_v1/model/receipt.json"
+  },
+  "upright_lean": {
+    "implemented": true,
+    "physical_success": false,
+    "selection": "Height, pitch and knee bend chosen by constrained normalized model-effort/posture objective rather than imposed lower-body waypoint. No measured energy saving claim.",
+    "first_two_models": "Action/balance/time passed; full mesh rejected pelvis/other contacts.",
+    "specific_clearance_correction": "Added measured-facet pelvis clearance; both cold endpoint solves reached iteration cap, not admitted. No increase/restart.",
+    "results": [
+      "upright_models/receipt.json",
+      "upright_clearance_v2/upright_models/receipt.json"
+    ]
+  },
+  "resources": {
+    "scientific_owner_count": 1,
+    "other_coding_agents": 0,
+    "model_constructions": 7,
+    "case_caps_s": 45,
+    "total_case_caps_s": 315,
+    "recorded_case_construction_and_audit_seconds": 97.48226335902291,
+    "process_startup_hashing_and_exploratory_CPU_elapsed": "Not fully instrumented; not claimed zero or included in case timer. No end-to-end45s execution admission claimed.",
+    "new_simulation_steps": 0,
+    "new_PPO_updates": 0,
+    "new_demonstrations": 0,
+    "new72checks": 0,
+    "new_video": false
+  },
+  "failures_preserved": [
+    "Two stool pose rejections",
+    "Two upright collision rejections",
+    "Two corrected upright endpoint nonconvergences",
+    "One centered-CoP pose rejection",
+    "Original and intermediate camera coverage/tracking failures",
+    "Static audit abs(list) implementation error",
+    "Camera span float64/float32 exact-equality implementation error; canonical float32 corrected and validation passed"
+  ],
+  "current_workers": {
+    "own_scientific_worker_live": false,
+    "own_training_queued": false,
+    "gpu4090_foreign_pid": 2180564,
+    "gpu4090_foreign_job": "sircus film_cylinder_farm shot-benchmark PPO seed20261121",
+    "gpu4090_last_utilization_percent": 65,
+    "gpu4090_last_temperature_C": 42,
+    "gpu4070_reserved_for_AIWorker": true,
+    "gpu4070_pid": 1154954,
+    "foreign_jobs_untouched": true
+  },
+  "physical_status": {
+    "best_clean": 64,
+    "development_cases": 72,
+    "unresolved_failures": 8,
+    "accepted_repairs": 0
+  },
+  "next_work": "No ready motion/training candidate. Resolve a sensor-consistent stable approach and complete fresh-camera tracking, plus a feasible stool and noncolliding upright-rest path, before full20-demo collection, PPO and all72 evaluation. Do not deploy rejected controls, bypass quiet gates, alter physical criteria, or recreate the deleted automation.",
+  "sources_consulted": [
+    "validated_low_seat_contact_01/drive_iteration_context_310/context.json",
+    "https://github.com/isaac-sim/IsaacLab/issues/1493",
+    "https://github.com/NVIDIA-Omniverse/PhysX/issues/498"
+  ],
+  "external_issue_proves_local_bug": false
+}
