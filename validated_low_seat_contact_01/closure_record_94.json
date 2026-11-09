@@ -1,0 +1,48 @@
+{
+  "utc": "2026-10-17T10:15:46.246395+00:00",
+  "task_complete": false,
+  "repair_complete": false,
+  "new_physical_ticks": 0,
+  "new_optimizer_updates": 0,
+  "holdout_started": false,
+  "prior_recheck": {
+    "utc": "2026-10-17T10:15:45.628649+00:00",
+    "passed": true,
+    "checks": [
+      {
+        "manifest": "prior_hashes.json",
+        "checked": 24242,
+        "mismatches": [],
+        "passed": true
+      },
+      {
+        "manifest": "completed_probes_preservation_v2_64.json",
+        "checked": 2789,
+        "mismatches": [],
+        "passed": true
+      }
+    ]
+  },
+  "completed_evidence_manifest": "/data/humanoid-sitting-perception/low_seat_contact_01/completed_probes_preservation_94.json",
+  "protected_completed_files": 2985,
+  "manifest_sha256": "238f22ff20d4e454852bbf43bb02f21e64a7985570d42d074b0fea0fac766e21",
+  "pending95_sources": {
+    "/home/kadir/humanoid-sitting/scripts/refine_low_seat_landing_ankle_95.py": "e0fae8c1fddba827e59ec2b429854ec2ee6d9d62e6f6ce6ab0b5831294342c56",
+    "/home/kadir/humanoid-sitting/scripts/audit_low_seat_landing_ankle_96.py": "1c89d436f2dfbccafad5c9acf84a7c665c4e6fb536fd06ef041cff9aca0f9f15",
+    "/data/humanoid-sitting-perception/low_seat_contact_01/landing_ankle_revision_95.json": "4d2540e0e468c50d0bbcae15caa6d4e0dbaa07a5d711d3bdb158aa4ab1a137ce"
+  },
+  "model95_running": true,
+  "physical_workers_running": false,
+  "report": "progress_report_93",
+  "local_review": {
+    "utc": "2026-10-17T10:14:46.870861+00:00",
+    "original_sha_entries": 8,
+    "full_path_plot_visually_inspected": true,
+    "html_and_failed_gate_table_visually_inspected": true,
+    "task_complete": false,
+    "physical_repair_complete": false,
+    "video_current_no_new_physics": true
+  },
+  "handoff_sha256": "fac7b1f7f2a539365f50bd070838c0746e46f0dc068defc98c5f740a40f43ab0",
+  "next": "Inspect existing95 result and independent96, without restarting. No model/endpoint audit authorizes physical execution or PPO. Complete filtered-command/sensed-load/dynamic transition and all72 matched development physical gates remain required. Video59 remains current; no motion added."
+}
