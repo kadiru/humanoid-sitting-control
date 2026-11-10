@@ -1,0 +1,19 @@
+[package]
+title = "Resting sensor CPU diagnostics"
+version = "1.0.0"
+
+[dependencies]
+"omni.physx" = {}
+"omni.physics.tensors" = {}
+"omni.physx.tensors" = {}
+
+[settings]
+app.window.enabled = false
+app.renderer.enabled = false
+app.extensions.registryEnabled = false
+app.extensions.autoUpdate = false
+app.settings.persistent = false
+app.hangDetector.enabled = false
+physics.cudaDevice = -1
+physics.overrideGpu = 0
+log.level = "warning"
