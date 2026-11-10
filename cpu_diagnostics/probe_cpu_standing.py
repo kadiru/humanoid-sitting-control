@@ -15,7 +15,16 @@ from import_cpu_g1 import run
 
 def probe(stage, simulation, view, robot, names, indices, contract, out):
     from pxr import PhysicsSchemaTools
-    assert contract['physics_steps'] == 1000 and contract['physics_dt'] == .005
+    assert contract['physics_dt'] == .005
+    motion = None
+    if 'measurement_path' in contract:
+        # A frozen path is only a sensor-validation stimulus. Its timing never
+        # counts as measured contact, release, or completion of a task.
+        motion = np.load(contract['measurement_path'])
+        assert contract['physics_steps'] == 4*len(motion['desired']) <= 8000
+        assert motion['desired'].shape[1] == 23
+    else:
+        assert contract['physics_steps'] == 1000
     links = list(robot.shared_metatype.link_names)
     assert links[0] == 'pelvis', 'UNEXPECTED_ROOT_LINK_ORDER'
     feet = [links.index(side+'_ankle_roll_link') for side in ('left', 'right')]
@@ -23,7 +32,7 @@ def probe(stage, simulation, view, robot, names, indices, contract, out):
     filters = ['/RestFloor'] + (['/Support'] if 'support' in contract else [])
     contacts = view.create_rigid_contact_view(paths, [filters for _ in paths], 4096)
     assert contacts.sensor_count == 44
-    arrays = {key: [] for key in ('q','qd','tau','pose','velocity','normal','friction','sleeping')}
+    arrays = {key: [] for key in ('q','qd','tau','pose','velocity','normal','friction','sleeping','command')}
     initial_q = robot.get_dof_positions()[0, indices].copy()
     initial_root = robot.get_root_transforms().copy()
     targets = robot.get_dof_position_targets().copy()
@@ -31,11 +40,23 @@ def probe(stage, simulation, view, robot, names, indices, contract, out):
     effort_targets = robot.get_dof_actuation_forces().copy()
     ids = np.array([0], dtype=np.uint32)
     body_path = PhysicsSchemaTools.sdfPathToInt('/Robot/pelvis')
+    previous = targets[0, indices].copy()
+    if motion is not None:
+        assert np.array_equal(previous, motion['initial'])
+        lo, hi = motion['lower'], motion['upper']
+        assert np.isfinite(motion['desired']).all()
+        assert (motion['desired'] >= lo+.03).all() and (motion['desired'] <= hi-.03).all()
     progress = dict(physics_steps=0, complete_cycles=0, sensor_repair=False,
                     GPU_devices_exposed=False)
     (out/'progress.json').write_text(json.dumps(progress))
     try:
         for tick in range(contract['physics_steps']):
+            if motion is not None and tick % 4 == 0:
+                desired = motion['desired'][tick//4]
+                previous[:23] += np.clip(np.float32(.1)*(desired-previous[:23]),
+                                        np.float32(-.003),np.float32(.003))
+                assert np.max(abs(previous-motion['command'][tick//4])) <= 2e-7
+                targets[0, indices] = previous
             # IsaacLab writes the unchanged motor targets before every physics
             # substep. Omitting those writes permits sleep and changes sensor
             # publication; matching values alone is not runtime parity.
@@ -62,6 +83,7 @@ def probe(stage, simulation, view, robot, names, indices, contract, out):
             arrays['friction'].append(force)
             arrays['sleeping'].append(simulation.is_sleeping(
                 simulation.get_attached_stage(), body_path))
+            arrays['command'].append(previous.copy())
             if tick%100 == 99:
                 (out/'progress.json').write_text(json.dumps(progress))
             # Stop on a severe failure; preserve the entire prefix.
@@ -73,6 +95,15 @@ def probe(stage, simulation, view, robot, names, indices, contract, out):
                        ('q','qd','tau','velocity','normal','friction')):
                 progress['abort'] = 'NONFINITE_NATIVE_SENSOR'
                 break
+            if motion is not None:
+                normal_force = arrays['normal'][-1]
+                floor_wrong = [i for i in range(44) if i not in feet]
+                permitted_support = [links.index(x) for x in contract['permitted_support_bodies']]
+                support_wrong = [i for i in range(44) if i not in permitted_support]
+                if (np.linalg.norm(normal_force[floor_wrong,0],axis=-1).max() > 10 or
+                    np.linalg.norm(normal_force[support_wrong,1],axis=-1).max() > 10):
+                    progress['abort'] = 'ILLEGAL_CONTACT_OVER_ORIGINAL_10N_LIMIT'
+                    break
     finally:
         data = {key: np.asarray(value) for key,value in arrays.items()}
         np.savez_compressed(out/'trajectory.npz', **data, initial_q=initial_q,
@@ -94,7 +125,8 @@ def probe(stage, simulation, view, robot, names, indices, contract, out):
         sleeping_samples=int(data['sleeping'].sum()),
         nonfoot_floor_peak_N=float(np.linalg.norm(data['normal'][:,wrong,0],axis=-1).max()),
         final_root_height_m=float(data['pose'][-1,0,2]),
-        scope='Single accepted posture reset; no camera, loaded/release admission, or complete cycle')
+        scope=('Frozen unloading sensor stimulus' if motion is not None else 'Single accepted posture reset')+
+              '; no camera, loaded/release admission, or complete cycle')
     if 'support' in contract:
         normal = np.asarray(contract['support']['normal'])
         summary['support_normal_mean_last_second_bw'] = float(
