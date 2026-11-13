@@ -70,9 +70,17 @@ def main():
             with np.load(a.demonstrations,allow_pickle=False) as z:agent.bind_demonstrations(z['obs'])
             agent.save(out/'initial.pt');stalled=0
             approach_controls = 0
+            sitting_hold = agent.sitting.get('hold_start_tick') if meta['task'] == 'sitting' else None
 
             @torch.no_grad()
             def execute_frozen_approach():
+                if sitting_hold is not None:
+                    for tick in range(int(sitting_hold)):
+                        env.step(agent.choose(env.observation(), False)[0])
+                        if tick % 250 == 249:
+                            print(dict(approach_tick=tick+1, attempt=env.attempt, alive=int(env.alive.sum())),flush=True)
+                    assert (env.alive & (env.held > 0) & (env.slip_ticks == 0) & (env.illegal_ticks == 0)).all(), 'REPAIRED_APPROACH_REGRESSION'
+                    return int(sitting_hold)
                 if 'residual_start_tick' not in agent.library:
                     return 0
                 last_start = int(agent.library['residual_start_tick'].max())
@@ -85,22 +93,30 @@ def main():
                         env.step(agent.choose(obs, False)[0])
                 raise RuntimeError('NO_LIVE_SUPPORTED_LEAN_REACHED_LEARNING_PHASE')
 
-            approach_controls += execute_frozen_approach()
+            if sitting_hold is None:
+                approach_controls += execute_frozen_approach()
             for update in range(a.updates):
+                if sitting_hold is not None:
+                    if update:
+                        check=env.reset(0)
+                        assert not any(check['warm_failure']) and all(check['sensor_valid'])
+                    approach_controls += execute_frozen_approach()
                 b={k:[] for k in ['obs','action','logp','mean','reward','value','next','done','learn']}
                 with torch.no_grad():
-                    for _ in range(64):
+                    for _ in range(64 if sitting_hold is None else 1000-int(sitting_hold)):
                         obs=env.observation();action,logp,value,mean=agent.choose(obs)
                         nxt,reward,done,learn,horizon=env.step(action)
-                        nv=agent.choose(nxt,False)[2]
+                        nv=agent.critic(agent.normalize(nxt)).squeeze(-1)
                         for k,v in dict(obs=obs,action=action,logp=logp,mean=mean,reward=reward,value=value,next=nv,done=done,learn=learn).items():b[k].append(v.clone())
-                        if horizon or not bool(env.alive.any()):
+                        if sitting_hold is None and (horizon or not bool(env.alive.any())):
                             if not horizon:
                                 with (out/'aborted_training_attempts.jsonl').open('a') as f:f.write(__import__('json').dumps(dict(attempt=env.attempt,steps=int(env.episode_length_buf[0]),reason='all_failed',clean=False))+'\n')
                             assert env.attempt<128,'RESET_BUDGET'
                             if adapter:adapter.reset_recording(env.num_envs)
                             check=env.reset(0);assert not any(check['warm_failure']) and all(check['sensor_valid'])
                             approach_controls += execute_frozen_approach()
+                if sitting_hold is not None:
+                    assert horizon and len(env.episodes)==(update+1)*env.num_envs
                 b={k:torch.stack(v) for k,v in b.items()};adv,target=advantages(b['reward'],b['value'],b['next'],b['done'])
                 select=b['learn'];assert int(select.sum())>=2
                 m=agent.update(b['obs'][select],b['action'][select],b['logp'][select],b['mean'][select],adv[select],target[select])

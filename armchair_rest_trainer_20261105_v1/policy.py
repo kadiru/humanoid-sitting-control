@@ -68,9 +68,12 @@ class Learner:
     def residual_mask(self,obs):
         _,choice,_=self.prior(obs,True)
         enabled = (obs[:,334:335]>.5).float()*self.library['new_skill'][choice,None]
+        tick = (obs[:,335:336]*1000).round().long().clamp(0,999)
         if 'residual_start_tick' in self.library:
-            tick = (obs[:,335:336]*1000).round().long().clamp(0,999)
             enabled = enabled * (tick >= self.library['residual_start_tick'][choice,None])
+        if self.sitting is not None and 'hold_start_tick' in self.sitting:
+            sitting_hold = (obs[:,333:334] > .5) & (tick >= self.sitting['hold_start_tick'])
+            enabled = torch.maximum(enabled, sitting_hold.to(enabled.dtype))
         return enabled
 
     @torch.no_grad()
@@ -78,7 +81,8 @@ class Learner:
         mask = self.residual_mask(obs)
         x=self.normalize(obs);mu=self.prior(obs)+self.actor(x)*mask;dist=Normal(mu,self.std)
         a=dist.sample() if stochastic else mu
-        if stochastic and 'residual_start_tick' in self.library:
+        if stochastic and ('residual_start_tick' in self.library or
+                           self.sitting is not None and 'hold_start_tick' in self.sitting):
             a = torch.where(mask.bool(), a, mu)
         return a,dist.log_prob(a).sum(-1),self.critic(x).squeeze(-1),mu
 
