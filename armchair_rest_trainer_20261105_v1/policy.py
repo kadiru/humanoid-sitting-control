@@ -56,6 +56,13 @@ class Learner:
             d=(((signature[:,None]-self.sitting['signature'][None])/self.sitting['signature_scale'])**2).mean(-1)
             sel=d.argmin(-1)
             desired=torch.where(sitting[:,None],self.sitting['desired'][sel,tick],desired)
+            if 'repair_signature' in self.sitting:
+                # Compare each repair to its recorded observation neighbourhood.
+                error=((signature[:,None]-self.sitting['repair_signature'][None])/
+                       self.sitting['signature_scale']).square().mean(-1)
+                index=error.argmin(-1)
+                use=sitting & (error.gather(1,index[:,None])[:,0] < self.sitting['repair_radius'][index])
+                desired=torch.where(use[:,None],self.sitting['repair_desired'][index,tick],desired)
         return (desired,choice,dist) if details else desired
 
     def residual_mask(self,obs):

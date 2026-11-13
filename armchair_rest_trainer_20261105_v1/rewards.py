@@ -18,11 +18,21 @@ def potential(x):
     phi=2*tracking*safe+2*(phase>=1)*safe*load*balance+4*good*(x['held_ticks']/250).clamp(0,1)-slip-wrong-impact-.1*smooth
     return torch.where(x['first_failure']|x['horizon']|~x['alive'],0.,phi)
 
-def staged_reward(x,imitation_weight=1.):
+def hold_effort_credit(torque_squared, upward_load, good, tick, clean, end, balance):
+    """Pay for efficient support in the final five seconds, with a debit on failure."""
+    eligible = good & (upward_load > 0) & (tick > 750)
+    bonus = (.16 * 400 / (400 + torque_squared)) * eligible
+    next_balance = balance / GAMMA + bonus.to(balance.dtype)
+    bonus = torch.where(end & ~clean, bonus - next_balance, bonus).to(torque_squared.dtype)
+    return bonus, torch.where(end, 0., next_balance)
+
+
+def staged_reward(x,imitation_weight=1., *, hold_effort=None):
     assert imitation_weight==1.
     phi=potential(x)
     completion=400*x['clean_completion'].float()+20*x['stable_completion'].float()
-    effort=40*x['clean_completion'].float()/(1+10*x['mean_qualifying_effort'])
+    effort=(40*x['clean_completion'].float()/(1+10*x['mean_qualifying_effort'])
+            if hold_effort is None else hold_effort)
     base=torch.full_like(phi,DT)-20*x['first_failure'].float()+completion+effort
     shape=GAMMA*phi-x['previous_potential']
     reward=base+shape

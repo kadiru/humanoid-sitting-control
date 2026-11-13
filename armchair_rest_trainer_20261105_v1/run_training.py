@@ -16,6 +16,8 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--bank',required=True);p.add_argument('--output',required=True)
     p.add_argument('--mode',choices=['evaluate','train'],required=True);p.add_argument('--checkpoint',required=True)
     p.add_argument('--mesh',action='store_true');p.add_argument('--demonstrations');p.add_argument('--seed',type=int,required=True);p.add_argument('--updates',type=int,default=128)
+    p.add_argument('--hold-effort-reward', action='store_true')
+    p.add_argument('--candidate-library')
     base.add_launcher_args(p);a=p.parse_args();assert 1<=a.updates<=128
     torch.manual_seed(a.seed);np.random.seed(a.seed);a.enable_cameras=True;a.depth_check=True
     bankpath=Path(a.bank);meta=read(bankpath/'metadata.json');geometry=None if a.mesh else read(bankpath/'geometry.json')
@@ -46,6 +48,10 @@ def main():
             write(out/'startup.json',env.startup)
             assert not any(env.startup['warm_failure']) and all(env.startup['sensor_valid'])
             agent=Learner(np.zeros(OBS),np.ones(OBS),a.seed,a.device);agent.load(a.checkpoint)
+            if a.candidate_library:
+                assert a.mode == 'evaluate' and meta['task'] == 'sitting'
+                with np.load(a.candidate_library, allow_pickle=False) as z:
+                    agent.bind_sitting({**agent.sitting, **dict(z)})
             with torch.no_grad():
                 _,choice,dist=agent.prior(env.observation(),True)
             write(out/'initial_selection.json',dict(library_indices=choice.cpu().tolist(),distances=dist.cpu().tolist(),

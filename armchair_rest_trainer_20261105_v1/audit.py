@@ -23,7 +23,17 @@ def reward_numpy(d,weight=1.):
     phi=np.where(d['first_failure']|horizon|~d['alive'],0,phi)
     previous=np.concatenate((np.zeros_like(phi[:1]),phi[:-1]),axis=0)
     if 'previous_potential' in d:np.testing.assert_allclose(d['previous_potential'],previous,rtol=3e-6,atol=3e-6)
-    base=.02-20*d['first_failure']+400*d['clean_completion']+20*d['stable_completion']+40*d['clean_completion']/(1+10*d['mean_qualifying_effort'])
+    if 'hold_effort_reward' in d:
+        torque_sq=np.square(d['physical_torque'][..., :23]).sum(-1)
+        supported=d['physical_force_w'][..., :5, 2].sum(-1)>0
+        tick=np.arange(1, len(phi)+1)[:, None]
+        effort=.16*400/(400+torque_sq)*(d['good']&supported&(tick>750))
+        end=d['first_failure']|horizon
+        discounted=np.cumsum(effort*.999**(tick-1),axis=0)
+        effort-=np.where(end & ~d['clean_completion'],discounted/.999**(tick-1),0.)
+    else:
+        effort=40*d['clean_completion']/(1+10*d['mean_qualifying_effort'])
+    base=.02-20*d['first_failure']+400*d['clean_completion']+20*d['stable_completion']+effort
     return base+.999*phi-previous
 
 

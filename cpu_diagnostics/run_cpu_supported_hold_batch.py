@@ -143,7 +143,7 @@ def launch(work):
         # consuming the rest of the queue. Physical failures still count.
         if child.returncode != 0:
             break
-    write(work/'results.json', dict(rows=results, all_completed=len(results)==6 and all(
+    write(work/'results.json', dict(rows=results, all_completed=len(results)==len(manifest['cases']) and all(
         'clean' in row for row in results)))
 
 

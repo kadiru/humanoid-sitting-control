@@ -14,7 +14,7 @@ import run_supported_postures as support
 from run_supported_transition import TransitionEnv
 from humanoid_sitting.supported_surface import SupportTracker
 from policy import command as apply_action
-from rewards import staged_reward, phase_from_clock
+from rewards import hold_effort_credit, staged_reward, phase_from_clock
 
 
 class FullBodyEnv:
@@ -92,6 +92,7 @@ class FullBodyEnv:
         self.initial_sensor=self.hist[:,-1].clone()
         self.previous_potential=torch.zeros(n,device=self.device)
         self.effort_sum=torch.zeros(n,device=self.device);self.effort_ticks=torch.zeros(n,device=self.device)
+        self.hold_effort_balance=torch.zeros(n,device=self.device,dtype=torch.float64)
         self.attempt += 1
         self.episode_records = []
         # A bad warmup is not silently erased at the start of an episode.
@@ -152,7 +153,15 @@ class FullBodyEnv:
                       held_ticks=self.held, torque_squared=self.robot.data.applied_torque.torch.square().sum(1),
                       clean_completion=clean, stable_completion=stable, first_failure=first)
         values.update(horizon=horizon,previous_potential=self.previous_potential.clone())
-        reward, terms = staged_reward(values, imitation_weight)
+        hold_effort = None
+        if getattr(self.args, 'hold_effort_reward', False):
+            torque_sq = m['torque'][:, self.ids].square().sum(1)
+            upward = m['force_w'][:, :5, 2].sum(1)
+            hold_effort, self.hold_effort_balance = hold_effort_credit(
+                torque_sq, upward, good, self.episode_length_buf, clean,
+                first | horizon, self.hold_effort_balance)
+            values['hold_effort_reward'] = torch.ones_like(good)
+        reward, terms = staged_reward(values, imitation_weight, hold_effort=hold_effort)
         self.previous_potential=terms['potential'].detach().clone()
         reward = torch.where(before, reward, 0.)
         # Successful-only completion/effort rewards never revive a failed row.

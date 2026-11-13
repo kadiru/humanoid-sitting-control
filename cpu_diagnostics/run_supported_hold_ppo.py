@@ -31,7 +31,7 @@ def gpu_field(query, field):
                                     '--format=csv,noheader,nounits'], text=True, timeout=10).strip()
 
 
-def freeze(prepared):
+def freeze(prepared, reward_validation=None):
     assert read(prepared/'trainer_preflight.json')['passed']
     prep = read(prepared/'preparation.json')
     assert prep['passed'] and prep['new_demonstrations'] == 6 and not prep['fresh_holdout_used']
@@ -40,6 +40,11 @@ def freeze(prepared):
              *(SITTING/k for k in ('bank.npz', 'metadata.json', 'geometry.json')),
              *(ROOT/'scripts'/f'run_{name}.py' for name in ('resting_posture', 'supported_postures', 'supported_transition')),
              *(ROOT/'sitting_task/src/humanoid_sitting').rglob('*.py')]
+    if reward_validation is not None:
+        reward = read(reward_validation)
+        assert reward['passed']
+        paths.extend([reward_validation, HERE/'validate_hold_effort_reward.py'])
+        paths.extend(Path(reward[key]['path']) for key in ('prior', 'learned'))
     out = prepared.parent/'ppo_freeze.json'
     if out.exists():
         raise FileExistsError(out)
@@ -48,7 +53,8 @@ def freeze(prepared):
                     training_approach_controls_max=128*max(prep['residual_start_ticks']),
                     training_update_controls=8192, training_reset_warmup_max=128*25,
                     physics_substeps_per_control=4, each_evaluation_s=3600, training_wall_s=30000,
-                    resource_disk_bytes=20_000_000_000, resource_temperature_C=85))
+                    resource_disk_bytes=20_000_000_000, resource_temperature_C=85,
+                    hold_effort_reward=reward_validation is not None))
 
 
 def run(prepared, out):
@@ -73,6 +79,8 @@ def run(prepared, out):
                     '--kit_args=--/renderer/activeGpu=0,--/renderer/multiGpu/enabled=false']
             if train:
                 args += ['--updates', str(UPDATES), '--demonstrations', str(prepared/'demonstrations.npz')]
+            if frozen.get('hold_effort_reward') and label != 'sitting72':
+                args += ['--hold-effort-reward']
             write(out/(label+'.command.json'), args)
             started = time.monotonic()
             with (out/(label+'.log')).open('x') as log:
@@ -124,9 +132,10 @@ if __name__ == '__main__':
     parser.add_argument('mode', choices=('freeze', 'run'))
     parser.add_argument('prepared', type=Path)
     parser.add_argument('--output', type=Path)
+    parser.add_argument('--reward-validation', type=Path)
     args = parser.parse_args()
     if args.mode == 'freeze':
-        freeze(args.prepared)
+        freeze(args.prepared, args.reward_validation)
     elif args.output:
         run(args.prepared, args.output)
     else:
