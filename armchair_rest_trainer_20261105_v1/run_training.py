@@ -63,6 +63,23 @@ def main():
             assert a.demonstrations and agent.updates==0
             with np.load(a.demonstrations,allow_pickle=False) as z:agent.bind_demonstrations(z['obs'])
             agent.save(out/'initial.pt');stalled=0
+            approach_controls = 0
+
+            @torch.no_grad()
+            def execute_frozen_approach():
+                if 'residual_start_tick' not in agent.library:
+                    return 0
+                last_start = int(agent.library['residual_start_tick'].max())
+                for tick in range(last_start+1):
+                    obs = env.observation()
+                    if (agent.residual_mask(obs)[:, 0].bool() & env.alive).any():
+                        return tick
+                    assert env.alive.any(), 'FROZEN_APPROACH_FAILED'
+                    if tick < last_start:
+                        env.step(agent.choose(obs, False)[0])
+                raise RuntimeError('NO_LIVE_SUPPORTED_LEAN_REACHED_LEARNING_PHASE')
+
+            approach_controls += execute_frozen_approach()
             for update in range(a.updates):
                 b={k:[] for k in ['obs','action','logp','mean','reward','value','next','done','learn']}
                 with torch.no_grad():
@@ -77,12 +94,14 @@ def main():
                             assert env.attempt<128,'RESET_BUDGET'
                             if adapter:adapter.reset_recording(env.num_envs)
                             check=env.reset(0);assert not any(check['warm_failure']) and all(check['sensor_valid'])
+                            approach_controls += execute_frozen_approach()
                 b={k:torch.stack(v) for k,v in b.items()};adv,target=advantages(b['reward'],b['value'],b['next'],b['done'])
                 select=b['learn'];assert int(select.sum())>=2
                 m=agent.update(b['obs'][select],b['action'][select],b['logp'][select],b['mean'][select],adv[select],target[select])
                 stalled=stalled+1 if m['actor_steps']==0 else 0
                 m.update(update=update+1,consecutive_no_policy_change=stalled,live_samples=int(select.sum()),mean_rollout_reward=float(b['reward'].mean()),
-                    seconds=time.monotonic()-started,complete_episodes=len(env.episodes),active_transitions=env.active_transitions)
+                    seconds=time.monotonic()-started,complete_episodes=len(env.episodes),active_transitions=env.active_transitions,
+                    frozen_approach_controls=approach_controls)
                 with (out/'updates.jsonl').open('a') as f:f.write(__import__('json').dumps(m)+'\n')
                 write(out/'status.json',dict(state='training',**m));print({k:v for k,v in m.items() if k!='candidate_tests'},flush=True)
                 if update==0:

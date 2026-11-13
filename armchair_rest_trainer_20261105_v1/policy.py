@@ -60,12 +60,19 @@ class Learner:
 
     def residual_mask(self,obs):
         _,choice,_=self.prior(obs,True)
-        return (obs[:,334:335]>.5).float()*self.library['new_skill'][choice,None]
+        enabled = (obs[:,334:335]>.5).float()*self.library['new_skill'][choice,None]
+        if 'residual_start_tick' in self.library:
+            tick = (obs[:,335:336]*1000).round().long().clamp(0,999)
+            enabled = enabled * (tick >= self.library['residual_start_tick'][choice,None])
+        return enabled
 
     @torch.no_grad()
     def choose(self,obs,stochastic=True):
-        x=self.normalize(obs);mu=self.prior(obs)+self.actor(x)*self.residual_mask(obs);dist=Normal(mu,self.std)
+        mask = self.residual_mask(obs)
+        x=self.normalize(obs);mu=self.prior(obs)+self.actor(x)*mask;dist=Normal(mu,self.std)
         a=dist.sample() if stochastic else mu
+        if stochastic and 'residual_start_tick' in self.library:
+            a = torch.where(mask.bool(), a, mu)
         return a,dist.log_prob(a).sum(-1),self.critic(x).squeeze(-1),mu
 
     def bind_demonstrations(self,obs,targets=None):
