@@ -9,6 +9,32 @@ from scipy.spatial.transform import Rotation
 from run_repaired_sitting_ppo import HERE
 
 SLAB_DEPTH_M = .5
+CAMERA_ROUTE_TICK = 40
+CAMERA_HANDOFF_CHECK_TICK = 119
+CONTACT_FORE_AFT_M = -.16
+CAMERA_FEATURE_SPREAD = np.array([.020, .010, 1.0])
+
+
+def camera_route_feature(edge, height, pitch):
+    # Express height at a nominal pelvis contact point behind the feet.
+    contact_height = height-CONTACT_FORE_AFT_M*np.tan(np.deg2rad(pitch))
+    return np.array([edge,contact_height,pitch])
+
+
+def camera_route_measurement(history):
+    history = np.asarray(history)
+    if len(history)<4 or np.any(np.ptp(history,axis=0)>CAMERA_FEATURE_SPREAD):
+        return None
+    return camera_route_feature(*np.median(history,axis=0))
+
+
+def choose_camera_route(feature, library):
+    distances = np.square((library['features']-feature)/library['scales']).sum(1)
+    eligible = np.flatnonzero(distances<=library['radius'])
+    if not eligible.size:
+        return -1, float(distances.min())
+    index = int(eligible[distances[eligible].argmin()])
+    return index, float(distances[index])
 
 def unit(v):
     return v/np.linalg.norm(v)
@@ -79,7 +105,7 @@ def worker():
     import run_training
     import run_supported_postures as support
     from environment import FullBodyEnv
-    from policy import Learner
+    from policy import Learner, command
     import torch
 
     def load_library(option):
@@ -93,8 +119,11 @@ def worker():
 
     payload = load_library('--adapt-library')
     touchdown = load_library('--touchdown-library')
+    camera_touchdown = load_library('--camera-touchdown')
     if touchdown is not None:
         assert payload is not None
+    if camera_touchdown is not None:
+        assert touchdown is not None
 
     class ObservedEnv(FullBodyEnv):
         def __init__(self,*args,**kwargs):
@@ -224,11 +253,66 @@ def worker():
             if tick==999:
                 np.savez_compressed(self.env.out/'touchdown_selection.npz',selected=self.touchdown_index,
                                     distance=self.touchdown_distance,ids=touchdown['ids'])
-            if not self.touchdown_active.any():
-                return result
-            delta = self.actor(self.normalize(obs))*self.residual_mask(obs)
-            desired = torch.where(self.touchdown_active[:,None],self.touchdown_paths[:,tick]+delta,result[0])
+            desired = result[0]
+            if self.touchdown_active.any():
+                delta = self.actor(self.normalize(obs))*self.residual_mask(obs)
+                desired = torch.where(self.touchdown_active[:,None],self.touchdown_paths[:,tick]+delta,desired)
+            if camera_touchdown is not None:
+                desired = self.choose_camera_touchdown(obs,tick,desired)
             return (desired,*result[1:])
+
+        def choose_camera_touchdown(self,obs,tick,desired):
+            if tick==0:
+                signature = obs[:,336:].cpu().numpy()
+                protected = ((signature[:,None]-camera_touchdown['protected'][None])/
+                             camera_touchdown['signature_scale'])
+                self.camera_protected = np.square(protected).mean(-1).min(1)<=5e-7
+                self.camera_history = [[] for _ in range(len(obs))]
+                self.camera_seen_tick = -1
+                self.camera_index = np.full(len(obs),-1,int)
+                self.camera_distance = np.full(len(obs),np.inf)
+                self.camera_features = np.full((len(obs),3),np.nan)
+                self.camera_handoff_error = np.full(len(obs),np.nan)
+            if tick<=CAMERA_ROUTE_TICK and self.env.live is not None:
+                observed_tick, measurements = self.env.live
+                if observed_tick!=self.camera_seen_tick:
+                    self.camera_seen_tick = observed_tick
+                    for i,measured in enumerate(measurements):
+                        if measured is not None and measured['samples']>=4 and measured['span']<=.012:
+                            self.camera_history[i].append([measured['edge'],measured['height'],measured['pitch']])
+            if tick==CAMERA_ROUTE_TICK:
+                for i,history in enumerate(self.camera_history):
+                    if self.camera_protected[i] or self.touchdown_index[i]>=0:
+                        continue
+                    feature = camera_route_measurement(history)
+                    if feature is None:
+                        continue
+                    self.camera_features[i] = feature
+                    index, self.camera_distance[i] = choose_camera_route(feature,camera_touchdown)
+                    if index<0:
+                        continue
+                    actions = torch.as_tensor(camera_touchdown['paths'][index,tick:CAMERA_HANDOFF_CHECK_TICK+1],
+                                             device=obs.device)
+                    restore = torch.as_tensor(camera_touchdown['handoff'][index],device=obs.device)
+                    predicted = self.env.previous[i,:23]
+                    for target in actions:
+                        predicted = command(predicted,target,self.env.limit_lower[i],self.env.limit_upper[i])
+                    error = float((predicted-restore).abs().max())
+                    self.camera_handoff_error[i] = error
+                    if error<=.002:
+                        self.camera_index[i] = index
+                self.camera_active = torch.as_tensor(self.camera_index>=0,device=obs.device)
+                self.camera_paths = torch.as_tensor(camera_touchdown['paths'][np.maximum(self.camera_index,0)],
+                                                    device=obs.device)
+            if tick==999:
+                np.savez_compressed(self.env.out/'camera_touchdown_selection.npz',
+                                    selected=self.camera_index, ids=camera_touchdown['ids'],
+                                    features=self.camera_features, distance=self.camera_distance,
+                                    handoff_error=self.camera_handoff_error, protected=self.camera_protected)
+            if tick<CAMERA_ROUTE_TICK or not self.camera_active.any():
+                return desired
+            delta = self.actor(self.normalize(obs))*self.residual_mask(obs)
+            return torch.where(self.camera_active[:,None],self.camera_paths[:,tick]+delta,desired)
 
         def live_choose(self,obs,stochastic=True):
             result = super().choose(obs,stochastic)
