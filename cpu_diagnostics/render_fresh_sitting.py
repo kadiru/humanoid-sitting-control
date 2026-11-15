@@ -38,6 +38,7 @@ def render(run, destination, original_bank=None):
     else:
         rows = comparison['rows']
         overall = f'{comparison["score"]["clean"]}/24 passed'
+    positioned = all('fore_aft_offset_cm' in row and 'lateral_offset_cm' in row for row in rows)
     assert [r['id'] for r in rows] == [r['id'] for r in results['episodes']]
     with np.load(trace,allow_pickle=False) as z:
         poses = z['body'].copy()
@@ -49,10 +50,11 @@ def render(run, destination, original_bank=None):
     assert poses.shape[:2] == (1000,24)
     assert len(rows) == len(geometry) == 24
     sample = dict(poses=poses,geometry=geometry,bodies=results['body_names'])
-    replay.PANEL = PANEL
+    panel = (PANEL[0],250) if positioned else PANEL
+    replay.PANEL = panel
     renderer = replay.Renderer()
     renderer.scale = 218
-    renderer.offset = np.array([PANEL[0]/2,PANEL[1]/2,0])-np.array([-.20,0,.48])@replay.VIEW*renderer.scale
+    renderer.offset = np.array([panel[0]/2,panel[1]/2,0])-np.array([-.20,0,.48])@replay.VIEW*renderer.scale
 
     with subprocess.Popen(['ffmpeg','-nostdin','-v','error','-n','-f','rawvideo','-pix_fmt','rgb24',
                            '-s',f'{SIZE[0]}x{SIZE[1]}','-r',str(FPS),'-i','-','-an','-c:v','libx264','-threads','2',
@@ -66,6 +68,8 @@ def render(run, destination, original_bank=None):
                 canvas = Image.new('RGB',SIZE,replay.BACKGROUND)
                 d = ImageDraw.Draw(canvas)
                 title = 'Sitting touchdown repair' if is_repair else 'Fresh sitting trials'
+                if positioned:
+                    title = 'Sitting on shifted seats'
                 replay.label(d,(35,20),title,36,bold=True)
                 replay.label(d,(1000 if is_repair else 1110,26),f'{overall}  ·  Batch {group+1}/3',24,bold=True)
                 time_label = 'Final scores' if complete else f'{(tick+1)*.02:05.2f} / 20 s   ·   2× replay'
@@ -75,7 +79,10 @@ def render(run, destination, original_bank=None):
                     row = rows[case]
                     title = f'{case+1:02d}   {row["height_cm"]:g} cm  /  +{row["slope_deg"]:g}°'
                     replay.label(d,(x,y),title,22,bold=True)
-                    canvas.paste(renderer.panel(sample,case,tick),(x,y+30))
+                    if positioned:
+                        offsets = f'X {row["fore_aft_offset_cm"]:+g} cm  /  Y {row["lateral_offset_cm"]:+g} cm'
+                        replay.label(d,(x,y+26),offsets,17,replay.MUTED)
+                    canvas.paste(renderer.panel(sample,case,tick),(x,y+(50 if positioned else 30)))
                     if complete:
                         state = 'REPAIRED' if row['id'] in repaired else 'PASS' if row['passed'] else 'FAIL'
                         text = f'{state}  ·  {row["hold_s"]:.2f} s final hold'
