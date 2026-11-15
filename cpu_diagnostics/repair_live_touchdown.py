@@ -249,7 +249,7 @@ def screen(out, label='screen'):
               for row,result,peak in zip(rows,results,peaks)])
 
 
-def freeze_routes(out, screens):
+def freeze_routes(out, screens, nearby=()):
     cases, inputs, scale = load_cases()
     bank_paths = {c['group']:c['bank'] for c in cases.values()}
     inputs.update({str(p):sha(p) for p in (Path(__file__), HERE/'live_sitting_edge.py')})
@@ -278,7 +278,9 @@ def freeze_routes(out, screens):
         other = np.stack([r['signature'] for label,r in cases.items() if label!=key])
         separation = np.square((other-signature)/scale).mean(1).min()
         assert separation>1e-7, (key,separation)
-        radius.append(min(5e-7,float(separation)/16))
+        # A route may be tested on small perturbations while retaining a guard
+        # against invoking it on any other previously evaluated start.
+        radius.append(float(separation)/16 if key in nearby else min(5e-7,float(separation)/16))
     out.mkdir()
     payload = out/'touchdown.npz'
     np.savez_compressed(payload,ids=ids,signatures=sig,radius=radius,scale=scale,
@@ -288,6 +290,7 @@ def freeze_routes(out, screens):
     write(reservation,dict(files=frozen_banks))
     write(out/'routes.json',dict(winners={k:winners[k][0] for k in ids}, inputs=inputs,
         radius=radius, payload_sha256=sha(payload), reservation_sha256=sha(reservation),
+        nearby_routes=sorted(nearby),
         unresolved=sorted(set(k for k,r in cases.items() if not r['row']['clean'])-set(ids)),
         banks={k:str(v) for k,v in bank_paths.items()}))
 
