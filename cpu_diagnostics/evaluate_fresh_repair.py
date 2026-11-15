@@ -16,7 +16,7 @@ from run_repaired_sitting_ppo import (
 )
 
 
-def run(prepared, out, fresh_only):
+def run(prepared, out, fresh_only, positioned=False):
     construction = read(prepared/'construction.json')
     checkpoint = Path(construction['checkpoint'])
     library = prepared/'library.npz'
@@ -24,7 +24,8 @@ def run(prepared, out, fresh_only):
     assert sha(library) == construction['library_sha256']
     targets = {row['target'] for row in construction['design']}
     # Reuse the original runtime and scorer with the audited routing extension.
-    original = read(FRESH/'freeze.json')['sources']
+    positioned_base = ROOT/'outputs/positioned_sitting_20261114_v1'
+    original = read((positioned_base if positioned else FRESH)/'freeze.json')['sources']
     runtime = [LAUNCHER, *(HERE/'trainer').glob('*.py'),
                *(ROOT/'scripts'/f'run_{name}.py' for name in ('supported_postures','supported_transition','resting_posture')),
                *(ROOT/'sitting_task/src/humanoid_sitting').rglob('*.py')]
@@ -37,7 +38,14 @@ def run(prepared, out, fresh_only):
     frozen = {**construction['inputs'], **{str(p):sha(p) for p in
               [Path(__file__),prepared/'construction.json',library,HERE/'run_repaired_sitting_ppo.py',*runtime]}}
     stages = {}
-    for label,prior in (dict(fresh=SPLITS['fresh']) if fresh_only else SPLITS).items():
+    splits = SPLITS
+    screen = 'fresh'
+    if positioned:
+        prior = ROOT/'outputs/fresh_sitting_repair_20261114_v2_full'
+        splits = {k:prior/k for k in SPLITS}
+        splits['positioned'] = positioned_base/'evaluation'
+        screen = 'positioned'
+    for label,prior in ({screen:splits[screen]} if fresh_only else splits).items():
         bank = Path(read(prior/'manifest.json')['args']['bank'])
         for name in ('bank.npz','metadata.json','geometry.json'):
             frozen[str(bank/name)] = sha(bank/name)
@@ -77,7 +85,7 @@ def run(prepared, out, fresh_only):
                     write(out/f'{label}.exit.json',dict(returncode=child.returncode,wall_s=time.monotonic()-start))
             assert child.returncode == 0, label
             folder = out/label
-            prior = SPLITS[label]
+            prior = splits[label]
             old = read(prior/'results.json')['episodes']
             ids = [r['id'] for r in old]
             measured = report(folder,ids)
@@ -101,7 +109,8 @@ def run(prepared, out, fresh_only):
             scores[label] = measured
     assert sha(checkpoint) == construction['checkpoint_sha256']
     write(out/'comparison.json',dict(splits=scores,action_limits_unchanged=True,success_criteria_unchanged=True,
-                                     ppo_weights_unchanged=True,original_fresh_cases_used_for_repair=True))
+                                     ppo_weights_unchanged=True,original_fresh_cases_used_for_repair=True,
+                                     original_positioned_cases_used_for_repair=positioned))
     write(out/'status.json',dict(state='complete',clean=sum(s['clean'] for s in scores.values()),
                                  total=sum(s['total'] for s in scores.values())))
 
@@ -111,5 +120,6 @@ if __name__ == '__main__':
     parser.add_argument('prepared',type=Path)
     parser.add_argument('output',type=Path)
     parser.add_argument('--fresh-only',action='store_true')
+    parser.add_argument('--positioned',action='store_true')
     args = parser.parse_args()
-    run(args.prepared.resolve(),args.output.resolve(),args.fresh_only)
+    run(args.prepared.resolve(),args.output.resolve(),args.fresh_only,args.positioned)

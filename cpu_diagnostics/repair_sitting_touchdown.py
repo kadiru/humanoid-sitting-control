@@ -43,7 +43,8 @@ def retime(command, initial, first_load, last_slip, limits, speed):
     return desired, applied, target, dict(start_tick=start, end_tick=end, peak_delay_ticks=float(delay))
 
 
-def retarget(donor, source, target, limits, command, model, fk, legs):
+def retarget(donor, source, target, limits, command, model, fk, legs, *, fore_aft_m=0., pitch_adjust_rad=0.,
+             pitch_window_ticks=None):
     """Align a clean loaded approach to the new plane while preserving both feet."""
     body = donor['body']
     rotation = Rotation.from_quat(body[:,3:]).as_matrix()
@@ -53,18 +54,34 @@ def retarget(donor, source, target, limits, command, model, fk, legs):
     old_n, new_n = (np.asarray(g['normal']) for g in (source,target))
     old_c, new_c = (np.asarray(g['top_center']) for g in (source,target))
     old_gap = ((anchor-old_c)@old_n).min()
-    new_gap = ((anchor-new_c)@new_n).min()
+    new_gap = ((anchor+[fore_aft_m,0,0]-new_c)@new_n).min()
     dz = (old_gap-new_gap)/new_n[2]
+    translation = np.array([fore_aft_m,0.,dz])
     landing = int(np.flatnonzero(donor['load'] > .05)[0])
     start = 150
     ticks = np.unique(np.r_[np.arange(start,1000,10),landing,999])
     amount = smoothstep((ticks-start)/(landing-40-start))
+    pitch_start, pitch_finish = pitch_window_ticks or (max(start,landing-180),landing-40)
+    assert start <= pitch_start < pitch_finish <= landing
+    pitch_timing = smoothstep((ticks-pitch_start)/(pitch_finish-pitch_start))
     changes = []
     max_fit = 0.
-    for t, shift in zip(ticks, amount*dz):
+    for t, shift, pitch_fraction in zip(ticks, amount, pitch_timing):
         q = donor['q'][t].astype(float)
         wanted = fk(q)
-        wanted[:,:3,3] -= rotation[t].T@np.array([0.,0.,shift])
+        final_rotation = rotation[t]
+        final_position = root[t]+shift*translation
+        if pitch_adjust_rad:
+            # Keep the same seat-normal gap at every knot while pitching the
+            # trunk forward and preserving both recorded foot transforms.
+            final_rotation = Rotation.from_rotvec([0,pitch_fraction*pitch_adjust_rad,0]).as_matrix()@rotation[t]
+            old_gap = ((vertices@rotation[t].T+final_position-new_c)@new_n).min()
+            new_gap = ((vertices@final_rotation.T+final_position-new_c)@new_n).min()
+            final_position[2] += (old_gap-new_gap)/new_n[2]
+            wanted[:,:3,3] = (wanted[:,:3,3]@rotation[t].T+root[t]-final_position)@final_rotation
+            wanted[:,:3,:3] = final_rotation.T@rotation[t]@wanted[:,:3,:3]
+        else:
+            wanted[:,:3,3] -= rotation[t].T@(shift*translation)
 
         def residual(angles):
             q[legs] = angles
@@ -72,8 +89,8 @@ def retarget(donor, source, target, limits, command, model, fk, legs):
             twist = Rotation.from_matrix(f[:,:3,:3]@wanted[:,:3,:3].transpose(0,2,1)).as_rotvec()
             return np.c_[f[:,:3,3]-wanted[:,:3,3], .2*twist].ravel()
 
-        fit = least_squares(residual,q[legs],bounds=(limits[0][legs]+.03,limits[1][legs]-.03),
-                            max_nfev=32,ftol=1e-9,xtol=1e-9,gtol=1e-9)
+        bounds = (limits[0][legs]+.03,limits[1][legs]-.03)
+        fit = least_squares(residual,q[legs],bounds=bounds,max_nfev=32,ftol=1e-9,xtol=1e-9,gtol=1e-9)
         max_fit = max(max_fit,float(abs(fit.fun).max()))
         changes.append(fit.x-donor['q'][t,legs])
     assert max_fit < 1e-6
@@ -84,7 +101,7 @@ def retarget(donor, source, target, limits, command, model, fk, legs):
     for name in HOUSINGS:
         pose = poses[name]
         geom = model.vertices[name]@pose[:3,:3].T+pose[:3,3]
-        world = geom@rotation[-1].T+root[-1]+[0,0,dz]
+        world = geom@final_rotation.T+final_position
         housing[name] = float(((world-new_c)@new_n).min())
     assert min(housing.values()) > 0, housing
     delta = PchipInterpolator(ticks,changes,axis=0)(np.clip(np.arange(1000),start,999))

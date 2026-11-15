@@ -18,8 +18,8 @@ ROLL_FRAMES = 150
 END_FRAMES = 45
 
 
-def render(run, destination, original_bank=None):
-    evaluation = run/('evaluation' if original_bank is None else 'fresh')
+def render(run, destination, original_bank=None, split='fresh'):
+    evaluation = run/('evaluation' if original_bank is None else split)
     trace = evaluation/'trajectory.npz'
     audit = replay.read(evaluation/'independent_audit.json')
     assert audit['passed'] and replay.digest(trace) == audit['files']['trajectory.npz']
@@ -27,11 +27,12 @@ def render(run, destination, original_bank=None):
     comparison = replay.read(run/'comparison.json')
     geometry = replay.read((original_bank or run/'bank')/'geometry.json')
     is_repair = original_bank is not None
-    repaired = set(comparison['splits']['fresh']['repairs']) if is_repair else set()
+    repaired = set(comparison['splits'][split]['repairs']) if is_repair else set()
     if is_repair:
         scores = comparison['splits']
-        rows = [dict(r,height_cm=round(g['height']*100,3),slope_deg=g['pitch_deg'])
-                for r,g in zip(scores['fresh']['cases'],geometry)]
+        rows = [dict(r,height_cm=round(g['height']*100,3),slope_deg=g['pitch_deg'],
+                     **{key:g[key] for key in ('fore_aft_offset_cm','lateral_offset_cm') if key in g})
+                for r,g in zip(scores[split]['cases'],geometry)]
         all_passed = sum(s['clean'] for s in scores.values())
         all_cases = sum(s['total'] for s in scores.values())
         overall = f'{all_passed}/{all_cases} overall  ·  {len(repaired)} repairs'
@@ -69,7 +70,7 @@ def render(run, destination, original_bank=None):
                 d = ImageDraw.Draw(canvas)
                 title = 'Sitting touchdown repair' if is_repair else 'Fresh sitting trials'
                 if positioned:
-                    title = 'Sitting on shifted seats'
+                    title = 'Shifted-seat sitting repair' if is_repair else 'Sitting on shifted seats'
                 replay.label(d,(35,20),title,36,bold=True)
                 replay.label(d,(1000 if is_repair else 1110,26),f'{overall}  ·  Batch {group+1}/3',24,bold=True)
                 time_label = 'Final scores' if complete else f'{(tick+1)*.02:05.2f} / 20 s   ·   2× replay'
@@ -110,5 +111,6 @@ if __name__ == '__main__':
     parser.add_argument('run',type=Path)
     parser.add_argument('output',type=Path)
     parser.add_argument('--original-bank',type=Path,help='Original 24-case bank used for the repair evaluation.')
+    parser.add_argument('--split',choices=('fresh','positioned'),default='fresh')
     args = parser.parse_args()
-    render(args.run,args.output,args.original_bank)
+    render(args.run,args.output,args.original_bank,args.split)

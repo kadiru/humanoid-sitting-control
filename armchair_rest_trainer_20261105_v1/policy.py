@@ -58,7 +58,7 @@ class Learner:
             desired=torch.where(sitting[:,None],self.sitting['desired'][sel,tick],desired)
             # Test the touchdown correction independently. An out-of-radius
             # correction must leave the original repair selection in place.
-            for group in ('repair', 'touchdown'):
+            for group in ('repair', 'touchdown', 'positioned'):
                 key = f'{group}_signature'
                 if key not in self.sitting:
                     continue
