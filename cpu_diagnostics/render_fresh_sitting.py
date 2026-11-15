@@ -18,15 +18,26 @@ ROLL_FRAMES = 150
 END_FRAMES = 45
 
 
-def render(run, destination):
-    evaluation = run/'evaluation'
+def render(run, destination, original_bank=None):
+    evaluation = run/('evaluation' if original_bank is None else 'fresh')
     trace = evaluation/'trajectory.npz'
     audit = replay.read(evaluation/'independent_audit.json')
     assert audit['passed'] and replay.digest(trace) == audit['files']['trajectory.npz']
     results = replay.read(evaluation/'results.json')
     comparison = replay.read(run/'comparison.json')
-    geometry = replay.read(run/'bank/geometry.json')
-    rows = comparison['rows']
+    geometry = replay.read((original_bank or run/'bank')/'geometry.json')
+    is_repair = original_bank is not None
+    repaired = set(comparison['splits']['fresh']['repairs']) if is_repair else set()
+    if is_repair:
+        scores = comparison['splits']
+        rows = [dict(r,height_cm=round(g['height']*100,3),slope_deg=g['pitch_deg'])
+                for r,g in zip(scores['fresh']['cases'],geometry)]
+        all_passed = sum(s['clean'] for s in scores.values())
+        all_cases = sum(s['total'] for s in scores.values())
+        overall = f'{all_passed}/{all_cases} overall  ·  {len(repaired)} repairs'
+    else:
+        rows = comparison['rows']
+        overall = f'{comparison["score"]["clean"]}/24 passed'
     assert [r['id'] for r in rows] == [r['id'] for r in results['episodes']]
     with np.load(trace,allow_pickle=False) as z:
         poses = z['body'].copy()
@@ -54,8 +65,9 @@ def render(run, destination):
                 tick = 999 if complete else round(frame*999/(ROLL_FRAMES-1))
                 canvas = Image.new('RGB',SIZE,replay.BACKGROUND)
                 d = ImageDraw.Draw(canvas)
-                replay.label(d,(35,20),'Fresh sitting trials',36,bold=True)
-                replay.label(d,(1110,26),f'{comparison["score"]["clean"]}/24 passed  ·  Batch {group+1}/3',24,bold=True)
+                title = 'Sitting touchdown repair' if is_repair else 'Fresh sitting trials'
+                replay.label(d,(35,20),title,36,bold=True)
+                replay.label(d,(1000 if is_repair else 1110,26),f'{overall}  ·  Batch {group+1}/3',24,bold=True)
                 time_label = 'Final scores' if complete else f'{(tick+1)*.02:05.2f} / 20 s   ·   2× replay'
                 replay.label(d,(37,67),time_label,22,replay.MUTED)
                 for slot,case in enumerate(indices):
@@ -65,7 +77,7 @@ def render(run, destination):
                     replay.label(d,(x,y),title,22,bold=True)
                     canvas.paste(renderer.panel(sample,case,tick),(x,y+30))
                     if complete:
-                        state = 'PASS' if row['passed'] else 'FAIL'
+                        state = 'REPAIRED' if row['id'] in repaired else 'PASS' if row['passed'] else 'FAIL'
                         text = f'{state}  ·  {row["hold_s"]:.2f} s final hold'
                         color = replay.GREEN if row['passed'] else replay.RED
                     else:
@@ -90,5 +102,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('run',type=Path)
     parser.add_argument('output',type=Path)
+    parser.add_argument('--original-bank',type=Path,help='Original 24-case bank used for the repair evaluation.')
     args = parser.parse_args()
-    render(args.run,args.output)
+    render(args.run,args.output,args.original_bank)
