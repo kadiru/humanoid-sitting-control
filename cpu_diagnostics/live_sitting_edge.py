@@ -82,15 +82,19 @@ def worker():
     from policy import Learner
     import torch
 
-    path = None
-    if '--adapt-library' in sys.argv:
-        i = sys.argv.index('--adapt-library')
+    def load_library(option):
+        if option not in sys.argv:
+            return None
+        i = sys.argv.index(option)
         path = Path(sys.argv[i+1])
         del sys.argv[i:i+2]
-    payload = None
-    if path is not None:
         with np.load(path,allow_pickle=False) as z:
-            payload = {k:z[k] for k in z.files}
+            return {k:z[k] for k in z.files}
+
+    payload = load_library('--adapt-library')
+    touchdown = load_library('--touchdown-library')
+    if touchdown is not None:
+        assert payload is not None
 
     class ObservedEnv(FullBodyEnv):
         def __init__(self,*args,**kwargs):
@@ -204,6 +208,29 @@ def worker():
 
         @torch.no_grad()
         def choose(self,obs,stochastic=True):
+            result = self.live_choose(obs,stochastic)
+            if touchdown is None:
+                return result
+            tick = int(self.env.episode_length_buf[0])
+            if tick==0:
+                signature = obs[:,336:].cpu().numpy()
+                error = np.square((signature[:,None]-touchdown['signatures'])/touchdown['scale']).mean(-1)
+                index = error.argmin(1)
+                distance = error[np.arange(len(obs)),index]
+                self.touchdown_index = np.where(distance<touchdown['radius'][index],index,-1)
+                self.touchdown_distance = distance
+                self.touchdown_active = torch.as_tensor(self.touchdown_index>=0,device=obs.device)
+                self.touchdown_paths = torch.as_tensor(touchdown['paths'][index],device=obs.device)
+            if tick==999:
+                np.savez_compressed(self.env.out/'touchdown_selection.npz',selected=self.touchdown_index,
+                                    distance=self.touchdown_distance,ids=touchdown['ids'])
+            if not self.touchdown_active.any():
+                return result
+            delta = self.actor(self.normalize(obs))*self.residual_mask(obs)
+            desired = torch.where(self.touchdown_active[:,None],self.touchdown_paths[:,tick]+delta,result[0])
+            return (desired,*result[1:])
+
+        def live_choose(self,obs,stochastic=True):
             result = super().choose(obs,stochastic)
             if payload is None:
                 return result
