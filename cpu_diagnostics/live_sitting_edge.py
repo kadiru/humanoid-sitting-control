@@ -1,5 +1,6 @@
 """Observe the seat edge during the frozen standing-start sitting evaluation."""
 
+import json
 from pathlib import Path
 import sys
 
@@ -146,6 +147,17 @@ def worker():
     payload = load_library('--adapt-library')
     touchdown = load_library('--touchdown-library')
     camera_touchdown = load_library('--camera-touchdown')
+    feedback = None
+    feedback_protected = None
+    feedback_routes = None
+    if '--touchdown-feedback' in sys.argv:
+        i = sys.argv.index('--touchdown-feedback')
+        feedback = json.loads(Path(sys.argv[i+1]).read_text())
+        del sys.argv[i:i+2]
+        feedback_protected = load_library('--feedback-protected')
+        feedback_routes = load_library('--feedback-routes')
+        assert camera_touchdown is not None
+        from touchdown_feedback import FIRST_TICK, LAST_TICK, TouchdownFeedback
     if touchdown is not None:
         assert payload is not None
     if camera_touchdown is not None:
@@ -285,7 +297,27 @@ def worker():
                 desired = torch.where(self.touchdown_active[:,None],self.touchdown_paths[:,tick]+delta,desired)
             if camera_touchdown is not None:
                 desired = self.choose_camera_touchdown(obs,tick,desired)
+            if feedback is not None:
+                desired = self.apply_touchdown_feedback(obs,tick,desired)
             return (desired,*result[1:])
+
+        def apply_touchdown_feedback(self,obs,tick,desired):
+            if tick==0:
+                self.contact_feedback = TouchdownFeedback(self.env.model,self.env.metadata,feedback,
+                                                          feedback_protected,feedback_routes)
+                self.contact_feedback.reset(obs[:,336:].cpu().numpy())
+            if tick==CAMERA_ROUTE_TICK:
+                self.feedback_seat = np.full((len(obs),3),np.nan)
+                for row,history in enumerate(self.camera_history):
+                    if camera_route_measurement(history) is not None:
+                        self.feedback_seat[row] = np.median(history,axis=0)
+            if tick==999:
+                self.contact_feedback.save(self.env.out/'touchdown_feedback.npz')
+            if FIRST_TICK<=tick<=LAST_TICK and self.contact_feedback.active.size:
+                delta = self.contact_feedback.step(tick,obs.cpu().numpy(),self.feedback_seat,
+                                                   self.camera_index>=0,self.adjusted_approach)
+                return desired+torch.as_tensor(delta,device=obs.device)
+            return desired
 
         def choose_camera_touchdown(self,obs,tick,desired):
             if tick==0:
@@ -300,7 +332,10 @@ def worker():
                 else:
                     self.extension_protected = np.zeros(len(obs),bool)
                 self.has_neighborhoods = 'neighborhood_ids' in camera_touchdown
+                self.feedback_route_ids = feedback_routes is not None
+                self.feedback_route_start = len(camera_touchdown['ids'])
                 if self.has_neighborhoods:
+                    self.feedback_route_start += len(camera_touchdown['neighborhood_ids'])
                     normalized = ((signature[:,None]-camera_touchdown['neighborhood_protected'][None])/
                                   camera_touchdown['signature_scale'])
                     self.neighborhood_protected = np.square(normalized).mean(-1).min(1)<=5e-7
@@ -310,6 +345,7 @@ def worker():
                 self.camera_distance = np.full(len(obs),np.inf)
                 self.camera_features = np.full((len(obs),3),np.nan)
                 self.camera_handoff_error = np.full(len(obs),np.nan)
+                self.adjusted_approach = np.zeros(len(obs),bool)
             if tick<=CAMERA_ROUTE_TICK and self.env.live is not None:
                 observed_tick, measurements = self.env.live
                 if observed_tick!=self.camera_seen_tick:
@@ -335,6 +371,7 @@ def worker():
                         if error>.002:
                             continue
                         self.camera_index[i] = index
+                        self.adjusted_approach[i] = self.feedback_route_ids and index>=self.feedback_route_start
                         selected_paths[i] = path
                         break
                 self.camera_active = torch.as_tensor(self.camera_index>=0,device=obs.device)
@@ -343,6 +380,8 @@ def worker():
                 ids = camera_touchdown['ids']
                 if self.has_neighborhoods:
                     ids = np.concatenate((ids,camera_touchdown['neighborhood_ids']))
+                if self.feedback_route_ids:
+                    ids = np.concatenate((ids,feedback_routes['ids']))
                 np.savez_compressed(self.env.out/'camera_touchdown_selection.npz',
                                     selected=self.camera_index, ids=ids,
                                     features=self.camera_features, distance=self.camera_distance,
@@ -354,6 +393,11 @@ def worker():
             return torch.where(self.camera_active[:,None],self.camera_paths[:,tick]+delta,desired)
 
         def camera_options(self,feature,row):
+            if self.feedback_route_ids:
+                option = self.contact_feedback.approach(row,feature)
+                if option is not None:
+                    index,distance,path,handoff = option
+                    yield self.feedback_route_start+index,distance,path,handoff
             if self.has_neighborhoods and not self.neighborhood_protected[row]:
                 nearby = interpolate_touchdown(feature,camera_touchdown)
                 if nearby is not None:
