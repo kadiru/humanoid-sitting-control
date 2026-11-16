@@ -40,6 +40,28 @@ def choose_camera_route(feature, library, allow_extension=True):
     index = int(eligible[distances[eligible].argmin()])
     return index, float(distances[index])
 
+
+def interpolate_touchdown(feature, library):
+    samples = library['neighborhood_features']
+    distances = np.square((samples-feature)/library['neighborhood_scales']).sum(1)
+    eligible = np.flatnonzero(distances<=library['neighborhood_radius'])
+    if not eligible.size:
+        return None
+    closest = int(eligible[distances[eligible].argmin()])
+    group = library['neighborhood_groups']==library['neighborhood_groups'][closest]
+    members = np.flatnonzero(group & (distances<=library['neighborhood_radius']))
+    # Exact measured matches recover the verified path. Between matches,
+    # interpolate trajectories from the same donor and adjustment rule.
+    if distances[closest]<=1e-12:
+        return closest,float(distances[closest]),library['neighborhood_paths'][closest], \
+            library['neighborhood_handoff'][closest]
+    weights = 1/np.square(distances[members])
+    weights /= weights.sum()
+    trajectory = np.einsum('n,ntj->tj',weights,library['neighborhood_paths'][members]).astype(np.float32)
+    handoff = np.einsum('n,nj->j',weights,library['neighborhood_handoff'][members]).astype(np.float32)
+    return closest,float(distances[closest]),trajectory,handoff
+
+
 def unit(v):
     return v/np.linalg.norm(v)
 
@@ -277,6 +299,11 @@ def worker():
                     self.extension_protected = np.square(extension).mean(-1).min(1)<=5e-7
                 else:
                     self.extension_protected = np.zeros(len(obs),bool)
+                self.has_neighborhoods = 'neighborhood_ids' in camera_touchdown
+                if self.has_neighborhoods:
+                    normalized = ((signature[:,None]-camera_touchdown['neighborhood_protected'][None])/
+                                  camera_touchdown['signature_scale'])
+                    self.neighborhood_protected = np.square(normalized).mean(-1).min(1)<=5e-7
                 self.camera_history = [[] for _ in range(len(obs))]
                 self.camera_seen_tick = -1
                 self.camera_index = np.full(len(obs),-1,int)
@@ -291,6 +318,8 @@ def worker():
                         if measured is not None and measured['samples']>=4 and measured['span']<=.012:
                             self.camera_history[i].append([measured['edge'],measured['height'],measured['pitch']])
             if tick==CAMERA_ROUTE_TICK:
+                selected_paths = np.empty((len(obs),1000,23),dtype=np.float32)
+                selected_paths.fill(0.)
                 for i,history in enumerate(self.camera_history):
                     if self.camera_protected[i] or self.touchdown_index[i]>=0:
                         continue
@@ -298,26 +327,24 @@ def worker():
                     if feature is None:
                         continue
                     self.camera_features[i] = feature
-                    index, self.camera_distance[i] = choose_camera_route(
-                        feature,camera_touchdown,allow_extension=not self.extension_protected[i])
-                    if index<0:
-                        continue
-                    actions = torch.as_tensor(camera_touchdown['paths'][index,tick:CAMERA_HANDOFF_CHECK_TICK+1],
-                                             device=obs.device)
-                    restore = torch.as_tensor(camera_touchdown['handoff'][index],device=obs.device)
-                    predicted = self.env.previous[i,:23]
-                    for target in actions:
-                        predicted = command(predicted,target,self.env.limit_lower[i],self.env.limit_upper[i])
-                    error = float((predicted-restore).abs().max())
-                    self.camera_handoff_error[i] = error
-                    if error<=.002:
+                    options = self.camera_options(feature,i)
+                    for index,distance,path,handoff in options:
+                        self.camera_distance[i] = distance
+                        error = self.camera_handoff(i,tick,path,handoff,obs.device)
+                        self.camera_handoff_error[i] = error
+                        if error>.002:
+                            continue
                         self.camera_index[i] = index
+                        selected_paths[i] = path
+                        break
                 self.camera_active = torch.as_tensor(self.camera_index>=0,device=obs.device)
-                self.camera_paths = torch.as_tensor(camera_touchdown['paths'][np.maximum(self.camera_index,0)],
-                                                    device=obs.device)
+                self.camera_paths = torch.as_tensor(selected_paths,device=obs.device)
             if tick==999:
+                ids = camera_touchdown['ids']
+                if self.has_neighborhoods:
+                    ids = np.concatenate((ids,camera_touchdown['neighborhood_ids']))
                 np.savez_compressed(self.env.out/'camera_touchdown_selection.npz',
-                                    selected=self.camera_index, ids=camera_touchdown['ids'],
+                                    selected=self.camera_index, ids=ids,
                                     features=self.camera_features, distance=self.camera_distance,
                                     handoff_error=self.camera_handoff_error, protected=self.camera_protected,
                                     extension_protected=self.extension_protected)
@@ -325,6 +352,26 @@ def worker():
                 return desired
             delta = self.actor(self.normalize(obs))*self.residual_mask(obs)
             return torch.where(self.camera_active[:,None],self.camera_paths[:,tick]+delta,desired)
+
+        def camera_options(self,feature,row):
+            if self.has_neighborhoods and not self.neighborhood_protected[row]:
+                nearby = interpolate_touchdown(feature,camera_touchdown)
+                if nearby is not None:
+                    index,distance,path,handoff = nearby
+                    yield len(camera_touchdown['ids'])+index,distance,path,handoff
+            index,distance = choose_camera_route(feature,camera_touchdown,
+                                                  allow_extension=not self.extension_protected[row])
+            self.camera_distance[row] = distance
+            if index>=0:
+                yield index,distance,camera_touchdown['paths'][index],camera_touchdown['handoff'][index]
+
+        def camera_handoff(self,row,tick,path,handoff,device):
+            actions = torch.as_tensor(path[tick:CAMERA_HANDOFF_CHECK_TICK+1],device=device)
+            restore = torch.as_tensor(handoff,device=device)
+            predicted = self.env.previous[row,:23]
+            for target in actions:
+                predicted = command(predicted,target,self.env.limit_lower[row],self.env.limit_upper[row])
+            return float((predicted-restore).abs().max())
 
         def live_choose(self,obs,stochastic=True):
             result = super().choose(obs,stochastic)
