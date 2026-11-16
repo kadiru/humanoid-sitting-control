@@ -28,9 +28,13 @@ def camera_route_measurement(history):
     return camera_route_feature(*np.median(history,axis=0))
 
 
-def choose_camera_route(feature, library):
+def choose_camera_route(feature, library, allow_extension=True):
     distances = np.square((library['features']-feature)/library['scales']).sum(1)
     eligible = np.flatnonzero(distances<=library['radius'])
+    if 'baseline_count' in library:
+        baseline = eligible[eligible<int(library['baseline_count'])]
+        if baseline.size or not allow_extension:
+            eligible = baseline
     if not eligible.size:
         return -1, float(distances.min())
     index = int(eligible[distances[eligible].argmin()])
@@ -267,6 +271,12 @@ def worker():
                 protected = ((signature[:,None]-camera_touchdown['protected'][None])/
                              camera_touchdown['signature_scale'])
                 self.camera_protected = np.square(protected).mean(-1).min(1)<=5e-7
+                if 'extension_protected' in camera_touchdown:
+                    extension = ((signature[:,None]-camera_touchdown['extension_protected'][None])/
+                                 camera_touchdown['signature_scale'])
+                    self.extension_protected = np.square(extension).mean(-1).min(1)<=5e-7
+                else:
+                    self.extension_protected = np.zeros(len(obs),bool)
                 self.camera_history = [[] for _ in range(len(obs))]
                 self.camera_seen_tick = -1
                 self.camera_index = np.full(len(obs),-1,int)
@@ -288,7 +298,8 @@ def worker():
                     if feature is None:
                         continue
                     self.camera_features[i] = feature
-                    index, self.camera_distance[i] = choose_camera_route(feature,camera_touchdown)
+                    index, self.camera_distance[i] = choose_camera_route(
+                        feature,camera_touchdown,allow_extension=not self.extension_protected[i])
                     if index<0:
                         continue
                     actions = torch.as_tensor(camera_touchdown['paths'][index,tick:CAMERA_HANDOFF_CHECK_TICK+1],
@@ -308,7 +319,8 @@ def worker():
                 np.savez_compressed(self.env.out/'camera_touchdown_selection.npz',
                                     selected=self.camera_index, ids=camera_touchdown['ids'],
                                     features=self.camera_features, distance=self.camera_distance,
-                                    handoff_error=self.camera_handoff_error, protected=self.camera_protected)
+                                    handoff_error=self.camera_handoff_error, protected=self.camera_protected,
+                                    extension_protected=self.extension_protected)
             if tick<CAMERA_ROUTE_TICK or not self.camera_active.any():
                 return desired
             delta = self.actor(self.normalize(obs))*self.residual_mask(obs)
