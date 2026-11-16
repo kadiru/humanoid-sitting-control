@@ -77,6 +77,8 @@ def summaries(before,after):
         hold = np.abs(commands[1][HOLD_TICK:]-commands[0][HOLD_TICK:]).max(axis=(0,2))
         hold_desired = np.abs(desired[1][HOLD_TICK:]-desired[0][HOLD_TICK:]).max(axis=(0,2))
         support = [z['support_bw'][-250:].mean(0) for z in (a,b)]
+    handoff_path = after/'grip_handoff.json'
+    handoff = read(handoff_path) if handoff_path.exists() else None
     cases = []
     for i,(prior,current) in enumerate(zip(old,new,strict=True)):
         metrics = [
@@ -95,6 +97,8 @@ def summaries(before,after):
             approach_max_command_delta_rad=float(prefix[i]),
             hold_max_command_delta_rad=float(hold[i]),
             hold_max_desired_delta_rad=float(hold_desired[i])))
+        if handoff is not None:
+            cases[-1]['grip_handoff'] = {key:values[i] for key,values in handoff.items()}
     return cases
 
 
@@ -102,7 +106,7 @@ def aggregate(cases):
     common = [r for r in cases if r['touchdown_clean'] and r['ppo_clean']]
     means = {method:{key:float(np.mean([row[method][key] for row in common])) for key in METRICS}
              for method in ('touchdown','ppo')} if common else {}
-    return dict(total=len(cases),touchdown_clean=sum(r['touchdown_clean'] for r in cases),
+    score = dict(total=len(cases),touchdown_clean=sum(r['touchdown_clean'] for r in cases),
                 ppo_clean=sum(r['ppo_clean'] for r in cases),
                 improvements=[row['id'] for row in cases if row['ppo_clean'] and not row['touchdown_clean']],
                 regressions=[row['id'] for row in cases if row['touchdown_clean'] and not row['ppo_clean']],
@@ -111,16 +115,22 @@ def aggregate(cases):
                 max_approach_command_delta_rad=max(r['approach_max_command_delta_rad'] for r in cases),
                 cases_with_changed_hold_commands=sum(r['hold_max_command_delta_rad']>0 for r in cases),
                 max_hold_command_delta_rad=max(r['hold_max_command_delta_rad'] for r in cases))
+    if 'grip_handoff' in cases[0]:
+        score['ppo_enabled_cases'] = sum(r['grip_handoff']['active_ticks']>0 for r in cases)
+        score['ppo_returned_to_touchdown_cases'] = sum(
+            r['grip_handoff']['active_ticks']>0 and not r['grip_handoff']['enabled_at_end'] for r in cases)
+    return score
 
 
-def compare(out):
-    checkpoint = TRAINING/'training/final.pt'
-    training_audit = TRAINING/'training/final_audit.json'
-    initial = TRAINING/'training/initial.pt'
+def compare(out,training=TRAINING,guarded=False):
+    checkpoint = training/'training/final.pt'
+    training_audit = training/'training/final_audit.json'
+    initial = training/'training/initial.pt'
     audit = read(training_audit)
-    assert audit['passed'] and audit['updates']==8 and audit['frozen_priors_unchanged']
+    assert audit['passed'] and audit['updates']==read(training/'freeze.json')['updates']
+    assert audit['frozen_priors_unchanged']
     assert audit['checkpoint_sha256']==sha(checkpoint)
-    assert read(TRAINING/'exit.json')['returncode']==0
+    assert read(training/'exit.json')['returncode']==0
     import torch
     base = torch.load(CHECKPOINT,map_location='cpu',weights_only=False)
     warm = torch.load(initial,map_location='cpu',weights_only=False)
@@ -147,20 +157,27 @@ def compare(out):
     assert all(sha(p)==design['inputs'][str(p)] for p in (config,guard))
     sources = [sha(HERE/'live_sitting_edge.py'),sha(HERE/'touchdown_feedback.py')]
     assert all(digest in design['inputs'].values() for digest in sources)
+    evaluator = HERE/'grip_hold_ppo.py' if guarded else Path(__file__)
+    worker_mode = 'evaluate' if guarded else 'worker'
+    if guarded:
+        frozen = read(training/'freeze.json')['inputs']
+        assert any(Path(name).name==evaluator.name and digest==sha(evaluator) for name,digest in frozen.items())
+        inputs.extend((training/'saved_reward_audit.json',Path(__file__)))
     out.mkdir()
     reservation = out/'reservation.json'
     reservation.write_bytes((BASELINE/'reservation.json').read_bytes())
     protocol = out/'comparison_protocol.json'
     write(protocol,dict(checkpoint=str(checkpoint),checkpoint_sha256=sha(checkpoint),
           actor_switch_tick=HOLD_TICK,baseline={k:str(v) for k,v in reference.items()},
-          original_case_banks=True,matched_saved_baseline=True,scoring_unchanged=True,action_limits_unchanged=True))
+          original_case_banks=True,matched_saved_baseline=True,scoring_unchanged=True,action_limits_unchanged=True,
+          guarded_handoff=guarded,updates=audit['updates']))
     all_cases = {}
     results = out/'comparison.json'
     for label,reference_path in reference.items():
         audit,rows = verify_audit(reference_path)
         assert audit['clean_count']==len(rows)
-        stage(out,label,Path(design['banks'][label]),PRIOR,worker=Path(__file__),
-              extra=['worker',str(checkpoint),*extra],protocol=protocol,inputs=inputs)
+        stage(out,label,Path(design['banks'][label]),PRIOR,worker=evaluator,
+              extra=[worker_mode,str(checkpoint),*extra],protocol=protocol,inputs=inputs)
         assert read(out/label/'ppo_actor.json')==dict(first_tick=HOLD_TICK,checkpoint_sha256=sha(checkpoint))
         all_cases[label] = summaries(reference_path,out/label)
         write(results,dict(banks={k:aggregate(v) for k,v in all_cases.items()},cases=all_cases))
@@ -181,4 +198,7 @@ if __name__=='__main__':
     else:
         parser = argparse.ArgumentParser(description=__doc__)
         parser.add_argument('output',type=Path)
-        compare(parser.parse_args().output.resolve())
+        parser.add_argument('--training',type=Path,default=TRAINING)
+        parser.add_argument('--grip-handoff',action='store_true')
+        options = parser.parse_args()
+        compare(options.output.resolve(),options.training.resolve(),options.grip_handoff)
