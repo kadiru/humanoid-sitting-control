@@ -12,6 +12,7 @@ from study_live_sitting import PREPARED, bank_from_geometry, geometry, stage
 REFERENCE = ROOT/'outputs/touchdown_grip_ppo_comparison_20261115_v1'
 REPAIRED_REFERENCE = ROOT/'outputs/touchdown_grip_shift_repair_20261116_full'
 RETAINED_REFERENCE = Path('/mnt/robot-training/humanoid-sitting/grip_repair_20261116_full')
+TOUCHDOWN_REFERENCE = RETAINED_REFERENCE.parent/'grip_third_repair_20261116_full'
 HEIGHTS_CM = (36.3, 37.6, 38.9, 40.4, 42.1, 43.6)
 PITCH_DEG = (6.25, 10.25, 14.25, 18.75)
 FORE_AFT_CM = (-3., -1.8, -.6, .6, 1.8, 3.)
@@ -24,6 +25,10 @@ RETAINED_GRID = ((35.9, 36.9, 38.2, 39.7, 41.5, 43.8),
                  (5.25, 9.25, 14.75, 19.25),
                  (-3.35, -2.1, -.7, .4, 1.65, 3.35),
                  (-4.4, -2.5, -.85, 1.2, 3.85, 5.1))
+TOUCHDOWN_GRID = ((35.7, 36.7, 38., 39.4, 41.2, 43.5),
+                  (4.75, 8.5, 15.25, 20.25),
+                  (-3.45, -2.4, -.85, .25, 1.4, 3.55),
+                  (-4.6, -2.9, -.9, 1., 3.95, 5.25))
 
 
 def reserve(out, previous_banks, grid, prefix):
@@ -58,8 +63,13 @@ def reserve(out, previous_banks, grid, prefix):
     return bank,cases
 
 
-def run(out,repaired=False,retained=False):
-    previous = RETAINED_REFERENCE if retained else REPAIRED_REFERENCE if repaired else REFERENCE
+def run(out,repaired=False,retained=False,touchdown=False):
+    previous = {
+        (True,False,False): REPAIRED_REFERENCE,
+        (False,True,False): RETAINED_REFERENCE,
+        (False,False,True): TOUCHDOWN_REFERENCE,
+        (False,False,False): REFERENCE,
+    }[repaired,retained,touchdown]
     reference = previous/'untouched.freeze.json'
     frozen = read(reference)
     for name,digest in frozen['inputs'].items():
@@ -71,8 +81,8 @@ def run(out,repaired=False,retained=False):
     checkpoint = Path(options[1])
     banks = read(BASELINE/'paired_gate.json')['banks']
     inputs = []
-    if repaired or retained:
-        total = 332 if retained else 308
+    if repaired or retained or touchdown:
+        total = 356 if touchdown else 332 if retained else 308
         status = previous/'status.json'
         assert read(status)==dict(state='complete',clean=total,total=total,regressions=[])
         prior_protocol = previous/'repair_protocol.json'
@@ -82,7 +92,7 @@ def run(out,repaired=False,retained=False):
         assert read(actor)['checkpoint_sha256']==sha(checkpoint)
         inputs += [status,actor]
         grid,prefix = REPAIRED_GRID,'repaired_grip_fresh'
-        if retained:
+        if retained or touchdown:
             retention = previous/'retention.json'
             summary = read(retention)
             assert summary['clean']==summary['total']==total and not summary['regressions']
@@ -96,7 +106,8 @@ def run(out,repaired=False,retained=False):
                 banks[label] = str(bank)
                 inputs += [manifest,bank/'geometry.json']
             assert verified_cases==total
-            grid,prefix = RETAINED_GRID,'retained_grip_fresh'
+            grid,prefix = (TOUCHDOWN_GRID,'touchdown_grip_fresh') if touchdown else (
+                RETAINED_GRID,'retained_grip_fresh')
     else:
         assert read(previous/'status.json')==dict(state='complete',ppo_clean=284,total=284)
         prior_protocol = previous/'comparison_protocol.json'
@@ -147,5 +158,6 @@ if __name__=='__main__':
     group = parser.add_mutually_exclusive_group()
     group.add_argument('--repaired',action='store_true',help='Use the controller verified on 308 cases.')
     group.add_argument('--retained',action='store_true',help='Use the controller verified on 332 cases.')
+    group.add_argument('--touchdown',action='store_true',help='Use the controller verified on 356 cases.')
     args = parser.parse_args()
-    run(args.output.resolve(),args.repaired,args.retained)
+    run(args.output.resolve(),args.repaired,args.retained,args.touchdown)
