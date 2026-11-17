@@ -11,6 +11,7 @@ from study_live_sitting import PREPARED, bank_from_geometry, geometry, stage
 
 REFERENCE = ROOT/'outputs/touchdown_grip_ppo_comparison_20261115_v1'
 REPAIRED_REFERENCE = ROOT/'outputs/touchdown_grip_shift_repair_20261116_full'
+RETAINED_REFERENCE = Path('/mnt/robot-training/humanoid-sitting/grip_repair_20261116_full')
 HEIGHTS_CM = (36.3, 37.6, 38.9, 40.4, 42.1, 43.6)
 PITCH_DEG = (6.25, 10.25, 14.25, 18.75)
 FORE_AFT_CM = (-3., -1.8, -.6, .6, 1.8, 3.)
@@ -19,23 +20,27 @@ REPAIRED_GRID = ((36.1, 37.2, 38.5, 40.1, 41.7, 44.),
                  (5.75, 9.75, 13.75, 19.5),
                  (-3.2, -1.9, -.5, .8, 2., 3.15),
                  (-4., -2.25, -.3, 1.85, 3.6, 5.35))
+RETAINED_GRID = ((35.9, 36.9, 38.2, 39.7, 41.5, 43.8),
+                 (5.25, 9.25, 14.75, 19.25),
+                 (-3.35, -2.1, -.7, .4, 1.65, 3.35),
+                 (-4.4, -2.5, -.85, 1.2, 3.85, 5.1))
 
 
-def reserve(out, previous_banks, repaired=False):
+def reserve(out, previous_banks, grid, prefix):
     source = Path(previous_banks['candidate'])
     template = read(source/'geometry.json')[0]
     catalogues = {Path(path)/'geometry.json' for path in previous_banks.values()}
     for pattern in ('*/geometry.json','*/bank/geometry.json','*/fresh_bank/geometry.json',
                     '*/reserved_bank/geometry.json','*/unseen/geometry.json'):
         catalogues.update((ROOT/'outputs').glob(pattern))
+        catalogues.update(RETAINED_REFERENCE.parent.glob(pattern))
     historical = set()
     for path in sorted(catalogues):
         for seat in read(path):
             if isinstance(seat,dict) and 'pitch_deg' in seat and 'height' in seat:
                 historical.add((round(float(seat['height'])*100,5),round(float(seat['pitch_deg']),5)))
     cases = []
-    heights,pitches,fore_aft,lateral = REPAIRED_GRID if repaired else (HEIGHTS_CM,PITCH_DEG,FORE_AFT_CM,LATERAL_CM)
-    prefix = 'repaired_grip_fresh' if repaired else 'grip_fresh'
+    heights,pitches,fore_aft,lateral = grid
     for row,height in enumerate(heights):
         for col,pitch in enumerate(pitches):
             assert (height,pitch) not in historical,(height,pitch)
@@ -48,12 +53,13 @@ def reserve(out, previous_banks, repaired=False):
     bank_from_geometry(bank,source,cases)
     write(out/'reservation.json',dict(files={str(p):sha(p) for p in bank.iterdir()},
           prior_catalogues=len(catalogues),historical_height_pitch_pairs=len(historical),
-          heights_cm=heights,pitches_deg=pitches,reference_is_reward_only=True))
+          heights_cm=heights,pitches_deg=pitches,fore_aft_cm=fore_aft,lateral_cm=lateral,
+          reference_is_reward_only=True))
     return bank,cases
 
 
-def run(out,repaired=False):
-    previous = REPAIRED_REFERENCE if repaired else REFERENCE
+def run(out,repaired=False,retained=False):
+    previous = RETAINED_REFERENCE if retained else REPAIRED_REFERENCE if repaired else REFERENCE
     reference = previous/'untouched.freeze.json'
     frozen = read(reference)
     for name,digest in frozen['inputs'].items():
@@ -63,22 +69,45 @@ def run(out,repaired=False):
     options = command[3:command.index('--mode')]
     assert options[0]=='evaluate' and worker.name=='grip_hold_ppo.py'
     checkpoint = Path(options[1])
-    if repaired:
-        assert read(previous/'status.json')==dict(state='complete',clean=308,total=308,regressions=[])
+    banks = read(BASELINE/'paired_gate.json')['banks']
+    inputs = []
+    if repaired or retained:
+        total = 332 if retained else 308
+        status = previous/'status.json'
+        assert read(status)==dict(state='complete',clean=total,total=total,regressions=[])
         prior_protocol = previous/'repair_protocol.json'
         routes = options[options.index('--feedback-routes')+1]
         assert read(prior_protocol)['inputs'][routes]==sha(routes)
-        assert read(previous/'untouched/ppo_actor.json')['checkpoint_sha256']==sha(checkpoint)
+        actor = previous/'untouched/ppo_actor.json'
+        assert read(actor)['checkpoint_sha256']==sha(checkpoint)
+        inputs += [status,actor]
+        grid,prefix = REPAIRED_GRID,'repaired_grip_fresh'
+        if retained:
+            retention = previous/'retention.json'
+            summary = read(retention)
+            assert summary['clean']==summary['total']==total and not summary['regressions']
+            inputs.append(retention)
+            verified_cases = 0
+            for label,score in summary['banks'].items():
+                manifest = previous/('evaluation' if label=='shifted' else label)/'manifest.json'
+                bank = Path(read(manifest)['args']['bank'])
+                assert sha(bank/'bank.npz')==read(manifest)['bank_sha256']
+                verified_cases += len(read(bank/'geometry.json'))
+                banks[label] = str(bank)
+                inputs += [manifest,bank/'geometry.json']
+            assert verified_cases==total
+            grid,prefix = RETAINED_GRID,'retained_grip_fresh'
     else:
         assert read(previous/'status.json')==dict(state='complete',ppo_clean=284,total=284)
         prior_protocol = previous/'comparison_protocol.json'
         prior = read(prior_protocol)
         assert prior['guarded_handoff'] and prior['checkpoint_sha256']==sha(checkpoint)
-    bank,cases = reserve(out,read(BASELINE/'paired_gate.json')['banks'],repaired)
+        grid,prefix = (HEIGHTS_CM,PITCH_DEG,FORE_AFT_CM,LATERAL_CM),'grip_fresh'
+    bank,cases = reserve(out,banks,grid,prefix)
     protocol = out/'protocol.json'
     write(protocol,dict(previous_experiment=str(prior_protocol),checkpoint_sha256=sha(checkpoint),
           frozen_controller=True,policy_tuning=False,design_frozen_before_rollouts=True))
-    inputs = [reference,prior_protocol,Path(__file__),*(Path(p) for p in frozen['inputs'])]
+    inputs += [reference,prior_protocol,Path(__file__),*(Path(p) for p in frozen['inputs'])]
     score = stage(out,'evaluation',bank,PREPARED/'library.npz',worker=worker,extra=options,
                   protocol=protocol,inputs=inputs)
     ran = read(out/'evaluation.freeze.json')
@@ -115,6 +144,8 @@ def write_results(out,cases,score):
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('output',type=Path)
-    parser.add_argument('--repaired',action='store_true',help='Use the controller verified on 308 cases.')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--repaired',action='store_true',help='Use the controller verified on 308 cases.')
+    group.add_argument('--retained',action='store_true',help='Use the controller verified on 332 cases.')
     args = parser.parse_args()
-    run(args.output.resolve(),args.repaired)
+    run(args.output.resolve(),args.repaired,args.retained)
