@@ -10,6 +10,7 @@ FIRST_TICK = 300
 LAST_TICK = 745
 CONTROL_DT = .02
 SENSOR_FRAME = slice(222,333)
+REPAIR_PREFIXES = ('repair_', 'repair2_', 'repair3_')
 
 
 class TouchdownFeedback:
@@ -33,7 +34,7 @@ class TouchdownFeedback:
         self.repair_layers = []
         if self.routes is not None:
             start = len(self.routes['features'])
-            for prefix in ('repair_', 'repair2_'):
+            for prefix in REPAIR_PREFIXES:
                 if prefix+'features' not in self.routes:
                     continue
                 layer = {key[len(prefix):]:value for key,value in self.routes.items() if key.startswith(prefix)}

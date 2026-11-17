@@ -8,14 +8,15 @@ import numpy as np
 import torch
 from scipy.spatial.transform import Rotation
 
-from align_sitting_touchdown import counterbalance
+from align_sitting_touchdown import align, counterbalance
 from compare_touchdown_ppo import BASELINE, BANKS, summaries, verify_audit
-from evaluate_grip_fresh import write_results
+from evaluate_grip_fresh import RETAINED_REFERENCE, write_results
 from live_sitting_edge import CAMERA_HANDOFF_CHECK_TICK
-from prepare_sitting_repairs import BodyModel, leg_fk
+from prepare_sitting_repairs import BodyModel, encode, leg_fk, smoothstep
 from repair_live_touchdown import CHECKPOINT, HERE, MODEL, PRIOR, ROOT, applied_path, planned_path, read, sha, write
 from repair_touchdown_neighborhoods import geometry_adjusted
 from study_live_sitting import stage
+from touchdown_feedback import REPAIR_PREFIXES
 from validate_camera_touchdown import fallback_priors
 
 from common import OBS
@@ -30,17 +31,28 @@ FEATURE_SCALE = np.array([.006,.005,.8])
 DONOR_SCALE = np.array([.022,.064,.016,3.4])
 FOLLOWUP = ROOT/'outputs/touchdown_grip_repaired_fresh_20261116_v1'
 REPAIRED = ROOT/'outputs/touchdown_grip_shift_repair_20261116_full'
+RETAINED_FRESH = RETAINED_REFERENCE.parent/'grip_retained_332_fresh_20261116_v1'
 
 
 class RepairBank:
-    def __init__(self,followup):
-        self.followup = followup
-        self.source = FOLLOWUP if followup else SHIFTED
-        self.failures = ('01','02','03','04','08','11','12','16','23','24') if followup else FAILURES
-        self.grip = {'01','03','04','08','11','12','16','23'} if followup else GRIP
-        self.prefix = 'repair2_' if followup else 'repair_'
-        self.protected_count = 322 if followup else 300
-        self.total = 332 if followup else 308
+    def __init__(self,followup,retained=False):
+        self.retained = retained
+        self.followup = followup or retained
+        if retained:
+            self.source,self.previous = RETAINED_FRESH,RETAINED_REFERENCE
+            self.failures = ('01','02','03','04','08','11','12','16','20','23')
+            self.total,self.layer_sizes = 356,(8,10)
+        elif followup:
+            self.source,self.previous = FOLLOWUP,REPAIRED
+            self.failures = ('01','02','03','04','08','11','12','16','23','24')
+            self.total,self.layer_sizes = 332,(8,)
+        else:
+            self.source,self.previous = SHIFTED,PREVIOUS
+            self.failures = FAILURES
+            self.total,self.layer_sizes = 308,()
+        self.grip = {'01','03','04','08','11','12','16','23'} if self.followup else GRIP
+        self.prefix = REPAIR_PREFIXES[len(self.layer_sizes)]
+        self.protected_count = self.total-len(self.failures)
 
         self.freeze = read(self.source/'evaluation.freeze.json')
         command = self.freeze['command']
@@ -48,18 +60,32 @@ class RepairBank:
         assert self.options[0]=='evaluate'
         self.checkpoint = Path(self.options[1])
         self.routes = Path(self.options[self.options.index('--feedback-routes')+1])
-        if followup:
-            prior = read(REPAIRED/'status.json')
-            assert prior == dict(state='complete',total=308,clean=308,regressions=[])
-            assert self.routes == REPAIRED/'routes.npz'
+        if self.followup:
+            prior = read(self.previous/'status.json')
+            assert prior == dict(state='complete',total=self.total-24,clean=self.total-24,regressions=[])
+            assert self.routes == self.previous/'routes.npz'
             for filename,digest in self.freeze['inputs'].items():
                 assert sha(filename)==digest,filename
 
     def retained_runs(self):
-        if not self.followup:
-            return {label:(PREVIOUS/label,bank) for label,(_,bank) in previous_runs().items()}
-        runs = {label:(REPAIRED/label,bank) for label,(_,bank) in previous_runs().items()}
-        runs['prior_shifted'] = (REPAIRED/'evaluation',SHIFTED/'bank')
+        if self.retained:
+            summary = read(self.previous/'retention.json')
+            assert summary['clean']==summary['total']==self.total-24 and not summary['regressions']
+            runs = {}
+            for label,score in summary['banks'].items():
+                assert score['clean']==score['total'] and not score['regressions']
+                if label=='shifted':
+                    folder,name = self.previous/'evaluation','second_shifted'
+                else:
+                    folder,name = self.previous/label,label
+                manifest = read(folder/'manifest.json')
+                bank = Path(manifest['args']['bank'])
+                assert sha(bank/'bank.npz')==manifest['bank_sha256']
+                runs[name] = (folder,bank)
+            return runs
+        runs = {label:(self.previous/label,bank) for label,(_,bank) in previous_runs().items()}
+        if self.followup:
+            runs['prior_shifted'] = (self.previous/'evaluation',SHIFTED/'bank')
         return runs
 
 
@@ -220,9 +246,9 @@ def pack_routes(study,shots,paths,camera,initial,limits):
     with np.load(study.routes,allow_pickle=False) as data:
         library = {k:data[k] for k in data.files if not k.startswith(study.prefix)}
     repair_start = len(library['features'])
-    if study.followup:
-        assert 'repair_rows' not in library and len(library['repair_features'])==8
-        repair_start += len(library['repair_features'])
+    for prefix,count in zip(REPAIR_PREFIXES[:len(study.layer_sizes)],study.layer_sizes,strict=True):
+        assert prefix+'rows' not in library and len(library[prefix+'features'])==count
+        repair_start += count
     handoff = []
     for shot,path in zip(shots,paths,strict=True):
         i = shot['source_index']
@@ -256,6 +282,186 @@ def build_probe(out,source,metadata,shots,poses,paths,camera,study):
     np.savez_compressed(out/'routes.npz',**library)
 
 
+def refine(out,study,probe,transfer=None):
+    winners,inputs = select_winners([probe],study)
+    unresolved = set(study.failures)-{name[-2:] for name in winners}
+    assert study.retained and unresolved=={'02','11'},unresolved
+    if transfer is not None:
+        corrected,more_inputs = select_winners([transfer],study)
+        assert not corrected
+        inputs.update(more_inputs)
+    source = study.source/'bank'
+    rows = read(study.source/'evaluation/results.json')['episodes']
+    indices = [i for i,r in enumerate(rows) if r['id'][-2:] in unresolved]
+    targets,files = load_paths(study.source/'evaluation',indices,study.checkpoint)
+    inputs.update(files)
+    shallow,steeper = targets.values()
+    assert (shallow['row']['id'][-2:],steeper['row']['id'][-2:])==('02','11')
+    meta = read(source/'metadata.json')
+    limits = tuple(np.asarray(meta[k]) for k in ('lower','upper'))
+    model = BodyModel(MODEL)
+    fk,legs = leg_fk(model,meta['joint_names'])
+    shots,paths,poses,rejected = [],[],[],[]
+
+    def add(target,method,donor,construct):
+        name = target['row']['id']
+        try:
+            path,checks = construct()
+        except (AssertionError,ValueError) as error:
+            rejected.append(dict(case=name,method=method,donor=donor,reason=str(error)))
+            return
+        path = np.asarray(path,np.float32)
+        assert path.shape==(1000,23) and np.isfinite(path).all()
+        shots.append(dict(id=f'probe/{len(shots)+1:02d}',case=name,
+                          source_index=target['index'],method=method,donor=donor,checks=checks))
+        paths.append(path)
+        poses.append(target['geometry'])
+
+    # Candidate 11 had no slip. Its first loaded contact was outside the
+    # scored patch at the front edge. Set the clean donor deeper before loading.
+    scores = read(probe/'screen_results.json')
+    near = scores[10]
+    assert near['id']=='probe/11' and near['slip_ticks']==0 and near['illegal_ticks']==1
+    donors,files = load_paths(study.previous/'evaluation',[1],study.checkpoint)
+    inputs.update(files)
+    donor = donors[near['donor']]
+    for inset in ((-.0025,-.003,-.0035,-.004) if transfer else (-.005,-.008,-.011,-.014)):
+        for pitch in ((0.,.005) if transfer else (.005,.018)):
+            add(shallow,'inset',near['donor'],
+                lambda:geometry_adjusted(donor,shallow,model,fk,legs,limits,inset,pitch))
+
+    # Both paths remained legal but slid briefly during load transfer.
+    # Bring the pelvis to its later settled position before taking the load.
+    near_ids = ('probe/36','probe/37','probe/11') if transfer else ('probe/36','probe/37')
+    near_indices = [i for i,r in enumerate(scores) if r['id'] in near_ids]
+    screened,files = load_paths(probe/'probe',near_indices,study.checkpoint)
+    inputs.update(files)
+    with np.load(probe/'routes.npz',allow_pickle=False) as z:
+        prior_paths = z[study.prefix+'paths']
+    for i in near_indices:
+        receipt = scores[i]
+        assert receipt['routed']
+        case = screened[receipt['id']]
+        path = prior_paths[i]
+        initial = case['previous']
+        command = applied_path(path,initial,*limits)
+        pose,q,load = (case['motion'][k] for k in ('body','q','load'))
+        if receipt['id']=='probe/11':
+            with np.load(probe/'probe/trajectory.npz',allow_pickle=False) as z:
+                illegal = np.flatnonzero(~z['legal'][:,i])
+            assert len(illegal)==1 and receipt['slip_ticks']==0
+            for lift in (.0008,.0014,.002):
+                add(shallow,'delay_edge_load',receipt['id'],lambda:align(
+                    path,initial,pose,q,command,load,illegal,shallow['geometry'],
+                    model,fk,legs,limits,lift,0.,0.))
+            continue
+        assert receipt['illegal_ticks']==0 and receipt['hold_s']>=7
+        gains = ((.22,0.,0.),(.34,0.,0.),(.48,0.,0.),(.34,-.001,.0008)) if transfer else (
+                 (.65,0.,0.),(.9,0.,0.),(.8,.002,.002),(.8,-.002,.002))
+        for gain,offset,lift in gains:
+            add(steeper,'align',receipt['id'],
+                lambda:align(path,initial,pose,q,command,load,case['bad'],steeper['geometry'],
+                             model,fk,legs,limits,lift,offset,gain))
+        if not transfer:
+            for speed in (.65,.82):
+                add(steeper,'settle_slip',receipt['id'],lambda:planned_path(
+                    dict(case,prior=path),case,dict(method='retime',speed=speed),model,fk,legs,limits))
+    if transfer:
+        # Compare genuinely different landings from the retained banks.
+        # Rank by geometry and measured traction, excluding screened donors.
+        references = study.retained_runs()
+        ranking = sort_donors(targets,references,study.grip)
+        for name,target in targets.items():
+            tried = {r['donor'] for r in scores if r['case']==name}
+            alternatives = [r for r in ranking[name] if r[2] not in tried][:7]
+            for folder,index,key,*_ in alternatives:
+                sample,files = load_paths(folder,[index],study.checkpoint)
+                inputs.update(files)
+                donor = sample[key]
+                add(target,'alternate_replay',key,lambda:(donor['prior'],{}))
+                add(target,'alternate_retarget',key,lambda:geometry_adjusted(
+                    donor,target,model,fk,legs,limits,-.002,.005))
+    assert {r['case'][-2:] for r in shots}==unresolved
+    camera_file = study.source/'evaluation/camera_touchdown_selection.npz'
+    with np.load(camera_file,allow_pickle=False) as z:
+        camera = z['features']
+    inputs[str(camera_file)] = sha(camera_file)
+    out.mkdir()
+    build_probe(out,source,meta,shots,poses,paths,camera,study)
+    write(out/'candidates.json',dict(rows=shots,rejected=rejected,source_traces=inputs))
+
+
+def dwell_before_load(path,initial,limits,load_tick,lead,duration):
+    clock = np.arange(len(path),dtype=float)
+    center = load_tick-lead
+    delay = duration*smoothstep((clock-center+7)/14)
+    delay *= 1-smoothstep((clock-load_tick-28)/(745-load_tick-28))
+    schedule = clock+delay
+    assert np.diff(schedule).min()>0 and delay[745]==0
+    applied = applied_path(path,initial,*limits)
+    desired = np.stack([np.interp(clock,schedule,k) for k in applied.T],axis=1)
+    latent,decoded = encode(desired,initial,*limits)
+    error = float(np.abs(decoded-desired).max())
+    assert error<=.004,error
+    start = center-7
+    result = path.copy()
+    result[start:746] = latent[start:746]
+    return result,dict(load_tick=load_tick,center_tick=center,delay_ticks=duration,encoding_error_rad=error)
+
+
+def refine_dwell(out,study,probe,later):
+    winners,inputs = select_winners([probe,later],study)
+    unresolved = set(study.failures)-{name[-2:] for name in winners}
+    assert study.retained and unresolved=={'11'},unresolved
+    source = study.source/'bank'
+    original = study.source/'evaluation'
+    scores = read(probe/'screen_results.json')
+    indices = [i for i,r in enumerate(scores) if r['id'] in ('probe/33','probe/36','probe/37')]
+    cases,files = load_paths(probe/'probe',indices,study.checkpoint)
+    inputs.update(files)
+    meta = read(source/'metadata.json')
+    limits = tuple(np.asarray(meta[k]) for k in ('lower','upper'))
+    target = 'retained_grip_fresh/11'
+    target_index = meta['ids'].index(target)
+    geometry = read(source/'geometry.json')[target_index]
+    with np.load(probe/'routes.npz',allow_pickle=False) as z:
+        priors = z[study.prefix+'paths']
+    shots,paths,rejected = [],[],[]
+
+    def add(donor,method,construct):
+        try:
+            path,checks = construct()
+        except (AssertionError,ValueError) as error:
+            rejected.append(dict(case=target,method=method,donor=donor,reason=str(error)))
+            return
+        path = np.asarray(path,np.float32)
+        assert path.shape==(1000,23) and np.isfinite(path).all()
+        shots.append(dict(id=f'probe/{len(shots)+1:02d}',case=target,source_index=target_index,
+                          method=method,donor=donor,checks=checks))
+        paths.append(path)
+
+    for i in indices:
+        donor = scores[i]['id']
+        case = cases[donor]
+        initial,load = case['previous'],case['motion']['load']
+        contact = int(np.flatnonzero(load>.05)[0])
+        assert scores[i]['routed'] and scores[i]['illegal_ticks']==0
+        for lead in (7,14,21):
+            for duration in (12,22,30):
+                add(donor,'dwell',lambda:dwell_before_load(priors[i],initial,limits,contact,lead,duration))
+        for shoulder,elbow in ((.055,.065),(.10,.12),(.16,.15),(.19,.16)):
+            add(donor,'counterbalance',lambda:counterbalance(
+                priors[i],initial,load,meta['joint_names'],limits,shoulder,elbow))
+    camera_file = original/'camera_touchdown_selection.npz'
+    with np.load(camera_file,allow_pickle=False) as z:
+        camera = z['features']
+    inputs[str(camera_file)] = sha(camera_file)
+    assert shots
+    out.mkdir()
+    build_probe(out,source,meta,shots,[geometry]*len(shots),paths,camera,study)
+    write(out/'candidates.json',dict(rows=shots,rejected=rejected,source_traces=inputs))
+
+
 def run_stage(out,label,bank,routes,protocol,study):
     options = study.options.copy()
     options[options.index('--feedback-routes')+1] = str(routes)
@@ -264,8 +470,13 @@ def run_stage(out,label,bank,routes,protocol,study):
                   *[Path(p) for p in study.freeze['inputs']]])
 
 
-def screen(out,study):
-    prepare(out,study)
+def screen(out,study,refinement=None,transfer=None,dwell=None):
+    if dwell is not None:
+        refine_dwell(out,study,refinement,dwell)
+    elif refinement is None:
+        prepare(out,study)
+    else:
+        refine(out,study,refinement,transfer)
     protocol = out/'candidates.json'
     rows = read(protocol)['rows']
     run_stage(out,'probe',out/'bank',out/'routes.npz',protocol,study)
@@ -394,12 +605,17 @@ if __name__=='__main__':
     parser.add_argument('output',type=Path)
     parser.add_argument('--mode',choices=('screen','certify','rerun'),default='screen')
     parser.add_argument('--probe',type=Path,nargs='+')
-    parser.add_argument('--followup',action='store_true')
+    parser.add_argument('--refine-from',type=Path)
+    parser.add_argument('--transfer-from',type=Path)
+    parser.add_argument('--dwell-from',type=Path)
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--followup',action='store_true')
+    group.add_argument('--retained',action='store_true')
     parsed = parser.parse_args()
     torch.set_num_threads(1)
-    study = RepairBank(parsed.followup)
+    study = RepairBank(parsed.followup,parsed.retained)
     if parsed.mode=='screen':
-        screen(parsed.output.resolve(),study)
+        screen(parsed.output.resolve(),study,parsed.refine_from,parsed.transfer_from,parsed.dwell_from)
     elif parsed.mode=='certify':
         certify(parsed.output.resolve(),[p.resolve() for p in parsed.probe],study)
     else:
