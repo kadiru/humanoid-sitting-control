@@ -150,6 +150,30 @@ def worker():
     feedback = None
     feedback_protected = None
     feedback_routes = None
+    seat_plane_approach = '--seat-plane-approach' in sys.argv
+    preload_braking = '--preload-braking' in sys.argv
+    velocity_braking = '--preload-velocity-brake' in sys.argv
+    housing_clearance = '--housing-clearance' in sys.argv
+    loaded_hold = '--loaded-clearance-hold' in sys.argv
+    if loaded_hold:
+        assert velocity_braking and seat_plane_approach and not housing_clearance
+        sys.argv.remove('--loaded-clearance-hold')
+        from loaded_clearance_hold import LoadedClearanceHold
+    if housing_clearance:
+        assert velocity_braking and seat_plane_approach
+        sys.argv.remove('--housing-clearance')
+        from housing_clearance import HousingClearance, seat_top_plane
+    if seat_plane_approach:
+        sys.argv.remove('--seat-plane-approach')
+        from seat_plane_approach import MEASURE_UNTIL, ROLL_START, SENSOR_FRAME, UPDATE_INTERVAL, SeatPlaneApproach
+    if preload_braking:
+        assert seat_plane_approach
+        sys.argv.remove('--preload-braking')
+        from preload_brake import FIRST_TICK as BRAKE_FIRST_TICK, GAP_INTERVAL, PreloadBrake
+    if velocity_braking:
+        assert seat_plane_approach and not preload_braking
+        sys.argv.remove('--preload-velocity-brake')
+        from pelvis_velocity_brake import FIRST_TICK as VELOCITY_FIRST_TICK, INTERVAL, PelvisVelocityBrake
     if '--touchdown-feedback' in sys.argv:
         i = sys.argv.index('--touchdown-feedback')
         feedback = json.loads(Path(sys.argv[i+1]).read_text())
@@ -188,6 +212,9 @@ def worker():
             root = (d.root_pos_w.torch-self.raw.scene.env_origins).cpu().numpy()
             rows = []
             live = []
+            if housing_clearance and tick <= MEASURE_UNTIL:
+                self.clearance_planes = np.stack([seat_top_plane(self.model,depth[i],k[i],support.REAR_CAMERA,
+                    q[i],gravity[i],self.geometry[i]) for i in range(self.num_envs)])
             for i in range(self.num_envs):
                 measured = estimate_edge(self.model,depth[i],k[i],support.REAR_CAMERA,q[i],gravity[i],self.geometry[i])
                 live.append(measured)
@@ -299,7 +326,108 @@ def worker():
                 desired = self.choose_camera_touchdown(obs,tick,desired)
             if feedback is not None:
                 desired = self.apply_touchdown_feedback(obs,tick,desired)
+            if seat_plane_approach:
+                desired = self.apply_seat_plane_approach(obs,tick,desired)
+            if preload_braking:
+                desired = self.apply_preload_brake(obs,tick,desired)
+            if velocity_braking:
+                desired = self.apply_velocity_brake(obs,tick,desired)
+            if loaded_hold:
+                desired = self.apply_loaded_hold(obs,tick,desired)
             return (desired,*result[1:])
+
+        def apply_loaded_hold(self,obs,tick,desired):
+            if tick == MEASURE_UNTIL:
+                self.loaded_hold = LoadedClearanceHold(self.seat_plane,self.env.model,self.env.metadata)
+            if tick < ROLL_START:
+                return desired
+            guard = self.loaded_hold
+            sensor = self.env.raw.scene['pelvis_seat'].data
+            force = sensor.normal_force_matrix_w.torch.sum((1,2)).norm(dim=-1)
+            weight = self.env.robot.data.body_mass.torch.sum(1)*9.81
+            load = (force/weight).cpu().numpy()
+            if np.any((load >= .05) & (guard.first_load < 0)):
+                prior = self.env.previous[:,self.env.ids].cpu().numpy()
+                braked = np.zeros(len(load),dtype=bool)
+                braked[self.velocity_brake.active] = self.velocity_brake.started >= 0
+                guard.observe(tick,load,obs[:,SENSOR_FRAME].cpu().numpy(),prior,braked)
+            if tick == 999:
+                guard.save(self.env.out/'loaded_clearance_hold.npz')
+            if not guard.enabled.any():
+                return desired
+            rows = torch.as_tensor(np.flatnonzero(guard.enabled),device=obs.device)
+            legs = torch.as_tensor(self.seat_plane.legs,device=obs.device)
+            corrected = desired.clone()
+            corrected[rows[:,None],legs] = torch.as_tensor(guard.target[guard.enabled],device=obs.device)
+            return corrected
+
+        def apply_velocity_brake(self,obs,tick,desired):
+            if tick == MEASURE_UNTIL:
+                self.velocity_brake = PelvisVelocityBrake(self.seat_plane)
+            if tick < VELOCITY_FIRST_TICK:
+                return desired
+            brake = self.velocity_brake
+            if tick == 999:
+                brake.save(self.env.out/'velocity_brake.npz')
+            if not brake.active.size:
+                return desired
+            rows = brake.active
+            if tick % INTERVAL == 0:
+                delta = brake.update(tick,obs[rows,SENSOR_FRAME].cpu().numpy(),desired[rows].cpu().numpy())
+                self.velocity_delta = torch.as_tensor(delta.copy(),device=obs.device)
+            corrected = desired.clone()
+            corrected[rows] += self.velocity_delta
+            return corrected
+
+        def apply_preload_brake(self,obs,tick,desired):
+            if tick == MEASURE_UNTIL:
+                self.preload_brake = PreloadBrake(self.seat_plane)
+            if tick < BRAKE_FIRST_TICK - 1:
+                return desired
+            brake = self.preload_brake
+            if brake.active.size:
+                rows = brake.active
+                if tick == BRAKE_FIRST_TICK - 1:
+                    self.brake_rows = torch.as_tensor(rows,device=obs.device)
+                    self.brake_columns = torch.arange(len(rows),device=obs.device)
+                    self.brake_history = torch.empty((1000,len(rows),desired.shape[-1]),
+                                                     dtype=desired.dtype,device=obs.device)
+                self.brake_history[tick] = desired[self.brake_rows]
+                if tick < BRAKE_FIRST_TICK:
+                    return desired
+                frame = obs[rows,SENSOR_FRAME].cpu().numpy() if tick % GAP_INTERVAL == 0 else None
+                clock = brake.update(tick,frame)
+                index = torch.as_tensor(np.floor(clock),dtype=torch.long,device=obs.device)
+                mix = torch.as_tensor(clock - np.floor(clock),dtype=desired.dtype,device=obs.device)
+                corrected = desired.clone()
+                corrected[self.brake_rows] = torch.lerp(self.brake_history[index,self.brake_columns],
+                    self.brake_history[(index+1).clamp_max(tick),self.brake_columns],mix[:,None])
+                desired = corrected
+            if tick == 999:
+                brake.save(self.env.out/'preload_brake.npz')
+            return desired
+
+        def apply_seat_plane_approach(self,obs,tick,desired):
+            if tick == 0:
+                approach_class = HousingClearance if housing_clearance else SeatPlaneApproach
+                self.seat_plane = approach_class(self.env.model,self.env.metadata,len(obs))
+            correction = self.seat_plane
+            if tick <= MEASURE_UNTIL:
+                frame_tick = self.env.live[0]
+                if frame_tick == tick:
+                    planes = self.env.clearance_planes if housing_clearance else self.env.geometry
+                    correction.observe(frame_tick,planes,obs[:,SENSOR_FRAME].cpu().numpy())
+            if tick == MEASURE_UNTIL:
+                correction.freeze()
+            if tick == 999:
+                correction.save(self.env.out/'seat_plane_approach.npz')
+            if tick < ROLL_START or not correction.active.size:
+                return desired
+            if tick % UPDATE_INTERVAL == 0:
+                rows = correction.active
+                correction.update(tick,desired[rows].cpu().numpy(),obs[rows,SENSOR_FRAME].cpu().numpy())
+                self.seat_plane_delta = torch.as_tensor(correction.delta.copy(),device=obs.device)
+            return desired + self.seat_plane_delta
 
         def apply_touchdown_feedback(self,obs,tick,desired):
             if tick==0:
