@@ -30,6 +30,10 @@ class TouchdownFeedback:
         indices = self.profile_by_row if self.profile_by_row is not None else [0]*count
         assert len(indices)==count
         self.active = np.asarray([i for i in range(count) if active[i] and indices[i]>=0],dtype=int)
+        self.repair_protected = np.zeros(count,bool)
+        if self.routes is not None and 'repair_protected' in self.routes:
+            distance = (signature[:,None]-self.routes['repair_protected'])/self.protected['scale']
+            self.repair_protected = np.square(distance).mean(-1).min(1)<=5e-7
         self.configuration = [self.profiles[i] if i>=0 else None for i in indices]
         self.prev = np.full((count,2),np.nan)
         self.rate = np.zeros((count,2))
@@ -47,6 +51,15 @@ class TouchdownFeedback:
         if profile is None:
             return None
         library = self.routes
+        if 'repair_features' in library and not self.repair_protected[row]:
+            distances = np.square((library['repair_features']-feature)/library['repair_scale']).sum(1)
+            candidates = np.flatnonzero(distances<=library['repair_radius'])
+            if 'repair_rows' in library:
+                candidates = candidates[candidates==library['repair_rows'][row]]
+            if candidates.size:
+                repair = int(candidates[distances[candidates].argmin()])
+                return (len(library['features'])+repair,float(distances[repair]),
+                        library['repair_paths'][repair],library['repair_handoff'][repair])
         distance = np.square((library['features']-feature)/library['scale']).sum(1)
         index = int(distance.argmin())
         if distance[index]>library['radius'][index]:

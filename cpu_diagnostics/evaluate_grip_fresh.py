@@ -71,6 +71,10 @@ def run(out):
     expected[expected.index('--bank')+1] = str(bank)
     expected[expected.index('--output')+1] = str(out/'evaluation')
     assert ran['command']==expected and ran['gpu']==frozen['gpu']
+    write_results(out,cases,score)
+
+
+def write_results(out,cases,score):
     audit,episodes = verify_audit(out/'evaluation')
     handoff = read(out/'evaluation/grip_handoff.json')
     rows = []

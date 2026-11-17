@@ -39,6 +39,12 @@ def render(run, destination, original_bank=None, split='fresh'):
     else:
         rows = comparison['rows']
         overall = f'{comparison["score"]["clean"]}/24 passed'
+        retention = run/'retention.json'
+        if retention.exists():
+            shifted = replay.read(retention)['banks'].get('shifted',{})
+            repaired.update(shifted.get('repairs',[]))
+            if repaired:
+                overall += f'  ·  {len(repaired)} repaired'
     positioned = all('fore_aft_offset_cm' in row and 'lateral_offset_cm' in row for row in rows)
     assert [r['id'] for r in rows] == [r['id'] for r in results['episodes']]
     with np.load(trace,allow_pickle=False) as z:
@@ -70,9 +76,10 @@ def render(run, destination, original_bank=None, split='fresh'):
                 d = ImageDraw.Draw(canvas)
                 title = 'Sitting touchdown repair' if is_repair else 'Fresh sitting trials'
                 if positioned:
-                    title = 'Shifted-seat sitting repair' if is_repair else 'Sitting on shifted seats'
+                    title = 'Shifted-seat sitting repair' if is_repair or repaired else 'Sitting on shifted seats'
                 replay.label(d,(35,20),title,36,bold=True)
-                replay.label(d,(1000 if is_repair else 1110,26),f'{overall}  ·  Batch {group+1}/3',24,bold=True)
+                replay.label(d,(1000 if is_repair or repaired else 1110,26),
+                             f'{overall}  ·  Batch {group+1}/3',24,bold=True)
                 time_label = 'Final scores' if complete else f'{(tick+1)*.02:05.2f} / 20 s   ·   2× replay'
                 replay.label(d,(37,67),time_label,22,replay.MUTED)
                 for slot,case in enumerate(indices):
