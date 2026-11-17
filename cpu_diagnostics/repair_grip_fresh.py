@@ -1,4 +1,4 @@
-"""Construct and verify sitting repairs from the eight failed shifted seats."""
+"""Construct and verify sitting repairs using audited shifted-seat trajectories."""
 
 import argparse
 import copy
@@ -28,14 +28,39 @@ FAILURES = ('02','03','04','11','12','16','21','24')
 GRIP = {'04','11','12','16'}
 FEATURE_SCALE = np.array([.006,.005,.8])
 DONOR_SCALE = np.array([.022,.064,.016,3.4])
+FOLLOWUP = ROOT/'outputs/touchdown_grip_repaired_fresh_20261116_v1'
+REPAIRED = ROOT/'outputs/touchdown_grip_shift_repair_20261116_full'
 
 
-def frozen_run():
-    frozen = read(SHIFTED/'evaluation.freeze.json')
-    command = frozen['command']
-    options = command[3:command.index('--mode')]
-    assert options[0]=='evaluate'
-    return frozen,options,Path(options[1]),Path(options[options.index('--feedback-routes')+1])
+class RepairBank:
+    def __init__(self,followup):
+        self.followup = followup
+        self.source = FOLLOWUP if followup else SHIFTED
+        self.failures = ('01','02','03','04','08','11','12','16','23','24') if followup else FAILURES
+        self.grip = {'01','03','04','08','11','12','16','23'} if followup else GRIP
+        self.prefix = 'repair2_' if followup else 'repair_'
+        self.protected_count = 322 if followup else 300
+        self.total = 332 if followup else 308
+
+        self.freeze = read(self.source/'evaluation.freeze.json')
+        command = self.freeze['command']
+        self.options = command[3:command.index('--mode')]
+        assert self.options[0]=='evaluate'
+        self.checkpoint = Path(self.options[1])
+        self.routes = Path(self.options[self.options.index('--feedback-routes')+1])
+        if followup:
+            prior = read(REPAIRED/'status.json')
+            assert prior == dict(state='complete',total=308,clean=308,regressions=[])
+            assert self.routes == REPAIRED/'routes.npz'
+            for filename,digest in self.freeze['inputs'].items():
+                assert sha(filename)==digest,filename
+
+    def retained_runs(self):
+        if not self.followup:
+            return {label:(PREVIOUS/label,bank) for label,(_,bank) in previous_runs().items()}
+        runs = {label:(REPAIRED/label,bank) for label,(_,bank) in previous_runs().items()}
+        runs['prior_shifted'] = (REPAIRED/'evaluation',SHIFTED/'bank')
+        return runs
 
 
 def previous_runs():
@@ -96,7 +121,7 @@ def load_paths(folder,indices,actor_checkpoint=None):
     return output,{str(folder/k):v for k,v in audit['files'].items()}
 
 
-def sort_donors(targets,references):
+def sort_donors(targets,references,grip):
     catalog = []
     for folder,bank in references.values():
         _,rows = verify_audit(folder)
@@ -113,29 +138,30 @@ def sort_donors(targets,references):
         geometry = seat['top_center']+[seat['pitch_deg']]
         def cost(donor):
             gap = np.square((np.asarray(donor[3])-geometry)/DONOR_SCALE).sum()
-            grip_weight = 1.8 if name[-2:] in GRIP else .45
+            grip_weight = 1.8 if name[-2:] in grip else .45
             return gap+grip_weight*(donor[4]/.9)**3+.15*(donor[5]/.02)**2
         result[name] = sorted(catalog,key=cost)[:12]
     return result
 
 
-def prepare(out):
-    _,_,checkpoint,original_routes = frozen_run()
-    original = SHIFTED/'evaluation'
+def prepare(out,study):
+    original = study.source/'evaluation'
     _,rows = verify_audit(original)
     targets = [i for i,r in enumerate(rows) if not r['clean']]
-    assert tuple(rows[i]['id'][-2:] for i in targets)==FAILURES
-    cases,inputs = load_paths(original,targets,checkpoint)
-    references = previous_runs()
-    ranking = sort_donors(cases,references)
+    assert tuple(rows[i]['id'][-2:] for i in targets)==study.failures
+    cases,inputs = load_paths(original,targets,study.checkpoint)
+    references = study.retained_runs() if study.followup else previous_runs()
+    if study.followup:
+        references['new_passes'] = (original,study.source/'bank')
+    ranking = sort_donors(cases,references,study.grip)
     donors = {}
     for folder,_ in references.values():
         indices = sorted({i for matches in ranking.values() for p,i,*_ in matches if p==folder})
         if indices:
-            sample,files = load_paths(folder,indices)
-            donors.update(sample)
+            sample,files = load_paths(folder,indices,study.checkpoint if study.followup else None)
+            donors.update({(folder,v['index']):v for v in sample.values()})
             inputs.update(files)
-    source = SHIFTED/'bank'
+    source = study.source/'bank'
     metadata = read(source/'metadata.json')
     limits = [np.asarray(metadata[k]) for k in ('lower','upper')]
     model = BodyModel(MODEL)
@@ -147,8 +173,8 @@ def prepare(out):
 
     for name,target in cases.items():
         distinct = []
-        for _,_,key,*_ in ranking[name]:
-            candidate = donors[key]
+        for folder,index,*_ in ranking[name]:
+            candidate = donors[folder,index]
             if all(np.max(np.abs(candidate['prior'][:750]-old['prior'][:750]))>.012 for old in distinct):
                 distinct.append(candidate)
             if len(distinct)==4:
@@ -169,42 +195,53 @@ def prepare(out):
             paths.append(new)
             poses.append(target['geometry'])
 
-        if name[-2:] not in GRIP:
+        needs_donor = name[-2:] in study.grip
+        if not needs_donor:
             for method,params in [('retime',dict(speed=.72)),('settle',dict(lead=62,delay=13.))]:
                 add(method,name,lambda:planned_path(target,target,dict(method=method,**params),model,fk,legs,limits))
             add('counterbalance',name,lambda:counterbalance(target['prior'],target['previous'],
                     target['motion']['load'],metadata['joint_names'],limits,.12,.14))
-        for candidate in distinct[:(2 if name[-2:] not in GRIP else 4)]:
+        donor_count = (3 if study.followup else 4) if needs_donor else 2
+        for candidate in distinct[:donor_count]:
             key = candidate['row']['id']
             add('replay',key,lambda:(candidate['prior'],{}))
             add('retarget',key,lambda:geometry_adjusted(candidate,target,model,fk,legs,limits,-.002,.005))
+        if study.followup and needs_donor:
+            candidate = distinct[0]
+            add('clearance',candidate['row']['id'],
+                lambda:geometry_adjusted(candidate,target,model,fk,legs,limits,-.006,.024))
     assert 0<len(shots)<=72 and {r['case'] for r in shots}==set(cases)
     out.mkdir()
-    build_probe(out,source,metadata,shots,poses,paths,camera,original_routes)
+    build_probe(out,source,metadata,shots,poses,paths,camera,study)
     write(out/'candidates.json',dict(rows=shots,rejected=rejected,source_traces=inputs))
 
 
-def pack_routes(original_routes,shots,paths,camera,initial,limits):
-    with np.load(original_routes,allow_pickle=False) as data:
-        library = {k:data[k] for k in data.files if not k.startswith('repair_')}
+def pack_routes(study,shots,paths,camera,initial,limits):
+    with np.load(study.routes,allow_pickle=False) as data:
+        library = {k:data[k] for k in data.files if not k.startswith(study.prefix)}
+    repair_start = len(library['features'])
+    if study.followup:
+        assert 'repair_rows' not in library and len(library['repair_features'])==8
+        repair_start += len(library['repair_features'])
     handoff = []
     for shot,path in zip(shots,paths,strict=True):
         i = shot['source_index']
         handoff.append(applied_path(path[:CAMERA_HANDOFF_CHECK_TICK+1],initial[i],*limits)[-1])
-    library.update(repair_features=camera[[r['source_index'] for r in shots]],repair_scale=FEATURE_SCALE,
-         repair_radius=np.ones(len(shots)),repair_paths=np.asarray(paths),repair_handoff=np.asarray(handoff),
-         ids=np.concatenate((library['ids'][:len(library['features'])],
-                            np.array([r['case']+' '+r['method'] for r in shots]))))
+    fields = dict(features=camera[[r['source_index'] for r in shots]],scale=FEATURE_SCALE,
+                  radius=np.ones(len(shots)),paths=np.asarray(paths),handoff=np.asarray(handoff))
+    library.update({study.prefix+key:value for key,value in fields.items()})
+    library['ids'] = np.concatenate((library['ids'][:repair_start],
+                                    np.array([r['case']+' '+r['method'] for r in shots])))
     return library
 
 
-def build_probe(out,source,metadata,shots,poses,paths,camera,original_routes):
+def build_probe(out,source,metadata,shots,poses,paths,camera,study):
     indices = [r['source_index'] for r in shots]
     source_bank = np.load(source/'bank.npz',allow_pickle=False)
     with source_bank as data:
         arrays = {k:data[k][indices] for k in data.files if k.startswith('reset_')}
         initial = data['reset_command']
-    library = pack_routes(original_routes,shots,paths,camera,initial,
+    library = pack_routes(study,shots,paths,camera,initial,
                           [np.asarray(metadata[k]) for k in ('lower','upper')])
     bank = out/'bank'
     bank.mkdir()
@@ -215,22 +252,23 @@ def build_probe(out,source,metadata,shots,poses,paths,camera,original_routes):
     write(bank/'geometry.json',[dict(g,case=i,surface_id=i) for i,g in enumerate(poses)])
     write(bank/'metadata.json',dict(metadata,cases=len(shots),ids=[r['id'] for r in shots]))
     write(out/'reservation.json',dict(files={str(p):sha(p) for p in bank.iterdir()}))
-    np.savez_compressed(out/'routes.npz',**library,repair_rows=np.arange(len(shots)))
+    library[study.prefix+'rows'] = np.arange(len(shots))
+    np.savez_compressed(out/'routes.npz',**library)
 
 
-def run_stage(out,label,bank,routes,protocol):
-    frozen,options,_,_=frozen_run()
+def run_stage(out,label,bank,routes,protocol,study):
+    options = study.options.copy()
     options[options.index('--feedback-routes')+1] = str(routes)
     return stage(out,label,bank,PRIOR,worker=HERE/'grip_hold_ppo.py',extra=options,protocol=protocol,
-          inputs=[Path(__file__),HERE/'live_sitting_edge.py',HERE/'touchdown_feedback.py',routes,
-                  *[Path(p) for p in frozen['inputs']]])
+          inputs=[*HERE.glob('*.py'),routes,
+                  *[Path(p) for p in study.freeze['inputs']]])
 
 
-def screen(out):
-    prepare(out)
+def screen(out,study):
+    prepare(out,study)
     protocol = out/'candidates.json'
     rows = read(protocol)['rows']
-    run_stage(out,'probe',out/'bank',out/'routes.npz',protocol)
+    run_stage(out,'probe',out/'bank',out/'routes.npz',protocol,study)
     folder = out/'probe'
     _,episodes = verify_audit(folder)
     with np.load(folder/'trajectory.npz',allow_pickle=False) as z, \
@@ -248,7 +286,7 @@ def screen(out):
     write(out/'screen_results.json',summary)
 
 
-def select_winners(probes):
+def select_winners(probes,study):
     winners = {}
     inputs = {}
     for probe in probes:
@@ -260,7 +298,7 @@ def select_winners(probes):
         inputs.update({str(probe/'probe'/p):digest for p,digest in audit['files'].items()})
         inputs.update({str(p):sha(p) for p in (receipt,routes,frozen)})
         with np.load(routes,allow_pickle=False) as data:
-            paths = data['repair_paths']
+            paths = data[study.prefix+'paths']
         for i,(row,episode) in enumerate(zip(read(receipt),episodes,strict=True)):
             assert row['id']==episode['id']
             if not row['clean']:
@@ -273,22 +311,21 @@ def select_winners(probes):
     return winners,inputs
 
 
-def certify(out,probes):
-    winners,inputs = select_winners(probes)
-    assert {name[-2:] for name in winners}==set(FAILURES),sorted(winners)
-    _,_,_,original_routes = frozen_run()
-    source = SHIFTED/'bank'
-    original = SHIFTED/'evaluation'
+def certify(out,probes,study):
+    winners,inputs = select_winners(probes,study)
+    assert {name[-2:] for name in winners}==set(study.failures),sorted(winners)
+    source = study.source/'bank'
+    original = study.source/'evaluation'
     _,rows = verify_audit(original)
     protected = []
-    references = previous_runs()
-    for folder in [*(PREVIOUS/label for label in BANKS),original]:
+    references = study.retained_runs()
+    for folder in [*(folder for folder,_ in references.values()),original]:
         audit,episodes = verify_audit(folder)
         passed = [i for i,row in enumerate(episodes) if row['clean']]
         with np.load(folder/'trajectory.npz',allow_pickle=False) as data:
             protected.extend(data['obs'][0,passed,336:])
         inputs.update({str(folder/p):v for p,v in audit['files'].items()})
-    assert len(protected)==300
+    assert len(protected)==study.protected_count
     with np.load(original/'trajectory.npz',allow_pickle=False) as z:
         target = z['obs'][0,[i for i,row in enumerate(rows) if not row['clean']],336:]
     with np.load(BASELINE/'protected.npz',allow_pickle=False) as z:
@@ -300,46 +337,54 @@ def certify(out,probes):
         meta = read(source/'metadata.json')
         winners = [winners[name] for name in sorted(winners)]
         shots = [dict(w[1],probe=str(w[3])) for w in winners]
-        library = pack_routes(original_routes,shots,[w[2] for w in winners],z['features'],bank['reset_command'],
+        library = pack_routes(study,shots,[w[2] for w in winners],z['features'],bank['reset_command'],
                               [np.asarray(meta[k]) for k in ('lower','upper')])
     out.mkdir()
     routes = out/'routes.npz'
-    library['repair_radius'][:] = .25
-    np.savez_compressed(routes,**library,repair_protected=np.asarray(protected))
+    library[study.prefix+'radius'][:] = .25
+    library[study.prefix+'protected'] = np.asarray(protected)
+    np.savez_compressed(routes,**library)
     banks = [source,*(bank for _,bank in references.values())]
     write(out/'reservation.json',dict(files={str(p):sha(p) for bank in banks for p in bank.iterdir()}))
-    inputs.update({str(p):sha(p) for p in (routes,Path(__file__),HERE/'touchdown_feedback.py',original_routes)})
+    inputs.update({str(p):sha(p) for p in (routes,Path(__file__),HERE/'touchdown_feedback.py',study.routes)})
     protocol = out/'repair_protocol.json'
-    write(protocol,dict(inputs=inputs,repairs=shots,protected_passes=300,
+    write(protocol,dict(inputs=inputs,repairs=shots,protected_passes=study.protected_count,
                          min_protected_signature_distance=separation.tolist(),source_bank=str(source),
                          action_limits_unchanged=True,scoring_unchanged=True))
     display = out/'bank'
     display.mkdir()
     (display/'geometry.json').write_bytes((source/'geometry.json').read_bytes())
-    score = run_stage(out,'evaluation',source,routes,protocol)
+    score = run_stage(out,'evaluation',source,routes,protocol,study)
     write_results(out,read(source/'geometry.json'),score)
 
 
-def rerun(out):
+def rerun(out,study):
     protocol = out/'repair_protocol.json'
     for name,digest in read(protocol)['inputs'].items():
         assert sha(name)==digest,name
     score = read(out/'comparison.json')['score']
-    restored = summaries(SHIFTED/'evaluation',out/'evaluation')
+    restored = summaries(study.source/'evaluation',out/'evaluation')
     data = {'shifted':dict(score,repairs=[row['id'] for row in restored if row['ppo_clean'] and not row['touchdown_clean']],
                           regressions=[row['id'] for row in restored if row['touchdown_clean'] and not row['ppo_clean']])}
+    retained = [r for r in restored if r['touchdown_clean']]
+    for phase in ('approach','hold'):
+        key = phase+'_max_command_delta_rad'
+        data['shifted']['protected_'+key] = max(r[key] for r in retained)
+    if study.followup:
+        assert score['clean']==score['total']==24
+        assert not data['shifted']['regressions']
     result = out/'retention.json'
     write(result,dict(banks=data))
-    for name,(_,bank) in previous_runs().items():
-        score = run_stage(out,name,bank,out/'routes.npz',protocol)
-        check = summaries(PREVIOUS/name,out/name)
+    for name,(before,bank) in study.retained_runs().items():
+        score = run_stage(out,name,bank,out/'routes.npz',protocol,study)
+        check = summaries(before,out/name)
         data[name] = dict(score,regressions=[r['id'] for r in check if r['touchdown_clean'] and not r['ppo_clean']],
                          command_max_delta_rad=max(max(r['approach_max_command_delta_rad'],r['hold_max_command_delta_rad'])
                                                    for r in check))
         write(result,dict(banks=data))
     totals = dict(total=sum(r['total'] for r in data.values()),clean=sum(r['clean'] for r in data.values()),
                   regressions=[i for bank in data.values() for i in bank['regressions']],banks=data)
-    assert totals['total']==308
+    assert totals['total']==study.total
     write(result,totals)
     write(out/'status.json',dict(state='complete',**{k:totals[k] for k in ('total','clean','regressions')}))
 
@@ -349,11 +394,13 @@ if __name__=='__main__':
     parser.add_argument('output',type=Path)
     parser.add_argument('--mode',choices=('screen','certify','rerun'),default='screen')
     parser.add_argument('--probe',type=Path,nargs='+')
+    parser.add_argument('--followup',action='store_true')
     parsed = parser.parse_args()
     torch.set_num_threads(1)
+    study = RepairBank(parsed.followup)
     if parsed.mode=='screen':
-        screen(parsed.output.resolve())
+        screen(parsed.output.resolve(),study)
     elif parsed.mode=='certify':
-        certify(parsed.output.resolve(),[p.resolve() for p in parsed.probe])
+        certify(parsed.output.resolve(),[p.resolve() for p in parsed.probe],study)
     else:
-        rerun(parsed.output.resolve())
+        rerun(parsed.output.resolve(),study)
