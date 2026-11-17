@@ -39,6 +39,7 @@ HEIGHTS = (.337, .355, .378, .402, .425, .454)
 PITCHES = (0., 6.5, 13., 19.75)
 OFFSETS = ((-.039, -.055, -14.), (-.022, .032, 8.), (-.007, -.017, 0.),
            (.009, .016, 0.), (.027, -.037, -8.), (.039, .057, 14.))
+YAW_OFFSETS = ((-.005,0.,-12.),(-.005,0.,0.),(-.005,0.,12.))
 FROZEN = TOUCHDOWN_REFERENCE/'untouched.freeze.json'
 ASSET_ROOT = ROOT/'experiments/furniture_test_20261028_v1/scenes'
 MESHES = (('mesh_armchair', 'myd1WSucAz_seat'),
@@ -98,13 +99,15 @@ def pieces(depth,width,height,rot,back,arms,base):
     return parts
 
 
-def procedural_cases(template,height,pitch,offset_indices,tag,controls=False,only_control=False):
+def procedural_cases(template,height,pitch,offset_indices,tag,controls=False,only_control=False,
+                     yaw_comparison=False):
     cases = []
     for offset in offset_indices:
-        dx,dy,yaw = OFFSETS[offset]
+        dx,dy,yaw = (YAW_OFFSETS if yaw_comparison else OFFSETS)[offset]
         rot = Rotation.from_euler('ZY',[yaw,pitch],degrees=True)
         u,_,n = rot.as_matrix().T
-        front = np.array([-.4+dx,dy,height])+.25*u
+        edge_direction = Rotation.from_euler('y',pitch,degrees=True).as_matrix()[:,0] if yaw_comparison else u
+        front = np.array([-.4+dx,dy,height])+.25*edge_direction
         for family,depth,width,shape,back,arms,base in (() if only_control else CHAIRS):
             top = front-(depth/2)*u
             spec = dict(template,label=f'{tag}/{family}/{offset+1}',family=family,shape=shape,
@@ -305,7 +308,7 @@ def record(batch,geometry):
     return rows
 
 
-def run_batch(batch,source,geometry,inputs,options,launcher,protocol,deadline):
+def run_batch(batch,source,geometry,inputs,options,launcher,protocol,deadline,disk_reserve):
     bank = batch/'bank'
     assert time.monotonic()+EVAL_WALL<=deadline
     batch.mkdir()
@@ -314,7 +317,8 @@ def run_batch(batch,source,geometry,inputs,options,launcher,protocol,deadline):
     try:
         stage(batch,'evaluation',bank,PREPARED/'library.npz',worker=Path(__file__),
               extra=('--worker',str(launcher),*options),protocol=protocol,
-              inputs=[*inputs,*(Path(g['mesh_file']) for g in geometry if 'mesh_file' in g)])
+              inputs=[*inputs,*(Path(g['mesh_file']) for g in geometry if 'mesh_file' in g)],
+              disk_reserve=disk_reserve)
     except AssertionError:
         startup = batch/'evaluation/startup.json'
         if not startup.exists():
@@ -332,7 +336,8 @@ def run_batch(batch,source,geometry,inputs,options,launcher,protocol,deadline):
                      slip_ticks=None,illegal_ticks=None,forbidden_contact=None) for i in invalid]
         remaining = [g for i,g in enumerate(geometry) if i not in invalid]
         if remaining:
-            rows += run_batch(batch/'sensor_valid',source,remaining,inputs,options,launcher,protocol,deadline)
+            rows += run_batch(batch/'sensor_valid',source,remaining,inputs,options,launcher,protocol,deadline,
+                              disk_reserve)
         return rows
     return record(batch,geometry)
 
@@ -359,7 +364,18 @@ def publish(out,rows):
     temp.replace(out/'results.csv')
 
 
-def run(out,mode):
+def existing_scores(path):
+    with path.open(newline='') as f:
+        rows = list(csv.DictReader(f))
+    for row in rows:
+        for count in ('slip_ticks','illegal_ticks'):
+            row[count] = int(row[count]) if row[count] else None
+        row['power_w'] = float(row['power_w']) if row['power_w'] else None
+        row['forbidden_contact'] = {'True':True,'False':False,'':None}[row['forbidden_contact']]
+    return rows
+
+
+def run(out,mode,resume=False,disk_reserve=MIN_DISK):
     start = time.monotonic()
     frozen,options = frozen_controller()
     launcher = Path(frozen['command'][2])
@@ -371,6 +387,12 @@ def run(out,mode):
     elif mode=='meshes':
         meshes,exclusions = mesh_cases(template)
         batches = [('exact_meshes',meshes)]
+    elif mode=='yaw':
+        batches = [(f'yaw_{i+1:02d}',[
+            g for j,h in enumerate((.367,.419))
+            for g in procedural_cases(template,h,p,range(len(YAW_OFFSETS)),
+                                      f'yaw_{i+1:02d}/{j+1}',yaw_comparison=True)
+        ]) for i,p in enumerate((1.,8.,17.5))]
     else:
         batches = []
         controls = []
@@ -386,21 +408,47 @@ def run(out,mode):
                     controls += procedural_cases(template,height,pitch,shift,tag,only_control=True)
                 batches.append((name,geometry))
         batches += [('matched_plates_01',controls[:72]),('matched_plates_02',controls[72:])]
-    out.mkdir()
     protocol = out/'protocol.json'
-    write(protocol,dict(mode=mode,controller_freeze=str(FROZEN),gpu=GPU,wall_budget_s=GPU_BUDGET_S,
-                        frozen_before_rollouts=True,scorer='original support posture scorer',
-                        source_mesh_exclusions=exclusions,banking={name:geometry for name,geometry in batches}))
-    inputs = [FROZEN,source/'bank.npz',*map(Path,frozen['inputs'])]
+    design = dict(mode=mode,controller_freeze=str(FROZEN),gpu=GPU,wall_budget_s=GPU_BUDGET_S,
+                  frozen_before_rollouts=True,scorer='original support posture scorer',
+                  source_mesh_exclusions=exclusions,banking={name:geometry for name,geometry in batches})
     rows = []
+    deadline = start+GPU_BUDGET_S
+    if resume:
+        assert read(protocol)==design
+        rows = existing_scores(out/'results.csv')
+        elapsed_gpu = sum(read(p)['wall_s'] for p in out.rglob('evaluation.exit.json'))
+        deadline -= elapsed_gpu
+        index = len(list(out.glob('resume_receipt*.json')))+1
+        write(out/f'resume_receipt_{index:02d}.json',dict(original_plan_sha256=sha(protocol),attempted=len(rows),
+              output_reserve_bytes=disk_reserve,prior_gpu_worker_wall_s=elapsed_gpu))
+    else:
+        out.mkdir()
+        write(protocol,design)
+    inputs = [FROZEN,source/'bank.npz',*map(Path,frozen['inputs'])]
+    known = {r['id'] for r in rows}
     for name,geometry in batches:
         assert len(geometry)<=72
-        # Allow 6 MB per trial above the existing 20 GB reserve.
-        if shutil.disk_usage(out).free<MIN_DISK+6_000_000*len(geometry):
+        done = [g['label'] in known for g in geometry]
+        if all(done):
+            continue
+        assert not any(done),name
+        batch = out/name
+        if resume and (batch/'evaluation/independent_audit.json').exists():
+            saved = read(batch/'bank/geometry.json')
+            assert saved==[dict(g,case=i,surface_id=i,start_stage=0) for i,g in enumerate(geometry)]
+            rows += record(batch,geometry)
+            publish(out,rows)
+            continue
+        # Allow 6 MB per trial above the reserve.
+        if shutil.disk_usage(out).free<disk_reserve+6_000_000*len(geometry):
             break
-        if time.monotonic()+EVAL_WALL>start+GPU_BUDGET_S:
+        if time.monotonic()+EVAL_WALL>deadline:
             break
-        rows += run_batch(out/name,source,geometry,inputs,options,launcher,protocol,start+GPU_BUDGET_S)
+        if batch.exists():
+            assert resume and not list(batch.rglob('independent_audit.json')),batch
+            batch = out/(name+'_resumed')
+        rows += run_batch(batch,source,geometry,inputs,options,launcher,protocol,deadline,disk_reserve)
         publish(out,rows)
         print(f'{len(rows)} of {sum(len(g) for _,g in batches)} attempted',flush=True)
     write(out/'status.json',dict(attempted=len(rows),planned=sum(len(g) for _,g in batches),
@@ -413,6 +461,10 @@ if __name__=='__main__':
     else:
         parser = argparse.ArgumentParser(description=__doc__)
         parser.add_argument('output',type=Path)
-        parser.add_argument('--mode',choices=('pilot','meshes','campaign'),required=True)
+        parser.add_argument('--mode',choices=('pilot','meshes','campaign','yaw'),required=True)
+        parser.add_argument('--resume',action='store_true')
+        parser.add_argument('--reserve-gb',type=int,choices=(18,20),default=20)
         args = parser.parse_args()
-        run(args.output.resolve(),args.mode)
+        if args.reserve_gb==18:
+            assert args.resume and args.output.resolve().is_relative_to(TOUCHDOWN_REFERENCE.parent)
+        run(args.output.resolve(),args.mode,args.resume,args.reserve_gb*1_000_000_000)

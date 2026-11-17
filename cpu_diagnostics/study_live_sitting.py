@@ -70,7 +70,8 @@ def reserve(out):
           files={str(p):sha(p) for bank in ('matched','reserved') for p in (out/bank/k for k in names)}))
 
 
-def stage(study, label, bank, library, *, worker=None, extra=(), protocol=None, inputs=()):
+def stage(study, label, bank, library, *, worker=None, extra=(), protocol=None, inputs=(),
+          disk_reserve=MIN_DISK):
     prep = read(PREPARED/'construction.json')
     checkpoint = Path(prep['checkpoint'])
     assert sha(checkpoint)==prep['checkpoint_sha256'] and sha(library)==prep['library_sha256']
@@ -99,12 +100,12 @@ def stage(study, label, bank, library, *, worker=None, extra=(), protocol=None, 
         sources.append(protocol)
     frozen = {str(p):sha(p) for p in sources}
     write(study/f'{label}.freeze.json',dict(inputs=frozen,command=args,gpu=GPU,
-          controls_per_case=1000,warmup_controls=25,wall_seconds=EVAL_WALL))
+          controls_per_case=1000,warmup_controls=25,wall_seconds=EVAL_WALL,disk_reserve_bytes=disk_reserve))
     with gpu_slot(study/'status.json'):
         for p,digest in frozen.items():
             assert sha(p)==digest,p
         assert not gpu('--query-compute-apps=pid')
-        assert int(gpu('--query-gpu=temperature.gpu'))<85 and shutil.disk_usage(study).free>MIN_DISK
+        assert int(gpu('--query-gpu=temperature.gpu'))<85 and shutil.disk_usage(study).free>disk_reserve
         write(study/'status.json',dict(state=label,owner_pid=os.getpid()))
         start = time.monotonic()
         with (study/f'{label}.log').open('x') as log:
@@ -112,7 +113,7 @@ def stage(study, label, bank, library, *, worker=None, extra=(), protocol=None, 
             try:
                 while child.poll() is None:
                     assert time.monotonic()-start<EVAL_WALL
-                    assert int(gpu('--query-gpu=temperature.gpu'))<85 and shutil.disk_usage(study).free>MIN_DISK
+                    assert int(gpu('--query-gpu=temperature.gpu'))<85 and shutil.disk_usage(study).free>disk_reserve
                     time.sleep(5)
             finally:
                 if child.poll() is None:

@@ -33,7 +33,8 @@ def collect(studies):
             with np.load(episode/'trajectory.npz',allow_pickle=False) as trace, \
                  np.load(episode/'edge_audit.npz',allow_pickle=False) as edges, \
                  np.load(episode/'camera_touchdown_selection.npz',allow_pickle=False) as camera:
-                recover = {k:trace[k] for k in ('support_bw','no_slip','legal','failure','command','previous')}
+                recover = {k:trace[k] for k in ('support_bw','no_slip','legal','failure','wrong_force',
+                                                'command','previous')}
                 assert np.abs(recover['command']-recover['previous']).max()<.0030002
                 early = edges['values'][edges['ticks']<=310]
                 edge_m = early[:,:,0]
@@ -51,6 +52,8 @@ def collect(studies):
                         active_controls=r['steps'],first_support_s=first(recover['support_bw'][:,i]>.05),
                         first_slip_s=first(~recover['no_slip'][:,i]),first_illegal_s=first(~recover['legal'][:,i]),
                         first_hard_failure_s=first(recover['failure'][:,i]),
+                        first_wrong_force_over_10n_s=first(recover['wrong_force'][:,i]>10.),
+                        peak_wrong_force_n=float(recover['wrong_force'][:,i].max()),
                         final_support_bw=float(np.mean(recover['support_bw'][-250:,i])),
                         early_edge_frames=int(finite.sum()),
                         median_edge_error_mm=float(1000*np.median(edge_error[finite,i])) if finite.any() else None,
