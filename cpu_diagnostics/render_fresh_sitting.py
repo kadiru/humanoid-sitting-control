@@ -87,6 +87,8 @@ def render(run, destination, original_bank=None, split='fresh'):
                     if complete:
                         state = 'REPAIRED' if row['id'] in repaired else 'PASS' if row['passed'] else 'FAIL'
                         text = f'{state}  ·  {row["hold_s"]:.2f} s final hold'
+                        if 'power_w' in row:
+                            text = f'{state}  ·  {row["hold_s"]:.2f} s  ·  {row["power_w"]:.2f} W'
                         color = replay.GREEN if row['passed'] else replay.RED
                     else:
                         event = ('Physical failure' if failed[tick,case] else 'Illegal contact' if illegal[tick,case]
@@ -94,7 +96,10 @@ def render(run, destination, original_bank=None, split='fresh'):
                         text = f'{event}  ·  {hold[tick,case]:.2f} s hold' if event else f'{hold[tick,case]:.2f} s qualifying hold'
                         color = replay.RED if event else replay.INK
                     replay.label(d,(x,y+307),text,20,color,True)
-                replay.label(d,(35,793),'Saved RTX 4090 simulation replay  ·  Standing start  ·  Final hold must be ≥5 seconds',17,replay.MUTED)
+                footer = 'Saved RTX 4090 simulation replay  ·  Standing start  ·  Final hold must be ≥5 seconds'
+                if 'power_w' in rows[0]:
+                    footer += '  ·  Mean mechanical power over the final 5 s'
+                replay.label(d,(35,793),footer,17,replay.MUTED)
                 pipe.stdin.write(canvas.tobytes())
         pipe.stdin.close()
         assert pipe.wait(timeout=30) == 0
