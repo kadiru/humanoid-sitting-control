@@ -36,6 +36,7 @@ class PlaneDemonstration:
         features, valid = plane_features(planes)
         valid &= np.isin(np.arange(len(valid)),approach.active)
         self.index, self.distance, self.change = match(library['features'],features,valid)
+        self.established = valid & (self.distance <= .0005)
         self.rows = np.flatnonzero(self.index >= 0)
         self.delta = np.zeros_like(approach.delta)
         self.rejected = np.zeros(len(valid),int)

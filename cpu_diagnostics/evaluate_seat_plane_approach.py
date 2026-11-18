@@ -98,7 +98,12 @@ def evaluate(out, baseline, *, label='evaluation', bank=None, braking=None, inpu
     if plane_demos is not None:
         assert '--verify-grip-contact' in options
         options += ['--plane-demonstrations',str(plane_demos)]
-        inputs = [HERE/'seat_plane_demonstration.py',HERE/'seat_normal_landing.py',plane_demos,*inputs]
+        inputs = [plane_demos,*inputs]
+    if '--plane-demonstrations' in options:
+        inputs = [HERE/'seat_plane_demonstration.py',HERE/'seat_normal_landing.py',*inputs]
+    if braking == 'guard_landing':
+        assert '--plane-demonstrations' in options and '--guard-normal-landing' not in options
+        options += ['--guard-normal-landing']
     if braking == 'clock':
         options += ['--preload-braking']
         inputs = [HERE/'preload_brake.py', *inputs]

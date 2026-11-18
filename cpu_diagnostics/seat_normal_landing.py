@@ -2,11 +2,12 @@
 
 import numpy as np
 
+from pelvis_velocity_brake import DT as BRAKE_INTERVAL_S
 from seat_plane_approach import stance_axes
 
 
 class SeatNormalLanding:
-    def __init__(self, approach, model, metadata):
+    def __init__(self, approach, model, metadata, established=None):
         self.approach = approach
         self.model = model
         self.joint_ids = metadata['joint_ids']
@@ -18,7 +19,10 @@ class SeatNormalLanding:
         self.limit = np.zeros(n)
         self.pitch = np.zeros(n)
         self.pitch_goal = np.zeros(n)
-        self.gap = np.zeros(n)
+        self.gap = np.full(n,np.nan)
+        self.established = established
+        self.decision_tick = np.full(n,-1)
+        self.closing_speed = np.full(n,np.nan)
         self.rejected = np.zeros(n, dtype=int)
         self.trace = []
 
@@ -65,9 +69,24 @@ class SeatNormalLanding:
         if tick % 5 == 0 and brake.active.size:
             samples = np.asarray(brake.trace[-len(brake.active):])
             if len(samples) and np.all(samples[:,0] == tick):
-                self.gap[samples[:,1].astype(int)] = samples[:,2]
                 ready = (self.start < 0) & never_loaded & (load <= .01)
-                for row in self.incoming(samples,ready):
+                candidates = self.incoming(samples,ready)
+                rows = samples[:,1].astype(int)
+                previous_gap = self.gap[rows]
+                self.gap[rows] = samples[:,2]
+                if self.established is not None:
+                    candidates = candidates[self.decision_tick[candidates] < 0]
+                    self.decision_tick[candidates] = tick
+                    self.closing_speed[rows] = np.where(
+                        self.decision_tick[rows] == tick,
+                        (previous_gap - self.gap[rows])/BRAKE_INTERVAL_S,
+                        self.closing_speed[rows])
+                    # The command filter applies 10% per 20 ms step. Only
+                    # catch a descent that would use the 5 mm headroom within
+                    # one response time beyond the 9 mm/s commanded descent.
+                    excess_m = (.02/.10) * (self.closing_speed[candidates] - .009)
+                    candidates = candidates[~self.established[candidates] & (excess_m > .005)]
+                for row in candidates:
                     self.start[row] = tick
                     self.target[row] = self.anchor[row] = previous[row]
                     self.limit[row] = self.gap[row] + .012
@@ -91,6 +110,8 @@ class SeatNormalLanding:
             self.trace.append((tick,row,load[row],self.travel[row],self.pitch[row]))
 
     def save(self,path):
+        decision = {} if self.established is None else dict(
+            established=self.established,decision_tick=self.decision_tick,closing_speed_m_s=self.closing_speed)
         np.savez_compressed(path,start=self.start,travel_m=self.travel,limit_m=self.limit,
                             pitch_rad=self.pitch,pitch_goal_rad=self.pitch_goal,rejected=self.rejected,
-                            trace=np.asarray(self.trace),columns=['tick','row','load_bw','travel_m','pitch_rad'])
+                            trace=np.asarray(self.trace),columns=['tick','row','load_bw','travel_m','pitch_rad'],**decision)

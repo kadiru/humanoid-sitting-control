@@ -148,6 +148,10 @@ def worker():
     touchdown = load_library('--touchdown-library')
     camera_touchdown = load_library('--camera-touchdown')
     plane_demos = load_library('--plane-demonstrations')
+    guard_landing = '--guard-normal-landing' in sys.argv
+    if guard_landing:
+        assert plane_demos is not None and '--verify-grip-contact' in sys.argv
+        sys.argv.remove('--guard-normal-landing')
     if plane_demos is not None:
         from seat_plane_demonstration import PlaneDemonstration
         from seat_normal_landing import SeatNormalLanding
@@ -358,7 +362,8 @@ def worker():
                     self.standing_planes = obs[:,SENSOR_FRAME][:,-13:].cpu().numpy().copy()
                 if tick == MEASURE_UNTIL:
                     self.demo_transfer = PlaneDemonstration(self.seat_plane,plane_demos,self.standing_planes)
-                    self.landing = SeatNormalLanding(self.seat_plane,self.env.model,self.env.metadata)
+                    established = self.demo_transfer.established if guard_landing else None
+                    self.landing = SeatNormalLanding(self.seat_plane,self.env.model,self.env.metadata,established)
                 if tick > ROLL_START:
                     transfer = self.demo_transfer
                     if tick == 999:
