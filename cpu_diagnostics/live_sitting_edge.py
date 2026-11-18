@@ -158,6 +158,10 @@ def worker():
     shear_feedback = '--seat-shear-feedback' in sys.argv
     normal_transfer = '--normal-load-transfer' in sys.argv
     follow_descent = '--follow-normal-descent' in sys.argv
+    verify_contact = '--verify-grip-contact' in sys.argv
+    if verify_contact:
+        assert follow_descent
+        sys.argv.remove('--verify-grip-contact')
     if follow_descent:
         assert normal_transfer
         sys.argv.remove('--follow-normal-descent')
@@ -353,7 +357,7 @@ def worker():
 
         def apply_seat_shear(self,obs,tick,desired):
             if tick == MEASURE_UNTIL:
-                self.shear_feedback = SeatShearFeedback(self.seat_plane,normal_transfer,follow_descent)
+                self.shear_feedback = SeatShearFeedback(self.seat_plane,normal_transfer,follow_descent,verify_contact)
             if tick < VELOCITY_FIRST_TICK:
                 return desired
             guard = self.shear_feedback
@@ -367,9 +371,10 @@ def worker():
                 weight = (data.body_mass.torch.sum(1)*9.81).cpu().numpy()
                 braked = np.zeros(len(obs),dtype=bool)
                 braked[brake.active] = brake.started >= 0
+                point_w = sensor.contact_pos_w.torch[:,0,0].cpu().numpy() if verify_contact else None
                 guard.update(tick,rotation.apply(normal),rotation.apply(shear),weight,braked,
                              self.loaded_hold,obs[:,SENSOR_FRAME].cpu().numpy(),desired.cpu().numpy(),
-                             self.env.previous[:,self.env.ids].cpu().numpy(),brake)
+                             self.env.previous[:,self.env.ids].cpu().numpy(),brake,point_w)
             if tick == 999:
                 guard.save(self.env.out/'seat_shear_feedback.npz')
             if not normal_transfer:

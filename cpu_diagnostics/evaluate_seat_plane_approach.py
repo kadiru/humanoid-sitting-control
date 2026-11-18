@@ -116,6 +116,10 @@ def evaluate(out, baseline, *, label='evaluation', bank=None, braking=None, inpu
             options += ['--normal-load-transfer']
         if braking == 'follow_descent':
             options += ['--follow-normal-descent']
+    if braking == 'verify_contact':
+        assert '--follow-normal-descent' in options
+        options += ['--verify-grip-contact']
+    if '--seat-shear-feedback' in options:
         inputs = [HERE/'seat_shear_feedback.py', *inputs]
     return stage(out, 'evaluation', bank, PREPARED/'library.npz', worker=worker, extra=options,
                  inputs=[*APPROACH, launcher, HERE/'touchdown_feedback.py', HERE/'prepare_sitting_repairs.py',

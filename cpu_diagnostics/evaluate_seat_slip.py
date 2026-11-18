@@ -12,10 +12,10 @@ from evaluate_seat_plane_approach import compare, evaluate
 from study_live_sitting import bank_from_geometry, read, sha, write
 
 
-def reserve(out, previous):
+def reserve(out, previous, *, seed=674031, prefix='shear_holdout'):
     source = previous/'holdout_bank'
     base = read(source/'geometry.json')
-    rng = np.random.default_rng(674031)
+    rng = np.random.default_rng(seed)
     rows = []
     for i, (family, depth, width, shape, back, arms, style) in enumerate(CHAIRS):
         for j, sign in enumerate((-1, 1)):
@@ -26,7 +26,7 @@ def reserve(out, previous):
             rot = Rotation.from_euler('ZY', [yaw,pitch], degrees=True)
             front = np.array([-.4+dx,dy,height]) + .25*Rotation.from_euler('y',pitch,degrees=True).as_matrix()[:,0]
             top = front - .5*depth*rot.as_matrix()[:,0]
-            rows.append(dict(base[2*i+j], label=f'shear_holdout/{family}/{j+1}',shape=shape,
+            rows.append(dict(base[2*i+j], label=f'{prefix}/{family}/{j+1}',shape=shape,
                              x=top[0],y=top[1],height=top[2],top_center=top.tolist(),pitch_deg=pitch,
                              yaw_deg=yaw,yaw=np.deg2rad(yaw),rotation_xyzw=rot.as_quat().tolist(),
                              normal=rot.as_matrix()[:,2].tolist(),reference_height_cm=height*100,
@@ -38,8 +38,8 @@ def reserve(out, previous):
     return bank
 
 
-def paired(out, baseline, method, bank=None):
-    evaluate(out, baseline, bank=bank, braking=method, inputs=[Path(__file__)])
+def paired(out, baseline, method, bank=None, inputs=()):
+    evaluate(out, baseline, bank=bank, braking=method, inputs=[Path(__file__), *inputs])
     result = compare(baseline/'evaluation',out/'evaluation',out)
     with np.load(baseline/'evaluation/trajectory.npz') as a, np.load(out/'evaluation/trajectory.npz') as b:
         commands = (a['command'],b['command'])
