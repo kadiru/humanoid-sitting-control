@@ -70,7 +70,7 @@ def saved_witness(bank, baseline, out):
         trajectory_sha256=sha(baseline/'evaluation/trajectory.npz')))
 
 
-def evaluate(out, baseline, *, label='evaluation', bank=None, braking=None, inputs=()):
+def evaluate(out, baseline, *, label='evaluation', bank=None, braking=None, inputs=(), plane_demos=None):
     source = read(baseline/f'{label}.freeze.json')
     command = source['command']
     grip = command.index('evaluate', 3)
@@ -95,6 +95,10 @@ def evaluate(out, baseline, *, label='evaluation', bank=None, braking=None, inpu
         options = ['--worker', str(launcher), *options]
     if '--seat-plane-approach' not in options:
         options += ['--seat-plane-approach']
+    if plane_demos is not None:
+        assert '--verify-grip-contact' in options
+        options += ['--plane-demonstrations',str(plane_demos)]
+        inputs = [HERE/'seat_plane_demonstration.py',HERE/'seat_normal_landing.py',plane_demos,*inputs]
     if braking == 'clock':
         options += ['--preload-braking']
         inputs = [HERE/'preload_brake.py', *inputs]

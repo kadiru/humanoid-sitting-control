@@ -49,6 +49,7 @@ class SeatShearFeedback:
         self.depth = np.zeros(count)
         self.filtered_load = np.zeros(count)
         self.unloaded_speed = np.full(count, np.nan)
+        self.demonstrated = np.zeros(count,dtype=bool)
         self.continuity = ContactContinuity(count) if verify_contact else None
 
     def remaining_descent(self, row, frame, reference):
@@ -99,7 +100,10 @@ class SeatShearFeedback:
                 if self.follow_descent and self.depth[i] >= limit and rate > 0:
                     limit = max(self.depth[i], self.remaining_descent(i,frame,desired[i]))
                 self.depth[i] = max(self.depth[i],min(limit,self.depth[i]+.04*rate))
-                if self.depth[i] > .012 and load[i] > .01*weight[i]:
+                # With an aligned demonstration and sustained load, tangential
+                # grip is already measurable before the full 12 mm descent.
+                supported = self.demonstrated[i] and self.continuity.settled[i] and load[i] >= .05*weight[i]
+                if (self.depth[i] > .012 or supported) and load[i] > .01*weight[i]:
                     axes = stance_axes(self.approach.feet(frame[:23]),frame[69:72])
                     n = axes @ self.approach.normal[i]
                     forward = axes[:,0] - n*(axes[:,0]@n)

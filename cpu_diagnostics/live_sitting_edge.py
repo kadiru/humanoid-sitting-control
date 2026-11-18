@@ -147,6 +147,10 @@ def worker():
     payload = load_library('--adapt-library')
     touchdown = load_library('--touchdown-library')
     camera_touchdown = load_library('--camera-touchdown')
+    plane_demos = load_library('--plane-demonstrations')
+    if plane_demos is not None:
+        from seat_plane_demonstration import PlaneDemonstration
+        from seat_normal_landing import SeatNormalLanding
     feedback = None
     feedback_protected = None
     feedback_routes = None
@@ -349,6 +353,23 @@ def worker():
                 desired = self.apply_preload_brake(obs,tick,desired)
             if velocity_braking:
                 desired = self.apply_velocity_brake(obs,tick,desired)
+            if plane_demos is not None:
+                if tick == 0:
+                    self.standing_planes = obs[:,SENSOR_FRAME][:,-13:].cpu().numpy().copy()
+                if tick == MEASURE_UNTIL:
+                    self.demo_transfer = PlaneDemonstration(self.seat_plane,plane_demos,self.standing_planes)
+                    self.landing = SeatNormalLanding(self.seat_plane,self.env.model,self.env.metadata)
+                if tick > ROLL_START:
+                    transfer = self.demo_transfer
+                    if tick == 999:
+                        transfer.save(self.env.out/'plane_demonstration.npz')
+                    if transfer.rows.size:
+                        rows = torch.as_tensor(transfer.rows,device=obs.device)
+                        target = transfer.targets(tick,obs[:,SENSOR_FRAME].cpu().numpy(),desired[rows].cpu().numpy())
+                        desired = desired.clone()
+                        desired[rows] = torch.as_tensor(target,device=obs.device,dtype=desired.dtype)
+                if tick >= VELOCITY_FIRST_TICK:
+                    desired = self.apply_unmatched_landing(obs,tick,desired)
             if loaded_hold:
                 desired = self.apply_loaded_hold(obs,tick,desired)
             if shear_feedback:
@@ -358,6 +379,8 @@ def worker():
         def apply_seat_shear(self,obs,tick,desired):
             if tick == MEASURE_UNTIL:
                 self.shear_feedback = SeatShearFeedback(self.seat_plane,normal_transfer,follow_descent,verify_contact)
+                if plane_demos is not None:
+                    self.shear_feedback.demonstrated = self.demo_transfer.index >= 0
             if tick < VELOCITY_FIRST_TICK:
                 return desired
             guard = self.shear_feedback
@@ -386,6 +409,26 @@ def worker():
             corrected = desired.clone()
             target = torch.as_tensor((guard.anchor+guard.delta)[guard.latched],device=obs.device)
             corrected[rows[:,None],legs] = target[:,legs]
+            return corrected
+
+        def apply_unmatched_landing(self,obs,tick,desired):
+            landing = self.landing
+            sensor = self.env.raw.scene['pelvis_seat'].data
+            weight = self.env.robot.data.body_mass.torch.sum(1)*9.81
+            load = (sensor.normal_force_matrix_w.torch.sum((1,2)).norm(dim=-1)/weight).cpu().numpy()
+            if tick % 2 == 0 or tick % 5 == 0:
+                unloaded = (self.shear_feedback.first < 0) & (self.demo_transfer.index < 0)
+                landing.update(tick,self.velocity_brake,load,unloaded,obs[:,SENSOR_FRAME].cpu().numpy(),
+                               self.env.previous[:,self.env.ids].cpu().numpy())
+            if tick == 999:
+                landing.save(self.env.out/'seat_normal_landing.npz')
+            active = np.flatnonzero(landing.start >= 0)
+            if not active.size:
+                return desired
+            rows = torch.as_tensor(active,device=obs.device)
+            legs = torch.as_tensor(self.seat_plane.legs,device=obs.device)
+            corrected = desired.clone()
+            corrected[rows[:,None],legs] = torch.as_tensor(landing.target[active][:,self.seat_plane.legs],device=obs.device)
             return corrected
 
         def apply_loaded_hold(self,obs,tick,desired):
