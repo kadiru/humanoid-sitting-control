@@ -88,7 +88,7 @@ class SeatPlaneApproach:
                 self.normal[row] = normal / np.linalg.norm(normal)
         self.active = np.flatnonzero(self.roll)
 
-    def correct(self, desired, frame, normal, roll, forward_m=0., pitch=0.):
+    def correct(self, desired, frame, normal, roll, forward_m=0., pitch=0., lateral_m=0., normal_m=0.):
         q = desired.astype(float, copy=True)
         q[self.legs] = np.clip(q[self.legs], self.lower, self.upper)
         feet = self.feet(q)
@@ -101,9 +101,13 @@ class SeatPlaneApproach:
         normal = axes @ normal
         rotate = Rotation.from_rotvec(roll * axes[:, 0] + pitch * axes[:, 1]).as_matrix()
         shift = normal * (np.min(self.vertices @ normal) - np.min(self.vertices @ rotate.T @ normal))
-        if forward_m:
+        if normal_m:
+            shift += normal_m * normal
+        if forward_m or lateral_m:
             tangent = axes[:, 0] - normal * (axes[:, 0] @ normal)
             shift += forward_m * tangent / np.linalg.norm(tangent)
+            if lateral_m:
+                shift += lateral_m * np.cross(normal, tangent / np.linalg.norm(tangent))
         positions = (feet[:, :3, 3] - shift) @ rotate
         rotations = rotate.T @ feet[:, :3, :3]
 

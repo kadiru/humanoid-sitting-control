@@ -155,6 +155,19 @@ def worker():
     velocity_braking = '--preload-velocity-brake' in sys.argv
     housing_clearance = '--housing-clearance' in sys.argv
     loaded_hold = '--loaded-clearance-hold' in sys.argv
+    shear_feedback = '--seat-shear-feedback' in sys.argv
+    normal_transfer = '--normal-load-transfer' in sys.argv
+    follow_descent = '--follow-normal-descent' in sys.argv
+    if follow_descent:
+        assert normal_transfer
+        sys.argv.remove('--follow-normal-descent')
+    if normal_transfer:
+        assert shear_feedback
+        sys.argv.remove('--normal-load-transfer')
+    if shear_feedback:
+        assert loaded_hold
+        sys.argv.remove('--seat-shear-feedback')
+        from seat_shear_feedback import SeatShearFeedback
     if loaded_hold:
         assert velocity_braking and seat_plane_approach and not housing_clearance
         sys.argv.remove('--loaded-clearance-hold')
@@ -334,7 +347,41 @@ def worker():
                 desired = self.apply_velocity_brake(obs,tick,desired)
             if loaded_hold:
                 desired = self.apply_loaded_hold(obs,tick,desired)
+            if shear_feedback:
+                desired = self.apply_seat_shear(obs,tick,desired)
             return (desired,*result[1:])
+
+        def apply_seat_shear(self,obs,tick,desired):
+            if tick == MEASURE_UNTIL:
+                self.shear_feedback = SeatShearFeedback(self.seat_plane,normal_transfer,follow_descent)
+            if tick < VELOCITY_FIRST_TICK:
+                return desired
+            guard = self.shear_feedback
+            brake = self.velocity_brake
+            if brake.active.size and np.any(brake.started >= 0):
+                sensor = self.env.raw.scene['pelvis_seat'].data
+                normal = sensor.normal_force_matrix_w.torch.sum((1,2)).cpu().numpy()
+                shear = sensor.friction_force_matrix_w.torch.sum((1,2)).cpu().numpy()
+                data = self.env.robot.data
+                rotation = Rotation.from_quat(data.root_quat_w.torch.cpu().numpy()).inv()
+                weight = (data.body_mass.torch.sum(1)*9.81).cpu().numpy()
+                braked = np.zeros(len(obs),dtype=bool)
+                braked[brake.active] = brake.started >= 0
+                guard.update(tick,rotation.apply(normal),rotation.apply(shear),weight,braked,
+                             self.loaded_hold,obs[:,SENSOR_FRAME].cpu().numpy(),desired.cpu().numpy(),
+                             self.env.previous[:,self.env.ids].cpu().numpy(),brake)
+            if tick == 999:
+                guard.save(self.env.out/'seat_shear_feedback.npz')
+            if not normal_transfer:
+                return desired + torch.as_tensor(guard.delta,device=obs.device)
+            rows = torch.as_tensor(np.flatnonzero(guard.latched),device=obs.device)
+            if not len(rows):
+                return desired
+            legs = torch.as_tensor(self.seat_plane.legs,device=obs.device)
+            corrected = desired.clone()
+            target = torch.as_tensor((guard.anchor+guard.delta)[guard.latched],device=obs.device)
+            corrected[rows[:,None],legs] = target[:,legs]
+            return corrected
 
         def apply_loaded_hold(self,obs,tick,desired):
             if tick == MEASURE_UNTIL:

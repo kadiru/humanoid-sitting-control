@@ -107,7 +107,16 @@ def evaluate(out, baseline, *, label='evaluation', bank=None, braking=None, inpu
         inputs = [HERE/'housing_clearance.py', *inputs]
     if braking == 'loaded_hold':
         options += ['--loaded-clearance-hold']
+    if '--loaded-clearance-hold' in options:
         inputs = [HERE/'loaded_clearance_hold.py', *inputs]
+    if braking in ('shear','normal_transfer','follow_descent'):
+        assert '--loaded-clearance-hold' in options and '--preload-velocity-brake' in options
+        options += ['--seat-shear-feedback']
+        if braking in ('normal_transfer','follow_descent'):
+            options += ['--normal-load-transfer']
+        if braking == 'follow_descent':
+            options += ['--follow-normal-descent']
+        inputs = [HERE/'seat_shear_feedback.py', *inputs]
     return stage(out, 'evaluation', bank, PREPARED/'library.npz', worker=worker, extra=options,
                  inputs=[*APPROACH, launcher, HERE/'touchdown_feedback.py', HERE/'prepare_sitting_repairs.py',
                          baseline/f'{label}.freeze.json', *option_inputs, *inputs], disk_reserve=DISK_RESERVE)
