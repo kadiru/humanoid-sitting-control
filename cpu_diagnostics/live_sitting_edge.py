@@ -148,6 +148,13 @@ def worker():
     touchdown = load_library('--touchdown-library')
     camera_touchdown = load_library('--camera-touchdown')
     plane_demos = load_library('--plane-demonstrations')
+    rim_motion = load_library('--rim-motion')
+    screen_motion = '--screen-rim-paths' in sys.argv
+    if screen_motion:
+        sys.argv.remove('--screen-rim-paths')
+    if rim_motion is not None:
+        from rim_motion import RimMotion
+        assert '--standing-rim' in sys.argv
     standing_rim = '--standing-rim' in sys.argv
     if standing_rim:
         import standing_rim as scan
@@ -402,6 +409,10 @@ def worker():
                 desired = self.apply_loaded_hold(obs,tick,desired)
             if shear_feedback:
                 desired = self.apply_seat_shear(obs,tick,desired)
+            if rim_motion is not None:
+                if tick == 0:
+                    self.rim_motion = RimMotion(rim_motion,len(obs),screen_motion)
+                desired = self.rim_motion.apply(self,obs,tick,desired)
             return (desired,*result[1:])
 
         def apply_seat_shear(self,obs,tick,desired):

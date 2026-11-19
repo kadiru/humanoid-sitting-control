@@ -29,6 +29,10 @@ def perception(folder):
 
 def trial(out,ref,reservation,bank=None):
     evaluate(out,ref,bank=bank,braking='standing_rim',inputs=[Path(__file__),reservation])
+    return comparison(out,ref)
+
+
+def comparison(out,ref):
     old,new=ref/'evaluation',out/'evaluation'
     manifests=[read(p/'manifest.json') for p in (old,new)]
     assert manifests[0]['bank_sha256']==manifests[1]['bank_sha256']
