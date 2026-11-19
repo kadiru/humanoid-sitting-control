@@ -155,6 +155,10 @@ def worker():
     if rim_motion is not None:
         from rim_motion import RimMotion
         assert '--standing-rim' in sys.argv
+    route_view = load_library('--approach-view')
+    if route_view is not None:
+        from approach_route_view import ApproachView
+        assert rim_motion is not None and camera_touchdown is not None
     standing_rim = '--standing-rim' in sys.argv
     if standing_rim:
         import standing_rim as scan
@@ -258,6 +262,9 @@ def worker():
                 depth = depth.copy()
                 mount = scan_mount
                 tilted = scan.exposure(self,support,mount,depth)
+                if route_view is not None:
+                    self.nominal_approach = [estimate_edge(self.model, depth[i], k[i], support.REAR_CAMERA,
+                        q[i], gravity[i], self.geometry[i]) for i in range(self.num_envs)]
                 self.standing_samples.append((tick,tilted,k.copy(),q.copy(),gravity.copy(),self.geometry.copy(),rs,root,mount))
             for i in range(self.num_envs):
                 if scanning:
@@ -325,7 +332,7 @@ def worker():
             self.debt = np.zeros(len(obs))
 
         def live_selection(self,tick,base):
-            recent = self.env.live
+            recent = self.routed_live or self.env.live
             if recent is None or recent[0]==self.last_frame:
                 return
             self.last_frame, frames = recent
@@ -357,6 +364,19 @@ def worker():
 
         @torch.no_grad()
         def choose(self,obs,stochastic=True):
+            self.routed_live = None
+            if route_view is not None:
+                tick = int(self.env.episode_length_buf[0])
+                if tick == 0:
+                    self.approach_view = ApproachView(len(obs),route_view)
+                if tick in scan.SCAN_TICKS:
+                    observed, downward = self.env.live
+                    assert observed == tick
+                    self.approach_view.record(tick,downward,self.env.nominal_approach,self.env.geometry)
+                    if tick == CAMERA_ROUTE_TICK:
+                        self.routed_live = self.approach_view.resolve(self)
+                        np.savez(self.env.out/'approach_view.npz',nominal=self.approach_view.nominal,
+                                 separate_feedback_rows=np.array(list(self.approach_view.feedback),dtype=int))
             result = self.live_choose(obs,stochastic)
             if touchdown is None:
                 return result
@@ -573,6 +593,9 @@ def worker():
                 for row,history in enumerate(self.camera_history):
                     if camera_route_measurement(history) is not None:
                         self.feedback_seat[row] = np.median(history,axis=0)
+                if route_view is not None:
+                    for row,measured in self.approach_view.feedback.items():
+                        self.feedback_seat[row] = measured
             if tick==999:
                 self.contact_feedback.save(self.env.out/'touchdown_feedback.npz')
             if FIRST_TICK<=tick<=LAST_TICK and self.contact_feedback.active.size:
@@ -609,7 +632,7 @@ def worker():
                 self.camera_handoff_error = np.full(len(obs),np.nan)
                 self.adjusted_approach = np.zeros(len(obs),bool)
             if tick<=CAMERA_ROUTE_TICK and self.env.live is not None:
-                observed_tick, measurements = self.env.live
+                observed_tick, measurements = self.routed_live or self.env.live
                 if observed_tick!=self.camera_seen_tick:
                     self.camera_seen_tick = observed_tick
                     for i,measured in enumerate(measurements):

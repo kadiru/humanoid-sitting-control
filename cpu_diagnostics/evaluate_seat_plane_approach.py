@@ -70,7 +70,7 @@ def saved_witness(bank, baseline, out):
         trajectory_sha256=sha(baseline/'evaluation/trajectory.npz')))
 
 
-def evaluate(out, baseline, *, label='evaluation', bank=None, braking=None, inputs=(), plane_demos=None, rim_motion=None, screen_motion=False):
+def evaluate(out, baseline, *, label='evaluation', bank=None, braking=None, inputs=(), plane_demos=None, rim_motion=None, screen_motion=False, approach_view=None):
     source = read(baseline/f'{label}.freeze.json')
     command = source['command']
     grip = command.index('evaluate', 3)
@@ -101,6 +101,13 @@ def evaluate(out, baseline, *, label='evaluation', bank=None, braking=None, inpu
         inputs = [plane_demos,*inputs]
     if '--plane-demonstrations' in options:
         inputs = [HERE/'seat_plane_demonstration.py',HERE/'seat_normal_landing.py',*inputs]
+    if approach_view is not None:
+        assert '--standing-rim' in options and '--rim-motion' in options
+        assert '--screen-rim-paths' not in options and '--approach-view' not in options
+        options += ['--approach-view', str(approach_view)]
+        inputs = [HERE/'approach_route_view.py', approach_view, *inputs]
+    if '--rim-motion' in options:
+        inputs = [HERE/'rim_motion.py', HERE/'standing_rim.py', *inputs]
     if rim_motion is not None:
         options += ['--rim-motion', str(rim_motion)]
         inputs = [HERE/'rim_motion.py', rim_motion, *inputs]
