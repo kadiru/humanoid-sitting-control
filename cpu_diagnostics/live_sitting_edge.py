@@ -148,6 +148,11 @@ def worker():
     touchdown = load_library('--touchdown-library')
     camera_touchdown = load_library('--camera-touchdown')
     plane_demos = load_library('--plane-demonstrations')
+    standing_rim = '--standing-rim' in sys.argv
+    if standing_rim:
+        import standing_rim as scan
+        sys.argv.remove('--standing-rim')
+        scan_mount = scan.configure_scan(support)
     guard_landing = '--guard-normal-landing' in sys.argv
     if guard_landing:
         assert plane_demos is not None and '--verify-grip-contact' in sys.argv
@@ -216,6 +221,7 @@ def worker():
         def __init__(self,*args,**kwargs):
             self.edge_frames = []
             self.camera_samples = []
+            self.standing_samples = []
             self.touch = []
             self.live = None
             super().__init__(*args,**kwargs)
@@ -240,8 +246,17 @@ def worker():
             if housing_clearance and tick <= MEASURE_UNTIL:
                 self.clearance_planes = np.stack([seat_top_plane(self.model,depth[i],k[i],support.REAR_CAMERA,
                     q[i],gravity[i],self.geometry[i]) for i in range(self.num_envs)])
+            scanning = standing_rim and tick in scan.SCAN_TICKS
+            if scanning:
+                depth = depth.copy()
+                mount = scan_mount
+                tilted = scan.exposure(self,support,mount,depth)
+                self.standing_samples.append((tick,tilted,k.copy(),q.copy(),gravity.copy(),self.geometry.copy(),rs,root,mount))
             for i in range(self.num_envs):
-                measured = estimate_edge(self.model,depth[i],k[i],support.REAR_CAMERA,q[i],gravity[i],self.geometry[i])
+                if scanning:
+                    measured = scan.measure(self.model,tilted[i],k[i],mount,q[i],gravity[i],self.geometry[i])
+                else:
+                    measured = estimate_edge(self.model,depth[i],k[i],support.REAR_CAMERA,q[i],gravity[i],self.geometry[i])
                 live.append(measured)
                 if measured is None:
                     rows.append([np.nan]*7)
@@ -251,8 +266,16 @@ def worker():
                 rotation = Rotation.from_quat(spec['rotation_xyzw']).as_matrix()
                 actual = np.asarray(spec['top_center'])+rotation[:,0]*spec['depth']/2
                 foot_edge = ((actual-root[i])@rs[i]-measured['feet_center'])@measured['forward']
+                if scanning:
+                    foot_edge = scan.true_intercept(spec,root[i],rs[i],measured)
                 rows.append([measured['edge'],foot_edge,measured['span'],measured['samples'],
                              measured['height'],measured['pitch'],float(measured['direct'])])
+            if scanning and tick == scan.SCAN_TICKS[-1]:
+                np.savez_compressed(self.out/'standing_scan.npz',**dict(zip(
+                    ('ticks','depth','intrinsics','q','gravity','planes','rotation','root','mount'),
+                    map(np.asarray,zip(*self.standing_samples)))))
+                np.savez_compressed(self.out/'standing_rims.npz',
+                                    values=np.asarray([v for t,v in self.edge_frames if t in scan.SCAN_TICKS]+[rows]))
             self.edge_frames.append((tick,rows))
             self.live = (tick,live)
             if tick in (0,200,400,500,600,700):

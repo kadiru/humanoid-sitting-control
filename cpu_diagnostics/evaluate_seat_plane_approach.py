@@ -101,6 +101,9 @@ def evaluate(out, baseline, *, label='evaluation', bank=None, braking=None, inpu
         inputs = [plane_demos,*inputs]
     if '--plane-demonstrations' in options:
         inputs = [HERE/'seat_plane_demonstration.py',HERE/'seat_normal_landing.py',*inputs]
+    if braking == 'standing_rim':
+        options += ['--standing-rim']
+        inputs = [HERE/'standing_rim.py', *inputs]
     if braking == 'guard_landing':
         assert '--plane-demonstrations' in options and '--guard-normal-landing' not in options
         options += ['--guard-normal-landing']
