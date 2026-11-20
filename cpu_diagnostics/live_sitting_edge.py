@@ -155,6 +155,10 @@ def worker():
     if rim_motion is not None:
         from rim_motion import RimMotion
         assert '--standing-rim' in sys.argv
+    contact_motion = load_library('--chair-contact-motion')
+    if contact_motion is not None:
+        from chair_contact_motion import ChairContactMotion
+        assert rim_motion is not None and '--standing-rim' in sys.argv
     route_view = load_library('--approach-view')
     if route_view is not None:
         from approach_route_view import ApproachView
@@ -433,6 +437,10 @@ def worker():
                 if tick == 0:
                     self.rim_motion = RimMotion(rim_motion,len(obs),screen_motion)
                 desired = self.rim_motion.apply(self,obs,tick,desired)
+            if contact_motion is not None:
+                if tick == 0:
+                    self.contact_motion = ChairContactMotion(contact_motion,len(obs))
+                desired = self.contact_motion.apply(self,obs,tick,desired)
             return (desired,*result[1:])
 
         def apply_seat_shear(self,obs,tick,desired):
