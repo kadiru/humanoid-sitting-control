@@ -94,17 +94,37 @@ class ChairContactMotion:
             self.measurements.append((rims, env.geometry.copy(), depth_tiles(env.standing_samples[-1][1])))
         if tick == SCAN_TICKS[-1]:
             rims, planes, tiles = map(np.asarray, zip(*self.measurements, strict=True))
-            for i in range(len(obs)):
-                self.selected[i] = select(descriptor(rims[:, i], planes[:, i], tiles[:, i]), self.library)
+            descriptors = np.array([descriptor(rims[:, i], planes[:, i], tiles[:, i]) for i in range(len(obs))])
+            original = np.array([select(f, self.library) for f in descriptors])
+            self.selected = original.copy()
+            if 'sweep_ids' in self.library:
+                from hold_clearance import LiveGuard, choose
+                self.selected = np.array([choose(f, int(p), self.library)
+                                          for f,p in zip(descriptors, original, strict=True)])
+                self.guard = LiveGuard(learner.env.model, learner.env.metadata, descriptors,
+                                       self.selected, original, self.library)
             self.rows = np.flatnonzero(self.selected >= 0)
             self.paths = torch.as_tensor(self.library['paths'][self.selected[self.rows]], device=obs.device)
+        guard = getattr(self,'guard',None)
+        if guard is not None and tick >= 250 and (tick % 5 == 0 or tick == 999):
+            guard.update(tick, obs[:,222:333].detach().cpu().numpy())
+            if tick == 999:
+                np.savez_compressed(learner.env.out/'hold_guard.npz',trace=np.array(guard.trace).reshape(-1,8),
+                                    columns=['tick','row','housing_gap_m','cap_gap_m','patch_speed_m_s',
+                                             'housing_warning','grip_warning','delay_ticks'])
         if tick == 999:
             np.savez_compressed(learner.env.out/'chair_contact_motion.npz', selected=self.selected,
                                 sources=self.library['ids'])
         if tick < 50 or not len(self.rows):
             return nominal
         phase = np.clip((tick-50) / 100., 0., 1.)
-        target = self.paths[:, tick]
+        if guard is not None and np.any(guard.delay[self.rows]):
+            # Paths from tick 750 contain the reference minus the live actor.
+            # Keep the original residual convention on both sides of this boundary.
+            times = np.maximum(750 if tick >= 750 else 0, tick-guard.delay[self.rows])
+            target = self.paths[torch.arange(len(times),device=obs.device),torch.as_tensor(times,device=obs.device)]
+        else:
+            target = self.paths[:, tick]
         if tick >= 750:
             target = target + learner.actor(learner.normalize(obs))[self.rows]
         out = nominal.clone()
