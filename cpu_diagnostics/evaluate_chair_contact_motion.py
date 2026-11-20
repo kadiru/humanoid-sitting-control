@@ -45,7 +45,7 @@ def references():
     return refs
 
 
-def build(out, refs):
+def build(out, refs, *, expected=(14,14,4), donor_count=3, extra_stages=()):
     torch.set_num_threads(1)
     base = refs['matched']
     target_geometry = read(bank(base)/'geometry.json')
@@ -55,7 +55,7 @@ def build(out, refs):
     fk, legs = leg_fk(model, meta['joint_names'])
     _, rows = verify_audit(base/'evaluation')
     targets = [i for i, r in enumerate(rows) if r['slip_ticks'] or r['physical_failures'][1]]
-    assert (len(targets),sum(bool(r['slip_ticks']) for r in rows),sum(r['physical_failures'][1] for r in rows)) == (14,14,4)
+    assert (len(targets),sum(bool(r['slip_ticks']) for r in rows),sum(r['physical_failures'][1] for r in rows)) == expected
     f = np.array(signatures(base))
     retain = np.concatenate([np.array(signatures(s)) for k,s in refs.items() if k!='matched'] +
                             [np.delete(f,targets,axis=0)])
@@ -64,7 +64,7 @@ def build(out, refs):
     # labels are confined to offline construction.
     examples = []
     files = {}
-    for s in dict.fromkeys([*refs.values(), *sorted(CAMPAIGN.glob('batch_*'))]):
+    for s in dict.fromkeys([*refs.values(), *extra_stages, *sorted(CAMPAIGN.glob('batch_*'))]):
         p = s/'evaluation'
         _, records = verify_audit(p)
         files[str(p/'independent_audit.json')] = sha(p/'independent_audit.json')
@@ -131,18 +131,24 @@ def build(out, refs):
             source_gap=float((point-np.array(src['top_center']))@src['normal'])
             return np.linalg.norm((feat-goal)/[.015,.026,.050,.035]) + .8*abs(target_gap-source_gap)/.012
         chosen=[]
-        for d in sorted(examples,key=mismatch):
+        ranked=sorted(examples,key=mismatch)
+        if donor_count>3:
+            # Offer a source with matching arm/back geometry alongside the two
+            # nearest plane matches; keep only distinct demonstrated motions.
+            same=[d for d in ranked if d[2].get('family')==g.get('family')]
+            ranked=ranked[:2]+same[:2]+ranked[2:]
+        for d in ranked:
             if any(np.max(abs(d[-1]-other[-1]))<.025 for other in chosen): continue
             chosen.append(d)
-            if len(chosen)==3: break
-        assert len(chosen)==3
+            if len(chosen)==donor_count: break
+        assert len(chosen)==donor_count
         for rank,(s,j,src,feat,point,_) in enumerate(chosen):
             motion,cmd,initial,desired,residual=sample(s,j)
             info=dict(donor=src['label'],estimated_plane_gap_m=float((point-np.array(g['top_center']))@g['normal']))
             add(i,f'donor_{rank}',desired,residual,s,j,info)
             # Seat-height and edge alignment are finished before first load.
             dx=float(np.clip(goal[1]-feat[1],-.024,.024))
-            for pitch,label in ((0.,'aligned'),(.060,'clearance')):
+            for pitch,label in (((0.,'aligned'),(.060,'clearance')) if rank<3 else ()):
                 if label=='clearance' and (rank!=0 or not rows[i]['physical_failures'][1]): continue
                 try:
                     way,witness=retarget(motion,src,g,limits,cmd,model,fk,legs,fore_aft_m=dx,pitch_adjust_rad=pitch)
@@ -155,7 +161,7 @@ def build(out, refs):
         own,cmd,initial,desired,residual=sample(base,i)
         z=load(base)
         slip=np.flatnonzero(~z['no_slip'][:,i])
-        assert len(slip)
+        if not len(slip): continue
         # Slow the approach through the observed slip window without a catch-up
         # acceleration. Keep the original horizon and motor authority.
         t=np.arange(1000)

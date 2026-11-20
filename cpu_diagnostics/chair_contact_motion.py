@@ -37,7 +37,32 @@ def distances(observed, examples):
     return out
 
 
+def select_extension(observed, library):
+    sites = library['sites']
+    cost = distances(observed, sites) / library['site_radius']
+    # Interpolate only between two measured clean executions of the same
+    # motor path, inside its validated interval of directly observed planes.
+    links = library['links']
+    if len(links) and np.isfinite(observed[0]):
+        a, b = sites[links[:,0]], sites[links[:,1]]
+        span = (b[:,:4]-a[:,:4])/CAPTURE
+        t = np.sum((observed[:4]-a[:,:4])/CAPTURE*span,axis=1)/np.sum(span**2,axis=1)
+        interior = (t>0) & (t<1)
+        if interior.any():
+            expected = a[interior]+t[interior,None]*(b[interior]-a[interior])
+            # Keep a narrower tolerance across the segment than at a tested site.
+            cross = distances(observed,expected)/.65
+            np.minimum.at(cost,links[interior,0],cross)
+    j = int(cost.argmin()) if len(cost) else -1
+    if j<0 or cost[j]>1.: return -1
+    protected = distances(observed,library['protected']).min(initial=np.inf)
+    return int(library['site_paths'][j]) if cost[j]+.10<protected else -1
+
+
 def select(observed, library):
+    if 'sites' in library:
+        added = select_extension(observed,library)
+        if added>=0: return added
     d = distances(observed, library['features'])
     if not np.isfinite(d).any():
         return -1

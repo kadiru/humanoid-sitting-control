@@ -102,8 +102,11 @@ def evaluate(out, baseline, *, label='evaluation', bank=None, braking=None, inpu
     if '--plane-demonstrations' in options:
         inputs = [HERE/'seat_plane_demonstration.py',HERE/'seat_normal_landing.py',*inputs]
     if contact_motion is not None:
-        assert '--approach-view' in options and '--chair-contact-motion' not in options
-        options += ['--chair-contact-motion', str(contact_motion)]
+        assert '--approach-view' in options
+        if '--chair-contact-motion' in options:
+            options[options.index('--chair-contact-motion')+1] = str(contact_motion)
+        else:
+            options += ['--chair-contact-motion', str(contact_motion)]
         inputs = [HERE/'chair_contact_motion.py', contact_motion, *inputs]
     if approach_view is not None:
         assert '--standing-rim' in options and '--rim-motion' in options
