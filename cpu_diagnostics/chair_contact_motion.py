@@ -59,7 +59,7 @@ def select_extension(observed, library):
     return int(library['site_paths'][j]) if cost[j]+.10<protected else -1
 
 
-def select(observed, library):
+def select_incumbent(observed, library):
     if 'sites' in library:
         added = select_extension(observed,library)
         if added>=0: return added
@@ -69,6 +69,14 @@ def select(observed, library):
     j = int(d.argmin())
     keep = distances(observed, library['retain']).min(initial=np.inf)
     return j if d[j] <= 1. and d[j] + .10 < keep else -1
+
+
+def select(observed, library):
+    existing = select_incumbent(observed, library)
+    if existing >= 0 or 'landing_scans' not in library:
+        return existing
+    from scan_landing import select_landing
+    return select_landing(observed, library)
 
 
 class ChairContactMotion:
