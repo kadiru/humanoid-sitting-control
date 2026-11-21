@@ -19,6 +19,10 @@ def install(launcher, options, profile_path):
     from chair_contact_motion import distances, descriptor
 
     profile = read(profile_path)
+    if 'local_leg_routes' in profile:
+        from stool_landing_routes import StoolLandingRoutes
+        routes = StoolLandingRoutes(profile['local_leg_routes'])
+        routes.install()
     nominal_motion = ChairContactMotion.apply
 
     def apply(motion, learner, obs, tick, nominal):
@@ -68,6 +72,12 @@ def install(launcher, options, profile_path):
                 if tick == 350:
                     env.touchdown_tangent = PlantedTransfer(env.num_envs)
                 planted = env.touchdown_tangent.apply(learner, obs, tick, arms)
+                if 'clearance_reference' in profile.get('local_leg_routes', {}):
+                    from landing_clearance_track import LandingClearanceTrack
+                    if tick == 350:
+                        reference = profile['local_leg_routes']['clearance_reference']
+                        env.clearance_tracker = LandingClearanceTrack(motion, learner, routes, reference)
+                    planted = env.clearance_tracker.apply(learner, obs, tick, planted)
                 return torch.where(env.demonstrated_approach[:, None], arms, planted)
             return arms
         if tick >= start:
@@ -95,6 +105,10 @@ def evaluate(out, profile):
         inputs.append(Path(__file__).with_name('posture_shear_relief.py'))
     if 'steady_support' in settings:
         inputs.append(Path(__file__).with_name('supported_lap_motion.py'))
+    if 'local_leg_routes' in settings:
+        inputs.append(Path(__file__).with_name('stool_landing_routes.py'))
+        if 'clearance_reference' in settings['local_leg_routes']:
+            inputs.append(Path(__file__).with_name('landing_clearance_track.py'))
     if 'demonstrated_landing' in settings:
         inputs.extend(Path(__file__).with_name(name) for name in
                       ('demonstrated_landing.py','planted_transfer.py','touchdown_tangent.py'))
