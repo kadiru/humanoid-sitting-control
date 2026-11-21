@@ -42,7 +42,12 @@ def install(launcher, options, profile_path):
                 active &= torch.tensor(masks,device=latent.device)
             env.arm_active = active
             env.arm_goal = torch.tensor(profile['target_rad'],dtype=latent.dtype,device=latent.device)
+            if 'steady_support' in profile:
+                from supported_lap_motion import SupportedLapMotion
+                env.supported_lap = SupportedLapMotion(env, profile['steady_support'])
             write(env.out/'arm_assignment.json',dict(tick=tick,active=active.tolist(),joint_indices=indices))
+        if tick >= start and 'steady_support' in profile:
+            return env.supported_lap.apply(env, tick, latent)
         if tick >= start:
             elapsed = np.clip((tick-start)/profile['duration_ticks'],0.,1.)
             blend = float(elapsed**2*(3.-2.*elapsed))
@@ -63,6 +68,8 @@ def evaluate(out, profile):
     previous = f['command']
     inputs = [Path(k) for k in f['inputs']]
     assert all(sha(p)==f['inputs'][str(p)] for p in inputs)
+    if 'steady_support' in read(profile):
+        inputs.append(Path(__file__).with_name('supported_lap_motion.py'))
     bank = Path(previous[previous.index('--bank')+1])
     options = previous[3:previous.index('--mode')]
     assert options[0]=='--worker'
