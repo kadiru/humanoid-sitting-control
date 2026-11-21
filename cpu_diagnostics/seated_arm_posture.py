@@ -23,6 +23,7 @@ def install(launcher, options, profile_path):
         from stool_landing_routes import StoolLandingRoutes
         routes = StoolLandingRoutes(profile['local_leg_routes'])
         routes.install()
+    preload_arm_target = profile.get('demonstrated_landing', {}).get('preload_arm_target_rad')
     nominal_motion = ChairContactMotion.apply
 
     def apply(motion, learner, obs, tick, nominal):
@@ -47,7 +48,12 @@ def install(launcher, options, profile_path):
             if 'demonstrated_landing' in profile:
                 from demonstrated_landing import select_landing
                 rims = [sample[0] for sample in motion.measurements]
-                selected = select_landing(rims, profile['demonstrated_landing'])
+                landing = profile['demonstrated_landing']
+                selected = select_landing(rims, landing)
+                # The recorded arm approach belongs to its original leg motion.
+                if 'motion_id' in landing:
+                    paths = motion.selected
+                    selected &= (paths >= 0) & (motion.library['ids'][paths] == landing['motion_id'])
                 env.demonstrated_approach = active & torch.as_tensor(selected, device=latent.device)
                 write(env.out/'demonstrated_approach.json', dict(active=env.demonstrated_approach.tolist()))
             env.arm_active = active
@@ -55,13 +61,17 @@ def install(launcher, options, profile_path):
             if 'steady_support' in profile:
                 from supported_lap_motion import SupportedLapMotion
                 env.supported_lap = SupportedLapMotion(env, profile['steady_support'])
+                if preload_arm_target is not None:
+                    lap = env.supported_lap
+                    tucked = lap.start_pose.new_tensor(preload_arm_target)
+                    lap.side_pose = torch.where(env.demonstrated_approach[:, None], tucked, lap.side_pose)
                 if 'posture_shear' in profile:
                     from posture_shear_relief import PostureShearRelief
                     env.posture_shear = PostureShearRelief(env, profile['posture_shear'])
             write(env.out/'arm_assignment.json',dict(tick=tick,active=active.tolist(),joint_indices=indices))
         if tick >= start and 'steady_support' in profile:
             arms = env.supported_lap.apply(env, tick, latent)
-            if 'demonstrated_landing' in profile:
+            if 'demonstrated_landing' in profile and preload_arm_target is None:
                 # Use the demonstrated arm approach until the existing seat-load latch opens.
                 restore = env.demonstrated_approach & ~env.supported_lap.started
                 arms[:,env.arm_indices] = torch.where(restore[:,None], latent[:,env.arm_indices], arms[:,env.arm_indices])

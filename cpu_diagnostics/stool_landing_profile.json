@@ -45,6 +45,11 @@
     "max_correction_rad": 0.1
   },
   "demonstrated_landing": {
+    "preload_arm_target_rad": [
+      0.14232, 0.98237, -0.69, 0.985238, -0.249999,
+      0.14232, -0.98237, 0.69, 0.985238, -0.249999
+    ],
+    "motion_id": "landing_holdout/round_stool/1",
     "rim_m_m_deg": [
       -0.2360041320544561,
       0.2366057287741929,
@@ -106,6 +111,17 @@
         ],
         "radius": 0.5016875380451044,
         "from_motion": "donor_2 continuity_holdout/backless_bench/1",
+        "to_motion": "continuity_holdout/round_stool/1"
+      },
+      {
+        "scan": [
+          -0.2288219103759665,
+          0.22721429190408543,
+          14.505102407552254,
+          -0.0592220313847065
+        ],
+        "radius": 0.19213644531952528,
+        "from_motion": "continuity_holdout/round_stool/1",
         "to_motion": "continuity_holdout/round_stool/1"
       }
     ],
