@@ -40,6 +40,12 @@ def install(launcher, options, profile_path):
                     scan = descriptor(rims[:,i],planes[:,i],tiles[:,i])
                     masks.append(distances(scan,np.array(profile['sites'],float)).min(initial=np.inf)<.50)
                 active &= torch.tensor(masks,device=latent.device)
+            if 'demonstrated_landing' in profile:
+                from demonstrated_landing import select_landing
+                rims = [sample[0] for sample in motion.measurements]
+                selected = select_landing(rims, profile['demonstrated_landing'])
+                env.demonstrated_approach = active & torch.as_tensor(selected, device=latent.device)
+                write(env.out/'demonstrated_approach.json', dict(active=env.demonstrated_approach.tolist()))
             env.arm_active = active
             env.arm_goal = torch.tensor(profile['target_rad'],dtype=latent.dtype,device=latent.device)
             if 'steady_support' in profile:
@@ -51,8 +57,18 @@ def install(launcher, options, profile_path):
             write(env.out/'arm_assignment.json',dict(tick=tick,active=active.tolist(),joint_indices=indices))
         if tick >= start and 'steady_support' in profile:
             arms = env.supported_lap.apply(env, tick, latent)
+            if 'demonstrated_landing' in profile:
+                # Use the demonstrated arm approach until the existing seat-load latch opens.
+                restore = env.demonstrated_approach & ~env.supported_lap.started
+                arms[:,env.arm_indices] = torch.where(restore[:,None], latent[:,env.arm_indices], arms[:,env.arm_indices])
             if 'posture_shear' in profile:
-                return env.posture_shear.apply(learner, tick, arms)
+                arms = env.posture_shear.apply(learner, tick, arms)
+            if 'demonstrated_landing' in profile and tick >= 350:
+                from planted_transfer import PlantedTransfer
+                if tick == 350:
+                    env.touchdown_tangent = PlantedTransfer(env.num_envs)
+                planted = env.touchdown_tangent.apply(learner, obs, tick, arms)
+                return torch.where(env.demonstrated_approach[:, None], arms, planted)
             return arms
         if tick >= start:
             elapsed = np.clip((tick-start)/profile['duration_ticks'],0.,1.)
@@ -79,6 +95,9 @@ def evaluate(out, profile):
         inputs.append(Path(__file__).with_name('posture_shear_relief.py'))
     if 'steady_support' in settings:
         inputs.append(Path(__file__).with_name('supported_lap_motion.py'))
+    if 'demonstrated_landing' in settings:
+        inputs.extend(Path(__file__).with_name(name) for name in
+                      ('demonstrated_landing.py','planted_transfer.py','touchdown_tangent.py'))
     bank = Path(previous[previous.index('--bank')+1])
     options = previous[3:previous.index('--mode')]
     assert options[0]=='--worker'

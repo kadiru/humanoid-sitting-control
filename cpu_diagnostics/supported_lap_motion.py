@@ -12,6 +12,12 @@ class SupportedLapMotion:
         self.started = torch.zeros_like(self.weight, dtype=torch.bool)
         self.load_history = []
         self.advance_history = []
+        self.approach = settings.get('rib_side_approach')
+        if self.approach:
+            self.start_pose = env.previous[:, env.ids][:, env.arm_indices].clone()
+            self.side_pose = self.start_pose.new_tensor(self.approach['target_rad'])
+            self.phase = 0.0
+            self.start_tick = env.t
 
     def apply(self, env, tick, nominal):
         from common import FILTER, STEP
@@ -33,8 +39,19 @@ class SupportedLapMotion:
         cap = (STEP * ramp * advance)[:, None]
         delta = torch.clamp(env.arm_goal - previous, -cap, cap)
         requested = previous + delta / FILTER
+        approach = nominal[:, env.arm_indices]
+        if self.approach:
+            # Preserve the standing reset. Ease the elbows in during approach.
+            # The forward target remains under the separate seat-load gate.
+            age = tick - self.start_tick
+            duration = self.approach['duration_ticks']
+            ease = self.approach['ease_ticks']
+            speed = max(0., min(1., age / ease, (duration - age) / ease))
+            self.phase = min(1., self.phase + speed / (duration - ease))
+            rib_side = torch.lerp(self.start_pose, self.side_pose, self.phase)
+            approach = torch.where(env.arm_active[:, None], rib_side, approach)
         result = nominal.clone()
-        result[:, env.arm_indices] = torch.where(self.started[:, None], requested, nominal[:, env.arm_indices])
+        result[:, env.arm_indices] = torch.where(self.started[:, None], requested, approach)
         self.load_history.append(load.detach())
         self.advance_history.append(advance.detach())
         if tick == 999:
