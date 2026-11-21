@@ -45,9 +45,15 @@ def install(launcher, options, profile_path):
             if 'steady_support' in profile:
                 from supported_lap_motion import SupportedLapMotion
                 env.supported_lap = SupportedLapMotion(env, profile['steady_support'])
+                if 'posture_shear' in profile:
+                    from posture_shear_relief import PostureShearRelief
+                    env.posture_shear = PostureShearRelief(env, profile['posture_shear'])
             write(env.out/'arm_assignment.json',dict(tick=tick,active=active.tolist(),joint_indices=indices))
         if tick >= start and 'steady_support' in profile:
-            return env.supported_lap.apply(env, tick, latent)
+            arms = env.supported_lap.apply(env, tick, latent)
+            if 'posture_shear' in profile:
+                return env.posture_shear.apply(learner, tick, arms)
+            return arms
         if tick >= start:
             elapsed = np.clip((tick-start)/profile['duration_ticks'],0.,1.)
             blend = float(elapsed**2*(3.-2.*elapsed))
@@ -68,7 +74,10 @@ def evaluate(out, profile):
     previous = f['command']
     inputs = [Path(k) for k in f['inputs']]
     assert all(sha(p)==f['inputs'][str(p)] for p in inputs)
-    if 'steady_support' in read(profile):
+    settings = read(profile)
+    if 'posture_shear' in settings:
+        inputs.append(Path(__file__).with_name('posture_shear_relief.py'))
+    if 'steady_support' in settings:
         inputs.append(Path(__file__).with_name('supported_lap_motion.py'))
     bank = Path(previous[previous.index('--bank')+1])
     options = previous[3:previous.index('--mode')]
