@@ -14,12 +14,14 @@ class LandingClearanceTrack:
             for key in ('gap_m', 'seat_load_bw')
         ])
         self.rows = []
+        self.forward = np.zeros(env.num_envs)
         for row in learner.velocity_brake.active:
             selected = motion.selected[row]
             observed = descriptor(rims[:, row], planes[:, row], tiles[:, row])
             rule = routes.match(observed)
             if selected >= 0 and rule is not None and motion.library['ids'][selected] == rule['to_motion']:
                 self.rows.append(row)
+                self.forward[row] = rule.get('forward_shift_m', 0.)
         self.initial_error = np.zeros(env.num_envs)
         self.integral = np.zeros(env.num_envs)
         self.depth = np.zeros(env.num_envs)
@@ -28,7 +30,7 @@ class LandingClearanceTrack:
 
     def apply(self, learner, obs, tick, nominal):
         from common import DT
-        from seat_plane_approach import SENSOR_FRAME
+        from seat_plane_approach import SENSOR_FRAME, stance_axes
 
         env = learner.env
         kin = learner.contact_feedback
@@ -53,14 +55,22 @@ class LandingClearanceTrack:
                 self.integral[row] = np.clip(self.integral[row] + step, -.010, .010)
             desired = np.clip(self.initial_error[row] * ease + self.integral[row], -.022, .022)
             self.depth[row] += np.clip(desired - self.depth[row], -DT * .015, DT * .015)
-            if self.depth[row]:
+            if self.depth[row] or self.forward[row]:
                 frame = obs[row, SENSOR_FRAME].cpu().numpy()
                 joints = frame[:23].astype(float)
                 down = frame[69:72].astype(float)
                 down /= np.linalg.norm(down)
                 if row not in self.mapping or tick % 5 == 0:
                     self.mapping[row] = kin.foot_translation(joints, kin.feet(joints))
-                delta = self.mapping[row] @ (down * self.depth[row])
+                displacement = down * self.depth[row]
+                if self.forward[row]:
+                    feet = kin.feet(joints)
+                    axes = stance_axes(feet, down)
+                    normal = axes @ learner.seat_plane.normal[row]
+                    tangent = axes[:, 0] - normal * np.dot(axes[:, 0], normal)
+                    tangent /= np.linalg.norm(tangent)
+                    displacement += tangent * (ease * self.forward[row])
+                delta = self.mapping[row] @ displacement
                 delta /= max(1., np.abs(delta).max() / .10)
                 if result is nominal:
                     result = nominal.clone()

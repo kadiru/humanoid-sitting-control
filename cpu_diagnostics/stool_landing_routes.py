@@ -7,11 +7,17 @@ class StoolLandingRoutes:
         self.rules = settings['sites']
         self.sites = np.asarray([rule['scan'] for rule in self.rules])
         self.scale = np.asarray(settings['scale'])
+        self.extensions = [(region, np.asarray(region['scans'])) for region in settings.get('extensions', [])]
 
     def match(self, observed):
         geometry = observed[:4]
         if not np.isfinite(geometry).all():
             return None
+        # Each measured region ends before the nearest protected scan.
+        for region, scans in self.extensions:
+            distance = np.linalg.norm((scans[:, :4] - geometry) / self.scale, axis=1)
+            if np.any(distance <= scans[:, 4]):
+                return region
         distance = np.linalg.norm((self.sites - geometry) / self.scale, axis=1)
         index = int(np.argmin(distance))
         rule = self.rules[index]
@@ -25,7 +31,9 @@ class StoolLandingRoutes:
         def choose_landing(observed, original, library):
             previous = prior_choose(observed, original, library)
             rule = self.match(observed)
-            if previous < 0 or rule is None or library['ids'][previous] != rule['from_motion']:
+            if rule is None:
+                return previous
+            if 'from_motion' in rule and (previous < 0 or library['ids'][previous] != rule['from_motion']):
                 return previous
             matches = np.flatnonzero(library['ids'] == rule['to_motion'])
             if len(matches) != 1:
