@@ -1,78 +1,70 @@
-# Humanoid sitting and supported leaning
+# Teach a humanoid to rest.
 
-Can a Unitree G1 find a chair behind it, transfer weight onto it, and stay balanced? This project studies sitting and rear-supported leaning in Isaac Lab. A simulated rear depth camera locates the support. A whole-body controller coordinates 23 joints as the robot moves from standing into contact.
+Sitting is a controlled transfer of weight. A robot must find the support behind it, approach without slipping, make the right contact, and remain balanced as the chair takes load.
 
-![Simulated Unitree G1 leaning against the back of a box armchair](docs/images/armchair-lean.jpg)
+This project studies **Unitree G1 sitting and supported leaning in Isaac Lab**, using a simulated rear depth camera and coordinated control of 23 joints.
 
-*Centered start in the box-armchair test. Gold marks the allowed contact patch and red shows the contact force. The controller held this lean for 6.84 seconds. [Three-start trial record](box_armchair_lean_20261104_v4/results/repeatability.json)*
+[![A simulated G1 leaning against a box armchair; gold marks the allowed contact patch and red the contact force](docs/images/armchair-lean.jpg)](https://vimeo.com/kadiru/demo-humanoid-sitting-leaning)
 
-## How the controller works
+*Camera-guided armchair lean: 6.84 seconds of stable hold from this centered start. [Three-start record](box_armchair_lean_20261104_v4/results/repeatability.json) · [Watch the development film](https://vimeo.com/kadiru/demo-humanoid-sitting-leaning). All results here are simulation.*
 
-The November armchair policy combines a recorded demonstration with learned joint corrections. The same controller architecture supports evaluating the demonstration alone by setting those corrections to zero.
+<a name="what-the-trials-showed"></a>
+
+## What the work has established
+
+| Published checkpoint | Result | What it means |
+| --- | --- | --- |
+| Sitting, 72 development cases | Reference motion library **64/72**; two PPO seeds **30/72** and **16/72** | Learning regressed against the reference on this set. [Comparison](task_pause_20261030_v1/pause_receipt.json) |
+| Camera-guided box-armchair lean | **3/3**, from center and ±15 mm; holds **6.82–6.84 s** | Repeatable in a narrow tested neighborhood. [Measurements](box_armchair_lean_20261104_v4/results/repeatability.json) |
+| Learned armchair corrections | Reference **11/11**, PPO **2/11** after 128 updates | Ankle-limit failures appeared before support took load. [Matched trials](armchair_rest_ppo_20261105_v1/results/comparison.json) |
+| Complete sit–hold–stand cycle | **0/3** requested cycles | A stable-looking final pose is insufficient; loaded slip and stand-up qualification remain issues. [Cycle status](validated_low_seat_contact_01/current_successor_checkpoint.json) |
+
+These are selected dated checkpoints, not a pooled success rate or a claim of general sitting autonomy. Newer [CPU diagnostics](cpu_diagnostics/) continue investigating approach and contact. The [experiment guide](docs/EXPERIMENT_GUIDE.md) preserves the protocols and limits behind the table.
+
+<a name="how-the-controller-works"></a>
+
+## The central idea
+
+Combine a sensor-selected demonstration with bounded learned corrections, and judge the complete transition with an independent physical scorer.
 
 ```mermaid
-flowchart TD
-    D["Rear depth camera"] --> G["Estimate the support plane"]
-    G --> O["447-value observation"]
-    J["Joint sensors and IMU"] --> O
-    O --> A["Policy predicts 23 joint corrections"]
-    O --> M["Initial observation selects a demonstration"]
-    A --> C["Combine reference and corrections"]
-    M --> C
-    C --> T["Filter and limit targets at 50 Hz"]
-    T --> R["Simulated G1"]
-    R --> J
-    R --> D
+flowchart LR
+    D["Rear depth + joint sensors + IMU"] --> O["Support estimate and observation history"]
+    O --> M["Select reference motion"]
+    O --> P["PPO joint corrections"]
+    M --> C["Combine, filter and limit at 50 Hz"]
+    P --> C
+    C --> G["Simulated G1"]
+    G --> A["Independent load, slip and balance audit"]
 ```
 
-Three recent sensor frames describe the approach, including joint angles, speeds, motor effort, gravity and angular velocity. The policy also receives task intent, elapsed time and the initial sensor frame. Joint targets change by at most 0.003 radians per control step. During training, proximal policy optimization (PPO) updates the corrections. During evaluation, an independent scorer inspects the full 20-second trial for load, slip, contact location and balance. [Observation and control code](armchair_rest_trainer_20261105_v1/environment.py) · [Motion selection and residual policy](armchair_rest_trainer_20261105_v1/policy.py) · [Physical scoring](armchair_rest_trainer_20261105_v1/audit.py)
+The project contributes task and observation design, reference-motion and residual-policy integration, and contact-aware evaluation. The G1 and Isaac Lab are external platforms. A clean rest requires five consecutive seconds of stable final contact, at least 5% bodyweight on the allowed support, and a valid approach; an earlier loaded slip can fail the entire trial.
 
-## What the trials showed
+<a name="where-to-look-in-the-repository"></a>
 
-A clean rest requires at least five consecutive seconds of stable contact at the end, with the allowed support bearing at least 5% of bodyweight. A loaded slip earlier in the approach can still fail the trial, even if the final pose looks stable.
+## Read the code
 
-| Experiment | Standing-start result | Read the evidence |
-| --- | --- | --- |
-| Sitting on the 72 development cases | The frozen, sensor-selected motion library passed 64/72. After 256 PPO updates, the two seeds passed 30/72 and 16/72. Both left the eight original failures unresolved. | [Baseline](motion_prior_ppo_20261029_v2/RESULTS.txt) · [Completed comparison](task_pause_20261030_v1/pause_receipt.json) |
-| Leaning on one box armchair | The camera-guided controller passed 3/3 from center and ±15 mm lateral offsets. Final holds were 6.82–6.84 s. | [Trial-by-trial measurements](box_armchair_lean_20261104_v4/results/repeatability.json) |
-| Learning armchair corrections | On a separate set of 11 matched starts, the frozen reference passed 11/11 and the policy after 128 PPO updates passed 2/11. In the other nine, an ankle came too close to its joint limit before the chair took any load. | [Matched trials](armchair_rest_ppo_20261105_v1/results/comparison.json) · [Ankle diagnosis](armchair_rest_policy_video_20261105_v1/regression_diagnosis.json) |
-| Holding and returning to standing | During narrow-support calibration, the G1 held for 10.86 s with about 55% of its weight on the support. One loaded-slip sample failed the trial. Ankle-velocity readings also prevented a sensor-qualified stand-up. None of the three requested sit–hold–stand cycles passed. | [20-second video](rest_cycle_load_validation_20261109_v1/results/narrow_support_load_calibration.mp4) · [Calibration record](rest_cycle_load_validation_20261109_v1/execution_receipt.json) · [Cycle status](validated_low_seat_contact_01/current_successor_checkpoint.json) |
-
-## Where to look in the repository
-
-| To understand… | Start here |
+| Follow the system | Entry point |
 | --- | --- |
-| How depth measurements become support features | [Support-surface tracker](ubuntu/sitting_task/src/humanoid_sitting/supported_surface.py) and [sensor and observation assembly](ubuntu/scripts/run_supported_transition.py) |
-| How standing starts are planned for the armchair | [Camera-guided trial](box_armchair_lean_20261104_v4/trial.py), [motion plan](box_armchair_lean_20261104_v4/plan.py) and [frozen inputs](box_armchair_lean_20261104_v4/results/inputs.json) |
-| How demonstrations become a trainable policy | [Demonstration preparation](armchair_rest_trainer_20261105_v1/prepare.py), [rewards](armchair_rest_trainer_20261105_v1/rewards.py) and [PPO training loop](armchair_rest_trainer_20261105_v1/run_training.py) |
-| How the project estimates support load and investigates failed transitions | [Load observer](rest_cycle_load_validation_20261109_v1/observer.py), [ankle-readout test](native_contact_readout_20261109_v2/execution_receipt.json) and [contact-entry preparation](rest_cycle_contact_fix_20261109_v1/execution_receipt.json) |
-| Where later chair-approach work lives | [CPU diagnostics](cpu_diagnostics/), including the [seat-plane approach](cpu_diagnostics/seat_plane_approach.py) and [braked touchdown evaluation](cpu_diagnostics/evaluate_preload_brake.py) |
+| Depth → support geometry | [Support-surface tracker](ubuntu/sitting_task/src/humanoid_sitting/supported_surface.py) |
+| Geometry → armchair approach | [Trial](box_armchair_lean_20261104_v4/trial.py) · [Motion plan](box_armchair_lean_20261104_v4/plan.py) |
+| Demonstration → trainable corrections | [Policy](armchair_rest_trainer_20261105_v1/policy.py) · [PPO loop](armchair_rest_trainer_20261105_v1/run_training.py) |
+| Motion → a defensible result | [Independent audit](armchair_rest_trainer_20261105_v1/audit.py) · [Load observer](rest_cycle_load_validation_20261109_v1/observer.py) |
 
-Top-level experiment directories retain versioned source and compact evidence. The [Ubuntu snapshot](ubuntu/) contains the project-owned simulator scripts, task package and experiments. [Repository metadata](repository_metadata/) describes the imported sources and dependencies. [Repository tools](repository_tools/) contains the import and secret-screening tool.
+<a name="runtime-and-artifacts"></a>
 
-## Runtime and artifacts
+## Review or reproduce
 
-The linked trial records, code and video can be reviewed directly on GitHub. To reproduce a historical run, restore the pinned Isaac Lab checkout, robot and furniture assets, dataset, reference motions and checkpoints specified by that run. The original Ubuntu workspace used `/home/kadir/humanoid-sitting` and `IsaacLab/.venv/bin/python`. Many scripts still use absolute paths. Historical launch scripts assume that setup. The project's GPU allocation is the RTX 4090, with the RTX 4070 reserved for AIWorker. [Artifact inventory and restoration guide](ARTIFACTS.md) · [Runtime dependency revision](repository_metadata/runtime_dependencies.json)
+Start with the [matched trial JSON](armchair_rest_ppo_20261105_v1/results/comparison.json) and [ankle regression diagnosis](armchair_rest_policy_video_20261105_v1/regression_diagnosis.json); both are readable without a GPU. Reproduction needs the matching Isaac Lab revision, robot/furniture assets, reference motions and checkpoints. Historical launch scripts contain Ubuntu workspace paths and are not a portable one-command install.
 
-## Repository history
+[Artifact restoration](ARTIFACTS.md) · [Pinned runtime dependencies](repository_metadata/runtime_dependencies.json) · [Detailed experiment guide](docs/EXPERIMENT_GUIDE.md)
 
-The November 9, 2026 import grouped existing work by subsystem. Experiment timestamps, run records and hashes document the saved work. The [reconstructed saved-history branch](https://github.com/kadiru/humanoid-sitting-control/commits/reconstructed-saved-history/) groups 773 surviving records by folder label and local record number. Its final tree matches the seven-commit import of 24,267 files. The original global edit order and authorship cannot be recovered from that archive. [Reconstruction inventory](repository_metadata/reconstructed_history.json)
+<a name="repository-history"></a>
 
-## Commit practice
+<a name="commit-practice"></a>
 
-Commit and push at meaningful, validated milestones: a bug fixed, a technical
-obstacle resolved, or a feature ready. Group the related edits into one commit;
-do not commit each attempt, intermediate step, or saved record. This supersedes
-the earlier practice of committing and pushing every individual change.
+## Next milestone
 
-Stage changed source files explicitly, together with necessary tests and runtime
-configuration. Include documentation only when needed to use the changed code.
-Keep routine research notes, status reports, outcome receipts, logs, videos,
-generated results, and failed-attempt evidence locally; preserving evidence does
-not require uploading it to GitHub. Summarize validation in the commit message
-instead of adding a receipt. Do not use blanket staging for this workspace.
+Complete a sensor-qualified sit–hold–stand cycle from standing, then show that learned corrections improve on the frozen reference across matched unseen starts. Keep load, slip, joint limits and failures in the comparison.
 
-Use no more than ten meaningful commits per active workday, usually fewer; this
-is a ceiling, not a target. Do not create more reconstructed record-by-record
-history. Do not add credentials, environments, bulk trajectories, or generated
-solver matrices to ordinary Git history.
+[Repository history and commit practice](docs/EXPERIMENT_GUIDE.md#repository-history)
