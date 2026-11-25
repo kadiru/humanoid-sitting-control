@@ -27,13 +27,28 @@ def slow_clock(tick, settings):
     return tick-settings['slow_fraction']*area
 
 
-def repair_routes(config, routes, downstream):
+def choose_camera_route(asset, pose, selector):
+    """Choose among verified signed poses using only the registered standing view."""
+    axis = 1 if abs(pose[1]) >= selector['lateral_boundary_m'] else 2
+    side = np.sign(pose[axis])
+    seen = [r for r in selector['templates'][asset]
+            if r['axis'] == axis and np.sign(r['pose'][axis]) == side]
+    if not seen:
+        return None, None
+    distance = np.linalg.norm((np.asarray([r['pose'] for r in seen]) - pose) /
+                              selector['scale'], axis=1)
+    nearest = int(np.argmin(distance))
+    err = float(distance[nearest])
+    return (seen[nearest] if err <= selector['max_distance'] else None), err
+
+
+def repair_routes(config, routes, downstream, selector=None, bind_shared=None):
     from chair_contact_motion import ChairContactMotion
     from rescan_sitting import smooth
 
     previous = ChairContactMotion.apply
     path = config['planted_descent']
-    handoff_settings = {row:s for row,s in routes.items() if 'pressure_dwell_ticks' in s}
+    handoff_settings = {}
     captures = {}
 
     def apply(motion, learner, obs, tick, nominal):
@@ -73,6 +88,22 @@ def repair_routes(config, routes, downstream):
         if tick == 0:
             ev = learner.env.out
             measured = json.loads((ev/'camera_routes.json').read_text())
+            if selector is not None:
+                selected = []
+                for row, observed in enumerate(measured):
+                    pick, distance = None, None
+                    if observed['registration_ok'] and observed['standing']:
+                        pick, distance = choose_camera_route(observed['asset'],
+                                                            observed['relative_pose'], selector)
+                    if pick is not None and pick['repair'] is not None:
+                        routes[row] = pick['repair']
+                    if pick is not None and pick['shared']:
+                        bind_shared(row)
+                    selected.append(dict(row=row, anchor=pick['case'] if pick else None,
+                                         distance=distance, mode='shared' if pick and pick['shared'] else
+                                         'repair' if row in routes else 'staged'))
+                (ev/'signed_camera_selection.json').write_text(json.dumps(selected,indent=2)+'\n')
+            handoff_settings.update({row:s for row,s in routes.items() if 'pressure_dwell_ticks' in s})
             actual = []
             for row, patch in routes.items():
                 observed = measured[row]
@@ -97,11 +128,13 @@ def repair_routes(config, routes, downstream):
 def retime_paths(routes, downstream):
     from chair_contact_motion import ChairContactMotion
 
-    slowed = {row:s for row,s in routes.items() if 'slow_start' in s}
+    slowed = {}
     previous = ChairContactMotion.apply
 
     def apply(motion, learner, obs, tick, nominal):
         out = previous(motion, learner, obs, tick, nominal)
+        if tick == 0:
+            slowed.update({row:s for row,s in routes.items() if 'slow_start' in s})
         for row, settings in slowed.items():
             if row not in motion.planted_paths or tick < settings['slow_start']:
                 continue
@@ -122,17 +155,18 @@ def steady_shoes(routes, downstream):
     from chair_contact_motion import ChairContactMotion
     from rescan_sitting import smooth
 
-    targets = {row:s for row,s in routes.items() if s.get('shoe_pitch_start') is not None}
-    if not targets:
-        return downstream()
-    first = min(s['shoe_pitch_start'] for s in targets.values())
-    lateral = {row:s['shoe_roll_bias'] for row,s in targets.items() if 'shoe_roll_bias' in s}
+    targets, lateral = {}, {}
+    first = 1000
     previous = ChairContactMotion.apply
 
     def apply(motion, learner, obs, tick, nominal):
+        nonlocal first
         out = previous(motion, learner, obs, tick, nominal)
         env = learner.env
         if tick == 0:
+            targets.update({row:s for row,s in routes.items() if s.get('shoe_pitch_start') is not None})
+            lateral.update({row:s['shoe_roll_bias'] for row,s in targets.items() if 'shoe_roll_bias' in s})
+            first = min((s['shoe_pitch_start'] for s in targets.values()), default=1000)
             motion.shoe_pitch_trim = {row:np.zeros(2) for row in targets}
             motion.shoe_roll_trim = {row:np.zeros(2) for row in lateral}
             motion.shoe_pitch_log = {row:[] for row in targets}
@@ -192,6 +226,7 @@ if __name__=='__main__':
     config=json.loads((output.parent/'step_config.json').read_text())
     skills=json.loads((output.parent/'skills.json').read_text())
     repair=json.loads((output.parent/'repair.json').read_text())
+    selector=repair.get('camera_selector')
     routes={int(row):settings for row,settings in repair['routes'].items()}
     shared_rows=set(repair['use_shared'])
 
@@ -243,12 +278,18 @@ if __name__=='__main__':
     correction=seat_alignment.correction
     heading=[]
 
+    def bind_shared(row):
+        # Alignment already ran with the feet planted. Transfer the same
+        # measured alignment features into the shared actor's state.
+        shared.choose(row,ALIGN,decisions.records[row,ALIGN][0][4:7],False)
+        shared_rows.add(row)
+
     def align(prediction):
         row=len(heading)
         delta=correction(prediction)
         heading.append(prediction)
         action=decisions.choose(row,ALIGN,delta/seat_alignment.UNITS,abs(delta[0])>=.012)
-        if routes.get(row,{}).get('standing'):
+        if selector is not None or routes.get(row,{}).get('standing'):
             return np.zeros_like(delta)
         return delta*(1.,.8,0.,1.15)[action]
 
@@ -264,7 +305,7 @@ if __name__=='__main__':
 
             def route():
                 return attach_camera_routes(config,decisions,
-                    lambda: repair_routes(config,routes,lambda:planted(config,finish)))
+                    lambda: repair_routes(config,routes,lambda:planted(config,finish),selector,bind_shared))
 
             return attach_wire_template(config,route)
 

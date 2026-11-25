@@ -80,7 +80,8 @@ def previous_sources(frozen):
         p = Path(path)
         if sha(p)!=digest:
             if p.name in ('fresh_sitting_skills_study.py','fresh_sitting_skills_worker.py'):
-                p = BEFORE/'initial_source'/p.name
+                candidates = [BEFORE/folder/p.name for folder in ('initial_source', 'matched_source')]
+                p = next((f for f in candidates if f.is_file() and sha(f) == digest), p)
             elif p.name in ('sitting_skills.py','sitting_skills_study.py'):
                 p = OLD/'matched_raw_source'/p.name
             else:

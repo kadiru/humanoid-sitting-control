@@ -59,7 +59,7 @@ def preparation_sources(original):
             Path(read(original / 'step_config.json')['planted_descent']['library'])]
 
 
-def prepare():
+def prepare(excluded_banks=(), label='fresh'):
     from rescan_sitting import match, points
     from stance23_planner import model
 
@@ -77,6 +77,10 @@ def prepare():
         src = {k: z[k] for k in z.files}
     with np.load(OLD / 'training_bank' / 'bank.npz', allow_pickle=False) as z:
         trained = z['reset_root_pose']
+    excluded = []
+    for bank in excluded_banks:
+        with np.load(bank / 'bank.npz', allow_pickle=False) as z:
+            excluded.append((read(bank / 'geometry.json'), z['reset_root_pose']))
     with np.load(original / 'evaluation' / 'skill_decisions.npz', allow_pickle=False) as record:
         accepted_options = {int(i): {} for i in skills['verified_rows']}
         for i, phase, a, enabled in zip(*(record[k] for k in ('row', 'phase', 'action', 'enabled')), strict=True):
@@ -115,6 +119,11 @@ def prepare():
         anchor = src['reset_root_pose'][template].copy()
         anchor[1] = src['reset_root_pose'][start+2,1]
         ref = np.vstack((src['reset_root_pose'][start:start+3], trained[start:start+3]))
+        asset = geometry[template]['name']
+        others = [pose for geoms, poses in excluded for geom, pose in zip(geoms, poses, strict=True)
+                  if geom['name'] == asset]
+        if others:
+            ref = np.vstack((ref, others))
         previous = [np.r_[p[:2]-anchor[:2], Rotation.from_quat(p[3:]).as_euler('xyz')[2]]
                     for p in ref]
         for family in ('lateral','angled'):
@@ -136,8 +145,8 @@ def prepare():
                     raise RuntimeError('Could not construct a disjoint start')
                 previous.append(delta)
                 i = len(poses)
-                name = geometry[template]['name']
-                case = f'sit/{name}/fresh_{family}_{j+1:02d}'
+                name = asset
+                case = f'sit/{name}/{label}_{family}_{j+1:02d}'
                 row_pose = anchor.copy()
                 row_pose[:2] += delta[:2]
                 row_pose[3:] = (Rotation.from_rotvec([0.,0.,yaw])*Rotation.from_quat(anchor[3:])).as_quat()
@@ -156,7 +165,9 @@ def prepare():
     write(STUDY / 'routes.json', dict(templates=routes, family_scale=SCALE.tolist(), envelope=ENVELOPE))
     write(STUDY / 'protocol.json', dict(seed=SEED, trials=attempts, bank=bank_digest(bank),
                                       route_sha256=sha(STUDY / 'routes.json'),
-                                      preparation_sources={str(f): sha(f) for f in preparation_sources(original)}))
+                                      preparation_sources={str(f): sha(f) for f in (
+                                          *preparation_sources(original),
+                                          *(bank / f for bank in excluded_banks for f in BANK_FILES))}))
     print('frozen', len(attempts), 'fresh starts, bank SHA256', sha(bank / 'bank.npz'), flush=True)
 
 
