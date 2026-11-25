@@ -20,6 +20,9 @@ from gallery import vis
 FPS = 10
 WIDTH, SCENE, LABEL = 192, 182, 38
 ROW_HEIGHT = SCENE + LABEL
+ROWS = STUDY/'rows_framed'
+MEDIA = STUDY/'media_framed'
+FRAMING = STUDY/'camera_framing.json'
 BACKGROUND = '#f4f7f7'
 INK = '#14262e'
 SUBTLE = '#465d69'
@@ -75,7 +78,7 @@ def reason_label(result):
         return 'FAIL  Short hold'
     if 'floor' in reason.lower():
         return 'FAIL  Foot lift'
-    return 'FAIL  Safety stop'
+    return 'FAIL  Stop'
 
 
 class CatalogView:
@@ -84,6 +87,7 @@ class CatalogView:
         self.view = vis.VIEW
         self.renderer = vis.Renderer()
         verts,faces,links,colors = [],[],[],[]
+        boxes, bounds_links = [],[]
         stop = 0
         for i,name in enumerate(body_names):
             if name not in self.renderer.parts:
@@ -96,21 +100,26 @@ class CatalogView:
             faces.append(tri+stop)
             links.extend([i]*len(xyz))
             colors.append(np.tile(color,(len(tri),1)))
+            boxes.append(list(product(*zip(xyz.min(0),xyz.max(0),strict=True))))
+            bounds_links.append(i)
             stop += len(xyz)
         self.verts, self.faces = np.vstack(verts), np.ascontiguousarray(np.vstack(faces), dtype='i')
         self.links = np.asarray(links)
         self.colors = np.ascontiguousarray(np.vstack(colors),dtype='B')
+        self.boxes = np.asarray(boxes)
+        self.bounds_links = np.asarray(bounds_links)
 
-    def background(self, native, sampled):
-        native_xyz, _ = mesh(native)
+    def robot_bounds(self, poses, rotations):
+        ids = self.bounds_links
+        cloud = np.einsum('flij,lkj->flki',rotations[:,ids],self.boxes) + poses[:,ids,None,:3]
+        projected = cloud@self.view
+        return projected.min(axis=(0,1,2)),projected.max(axis=(0,1,2))
+
+    def background(self, sampled, bounds):
         xyz, faces = mesh(sampled)
         if len(faces)>7500:
             xyz, faces = fast_simplification.simplify(xyz,faces,target_count=7500)
-        # Use the native-scale framing for both methods and all sizes so
-        # furniture size changes remain visible against the same robot.
-        robot_space = np.array(list(product((-.62,.38),(-.37,.37),(-.035,1.32))))
-        projected = np.vstack((native_xyz,robot_space))@self.view
-        low, high = projected.min(0), projected.max(0)
+        low, high = np.asarray(bounds)
         r = self.renderer
         r.scale = min((WIDTH-12)/(high[0]-low[0]),(SCENE-14)/(high[1]-low[1]))
         r.offset = np.array([WIDTH/2,SCENE/2,0.])-(low+high)*.5*r.scale
@@ -129,10 +138,60 @@ class CatalogView:
         return Image.fromarray(im)
 
 
+def replay(trace_file, result):
+    with np.load(trace_file,allow_pickle=False) as z:
+        poses = z['body'].copy()
+        poses[:,:,:,:3] -= np.asarray(result['origins'])[None,:,None,:]
+        active = z['learn']
+        guards = z['flags']
+    last = []
+    for i in range(poses.shape[1]):
+        ended = np.flatnonzero(guards[:,i].any(1))
+        if len(ended):
+            last.append(int(ended[0]))
+        else:
+            ticks = np.flatnonzero(active[:,i])
+            last.append(int(ticks[-1]) if len(ticks) else 0)
+    snapshots = np.minimum(np.arange(0,1000,50//FPS)[:,None],np.asarray(last)[None,:])
+    pose_frame = poses[snapshots,np.arange(poses.shape[1])[None,:]]
+    rotations = Rotation.from_quat(pose_frame[...,3:].reshape(-1,4)).as_matrix()
+    rotations = rotations.reshape(*pose_frame.shape[:-1],3,3)
+    return snapshots,pose_frame,rotations,last
+
+
+def frame_catalog():
+    native = read(STUDY/'banks'/'100'/'geometry.json')
+    matrix = camera()
+    bounds = {}
+    for g in native:
+        xyz,_ = mesh(g)
+        pix = xyz@matrix
+        bounds[g['name']] = [pix.min(0),pix.max(0)]
+    traces = {}
+    for scale,method in product(SIZES,METHODS):
+        ev = STUDY/f'{method}_{scale}'/'evaluation'
+        result = read(ev/'results.json')
+        trace = ev/'trajectory.npz'
+        trace_digest = sha(trace)
+        assert trace_digest == read(ev/'independent_audit.json')['files']['trajectory.npz']
+        traces[f'{method}_{scale}'] = trace_digest
+        view = CatalogView(result['body_names'])
+        _,poses,rots,_ = replay(trace,result)
+        current = read(ev.parent/'bank'/'geometry.json')
+        assert [g['name'] for g in current]==list(bounds)
+        for i,g in enumerate(current):
+            lower,upper = view.robot_bounds(poses[:,i],rots[:,i])
+            xyz,_ = mesh(g)
+            projected = xyz@matrix
+            low,high = bounds[g['name']]
+            bounds[g['name']] = [np.minimum.reduce([low,lower,projected.min(0)]),
+                                np.maximum.reduce([high,upper,projected.max(0)])]
+    write(FRAMING,dict(traces=traces,bounds={k:np.asarray(v).tolist() for k,v in bounds.items()}))
+
+
 def encode_row(method, scale):
-    out = STUDY/'rows'
-    out.mkdir(exist_ok=True)
-    dest = out/f'{method}_{scale}.mp4'
+    ROWS.mkdir(exist_ok=True)
+    dest = ROWS/f'{method}_{scale}.mp4'
     if dest.is_file() and dest.with_suffix('.json').is_file():
         assert read(dest.with_suffix('.json'))['video_sha256']==sha(dest)
         return
@@ -144,28 +203,13 @@ def encode_row(method, scale):
     audit = read(ev/'independent_audit.json')
     digest = sha(trace_file)
     assert audit['passed'] and digest==audit['files']['trajectory.npz']
+    framing = read(FRAMING)
+    assert framing['traces'][f'{method}_{scale}']==digest
     current = read(folder/'bank'/'geometry.json')
-    native = read(STUDY/'banks'/'100'/'geometry.json')
-    assert [g['name'] for g in native]==[g['name'] for g in current]==[r['asset'] for r in scores]
+    assert [g['name'] for g in current]==[r['asset'] for r in scores]
     view = CatalogView(result['body_names'])
-    backgrounds = [view.background(a,b) for a,b in zip(native,current,strict=True)]
-    with np.load(trace_file,allow_pickle=False) as z:
-        poses = z['body'].copy()
-        poses[:,:,:,:3] -= np.asarray(result['origins'])[None,:,None,:]
-        active = z['learn']
-        guards = z['flags']
-    last = []
-    for i in range(len(current)):
-        ended = np.flatnonzero(guards[:,i].any(1))
-        if len(ended):
-            last.append(int(ended[0]))
-        else:
-            ticks = np.flatnonzero(active[:,i])
-            last.append(int(ticks[-1]) if len(ticks) else 0)
-    snapshots = np.minimum(np.arange(0,1000,50//FPS)[:,None],np.asarray(last)[None,:])
-    pose_frame = poses[snapshots,np.arange(len(current))[None,:]]
-    rotations = Rotation.from_quat(pose_frame[...,3:].reshape(-1,4)).as_matrix()
-    rotations = rotations.reshape(*pose_frame.shape[:-1],3,3)
+    backgrounds = [view.background(g,framing['bounds'][g['name']]) for g in current]
+    snapshots,pose_frame,rotations,last = replay(trace_file,result)
     row_width = WIDTH*len(scores)
     base = Image.new('RGB',(row_width,ROW_HEIGHT),BACKGROUND)
     d = ImageDraw.Draw(base)
@@ -173,10 +217,12 @@ def encode_row(method, scale):
         x = WIDTH*i
         fill, ink = ('#d9ede7','#11564b') if r['passed'] else ('#f3e5df','#873e35')
         d.rectangle((x+1,SCENE,x+WIDTH-2,ROW_HEIGHT-2),fill=fill)
-        paint_text(d,(x+9,SCENE+6),reason_label(r),21,ink,True)
+        label = reason_label(r)
+        size = next(s for s in range(21,12,-1) if d.textlength(label,font=font(s,True)) <= WIDTH-18)
+        paint_text(d,(x+9,SCENE+6),label,size,ink,True)
     pipe = subprocess.Popen(['ffmpeg','-nostdin','-v','error','-n','-f','rawvideo','-pix_fmt','rgb24',
         '-s',f'{row_width}x{ROW_HEIGHT}','-r',str(FPS),'-i','-','-an','-c:v','libx264',
-        '-threads','3','-preset','veryfast','-crf','17','-pix_fmt','yuv420p',str(dest)],stdin=subprocess.PIPE)
+        '-threads','2','-preset','veryfast','-crf','17','-pix_fmt','yuv420p',str(dest)],stdin=subprocess.PIPE)
     cache = [None]*len(scores)
     previous = [-1]*len(scores)
     try:
@@ -199,7 +245,7 @@ def encode_row(method, scale):
             pipe.kill()
             pipe.wait()
     write(dest.with_suffix('.json'),dict(method=method,scale_pct=scale,frames=len(snapshots),
-          trace_sha256=digest,video_sha256=sha(dest),body_visuals_sha256=sha(vis.VISUALS)))
+          trace_sha256=digest,video_sha256=sha(dest),body_visuals_sha256=sha(vis.VISUALS),camera_sha256=sha(FRAMING)))
     print('rendered',method,scale,flush=True)
 
 
@@ -250,7 +296,7 @@ def layout(title, start, count, tile, row_height, stem, out):
     command = ['ffmpeg','-nostdin','-v','error','-n','-filter_complex_threads','3','-loop','1','-framerate',str(FPS),'-i',str(card)]
     filters = []
     for i,(scale,method) in enumerate(row_order,1):
-        source = STUDY/'rows'/f'{method}_{scale}.mp4'
+        source = ROWS/f'{method}_{scale}.mp4'
         assert read(source.with_suffix('.json'))['video_sha256']==sha(source)
         command += ['-threads','1','-i',str(source)]
         filters.append(f'[{i}:v]crop={WIDTH*count}:{ROW_HEIGHT}:{WIDTH*start}:0,scale={tile*count}:{row_height}[r{i}]')
@@ -287,24 +333,26 @@ def closeup(out):
 
 
 def assemble():
-    out = STUDY/'media'
+    out = MEDIA
     out.mkdir(exist_ok=True)
     files = [layout('Sitting on 30 furniture pieces',0,30,120,140,'sitting_grid_30',out),
              layout('Sitting on Monarch and Petite Chair',30,2,192,220,'sitting_grid_supplement',out),
              closeup(out)]
     write(out/'video_manifest.json',dict(replay=True,scales=SIZES,methods=METHODS,files=files,
           renderer_sha256=sha(Path(__file__)),catalog_protocol_sha256=sha(STUDY/'protocol.json'),
-          rows=[read(STUDY/'rows'/f'{method}_{scale}.json') for scale,method in product(SIZES,METHODS)]))
+          rows=[read(ROWS/f'{method}_{scale}.json') for scale,method in product(SIZES,METHODS)]))
     print('verified 8-row grid and supplement',flush=True)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('operation',choices=('row','assemble'))
+    parser.add_argument('operation',choices=('frame','row','assemble'))
     parser.add_argument('--method',choices=METHODS)
     parser.add_argument('--scale',type=int,choices=SIZES)
     args = parser.parse_args()
-    if args.operation == 'row':
+    if args.operation == 'frame':
+        frame_catalog()
+    elif args.operation == 'row':
         encode_row(args.method,args.scale)
     else:
         assemble()
